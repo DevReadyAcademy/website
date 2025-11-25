@@ -16,7 +16,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground mb-6 leading-tight"
         >
-          DevReady
+          DevReady!
         </motion.h1>
 
    <motion.p
