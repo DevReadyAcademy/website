@@ -39,7 +39,7 @@ const Course = () => {
             6-Week Intensive Program
           </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-              TechPath Accelerator
+              Accelerator
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               A comprehensive program designed to transform you from student to industry-ready professional.

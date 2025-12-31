@@ -43,29 +43,25 @@ const Contact = () => {
   };
 
   return (
-      <div className="">
+      <div className="min-h-screen bg-background">
         {/* Header */}
-        <header className="py-28 px-32 border-b border-border">
+        <header className="py-6 px-4 border-b border-border/50">
           <div className="container mx-auto max-w-6xl flex items-center justify-between">
             <Link
                 to="/"
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
-              <ArrowLeft className="w- h-4" />
+              <ArrowLeft className="w-4 h-4" />
               Back to Home
             </Link>
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            TechPath Greece
+            DevReady
           </span>
           </div>
         </header>
-
         <main className="py-16 px-4">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12 animate-fade-in">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              Get in Touch
-            </span>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
                 Contact Us
               </h1>
@@ -170,7 +166,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-medium mb-1">Location</h3>
-                        <p className="text-muted-foreground">Athens, Greece</p>
+                        <p className="text-muted-foreground">Remote</p>
                       </div>
                     </div>
                   </div>

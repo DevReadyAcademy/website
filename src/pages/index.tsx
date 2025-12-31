@@ -24,7 +24,7 @@ const Index = () => {
 
       {/* <ComingSoon /> */}
       <Subscribe />
-      
+
       <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
         <p className="text-sm">
           © {new Date().getFullYear()} DevReady. Bridging the gap between university and industry.
