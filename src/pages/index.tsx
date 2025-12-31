@@ -4,6 +4,7 @@ import WhyDifferent from "../components/WhyDifferent";
 import Team from "../components/Team";
 import ComingSoon from "../components/ComingSoon";
 import Vision from "../components/Vision";
+import Testimonials from "../components/Testimonials";
 import Subscribe from "../components/Subscribe";
 import Header from "../components/Header";
 
@@ -16,6 +17,8 @@ const Index = () => {
       <Pillars />
       <WhyDifferent />
       <Team />
+      <Testimonials />
+
       {/* <ComingSoon /> */}
       <Subscribe />
       
