@@ -97,7 +97,7 @@ const Course = () => {
             6-Week Intensive Program · April–May 2026
           </span>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive program designed to transform you from student to industry-ready professional.
+              A comprehensive program designed to transform you to industry-ready professional.
             </p>
           </div>
 
