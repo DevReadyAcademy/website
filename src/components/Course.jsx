@@ -79,7 +79,7 @@ const Course = () => {
             </h2>
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             <Calendar className="inline-block w-4 h-4 mr-2" />
-            6-Week Intensive Program
+            6-Week Intensive Program · April–May 2026
           </span>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               A comprehensive program designed to transform you from student to industry-ready professional.
