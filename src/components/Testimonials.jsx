@@ -4,27 +4,30 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    name: "Maria Papadopoulou",
-    role: "Software Engineer at Google",
-    quote: "TechPath gave me the confidence and skills I needed to land my dream job. The mentorship was invaluable.",
+    name: "Maria Balafouti",
+    role: "Undegrad ",
+    quote: "I have to say that so many parts of the roadmap I had in mind were unlocked, and countless questions I’d been carrying for a long time were finally answered.\n" +
+        "Also, I absolutely loved the incredible chemistry you had as a team, it was so inspiring and you passed that same vibe on to us! Im ready to crush all my interviews thanks to you!\n",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
   },
   {
-    name: "Nikos Konstantinou",
+    name: "Kostas Kotsis",
     role: "Data Scientist at Meta",
-    quote: "The structured approach to career planning made all the difference. I went from confused to confident in 6 weeks.",
+    quote: "It felt extremely useful for my journey in software engineering, especially in terms of the guidelines I should follow. I will definitely follow the advice and material you provided, particularly around CV branding and interviewing.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
   },
   {
-    name: "Elena Georgiou",
+    name: "Maria Zavola",
     role: "Product Manager at Microsoft",
-    quote: "The interview preparation was exceptional. I felt fully prepared and landed multiple offers.",
+    quote: "My main goal was to get an understanding of how the industry works. The information covered many different areas, giving me a good first taste.\n" +
+        "\n" +
+        "The feedback from your own experiences, along with realistic examples, helped me manage my stress and boost my confidence, making the journey feel a bit more achievable.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
-    name: "Alexandros Dimitriou",
+    name: "Kostantinos Apostolidis",
     role: "ML Engineer at Amazon",
-    quote: "TechPath's AI module opened my eyes to opportunities I never knew existed. Highly recommended!",
+    quote: "As a third-year student, the boost I got from this program was huge. You pushed me out of my comfort zone, challenged me in a positive way, and helped me see my future a little more clearly. The knowledge I gained is extensive, and much of it consists of things that are hard to “learn” at university. You gave me one of the most beautiful “first milestones” on my journey into technology.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
   },
 ];
@@ -60,9 +63,9 @@ const Testimonials = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12 animate-fade-in">
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-            Success Stories
-          </span>
+          {/*<span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">*/}
+          {/*  Success Stories*/}
+          {/*</span>*/}
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
               What Our Alumni Say
             </h2>
@@ -78,14 +81,14 @@ const Testimonials = () => {
                 </p>
 
                 <div className="flex items-center gap-4 animate-fade-in">
-                  <img
-                      src={testimonials[currentIndex].image}
-                      alt={testimonials[currentIndex].name}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
-                  />
+                  {/*<img*/}
+                  {/*    src={testimonials[currentIndex].image}*/}
+                  {/*    alt={testimonials[currentIndex].name}*/}
+                  {/*    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"*/}
+                  {/*/>*/}
                   <div>
                     <h4 className="font-semibold text-lg">{testimonials[currentIndex].name}</h4>
-                    <p className="text-muted-foreground text-sm">{testimonials[currentIndex].role}</p>
+                    {/*<p className="text-muted-foreground text-sm">{testimonials[currentIndex].role}</p>*/}
                   </div>
                 </div>
               </div>

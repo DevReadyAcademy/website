@@ -37,6 +37,7 @@ const WhyDifferent = () => {
           </p>
         </div>
 
+
         <div className="grid md:grid-cols-2 gap-6">
           {differentiators.map((item, index) => {
             const Icon = item.icon;
@@ -64,16 +65,7 @@ const WhyDifferent = () => {
           })}
         </div>
 
-        <div className="mt-12 p-8 rounded-xl bg-primary/10 border-2 border-primary/30 text-center animate-fade-in">
-          <p className="text-xl font-semibold text-foreground mb-2">
-            We've Done the Homework—So You Don't Have To
-          </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We've interviewed 100+ aspiring developers in Greece and analyzed exactly what stands between 
-            you and your first tech job. This isn't theory—it's a validated roadmap built on real insights 
-            from people just like you.
-          </p>
-        </div>
+
       </div>
     </section>
   );

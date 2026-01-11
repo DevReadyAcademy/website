@@ -37,19 +37,19 @@ const Hero = () => {
           Bridge the gap between university and industry.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <button
-            onClick={scrollToSubscribe}
-            className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary text-primary-foreground rounded-full font-bold text-lg hover:shadow-lg transition-shadow duration-300"
-          >
-            Join the Waitlist
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </motion.div>
+        {/*<motion.div*/}
+        {/*  initial={{ opacity: 0, y: 20 }}*/}
+        {/*  animate={{ opacity: 1, y: 0 }}*/}
+        {/*  transition={{ duration: 0.8, delay: 0.6 }}*/}
+        {/*>*/}
+        {/*  <button*/}
+        {/*    onClick={scrollToSubscribe}*/}
+        {/*    className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary text-primary-foreground rounded-full font-bold text-lg hover:shadow-lg transition-shadow duration-300"*/}
+        {/*  >*/}
+        {/*    Join the Waitlist*/}
+        {/*    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />*/}
+        {/*  </button>*/}
+        {/*</motion.div>*/}
       </div>
     </section>
   );

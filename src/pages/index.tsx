@@ -11,27 +11,28 @@ import Subscribe from "../components/Subscribe";
 import Header from "../components/Header";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
-      {/* <Vision/> */}
-      <Pillars />
-      <Course />
-      <WhyDifferent />
-      <Team />
-      <Testimonials />
+    return (
+        <div className="min-h-screen">
+            <Header/>
+            <Hero/>
+            {/* <Vision/> */}
+            <Pillars/>
+            <Course/>
+            <Testimonials/>
+            <Team/>
+            <WhyDifferent/>
 
-      {/* <ComingSoon /> */}
-      <Subscribe />
 
-      <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
-        <p className="text-sm">
-          © {new Date().getFullYear()} DevReady. Bridging the gap between university and industry.
-        </p>
-      </footer>
-    </div>
-  );
+            {/* <ComingSoon /> */}
+            {/*<Subscribe />*/}
+
+            <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
+                <p className="text-sm">
+                    © {new Date().getFullYear()} DevReady. Bridging the gap between university and industry.
+                </p>
+            </footer>
+        </div>
+    );
 };
 
 export default Index;

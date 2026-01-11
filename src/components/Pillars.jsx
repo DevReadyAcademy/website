@@ -32,7 +32,7 @@ const Pillars = () => {
             The 4 Non-Negotiable Pillars
           </h2>
           <p className="text-xl font-semibold text-foreground max-w-3xl mx-auto mb-3">
-            Master these four pillars, and you'll have everything you need to land your dream tech job.
+            These four pillars define what we believe in and how we prepare you for a successful career in tech.
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             No degree required. No shortcuts. Just the exact skills and mindset that top companies demand.
