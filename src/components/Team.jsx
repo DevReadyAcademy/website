@@ -5,7 +5,7 @@ import { Code2, Users } from "lucide-react";
 const teamMembers = [
   {
     name: 'Alexis Pavlidis',
-    description: 'TBD',
+    description: 'A London-based Software Engineer over seven years of experience building scalable systems and guiding early-career developers. He is passionate about clean code, practical engineering, and helping others navigate the tech industry through mentoring, writing, and speaking.',
     imageUrl: '/assets/alex.jpeg'
   },
   {
