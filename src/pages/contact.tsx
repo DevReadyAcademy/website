@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Mail, MapPin, Send, Linkedin, Instagram } from "lucide-react";
+import { ArrowLeft, Mail, MapPin, Send, Linkedin, Instagram, Calendar } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
@@ -170,6 +170,23 @@ const Contact = () => {
                       </div>
                     </div>
                   </div>
+                </div>
+
+                <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
+                  <h2 className="text-2xl font-semibold mb-6">Book a Call</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Want to discuss the program in detail? Schedule a call with us.
+                  </p>
+                  <Button asChild className="w-full">
+                    <a
+                        href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Schedule a Call
+                    </a>
+                  </Button>
                 </div>
 
                 <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
