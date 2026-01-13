@@ -5,7 +5,7 @@ import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { Label } from "../components/ui/label";
-import { useToast } from "../../hooks/use-toast";
+import { useToast } from "../components/ui/use-toast";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -29,7 +29,7 @@ const Contact = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: process.env.VITE_WEB3FORMS_ACCESS_KEY,
+          access_key: "63a5845f-212c-4b49-b023-c0c0fd0f8312", // Replace with your Web3Forms access key
           to_email: "hello@devready.gr",
           from_name: formData.name,
           subject: `Contact Form: ${formData.subject}`,
