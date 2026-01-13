@@ -10,12 +10,12 @@ const teamMembers = [
   },
   {
     name: 'Kostikas Visnia',
-    description: 'TBD',
+    description: 'A Barcelona-based Technical Account Manager with a deep technical background in networking and cloud infrastructure. Having transitioned from hands-on technical support to senior consulting roles, he brings a business-aware approach to engineering, ensuring complex software systems work perfectly for global enterprises and their users.',
     imageUrl: '/assets/kostikas.jpeg'
   },
   {
     name: 'Vasilis Samoladas',
-    description: 'TBD',
+    description: 'A Prague-based Frontend Engineer passionate about AI, automation, and building products people actually enjoy using. With experience in the travel industry and a love for traveling, he combines engineering, business thinking, and a questionable sense of humor.',
     imageUrl: '/assets/sam.jpeg'
   }
 ];
