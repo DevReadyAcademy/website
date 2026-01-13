@@ -45,8 +45,8 @@ const Contact = () => {
 
       if (result.success) {
         toast({
-          title: "Message sent!",
-          description: "We'll get back to you as soon as possible.",
+          title: "✅ Message sent successfully!",
+          description: "Thank you for reaching out. We'll get back to you as soon as possible.",
         });
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
