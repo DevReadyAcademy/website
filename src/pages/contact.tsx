@@ -29,7 +29,7 @@ const Contact = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: process.env.VITE_WEB3FORMS_ACCESS_KEY, // Replace with your Web3Forms access key
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
           to_email: "hello@devready.gr",
           from_name: formData.name,
           subject: `Contact Form: ${formData.subject}`,
