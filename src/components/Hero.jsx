@@ -41,7 +41,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35 }}
-          className="text-xl md:text-2xl text-foreground/90 mb-3 max-w-3xl mx-auto font-medium"
+          className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto font-medium"
         >
           Master the engineering skills, mindset, and branding that tech companies actually look for—no degree required.
         </motion.p>
@@ -49,7 +49,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
         >
           Bridge the gap between university and industry with real engineering skills, mentorship, and career coaching.
