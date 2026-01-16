@@ -5,10 +5,6 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
-  const scrollToCourse = () => {
-    document.getElementById('course')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 pt-20 overflow-hidden bg-gradient-hero">
       <div className="relative z-10 max-w-5xl mx-auto">
@@ -78,12 +74,14 @@ const Hero = () => {
           </Button>
           
           <Button 
-            onClick={scrollToCourse}
+            asChild
             variant="outline"
             size="lg"
             className="px-8 py-6 text-lg font-semibold border-2"
           >
-            View Program Details
+            <Link to="/bootcamp">
+              View Program Details
+            </Link>
           </Button>
         </motion.div>
 

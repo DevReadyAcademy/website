@@ -31,12 +31,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: 'Home', id: 'hero' },
-    { name: 'Our Approach', id: 'pillars' },
-    { name: 'Bootcamp', id: 'course' },
-    { name: 'Testimonials', id: 'testimonials' },
-    { name: 'Team', id: 'team' },
-    { name: 'Why Different', id: 'why-different' },
+    { name: 'Home', id: 'hero', type: 'scroll' },
+    { name: 'Our Approach', id: 'pillars', type: 'scroll' },
+    { name: 'Bootcamp', path: '/bootcamp', type: 'link' },
+    { name: 'Testimonials', id: 'testimonials', type: 'scroll' },
+    { name: 'Team', id: 'team', type: 'scroll' },
+    { name: 'Why Different', id: 'why-different', type: 'scroll' },
   ];
 
   return (
@@ -56,13 +56,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.name}
-              </button>
+              item.type === 'link' ? (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.name}
+                </button>
+              )
             ))}
             <Button 
               asChild
@@ -107,13 +117,24 @@ const Header = () => {
             className="lg:hidden py-4 space-y-2"
           >
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                {item.name}
-              </button>
+              item.type === 'link' ? (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-left px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="block w-full text-left px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
+                >
+                  {item.name}
+                </button>
+              )
             ))}
             <div className="px-4 pt-2">
               <Button 
