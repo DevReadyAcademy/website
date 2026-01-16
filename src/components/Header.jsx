@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +14,30 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // Height of header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+    setMobileMenuOpen(false);
+  };
+
+  const navItems = [
+    { name: 'Home', id: 'hero' },
+    { name: 'Our Approach', id: 'pillars' },
+    { name: 'Bootcamp', id: 'course' },
+    { name: 'Testimonials', id: 'testimonials' },
+    { name: 'Team', id: 'team' },
+    { name: 'Why Different', id: 'why-different' },
+  ];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${scrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
@@ -25,7 +52,81 @@ const Header = () => {
               DevReady
             </a>
           </motion.div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {item.name}
+              </button>
+            ))}
+            <Button 
+              asChild
+              className="bg-primary hover:bg-primary/90 shadow-lg"
+            >
+              <Link to="/contact">
+                Enroll Now
+              </Link>
+            </Button>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {mobileMenuOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <motion.nav
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="lg:hidden py-4 space-y-2"
+          >
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="block w-full text-left px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
+              >
+                {item.name}
+              </button>
+            ))}
+            <div className="px-4 pt-2">
+              <Button 
+                asChild
+                className="w-full bg-primary hover:bg-primary/90 shadow-lg"
+              >
+                <Link to="/contact">
+                  Enroll Now
+                </Link>
+              </Button>
+            </div>
+          </motion.nav>
+        )}
       </div>
     </header>
   );

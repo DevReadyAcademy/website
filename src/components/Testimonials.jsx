@@ -60,7 +60,7 @@ const Testimonials = () => {
   };
 
   return (
-      <section className="py-20 px-4">
+      <section id="testimonials" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12 animate-fade-in">
           {/*<span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">*/}

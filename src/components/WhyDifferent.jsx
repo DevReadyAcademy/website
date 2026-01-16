@@ -25,7 +25,7 @@ const differentiators = [
 
 const WhyDifferent = () => {
   return (
-    <section className="pt-20 pb-8 px-4 bg-gradient-subtle">
+    <section id="why-different" className="pt-20 pb-8 px-4 bg-gradient-subtle">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">

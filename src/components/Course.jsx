@@ -85,12 +85,12 @@ const modules = [
 
 const Course = () => {
   return (
-      <section className="py-20 px-4 bg-gradient-subtle">
+      <section id="course" className="py-20 px-4 bg-gradient-subtle">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16 animate-fade-in">
 
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-               Accelerator
+               Bootcamp
             </h2>
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             <Calendar className="inline-block w-4 h-4 mr-2" />

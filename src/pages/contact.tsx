@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Mail, MapPin, Send, Linkedin, Instagram, Calendar } from "lucide-react";
 import { Button } from "../components/ui/button";
@@ -93,17 +93,23 @@ const Contact = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12 animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                Contact Us
+                Ready to Join Us?
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Have questions about our program? We'd love to hear from you.
+              <p className="text-lg text-foreground max-w-2xl mx-auto mb-2 font-medium">
+                To secure your spot in our Bootcamp, book a call with us.
+              </p>
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+                Have questions first? Send us a message or schedule a call to learn more.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant animate-fade-in">
-                <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
+                <h2 className="text-2xl font-semibold mb-2">Have Questions?</h2>
+                <p className="text-muted-foreground mb-6 text-sm">
+                  Send us your questions and we'll get back to you within 24 hours
+                </p>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -173,8 +179,33 @@ const Contact = () => {
 
               {/* Contact Info */}
               <div className="space-y-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
+                {/* PRIMARY CTA - Enrollment */}
+                <div className="bg-gradient-primary rounded-2xl p-8 text-primary-foreground shadow-lg">
+                  <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-semibold mb-4">
+                    ⚡ ENROLL HERE
+                  </div>
+                  <h2 className="text-2xl font-semibold mb-3">Book Your Enrollment Call</h2>
+                  <p className="opacity-90 mb-6">
+                    Ready to join? Schedule a call with our team to complete your enrollment and secure one of the 5 early bird spots at €299.
+                  </p>
+                  <Button asChild className="w-full bg-white text-primary hover:bg-white/90 shadow-lg" size="lg">
+                    <a
+                        href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Book Enrollment Call
+                    </a>
+                  </Button>
+                  <p className="text-sm opacity-80 mt-4 text-center">
+                    💡 During the call, we'll answer your questions and finalize your enrollment
+                  </p>
+                </div>
+
+                {/* Contact Information */}
                 <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
-                  <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
+                  <h2 className="text-2xl font-semibold mb-6">Connect With Us</h2>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="p-3 rounded-xl bg-primary/10 text-primary">
@@ -199,52 +230,24 @@ const Contact = () => {
                         <p className="text-muted-foreground">Remote</p>
                       </div>
                     </div>
+                    <div>
+                      <h3 className="font-medium mb-3">Follow Us</h3>
+                      <div className="flex gap-3">
+                        <a
+                            href="#"
+                            className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
+                          <Linkedin className="w-5 h-5" />
+                        </a>
+                        <a
+                            href="#"
+                            className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
+                          <Instagram className="w-5 h-5" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-
-                <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
-                  <h2 className="text-2xl font-semibold mb-6">Book a Call</h2>
-                  <p className="text-muted-foreground mb-4">
-                    Want to discuss the program in detail? Schedule a call with us.
-                  </p>
-                  <Button asChild className="w-full">
-                    <a
-                        href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                      <Calendar className="w-4 h-4 mr-2" />
-                      Schedule a Call
-                    </a>
-                  </Button>
-                </div>
-
-                <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
-                  <h2 className="text-2xl font-semibold mb-6">Follow Us</h2>
-                  <div className="flex gap-4">
-                    <a
-                        href="#"
-                        className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a
-                        href="#"
-                        className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <Instagram className="w-5 h-5" />
-                    </a>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-primary rounded-2xl p-8 text-primary-foreground">
-                  <h3 className="text-xl font-semibold mb-2">Ready to start?</h3>
-                  <p className="opacity-90 mb-4">
-                    Join our next cohort and transform your career in 6 weeks.
-                  </p>
-                  <Button variant="secondary" asChild>
-                    <Link to="/">Learn About the Program</Link>
-                  </Button>
                 </div>
               </div>
             </div>
@@ -253,7 +256,7 @@ const Contact = () => {
 
         <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
           <p className="text-sm">
-            © {new Date().getFullYear()} TechPath Greece. Bridging the gap between university and industry.
+            © {new Date().getFullYear()} DevReady. Bridging the gap between university and industry.
           </p>
         </footer>
       </div>

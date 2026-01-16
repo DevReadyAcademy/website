@@ -25,7 +25,7 @@ const pillars = [
 
 const Pillars = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-card">
+    <section id="pillars" className="py-20 px-4 bg-gradient-card">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
