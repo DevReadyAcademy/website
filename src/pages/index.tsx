@@ -18,8 +18,8 @@ const Index = () => {
             {/* <Vision/> */}
             <Pillars/>
             <Course/>
-            <Testimonials/>
             <Team/>
+            <Testimonials/>
             <WhyDifferent/>
 
 
