@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const highlights = [
-  "Plan your path and set realistic goals",
-  "Master engineering fundamentals and clean code",
-  "Build a production-ready portfolio project",
-  "Learn AI best practices and personal branding",
-  "Ace interviews with STAR method and confidence",
-  "Create an ATS-ready CV and optimized LinkedIn",
+  "Plan your career path with Kanban and industry-focused goals",
+  "Master data structures, clean code, Git, APIs, and testing",
+  "Build a production-ready project and publish on GitHub",
+  "Use AI effectively without slowing your growth",
+  "Build your brand: CV, LinkedIn, GitHub, and portfolio",
+  "Ace interviews with proven strategies and communication tips",
 ];
 
 const Course = () => {
@@ -23,6 +23,9 @@ const Course = () => {
               <Calendar className="inline-block w-4 h-4 mr-2" />
               Next Cohort: April–May 2026
             </span>
+            <p className="text-base md:text-lg text-primary font-semibold mb-3 max-w-2xl mx-auto">
+              For All Developers: Frontend · Backend · Full-Stack · Mobile · Any Tech Stack
+            </p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               An intensive program designed to transform you into an industry-ready tech professional.
             </p>
@@ -32,9 +35,9 @@ const Course = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="bg-card rounded-xl border border-border/50 p-6 text-center">
               <Clock className="w-8 h-8 text-primary mb-3 mx-auto" />
-              <h3 className="font-semibold text-lg mb-2">Duration</h3>
+              <h3 className="font-semibold text-lg mb-2">Time Commitment</h3>
               <p className="text-muted-foreground">6 weeks intensive</p>
-              <p className="text-sm text-muted-foreground mt-1">15-20 hrs/week</p>
+              <p className="text-sm text-muted-foreground mt-1">~8 hrs/week total</p>
             </div>
             <div className="bg-card rounded-xl border border-border/50 p-6 text-center">
               <Calendar className="w-8 h-8 text-primary mb-3 mx-auto" />
@@ -53,11 +56,11 @@ const Course = () => {
           {/* Key Highlights */}
           <div className="bg-card rounded-2xl border border-border/50 p-8 mb-12">
             <h3 className="text-2xl font-semibold mb-6 text-center">What You'll Master</h3>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
               {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">{highlight}</span>
+                  <span className="text-muted-foreground leading-relaxed">{highlight}</span>
                 </div>
               ))}
             </div>
@@ -68,7 +71,7 @@ const Course = () => {
             <div className="flex flex-col md:flex-row items-center justify-center gap-8">
               <div className="text-center md:text-left">
                 <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold mb-2">
-                  🎯 Early Bird • Only 5 Spots Left
+                  ⏰ Only 5 Early Bird Spots at €299
                 </div>
                 <p className="text-muted-foreground mb-1">Investment in your future</p>
                 <div className="flex items-baseline gap-2 justify-center md:justify-start">
@@ -81,7 +84,7 @@ const Course = () => {
                   <span className="text-muted-foreground">/program</span>
                 </div>
                 <p className="text-sm text-muted-foreground/80 mt-2">
-                  Secure your early bird rate before it's gone
+                  Regular price: €449 • Next cohort may not be until Summer 2026
                 </p>
               </div>
               <div className="flex flex-col gap-3">
@@ -103,6 +106,6 @@ const Course = () => {
         </div>
       </section>
   );
-};
+};p
 
 export default Course;

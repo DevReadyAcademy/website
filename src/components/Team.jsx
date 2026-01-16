@@ -56,11 +56,11 @@ const Team = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="flex flex-col items-center text-center p-6"
             >
-              <div className="w-40 h-40 rounded-full overflow-hidden mb-6 shadow-lg">
+              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-2xl">
                 {member.imageUrl ? (
                   <img alt={member.name} className="w-full h-full object-cover" src={member.imageUrl} />
                 ) : (
-                  <img alt={member.name} src="https://images.unsplash.com/photo-1593510050025-2c379a40f1aa" />
+                  <img alt={member.name} className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1593510050025-2c379a40f1aa" />
                 )}
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">{member.name}</h3>

@@ -121,8 +121,12 @@ const benefits = [
 
 const faqs = [
   {
+    question: "Do I need to know a specific programming language or framework?",
+    answer: "No. This bootcamp is language and framework-agnostic. Whether you're a React developer, Python backend engineer, Java developer, mobile developer, or anything else — the skills we teach (engineering thinking, clean code, Git, interviewing, branding) apply universally to any tech role.",
+  },
+  {
     question: "Do I need prior coding experience?",
-    answer: "You should have basic familiarity with programming concepts (variables, loops, functions). This isn't a beginner course—we assume you can code and focus on making you industry-ready.",
+    answer: "Yes, but nothing fancy. If you can write basic code (variables, loops, functions), you're ready. We focus on bridging the gap from 'I can code' to 'I'm industry-ready,' not teaching programming from scratch.",
   },
   {
     question: "Will I get a job after the bootcamp?",
@@ -130,15 +134,23 @@ const faqs = [
   },
   {
     question: "What's the time commitment?",
-    answer: "Expect 15-20 hours per week including live sessions, project work, and independent learning. This is intensive—you need to commit fully to get results.",
+    answer: "Expect around 8 hours per week total: 2-3 hours of live teaching sessions, plus 5-6 hours for project work and independent learning.",
+  },
+  {
+    question: "How many people will be in my cohort?",
+    answer: "Maximum 15 people per cohort. This small size ensures we can provide targeted, personalized care and address your specific needs throughout the bootcamp.",
   },
   {
     question: "Is this bootcamp remote?",
     answer: "Yes, 100% remote. All sessions are conducted online, making it accessible from anywhere in Greece.",
   },
   {
-    question: "What if I can't make it to a live session?",
-    answer: "Sessions are recorded, but live attendance is strongly encouraged for mentorship, Q&A, and community building.",
+    question: "What if I miss a live session?",
+    answer: "All sessions are recorded. While we strongly encourage live attendance for Q&A, mentorship, and networking, you can catch up asynchronously if needed.",
+  },
+  {
+    question: "Is this only for people looking for jobs in Greece?",
+    answer: "No. While we're based in Greece and many of our students seek Greek opportunities, the skills and approach work globally. The bootcamp prepares you for tech roles anywhere.",
   },
   {
     question: "What happens after I book a call?",
@@ -185,6 +197,10 @@ const Bootcamp = () => {
               Master the engineering skills, mindset, and professional branding that tech companies actually look for.
             </p>
 
+            <p className="text-base md:text-lg text-primary font-semibold mb-3 max-w-2xl mx-auto">
+              Language & Stack Agnostic — Works for JavaScript, Python, Java, Go, or Any Language
+            </p>
+
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Designed for anyone in Greece with a laptop and passion—no engineering degree required.
             </p>
@@ -202,9 +218,9 @@ const Bootcamp = () => {
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-6">
                 <Clock className="w-8 h-8 text-primary mb-3 mx-auto" />
-                <h3 className="font-semibold text-lg mb-2">Duration</h3>
+                <h3 className="font-semibold text-lg mb-2">Time Commitment</h3>
                 <p className="text-muted-foreground">6 weeks intensive</p>
-                <p className="text-sm text-muted-foreground mt-1">15-20 hrs/week</p>
+                <p className="text-sm text-muted-foreground mt-1">~8 hrs/week total</p>
               </div>
               <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-6">
                 <Calendar className="w-8 h-8 text-primary mb-3 mx-auto" />
@@ -253,6 +269,72 @@ const Bootcamp = () => {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Your Journey Timeline */}
+        <section className="py-20 px-4 bg-gradient-card">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
+                Your Journey Timeline
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                From enrollment to landing interviews—here's what to expect.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex gap-6 items-start">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Today: Book Your Enrollment Call</h3>
+                  <p className="text-muted-foreground">Schedule a call with our team to discuss your goals and secure your spot.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-6 items-start">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Days 1-3: Confirmation & Pre-Work</h3>
+                  <p className="text-muted-foreground">Complete enrollment, receive pre-bootcamp materials, and join our Discord community.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-6 items-start">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Week Before Start: Onboarding</h3>
+                  <p className="text-muted-foreground">Meet your cohort, set up your development environment, and get ready for week 1.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-6 items-start">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Weeks 1-6: The Bootcamp</h3>
+                  <p className="text-muted-foreground">Live sessions, project work, code reviews, and career preparation.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-6 items-start">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                  5
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">After Week 6: Alumni Network</h3>
+                  <p className="text-muted-foreground">Join the alumni network, access all materials forever, and continue learning with your cohort.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -328,11 +410,11 @@ const Bootcamp = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>You're willing to commit 15-20 hours per week</span>
+                    <span>You're a developer in any role: frontend, backend, full-stack, mobile, or any tech stack</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>You're serious about landing a tech role in Greece</span>
+                    <span>You're willing to commit around 8 hours per week</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -402,18 +484,77 @@ const Bootcamp = () => {
           </div>
         </section>
 
-        {/* Final CTA */}
+        {/* What's Included */}
         <section className="py-20 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
+                What's Included
+              </h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">6 Weeks of Live Sessions</h3>
+                  <p className="text-muted-foreground">Interactive workshops, Q&A, and real-time mentorship + all recordings</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Project & Code Reviews</h3>
+                  <p className="text-muted-foreground">Detailed feedback on your code and projects from working engineers</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Personal Branding Guidance</h3>
+                  <p className="text-muted-foreground">Build your CV, LinkedIn, GitHub profile, and portfolio with expert feedback</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Interview Preparation</h3>
+                  <p className="text-muted-foreground">Master behavioral and technical interviews with dos, don'ts, and practice</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Alumni Network Access</h3>
+                  <p className="text-muted-foreground">Connect with past cohorts for referrals and support</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Discord Community & Lifetime Materials</h3>
+                  <p className="text-muted-foreground">Join our Discord, learn with your cohort, and access all resources forever</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-20 px-4 bg-gradient-subtle">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
               <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
-                🎯 Only 5 Early Bird Spots Left
+                ⏰ Only 5 Early Bird Spots at €299
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 Ready to Become Industry-Ready?
               </h2>
-              <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl opacity-90 mb-2 max-w-2xl mx-auto">
                 Book a call with our team to secure your spot at the early bird rate of €299.
+              </p>
+              <p className="text-base opacity-80 mb-8 max-w-2xl mx-auto">
+                Regular price: €449 • Next cohort may not be until Summer 2026
               </p>
               <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-lg">
                 <Link to="/contact">
