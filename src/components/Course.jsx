@@ -106,6 +106,6 @@ const Course = () => {
         </div>
       </section>
   );
-};p
+};
 
 export default Course;
