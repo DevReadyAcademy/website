@@ -143,16 +143,22 @@ const Course = () => {
           <div className="text-center p-8 rounded-2xl bg-card border border-primary/20 shadow-elegant animate-fade-in">
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
               <div className="text-center md:text-left">
+                <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold mb-2">
+                  🎯 Early Bird • Only 5 Spots Left
+                </div>
                 <p className="text-muted-foreground mb-1">Investment in your future</p>
                 <div className="flex items-baseline gap-2">
               <span className="text-2xl text-muted-foreground line-through">
-                  €350
+                  €449
                 </span>
                   <span className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                  €250
+                  €299
                 </span>
                   <span className="text-muted-foreground">/program</span>
                 </div>
+                <p className="text-sm text-muted-foreground/80 mt-2">
+                  Secure your early bird rate before it's gone
+                </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
