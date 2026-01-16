@@ -96,29 +96,6 @@ const modules = [
   },
 ];
 
-const benefits = [
-  {
-    icon: Target,
-    title: "Real Engineering Skills",
-    description: "Learn data structures, clean code, Git, APIs, testing—not just syntax.",
-  },
-  {
-    icon: Users,
-    title: "Industry Mentorship",
-    description: "Work with engineers from top tech companies who know what hiring managers look for.",
-  },
-  {
-    icon: BookOpen,
-    title: "Job Search Ready",
-    description: "Build an ATS-ready CV, optimize your LinkedIn, and master the interview process.",
-  },
-  {
-    icon: Code,
-    title: "Real Project Portfolio",
-    description: "Ship a production-ready project that demonstrates your skills to employers.",
-  },
-];
-
 const faqs = [
   {
     question: "Do I need to know a specific programming language or framework?",
@@ -241,35 +218,55 @@ const Bootcamp = () => {
           </div>
         </section>
 
-        {/* What You'll Gain */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
+        {/* Detailed Curriculum */}
+        <section className="py-20 px-4 bg-gradient-subtle">
+          <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                What You'll Gain
+                Week-by-Week Curriculum
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                This isn't just about learning to code—it's about becoming someone companies want to hire.
+                A structured path from planning your career to landing interviews—everything you need in 6 weeks.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => {
-                const Icon = benefit.icon;
-                return (
-                  <div
-                    key={index}
-                    className="group p-8 rounded-2xl border border-border/50 bg-card/50 hover:shadow-elegant transition-all duration-300"
-                  >
-                    <div className="p-3 rounded-xl bg-primary/10 text-primary inline-block mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                      <Icon className="w-6 h-6" />
+            <Accordion type="single" collapsible className="space-y-4">
+              {modules.map((module, index) => (
+                <AccordionItem
+                  key={module.id}
+                  value={module.id}
+                  className="group rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-elegant transition-all duration-300 px-6"
+                >
+                  <AccordionTrigger className="hover:no-underline py-6">
+                    <div className="flex items-center gap-4 text-left">
+                      <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        <module.icon className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <span className="text-xs font-medium text-primary uppercase tracking-wider block">
+                          {module.week}
+                        </span>
+                        <h3 className="text-xl font-semibold mt-1">{module.title}</h3>
+                        <p className="text-muted-foreground text-sm mt-1">{module.description}</p>
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-semibold mb-3">{benefit.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                  </div>
-                );
-              })}
-            </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6">
+                    <div className="pl-[76px]">
+                      <h4 className="font-medium text-foreground mb-4">What you'll learn:</h4>
+                      <ul className="space-y-3">
+                        {module.details.map((detail, detailIndex) => (
+                          <li key={detailIndex} className="flex items-start gap-3">
+                            <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span className="text-muted-foreground">{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </section>
 
@@ -339,60 +336,64 @@ const Bootcamp = () => {
           </div>
         </section>
 
-        {/* Detailed Curriculum */}
-        <section className="py-20 px-4 bg-gradient-subtle">
+        {/* What's Included */}
+        <section className="py-20 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                Week-by-Week Curriculum
+                What's Included
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A structured path from planning your career to landing interviews—everything you need in 6 weeks.
-              </p>
             </div>
-
-            <Accordion type="single" collapsible className="space-y-4">
-              {modules.map((module, index) => (
-                <AccordionItem
-                  key={module.id}
-                  value={module.id}
-                  className="group rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-elegant transition-all duration-300 px-6"
-                >
-                  <AccordionTrigger className="hover:no-underline py-6">
-                    <div className="flex items-center gap-4 text-left">
-                      <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                        <module.icon className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <span className="text-xs font-medium text-primary uppercase tracking-wider block">
-                          {module.week}
-                        </span>
-                        <h3 className="text-xl font-semibold mt-1">{module.title}</h3>
-                        <p className="text-muted-foreground text-sm mt-1">{module.description}</p>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-6">
-                    <div className="pl-[76px]">
-                      <h4 className="font-medium text-foreground mb-4">What you'll learn:</h4>
-                      <ul className="space-y-3">
-                        {module.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-start gap-3">
-                            <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                            <span className="text-muted-foreground">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">6 Weeks of Live Sessions</h3>
+                  <p className="text-muted-foreground">Interactive workshops, Q&A, and real-time mentorship + all recordings</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Project & Code Reviews</h3>
+                  <p className="text-muted-foreground">Detailed feedback on your code and projects from working engineers</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Personal Branding Guidance</h3>
+                  <p className="text-muted-foreground">Build your CV, LinkedIn, GitHub profile, and portfolio with expert feedback</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Interview Preparation</h3>
+                  <p className="text-muted-foreground">Master behavioral and technical interviews with dos, don'ts, and practice</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Alumni Network Access</h3>
+                  <p className="text-muted-foreground">Connect with past cohorts for referrals and support</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Discord Community & Lifetime Materials</h3>
+                  <p className="text-muted-foreground">Join our Discord, learn with your cohort, and access all resources forever</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Who Should Join */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 bg-gradient-subtle">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
@@ -481,62 +482,6 @@ const Bootcamp = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </section>
-
-        {/* What's Included */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                What's Included
-              </h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
-                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">6 Weeks of Live Sessions</h3>
-                  <p className="text-muted-foreground">Interactive workshops, Q&A, and real-time mentorship + all recordings</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
-                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Project & Code Reviews</h3>
-                  <p className="text-muted-foreground">Detailed feedback on your code and projects from working engineers</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
-                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Personal Branding Guidance</h3>
-                  <p className="text-muted-foreground">Build your CV, LinkedIn, GitHub profile, and portfolio with expert feedback</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
-                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Interview Preparation</h3>
-                  <p className="text-muted-foreground">Master behavioral and technical interviews with dos, don'ts, and practice</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
-                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Alumni Network Access</h3>
-                  <p className="text-muted-foreground">Connect with past cohorts for referrals and support</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
-                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Discord Community & Lifetime Materials</h3>
-                  <p className="text-muted-foreground">Join our Discord, learn with your cohort, and access all resources forever</p>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
