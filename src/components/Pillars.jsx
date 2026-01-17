@@ -1,47 +1,30 @@
 import { Users, Award, Briefcase, TrendingUp } from "lucide-react";
+import { useLanguage } from '../contexts/LanguageContext';
 
-const pillars = [
-  {
-    icon: Users,
-    title: "Mentorship & Career Coaching",
-    description: "Get personalized guidance from industry professionals who've been in your shoes and know what it takes to succeed.",
-  },
-  {
-    icon: Award,
-    title: "Branding",
-    description: "Build a compelling professional brand that stands out to employers and showcases your unique value in the tech industry.",
-  },
-  {
-    icon: Briefcase,
-    title: "How to Work / Execute",
-    description: "Learn the practical skills and work methodologies that tech companies actually use in their day-to-day operations.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Expectations of Industry",
-    description: "Understand what tech companies really look for and what it takes to thrive in a fast-paced professional environment.",
-  },
-];
+const icons = [Users, Award, Briefcase, TrendingUp];
 
 const Pillars = () => {
+  const { t } = useLanguage();
+  const pillars = t('pillars.items') || [];
+  
   return (
     <section id="pillars" className="py-20 px-4 bg-gradient-card">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-            The 4 Non-Negotiable Pillars
+            {t('pillars.title')}
           </h2>
           <p className="text-xl font-semibold text-foreground max-w-3xl mx-auto mb-3">
-            These four pillars define what we believe in and how we prepare you for a successful career in tech.
+            {t('pillars.subtitle')}
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            No degree required. No shortcuts. Just the exact skills and mindset that top companies demand.
+            {t('pillars.description')}
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {pillars.map((pillar, index) => {
-            const Icon = pillar.icon;
+            const Icon = icons[index];
             return (
               <div
                 key={index}

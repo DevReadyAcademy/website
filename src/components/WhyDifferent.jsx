@@ -1,46 +1,28 @@
 import { CheckCircle, Users, Target, Lightbulb } from "lucide-react";
+import { useLanguage } from '../contexts/LanguageContext';
 
-const differentiators = [
-  {
-    icon: Users,
-    title: "Built by Engineers, Not Just Educators",
-    description: "Our team consists of working engineers from top tech companies. We know what it takes to get hired because we live it every day."
-  },
-  {
-    icon: Target,
-    title: "Validated Through Real Research",
-    description: "We didn't just guess what you need. We've interviewed 100+ aspiring developers in Greece and designed our program around your actual pain points."
-  },
-  {
-    icon: CheckCircle,
-    title: "Focus on One Thing: Getting You Hired",
-    description: "Bridge the gap from 'I can code' to 'I got hired.' We teach what universities miss."
-  },
-  {
-    icon: Lightbulb,
-    title: "Structure + Community + Mentorship",
-    description: "Structured path, industry mentorship, and peer community. No more random tutorials."
-  }
-];
+const icons = [Users, Target, CheckCircle, Lightbulb];
 
 const WhyDifferent = () => {
+  const { t } = useLanguage();
+  const differentiators = t('whyDifferent.items') || [];
+  
   return (
     <section id="why-different" className="pt-20 pb-8 px-4 bg-gradient-subtle">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-            Why We're Different
+            {t('whyDifferent.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our unfair advantage? We've walked the path you're trying to walk. 
-            We know what works because we've done it—and we've validated it with real people like you.
+            {t('whyDifferent.description')}
           </p>
         </div>
 
 
         <div className="grid md:grid-cols-2 gap-6">
           {differentiators.map((item, index) => {
-            const Icon = item.icon;
+            const Icon = icons[index];
             return (
               <div 
                 key={index} 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from '../contexts/LanguageContext';
 
 const testimonials = [
   {
@@ -33,6 +34,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -67,7 +69,7 @@ const Testimonials = () => {
           {/*  Success Stories*/}
           {/*</span>*/}
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-              What Our Alumni Say
+              {t('testimonials.title')}
             </h2>
           </div>
 

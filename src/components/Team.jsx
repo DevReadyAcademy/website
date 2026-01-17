@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Users } from "lucide-react";
+import { useLanguage } from '../contexts/LanguageContext';
 
 const teamMembers = [
   {
@@ -21,6 +22,8 @@ const teamMembers = [
 ];
 
 const Team = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="team" className="py-24 sm:py-32 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
@@ -38,10 +41,10 @@ const Team = () => {
           {/*</div>*/}
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-            Meet The Team
+            {t('team.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We're a group of passionate professionals dedicated to transforming tech education in Greece
+            {t('team.description')}
           </p>
         </div>
         </motion.div>

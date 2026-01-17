@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Header = () => {
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -31,12 +34,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: 'Home', id: 'hero', type: 'scroll' },
-    { name: 'Our Approach', id: 'pillars', type: 'scroll' },
-    { name: 'Bootcamp', path: '/bootcamp', type: 'link' },
-    { name: 'Testimonials', id: 'testimonials', type: 'scroll' },
-    { name: 'Team', id: 'team', type: 'scroll' },
-    { name: 'Why Different', id: 'why-different', type: 'scroll' },
+    { name: t('header.home'), id: 'hero', type: 'scroll' },
+    { name: t('header.ourApproach'), id: 'pillars', type: 'scroll' },
+    { name: t('header.bootcamp'), path: '/bootcamp', type: 'link' },
+    { name: t('header.testimonials'), id: 'testimonials', type: 'scroll' },
+    { name: t('header.team'), id: 'team', type: 'scroll' },
+    { name: t('header.whyDifferent'), id: 'why-different', type: 'scroll' },
   ];
 
   return (
@@ -49,12 +52,12 @@ const Header = () => {
             transition={{ duration: 0.5 }}
           >
             <a href="/" className="text-2xl font-bold text-foreground">
-              DevReady
+              {t('common.brandName')}
             </a>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
               item.type === 'link' ? (
                 <Link
@@ -74,12 +77,13 @@ const Header = () => {
                 </button>
               )
             ))}
+            {/* <LanguageSwitcher /> */}
             <Button 
               asChild
               className="bg-primary hover:bg-primary/90 shadow-lg"
             >
               <Link to="/contact">
-                Enroll Now
+                {t('common.enrollNow')}
               </Link>
             </Button>
           </nav>
@@ -136,13 +140,16 @@ const Header = () => {
                 </button>
               )
             ))}
-            <div className="px-4 pt-2">
+            <div className="px-4 pt-2 space-y-3">
+              {/* <div className="flex justify-center">
+                <LanguageSwitcher />
+              </div> */}
               <Button 
                 asChild
                 className="w-full bg-primary hover:bg-primary/90 shadow-lg"
               >
                 <Link to="/contact">
-                  Enroll Now
+                  {t('common.enrollNow')}
                 </Link>
               </Button>
             </div>

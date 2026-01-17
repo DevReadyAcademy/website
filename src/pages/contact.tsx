@@ -6,8 +6,10 @@ import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { Label } from "../components/ui/label";
 import { useToast } from "../components/ui/use-toast";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -82,10 +84,10 @@ const Contact = () => {
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back to Home
+              {t('contact.backToHome')}
             </Link>
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            DevReady
+            {t('common.brandName')}
           </span>
           </div>
         </header>
@@ -93,43 +95,43 @@ const Contact = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12 animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                Ready to Join Us?
+                {t('contact.pageTitle')}
               </h1>
               <p className="text-lg text-foreground max-w-2xl mx-auto mb-2 font-medium">
-                To secure your spot in our Bootcamp, book a call with us.
+                {t('contact.pageSubtitle')}
               </p>
               <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-                Have questions first? Send us a message or schedule a call to learn more.
+                {t('contact.pageDescription')}
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant animate-fade-in">
-                <h2 className="text-2xl font-semibold mb-2">Have Questions?</h2>
+                <h2 className="text-2xl font-semibold mb-2">{t('contact.formTitle')}</h2>
                 <p className="text-muted-foreground mb-6 text-sm">
-                  Send us your questions and we'll get back to you within 24 hours
+                  {t('contact.formDescription')}
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
+                      <Label htmlFor="name">{t('contact.formName')}</Label>
                       <Input
                           id="name"
                           name="name"
-                          placeholder="Your name"
+                          placeholder={t('contact.formNamePlaceholder')}
                           value={formData.name}
                           onChange={handleChange}
                           required
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">{t('contact.formEmail')}</Label>
                       <Input
                           id="email"
                           name="email"
                           type="email"
-                          placeholder="your@email.com"
+                          placeholder={t('contact.formEmailPlaceholder')}
                           value={formData.email}
                           onChange={handleChange}
                           required
@@ -137,22 +139,22 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
+                    <Label htmlFor="subject">{t('contact.formSubject')}</Label>
                     <Input
                         id="subject"
                         name="subject"
-                        placeholder="How can we help?"
+                        placeholder={t('contact.formSubjectPlaceholder')}
                         value={formData.subject}
                         onChange={handleChange}
                         required
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">{t('contact.formMessage')}</Label>
                     <Textarea
                         id="message"
                         name="message"
-                        placeholder="Tell us more..."
+                        placeholder={t('contact.formMessagePlaceholder')}
                         rows={5}
                         value={formData.message}
                         onChange={handleChange}
@@ -166,11 +168,11 @@ const Contact = () => {
                       disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                        "Sending..."
+                        t('contact.formSending')
                     ) : (
                         <>
                           <Send className="w-4 h-4 mr-2" />
-                          Send Message
+                          {t('contact.formSubmit')}
                         </>
                     )}
                   </Button>
@@ -182,11 +184,11 @@ const Contact = () => {
                 {/* PRIMARY CTA - Enrollment */}
                 <div className="bg-gradient-primary rounded-2xl p-8 text-primary-foreground shadow-lg">
                   <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-semibold mb-4">
-                    ⚡ ENROLL HERE
+                    {t('contact.enrollBadge')}
                   </div>
-                  <h2 className="text-2xl font-semibold mb-3">Book Your Enrollment Call</h2>
+                  <h2 className="text-2xl font-semibold mb-3">{t('contact.enrollTitle')}</h2>
                   <p className="opacity-90 mb-6">
-                    Ready to join? Schedule a call with our team to complete your enrollment and secure one of the 5 early bird spots at €299.
+                    {t('contact.enrollDescription')}
                   </p>
                   <Button asChild className="w-full bg-white text-primary hover:bg-white/90 shadow-lg" size="lg">
                     <a
@@ -195,24 +197,24 @@ const Contact = () => {
                         rel="noopener noreferrer"
                     >
                       <Calendar className="w-4 h-4 mr-2" />
-                      Book Enrollment Call
+                      {t('contact.enrollCta')}
                     </a>
                   </Button>
                   <p className="text-sm opacity-80 mt-4 text-center">
-                    💡 During the call, we'll answer your questions and finalize your enrollment
+                    {t('contact.enrollNote')}
                   </p>
                 </div>
 
                 {/* Contact Information */}
                 <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
-                  <h2 className="text-2xl font-semibold mb-6">Connect With Us</h2>
+                  <h2 className="text-2xl font-semibold mb-6">{t('contact.connectTitle')}</h2>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="p-3 rounded-xl bg-primary/10 text-primary">
                         <Mail className="w-5 h-5" />
                       </div>
                       <div>
-                        <h3 className="font-medium mb-1">Email</h3>
+                        <h3 className="font-medium mb-1">{t('contact.email')}</h3>
                         <a
                             href="mailto:hello@devready.gr"
                             className="text-muted-foreground hover:text-primary transition-colors"
@@ -226,12 +228,12 @@ const Contact = () => {
                         <MapPin className="w-5 h-5" />
                       </div>
                       <div>
-                        <h3 className="font-medium mb-1">Location</h3>
-                        <p className="text-muted-foreground">Remote</p>
+                        <h3 className="font-medium mb-1">{t('contact.location')}</h3>
+                        <p className="text-muted-foreground">{t('contact.locationValue')}</p>
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-medium mb-3">Follow Us</h3>
+                      <h3 className="font-medium mb-3">{t('contact.followUs')}</h3>
                       <div className="flex gap-3">
                         <a
                             href="#"
@@ -256,7 +258,7 @@ const Contact = () => {
 
         <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
           <p className="text-sm">
-            © {new Date().getFullYear()} DevReady. Bridging the gap between university and industry.
+            {t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}
           </p>
         </footer>
       </div>
