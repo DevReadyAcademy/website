@@ -4,33 +4,37 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+
 	<!-- Primary Meta Tags -->
 	<title>DevReady - Transform Your Career in Software Engineering | Intensive Bootcamp</title>
 	<meta name="title" content="DevReady - Transform Your Career in Software Engineering | Intensive Bootcamp" />
-	<meta name="description" content="Master software engineering with DevReady's intensive bootcamp. Learn production-ready skills, build real-world projects, and land your dream tech job. Join our next cohort starting February 2025." />
-	<meta name="keywords" content="software engineering bootcamp, coding bootcamp, learn programming, software development, tech career, DevReady, career change, software engineer training" />
+	<meta name="description"
+		content="Master software engineering with DevReady's intensive bootcamp. Learn production-ready skills, build real-world projects, and land your dream tech job. Join our next cohort starting February 2025." />
+	<meta name="keywords"
+		content="software engineering bootcamp, coding bootcamp, learn programming, software development, tech career, DevReady, career change, software engineer training" />
 	<meta name="author" content="DevReady" />
 	<meta name="generator" content="DevReady" />
 	<meta name="theme-color" content="#4f5aed" />
 	<link rel="canonical" href="https://www.devready.gr/" />
-	
+
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://www.devready.gr/" />
 	<meta property="og:title" content="DevReady - Transform Your Career in Software Engineering" />
-	<meta property="og:description" content="Master software engineering with DevReady's intensive bootcamp. Learn production-ready skills, build real-world projects, and land your dream tech job." />
+	<meta property="og:description"
+		content="Master software engineering with DevReady's intensive bootcamp. Learn production-ready skills, build real-world projects, and land your dream tech job." />
 	<meta property="og:image" content="https://www.devready.gr/assets/logo-320.webp" />
 	<meta property="og:site_name" content="DevReady" />
 	<meta property="og:locale" content="en_US" />
-	
+
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://www.devready.gr/" />
 	<meta property="twitter:title" content="DevReady - Transform Your Career in Software Engineering" />
-	<meta property="twitter:description" content="Master software engineering with DevReady's intensive bootcamp. Learn production-ready skills, build real-world projects, and land your dream tech job." />
+	<meta property="twitter:description"
+		content="Master software engineering with DevReady's intensive bootcamp. Learn production-ready skills, build real-world projects, and land your dream tech job." />
 	<meta property="twitter:image" content="https://www.devready.gr/assets/logo-320.webp" />
-	
+
 	<!-- Favicons -->
 	<link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
 	<link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
@@ -39,63 +43,74 @@
 	<meta name="apple-mobile-web-app-title" content="DevReady" />
 	<link rel="manifest" href="/assets/favicon/site.webmanifest" />
 	<!-- Preload critical assets -->
-	<link rel="preload" as="image" href="/assets/logo-80.webp" type="image/webp" fetchpriority="high" imagesrcset="/assets/logo-80.webp 80w, /assets/logo-120.webp 120w, /assets/logo-320.webp 320w" imagesizes="80px">
+	<link rel="preload" as="image" href="/assets/logo-80.webp" type="image/webp" fetchpriority="high"
+		imagesrcset="/assets/logo-80.webp 80w, /assets/logo-120.webp 120w, /assets/logo-320.webp 320w"
+		imagesizes="80px">
 	<!-- Load monitoring scripts asynchronously -->
 	<script type="text/javascript"
 		src="https://js-cdn.dynatracelabs.com/jstag/14868fa4215/bf12559ekw/438118c964eadcd2_complete.js"
-		crossorigin="anonymous"
-		async>
+		crossorigin="anonymous" async>
 		</script>
 	<link rel="stylesheet" id="silktide-consent-manager-css" href="/assets/silktide-consent-manager.css">
 	<script src="/assets/silktide-consent-manager.js" defer></script>
 	<script defer>
-		window.addEventListener('DOMContentLoaded', function() {
+		window.addEventListener('DOMContentLoaded', function () {
 			if (typeof silktideCookieBannerManager !== 'undefined') {
 				silktideCookieBannerManager.updateCookieBannerConfig({
-			background: {
-				showBackground: true
-			},
-			cookieIcon: {
-				position: "bottomLeft"
-			},
-			cookieTypes: [
-				{
-					id: "necessary",
-					name: "Necessary",
-					description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
-					required: true,
-					onAccept: function () {
-
+					background: {
+						showBackground: true
+					},
+					cookieIcon: {
+						position: "bottomLeft"
+					},
+					cookieTypes: [
+						{
+							id: "necessary",
+							name: "Necessary",
+							description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+							required: true,
+							onAccept: function () {
+								gtag('consent', 'update', {
+									'ad_user_data': 'granted',
+									'ad_personalization': 'granted',
+									'ad_storage': 'granted',
+									'analytics_storage': 'granted'
+								});
+							}
+						},
+						{
+							id: "analytics",
+							name: "Analytics",
+							description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+							required: true,
+							onAccept: function () {
+								gtag('consent', 'update', {
+									'ad_user_data': 'granted',
+									'ad_personalization': 'granted',
+									'ad_storage': 'granted',
+									'analytics_storage': 'granted'
+								});
+							}
+						}
+					],
+					text: {
+						banner: {
+							description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic.</p>",
+							acceptAllButtonText: "Accept all",
+							acceptAllButtonAccessibleLabel: "Accept all cookies",
+							rejectNonEssentialButtonText: "Reject non-essential",
+							rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+							preferencesButtonText: "Preferences",
+							preferencesButtonAccessibleLabel: "Toggle preferences"
+						},
+						preferences: {
+							title: "Customize your cookie preferences",
+							description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+							creditLinkText: "Get this banner for free",
+							creditLinkAccessibleLabel: "Get this banner for free"
+						}
 					}
-				},
-				{
-					id: "analytics",
-					name: "Analytics",
-					description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
-					required: true,
-					onAccept: function () {
-
-					}
-				}
-			],
-			text: {
-				banner: {
-					description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic.</p>",
-					acceptAllButtonText: "Accept all",
-					acceptAllButtonAccessibleLabel: "Accept all cookies",
-					rejectNonEssentialButtonText: "Reject non-essential",
-					rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
-					preferencesButtonText: "Preferences",
-					preferencesButtonAccessibleLabel: "Toggle preferences"
-				},
-				preferences: {
-					title: "Customize your cookie preferences",
-					description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
-					creditLinkText: "Get this banner for free",
-					creditLinkAccessibleLabel: "Get this banner for free"
-				}
-			}
-		});
+				});
 			}
 		});
 	</script>
@@ -105,7 +120,15 @@
 			display: none !important;
 		}
 	</style>
-	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7114TLYGRP"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-7114TLYGRP');
+	</script>
 	<!-- Structured Data / Schema.org for SEO -->
 	<script type="application/ld+json">
 	{
