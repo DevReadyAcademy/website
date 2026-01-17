@@ -74,20 +74,18 @@ const Team = () => {
           ))}
         </div>
         
-        {/* Founder Story */}
+        {/* Story Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto"
+          className="max-w-3xl mx-auto mt-16 text-center"
         >
-          <div className="p-8 rounded-2xl bg-card border border-border/50">
-            <h3 className="text-2xl font-bold mb-4 text-foreground">{t('team.storyTitle')}</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              {t('team.storyText')}
-            </p>
-          </div>
+          <h3 className="text-2xl font-bold mb-4 text-foreground">{t('team.storyTitle')}</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            {t('team.storyText')}
+          </p>
         </motion.div>
       </div>
     </section>
