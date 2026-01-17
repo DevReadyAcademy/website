@@ -6,30 +6,30 @@ import { useLanguage } from '../contexts/LanguageContext';
 const testimonials = [
   {
     name: "Maria Balafouti",
-    role: "Undegrad ",
-    quote: "I have to say that so many parts of the roadmap I had in mind were unlocked, and countless questions I’d been carrying for a long time were finally answered.\n" +
-        "Also, I absolutely loved the incredible chemistry you had as a team, it was so inspiring and you passed that same vibe on to us! Im ready to crush all my interviews thanks to you!\n",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
+    role: "Applied Informatics Student | STEM Educator",
+    quote: "Πρέπει να πω ότι ξεκλείδωσαν πάρα πολλά κομμάτια του roadmap που είχα στο μυαλό μου και αναρίθμητες ερωτήσεις που κουβαλούσα εδώ και πολύ καιρό βρήκαν επιτέλους απαντήσεις.\n" +
+        "Επίσης, λάτρεψα πραγματικά την απίστευτη χημεία που είχατε ως ομάδα — ήταν τόσο εμπνευστική και μεταδώσατε ακριβώς την ίδια ενέργεια και σε εμάς!\n",
+    image: "/assets/students/maria_balafouti.jpeg",
   },
   {
     name: "Kostas Kotsis",
-    role: "Data Scientist at Meta",
-    quote: "It felt extremely useful for my journey in software engineering, especially in terms of the guidelines I should follow. I will definitely follow the advice and material you provided, particularly around CV branding and interviewing.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    role: "Frontend Developer",
+    quote: "Μου φάνηκε πάρα πολύ χρήσιμο για την πορεία μου  στο software engineering, ως προς τις κατευθυντήριες γραμμές που πρέπει να ακολουθήσω.Δηλαδή σίγουρα θα ακολουθήσω τις συμβουλές και το υλικό  που μάς δώσατε, ειδικότερα σε cv branding και interviewing. Νομίζω ήταν οι ενότητες με τη μεγαλύτερη αξία (για μένα).",
+    image: "/assets/students/kostas_kotsis.jpeg",
   },
   {
     name: "Maria Zavola",
-    role: "Product Manager at Microsoft",
-    quote: "My main goal was to get an understanding of how the industry works. The information covered many different areas, giving me a good first taste.\n" +
+    role: "Biomedical Engineer",
+    quote: "βασικός μου στόχος ήταν να αποκτήσω μια εικόνα για το πώς λειτουργεί το industry. Η πληροφορία κάλυψε πολλά διαφορετικά κομμάτια, προσφέροντας μου μια καλή πρώτη γεύση.\n" +
         "\n" +
-        "The feedback from your own experiences, along with realistic examples, helped me manage my stress and boost my confidence, making the journey feel a bit more achievable.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+        "Το feedback των δικών σας εμπειριών, μαζί με ρεαλιστικά παραδείγματα, με βοήθησαν να διαχειριστώ το άγχος και να μπουστάρω την αυτοπεποίθησή μου, κάνοντας την πορεία πιο εφικτή.",
+    image: "/assets/students/maria_zavola.jpeg",
   },
   {
     name: "Kostantinos Apostolidis",
-    role: "ML Engineer at Amazon",
-    quote: "As a third-year student, the boost I got from this program was huge. You pushed me out of my comfort zone, challenged me in a positive way, and helped me see my future a little more clearly. The knowledge I gained is extensive, and much of it consists of things that are hard to “learn” at university. You gave me one of the most beautiful “first milestones” on my journey into technology.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    role: "Computer Science Student (UoM) | Front-End Development, IoT & Cybersecurity Enthusiast",
+    quote: "Ως φοιτητής τρίτου έτους, το boost που πήρα από αυτό το πρόγραμμα ήταν τεράστιο. Με βγάλατε από το comfort zone μου, με προβληματίσατε θετικά και με βοηθήσατε να δω το μέλλον μου ενα τσικ πιο καθαρά. Οι γνώσεις που αποκόμισα είναι πάρα πολλές, και μάλιστα πολλές από αυτές είναι πράγματα που δύσκολα “μαθαίνονται” στο πανεπιστήμιο. Μου αφήσατε έναν από τους πιο όμορφους «πρώτους σταθμούς» στο ταξίδι μου στην τεχνολογία, και δεν το θεωρώ δεδομένο.",
+    image: "/assets/students/kostas_apostolidis.jpeg",
   },
 ];
 
@@ -79,18 +79,18 @@ const Testimonials = () => {
 
               <div className="min-h-[200px] flex flex-col justify-center">
                 <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 animate-fade-in">
-                  "{testimonials[currentIndex].quote}"
+                  {testimonials[currentIndex].quote}
                 </p>
 
                 <div className="flex items-center gap-4 animate-fade-in">
-                  {/*<img*/}
-                  {/*    src={testimonials[currentIndex].image}*/}
-                  {/*    alt={testimonials[currentIndex].name}*/}
-                  {/*    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"*/}
-                  {/*/>*/}
+                  <img
+                      src={testimonials[currentIndex].image}
+                      alt={testimonials[currentIndex].name}
+                      className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+                  />
                   <div>
                     <h4 className="font-semibold text-lg">{testimonials[currentIndex].name}</h4>
-                    {/*<p className="text-muted-foreground text-sm">{testimonials[currentIndex].role}</p>*/}
+                    <p className="text-muted-foreground text-sm">{testimonials[currentIndex].role}</p>
                   </div>
                 </div>
               </div>
