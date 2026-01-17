@@ -53,13 +53,15 @@ const Header = () => {
           >
             <Link to="/" className="flex items-center gap-3">
               <img 
-                src="/assets/logo.webp" 
+                src="/assets/logo-80.webp"
+                srcSet="/assets/logo-80.webp 80w, /assets/logo-120.webp 120w, /assets/logo-320.webp 320w"
+                sizes="(max-width: 640px) 40px, 80px"
                 alt={t('common.brandName')} 
                 className="h-10 w-auto"
-                width="40"
-                height="40"
+                width="80"
+                height="80"
                 loading="eager"
-                fetchpriority="high"
+                fetchPriority="high"
               />
               <span className="text-2xl font-bold text-foreground hidden sm:inline">
                 {t('common.brandName')}
