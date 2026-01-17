@@ -268,6 +268,37 @@
     "finalCtaNote": "Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου.",
     "urgencyBadge": "⏰ Μόνο 5 Early Bird Θέσεις στα €299"
   },
+  "devpress": {
+    "headline": "From Coding to Hiring",
+    "subheadline": "Real stories, πρακτικές συμβουλές & insider tips από engineers που τα έχουν ζήσει",
+    "emptyStateHeadline": "Coming soon..",
+    "emptyStateDescription": "Ετοιμάζουμε εκπληκτικό περιεχόμενο για εσένα! Θα αρχίσουμε να δημοσιεύουμε άρθρα πολύ σύντομα.",
+    "readMore": "Διάβασε περισσότερα",
+    "readArticle": "Διάβασε το άρθρο",
+    "backToDevPress": "Πίσω στο DevPress",
+    "shareArticle": "Κοινοποίηση άρθρου",
+    "socialShareButtons": "Κουμπιά κοινοποίησης",
+    "shareOnTwitter": "Κοινοποίηση στο Twitter",
+    "shareOnFacebook": "Κοινοποίηση στο Facebook",
+    "shareOnLinkedIn": "Κοινοποίηση στο LinkedIn",
+    "copyLink": "Αντιγραφή συνδέσμου",
+    "linkCopied": "Το link αντιγράφηκε!",
+    "linkCopiedDescription": "Το link του άρθρου αντιγράφηκε στο clipboard",
+    "aboutAuthor": "Σχετικά με τον συγγραφέα",
+    "readyToTakeNextStep": "Έτοιμος να Κάνεις το Επόμενο Βήμα;",
+    "bootcampCTA": "Μάθε πώς το DevReady bootcamp μπορεί να σε κάνει industry-ready σε 6 εβδομάδες",
+    "viewProgram": "Δες το Πρόγραμμα",
+    "postNotFound": "Το άρθρο δεν βρέθηκε",
+    "postNotFoundDescription": "Το άρθρο που ψάχνεις δεν υπάρχει ή έχει μετακινηθεί.",
+    "backToDevPressButton": "Πίσω στο DevPress",
+    "by": "Από",
+    "errorIcon": "Εικονίδιο λάθους",
+    "notepadIcon": "Εικονίδιο σημειωματάριου",
+    "backToHome": "Επιστροφή στην αρχική",
+    "backToArticleList": "Επιστροφή στη λίστα άρθρων",
+    "authorInfo": "Πληροφορίες συγγραφέα",
+    "callToAction": "Κλήση σε δράση"
+  },
   "contact": {
     "backToHome": "Πίσω στην Αρχική",
     "pageTitle": "Έτοιμος να Συμμετέχεις;",
@@ -327,7 +358,7 @@
     "members": [
       {
         "name": "Alexis Pavlidis",
-        "description": "London-based Software Engineer με πάνω από επτά χρόνια εμπειρίας στη δημιουργία scalable distributed systems σε top companies και στην καθοδήγηση engineers, don't do this shit, don't do that, do this, do that. Είναι passionate για clean code, distributed systems, και στο να βοηθάει άλλους να να κανουν navigate στο tech industry μέσω mentoring, writing και speaking."
+        "description": "London-based Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable distributed systems σε top companies και στην καθοδήγηση engineers, don't do this shit, don't do that, do this, do that. Είναι passionate για clean code, distributed systems, και στο να βοηθάει άλλους να να κανουν navigate στο tech industry μέσω mentoring, writing και speaking."
       },
       {
         "name": "Kostikas Visnia",

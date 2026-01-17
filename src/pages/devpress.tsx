@@ -57,7 +57,7 @@ const DevPress = () => {
           href="#main-content"
           className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
         >
-          {language === 'gr' ? 'Μετάβαση στο κύριο περιεχόμενο' : 'Skip to main content'}
+          {t('common.skipToMain') || 'Skip to main content'}
         </a>
         
         {/* Header */}
@@ -81,13 +81,10 @@ const DevPress = () => {
         <section className="py-16 px-4 text-center bg-gradient-subtle" aria-label="DevPress introduction">
           <div className="container mx-auto max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {language === 'gr' ? 'Από τον Κώδικα στην Πρόσληψη' : 'From Coding to Hiring'}
+              {t('devpress.headline')}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {language === 'gr' 
-                ? 'Real stories, πρακτικές συμβουλές & insider tips από engineers που τα έχουν ζήσει'
-                : 'Real stories, practical advice & insider tips from engineers who\'ve been there'
-              }
+              {t('devpress.subheadline')}
             </p>
           </div>
         </section>
@@ -98,15 +95,12 @@ const DevPress = () => {
             {blogPosts.length === 0 ? (
               /* Empty State */
               <div className="text-center py-20" role="status" aria-live="polite">
-                <div className="text-8xl mb-6" role="img" aria-label={language === 'gr' ? 'Εικονίδιο σημειωματάριου' : 'Notepad icon'}>📝</div>
+                <div className="text-8xl mb-6" role="img" aria-label={t('devpress.notepadIcon')}>📝</div>
                 <h2 className="text-3xl font-bold mb-4">
-                  Coming soon..
+                  {t('devpress.emptyStateHeadline')}
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                  {language === 'gr' 
-                    ? 'Ετοιμάζουμε εκπληκτικό περιεχόμενο για εσένα! Θα αρχίσουμε να δημοσιεύουμε άρθρα πολύ σύντομα.'
-                    : 'We\'re preparing amazing content for you! We\'ll start posting articles very soon.'
-                  }
+                  {t('devpress.emptyStateDescription')}
                 </p>
               </div>
             ) : (
@@ -168,10 +162,10 @@ const DevPress = () => {
                     {/* Read More */}
                     <Link 
                       to={`/devpress/${post.slug}`}
-                      aria-label={`${language === 'gr' ? 'Διάβασε το άρθρο' : 'Read article'}: ${language === 'gr' ? post.titleGr : post.title}`}
+                      aria-label={`${t('devpress.readArticle')}: ${language === 'gr' ? post.titleGr : post.title}`}
                     >
                       <Button variant="ghost" className="group/btn w-full justify-between">
-                        <span>{language === 'gr' ? 'Διάβασε περισσότερα' : 'Read More'}</span>
+                        <span>{t('devpress.readMore')}</span>
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
                     </Link>
@@ -184,20 +178,17 @@ const DevPress = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-gradient-subtle" aria-label="Call to action">
+        <section className="py-16 px-4 bg-gradient-subtle" aria-label={t('devpress.callToAction')}>
           <div className="container mx-auto max-w-4xl text-center">
             <h3 className="text-3xl font-bold mb-4">
-              {language === 'gr' ? 'Έτοιμος να Γίνεις Industry-Ready;' : 'Ready to Become Industry-Ready?'}
+              {t('hero.readyToBecome')}
             </h3>
             <p className="text-lg text-muted-foreground mb-8">
-              {language === 'gr'
-                ? 'Μάθε περισσότερα για το 6-week bootcamp μας'
-                : 'Learn more about our 6-week intensive bootcamp'
-              }
+              {t('devpress.bootcampCTA')}
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <Link to="/bootcamp">
-                {language === 'gr' ? 'Δες το Bootcamp' : 'View Bootcamp'}
+                {t('common.viewProgramDetails')}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
