@@ -7,6 +7,8 @@ import Index from "./pages/index";
 import NotFound from "./pages/notFound";
 import Contact from "./pages/contact";
 import Bootcamp from "./pages/bootcamp";
+import DevPress from "./pages/devpress";
+import BlogPost from "./pages/blogPost";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/bootcamp" element={<Bootcamp />} />
+          <Route path="/devpress" element={<DevPress />} />
+          <Route path="/devpress/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

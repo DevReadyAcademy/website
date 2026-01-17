@@ -39,6 +39,7 @@ const Header = () => {
     { name: t('header.testimonials'), id: 'testimonials', type: 'scroll' },
     { name: t('header.team'), id: 'team', type: 'scroll' },
     { name: t('header.whyDifferent'), id: 'why-different', type: 'scroll' },
+    { name: t('header.devpress'), path: '/devpress', type: 'link' },
   ];
 
   return (

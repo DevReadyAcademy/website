@@ -9,6 +9,8 @@ interface SEOProps {
   ogImage?: string;
   ogType?: string;
   noindex?: boolean;
+  articlePublishedTime?: string;
+  articleAuthor?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -19,6 +21,8 @@ const SEO: React.FC<SEOProps> = ({
   ogImage = "https://www.devready.gr/assets/logo-320.webp",
   ogType = "website",
   noindex = false,
+  articlePublishedTime,
+  articleAuthor,
 }) => {
   const fullTitle = title.includes('DevReady') ? title : `${title} | DevReady`;
 
@@ -39,6 +43,14 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+      
+      {/* Article-specific Open Graph tags */}
+      {ogType === 'article' && articlePublishedTime && (
+        <meta property="article:published_time" content={articlePublishedTime} />
+      )}
+      {ogType === 'article' && articleAuthor && (
+        <meta property="article:author" content={articleAuthor} />
+      )}
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />

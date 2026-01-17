@@ -1,0 +1,219 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
+import { Button } from "../components/ui/button";
+import { useLanguage } from "../contexts/LanguageContext";
+import SEO from "../components/SEO";
+import { blogPosts } from "../data/blogPosts";
+
+const DevPress = () => {
+  const { language, t } = useLanguage();
+
+  return (
+    <>
+      <SEO
+        title="DevPress - Tech Insights & Career Advice"
+        description={blogPosts.length === 0 
+          ? "DevPress blog coming soon! We'll be sharing practical advice from experienced engineers on software engineering and career development."
+          : "Read our latest articles on software engineering, career development, and breaking into the tech industry. Practical advice from experienced engineers."
+        }
+        keywords="tech blog, software engineering blog, career advice, programming tips, tech industry Greece"
+        canonical="https://www.devready.gr/devpress"
+        ogType="website"
+      />
+      {/* Structured Data for Blog */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "name": "DevPress",
+          "description": "Tech insights and career advice from experienced software engineers",
+          "url": "https://www.devready.gr/devpress",
+          "publisher": {
+            "@type": "Organization",
+            "name": "DevReady",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.devready.gr/assets/logo-320.webp"
+            }
+          },
+          ...(blogPosts.length > 0 && {
+            "blogPost": blogPosts.map(post => ({
+              "@type": "BlogPosting",
+              "headline": language === 'gr' ? post.titleGr : post.title,
+              "url": `https://www.devready.gr/devpress/${post.slug}`,
+              "datePublished": post.date,
+              "author": {
+                "@type": "Person",
+                "name": post.author
+              }
+            }))
+          })
+        })}
+      </script>
+      <div className="min-h-screen bg-background">
+        {/* Skip to main content link */}
+        <a
+          href="#main-content"
+          className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
+        >
+          {language === 'gr' ? 'Μετάβαση στο κύριο περιεχόμενο' : 'Skip to main content'}
+        </a>
+        
+        {/* Header */}
+        <header className="py-6 px-4 border-b border-border/50 sticky top-0 bg-background/80 backdrop-blur-md z-50">
+          <div className="container mx-auto max-w-7xl flex items-center justify-between">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              <span className="font-medium">{t('bootcamp.backToHome')}</span>
+            </Link>
+            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent" aria-label="DevPress Blog">
+              DevPress
+            </h1>
+            <div className="w-32" /> {/* Spacer for centering */}
+          </div>
+        </header>
+
+        {/* Hero Section */}
+        <section className="py-16 px-4 text-center bg-gradient-subtle" aria-label="DevPress introduction">
+          <div className="container mx-auto max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              {language === 'gr' ? 'Από τον Κώδικα στην Πρόσληψη' : 'From Coding to Hiring'}
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {language === 'gr' 
+                ? 'Real stories, πρακτικές συμβουλές & insider tips από engineers που τα έχουν ζήσει'
+                : 'Real stories, practical advice & insider tips from engineers who\'ve been there'
+              }
+            </p>
+          </div>
+        </section>
+
+        {/* Blog Posts Grid */}
+        <section id="main-content" className="py-16 px-4" aria-label="Blog articles" role="main">
+          <div className="container mx-auto max-w-6xl">
+            {blogPosts.length === 0 ? (
+              /* Empty State */
+              <div className="text-center py-20" role="status" aria-live="polite">
+                <div className="text-8xl mb-6" role="img" aria-label={language === 'gr' ? 'Εικονίδιο σημειωματάριου' : 'Notepad icon'}>📝</div>
+                <h2 className="text-3xl font-bold mb-4">
+                  Coming soon..
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                  {language === 'gr' 
+                    ? 'Ετοιμάζουμε εκπληκτικό περιεχόμενο για εσένα! Θα αρχίσουμε να δημοσιεύουμε άρθρα πολύ σύντομα.'
+                    : 'We\'re preparing amazing content for you! We\'ll start posting articles very soon.'
+                  }
+                </p>
+              </div>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
+                {blogPosts.map((post) => (
+                <article
+                  key={post.id}
+                  className="bg-card rounded-xl border border-border/50 overflow-hidden hover:shadow-lg transition-all duration-300 group"
+                  role="listitem"
+                  aria-labelledby={`post-title-${post.id}`}
+                >
+                  {/* Blog Image */}
+                  <div className="aspect-video bg-gradient-primary relative overflow-hidden">
+                    <div className="absolute inset-0 flex items-center justify-center text-primary-foreground text-4xl font-bold opacity-20">
+                      DevReady
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    {/* Meta */}
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>{new Date(post.date).toLocaleDateString(language === 'gr' ? 'el-GR' : 'en-US', { 
+                          year: 'numeric', 
+                          month: 'short', 
+                          day: 'numeric' 
+                        })}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        <span>{language === 'gr' ? post.readTimeGr : post.readTime}</span>
+                      </div>
+                    </div>
+
+                    {/* Title */}
+                    <h2 id={`post-title-${post.id}`} className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                      {language === 'gr' ? post.titleGr : post.title}
+                    </h2>
+
+                    {/* Excerpt */}
+                    <p className="text-muted-foreground mb-4 line-clamp-3">
+                      {language === 'gr' ? post.excerptGr : post.excerpt}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {(language === 'gr' ? post.tagsGr : post.tags).map((tag, index) => (
+                        <span
+                          key={index}
+                          className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Read More */}
+                    <Link 
+                      to={`/devpress/${post.slug}`}
+                      aria-label={`${language === 'gr' ? 'Διάβασε το άρθρο' : 'Read article'}: ${language === 'gr' ? post.titleGr : post.title}`}
+                    >
+                      <Button variant="ghost" className="group/btn w-full justify-between">
+                        <span>{language === 'gr' ? 'Διάβασε περισσότερα' : 'Read More'}</span>
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
+                  </div>
+                </article>
+              ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gradient-subtle" aria-label="Call to action">
+          <div className="container mx-auto max-w-4xl text-center">
+            <h3 className="text-3xl font-bold mb-4">
+              {language === 'gr' ? 'Έτοιμος να Γίνεις Industry-Ready;' : 'Ready to Become Industry-Ready?'}
+            </h3>
+            <p className="text-lg text-muted-foreground mb-8">
+              {language === 'gr'
+                ? 'Μάθε περισσότερα για το 6-week bootcamp μας'
+                : 'Learn more about our 6-week intensive bootcamp'
+              }
+            </p>
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+              <Link to="/bootcamp">
+                {language === 'gr' ? 'Δες το Bootcamp' : 'View Bootcamp'}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground" role="contentinfo">
+          <p className="text-sm">
+            © {new Date().getFullYear()} DevReady. All rights reserved.
+          </p>
+        </footer>
+      </div>
+    </>
+  );
+};
+
+export default DevPress;
+
