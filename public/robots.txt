@@ -1,0 +1,27 @@
+# robots.txt for DevReady
+# https://www.devready.gr/robots.txt
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any)
+Disallow: /api/
+Disallow: /_redirects
+
+# Sitemap location
+Sitemap: https://www.devready.gr/sitemap.xml
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 0
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+

@@ -7,6 +7,7 @@ import { Textarea } from "../components/ui/textarea";
 import { Label } from "../components/ui/label";
 import { useToast } from "../components/ui/use-toast";
 import { useLanguage } from "../contexts/LanguageContext";
+import SEO from "../components/SEO";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -75,9 +76,16 @@ const Contact = () => {
   };
 
   return (
-      <div className="min-h-screen bg-background">
-        {/* Header */}
-        <header className="py-6 px-4 border-b border-border/50">
+      <>
+        <SEO
+          title="Contact Us - Get in Touch with DevReady"
+          description="Ready to transform your career? Contact DevReady to learn more about our software engineering bootcamp, ask questions, or secure your spot in the next cohort. We're here to help!"
+          keywords="contact DevReady, bootcamp enrollment, software engineering questions, apply to bootcamp, tech career help"
+          canonical="https://www.devready.gr/contact"
+        />
+        <div className="min-h-screen bg-background">
+          {/* Header */}
+          <header className="py-6 px-4 border-b border-border/50">
           <div className="container mx-auto max-w-6xl flex items-center justify-between">
             <Link
                 to="/"
@@ -261,7 +269,8 @@ const Contact = () => {
             {t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}
           </p>
         </footer>
-      </div>
+        </div>
+      </>
   );
 };
 

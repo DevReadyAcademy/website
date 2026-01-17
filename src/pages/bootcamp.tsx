@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useLanguage } from "../contexts/LanguageContext";
+import SEO from "../components/SEO";
 
 const iconMap = {
   0: Compass,
@@ -47,9 +48,16 @@ const Bootcamp = () => {
   const notGoodFitItems = Array.isArray(notGoodFitData) ? notGoodFitData : [];
   
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="py-6 px-4 border-b border-border/50 sticky top-0 bg-background/80 backdrop-blur-md z-50">
+    <>
+      <SEO
+        title="Software Engineering Bootcamp - Full Curriculum & Details"
+        description="Explore DevReady's comprehensive 12-week software engineering bootcamp curriculum. Learn coding fundamentals, system design, interview preparation, and career skills from industry experts."
+        keywords="software engineering bootcamp curriculum, coding bootcamp syllabus, learn software development, bootcamp schedule, programming course, tech bootcamp Greece"
+        canonical="https://www.devready.gr/bootcamp"
+      />
+      <div className="min-h-screen bg-background">
+        {/* Header */}
+        <header className="py-6 px-4 border-b border-border/50 sticky top-0 bg-background/80 backdrop-blur-md z-50">
         <div className="container mx-auto max-w-7xl flex items-center justify-between">
           <Link
             to="/"
@@ -339,7 +347,8 @@ const Bootcamp = () => {
           {t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}
         </p>
       </footer>
-    </div>
+      </div>
+    </>
   );
 };
 
