@@ -322,7 +322,21 @@
     "title": "Το Team",
     "description": "Είμαστε passionate professionals αφοσιωμένοι να κάνουμε transform το tech education στην Ελλάδα",
     "storyTitle": "Γιατί φτιάξαμε το DevReady",
-    "storyText": "Ο Alex αντιμετώπισε το ίδιο πρόβλημα που αντιμετωπίζετε και εσείς, πώς να κάνεις το άλμα από 'ξέρω να γράφω κώδικα' σε 'I got hired'. Μετά από πολλές απορρίψεις σε εταιρείες του εξωτερικού και μαθαίνοντας με τον δύσκολο τρόπο, συνεργάστηκε με τον Κώστα και κατάφεραν να μπουν σε top εταιρείες στο εξωτερικό. Ύστερα βοήθησαν τον Βασίλη και δεκάδες άλλους να μπουν στο industry. Γνωρίζουμε ότι η Ελλάδα έχει great talent στο engineering, αλλά λείπει το structured path, το mentorship και το industry context. Έτσι φτιάξαμε το DevReady."
+    "storyText": "Ο Alex αντιμετώπισε το ίδιο πρόβλημα που αντιμετωπίζετε και εσείς, πώς να κάνεις το άλμα από 'ξέρω να γράφω κώδικα' σε 'I got hired'. Μετά από πολλές απορρίψεις σε εταιρείες του εξωτερικού και μαθαίνοντας με τον δύσκολο τρόπο, συνεργάστηκε με τον Κώστα και κατάφεραν να μπουν σε top εταιρείες στο εξωτερικό. Ύστερα βοήθησαν τον Βασίλη και δεκάδες άλλους να μπουν στο industry. Γνωρίζουμε ότι η Ελλάδα έχει great talent στο engineering, αλλά λείπει το structured path, το mentorship και το industry context. Έτσι φτιάξαμε το DevReady.",
+    "members": [
+      {
+        "name": "Alexis Pavlidis",
+        "description": "London-based Software Engineer με πάνω από επτά χρόνια εμπειρίας στη δημιουργία scalable distributed systems σε top companies και στην καθοδήγηση engineers, don't do this shit, don't do that, do this, do that. Είναι passionate για clean code, distributed systems, και στο να βοηθάει άλλους να να κανουν navigate στο tech industry μέσω mentoring, writing και speaking."
+      },
+      {
+        "name": "Kostikas Visnia",
+        "description": "Barcelona-based Technical Account Manager με deep technical background σε networking και cloud infrastructure. Έχοντας κάνει transition από hands-on technical support σε senior consulting ρόλους, φέρνει ένα business-aware approach στο engineering, διασφαλίζοντας ότι τα complex software συστήματα δουλεύουν όπως πρέπει για global enterprises και τους χρήστες τους."
+      },
+      {
+        "name": "Vasilis Samoladas",
+        "description": "Prague-based Frontend Engineer, passionate για AI, automation, και στο να φτιάχνει products που οι άνθρωποι ειναι excited to use. Με εμπειρία στο travel industry και αγάπη για ταξίδια, συνδυάζει engineering, business thinking, και ένα questionable χιούμορ, νοοτροπία, read a book, the laws of human nature."
+      }
+    ]
   },
   "testimonials": {
     "title": "Testimonials"
