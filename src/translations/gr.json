@@ -154,7 +154,7 @@
     ],
     "curriculumLearnLabel": "Τι θα μάθεις:",
     "timelineTitle": "Your Journey Timeline",
-    "timelineDescription": "Από την εγγραφή μέχρι τα interviews—τι να περιμένεις.",
+    "timelineDescription": "Από την εγγραφή μέχρι τα interviews—what to expect.",
     "timelineSteps": [
       {
         "title": "Σήμερα: Κλείσε το Enrollment Call",
@@ -173,8 +173,8 @@
         "description": "Live sessions, project work, code reviews και career preparation."
       },
       {
-        "title": "Μετά την Εβδομάδα 6: Alumni Network",
-        "description": "Μπες στο alumni network, πρόσβαση σε όλα τα materials για πάντα και συνέχισε να μαθαίνεις με το cohort σου."
+        "title": "Μετά την Εβδομάδα 6: DevReady Community",
+        "description": "Μπες στο DevReady Community, πρόσβαση σε όλα τα materials για πάντα και συνέχισε να μαθαίνεις με το cohort σου."
       }
     ],
     "whatsIncludedTitle": "Τι Περιλαμβάνεται",
@@ -196,7 +196,7 @@
         "description": "Master τα behavioral και technical interviews με dos, don'ts και practice"
       },
       {
-        "title": "Alumni Network Access",
+        "title": "DevReady Community Access",
         "description": "Συνδέσου με past cohorts για referrals και support"
       },
       {
@@ -206,7 +206,21 @@
     ],
     "whoShouldJoinTitle": "Είναι Για Εσένα;",
     "goodFitTitle": "✅ Είσαι Good Fit Αν:",
+    "goodFitItems": [
+      "Έχεις basic coding knowledge και θέλεις να γίνεις industry-ready",
+      "Είσαι developer σε οποιονδήποτε ρόλο: frontend, backend, full-stack, mobile, ή any tech stack",
+      "Είσαι διατεθειμένος να αφιερώσεις περίπου 8 ώρες την εβδομάδα",
+      "Θέλεις real feedback από working engineers",
+      "Εκτιμάς τα practical skills περισσότερο από certificates"
+    ],
     "notGoodFitTitle": "❌ Not a Good Fit Αν:",
+    "notGoodFitItems": [
+      "Δεν έχεις γράψει ποτέ μια γραμμή code (ξεκίνα με free resources πρώτα)",
+      "Περιμένεις guaranteed job without putting the effort",
+      "Δεν μπορείς να κάνεις commit το time investment",
+      "Ψάχνεις για passive learning ή pre-recorded lectures μόνο",
+      "Θέλεις απλά ένα certificate για να προσθέσεις στο CV σου"
+    ],
     "faqTitle": "Frequently Asked Questions",
     "faqs": [
       {
@@ -291,7 +305,7 @@
       },
       {
         "title": "Branding",
-        "description": "Φτιάξε ένα compelling professional brand που ξεχωρίζει και δείχνει την αξία σου στη tech βιομηχανία."
+        "description": "Φτιάξε ένα compelling professional brand που ξεχωρίζει και δείχνει την αξία σου στο tech industry."
       },
       {
         "title": "How to work / execute",
@@ -299,7 +313,7 @@
       },
       {
         "title": "Expectations του Industry",
-        "description": "Κατάλαβε τι ψάχνουν πραγματικά οι tech εταιρείες και τι χρειάζεται για να τα πας καλά σε ένα γρήγορο professional περιβάλλον."
+        "description": "Μάθε τι ψάχνουν πραγματικά οι tech εταιρείες και τι χρειάζεται για να τα πας καλά σε ένα fast paced professional περιβάλλον."
       }
     ]
   },
@@ -333,7 +347,7 @@
     ]
   },
   "footer": {
-    "copyright": "© {year} DevReady. Γεφυρώνοντας το χάσμα ανάμεσα στο πανεπιστήμιο και την αγορά εργασίας."
+    "copyright": "© {year} DevReady."
   }
 }
 

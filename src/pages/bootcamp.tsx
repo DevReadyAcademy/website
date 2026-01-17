@@ -40,6 +40,12 @@ const Bootcamp = () => {
   const faqsData = t('bootcamp.faqs');
   const faqs = Array.isArray(faqsData) ? faqsData : [];
   
+  const goodFitData = t('bootcamp.goodFitItems');
+  const goodFitItems = Array.isArray(goodFitData) ? goodFitData : [];
+  
+  const notGoodFitData = t('bootcamp.notGoodFitItems');
+  const notGoodFitItems = Array.isArray(notGoodFitData) ? notGoodFitData : [];
+  
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -238,52 +244,24 @@ const Bootcamp = () => {
               <div className="p-8 rounded-2xl border-2 border-primary/20 bg-card">
                 <h3 className="text-2xl font-bold mb-4 text-primary">{t('bootcamp.goodFitTitle')}</h3>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>You have basic coding knowledge and want to become industry-ready</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>You're a developer in any role: frontend, backend, full-stack, mobile, or any tech stack</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>You're willing to commit around 8 hours per week</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>You want real feedback from working engineers</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>You value practical skills over certificates</span>
-                  </li>
+                  {goodFitItems.map((item: string, index: number) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
               <div className="p-8 rounded-2xl border-2 border-border/50 bg-card/50">
                 <h3 className="text-2xl font-bold mb-4">{t('bootcamp.notGoodFitTitle')}</h3>
                 <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-3">
-                    <span className="text-lg">•</span>
-                    <span>You've never written a line of code (start with free resources first)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-lg">•</span>
-                    <span>You expect a guaranteed job without putting in the work</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-lg">•</span>
-                    <span>You can't commit to the time investment</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-lg">•</span>
-                    <span>You're looking for passive learning or pre-recorded lectures only</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-lg">•</span>
-                    <span>You just want a certificate to add to your CV</span>
-                  </li>
+                  {notGoodFitItems.map((item: string, index: number) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-lg">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

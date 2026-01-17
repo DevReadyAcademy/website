@@ -173,8 +173,8 @@
         "description": "Live sessions, project work, code reviews, and career preparation."
       },
       {
-        "title": "After Week 6: Alumni Network",
-        "description": "Join the alumni network, access all materials forever, and continue learning with your cohort."
+        "title": "After Week 6: DevReady Community",
+        "description": "Join the DevReady Community, access all materials forever, and continue learning with your cohort."
       }
     ],
     "whatsIncludedTitle": "What's Included",
@@ -196,7 +196,7 @@
         "description": "Master behavioral and technical interviews with dos, don'ts, and practice"
       },
       {
-        "title": "Alumni Network Access",
+        "title": "DevReady Community Access",
         "description": "Connect with past cohorts for referrals and support"
       },
       {
@@ -206,7 +206,21 @@
     ],
     "whoShouldJoinTitle": "Is This For You?",
     "goodFitTitle": "✅ You're a Good Fit If:",
+    "goodFitItems": [
+      "You have basic coding knowledge and want to become industry-ready",
+      "You're a developer in any role: frontend, backend, full-stack, mobile, or any tech stack",
+      "You're willing to commit around 8 hours per week",
+      "You want real feedback from working engineers",
+      "You value practical skills over certificates"
+    ],
     "notGoodFitTitle": "❌ Not a Good Fit If:",
+    "notGoodFitItems": [
+      "You've never written a line of code (start with free resources first)",
+      "You expect a guaranteed job without putting in the work",
+      "You can't commit to the time investment",
+      "You're looking for passive learning or pre-recorded lectures only",
+      "You just want a certificate to add to your CV"
+    ],
     "faqTitle": "Frequently Asked Questions",
     "faqs": [
       {
@@ -333,7 +347,7 @@
     ]
   },
   "footer": {
-    "copyright": "© {year} DevReady. Bridging the gap between university and industry."
+    "copyright": "© {year} DevReady."
   }
 }
 
