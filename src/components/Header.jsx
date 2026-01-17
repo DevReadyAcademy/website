@@ -50,10 +50,18 @@ const Header = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            className="flex items-center"
           >
-            <a href="/" className="text-2xl font-bold text-foreground">
-              {t('common.brandName')}
-            </a>
+            <Link to="/" className="flex items-center gap-3">
+              <img 
+                src="/assets/logo.webp" 
+                alt={t('common.brandName')} 
+                className="h-10 w-auto"
+              />
+              <span className="text-2xl font-bold text-foreground hidden sm:inline">
+                {t('common.brandName')}
+              </span>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
