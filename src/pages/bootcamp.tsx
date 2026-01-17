@@ -76,29 +76,32 @@ const Bootcamp = () => {
               {t('bootcamp.cohortBadge')}
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
+            <h1 className="text-5xl md:text-6xl font-black mb-4 bg-gradient-primary bg-clip-text text-transparent pb-2">
               {t('bootcamp.pageTitle')}
             </h1>
             
-            <p className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto">
-              {t('bootcamp.heroSubtitle')}
-            </p>
+            <div className="max-w-3xl mx-auto mb-8 space-y-3">
+              <p className="text-xl md:text-2xl text-foreground/90">
+                {t('bootcamp.heroSubtitle')}
+              </p>
+              <p className="text-base md:text-lg text-primary font-semibold">
+                {t('bootcamp.languageAgnostic')}
+              </p>
+              <p className="text-muted-foreground">
+                {t('bootcamp.heroDescription')}
+              </p>
+            </div>
 
-            <p className="text-base md:text-lg text-primary font-semibold mb-3 max-w-2xl mx-auto">
-              {t('bootcamp.languageAgnostic')}
-            </p>
-
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              {t('bootcamp.heroDescription')}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="mb-12">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
                 <Link to="/contact">
                   <Users className="w-5 h-5 mr-2" />
                   {t('common.bookCall')}
                 </Link>
               </Button>
+              <p className="text-xs text-muted-foreground mt-3">
+                {t('common.moneyBackGuarantee')}
+              </p>
             </div>
 
             {/* Key Info Cards */}
@@ -201,6 +204,11 @@ const Bootcamp = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                     <p className="text-muted-foreground">{step.description}</p>
+                    {index === 0 && (
+                      <Link to="/contact" className="text-primary hover:underline text-sm font-medium inline-block mt-2">
+                        → {t('common.enrollNow')}
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}

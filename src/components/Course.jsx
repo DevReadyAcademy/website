@@ -99,6 +99,9 @@ const Course = () => {
                 </Button>
               </div>
             </div>
+            <p className="text-sm text-primary/90 mt-6 max-w-md mx-auto">
+              {t('common.moneyBackGuarantee')}
+            </p>
           </div>
         </div>
       </section>

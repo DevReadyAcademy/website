@@ -49,7 +49,7 @@ const Team = () => {
         </div>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {teamMembers.map((member, index) => (
             <motion.div 
               key={index}
@@ -73,6 +73,22 @@ const Team = () => {
             </motion.div>
           ))}
         </div>
+        
+        {/* Founder Story */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl mx-auto"
+        >
+          <div className="p-8 rounded-2xl bg-card border border-border/50">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">{t('team.storyTitle')}</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              {t('team.storyText')}
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

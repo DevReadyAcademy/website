@@ -4,6 +4,7 @@
     "tagline": "Γεφυρώνοντας το χάσμα ανάμεσα στο πανεπιστήμιο και την αγορά εργασίας",
     "enrollNow": "Εγγραφή",
     "learnMore": "Μάθε Περισσότερα",
+    "moneyBackGuarantee": "💰 Πλήρης επιστροφή χρημάτων αν τελικά δεν συμμετάσχεις στο πρόγραμμα",
     "bookCall": "Εγγραφή",
     "viewFullCurriculum": "Δες το Πρόγραμμα",
     "viewProgramDetails": "Λεπτομέρειες Προγράμματος",
@@ -21,7 +22,7 @@
     "urgencyBadge": "Επόμενο Cohort: Απρίλιος–Μάιος 2026 · ⏰ Μόνο 5 Early Bird Θέσεις",
     "headline": "Γίνε Industry-Ready Σε 6 Εβδομάδες",
     "headlineHighlight": "Industry-Ready",
-    "subheadline": "Μάθε τα engineering skills, το mindset και το branding που ψάχνουν οι tech εταιρείες—χωρίς πτυχίο.",
+    "subheadline": "Μάθε τα engineering skills, το mindset και το branding που ψάχνουν οι tech εταιρείες—no degree required.",
     "description": "Real engineering skills, mentorship και career coaching για να γίνεις industry-ready.",
     "trust1": "6 Εβδομάδες Remote",
     "trust2": "Industry Mentors",
@@ -63,7 +64,7 @@
     "cohortBadge": "Επόμενο Cohort: Απρίλιος–Μάιος 2026",
     "heroSubtitle": "Μάθε τα engineering skills, το mindset και το professional branding που ψάχνουν πραγματικά οι tech εταιρείες.",
     "languageAgnostic": "Language & Stack Agnostic — works for JavaScript, Python, Java, Go, you name it",
-    "heroDescription": "Σχεδιασμένο για οποιονδήποτε στην Ελλάδα με laptop και πάθος—no degree required.",
+    "heroDescription": "Σχεδιασμένο για οποιονδήποτε στην Ελλάδα με ένα laptop και πάθος—no degree required.",
     "infoCards": {
       "timeCommitmentTitle": "Διάρκεια",
       "timeCommitment": "6 εβδομάδες εντατικά",
@@ -319,7 +320,9 @@
   },
   "team": {
     "title": "Το Team",
-    "description": "Είμαστε passionate professionals αφοσιωμένοι να κάνουμε transform το tech education στην Ελλάδα"
+    "description": "Είμαστε passionate professionals αφοσιωμένοι να κάνουμε transform το tech education στην Ελλάδα",
+    "storyTitle": "Γιατί φτιάξαμε το DevReady",
+    "storyText": "Ο Alex αντιμετώπισε το ίδιο πρόβλημα που αντιμετωπίζετε και εσείς—πώς να κάνεις το άλμα από 'ξέρω να γράφω code' σε 'με προσέλαβαν'. Μετά από χρόνια δουλειάς σε tech εταιρείες στο εξωτερικό, συνεργάστηκε με τον Kostas και βοήθησε τον Vasilis και δεκάδες άλλους να μπουν στο industry. Διαπιστώσαμε ότι η Ελλάδα έχει ταλέντο—αλλά λείπει το structured path, το mentorship και το industry context. Έτσι φτιάξαμε το DevReady."
   },
   "testimonials": {
     "title": "Testimonials"
@@ -330,7 +333,7 @@
     "items": [
       {
         "title": "Built by Engineers, Not Just Educators",
-        "description": "Η ομάδα μας αποτελείται από working engineers από top tech εταιρείες. Ξέρουμε τι χρειάζεται για να προσληφθείς γιατί το ζούμε κάθε μέρα."
+        "description": "Η ομάδα μας αποτελείται από working engineers με experience στο εξωτερικό. Ξέρουμε τι χρειάζεται για να προσληφθείς γιατί το ζούμε κάθε μέρα."
       },
       {
         "title": "Validated Μέσω Πραγματικού Research",
