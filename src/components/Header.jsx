@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Header = () => {

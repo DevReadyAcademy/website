@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Calendar, CheckCircle, Users, Clock, Target, BookOpen, Code, Brain, FileText, Compass } from "lucide-react";
+import { ArrowLeft, Calendar, CheckCircle, Users, Clock, Target, Code, Brain, FileText, Compass } from "lucide-react";
 import { Button } from "../components/ui/button";
 import {
   Accordion,
@@ -144,7 +144,7 @@ const Bootcamp = () => {
             </div>
 
             <Accordion type="single" collapsible className="space-y-4">
-              {modules.map((module, index) => (
+              {modules.map((module, _) => (
                 <AccordionItem
                   key={module.id}
                   value={module.id}
