@@ -3,40 +3,69 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../contexts/LanguageContext';
 
-const testimonials = [
+const testimonialsEn = [
   {
     name: "Maria Balafouti",
     role: "Applied Informatics Student | STEM Educator",
-    quote: "Πρέπει να πω ότι ξεκλείδωσαν πάρα πολλά κομμάτια του roadmap που είχα στο μυαλό μου και αναρίθμητες ερωτήσεις που κουβαλούσα εδώ και πολύ καιρό βρήκαν επιτέλους απαντήσεις.\n" +
-        "Επίσης, λάτρεψα πραγματικά την απίστευτη χημεία που είχατε ως ομάδα — ήταν τόσο εμπνευστική και μεταδώσατε ακριβώς την ίδια ενέργεια και σε εμάς!\n",
+    quote: "I have to say that so many parts of the roadmap I had in mind were unlocked, and countless questions I'd been carrying for a long time were finally answered.\nAlso, I absolutely loved the incredible chemistry you had as a team, it was so inspiring and you passed that same vibe on to us! Im ready to crush all my interviews thanks to you!",
     image: "/assets/students/maria_balafouti.jpeg",
   },
   {
     name: "Kostas Kotsis",
     role: "Frontend Developer",
-    quote: "Μου φάνηκε πάρα πολύ χρήσιμο για την πορεία μου  στο software engineering, ως προς τις κατευθυντήριες γραμμές που πρέπει να ακολουθήσω.Δηλαδή σίγουρα θα ακολουθήσω τις συμβουλές και το υλικό  που μάς δώσατε, ειδικότερα σε cv branding και interviewing. Νομίζω ήταν οι ενότητες με τη μεγαλύτερη αξία (για μένα).",
+    quote: "It felt extremely useful for my journey in software engineering, especially in terms of the guidelines I should follow. I will definitely follow the advice and material you provided, particularly around CV branding and interviewing.",
     image: "/assets/students/kostas_kotsis.jpeg",
   },
   {
     name: "Maria Zavola",
     role: "Biomedical Engineer",
-    quote: "βασικός μου στόχος ήταν να αποκτήσω μια εικόνα για το πώς λειτουργεί το industry. Η πληροφορία κάλυψε πολλά διαφορετικά κομμάτια, προσφέροντας μου μια καλή πρώτη γεύση.\n" +
-        "\n" +
-        "Το feedback των δικών σας εμπειριών, μαζί με ρεαλιστικά παραδείγματα, με βοήθησαν να διαχειριστώ το άγχος και να μπουστάρω την αυτοπεποίθησή μου, κάνοντας την πορεία πιο εφικτή.",
+    quote: "My main goal was to get an understanding of how the industry works. The information covered many different areas, giving me a good first taste.\n\nThe feedback from your own experiences, along with realistic examples, helped me manage my stress and boost my confidence, making the journey feel a bit more achievable.",
     image: "/assets/students/maria_zavola.jpeg",
   },
   {
     name: "Kostantinos Apostolidis",
     role: "Computer Science Student (UoM) | Front-End Development, IoT & Cybersecurity Enthusiast",
-    quote: "Ως φοιτητής τρίτου έτους, το boost που πήρα από αυτό το πρόγραμμα ήταν τεράστιο. Με βγάλατε από το comfort zone μου, με προβληματίσατε θετικά και με βοηθήσατε να δω το μέλλον μου ενα τσικ πιο καθαρά. Οι γνώσεις που αποκόμισα είναι πάρα πολλές, και μάλιστα πολλές από αυτές είναι πράγματα που δύσκολα “μαθαίνονται” στο πανεπιστήμιο. Μου αφήσατε έναν από τους πιο όμορφους «πρώτους σταθμούς» στο ταξίδι μου στην τεχνολογία, και δεν το θεωρώ δεδομένο.",
+    quote: "As a third-year student, the boost I got from this program was huge. You pushed me out of my comfort zone, challenged me in a positive way, and helped me see my future a little more clearly. The knowledge I gained is extensive, and much of it consists of things that are hard to 'learn' at university. You gave me one of the most beautiful 'first milestones' on my journey into technology.",
+    image: "/assets/students/kostas_apostolidis.jpeg",
+  },
+];
+
+const testimonialsGr = [
+  {
+    name: "Maria Balafouti",
+    role: "Applied Informatics Student | STEM Educator",
+    quote: "Πρέπει να πω ότι ξεκλείδωσαν πάρα πολλά κομμάτια του roadmap που είχα στο μυαλό μου και αναρίθμητες ερωτήσεις που κουβαλούσα εδώ και πολύ καιρό βρήκαν επιτέλους απαντήσεις.\nΕπίσης, λάτρεψα πραγματικά την απίστευτη χημεία που είχατε ως ομάδα — ήταν τόσο εμπνευστική και μεταδώσατε ακριβώς την ίδια ενέργεια και σε εμάς!",
+    image: "/assets/students/maria_balafouti.jpeg",
+  },
+  {
+    name: "Kostas Kotsis",
+    role: "Frontend Developer",
+    quote: "Μου φάνηκε πάρα πολύ χρήσιμο για την πορεία μου στο software engineering, ως προς τις κατευθυντήριες γραμμές που πρέπει να ακολουθήσω. Δηλαδή σίγουρα θα ακολουθήσω τις συμβουλές και το υλικό που μάς δώσατε, ειδικότερα σε CV branding και interviewing. Νομίζω ήταν οι ενότητες με τη μεγαλύτερη αξία (για μένα).",
+    image: "/assets/students/kostas_kotsis.jpeg",
+  },
+  {
+    name: "Maria Zavola",
+    role: "Biomedical Engineer",
+    quote: "Βασικός μου στόχος ήταν να αποκτήσω μια εικόνα για το πώς λειτουργεί το industry. Η πληροφορία κάλυψε πολλά διαφορετικά κομμάτια, προσφέροντάς μου μια καλή πρώτη γεύση.\n\nΤο feedback των δικών σας εμπειριών, μαζί με ρεαλιστικά παραδείγματα, με βοήθησαν να διαχειριστώ το άγχος και να μπουστάρω την αυτοπεποίθησή μου, κάνοντας την πορεία πιο εφικτή.",
+    image: "/assets/students/maria_zavola.jpeg",
+  },
+  {
+    name: "Kostantinos Apostolidis",
+    role: "Computer Science Student (UoM) | Front-End Development, IoT & Cybersecurity Enthusiast",
+    quote: "Ως φοιτητής τρίτου έτους, το boost που πήρα από αυτό το πρόγραμμα ήταν τεράστιο. Με βγάλατε από το comfort zone μου, με προβληματίσατε θετικά και με βοηθήσατε να δω το μέλλον μου ενα τσικ πιο καθαρά. Οι γνώσεις που αποκόμισα είναι πάρα πολλές, και μάλιστα πολλές από αυτές είναι πράγματα που δύσκολα 'μαθαίνονται' στο πανεπιστήμιο. Μου αφήσατε έναν από τους πιο όμορφους 'πρώτους σταθμούς' στο ταξίδι μου στην τεχνολογία, και δεν το θεωρώ δεδομένο.",
     image: "/assets/students/kostas_apostolidis.jpeg",
   },
 ];
 
 const Testimonials = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const testimonials = language === 'gr' ? testimonialsGr : testimonialsEn;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [language]);
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -44,7 +73,7 @@ const Testimonials = () => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
+  }, [isAutoPlaying, testimonials.length]);
 
   const goToPrevious = () => {
     setIsAutoPlaying(false);

@@ -19,9 +19,9 @@ const translations: Record<Language, any> = {
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    // Get language from localStorage or default to 'en'
+    // Get language from localStorage or default to 'gr'
     const saved = localStorage.getItem('language');
-    return (saved === 'en' || saved === 'gr') ? saved : 'en';
+    return (saved === 'en' || saved === 'gr') ? saved : 'gr';
   });
 
   useEffect(() => {
