@@ -18,9 +18,11 @@
 		crossorigin="anonymous">
 		</script>
 	<link rel="stylesheet" id="silktide-consent-manager-css" href="/assets/silktide-consent-manager.css">
-	<script src="/assets/silktide-consent-manager.js"></script>
-	<script>
-		silktideCookieBannerManager.updateCookieBannerConfig({
+	<script src="/assets/silktide-consent-manager.js" defer></script>
+	<script defer>
+		window.addEventListener('DOMContentLoaded', function() {
+			if (typeof silktideCookieBannerManager !== 'undefined') {
+				silktideCookieBannerManager.updateCookieBannerConfig({
 			background: {
 				showBackground: true
 			},
@@ -34,7 +36,7 @@
 					description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
 					required: true,
 					onAccept: function () {
-						console.log('Add logic for the required Necessary here');
+
 					}
 				},
 				{
@@ -43,7 +45,7 @@
 					description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
 					required: true,
 					onAccept: function () {
-						console.log('Add logic for the required Analytics here');
+
 					}
 				}
 			],
@@ -63,6 +65,8 @@
 					creditLinkText: "Get this banner for free",
 					creditLinkAccessibleLabel: "Get this banner for free"
 				}
+			}
+		});
 			}
 		});
 	</script>
