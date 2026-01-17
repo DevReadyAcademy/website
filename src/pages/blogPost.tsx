@@ -7,6 +7,7 @@ import SEO from "../components/SEO";
 import { blogPosts } from "../data/blogPosts";
 import { useToast } from "../components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
+import Header from "../components/Header";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -24,7 +25,8 @@ const BlogPost = () => {
           canonical="https://www.devready.gr/devpress"
           noindex={true}
         />
-        <div className="min-h-screen bg-background flex items-center justify-center" role="main">
+        <Header />
+        <div className="min-h-screen bg-background flex items-center justify-center pt-20" role="main">
           <div className="text-center">
             <div className="text-6xl mb-4" role="img" aria-label={t('devpress.errorIcon')}>❌</div>
             <h1 className="text-4xl font-bold mb-4">
@@ -113,28 +115,15 @@ const BlogPost = () => {
           "inLanguage": language === 'gr' ? 'el' : 'en'
         })}
       </script>
-      <div className="min-h-screen bg-background">
+      <Header />
+      <div className="min-h-screen bg-background pt-20">
         {/* Skip to main content link */}
         <a
           href="#main-content"
-          className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
+          className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-24 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
         >
           {t('common.skipToMain') || 'Skip to main content'}
         </a>
-        
-        {/* Header */}
-        <header className="py-6 px-4 border-b border-border/50 sticky top-0 bg-background/80 backdrop-blur-md z-50" role="banner">
-          <div className="container mx-auto max-w-4xl flex items-center justify-between">
-            <Link
-              to="/"
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-              aria-label={t('devpress.backToHome')}
-            >
-              <ArrowLeft className="w-5 h-5" aria-hidden="true" />
-              <span className="font-medium">{t('bootcamp.backToHome')}</span>
-            </Link>
-          </div>
-        </header>
 
         {/* Article Header */}
         <article id="main-content" className="py-16 px-4" role="main" aria-labelledby="article-title">

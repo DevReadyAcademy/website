@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
+import Header from "../components/Header";
 
 const iconMap = {
   0: Compass,
@@ -55,27 +56,9 @@ const Bootcamp = () => {
         keywords="software engineering bootcamp curriculum, coding bootcamp syllabus, learn software development, bootcamp schedule, programming course, tech bootcamp Greece"
         canonical="https://www.devready.gr/bootcamp"
       />
-      <div className="min-h-screen bg-background">
-        {/* Header */}
-        <header className="py-6 px-4 border-b border-border/50 sticky top-0 bg-background/80 backdrop-blur-md z-50">
-        <div className="container mx-auto max-w-7xl flex items-center justify-between">
-          <Link
-            to="/"
-            className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            {t('bootcamp.backToHome')}
-          </Link>
-          <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            {t('common.brandName')}
-          </span>
-          <Button asChild className="bg-primary hover:bg-primary/90">
-            <Link to="/contact">{t('common.enrollNow')}</Link>
-          </Button>
-        </div>
-      </header>
-
-      <main>
+      <Header />
+      <div className="min-h-screen bg-background pt-20">
+        <main>
         {/* Hero Section */}
         <section className="py-16 px-4 bg-gradient-hero">
           <div className="container mx-auto max-w-5xl text-center">

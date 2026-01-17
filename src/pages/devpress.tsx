@@ -5,6 +5,7 @@ import { Button } from "../components/ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import { blogPosts } from "../data/blogPosts";
+import Header from "../components/Header";
 
 const DevPress = () => {
   const { language, t } = useLanguage();
@@ -51,31 +52,15 @@ const DevPress = () => {
           })
         })}
       </script>
-      <div className="min-h-screen bg-background">
+      <Header />
+      <div className="min-h-screen bg-background pt-20">
         {/* Skip to main content link */}
         <a
           href="#main-content"
-          className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
+          className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-24 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
         >
           {t('common.skipToMain') || 'Skip to main content'}
         </a>
-        
-        {/* Header */}
-        <header className="py-6 px-4 border-b border-border/50 sticky top-0 bg-background/80 backdrop-blur-md z-50">
-          <div className="container mx-auto max-w-7xl flex items-center justify-between">
-            <Link
-              to="/"
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              <span className="font-medium">{t('bootcamp.backToHome')}</span>
-            </Link>
-            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent" aria-label="DevPress Blog">
-              DevPress
-            </h1>
-            <div className="w-32" /> {/* Spacer for centering */}
-          </div>
-        </header>
 
         {/* Hero Section */}
         <section className="py-16 px-4 text-center bg-gradient-subtle" aria-label="DevPress introduction">
