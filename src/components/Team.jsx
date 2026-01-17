@@ -2,26 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const teamMembers = [
-  {
-    name: 'Alexis Pavlidis',
-    description: 'A London-based Software Engineer over seven years of experience building scalable systems and guiding early-career developers. He is passionate about clean code, practical engineering, and helping others navigate the tech industry through mentoring, writing, and speaking.',
-    imageUrl: '/assets/alex.jpg'
-  },
-  {
-    name: 'Kostikas Visnia',
-    description: 'A Barcelona-based Technical Account Manager with a deep technical background in networking and cloud infrastructure. Having transitioned from hands-on technical support to senior consulting roles, he brings a business-aware approach to engineering, ensuring complex software systems work perfectly for global enterprises and their users.',
-    imageUrl: '/assets/kostikas.jpg'
-  },
-  {
-    name: 'Vasilis Samoladas',
-    description: 'A Prague-based Frontend Engineer passionate about AI, automation, and building products people actually enjoy using. With experience in the travel industry and a love for traveling, he combines engineering, business thinking, and a questionable sense of humor.',
-    imageUrl: '/assets/sam.jpg'
-  }
-];
-
 const Team = () => {
   const { t } = useLanguage();
+  
+  const teamImages = [
+    '/assets/alex.jpg',
+    '/assets/kostikas.jpg',
+    '/assets/sam.jpg'
+  ];
+  
+  const teamMembers = (t('team.members') || []).map((member, index) => ({
+    ...member,
+    imageUrl: teamImages[index]
+  }));
   
   return (
     <section id="team" className="py-24 sm:py-32 px-4 bg-background" aria-label="Our team">

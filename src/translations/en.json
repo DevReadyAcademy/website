@@ -322,7 +322,21 @@
     "title": "Meet The Team",
     "description": "We're a group of passionate professionals dedicated to transforming tech education in Greece",
     "storyTitle": "Why We Built DevReady",
-    "storyText": "Alex faced the same problem you're facing—how to make the jump from 'I can code' to 'I got hired'. After years working at tech companies abroad, he teamed up with Kostas and helped Vasilis and dozens of others break into the industry. We realized Greece has the talent—but lacks the structured path, mentorship, and industry context. So we built DevReady."
+    "storyText": "Alex faced the same problem you're facing—how to make the jump from 'I can code' to 'I got hired'. After years working at tech companies abroad, he teamed up with Kostas and helped Vasilis and dozens of others break into the industry. We realized Greece has the talent—but lacks the structured path, mentorship, and industry context. So we built DevReady.",
+    "members": [
+      {
+        "name": "Alexis Pavlidis",
+        "description": "A London-based Software Engineer over seven years of experience building scalable systems and guiding early-career developers. He is passionate about clean code, practical engineering, and helping others navigate the tech industry through mentoring, writing, and speaking."
+      },
+      {
+        "name": "Kostikas Visnia",
+        "description": "A Barcelona-based Technical Account Manager with a deep technical background in networking and cloud infrastructure. Having transitioned from hands-on technical support to senior consulting roles, he brings a business-aware approach to engineering, ensuring complex software systems work perfectly for global enterprises and their users."
+      },
+      {
+        "name": "Vasilis Samoladas",
+        "description": "A Prague-based Frontend Engineer passionate about AI, automation, and building products people actually enjoy using. With experience in the travel industry and a love for traveling, he combines engineering, business thinking, and a questionable sense of humor."
+      }
+    ]
   },
   "testimonials": {
     "title": "What Our Students Say"
