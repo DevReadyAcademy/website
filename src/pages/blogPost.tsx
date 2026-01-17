@@ -26,19 +26,16 @@ const BlogPost = () => {
         />
         <div className="min-h-screen bg-background flex items-center justify-center" role="main">
           <div className="text-center">
-            <div className="text-6xl mb-4" role="img" aria-label={language === 'gr' ? 'Εικονίδιο λάθους' : 'Error icon'}>❌</div>
+            <div className="text-6xl mb-4" role="img" aria-label={t('devpress.errorIcon')}>❌</div>
             <h1 className="text-4xl font-bold mb-4">
-              {language === 'gr' ? 'Το άρθρο δεν βρέθηκε' : 'Post Not Found'}
+              {t('devpress.postNotFound')}
             </h1>
             <p className="text-muted-foreground mb-6">
-              {language === 'gr' 
-                ? 'Το άρθρο που ψάχνεις δεν υπάρχει ή έχει μετακινηθεί.'
-                : 'The post you\'re looking for doesn\'t exist or has been moved.'
-              }
+              {t('devpress.postNotFoundDescription')}
             </p>
             <Link to="/devpress">
-              <Button aria-label={language === 'gr' ? 'Επιστροφή στο DevPress' : 'Back to DevPress'}>
-                {language === 'gr' ? 'Πίσω στο DevPress' : 'Back to DevPress'}
+              <Button aria-label={t('devpress.backToDevPressButton')}>
+                {t('devpress.backToDevPressButton')}
               </Button>
             </Link>
           </div>
@@ -70,8 +67,8 @@ const BlogPost = () => {
   const copyLink = () => {
     navigator.clipboard.writeText(currentUrl);
     toast({
-      title: language === 'gr' ? "Το link αντιγράφηκε!" : "Link copied!",
-      description: language === 'gr' ? "Το link του άρθρου αντιγράφηκε στο clipboard" : "Article link copied to clipboard",
+      title: t('devpress.linkCopied'),
+      description: t('devpress.linkCopiedDescription'),
     });
   };
 
@@ -122,7 +119,7 @@ const BlogPost = () => {
           href="#main-content"
           className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
         >
-          {language === 'gr' ? 'Μετάβαση στο κύριο περιεχόμενο' : 'Skip to main content'}
+          {t('common.skipToMain') || 'Skip to main content'}
         </a>
         
         {/* Header */}
@@ -131,7 +128,7 @@ const BlogPost = () => {
             <Link
               to="/"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-              aria-label={language === 'gr' ? 'Επιστροφή στην αρχική' : 'Back to home'}
+              aria-label={t('devpress.backToHome')}
             >
               <ArrowLeft className="w-5 h-5" aria-hidden="true" />
               <span className="font-medium">{t('bootcamp.backToHome')}</span>
@@ -159,7 +156,7 @@ const BlogPost = () => {
                 <span>{readTime}</span>
               </div>
               <span aria-hidden="true">•</span>
-              <span>{language === 'gr' ? 'Από' : 'By'} {post.author}</span>
+              <span>{t('devpress.by')} {post.author}</span>
             </div>
 
             {/* Title */}
@@ -180,18 +177,18 @@ const BlogPost = () => {
             </div>
 
             {/* Social Share */}
-            <div className="flex items-center gap-4 py-6 border-y border-border/50 mb-12" role="region" aria-label={language === 'gr' ? 'Κοινοποίηση άρθρου' : 'Share article'}>
+            <div className="flex items-center gap-4 py-6 border-y border-border/50 mb-12" role="region" aria-label={t('devpress.shareArticle')}>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Share2 className="w-5 h-5" aria-hidden="true" />
-                <span className="font-medium">{language === 'gr' ? 'Κοινοποίηση:' : 'Share:'}</span>
+                <span className="font-medium">{t('devpress.shareArticle')}:</span>
               </div>
-              <div className="flex gap-2" role="group" aria-label={language === 'gr' ? 'Κουμπιά κοινοποίησης' : 'Social share buttons'}>
+              <div className="flex gap-2" role="group" aria-label={t('devpress.socialShareButtons')}>
                 <Button
                   variant="outline"
                   size="icon"
                   onClick={shareOnTwitter}
-                  aria-label={language === 'gr' ? 'Κοινοποίηση στο Twitter' : 'Share on Twitter'}
-                  title={language === 'gr' ? 'Κοινοποίηση στο Twitter' : 'Share on Twitter'}
+                  aria-label={t('devpress.shareOnTwitter')}
+                  title={t('devpress.shareOnTwitter')}
                   className="hover:bg-blue-500/10 hover:text-blue-500 hover:border-blue-500"
                 >
                   <Twitter className="w-4 h-4" aria-hidden="true" />
@@ -200,8 +197,8 @@ const BlogPost = () => {
                   variant="outline"
                   size="icon"
                   onClick={shareOnFacebook}
-                  aria-label={language === 'gr' ? 'Κοινοποίηση στο Facebook' : 'Share on Facebook'}
-                  title={language === 'gr' ? 'Κοινοποίηση στο Facebook' : 'Share on Facebook'}
+                  aria-label={t('devpress.shareOnFacebook')}
+                  title={t('devpress.shareOnFacebook')}
                   className="hover:bg-blue-600/10 hover:text-blue-600 hover:border-blue-600"
                 >
                   <Facebook className="w-4 h-4" aria-hidden="true" />
@@ -210,8 +207,8 @@ const BlogPost = () => {
                   variant="outline"
                   size="icon"
                   onClick={shareOnLinkedIn}
-                  aria-label={language === 'gr' ? 'Κοινοποίηση στο LinkedIn' : 'Share on LinkedIn'}
-                  title={language === 'gr' ? 'Κοινοποίηση στο LinkedIn' : 'Share on LinkedIn'}
+                  aria-label={t('devpress.shareOnLinkedIn')}
+                  title={t('devpress.shareOnLinkedIn')}
                   className="hover:bg-blue-700/10 hover:text-blue-700 hover:border-blue-700"
                 >
                   <Linkedin className="w-4 h-4" aria-hidden="true" />
@@ -220,8 +217,8 @@ const BlogPost = () => {
                   variant="outline"
                   size="icon"
                   onClick={copyLink}
-                  aria-label={language === 'gr' ? 'Αντιγραφή συνδέσμου' : 'Copy link'}
-                  title={language === 'gr' ? 'Αντιγραφή συνδέσμου' : 'Copy link'}
+                  aria-label={t('devpress.copyLink')}
+                  title={t('devpress.copyLink')}
                   className="hover:bg-primary/10 hover:text-primary hover:border-primary"
                 >
                   <LinkIcon className="w-4 h-4" aria-hidden="true" />
@@ -247,8 +244,8 @@ const BlogPost = () => {
             </div>
 
             {/* Author Bio */}
-            <aside className="mt-12 p-6 bg-card rounded-xl border border-border/50" aria-label={language === 'gr' ? 'Πληροφορίες συγγραφέα' : 'Author information'}>
-              <h2 className="text-xl font-bold mb-2">{language === 'gr' ? 'Σχετικά με τον συγγραφέα' : 'About the Author'}</h2>
+            <aside className="mt-12 p-6 bg-card rounded-xl border border-border/50" aria-label={t('devpress.authorInfo')}>
+              <h2 className="text-xl font-bold mb-2">{t('devpress.aboutAuthor')}</h2>
               <p className="text-muted-foreground">
                 <strong>{post.author}</strong> {language === 'gr' 
                   ? 'είναι Software Engineer με έδρα το Λονδίνο και co-founder του DevReady. Έχει βοηθήσει πάνω από 50 developers να μπουν στο tech industry.'
@@ -258,19 +255,16 @@ const BlogPost = () => {
             </aside>
 
             {/* CTA */}
-            <aside className="mt-12 p-8 bg-gradient-primary rounded-xl text-center text-primary-foreground" aria-label={language === 'gr' ? 'Κλήση σε δράση' : 'Call to action'}>
+            <aside className="mt-12 p-8 bg-gradient-primary rounded-xl text-center text-primary-foreground" aria-label={t('devpress.callToAction')}>
               <h2 className="text-2xl font-bold mb-4">
-                {language === 'gr' ? 'Έτοιμος να Κάνεις το Επόμενο Βήμα;' : 'Ready to Take the Next Step?'}
+                {t('devpress.readyToTakeNextStep')}
               </h2>
               <p className="mb-6 opacity-90">
-                {language === 'gr'
-                  ? 'Μάθε πώς το DevReady bootcamp μπορεί να σε κάνει industry-ready σε 6 εβδομάδες'
-                  : 'Learn how DevReady bootcamp can make you industry-ready in 6 weeks'
-                }
+                {t('devpress.bootcampCTA')}
               </p>
               <Button asChild size="lg" variant="secondary">
                 <Link to="/bootcamp">
-                  {language === 'gr' ? 'Δες το Πρόγραμμα' : 'View Program'}
+                  {t('devpress.viewProgram')}
                 </Link>
               </Button>
             </aside>
