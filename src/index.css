@@ -135,3 +135,13 @@ All colors MUST be HSL.
 .link {
   @apply text-blue-600 underline hover:text-blue-800;
 }
+
+/* Skip navigation link for accessibility */
+.skip-link {
+  @apply absolute -top-10 left-0 bg-primary text-primary-foreground px-4 py-2 z-50 focus:top-0 transition-all;
+}
+
+/* Focus visible styles for better keyboard navigation */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary;
+}

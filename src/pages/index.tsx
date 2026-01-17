@@ -19,8 +19,12 @@ const Index = () => {
     return (
         <>
             <SEO />
+            <a href="#main-content" className="skip-link">
+                Skip to main content
+            </a>
             <div className="min-h-screen">
             <Header/>
+            <main id="main-content">
             <Hero/>
             {/* <Vision/> */}
             <Pillars/>
@@ -28,12 +32,12 @@ const Index = () => {
             <Team/>
             <Testimonials/>
             <WhyDifferent/>
-
+            </main>
 
             {/* <ComingSoon /> */}
             {/*<Subscribe />*/}
 
-            <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
+            <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground" role="contentinfo">
                 <p className="text-sm">
                     {t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}
                 </p>

@@ -91,7 +91,7 @@ const Testimonials = () => {
   };
 
   return (
-      <section id="testimonials" className="py-20 px-4">
+      <section id="testimonials" className="py-20 px-4" aria-label="Student testimonials">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12 animate-fade-in">
           {/*<span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">*/}
@@ -103,13 +103,20 @@ const Testimonials = () => {
           </div>
 
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl bg-card border border-border/50 p-8 md:p-12 shadow-elegant">
-              <Quote className="w-12 h-12 text-primary/20 mb-6" />
+            <div 
+              className="overflow-hidden rounded-2xl bg-card border border-border/50 p-8 md:p-12 shadow-elegant"
+              role="tabpanel"
+              id={`testimonial-${currentIndex}`}
+              aria-label={`Testimonial from ${testimonials[currentIndex].name}`}
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              <Quote className="w-12 h-12 text-primary/20 mb-6" aria-hidden="true" />
 
               <div className="min-h-[200px] flex flex-col justify-center">
-                <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 animate-fade-in">
+                <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 animate-fade-in">
                   {testimonials[currentIndex].quote}
-                </p>
+                </blockquote>
 
                 <div className="flex items-center gap-4 animate-fade-in">
                   <img
@@ -135,25 +142,34 @@ const Testimonials = () => {
                 size="icon"
                 className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 rounded-full shadow-lg bg-background"
                 onClick={goToPrevious}
+                aria-label="Previous testimonial"
+                title="Previous testimonial"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-5 h-5" aria-hidden="true" />
             </Button>
             <Button
                 variant="outline"
                 size="icon"
                 className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 rounded-full shadow-lg bg-background"
                 onClick={goToNext}
+                aria-label="Next testimonial"
+                title="Next testimonial"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-5 h-5" aria-hidden="true" />
             </Button>
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
-            {testimonials.map((_, index) => (
+          <div className="flex justify-center gap-2 mt-6" role="tablist" aria-label="Testimonial navigation">
+            {testimonials.map((testimonial, index) => (
                 <button
                     key={index}
                     onClick={() => goToSlide(index)}
+                    role="tab"
+                    aria-label={`View testimonial from ${testimonial.name}`}
+                    aria-selected={index === currentIndex}
+                    aria-controls={`testimonial-${index}`}
+                    tabIndex={index === currentIndex ? 0 : -1}
                     className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                         index === currentIndex
                             ? "bg-primary w-8"

@@ -42,7 +42,7 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${scrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${scrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`} role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <motion.div
@@ -68,7 +68,7 @@ const Header = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
             {navItems.map((item) => (
               item.type === 'link' ? (
                 <Link
@@ -103,7 +103,9 @@ const Header = () => {
           <button
             className="lg:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             <svg
               className="w-6 h-6"
@@ -126,10 +128,12 @@ const Header = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <motion.nav
+            id="mobile-navigation"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="lg:hidden py-4 space-y-2"
+            aria-label="Mobile navigation"
           >
             {navItems.map((item) => (
               item.type === 'link' ? (

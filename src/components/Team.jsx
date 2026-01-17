@@ -24,7 +24,7 @@ const Team = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="team" className="py-24 sm:py-32 px-4 bg-background">
+    <section id="team" className="py-24 sm:py-32 px-4 bg-background" aria-label="Our team">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -120,7 +120,7 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-6 text-sm">
                   {t('contact.formDescription')}
                 </p>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">{t('contact.formName')}</Label>

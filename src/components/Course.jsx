@@ -10,7 +10,7 @@ const Course = () => {
   const highlights = t('course.highlights') || [];
   
   return (
-      <section id="course" className="py-20 px-4 bg-gradient-subtle">
+      <section id="course" className="py-20 px-4 bg-gradient-subtle" aria-label="Course information">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
