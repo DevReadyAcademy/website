@@ -6,6 +6,11 @@
 All colors MUST be HSL.
 */
 
+/* Font optimization - prevent invisible text while fonts load */
+@font-face {
+  font-display: swap;
+}
+
 
 @layer base {
   :root {

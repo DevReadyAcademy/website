@@ -57,6 +57,10 @@ const Header = () => {
                 src="/assets/logo.webp" 
                 alt={t('common.brandName')} 
                 className="h-10 w-auto"
+                width="40"
+                height="40"
+                loading="eager"
+                fetchpriority="high"
               />
               <span className="text-2xl font-bold text-foreground hidden sm:inline">
                 {t('common.brandName')}

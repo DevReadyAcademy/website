@@ -116,6 +116,10 @@ const Testimonials = () => {
                       src={testimonials[currentIndex].image}
                       alt={testimonials[currentIndex].name}
                       className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+                      width="56"
+                      height="56"
+                      loading="lazy"
+                      decoding="async"
                   />
                   <div>
                     <h4 className="font-semibold text-lg">{testimonials[currentIndex].name}</h4>

@@ -7,17 +7,17 @@ const teamMembers = [
   {
     name: 'Alexis Pavlidis',
     description: 'A London-based Software Engineer over seven years of experience building scalable systems and guiding early-career developers. He is passionate about clean code, practical engineering, and helping others navigate the tech industry through mentoring, writing, and speaking.',
-    imageUrl: '/assets/alex.jpeg'
+    imageUrl: '/assets/alex.jpg'
   },
   {
     name: 'Kostikas Visnia',
     description: 'A Barcelona-based Technical Account Manager with a deep technical background in networking and cloud infrastructure. Having transitioned from hands-on technical support to senior consulting roles, he brings a business-aware approach to engineering, ensuring complex software systems work perfectly for global enterprises and their users.',
-    imageUrl: '/assets/kostikas.jpeg'
+    imageUrl: '/assets/kostikas.jpg'
   },
   {
     name: 'Vasilis Samoladas',
     description: 'A Prague-based Frontend Engineer passionate about AI, automation, and building products people actually enjoy using. With experience in the travel industry and a love for traveling, he combines engineering, business thinking, and a questionable sense of humor.',
-    imageUrl: '/assets/sam.jpeg'
+    imageUrl: '/assets/sam.jpg'
   }
 ];
 
@@ -61,9 +61,25 @@ const Team = () => {
             >
               <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-2xl">
                 {member.imageUrl ? (
-                  <img alt={member.name} className="w-full h-full object-cover" src={member.imageUrl} />
+                  <img 
+                    alt={member.name} 
+                    className="w-full h-full object-cover" 
+                    src={member.imageUrl}
+                    width="192"
+                    height="192"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 ) : (
-                  <img alt={member.name} className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1593510050025-2c379a40f1aa" />
+                  <img 
+                    alt={member.name} 
+                    className="w-full h-full object-cover" 
+                    src="https://images.unsplash.com/photo-1593510050025-2c379a40f1aa"
+                    width="192"
+                    height="192"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 )}
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">{member.name}</h3>
