@@ -70,7 +70,12 @@
 							description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
 							required: true,
 							onAccept: function () {
-
+								gtag('consent', 'update', {
+									'ad_user_data': 'granted',
+									'ad_personalization': 'granted',
+									'ad_storage': 'granted',
+									'analytics_storage': 'granted'
+								});
 							}
 						},
 						{
@@ -79,7 +84,12 @@
 							description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
 							required: true,
 							onAccept: function () {
-
+								gtag('consent', 'update', {
+									'ad_user_data': 'granted',
+									'ad_personalization': 'granted',
+									'ad_storage': 'granted',
+									'analytics_storage': 'granted'
+								});
 							}
 						}
 					],
