@@ -139,7 +139,7 @@
       {
         "week": "Εβδομάδα 6",
         "title": "Interviewing & Job Search Strategy",
-        "description": "Κατανόησε το full hiring process και ετοιμάσου να perform confidently και realistically.",
+        "description": "Δες πώς λειτουργεί στην πράξη το hiring process και πώς να κινηθείς σωστά στα interviews και στο job search.",
         "details": [
           "Complete interview pipeline overview: από application μέχρι offer",
           "Behavioural interviews και το STAR method για να απαντάς effectively",
@@ -211,19 +211,16 @@
     "whoShouldJoinTitle": "Είναι Για Εσένα;",
     "goodFitTitle": "✅ Είσαι Good Fit Αν:",
     "goodFitItems": [
-      "Έχεις basic coding knowledge και θέλεις να γίνεις industry-ready",
-      "Είσαι developer σε οποιονδήποτε ρόλο: frontend, backend, full-stack, mobile, ή any tech stack",
-      "Είσαι διατεθειμένος να αφιερώσεις περίπου 8 ώρες την εβδομάδα",
-      "Θέλεις real feedback από working engineers",
-      "Εκτιμάς τα practical skills περισσότερο από certificates"
+      "Έχεις βασικές γνώσεις προγραμματισμού και θέλεις να γίνεις industry-ready",
+      "Είσαι developer σε οποιονδήποτε ρόλο: frontend, backend, full-stack, mobile, ή άλλο tech stack",
+      "Θέλεις ειλικρινές feedback από engineers που δουλεύουν στην αγορά",
+      "Εκτιμάς τα πρακτικά skills περισσότερο από τα certificates"
     ],
     "notGoodFitTitle": "❌ Not a Good Fit Αν:",
     "notGoodFitItems": [
-      "Δεν έχεις γράψει ποτέ μια γραμμή code (ξεκίνα με free resources πρώτα)",
-      "Περιμένεις guaranteed job without putting the effort",
-      "Δεν μπορείς να κάνεις commit το time investment",
-      "Ψάχνεις για passive learning ή pre-recorded lectures μόνο",
-      "Θέλεις απλά ένα certificate για να προσθέσεις στο CV σου"
+      "Δεν έχεις γράψει ποτέ κώδικα (προτείνουμε να ξεκινήσεις πρώτα με free resources)",
+      "Περιμένεις guaranteed job χωρίς να επενδύσεις χρόνο και προσπάθεια",
+      "Δεν μπορείς να δεσμευτείς στον απαιτούμενο χρόνο"
     ],
     "faqTitle": "Frequently Asked Questions",
     "faqs": [
@@ -233,7 +230,7 @@
       },
       {
         "question": "Χρειάζεται prior coding experience?",
-        "answer": "Ναι, αλλά τίποτα fancy. Αν μπορείς να γράψεις basic code (variables, loops, functions), είσαι έτοιμος. Εστιάζουμε στο να γεφυρώσουμε το gap από 'ξέρω να γράφω κώδικα' σε 'είμαι industry-ready,' όχι να διδάξουμε programming από το μηδέν."
+        "answer": "Ναι, αλλά τίποτα fancy. Αν μπορείς να γράψεις basic code (variables, loops, functions και μια επαφή με μια γλώσσα προγραμματισμού), είσαι έτοιμος. Εστιάζουμε στο να γεφυρώσουμε το gap από 'ξέρω να γράφω κώδικα' σε 'είμαι industry-ready,' όχι να διδάξουμε programming από το μηδέν."
       },
       {
         "question": "Θα βρω δουλειά μετά το bootcamp?",

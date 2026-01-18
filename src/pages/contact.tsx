@@ -94,9 +94,21 @@ const Contact = () => {
               <ArrowLeft className="w-4 h-4" />
               {t('contact.backToHome')}
             </Link>
-            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            {t('common.brandName')}
-          </span>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/assets/logo-80.webp"
+                srcSet="/assets/logo-80.webp 80w, /assets/logo-120.webp 120w, /assets/logo-320.webp 320w"
+                sizes="(max-width: 640px) 40px, 80px"
+                alt={`${t('common.brandName')} logo`}
+                className="h-10 w-auto"
+                width="80"
+                height="80"
+                loading="eager"
+              />
+              <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                {t('common.brandName')}
+              </span>
+            </div>
           </div>
         </header>
         <main className="py-16 px-4">
