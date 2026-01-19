@@ -104,28 +104,28 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${scrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`} role="banner">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${scrolled || mobileMenuOpen ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`} role="banner">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center"
+            className="flex items-center flex-shrink-0"
           >
-            <Link to="/" className="flex items-center gap-3" aria-label={`${t('common.brandName')} - Go to homepage`}>
+            <Link to="/" className="flex items-center gap-2 sm:gap-3" aria-label={`${t('common.brandName')} - Go to homepage`}>
               <img 
                 src="/assets/logo-80.webp"
                 srcSet="/assets/logo-80.webp 80w, /assets/logo-120.webp 120w, /assets/logo-320.webp 320w"
-                sizes="(max-width: 640px) 40px, 80px"
+                sizes="(max-width: 640px) 32px, 80px"
                 alt={`${t('common.brandName')} logo`}
-                className="h-10 w-auto"
+                className="h-8 w-8 sm:h-10 sm:w-10"
                 width="80"
                 height="80"
                 loading="eager"
                 fetchPriority="high"
               />
-              <span className="text-2xl font-bold text-foreground hidden sm:inline" aria-hidden="true">
+              <span className="text-lg sm:text-2xl font-bold text-foreground" aria-hidden="true">
                 {t('common.brandName')}
               </span>
             </Link>
@@ -176,7 +176,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 -mr-2 flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
@@ -207,7 +207,7 @@ const Header = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden py-4 space-y-2"
+            className="lg:hidden py-3 space-y-1 bg-background border-t border-border/50"
             aria-label="Mobile navigation"
           >
             {navItems.map((item) => (
@@ -216,7 +216,7 @@ const Header = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block w-full text-left px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-colors ${
                     isActivePage(item)
                       ? 'text-foreground bg-accent font-semibold'
                       : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
@@ -229,7 +229,7 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item)}
-                  className={`block w-full text-left px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-colors ${
                     isActivePage(item)
                       ? 'text-foreground bg-accent font-semibold'
                       : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
@@ -241,15 +241,13 @@ const Header = () => {
                 </button>
               )
             ))}
-            <div className="px-4 pt-2 space-y-3">
-              {/* <div className="flex justify-center">
-                <LanguageSwitcher />
-              </div> */}
+            <div className="px-4 pt-4 pb-2">
               <Button 
                 asChild
+                size="lg"
                 className="w-full bg-primary hover:bg-primary/90 shadow-lg"
               >
-                <Link to="/contact">
+                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
                   {t('common.enrollNow')}
                 </Link>
               </Button>
