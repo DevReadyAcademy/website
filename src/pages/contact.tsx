@@ -256,14 +256,20 @@ const Contact = () => {
                       <h3 className="font-medium mb-3">{t('contact.followUs')}</h3>
                       <div className="flex gap-3">
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/company/devreadygr"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                            aria-label="Follow us on LinkedIn"
                         >
                           <Linkedin className="w-5 h-5" />
                         </a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/devready.gr/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                            aria-label="Follow us on Instagram"
                         >
                           <Instagram className="w-5 h-5" />
                         </a>
