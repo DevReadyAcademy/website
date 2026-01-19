@@ -213,6 +213,7 @@
     "goodFitItems": [
       "Έχεις βασικές γνώσεις προγραμματισμού και θέλεις να γίνεις industry-ready",
       "Είσαι developer σε οποιονδήποτε ρόλο: frontend, backend, full-stack, mobile, ή άλλο tech stack",
+      "Είσαι διατεθειμένος να αφιερώσεις περίπου 7-8 ώρες την εβδομάδα",
       "Θέλεις ειλικρινές feedback από engineers που δουλεύουν στην αγορά",
       "Εκτιμάς τα πρακτικά skills περισσότερο από τα certificates"
     ],
@@ -220,6 +221,7 @@
     "notGoodFitItems": [
       "Δεν έχεις γράψει ποτέ κώδικα (προτείνουμε να ξεκινήσεις πρώτα με free resources)",
       "Περιμένεις guaranteed job χωρίς να επενδύσεις χρόνο και προσπάθεια",
+      "Ψάχνεις για passive learning ή pre-recorded lectures μόνο",
       "Δεν μπορείς να δεσμευτείς στον απαιτούμενο χρόνο"
     ],
     "faqTitle": "Frequently Asked Questions",
