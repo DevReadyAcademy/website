@@ -357,6 +357,7 @@
     "description": "We're a group of passionate professionals dedicated to transforming tech education in Greece",
     "storyTitle": "Why We Built DevReady",
     "storyText": "Alex faced the same problem you're facing—how to make the jump from 'I can code' to 'I got hired'. After years working at tech companies abroad, he teamed up with Kostas and helped Vasilis and dozens of others break into the industry. We realized Greece has the talent—but lacks the structured path, mentorship, and industry context. So we built DevReady.",
+    "connectLinkedIn": "LinkedIn",
     "members": [
       {
         "name": "Alexis Pavlidis",
