@@ -35,11 +35,16 @@ const Newsletter: React.FC<NewsletterProps> = ({ variant = 'default' }) => {
 
       if (response.ok && data.success) {
         setStatus('success');
-        setMessage(data.message || t('newsletter.successMessage'));
+        // Use messageKey to get translated message
+        if (data.messageKey === 'alreadySubscribed') {
+          setMessage(t('newsletter.alreadySubscribed'));
+        } else {
+          setMessage(t('newsletter.successMessage'));
+        }
         setEmail('');
       } else {
         setStatus('error');
-        setMessage(data.error || t('newsletter.errorMessage'));
+        setMessage(t('newsletter.errorMessage'));
       }
     } catch (error) {
       setStatus('error');

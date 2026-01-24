@@ -49,20 +49,21 @@ export default async function handler(req, res) {
       if (data.title === 'Member Exists') {
         return res.status(200).json({ 
           success: true, 
-          message: 'You are already subscribed!' 
+          messageKey: 'alreadySubscribed'
         });
       }
 
       console.error('Mailchimp error:', data);
       return res.status(400).json({ 
-        error: data.detail || 'Failed to subscribe' 
+        error: data.detail || 'Failed to subscribe',
+        messageKey: 'error'
       });
     }
 
     // Success
     return res.status(200).json({ 
       success: true, 
-      message: 'Successfully subscribed!' 
+      messageKey: 'success'
     });
 
   } catch (error) {

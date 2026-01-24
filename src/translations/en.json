@@ -404,7 +404,8 @@
     "emailPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
     "subscribing": "Subscribing...",
-    "successMessage": "Thanks for subscribing! Check your email to confirm.",
+    "successMessage": "Successfully subscribed! Welcome to DevReady.",
+    "alreadySubscribed": "You're already subscribed!",
     "errorMessage": "Something went wrong. Please try again.",
     "privacyNote": "We respect your privacy. Unsubscribe at any time."
   },

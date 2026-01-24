@@ -403,7 +403,8 @@
     "emailPlaceholder": "Το email σου",
     "subscribe": "Εγγραφή",
     "subscribing": "Εγγραφή...",
-    "successMessage": "Ευχαριστούμε για την εγγραφή! Τσέκαρε το email σου για επιβεβαίωση.",
+    "successMessage": "Επιτυχής εγγραφή! Καλώς ήρθες στο DevReady.",
+    "alreadySubscribed": "Είσαι ήδη εγγεγραμμένος!",
     "errorMessage": "Κάτι πήγε στραβά. Παρακαλώ δοκίμασε ξανά.",
     "privacyNote": "Σεβόμαστε το privacy σου. Μπορείς να κάνεις unsubscribe ανά πάσα στιγμή."
   },
