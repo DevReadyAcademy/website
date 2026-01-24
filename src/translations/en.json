@@ -399,8 +399,8 @@
     ]
   },
   "newsletter": {
-    "title": "Stay Updated",
-    "description": "Get the latest articles, tech insights, and career tips delivered straight to your inbox. No spam, just valuable content.",
+    "title": "Get Free Weekly Engineering Tips",
+    "description": "Join developers learning real engineering skills, career strategies, and industry insights. Delivered straight to your inbox, no spam, just value.",
     "emailPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
     "subscribing": "Subscribing...",

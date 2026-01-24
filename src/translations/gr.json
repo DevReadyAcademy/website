@@ -398,8 +398,8 @@
     ]
   },
   "newsletter": {
-    "title": "Μείνε Ενημερωμένος",
-    "description": "Λάβε τα τελευταία άρθρα, tech insights και career tips απευθείας στο inbox σου. Χωρίς spam, μόνο χρήσιμο περιεχόμενο.",
+    "title": "Δωρεάν Weekly Engineering Tips",
+    "description": "Real-world code practices, career hacks, και insider tips από engineers που δουλεύουν σε top companies. Κάθε βδομάδα στο inbox σου, zero spam, pure value.",
     "emailPlaceholder": "Το email σου",
     "subscribe": "Εγγραφή",
     "subscribing": "Εγγραφή...",
