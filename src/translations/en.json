@@ -233,7 +233,7 @@
       },
       {
         "question": "Do I need prior coding experience?",
-        "answer": "Yes, but nothing fancy. If you can write basic code (variables, loops, functions), you're ready. We focus on bridging the gap from 'I can code' to 'I'm industry-ready,' not teaching programming from scratch."
+        "answer": "Yes, but nothing fancy. If you have the following basics, you're ready:\n\n• Variables and data types\n• Control flow\n• Loops\n• Functions and parameters\n• Basic understanding of one programming language\n\nWe focus on bridging the gap from 'I can code' to 'I'm industry-ready,' not teaching programming from scratch.\n\nWhat does 'basic knowledge' mean? You should be able to write simple programs and understand basic error messages. Think: solved some coding challenges, completed a beginner tutorial, or built a small personal project."
       },
       {
         "question": "Will I get a job after the bootcamp?",

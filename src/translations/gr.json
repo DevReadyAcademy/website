@@ -228,11 +228,11 @@
     "faqs": [
       {
         "question": "Χρειάζεται να ξέρω συγκεκριμένη γλώσσα προγραμματισμού ή framework?",
-        "answer": "Όχι. Αυτό το bootcamp είναι language και framework-agnostic. Είτε είσαι React developer, Python backend engineer, Java developer, mobile developer, ή οτιδήποτε άλλο—τα skills που διδάσκουμε (engineering thinking, clean code, Git, interviewing, branding) ισχύουν universal σε οποιονδήποτε tech ρόλο."
+        "answer": "Όχι. Αυτό το bootcamp είναι language και framework-agnostic. Είτε είσαι React developer, Python backend engineer, Java developer, mobile developer, ή οτιδήποτε άλλο, τα skills που διδάσκουμε (engineering thinking, clean code, Git, interviewing, branding) ισχύουν universal σε οποιονδήποτε tech ρόλο."
       },
       {
         "question": "Χρειάζεται prior coding experience?",
-        "answer": "Ναι, αλλά τίποτα fancy. Αν μπορείς να γράψεις basic code (variables, loops, functions και μια επαφή με μια γλώσσα προγραμματισμού), είσαι έτοιμος. Εστιάζουμε στο να γεφυρώσουμε το gap από 'ξέρω να γράφω κώδικα' σε 'είμαι industry-ready,' όχι να διδάξουμε programming από το μηδέν."
+        "answer": "Ναι, αλλά τίποτα fancy. Αν έχεις τα παρακάτω basics, είσαι έτοιμος:\n\n• Variables και data types\n• Control flow\n• Loops\n• Functions και parameters\n• Basic κατανόηση μιας γλώσσας προγραμματισμού\n\nΕστιάζουμε στο να γεφυρώσουμε το gap από 'ξέρω να γράφω κώδικα' σε 'είμαι industry-ready,' όχι να διδάξουμε programming από το μηδέν.\n\nΤι σημαίνει 'basic knowledge'; Θα πρέπει να μπορείς να γράψεις simple programs και να καταλαβαίνεις basic error messages. Think: έχεις λύσει κάποια coding challenges, ολοκλήρωσες ένα beginner tutorial, ή έφτιαξες ένα μικρό personal project."
       },
       {
         "question": "Θα βρω δουλειά μετά το bootcamp?",
@@ -377,7 +377,7 @@
   },
   "whyDifferent": {
     "title": "Γιατί Διαφέρουμε",
-    "description": "Το unfair advantage μας; Έχουμε περπατήσει το μονοπάτι που προσπαθείς να περπατήσεις. Ξέρουμε τι δουλεύει γιατί το έχουμε κάνει—και το έχουμε validated με πραγματικούς ανθρώπους σαν εσένα.",
+    "description": "Το unfair advantage μας; Έχουμε περπατήσει το μονοπάτι που προσπαθείς να περπατήσεις. Ξέρουμε τι δουλεύει γιατί το έχουμε κάνει, και το έχουμε validated με πραγματικούς ανθρώπους σαν εσένα.",
     "items": [
       {
         "title": "Built by Engineers, Not Just Educators",

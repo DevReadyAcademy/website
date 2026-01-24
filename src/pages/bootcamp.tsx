@@ -48,6 +48,35 @@ const Bootcamp = () => {
   const notGoodFitData = t('bootcamp.notGoodFitItems');
   const notGoodFitItems = Array.isArray(notGoodFitData) ? notGoodFitData : [];
   
+  // Helper function to format FAQ answers with bullet points and paragraphs
+  const formatAnswer = (answer: string) => {
+    const parts = answer.split('\n\n');
+    return parts.map((part, index) => {
+      // Check if this part contains bullet points
+      if (part.includes('•')) {
+        const lines = part.split('\n').filter(line => line.trim());
+        const bullets = lines.filter(line => line.trim().startsWith('•'));
+        const textBefore = lines.filter(line => !line.trim().startsWith('•')).join(' ');
+        
+        return (
+          <div key={index} className="space-y-3">
+            {textBefore && <p>{textBefore}</p>}
+            <ul className="space-y-2 ml-4">
+              {bullets.map((bullet, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>{bullet.replace('•', '').trim()}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+      // Regular paragraph
+      return <p key={index}>{part}</p>;
+    });
+  };
+  
   return (
     <>
       <SEO
@@ -286,8 +315,8 @@ const Bootcamp = () => {
                   <AccordionTrigger className="hover:no-underline py-5 text-left">
                     <span className="font-semibold">{faq.question}</span>
                   </AccordionTrigger>
-                  <AccordionContent className="pb-5 text-muted-foreground">
-                    {faq.answer}
+                  <AccordionContent className="pb-5 text-muted-foreground space-y-4">
+                    {formatAnswer(faq.answer)}
                   </AccordionContent>
                 </AccordionItem>
               ))}
