@@ -15,9 +15,11 @@
     "home": "Home",
     "ourApproach": "Our Approach",
     "bootcamp": "Bootcamp",
+    "team": "The Team",
+    "faqs": "FAQs",
+    "journey": "Our Journey",
     "devpress": "DevPress",
     "testimonials": "Testimonials",
-    "team": "Team",
     "whyDifferent": "Why Different"
   },
   "hero": {
@@ -397,6 +399,107 @@
         "description": "Structured path, industry mentorship, and peer community. No more random tutorials."
       }
     ]
+  },
+  "journey": {
+    "pageTitle": "Our Journey",
+    "pageSubtitle": "From helping one friend to building a structured program for aspiring developers",
+    "pageDescription": "We're not just educators—we're working engineers who've walked the path you're trying to walk.",
+    "teamTitle": "Meet The Team",
+    "teamDescription": "Engineers, mentors, and career coaches passionate about transforming tech education in Greece",
+    "teamMembers": [
+      {
+        "name": "Alexis Pavlidis",
+        "role": "Co-Founder & Lead Instructor",
+        "location": "London, UK",
+        "image": "/assets/alex.jpg",
+        "bio": "A Software Engineer with over seven years of experience building scalable systems at tech companies in London. Alex has mentored dozens of developers through their career transitions, helping them land roles at companies across Europe. After facing the same struggles of breaking into tech, he's passionate about making the journey easier for others through structured mentorship, clean code practices, and real-world engineering skills.",
+        "highlights": [
+          "7+ years building production systems in London's tech scene",
+          "Mentored 50+ developers into their first engineering roles",
+          "Specialized in system design, clean architecture, and career transitions",
+          "Experienced speaker and technical writer"
+        ],
+        "linkedin": "https://www.linkedin.com/in/apavlidi/",
+        "github": "https://github.com/alexandrospavlidis",
+        "website": "https://www.alexandrospavlidis.com"
+      },
+      {
+        "name": "Kostas Visnia",
+        "role": "Co-Founder & Technical Advisor",
+        "location": "Barcelona, Spain",
+        "image": "/assets/kostikas.jpg",
+        "bio": "A Technical Account Manager with deep expertise in networking, cloud infrastructure, and enterprise systems. Kostas transitioned from hands-on technical roles to senior consulting, working with global Fortune 500 companies to ensure their systems run flawlessly. He brings a unique business-aware approach to engineering education, teaching not just how to code, but how to think like a professional engineer in a corporate environment.",
+        "highlights": [
+          "Expert in cloud infrastructure and networking at scale",
+          "Works with Fortune 500 companies on technical strategy",
+          "Passionate about teaching the business side of engineering",
+          "Bridges the gap between technical excellence and business needs"
+        ],
+        "linkedin": "https://www.linkedin.com/in/kvisnia/"
+      },
+      {
+        "name": "Vasilis Samoladas",
+        "role": "Frontend Engineer & Content Creator",
+        "location": "Prague, Czech Republic",
+        "image": "/assets/sam.jpg",
+        "bio": "A Frontend Engineer passionate about AI, automation, and building delightful user experiences. With experience in the travel industry across Europe, Vasilis combines engineering skills with business thinking and a touch of humor. He's proof that DevReady's mentorship model works—we helped him land his first role, and now he's paying it forward by helping others do the same.",
+        "highlights": [
+          "Frontend specialist with AI/automation expertise",
+          "DevReady's first success story—landed role with our guidance",
+          "Creates engaging technical content and curriculum",
+          "Brings a fresh perspective on modern web development"
+        ],
+        "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/"
+      }
+    ],
+    "timelineTitle": "The Journey",
+    "timelineDescription": "How we went from helping one friend break into tech to building DevReady",
+    "timeline": [
+      {
+        "date": "2019",
+        "location": "Athens, Greece",
+        "title": "The Beginning: Helping Vasilis",
+        "description": "It started with a simple question: 'How do I actually get hired?' Vasilis had coding skills but struggled to break into tech. Alex started mentoring him—interview prep, portfolio building, CV optimization. After months of structured guidance, Vasilis landed his first engineering role. This proved the model works.",
+        "image": "/assets/alex.jpg"
+      },
+      {
+        "date": "2020-2022",
+        "location": "Remote, Europe",
+        "title": "Word Spreads",
+        "description": "As Vasilis's career took off, more people reached out for help. Alex and Kostas started mentoring aspiring developers across Greece, refining their approach with each success story. They realized: people don't need more tutorials—they need structure, mentorship, and industry context.",
+        "image": "/assets/kostikas.jpg"
+      },
+      {
+        "date": "2023",
+        "location": "Morocco & Europe",
+        "title": "Scaling the Model",
+        "description": "After helping dozens break into tech, we realized our mentorship model scales. Here we are celebrating as Vasilis secured a new role at Kiwi.com—a major milestone showing that structured mentorship works. The question became: how do we help more people?",
+        "image": "/assets/sam.jpg"
+      },
+      {
+        "date": "2024",
+        "location": "Greece",
+        "title": "Research & Validation",
+        "description": "We interviewed 100+ aspiring developers across Greece to understand their pain points. The message was clear: Greece has the talent, but lacks structured paths, mentorship, and industry context. Not more coding tutorials—real guidance from people who've been there.",
+        "image": "/assets/students/maria_balafouti.jpeg"
+      },
+      {
+        "date": "2025",
+        "location": "Remote, Greece",
+        "title": "DevReady is Born",
+        "description": "We formalized our proven mentorship approach into DevReady—a structured 6-week bootcamp designed to bridge the gap between 'I can code' and 'I got hired.' Our mission: make tech careers accessible to everyone in Greece through real skills, real mentorship, and real results.",
+        "image": "/assets/students/kostas_kotsis.jpeg"
+      },
+      {
+        "date": "2026",
+        "location": "Everywhere",
+        "title": "The Next Chapter: You",
+        "description": "Our first cohort launches in April 2026. We're ready to help the next generation of Greek developers break into tech with the exact blueprint we've refined over years. Will you be part of this journey?",
+        "image": "/assets/students/maria_zavola.jpeg"
+      }
+    ],
+    "ctaTitle": "Ready to Start Your Journey?",
+    "ctaDescription": "Join our first cohort and learn from engineers who've been exactly where you are now."
   },
   "newsletter": {
     "title": "Stay Updated",

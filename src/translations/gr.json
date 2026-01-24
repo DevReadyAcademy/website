@@ -15,9 +15,11 @@
     "home": "Αρχική",
     "ourApproach": "Η Προσέγγισή μας",
     "bootcamp": "Bootcamp",
+    "team": "Η Ομάδα",
+    "faqs": "FAQs",
+    "journey": "Το Ταξίδι Μας",
     "devpress": "DevPress",
     "testimonials": "Testimonials",
-    "team": "Ομάδα",
     "whyDifferent": "Γιατί Διαφέρουμε"
   },
   "hero": {
@@ -396,6 +398,107 @@
         "description": "Structured path, industry mentorship και peer community. Όχι άλλα random tutorials."
       }
     ]
+  },
+  "journey": {
+    "pageTitle": "Το Ταξίδι Μας",
+    "pageSubtitle": "Από το να βοηθάμε έναν φίλο στο να χτίζουμε ένα structured πρόγραμμα για aspiring developers",
+    "pageDescription": "Δεν είμαστε απλά εκπαιδευτές—είμαστε working engineers που έχουμε περπατήσει το μονοπάτι που προσπαθείς να περπατήσεις.",
+    "teamTitle": "Η Ομάδα",
+    "teamDescription": "Engineers, mentors και career coaches passionate για να κάνουν transform το tech education στην Ελλάδα",
+    "teamMembers": [
+      {
+        "name": "Alexis Pavlidis",
+        "role": "Co-Founder & Lead Instructor",
+        "location": "Λονδίνο, UK",
+        "image": "/assets/alex.jpg",
+        "bio": "Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable systems σε tech companies στο Λονδίνο. Ο Alex έχει κάνει mentor δεκάδες developers στις career transitions τους, βοηθώντας τους να βρουν roles σε εταιρείες σε όλη την Ευρώπη. Αφού αντιμετώπισε τις ίδιες προκλήσεις του να μπει στην tech, είναι passionate για να κάνει το ταξίδι πιο εύκολο για τους άλλους μέσω structured mentorship, clean code practices και real-world engineering skills.",
+        "highlights": [
+          "7+ χρόνια δημιουργίας production systems στο Λονδίνο",
+          "Έχει κάνει mentor 50+ developers στο πρώτο τους engineering role",
+          "Ειδικότητα σε system design, clean architecture και career transitions",
+          "Έμπειρος speaker και technical writer"
+        ],
+        "linkedin": "https://www.linkedin.com/in/apavlidi/",
+        "github": "https://github.com/alexandrospavlidis",
+        "website": "https://www.alexandrospavlidis.com"
+      },
+      {
+        "name": "Kostas Visnia",
+        "role": "Co-Founder & Technical Advisor",
+        "location": "Βαρκελώνη, Ισπανία",
+        "image": "/assets/kostikas.jpg",
+        "bio": "Technical Account Manager με deep expertise σε networking, cloud infrastructure και enterprise systems. Ο Κώστας έκανε transition από hands-on technical roles σε senior consulting, δουλεύοντας με global Fortune 500 companies για να διασφαλίσει ότι τα συστήματά τους τρέχουν flawlessly. Φέρνει ένα unique business-aware approach στο engineering education, διδάσκοντας όχι μόνο πώς να γράφεις κώδικα, αλλά πώς να σκέφτεσαι σαν professional engineer σε corporate περιβάλλον.",
+        "highlights": [
+          "Expert σε cloud infrastructure και networking at scale",
+          "Δουλεύει με Fortune 500 companies σε technical strategy",
+          "Passionate για να διδάξει το business side του engineering",
+          "Γεφυρώνει το χάσμα μεταξύ technical excellence και business needs"
+        ],
+        "linkedin": "https://www.linkedin.com/in/kvisnia/"
+      },
+      {
+        "name": "Vasilis Samoladas",
+        "role": "Frontend Engineer & Content Creator",
+        "location": "Πράγα, Τσεχία",
+        "image": "/assets/sam.jpg",
+        "bio": "Frontend Engineer passionate για AI, automation και το να χτίζει delightful user experiences. Με εμπειρία στο travel industry σε όλη την Ευρώπη, ο Βασίλης συνδυάζει engineering skills με business thinking και μια πινελιά χιούμορ. Είναι η απόδειξη ότι το mentorship model του DevReady δουλεύει—τον βοηθήσαμε να βρει το πρώτο του role, και τώρα βοηθάει τους άλλους να κάνουν το ίδιο.",
+        "highlights": [
+          "Frontend specialist με AI/automation expertise",
+          "Η πρώτη success story του DevReady—βρήκε role με τη δική μας καθοδήγηση",
+          "Δημιουργεί engaging technical content και curriculum",
+          "Φέρνει μια fresh perspective στο modern web development"
+        ],
+        "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/"
+      }
+    ],
+    "timelineTitle": "Το Ταξίδι",
+    "timelineDescription": "Πώς πήγαμε από το να βοηθάμε έναν φίλο να μπει στην tech στο να χτίσουμε το DevReady",
+    "timeline": [
+      {
+        "date": "2019",
+        "location": "Αθήνα, Ελλάδα",
+        "title": "Η Αρχή: Βοηθώντας τον Βασίλη",
+        "description": "Ξεκίνησε με μια απλή ερώτηση: 'Πώς πραγματικά προσλαμβάνομαι;' Ο Βασίλης είχε coding skills αλλά δυσκολευόταν να μπει στην tech. Ο Alex άρχισε να τον κάνει mentor—interview prep, portfolio building, CV optimization. Μετά από μήνες structured guidance, ο Βασίλης βρήκε το πρώτο του engineering role. Αυτό απέδειξε ότι το model δουλεύει.",
+        "image": "/assets/alex.jpg"
+      },
+      {
+        "date": "2020-2022",
+        "location": "Remote, Ευρώπη",
+        "title": "Η Φήμη Απλώνεται",
+        "description": "Καθώς η καριέρα του Βασίλη ανέβαινε, περισσότεροι άνθρωποι ζήτησαν βοήθεια. Ο Alex και ο Κώστας άρχισαν να κάνουν mentor aspiring developers σε όλη την Ελλάδα, βελτιώνοντας το approach τους με κάθε success story. Κατάλαβαν: οι άνθρωποι δεν χρειάζονται άλλα tutorials—χρειάζονται structure, mentorship και industry context.",
+        "image": "/assets/kostikas.jpg"
+      },
+      {
+        "date": "2023",
+        "location": "Μαρόκο & Ευρώπη",
+        "title": "Scaling το Μοντέλο",
+        "description": "Αφού βοηθήσαμε δεκάδες να μπουν στην tech, καταλάβαμε ότι το mentorship model μας scales. Εδώ γιορτάζουμε καθώς ο Βασίλης πήρε νέο role στην Kiwi.com—ένα major milestone που δείχνει ότι το structured mentorship δουλεύει. Η ερώτηση έγινε: πώς βοηθάμε περισσότερους ανθρώπους;",
+        "image": "/assets/sam.jpg"
+      },
+      {
+        "date": "2024",
+        "location": "Ελλάδα",
+        "title": "Research & Validation",
+        "description": "Κάναμε interview 100+ aspiring developers σε όλη την Ελλάδα για να καταλάβουμε τα pain points τους. Το μήνυμα ήταν ξεκάθαρο: η Ελλάδα έχει το talent, αλλά λείπουν structured paths, mentorship και industry context. Όχι άλλα coding tutorials—πραγματική καθοδήγηση από ανθρώπους που έχουν περάσει από εκεί.",
+        "image": "/assets/students/maria_balafouti.jpeg"
+      },
+      {
+        "date": "2025",
+        "location": "Remote, Ελλάδα",
+        "title": "Γεννιέται το DevReady",
+        "description": "Επισημοποιήσαμε το proven mentorship approach μας στο DevReady—ένα structured 6-week bootcamp σχεδιασμένο να γεφυρώσει το χάσμα μεταξύ 'ξέρω να γράφω κώδικα' και 'I got hired'. Η αποστολή μας: να κάνουμε τις tech careers accessible σε όλους στην Ελλάδα μέσω real skills, real mentorship και real results.",
+        "image": "/assets/students/kostas_kotsis.jpeg"
+      },
+      {
+        "date": "2026",
+        "location": "Παντού",
+        "title": "Το Επόμενο Κεφάλαιο: Εσύ",
+        "description": "Το πρώτο μας cohort ξεκινάει τον Απρίλιο 2026. Είμαστε έτοιμοι να βοηθήσουμε την επόμενη γενιά Ελλήνων developers να μπουν στην tech με το ακριβές blueprint που έχουμε refine για χρόνια. Θα είσαι μέρος αυτού του ταξιδιού;",
+        "image": "/assets/students/maria_zavola.jpeg"
+      }
+    ],
+    "ctaTitle": "Έτοιμος να Ξεκινήσεις το Ταξίδι σου;",
+    "ctaDescription": "Έλα στο πρώτο μας cohort και μάθε από engineers που ήταν ακριβώς εκεί που είσαι τώρα."
   },
   "newsletter": {
     "title": "Μείνε Ενημερωμένος",

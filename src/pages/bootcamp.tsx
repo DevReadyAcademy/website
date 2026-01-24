@@ -297,7 +297,7 @@ const Bootcamp = () => {
         </section>
 
         {/* FAQ */}
-        <section className="py-20 px-4 bg-gradient-card">
+        <section id="faqs" className="py-20 px-4 bg-gradient-card">
           <div className="container mx-auto max-w-3xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
