@@ -21,7 +21,7 @@
     "whyDifferent": "Γιατί Διαφέρουμε"
   },
   "hero": {
-    "urgencyBadge": "Επόμενο Cohort: Απρίλιος–Μάιος 2026 · ⏰ Μόνο 5 Early Bird Θέσεις",
+    "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE} · ⏰ {SPOTS_LEFT}",
     "headline": "Γίνε Industry-Ready Σε 6 Εβδομάδες",
     "headlineHighlight": "Industry-Ready",
     "readyToBecome": "Έτοιμος να Γίνεις Industry-Ready;",
@@ -29,11 +29,11 @@
     "description": "Real engineering skills, mentorship και career coaching για να γίνεις industry-ready.",
     "trust1": "6 Εβδομάδες Remote",
     "trust2": "Industry Mentors",
-    "trust3": "Early Bird: €299"
+    "trust3": "Early Bird: {EARLY_BIRD_PRICE}"
   },
   "course": {
     "title": "6-Week Tech Bootcamp",
-    "cohortDate": "Επόμενο Cohort: Απρίλιος–Μάιος 2026",
+    "cohortDate": "Επόμενο Cohort: {COHORT_DATE}",
     "forAllDevelopers": "Για Όλους τους Developers: Frontend · Backend · Full-Stack · Mobile · Οποιοδήποτε Tech Stack",
     "description": "Ένα εντατικό πρόγραμμα σχεδιασμένο να σε μετατρέψει σε έναν industry-ready tech professional.",
     "timeCommitmentTitle": "Διάρκεια",
@@ -54,17 +54,17 @@
       "Φτίαξε το professional brand σου: CV, LinkedIn, GitHub και portfolio",
       "Πέτυχε σε interviews με proven strategies, dos & don'ts και communication techniques"
     ],
-    "earlyBirdBadge": "🎯 Early Bird • Μόνο 5 Θέσεις",
+    "earlyBirdBadge": "🎯 Early Bird • {SPOTS_LEFT}",
     "investmentLabel": "Επένδυση στο μέλλον σου",
-    "originalPrice": "€449",
-    "currentPrice": "€299",
+    "originalPrice": "{ORIGINAL_PRICE}",
+    "currentPrice": "{EARLY_BIRD_PRICE}",
     "perProgram": "/πρόγραμμα",
     "earlyBirdMessage": "Κλείσε το early bird rate πριν εξαντληθεί"
   },
   "bootcamp": {
     "backToHome": "Πίσω στην Αρχική",
     "pageTitle": "6-Week Tech Bootcamp",
-    "cohortBadge": "Επόμενο Cohort: Απρίλιος–Μάιος 2026",
+    "cohortBadge": "Επόμενο Cohort: {COHORT_DATE}",
     "heroSubtitle": "Μάθε τα engineering skills, το mindset και το professional branding που ψάχνουν πραγματικά οι tech εταιρείες.",
     "languageAgnostic": "Language & Stack Agnostic — works for JavaScript, Python, Java, Go, you name it",
     "heroDescription": "Σχεδιασμένο για οποιονδήποτε στην Ελλάδα με ένα laptop και πάθος—no degree required.",
@@ -76,9 +76,9 @@
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
       "investmentTitle": "Επένδυση",
-      "investmentOriginal": "€449",
-      "investmentCurrent": "€299",
-      "investmentNote": "Μόνο 5 θέσεις"
+      "investmentOriginal": "{ORIGINAL_PRICE}",
+      "investmentCurrent": "{EARLY_BIRD_PRICE}",
+      "investmentNote": "{SPOTS_LEFT}"
     },
     "curriculumTitle": "Week-by-Week Curriculum",
     "curriculumDescription": "Ένα structured path από το planning της καριέρας σου μέχρι τα interviews—όλα όσα χρειάζεσαι σε 6 εβδομάδες.",

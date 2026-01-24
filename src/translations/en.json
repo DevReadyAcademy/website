@@ -21,7 +21,7 @@
     "whyDifferent": "Why Different"
   },
   "hero": {
-    "urgencyBadge": "Next Cohort: April–May 2026 · ⏰ Only 5 Early Bird Spots Left",
+    "urgencyBadge": "{URGENCY_BADGE}",
     "headline": "Become Industry-Ready In 6 Weeks",
     "headlineHighlight": "Industry-Ready",
     "readyToBecome": "Ready to Become Industry-Ready?",
@@ -29,11 +29,11 @@
     "description": "Bridge the gap between university and industry with real engineering skills, mentorship, and career coaching.",
     "trust1": "6-Week Remote Program",
     "trust2": "Industry Mentors",
-    "trust3": "Early Bird: €299"
+    "trust3": "Early Bird: {EARLY_BIRD_PRICE}"
   },
   "course": {
     "title": "6-Week Tech Bootcamp",
-    "cohortDate": "Next Cohort: April–May 2026",
+    "cohortDate": "Next Cohort: {COHORT_DATE}",
     "forAllDevelopers": "For All Developers: Frontend · Backend · Full-Stack · Mobile · Any Tech Stack",
     "description": "An intensive program designed to transform you into an industry-ready tech professional.",
     "timeCommitmentTitle": "Time Commitment",
@@ -54,17 +54,17 @@
       "Build your professional brand: CV, LinkedIn, GitHub, and portfolio",
       "Ace interviews with proven strategies, dos & don'ts, and communication techniques"
     ],
-    "earlyBirdBadge": "🎯 Early Bird • Only 5 Spots Left",
+    "earlyBirdBadge": "🎯 Early Bird • {SPOTS_LEFT}",
     "investmentLabel": "Investment in your future",
-    "originalPrice": "€449",
-    "currentPrice": "€299",
+    "originalPrice": "{ORIGINAL_PRICE}",
+    "currentPrice": "{EARLY_BIRD_PRICE}",
     "perProgram": "/program",
     "earlyBirdMessage": "Secure your early bird rate before it's gone"
   },
   "bootcamp": {
     "backToHome": "Back to Home",
     "pageTitle": "6-Week Tech Bootcamp",
-    "cohortBadge": "Next Cohort: April–May 2026",
+    "cohortBadge": "Next Cohort: {COHORT_DATE}",
     "heroSubtitle": "Master the engineering skills, mindset, and professional branding that tech companies actually look for.",
     "languageAgnostic": "Language & Stack Agnostic — Works for JavaScript, Python, Java, Go, or Any Language",
     "heroDescription": "Designed for anyone in Greece with a laptop and passion—no engineering degree required.",
@@ -76,9 +76,9 @@
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
       "investmentTitle": "Investment",
-      "investmentOriginal": "€449",
-      "investmentCurrent": "€299",
-      "investmentNote": "Only 5 spots left"
+      "investmentOriginal": "{ORIGINAL_PRICE}",
+      "investmentCurrent": "{EARLY_BIRD_PRICE}",
+      "investmentNote": "{SPOTS_LEFT}"
     },
     "curriculumTitle": "Week-by-Week Curriculum",
     "curriculumDescription": "A structured path from planning your career to landing interviews—everything you need in 6 weeks.",

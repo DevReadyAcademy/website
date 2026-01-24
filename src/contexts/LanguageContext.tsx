@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import en from '../translations/en.json';
-import gr from '../translations/gr.json';
+import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
+import enRaw from '../translations/en.json';
+import grRaw from '../translations/gr.json';
+import { injectEarlyBirdValues } from '../utils/translationHelpers';
 
 type Language = 'en' | 'gr';
 
@@ -12,9 +13,10 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const translations: Record<Language, any> = {
-  en,
-  gr,
+// Process translations with early bird values injected
+const rawTranslations: Record<Language, any> = {
+  en: enRaw,
+  gr: grRaw,
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -23,6 +25,14 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const saved = localStorage.getItem('language');
     return (saved === 'en' || saved === 'gr') ? saved : 'gr';
   });
+
+  // Process translations with early bird values injected
+  const translations = useMemo(() => {
+    return {
+      en: injectEarlyBirdValues(rawTranslations.en, 'en'),
+      gr: injectEarlyBirdValues(rawTranslations.gr, 'gr'),
+    };
+  }, []); // Empty dependency array since early bird config is static
 
   useEffect(() => {
     // Save language preference to localStorage
