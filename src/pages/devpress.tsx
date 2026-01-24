@@ -6,6 +6,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import { blogPosts } from "../data/blogPosts";
 import Header from "../components/Header";
+import Newsletter from "../components/Newsletter";
 
 const DevPress = () => {
   const { language, t } = useLanguage();
@@ -167,6 +168,13 @@ const DevPress = () => {
               ))}
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Newsletter Section */}
+        <section className="py-16 px-4" aria-label="Newsletter signup">
+          <div className="container mx-auto max-w-4xl">
+            <Newsletter />
           </div>
         </section>
 

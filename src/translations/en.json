@@ -398,6 +398,16 @@
       }
     ]
   },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Get the latest articles, tech insights, and career tips delivered straight to your inbox. No spam, just valuable content.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing...",
+    "successMessage": "Thanks for subscribing! Check your email to confirm.",
+    "errorMessage": "Something went wrong. Please try again.",
+    "privacyNote": "We respect your privacy. Unsubscribe at any time."
+  },
   "footer": {
     "copyright": "© {year} DevReady."
   }

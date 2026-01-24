@@ -397,6 +397,16 @@
       }
     ]
   },
+  "newsletter": {
+    "title": "Μείνε Ενημερωμένος",
+    "description": "Λάβε τα τελευταία άρθρα, tech insights και career tips απευθείας στο inbox σου. Χωρίς spam, μόνο χρήσιμο περιεχόμενο.",
+    "emailPlaceholder": "Το email σου",
+    "subscribe": "Εγγραφή",
+    "subscribing": "Εγγραφή...",
+    "successMessage": "Ευχαριστούμε για την εγγραφή! Τσέκαρε το email σου για επιβεβαίωση.",
+    "errorMessage": "Κάτι πήγε στραβά. Παρακαλώ δοκίμασε ξανά.",
+    "privacyNote": "Σεβόμαστε το privacy σου. Μπορείς να κάνεις unsubscribe ανά πάσα στιγμή."
+  },
   "footer": {
     "copyright": "© {year} DevReady."
   }

@@ -1,53 +1,74 @@
-import crypto from 'node:crypto'
+// Vercel Serverless Function for Mailchimp API Integration
+// This endpoint handles newsletter subscriptions
 
 export default async function handler(req, res) {
+  // Only allow POST requests
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email, name } = req.body || {}
-  if (!email) {
-    return res.status(400).json({ error: 'Email is required' })
+  const { email } = req.body;
+
+  // Validate email
+  if (!email || !email.includes('@')) {
+    return res.status(400).json({ error: 'Valid email is required' });
   }
 
-  const API_KEY = process.env.MAILCHIMP_API_KEY
-  const API_SERVER = process.env.MAILCHIMP_API_SERVER
-  const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID
+  // Get Mailchimp credentials from environment variables
+  const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY_DEVREADY;
+  const MAILCHIMP_AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID_DEVREADY;
+  const MAILCHIMP_SERVER_PREFIX = process.env.MAILCHIMP_SERVER_PREFIX_DEVREADY;
 
-  if (!API_KEY || !API_SERVER || !AUDIENCE_ID) {
-    return res.status(500).json({ error: 'Missing Mailchimp env vars' })
+  if (!MAILCHIMP_API_KEY || !MAILCHIMP_AUDIENCE_ID || !MAILCHIMP_SERVER_PREFIX) {
+    console.error('Missing Mailchimp configuration');
+    return res.status(500).json({ error: 'Server configuration error' });
   }
 
   try {
-    const subscriberHash = crypto
-      .createHash('md5')
-      .update(email.trim().toLowerCase())
-      .digest('hex')
+    // Mailchimp API endpoint
+    const url = `https://${MAILCHIMP_SERVER_PREFIX}.api.mailchimp.com/3.0/lists/${MAILCHIMP_AUDIENCE_ID}/members`;
 
-    const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members/${subscriberHash}`
-
-    const result = await fetch(url, {
-      method: 'PUT',
+    // Subscribe user to Mailchimp
+    const response = await fetch(url, {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `apikey ${API_KEY}`,
+        'Authorization': `Basic ${Buffer.from(`anystring:${MAILCHIMP_API_KEY}`).toString('base64')}`,
       },
       body: JSON.stringify({
         email_address: email,
-        status_if_new: 'subscribed',
-        merge_fields: { FNAME: name || '' },
+        status: 'subscribed', // or 'pending' for double opt-in
       }),
-    })
+    });
 
-    const data = await result.json()
+    const data = await response.json();
 
-    if (!result.ok) {
-      return res.status(result.status).json({ error: data.title || 'Mailchimp error' })
+    // Handle Mailchimp API response
+    if (!response.ok) {
+      // Check if user is already subscribed
+      if (data.title === 'Member Exists') {
+        return res.status(200).json({ 
+          success: true, 
+          message: 'You are already subscribed!' 
+        });
+      }
+
+      console.error('Mailchimp error:', data);
+      return res.status(400).json({ 
+        error: data.detail || 'Failed to subscribe' 
+      });
     }
 
-    return res.status(200).json({ ok: true })
-  } catch (err) {
-    console.error(err)
-    return res.status(500).json({ error: 'Server error' })
+    // Success
+    return res.status(200).json({ 
+      success: true, 
+      message: 'Successfully subscribed!' 
+    });
+
+  } catch (error) {
+    console.error('Subscription error:', error);
+    return res.status(500).json({ 
+      error: 'An error occurred. Please try again.' 
+    });
   }
 }
