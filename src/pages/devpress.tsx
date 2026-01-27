@@ -7,15 +7,19 @@ import SEO from "../components/SEO";
 import { blogPosts } from "../data/blogPosts";
 import Header from "../components/Header";
 import Newsletter from "../components/Newsletter";
+import BootcampCTA from "../components/BootcampCTA";
 
 const DevPress = () => {
   const { language, t } = useLanguage();
+  
+  // Filter only published posts
+  const publishedPosts = blogPosts.filter(post => post.published !== false);
 
   return (
     <>
       <SEO
         title="DevPress - Tech Insights & Career Advice"
-        description={blogPosts.length === 0 
+        description={publishedPosts.length === 0 
           ? "DevPress blog coming soon! We'll be sharing practical advice from experienced engineers on software engineering and career development."
           : "Read our latest articles on software engineering, career development, and breaking into the tech industry. Practical advice from experienced engineers."
         }
@@ -39,8 +43,8 @@ const DevPress = () => {
               "url": "https://www.devready.gr/assets/logo-320.webp"
             }
           },
-          ...(blogPosts.length > 0 && {
-            "blogPost": blogPosts.map(post => ({
+          ...(publishedPosts.length > 0 && {
+            "blogPost": publishedPosts.map(post => ({
               "@type": "BlogPosting",
               "headline": language === 'gr' ? post.titleGr : post.title,
               "url": `https://www.devready.gr/devpress/${post.slug}`,
@@ -86,7 +90,7 @@ const DevPress = () => {
         {/* Blog Posts Grid */}
         <section id="main-content" className="py-16 px-4" aria-label="Blog articles" role="main">
           <div className="container mx-auto max-w-6xl">
-            {blogPosts.length === 0 ? (
+            {publishedPosts.length === 0 ? (
               /* Empty State */
               <div className="text-center py-20" role="status" aria-live="polite">
                 <div className="text-8xl mb-6" role="img" aria-label={t('devpress.notepadIcon')}>📝</div>
@@ -99,7 +103,7 @@ const DevPress = () => {
               </div>
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
-                {blogPosts.map((post) => (
+                {publishedPosts.map((post) => (
                 <article
                   key={post.id}
                   className="bg-card rounded-xl border border-border/50 overflow-hidden hover:shadow-lg transition-all duration-300 group"
@@ -108,9 +112,17 @@ const DevPress = () => {
                 >
                   {/* Blog Image */}
                   <div className="aspect-video bg-gradient-primary relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center text-primary-foreground text-4xl font-bold opacity-20">
-                      DevReady
-                    </div>
+                    {post.image ? (
+                      <img 
+                        src={post.image} 
+                        alt={language === 'gr' ? post.titleGr : post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-primary-foreground text-4xl font-bold opacity-20">
+                        DevReady
+                      </div>
+                    )}
                   </div>
 
                   {/* Content */}
@@ -172,27 +184,16 @@ const DevPress = () => {
         </section>
 
         {/* Newsletter Section */}
-        <section className="py-16 px-4" aria-label="Newsletter signup">
+        <section className="pt-16 pb-6 px-4" aria-label="Newsletter signup">
           <div className="container mx-auto max-w-4xl">
             <Newsletter />
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-gradient-subtle" aria-label={t('devpress.callToAction')}>
-          <div className="container mx-auto max-w-4xl text-center">
-            <h3 className="text-3xl font-bold mb-4">
-              {t('hero.readyToBecome')}
-            </h3>
-            <p className="text-lg text-muted-foreground mb-8">
-              {t('devpress.bootcampCTA')}
-            </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link to="/bootcamp">
-                {t('common.viewProgramDetails')}
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
+        <section className="pt-6 pb-16 px-4 bg-gradient-subtle">
+          <div className="container mx-auto max-w-4xl">
+            <BootcampCTA />
           </div>
         </section>
 
