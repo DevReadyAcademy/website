@@ -227,7 +227,7 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
     tags: ["Interviews", "Career", "Tips"],
     tagsGr: ["Interviews", "Career", "Tips"],
     image: "/assets/blogs/interview.jpg",
-    published: false // Set to false to hide this post from DevPress
+    published: true // Set to false to hide this post from DevPress
   },
   // Sample post - hidden for now
   /*
