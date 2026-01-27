@@ -265,7 +265,7 @@ const Contact = () => {
                           <Linkedin className="w-5 h-5" />
                         </a>
                         <a
-                            href="https://www.instagram.com/devready.gr/"
+                            href="https://www.instagram.com/devreadygr/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
