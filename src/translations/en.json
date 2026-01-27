@@ -359,6 +359,7 @@
     "description": "We're a group of passionate professionals dedicated to transforming tech education in Greece",
     "storyTitle": "Why We Built DevReady",
     "storyText": "Alex faced the same problem you're facing—how to make the jump from 'I can code' to 'I got hired'. After years working at tech companies abroad, he teamed up with Kostas and helped Vasilis and dozens of others break into the industry. We realized Greece has the talent—but lacks the structured path, mentorship, and industry context. So we built DevReady.",
+    "learnMoreAboutTeam": "Learn More About the Team",
     "connectLinkedIn": "LinkedIn",
     "members": [
       {
@@ -409,23 +410,23 @@
     "teamMembers": [
       {
         "name": "Alexis Pavlidis",
-        "role": "Co-Founder & Lead Instructor",
+        "role": "Backend Engineer at Monzo | Skyscanner, Writer, Speaker, and Mentor",
         "location": "London, UK",
         "image": "/assets/alex.jpg",
-        "bio": "A Software Engineer with over seven years of experience building scalable systems at tech companies in London. Alex has mentored dozens of developers through their career transitions, helping them land roles at companies across Europe. After facing the same struggles of breaking into tech, he's passionate about making the journey easier for others through structured mentorship, clean code practices, and real-world engineering skills.",
+        "bio": "A Software Engineer with over seven years of experience building scalable systems at top companies like Stoiximan, Monzo, and Skyscanner. Throughout his career, Alex has transitioned through many roles: consultant, frontend engineer, fullstack engineer, before ultimately finding his passion in backend engineering. With 5+ years of interviewing developers, from entry/junior roles to staff engineers, and 3+ years of mentoring engineers, he's helped dozens of young engineers break into the industry and land roles across Europe.",
         "highlights": [
-          "7+ years building production systems in London's tech scene",
-          "Mentored 50+ developers into their first engineering roles",
-          "Specialized in system design, clean architecture, and career transitions",
-          "Experienced speaker and technical writer"
+          "7+ years as software engineer at top companies in Greece and London: Stoiximan, Monzo, Skyscanner",
+          "5+ years interviewing developers, from entry/junior to staff engineers",
+          "3+ years mentoring engineers",
+          "Specialized in backend engineering, system design, and career transitions"
         ],
         "linkedin": "https://www.linkedin.com/in/apavlidi/",
-        "github": "https://github.com/alexandrospavlidis",
-        "website": "https://www.alexandrospavlidis.com"
+        "github": "https://github.com/apavlidi",
+        "website": "https://apavlidi.com"
       },
       {
         "name": "Kostas Visnia",
-        "role": "Co-Founder & Technical Advisor",
+        "role": "Technical Account Manager at Dynatrace",
         "location": "Barcelona, Spain",
         "image": "/assets/kostikas.jpg",
         "bio": "A Technical Account Manager with deep expertise in networking, cloud infrastructure, and enterprise systems. Kostas transitioned from hands-on technical roles to senior consulting, working with global Fortune 500 companies to ensure their systems run flawlessly. He brings a unique business-aware approach to engineering education, teaching not just how to code, but how to think like a professional engineer in a corporate environment.",
@@ -439,7 +440,7 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "role": "Frontend Engineer & Content Creator",
+        "role": "Frontend Engineer at Kiwi",
         "location": "Prague, Czech Republic",
         "image": "/assets/sam.jpg",
         "bio": "A Frontend Engineer passionate about AI, automation, and building delightful user experiences. With experience in the travel industry across Europe, Vasilis combines engineering skills with business thinking and a touch of humor. He's proof that DevReady's mentorship model works—we helped him land his first role, and now he's paying it forward by helping others do the same.",

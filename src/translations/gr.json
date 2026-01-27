@@ -358,6 +358,7 @@
     "description": "Είμαστε passionate professionals αφοσιωμένοι να κάνουμε transform το tech education στην Ελλάδα",
     "storyTitle": "Γιατί φτιάξαμε το DevReady",
     "storyText": "Ο Alex αντιμετώπισε το ίδιο πρόβλημα που αντιμετωπίζετε και εσείς, πώς να κάνεις το άλμα από 'ξέρω να γράφω κώδικα' σε 'I got hired'. Μετά από πολλές απορρίψεις σε εταιρείες του εξωτερικού και μαθαίνοντας με τον δύσκολο τρόπο, συνεργάστηκε με τον Κώστα και κατάφεραν να μπουν σε top εταιρείες στο εξωτερικό. Ύστερα βοήθησαν τον Βασίλη και δεκάδες άλλους να μπουν στο industry. Γνωρίζουμε ότι η Ελλάδα έχει great talent στο engineering, αλλά λείπει το structured path, το mentorship και το industry context. Έτσι φτιάξαμε το DevReady.",
+    "learnMoreAboutTeam": "Μάθε Περισσότερα για την Ομάδα",
     "connectLinkedIn": "LinkedIn",
     "members": [
       {
@@ -402,29 +403,29 @@
   "journey": {
     "pageTitle": "Το Ταξίδι Μας",
     "pageSubtitle": "Από το να βοηθάμε έναν φίλο στο να χτίζουμε ένα structured πρόγραμμα για aspiring developers",
-    "pageDescription": "Δεν είμαστε απλά εκπαιδευτές—είμαστε working engineers που έχουμε περπατήσει το μονοπάτι που προσπαθείς να περπατήσεις.",
+    "pageDescription": "Δεν είμαστε απλά εκπαιδευτές, είμαστε working engineers που έχουμε περπατήσει το μονοπάτι που προσπαθείς να περπατήσεις.",
     "teamTitle": "Η Ομάδα",
     "teamDescription": "Engineers, mentors και career coaches passionate για να κάνουν transform το tech education στην Ελλάδα",
     "teamMembers": [
       {
         "name": "Alexis Pavlidis",
-        "role": "Co-Founder & Lead Instructor",
+        "role": "Backend Engineer at Monzo | Skyscanner, Writer, Speaker, and Mentor",
         "location": "Λονδίνο, UK",
         "image": "/assets/alex.jpg",
-        "bio": "Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable systems σε tech companies στο Λονδίνο. Ο Alex έχει κάνει mentor δεκάδες developers στις career transitions τους, βοηθώντας τους να βρουν roles σε εταιρείες σε όλη την Ευρώπη. Αφού αντιμετώπισε τις ίδιες προκλήσεις του να μπει στην tech, είναι passionate για να κάνει το ταξίδι πιο εύκολο για τους άλλους μέσω structured mentorship, clean code practices και real-world engineering skills.",
+        "bio": "Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable systems σε top companies όπως η Stoiximan, Monzo και Skyscanner. Κατά τη διάρκεια της καριέρας του, ο Alex έχει αλλάξει πολλούς ρόλους: consultant, frontend engineer, fullstack engineer, και τελικά τον κέρδισε το backend engineering. Με 5+ χρόνια εμπειρίας στο interviewing προγραμματιστών, από entry/junior roles μέχρι staff engineers, και 3+ χρόνια mentoring σε engineers, έχει βοηθήσει δεκάδες νέους engineers να μπουν στο industry και να βρουν roles σε όλη την Ευρώπη.",
         "highlights": [
-          "7+ χρόνια δημιουργίας production systems στο Λονδίνο",
-          "Έχει κάνει mentor 50+ developers στο πρώτο τους engineering role",
-          "Ειδικότητα σε system design, clean architecture και career transitions",
-          "Έμπειρος speaker και technical writer"
+          "7+ χρόνια software engineer σε top εταιρείες σε Ελλάδα και Λονδίνο: Stoiximan, Monzo, Skyscanner",
+          "5+ χρόνια interviewing προγραμματιστών, από entry/junior μέχρι staff engineers",
+          "3+ χρόνια mentoring σε engineers",
+          "Ειδικότητα σε backend engineering, system design και career transitions"
         ],
         "linkedin": "https://www.linkedin.com/in/apavlidi/",
-        "github": "https://github.com/alexandrospavlidis",
-        "website": "https://www.alexandrospavlidis.com"
+        "github": "https://github.com/apavlidi",
+        "website": "https://apavlidi.com"
       },
       {
         "name": "Kostas Visnia",
-        "role": "Co-Founder & Technical Advisor",
+        "role": "Technical Account Manager at Dynatrace",
         "location": "Βαρκελώνη, Ισπανία",
         "image": "/assets/kostikas.jpg",
         "bio": "Technical Account Manager με deep expertise σε networking, cloud infrastructure και enterprise systems. Ο Κώστας έκανε transition από hands-on technical roles σε senior consulting, δουλεύοντας με global Fortune 500 companies για να διασφαλίσει ότι τα συστήματά τους τρέχουν flawlessly. Φέρνει ένα unique business-aware approach στο engineering education, διδάσκοντας όχι μόνο πώς να γράφεις κώδικα, αλλά πώς να σκέφτεσαι σαν professional engineer σε corporate περιβάλλον.",
@@ -438,7 +439,7 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "role": "Frontend Engineer & Content Creator",
+        "role": "Frontend Engineer at Kiwi",
         "location": "Πράγα, Τσεχία",
         "image": "/assets/sam.jpg",
         "bio": "Frontend Engineer passionate για AI, automation και το να χτίζει delightful user experiences. Με εμπειρία στο travel industry σε όλη την Ευρώπη, ο Βασίλης συνδυάζει engineering skills με business thinking και μια πινελιά χιούμορ. Είναι η απόδειξη ότι το mentorship model του DevReady δουλεύει—τον βοηθήσαμε να βρει το πρώτο του role, και τώρα βοηθάει τους άλλους να κάνουν το ίδιο.",

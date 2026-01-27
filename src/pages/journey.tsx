@@ -52,9 +52,6 @@ const Journey = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent pb-2">
                   {t('journey.teamTitle')}
                 </h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                  {t('journey.teamDescription')}
-                </p>
               </div>
 
               <div className="space-y-16">
