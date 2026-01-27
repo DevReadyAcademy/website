@@ -199,7 +199,7 @@ const Journey = () => {
                             <img
                               src={event.image}
                               alt={event.title}
-                              className="w-full h-48 object-cover"
+                              className="w-full h-48 object-cover object-top"
                               loading="lazy"
                             />
                           </div>

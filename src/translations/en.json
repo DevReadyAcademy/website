@@ -372,7 +372,7 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "description": "A Prague-based Frontend Engineer passionate about AI, automation, and building products people actually enjoy using. With experience in the travel industry and a love for traveling, he combines engineering, business thinking, and a questionable sense of humor."
+        "description": "A Prague-based Frontend Engineer passionate about AI and building products people love. With 200+ user interviews under his belt, he brings strong product thinking and design sensibility to engineering. He combines technical skills with user empathy and a questionable sense of humor."
       }
     ]
   },
@@ -442,13 +442,13 @@
         "name": "Vasilis Samoladas",
         "role": "Frontend Engineer at Kiwi",
         "location": "Prague, Czech Republic",
-        "image": "/assets/sam.jpg",
-        "bio": "A Frontend Engineer passionate about AI, automation, and building delightful user experiences. With experience in the travel industry across Europe, Vasilis combines engineering skills with business thinking and a touch of humor. He's proof that DevReady's mentorship model works—we helped him land his first role, and now he's paying it forward by helping others do the same.",
+        "image": "/assets/sam.png",
+        "bio": "A Frontend Engineer passionate about AI and building products people love. With 200+ user interviews conducted, Vasilis brings strong product thinking and design sensibility to engineering. He's proof that DevReady's mentorship model works—we helped him land his first role, and now he's paying it forward by helping others do the same.",
         "highlights": [
-          "Frontend specialist with AI/automation expertise",
-          "DevReady's first success story—landed role with our guidance",
-          "Creates engaging technical content and curriculum",
-          "Brings a fresh perspective on modern web development"
+          "Passionate about AI and building user-centric products",
+          "200+ user interviews, deep understanding of user needs",
+          "Strong product thinking and design sensibility",
+          "Our first mentee before DevReady even existed, now paying it forward"
         ],
         "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/"
       }
@@ -461,7 +461,7 @@
         "location": "Europe",
         "title": "The Beginning: Rejections, Rejections, Rejections",
         "description": "Fresh out of university, Alex and Kostas moved abroad chasing their dreams. Reality hit hard—rejection after rejection. They quickly realized how much they didn't know after graduating. No one had taught them how the industry actually works, how to interview, or how to present themselves. So they helped each other, learned the hard way, and eventually managed to take their first steps in Greece.",
-        "image": "/assets/alex.jpg"
+        "image": "/assets/timeline/Screenshot 2026-01-27 at 20.37.26.png"
       },
       {
         "date": "2018-2021",

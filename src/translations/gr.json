@@ -371,7 +371,7 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "description": "Prague-based Frontend Engineer, passionate για AI, automation, και στο να φτιάχνει products που οι άνθρωποι ειναι excited to use. Με εμπειρία στο travel industry και αγάπη για ταξίδια, συνδυάζει engineering, business thinking, και ένα questionable χιούμορ, νοοτροπία, read a book, the laws of human nature."
+        "description": "Prague-based Frontend Engineer, passionate για AI και στο να φτιάχνει products που οι άνθρωποι αγαπούν. Με 200+ user interviews, φέρνει strong product thinking και design sensibility στο engineering. Συνδυάζει technical skills με user empathy και ένα questionable χιούμορ."
       }
     ]
   },
@@ -441,13 +441,13 @@
         "name": "Vasilis Samoladas",
         "role": "Frontend Engineer at Kiwi",
         "location": "Πράγα, Τσεχία",
-        "image": "/assets/sam.jpg",
-        "bio": "Frontend Engineer passionate για AI, automation και το να χτίζει delightful user experiences. Με εμπειρία στο travel industry σε όλη την Ευρώπη, ο Βασίλης συνδυάζει engineering skills με business thinking και μια πινελιά χιούμορ. Είναι η απόδειξη ότι το mentorship model του DevReady δουλεύει—τον βοηθήσαμε να βρει το πρώτο του role, και τώρα βοηθάει τους άλλους να κάνουν το ίδιο.",
+        "image": "/assets/sam.png",
+        "bio": "Frontend Engineer passionate για AI και το να φτιάχνει products που οι άνθρωποι αγαπούν. Με 200+ user interviews, ο Βασίλης φέρνει strong product thinking και design sensibility στο engineering. Είναι η απόδειξη ότι το mentorship model του DevReady δουλεύει. Τον βοηθήσαμε να βρει το πρώτο του role, και τώρα βοηθάει τους άλλους να κάνουν το ίδιο.",
         "highlights": [
-          "Frontend specialist με AI/automation expertise",
-          "Η πρώτη success story του DevReady—βρήκε role με τη δική μας καθοδήγηση",
-          "Δημιουργεί engaging technical content και curriculum",
-          "Φέρνει μια fresh perspective στο modern web development"
+          "Passionate για AI και user-centric products",
+          "200+ user interviews, βαθιά κατανόηση των αναγκών των χρηστών",
+          "Strong product thinking και design sensibility",
+          "Ο πρώτος μας mentee πριν καν υπάρξει το DevReady, τώρα βοηθάει άλλους"
         ],
         "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/"
       }
@@ -460,7 +460,7 @@
         "location": "Ευρώπη",
         "title": "Η Αρχή: Rejections, Rejections, Rejections",
         "description": "Φρέσκοι από το πανεπιστήμιο, ο Alex και ο Κώστας πήγαν στο εξωτερικό κυνηγώντας τα όνειρά τους. Η πραγματικότητα χτύπησε σκληρά—απόρριψη πίσω από απόρριψη. Γρήγορα κατάλαβαν πόσα δεν ήξεραν μετά την αποφοίτηση. Κανείς δεν τους είχε διδάξει πώς λειτουργεί πραγματικά η αγορά, πώς να κάνουν interview, ή πώς να παρουσιάσουν τον εαυτό τους. Έτσι βοήθησαν ο ένας τον άλλον, έμαθαν με τον δύσκολο τρόπο, και τελικά κατάφεραν να κάνουν τα πρώτα τους βήματα στην Ελλάδα.",
-        "image": "/assets/alex.jpg"
+        "image": "/assets/timeline/Screenshot 2026-01-27 at 20.37.26.png"
       },
       {
         "date": "2018-2021",
