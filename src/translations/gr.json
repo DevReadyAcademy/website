@@ -402,7 +402,7 @@
   },
   "journey": {
     "pageTitle": "Το Ταξίδι Μας",
-    "pageSubtitle": "Από το να βοηθάμε έναν φίλο στο να χτίζουμε ένα structured πρόγραμμα για aspiring developers",
+    "pageSubtitle": "Από τις ατελείωτες απορρίψεις στο εξωτερικό στο να χτίζουμε ένα πρόγραμμα που βοηθάει άλλους να αποφύγουν τα ίδια λάθη",
     "pageDescription": "Δεν είμαστε απλά εκπαιδευτές, είμαστε working engineers που έχουμε περπατήσει το μονοπάτι που προσπαθείς να περπατήσεις.",
     "teamTitle": "Η Ομάδα",
     "teamDescription": "Engineers, mentors και career coaches passionate για να κάνουν transform το tech education στην Ελλάδα",
@@ -453,49 +453,56 @@
       }
     ],
     "timelineTitle": "Το Ταξίδι",
-    "timelineDescription": "Πώς πήγαμε από το να βοηθάμε έναν φίλο να μπει στην tech στο να χτίσουμε το DevReady",
+    "timelineDescription": "Πώς πήγαμε από τις απορρίψεις στο εξωτερικό στο να χτίσουμε το DevReady",
     "timeline": [
       {
-        "date": "2019",
-        "location": "Αθήνα, Ελλάδα",
-        "title": "Η Αρχή: Βοηθώντας τον Βασίλη",
-        "description": "Ξεκίνησε με μια απλή ερώτηση: 'Πώς πραγματικά προσλαμβάνομαι;' Ο Βασίλης είχε coding skills αλλά δυσκολευόταν να μπει στην tech. Ο Alex άρχισε να τον κάνει mentor—interview prep, portfolio building, CV optimization. Μετά από μήνες structured guidance, ο Βασίλης βρήκε το πρώτο του engineering role. Αυτό απέδειξε ότι το model δουλεύει.",
+        "date": "2017-2018",
+        "location": "Ευρώπη",
+        "title": "Η Αρχή: Rejections, Rejections, Rejections",
+        "description": "Φρέσκοι από το πανεπιστήμιο, ο Alex και ο Κώστας πήγαν στο εξωτερικό κυνηγώντας τα όνειρά τους. Η πραγματικότητα χτύπησε σκληρά—απόρριψη πίσω από απόρριψη. Γρήγορα κατάλαβαν πόσα δεν ήξεραν μετά την αποφοίτηση. Κανείς δεν τους είχε διδάξει πώς λειτουργεί πραγματικά η αγορά, πώς να κάνουν interview, ή πώς να παρουσιάσουν τον εαυτό τους. Έτσι βοήθησαν ο ένας τον άλλον, έμαθαν με τον δύσκολο τρόπο, και τελικά κατάφεραν να κάνουν τα πρώτα τους βήματα στην Ελλάδα.",
         "image": "/assets/alex.jpg"
       },
       {
-        "date": "2020-2022",
-        "location": "Remote, Ευρώπη",
-        "title": "Η Φήμη Απλώνεται",
-        "description": "Καθώς η καριέρα του Βασίλη ανέβαινε, περισσότεροι άνθρωποι ζήτησαν βοήθεια. Ο Alex και ο Κώστας άρχισαν να κάνουν mentor aspiring developers σε όλη την Ελλάδα, βελτιώνοντας το approach τους με κάθε success story. Κατάλαβαν: οι άνθρωποι δεν χρειάζονται άλλα tutorials—χρειάζονται structure, mentorship και industry context.",
+        "date": "2018-2021",
+        "location": "Ελλάδα & Ευρώπη",
+        "title": "Gaining Experience and Expertise",
+        "description": "Ο Alex και ο Κώστας άλλαξαν πολλές δουλειές, δούλεψαν σε εταιρείες σε όλη την Ευρώπη, απέτυχαν και έμαθαν, επανέλαβαν και βελτιώθηκαν. Μέσα από trial and error, έγιναν επαγγελματίες στο industry—καταλαβαίνοντας όχι μόνο πώς να γράφουν κώδικα, αλλά πώς λειτουργεί πραγματικά ο tech κόσμος. Έμαθαν τι ψάχνουν πραγματικά οι εταιρείες, πώς να πλοηγηθούν σε interviews, και πώς να χτίσουν καριέρα.",
         "image": "/assets/kostikas.jpg"
+      },
+      {
+        "date": "2019-2022",
+        "location": "Αθήνα, Ελλάδα",
+        "title": "Βοηθώντας τον Βασίλη",
+        "description": "Ο Βασίλης είχε μόλις αποφοιτήσει και δυσκολευόταν να βρει την πρώτη του δουλειά. Ζήτησε βοήθεια. Αφού τον κάναμε mentor—interview prep, portfolio building, CV optimization—βρήκε το πρώτο του engineering role. Αλλά δεν σταμάτησε εκεί. Η φήμη απλώθηκε, και σύντομα ο Alex και ο Κώστας βοηθούσαν δεκάδες άλλους—φίλους και μη—να μπουν στην tech. Το pattern ήταν ξεκάθαρο: οι άνθρωποι δεν χρειάζονται περισσότερα tutorials, χρειάζονται καθοδήγηση από ανθρώπους που έχουν περάσει από εκεί.",
+        "image": "/assets/sam.jpg"
       },
       {
         "date": "2023",
         "location": "Μαρόκο & Ευρώπη",
         "title": "Scaling το Μοντέλο",
         "description": "Αφού βοηθήσαμε δεκάδες να μπουν στην tech, καταλάβαμε ότι το mentorship model μας scales. Εδώ γιορτάζουμε καθώς ο Βασίλης πήρε νέο role στην Kiwi.com—ένα major milestone που δείχνει ότι το structured mentorship δουλεύει. Η ερώτηση έγινε: πώς βοηθάμε περισσότερους ανθρώπους;",
-        "image": "/assets/sam.jpg"
+        "image": "/assets/students/maria_balafouti.jpeg"
       },
       {
         "date": "2024",
         "location": "Ελλάδα",
         "title": "Research & Validation",
         "description": "Κάναμε interview 100+ aspiring developers σε όλη την Ελλάδα για να καταλάβουμε τα pain points τους. Το μήνυμα ήταν ξεκάθαρο: η Ελλάδα έχει το talent, αλλά λείπουν structured paths, mentorship και industry context. Όχι άλλα coding tutorials—πραγματική καθοδήγηση από ανθρώπους που έχουν περάσει από εκεί.",
-        "image": "/assets/students/maria_balafouti.jpeg"
+        "image": "/assets/students/kostas_kotsis.jpeg"
       },
       {
         "date": "2025",
         "location": "Remote, Ελλάδα",
         "title": "Γεννιέται το DevReady",
         "description": "Επισημοποιήσαμε το proven mentorship approach μας στο DevReady—ένα structured 6-week bootcamp σχεδιασμένο να γεφυρώσει το χάσμα μεταξύ 'ξέρω να γράφω κώδικα' και 'I got hired'. Η αποστολή μας: να κάνουμε τις tech careers accessible σε όλους στην Ελλάδα μέσω real skills, real mentorship και real results.",
-        "image": "/assets/students/kostas_kotsis.jpeg"
+        "image": "/assets/students/maria_zavola.jpeg"
       },
       {
         "date": "2026",
         "location": "Παντού",
         "title": "Το Επόμενο Κεφάλαιο: Εσύ",
         "description": "Το πρώτο μας cohort ξεκινάει τον Απρίλιο 2026. Είμαστε έτοιμοι να βοηθήσουμε την επόμενη γενιά Ελλήνων developers να μπουν στην tech με το ακριβές blueprint που έχουμε refine για χρόνια. Θα είσαι μέρος αυτού του ταξιδιού;",
-        "image": "/assets/students/maria_zavola.jpeg"
+        "image": "/assets/alex.jpg"
       }
     ],
     "ctaTitle": "Έτοιμος να Ξεκινήσεις το Ταξίδι σου;",
