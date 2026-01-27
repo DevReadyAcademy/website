@@ -267,7 +267,7 @@
     "finalCtaDescription": "Κλείσε call με την ομάδα μας για να κλείσεις τη θέση σου στο early bird rate των €299.",
     "finalCtaPricing": "Κανονική τιμή: €449 • Το επόμενο cohort μπορεί να μην είναι μέχρι το Καλοκαίρι 2026",
     "finalCtaNote": "Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου.",
-    "urgencyBadge": "⏰ Μόνο 5 Early Bird Θέσεις στα €299"
+    "urgencyBadge": "⏰ {SPOTS_LEFT} στα {EARLY_BIRD_PRICE}"
   },
   "devpress": {
     "headline": "From Coding to Hiring",
@@ -319,7 +319,7 @@
     "formSending": "Αποστολή...",
     "enrollBadge": "⚡ ΕΓΓΡΑΦΗ ΕΔΩ",
     "enrollTitle": "Κλείσε το Enrollment Call σου",
-    "enrollDescription": "Έτοιμος να συμμετέχεις; Κλείσε call με την ομάδα μας για να ολοκληρώσεις την εγγραφή σου και να κλείσεις μία από τις 5 early bird θέσεις στα €299.",
+    "enrollDescription": "Έτοιμος να συμμετέχεις; Κλείσε call με την ομάδα μας για να ολοκληρώσεις την εγγραφή σου και να κλείσεις μία early bird θέση στα {EARLY_BIRD_PRICE}.",
     "enrollCta": "Κλείσε Enrollment Call",
     "enrollNote": "💡 Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου",
     "connectTitle": "Επικοινώνησε Μαζί Μας",

@@ -268,7 +268,7 @@
     "finalCtaDescription": "Book a call with our team to secure your spot at the early bird rate of €299.",
     "finalCtaPricing": "Regular price: €449 • Next cohort may not be until Summer 2026",
     "finalCtaNote": "During the call, we'll answer your questions and finalize your enrollment.",
-    "urgencyBadge": "⏰ Only 5 Early Bird Spots at €299"
+    "urgencyBadge": "⏰ {SPOTS_LEFT} at {EARLY_BIRD_PRICE}"
   },
   "devpress": {
     "headline": "From Coding to Hiring",
@@ -320,7 +320,7 @@
     "formSending": "Sending...",
     "enrollBadge": "⚡ ENROLL HERE",
     "enrollTitle": "Book Your Enrollment Call",
-    "enrollDescription": "Ready to join? Schedule a call with our team to complete your enrollment and secure one of the 5 early bird spots at €299.",
+    "enrollDescription": "Ready to join? Schedule a call with our team to complete your enrollment and secure one of the early bird spots at {EARLY_BIRD_PRICE}.",
     "enrollCta": "Book Enrollment Call",
     "enrollNote": "💡 During the call, we'll answer your questions and finalize your enrollment",
     "connectTitle": "Connect With Us",

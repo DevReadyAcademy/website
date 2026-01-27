@@ -3,7 +3,7 @@
 
 export const earlyBirdConfig = {
   // Early bird availability
-  spotsLeft: 5,
+  spotsLeft: 3,
   isActive: true,
   
   // Cohort dates (English and Greek)

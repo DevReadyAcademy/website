@@ -11,6 +11,7 @@ import {
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
+import { earlyBirdConfig } from "../config/earlyBird";
 
 const iconMap = {
   0: Compass,
@@ -21,7 +22,7 @@ const iconMap = {
 
 
 const Bootcamp = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   const modulesData = t('bootcamp.modules');
   const modules = (Array.isArray(modulesData) ? modulesData : []).map((module: any, index: number) => ({
@@ -329,7 +330,7 @@ const Bootcamp = () => {
           <div className="container mx-auto max-w-4xl">
             <div className="text-center p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
               <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
-                ⏰ Only 5 Early Bird Spots at €299
+                ⏰ {earlyBirdConfig.getSpotsLeftText(language)} {language === 'gr' ? 'στα' : 'at'} {earlyBirdConfig.earlyBirdPrice}
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 {t('bootcamp.finalCtaTitle')}
