@@ -36,55 +36,7 @@ Technical interviews are designed to assess your problem-solving abilities and h
 - System design
 - A combination of the above mentioned, e.g., Verbal technical questions & algorithmics
 
-These also depend on the seniority level. For example, system design is not appropriate for a junior position. It tends to be common from mid to more senior positions. Now let's dive deeper into those interview types.
-
-### 💬 Verbal technical questions
-
-In verbal technical interviews, the interviewer asks the candidate to describe a technical concept and tries to measure their fluency in said concept based on the quality of the conversation. You can find several articles for common questions for every technology or domain. For example, questions like below are pretty common:
-
-- What is the difference between NoSQL and SQL?
-- Name a couple of design patterns and explain one of your choice.
-- What is a stack? What are the two basic operations of a stack?
-- What is the difference between coupling and cohesion?
-
-### 🧮 Algorithmics
-
-These interviews are probably the most common ones and can be found in the first stages. They can be formed into an online or an offline coding challenge. They might ask you to solve an algorithmic problem live using your environment or in a coding platform, e.g., Codility, HackerRank. Alternatively, they will provide you with a link to the challenge on one of these platforms, and they will collect the results when you finish it. To ace these interviews, you will need to know data structures, sorting & searching algorithms, dynamic programming, etc. The knowledge depth required to succeed in this kind of interview depends on the barrier the company is setting. If you are applying for a FANK company, you need to know those concepts deeply; if not, a good understanding of each concept with a bit of practice would be fine.
-
-### 🏠 Take-home project
-
-Some companies will ask you to do a home test where they give you a project with some requirements and ask you to implement it offline. After you finish it, they will invite you to an interview to go through your approach. They will ask you a lot of whys and different ways of approaching the problem. The project is typically a CRUD application where you have to integrate with an API, test your solution, and follow software engineering principles like SOLID, simple design, etc.
-
-The problem I am having with this interview is that it takes so much time. If you want to demonstrate your skills, you will probably need to test the code extensively, deploy it somewhere, write some documentation or at least a README file, and build a CI/CD pipeline. There is no definition of done, and if you are competing with other candidates, you have to give a lot of effort to stand out. All these things are time-consuming and require a lot of capacity. Working full-time is hard to invest in such an interview where there is a chance of rejection, so I always try to avoid this kind of interview.
-
-### 👥 Pair programming
-
-In a pair programming interview, you are asked to solve a software problem by either extending an existing project or by implementing a [coding kata](https://katalyst.codurance.com/). There is a high chance that you will be interviewed by more than one person as well. They will evaluate how you write code, communicate and approach problems. This is probably one of my favorite types, mainly because I love pairing, although it's not that common in the industry. I personally think it's a great way to evaluate a candidate, but it's not cost-efficient for the company. However, to be fair, it's not really pair programming. Your interviewer that acts as a colleague will give you feedback or try to direct you in a certain way, but it's far from how pair programming actually works.
-
-### 🏗️ System design
-
-These interviews can be found in more senior positions. They typically give you some functional requirements that require you to build a system at a high level. Many things are going around this interview on how to approach these interviews, what to study, but it is a blog on its own. Long story short, you have to learn about back-of-the-envelope calculation, scalability, availability, fault tolerance, cloud services, data replication, distributed messaging, caching, metrics & logs, data synchronization, and many more. It's a taught interview but personally is the one I enjoy the most.
-
-Some system design interview questions could be the following:
-
-- How would you make a search engine?
-- Design Youtube
-- How would you design a streaming service?
-- Designing a URL shortening service
-
-### 🔄 A Combination
-
-Some companies might invite you for a technical interview where they will ask you some verbal technical questions and then give you an algorithmic problem to solve. Like I said previously, every company evaluates candidates differently; there is no specific formula for interviewing. So the possibility of a combination of the above interview types does exist as well.
-
-## 💰 Know your value
-
-Knowing your value is a taught one, mainly because many people have a hard time evaluating themselves. Most people tend to underestimate their skills. You will probably get asked about your salary expectation in your first interview with the recruiter to see if you match their budget. There are companies that have an extensive range of budgets, and depending on your performance, they will adjust the offer. You can better understand your value from talking to people in the industry or even getting another offer from another company. Getting an offer will give you some indication of what your value is. Please don't take it for granted, though; some companies have different budgets, your performance and negotiating skills are playing a leading part. To get more insights, you can always check glassdoor as well. Generally, their job is to get you hired with the minimum amount that will satisfy you, and your job is to get the maximum amount of money that will benefit both you and the company. I am not a negotiation expert, but you should always try to negotiate from what I know.
-
-## ⭐ Great vs Good Interviewers
-
-Interviewing someone is not an easy task, and it's not always done right. If you have a lot of interviews throughout your career, you will learn that there are more professional interviewers than others. One of the most important tasks an interviewer has is to build a comfortable environment for the candidate to be more of themselves. Also, good interviewers are conversationalists. Instead of going through the questions and answers directly, they try to make it feel more like a conversation and extract the answers they are looking for. They might, for example, comment on some of your answers, saying that they would agree or disagree so that you can take a breath and feel more like chatting. This way, it feels more natural and definitely more enjoyable.
-
-In general, that's not always the case. I've had interviewers that asked silly old-school programming questions, they made it feel like an exam, and generally, they didn't have good vibes. All those mentioned above apply to both behavioral and technical interviews. So, in general you have to be aware that the results of your interview depend on the interviewer as well.
+These also depend on the seniority level. For example, system design is not appropriate for a junior position. It tends to be common from mid to more senior positions.
 
 ## ✅ Dos & Donts
 
@@ -155,7 +107,9 @@ I find interviews really challenging, and it's fascinating to me. It's almost li
 
 ## 🎯 Wrap up
 
-In this blog, I discussed different types of interviews and dived a bit deeper into each type. I also shared some of my learnings after so many interviews and some techniques and tips that I use to help me perform better. 
+In this blog, I discussed different types of interviews and shared some of my learnings after so many interviews, along with techniques and tips that I use to help me perform better. 
+
+**Want to learn more?** This is just the beginning! I have specific dos and don'ts for each interview type - from acing algorithmic challenges to crushing system design interviews. Subscribe to our newsletter below to get these deep-dive tips delivered straight to your inbox.
 
 At DevReady, we've helped dozens of developers successfully navigate these interviews and land their dream roles. If you want personalized guidance on preparing for interviews, check out our [6-week bootcamp](/bootcamp) where we cover everything from technical preparation to behavioral interview techniques.
     `,
@@ -169,7 +123,7 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
 
 Ένα behavioral interview εστιάζει σε ερωτήσεις που επιτρέπουν στους υποψηφίους να αναστοχαστούν και να μοιραστούν την προηγούμενη επαγγελματική τους συμπεριφορά. Ο interviewer χρησιμοποιεί αυτή την τεχνική interview για να προσδιορίσει τα skills, την προσωπικότητα και τις ικανότητες ενός επαγγελματία. Είναι επίσης γνωστά ως \`Value Assessment\` ή \`Cultural Interview\`.
 
-Οι παρακάτω ερωτήσεις είναι μερικές behavioral ερωτήσεις που θα μπορούσες να πάρεις:
+Οι παρακάτω ερωτήσεις είναι μερικές behavioral ερωτήσεις που μπορεί να σου γίνουν:
 
 - Πότε ήταν η τελευταία φορά που έλαβες constructive feedback?
 - Πες μου ένα παράδειγμα σύγκρουσης που είχες με συνάδελφο και πώς κατάφερες να το λύσεις?
@@ -189,61 +143,13 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
 - System design
 - Συνδυασμός των παραπάνω, π.χ., Verbal technical questions & algorithmics
 
-Αυτά εξαρτώνται επίσης από το seniority level. Για παράδειγμα, το system design δεν είναι κατάλληλο για junior θέση. Τείνει να είναι συνηθισμένο από mid έως πιο senior θέσεις. Τώρα ας δούμε πιο αναλυτικά αυτούς τους τύπους interviews.
-
-### 💬 Verbal technical questions
-
-Στα verbal technical interviews, ο interviewer ζητά από τον υποψήφιο να περιγράψει μια τεχνική έννοια και προσπαθεί να μετρήσει την άνεσή του σε αυτή την έννοια βάσει της ποιότητας της συζήτησης. Μπορείς να βρεις αρκετά άρθρα για συνήθεις ερωτήσεις για κάθε τεχνολογία ή domain. Για παράδειγμα, ερωτήσεις όπως οι παρακάτω είναι αρκετά συνηθισμένες:
-
-- Ποια είναι η διαφορά μεταξύ NoSQL και SQL?
-- Ονόμασε μερικά design patterns και εξήγησε ένα της επιλογής σου.
-- Τι είναι ένα stack? Ποιες είναι οι δύο βασικές λειτουργίες ενός stack?
-- Ποια είναι η διαφορά μεταξύ coupling και cohesion?
-
-### 🧮 Algorithmics
-
-Αυτά τα interviews είναι πιθανώς τα πιο συνηθισμένα και μπορούν να βρεθούν στα πρώτα στάδια. Μπορεί να διαμορφωθούν σε online ή offline coding challenge. Μπορεί να σου ζητήσουν να λύσεις ένα αλγοριθμικό πρόβλημα live χρησιμοποιώντας το environment σου ή σε μια coding πλατφόρμα, π.χ., Codility, HackerRank. Εναλλακτικά, θα σου παρέχουν ένα link για το challenge σε μία από αυτές τις πλατφόρμες και θα συλλέξουν τα αποτελέσματα όταν το ολοκληρώσεις. Για να τα πας καλά σε αυτά τα interviews, θα χρειαστεί να ξέρεις data structures, sorting & searching algorithms, dynamic programming, κλπ. Το βάθος γνώσης που απαιτείται για να πετύχεις σε αυτό το είδος interview εξαρτάται από το barrier που θέτει η εταιρεία. Αν κάνεις αίτηση για FANK εταιρεία, πρέπει να ξέρεις αυτές τις έννοιες σε βάθος. Αν όχι, μια καλή κατανόηση κάθε έννοιας με λίγη εξάσκηση θα είναι εντάξει.
-
-### 🏠 Take-home project
-
-Μερικές εταιρείες θα σου ζητήσουν να κάνεις ένα home test όπου σου δίνουν ένα project με κάποιες απαιτήσεις και σου ζητούν να το υλοποιήσεις offline. Αφού το ολοκληρώσεις, θα σε καλέσουν σε interview για να δουν την προσέγγισή σου. Θα σου κάνουν πολλά γιατί και διαφορετικούς τρόπους προσέγγισης του προβλήματος. Το project είναι συνήθως μια CRUD εφαρμογή όπου πρέπει να κάνεις integrate με ένα API, να κάνεις test τη λύση σου και να ακολουθήσεις software engineering principles όπως SOLID, simple design, κλπ.
-
-Το πρόβλημα που έχω με αυτό το interview είναι ότι παίρνει πολύ χρόνο. Αν θέλεις να δείξεις τα skills σου, θα χρειαστεί πιθανώς να κάνεις extensive test του κώδικα, να το deploy κάπου, να γράψεις documentation ή τουλάχιστον ένα README file, και να χτίσεις ένα CI/CD pipeline. Δεν υπάρχει definition of done και αν ανταγωνίζεσαι με άλλους υποψηφίους, πρέπει να δώσεις πολλή προσπάθεια για να ξεχωρίσεις. Όλα αυτά είναι time-consuming και απαιτούν πολύ χρόνο. Δουλεύοντας full-time είναι δύσκολο να επενδύσεις σε ένα τέτοιο interview όπου υπάρχει πιθανότητα απόρριψης, οπότε πάντα προσπαθώ να αποφύγω αυτό το είδος interview.
-
-### 👥 Pair programming
-
-Σε ένα pair programming interview, σου ζητείται να λύσεις ένα software πρόβλημα είτε επεκτείνοντας ένα υπάρχον project είτε υλοποιώντας ένα [coding kata](https://katalyst.codurance.com/). Υπάρχει μεγάλη πιθανότητα να πάρεις interview από περισσότερα από ένα άτομα. Θα αξιολογήσουν πώς γράφεις κώδικα, επικοινωνείς και προσεγγίζεις προβλήματα. Αυτός είναι πιθανώς ένας από τους αγαπημένους μου τύπους, κυρίως επειδή λατρεύω το pairing, αν και δεν είναι τόσο συνηθισμένο στο industry. Προσωπικά νομίζω ότι είναι ένας εξαιρετικός τρόπος να αξιολογήσεις έναν υποψήφιο, αλλά δεν είναι cost-efficient για την εταιρεία. Ωστόσο, για να είμαι δίκαιος, δεν είναι πραγματικά pair programming. Ο interviewer σου που ενεργεί ως συνάδελφος θα σου δώσει feedback ή θα προσπαθήσει να σε κατευθύνει με κάποιον τρόπο, αλλά είναι μακριά από το πώς λειτουργεί πραγματικά το pair programming.
-
-### 🏗️ System design
-
-Αυτά τα interviews μπορούν να βρεθούν σε πιο senior θέσεις. Συνήθως σου δίνουν κάποιες functional απαιτήσεις που σου ζητούν να χτίσεις ένα σύστημα σε high level. Πολλά πράγματα γύρω από αυτό το interview για το πώς να προσεγγίσεις αυτά τα interviews, τι να μελετήσεις, αλλά είναι ένα blog από μόνο του. Με λίγα λόγια, πρέπει να μάθεις για back-of-the-envelope calculation, scalability, availability, fault tolerance, cloud services, data replication, distributed messaging, caching, metrics & logs, data synchronization, και πολλά άλλα. Είναι ένα δύσκολο interview αλλά προσωπικά είναι αυτό που απολαμβάνω περισσότερο.
-
-Μερικές system design interview ερωτήσεις θα μπορούσαν να είναι οι εξής:
-
-- Πώς θα έφτιαχνες μια μηχανή αναζήτησης?
-- Σχεδίασε το Youtube
-- Πώς θα σχεδίαζες μια streaming υπηρεσία?
-- Σχεδιάζοντας μια URL shortening υπηρεσία
-
-### 🔄 A Combination
-
-Μερικές εταιρείες μπορεί να σε καλέσουν για ένα technical interview όπου θα σου κάνουν μερικές verbal technical ερωτήσεις και μετά θα σου δώσουν ένα αλγοριθμικό πρόβλημα να λύσεις. Όπως είπα προηγουμένως, κάθε εταιρεία αξιολογεί τους υποψηφίους διαφορετικά. Δεν υπάρχει συγκεκριμένος τύπος για interviewing. Οπότε η πιθανότητα συνδυασμού των παραπάνω τύπων interview υπάρχει επίσης.
-
-## 💰 Know your value
-
-Το να ξέρεις την αξία σου είναι δύσκολο, κυρίως επειδή πολλοί άνθρωποι δυσκολεύονται να αξιολογήσουν τον εαυτό τους. Οι περισσότεροι άνθρωποι τείνουν να υποτιμούν τα skills τους. Πιθανώς θα σε ρωτήσουν για τις προσδοκίες σου για μισθό στο πρώτο σου interview με τον recruiter για να δουν αν ταιριάζεις με το budget τους. Υπάρχουν εταιρείες που έχουν εκτεταμένο εύρος budgets και ανάλογα με την απόδοσή σου, θα προσαρμόσουν την προσφορά. Μπορείς να καταλάβεις καλύτερα την αξία σου μιλώντας με ανθρώπους στο industry ή ακόμα και παίρνοντας άλλη προσφορά από άλλη εταιρεία. Το να πάρεις μια προσφορά θα σου δώσει μια ένδειξη για το ποια είναι η αξία σου. Μην το θεωρήσεις δεδομένο όμως. Μερικές εταιρείες έχουν διαφορετικά budgets, η απόδοσή σου και τα negotiating skills σου παίζουν πρωταγωνιστικό ρόλο. Για να πάρεις περισσότερες πληροφορίες, μπορείς πάντα να δεις glassdoor. Γενικά, η δουλειά τους είναι να σε προσλάβουν με το ελάχιστο ποσό που θα σε ικανοποιήσει και η δουλειά σου είναι να πάρεις το μέγιστο ποσό χρημάτων που θα ωφελήσει και εσένα και την εταιρεία. Δεν είμαι expert στη διαπραγμάτευση, αλλά από όσο ξέρω πρέπει πάντα να προσπαθείς να διαπραγματευτείς.
-
-## ⭐ Great vs Good Interviewers
-
-Το να πάρεις interview σε κάποιον δεν είναι εύκολη δουλειά και δεν γίνεται πάντα σωστά. Αν έχεις πολλά interviews στην καριέρα σου, θα μάθεις ότι υπάρχουν πιο επαγγελματίες interviewers από άλλους. Ένα από τα πιο σημαντικά tasks που έχει ένας interviewer είναι να χτίσει ένα άνετο περιβάλλον για τον υποψήφιο να είναι πιο ο εαυτός του. Επίσης, οι καλοί interviewers είναι conversationalists. Αντί να περνούν από τις ερωτήσεις και τις απαντήσεις απευθείας, προσπαθούν να το κάνουν να αισθάνεται περισσότερο σαν συζήτηση και να εξάγουν τις απαντήσεις που ψάχνουν. Μπορεί, για παράδειγμα, να σχολιάσουν κάποιες από τις απαντήσεις σου, λέγοντας ότι θα συμφωνούσαν ή θα διαφωνούσαν έτσι ώστε να πάρεις μια ανάσα και να αισθάνεσαι περισσότερο σαν να κουβεντιάζεις. Με αυτόν τον τρόπο, αισθάνεται πιο φυσικό και σίγουρα πιο ευχάριστο.
-
-Γενικά, αυτό δεν συμβαίνει πάντα. Έχω είχα interviewers που ρωτούσαν ανόητες old-school programming ερωτήσεις, το έκαναν να αισθάνεται σαν εξέταση και γενικά δεν είχαν καλά vibes. Όλα όσα αναφέρθηκαν παραπάνω ισχύουν και για behavioral και για technical interviews. Οπότε, γενικά πρέπει να γνωρίζεις ότι τα αποτελέσματα του interview σου εξαρτώνται και από τον interviewer.
+Αυτά εξαρτώνται επίσης από το seniority level. Για παράδειγμα, το system design δεν είναι κατάλληλο για junior θέση. Τείνει να είναι συνηθισμένο από mid έως πιο senior θέσεις.
 
 ## ✅ Dos & Donts
 
 ### 😊 Good vibes
 
-Τα interviews δεν είναι μόνο για σένα. Προσπάθησε να κάνεις τον χρόνο τους ευχάριστο. Εννοώ, ήδη επενδύουν χρόνο για να σε πάρουν interview και το να αφήσεις μια καλή γεύση όταν τελειώσει το interview είναι πολύ σημαντικό.
+Τα interviews δεν είναι μόνο για σένα. Προσπάθησε να κάνεις τον χρόνο τους ευχάριστο. Ήδη επενδύουν χρόνο για να σε πάρουν interview, οπότε το να αφήσεις μια καλή εντύπωση όταν τελειώσει το interview είναι πολύ σημαντικό.
 
 ### ❓ Ask!
 
@@ -280,7 +186,7 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
 ### 📖 Prepare your stories
 
 Ετοίμασε μερικά παραδείγματα challenges, conflicts, failures, leadership στην εργασιακή σου εμπειρία ή projects έτσι ώστε να έχεις κάτι να πεις. Είναι δύσκολο να αυτοσχεδιάσεις στο interview σε real-time.
-Αυτός είναι ένας πίνακας που νομίζω τον πήρα από το [Cracking the Coding Interview](https://www.amazon.co.uk/Cracking-Coding-Interview-6th-Programming/dp/0984782850/ref=sr_1_1?adgrpid=56176823187&hvadid=259151807165&hvdev=c&hvlocphy=1006886&hvnetw=g&hvqmt=e&hvrand=14006929763397277600&hvtargid=kwd-297264693965&hydadcr=17616_1817786&keywords=cracking+the+coding+interview&qid=1645058943&sr=8-1) βιβλίο όπου μπορεί να είναι χρήσιμο.
+Ο παρακάτω πίνακας είναι εμπνευσμένος από το βιβλίο [Cracking the Coding Interview](https://www.amazon.co.uk/Cracking-Coding-Interview-6th-Programming/dp/0984782850/ref=sr_1_1?adgrpid=56176823187&hvadid=259151807165&hvdev=c&hvlocphy=1006886&hvnetw=g&hvqmt=e&hvrand=14006929763397277600&hvtargid=kwd-297264693965&hydadcr=17616_1817786&keywords=cracking+the+coding+interview&qid=1645058943&sr=8-1) και μπορεί να σε βοηθήσει στην προετοιμασία σου.
 
 | Ερωτήσεις                 | Project 1 | Project 2 |
 | ------------------------- | --------- | --------- |
@@ -308,14 +214,16 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
 
 ## 🎯 Wrap up
 
-Σε αυτό το blog, συζήτησα διαφορετικούς τύπους interviews και εμβάθυνα σε κάθε τύπο. Μοιράστηκα επίσης μερικά από τα μαθήματά μου μετά από τόσα πολλά interviews και μερικές τεχνικές και tips που χρησιμοποιώ για να με βοηθήσουν να έχω καλύτερη απόδοση.
+Σε αυτό το blog post, παρουσίασα διαφορετικούς τύπους interviews και μοιράστηκα μερικά από τα μαθήματά μου μετά από τόσα πολλά interviews, μαζί με τεχνικές και tips που χρησιμοποιώ για να με βοηθήσουν να έχω καλύτερη απόδοση.
+
+**Θέλεις να μάθεις περισσότερα;** Αυτό είναι μόνο η αρχή! Έχω συγκεκριμένα dos και don'ts για κάθε τύπο interview - από algorithmic challenges μέχρι system design interviews. Κάνε subscribe στο newsletter μας παρακάτω για να λαμβάνεις αυτά τα εις βάθος tips απευθείας στο inbox σου.
 
 Στο DevReady, έχουμε βοηθήσει δεκάδες developers να αντιμετωπίσουν με επιτυχία αυτά τα interviews και να βρουν το dream role τους. Αν θέλεις personalized guidance για την προετοιμασία για interviews, δες το [6-week bootcamp μας](/bootcamp) όπου καλύπτουμε τα πάντα από technical preparation έως behavioral interview techniques.
     `,
     author: "Alexis Pavlidis",
     date: "2026-01-24",
-    readTime: "12 min read",
-    readTimeGr: "12 λεπτά διάβασμα",
+    readTime: "5 min read",
+    readTimeGr: "5 λεπτά διάβασμα",
     tags: ["Interviews", "Career", "Tips"],
     tagsGr: ["Interviews", "Career", "Tips"],
     image: "/assets/blogs/interview.jpg",
