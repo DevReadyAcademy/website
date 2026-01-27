@@ -28,6 +28,12 @@ const testimonialsEn = [
     quote: "As a third-year student, the boost I got from this program was huge. You pushed me out of my comfort zone, challenged me in a positive way, and helped me see my future a little more clearly. The knowledge I gained is extensive, and much of it consists of things that are hard to 'learn' at university. You gave me one of the most beautiful 'first milestones' on my journey into technology.",
     image: "/assets/students/kostas_apostolidis.jpeg",
   },
+  {
+    name: "Marios",
+    role: "Software Engineer",
+    quote: "All three of them were exceptional, they helped me learn how to organize my thinking and break down a problem into smaller manageable pieces. Whether you're interested in backend or frontend, the bootcamp covers both. Their feedback was very helpful and the projects were genuinely interesting. Finally, the interview preparation part and their tips were really useful and give you a real picture of how companies think, helping me prepare better. I wholeheartedly recommend it.",
+    image: "/assets/students/marios.jpeg",
+  },
 ];
 
 const testimonialsGr = [
@@ -54,6 +60,12 @@ const testimonialsGr = [
     role: "Computer Science Student (UoM) | Front-End Development, IoT & Cybersecurity Enthusiast",
     quote: "Ως φοιτητής τρίτου έτους, το boost που πήρα από αυτό το πρόγραμμα ήταν τεράστιο. Με βγάλατε από το comfort zone μου, με προβληματίσατε θετικά και με βοηθήσατε να δω το μέλλον μου ενα τσικ πιο καθαρά. Οι γνώσεις που αποκόμισα είναι πάρα πολλές, και μάλιστα πολλές από αυτές είναι πράγματα που δύσκολα 'μαθαίνονται' στο πανεπιστήμιο. Μου αφήσατε έναν από τους πιο όμορφους 'πρώτους σταθμούς' στο ταξίδι μου στην τεχνολογία, και δεν το θεωρώ δεδομένο.",
     image: "/assets/students/kostas_apostolidis.jpeg",
+  },
+  {
+    name: "Marios",
+    role: "Software Engineer",
+    quote: "Τα παιδιά ήταν εξαιρετικά και οι τρεις τους, με βοήθησαν να μάθω πώς να οργανώνω τη σκέψη μου και να σπάω ένα πρόβλημα σε μικρότερα διαχειρίσιμα κομμάτια. Είτε σε ενδιαφέρει το backend είτε το frontend, το bootcamp καλύπτει και τα δύο. Το feedback τους ήταν πολύ χρήσιμο και τα projects πραγματικά ενδιαφέροντα. Τέλος, το κομμάτι της προετοιμασίας για συνεντεύξεις και τα tips τους ήταν πραγματικά πολύ χρήσιμα και σου δίνουν πραγματική εικόνα για το πώς σκέφτονται οι εταιρείες και με βοήθησαν να προετοιμαστώ καλύτερα. Το συνιστώ ανεπιφύλακτα.",
+    image: "/assets/students/marios.jpeg",
   },
 ];
 
