@@ -458,50 +458,50 @@
     "timeline": [
       {
         "date": "2017-2018",
-        "location": "Europe",
+        "location": "Thessaloniki, Greece",
         "title": "The Beginning: Rejections, Rejections, Rejections",
-        "description": "Fresh out of university, Alex and Kostas moved abroad chasing their dreams. Reality hit hard—rejection after rejection. They quickly realized how much they didn't know after graduating. No one had taught them how the industry actually works, how to interview, or how to present themselves. So they helped each other, learned the hard way, and eventually managed to take their first steps in Greece.",
+        "description": "After graduating, Alex and Kostas tried to land jobs abroad. Reality hit hard: rejection after rejection. They quickly realized how much they didn't know. No one had taught them how the industry actually works, how to interview, or how to present themselves. So they helped each other, started their careers in Greece, learned the hard way, and eventually managed to land roles abroad.",
         "image": "/assets/timeline/Screenshot 2026-01-27 at 20.37.26.png"
       },
       {
-        "date": "2018-2021",
-        "location": "Greece & Europe",
+        "date": "2018-2023",
+        "location": "London, Greece, Barcelona, Belgium",
         "title": "Gaining Experience and Expertise",
-        "description": "Alex and Kostas changed multiple jobs, worked at companies across Europe, failed and learned, iterated and improved. Through trial and error, they became professionals in the industry—understanding not just how to code, but how the tech world really operates. They learned what companies actually look for, how to navigate interviews, and how to build a career.",
+        "description": "Alex and Kostas worked at different companies across London, Greece, Barcelona, and Belgium. They failed and learned, iterated and improved. Through trial and error, they became professionals in the industry, understanding not just how to code, but how the tech world really operates. They learned what companies actually look for, how to navigate interviews, and how to build a career.",
         "image": "/assets/kostikas.jpg"
       },
       {
-        "date": "2019-2022",
-        "location": "Athens, Greece",
-        "title": "Helping Vasilis",
-        "description": "Vasilis had just graduated and was struggling to find his first job. He reached out for help. After mentoring him—interview prep, portfolio building, CV optimization—he landed his first engineering role. But it didn't stop there. Word spread, and soon Alex and Kostas were helping dozens of others—friends and strangers alike—break into tech. The pattern was clear: people don't need more tutorials, they need guidance from people who've been there.",
-        "image": "/assets/sam.jpg"
+        "date": "2023",
+        "location": "Remote",
+        "title": "Vasilis's Break into Tech",
+        "description": "Vasilis was a close friend of Alex and Kostas. After graduating, he struggled to find his first job in tech. He reached out for help, and they guided him through the process: interview prep, portfolio building, CV optimization. With their mentorship, Vasilis landed his first engineering role.",
+        "image": "/assets/timeline/maroco.jpg"
       },
       {
-        "date": "2023",
-        "location": "Morocco & Europe",
-        "title": "Scaling the Model",
-        "description": "After helping dozens break into tech, we realized our mentorship model scales. Here we are celebrating as Vasilis secured a new role at Kiwi.com—a major milestone showing that structured mentorship works. The question became: how do we help more people?",
+        "date": "2023-2024",
+        "location": "Remote",
+        "title": "We Did It Again and Again and Again",
+        "description": "Organically, we started helping more friends break into tech. Then we began mentoring others 1-on-1, people we didn't even know. Alex had already started mentoring engineers at Codurance and Skyscanner. The pattern was clear: structured guidance works, and more people needed it.",
         "image": "/assets/students/maria_balafouti.jpeg"
       },
       {
         "date": "2024",
-        "location": "Greece",
-        "title": "Research & Validation",
-        "description": "We interviewed 100+ aspiring developers across Greece to understand their pain points. The message was clear: Greece has the talent, but lacks structured paths, mentorship, and industry context. Not more coding tutorials—real guidance from people who've been there.",
-        "image": "/assets/students/kostas_kotsis.jpeg"
+        "location": "Athens, Greece",
+        "title": "The DevReady Idea is Born",
+        "description": "We were sitting at a coffee shop in Athens when the idea hit us, almost casually. What if we could turn everything we learned into something structured? What if we could help more people, not just one by one, but at scale? That's when DevReady started to take shape.",
+        "image": "/assets/timeline/logo.svg"
       },
       {
         "date": "2025",
-        "location": "Remote, Greece",
-        "title": "DevReady is Born",
-        "description": "We formalized our proven mentorship approach into DevReady—a structured 6-week bootcamp designed to bridge the gap between 'I can code' and 'I got hired.' Our mission: make tech careers accessible to everyone in Greece through real skills, real mentorship, and real results.",
+        "location": "Remote",
+        "title": "Research, Validation & Our First Success Story",
+        "description": "We interviewed 100+ aspiring developers across Greece to understand their pain points. The message was clear: Greece has the talent, but lacks structured paths, mentorship, and industry context. We built DevReady, ran our first cohort, and watched our first students land their dream jobs. The model works.",
         "image": "/assets/students/maria_zavola.jpeg"
       },
       {
         "date": "2026",
-        "location": "Everywhere",
-        "title": "The Next Chapter: You",
+        "location": "Remote",
+        "title": "Next Step: You",
         "description": "Our first cohort launches in April 2026. We're ready to help the next generation of Greek developers break into tech with the exact blueprint we've refined over years. Will you be part of this journey?",
         "image": "/assets/alex.jpg"
       }

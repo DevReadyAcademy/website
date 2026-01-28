@@ -123,7 +123,6 @@ const Header = () => {
     { name: t('header.home'), id: 'hero', type: 'scroll' },
     { name: t('header.bootcamp'), path: '/bootcamp', type: 'link' },
     { name: t('header.team'), path: '/journey', type: 'link' },
-    { name: t('header.faqs'), path: '/bootcamp#faqs', type: 'link' },
     { name: t('header.devpress'), path: '/devpress', type: 'link' },
   ];
 
