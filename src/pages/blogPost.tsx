@@ -57,6 +57,40 @@ const BlogPost = () => {
   // Always use production URL for sharing (social media can't access localhost)
   const currentUrl = `https://www.devready.gr/devpress/${post.slug}`;
 
+  // Structured data for blog post
+  const blogPostSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": language === 'gr' ? post.excerptGr : post.excerpt,
+    "image": post.image ? `https://www.devready.gr${post.image}` : "https://www.devready.gr/assets/logo-320.webp",
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+      "url": "https://www.devready.gr/"
+    },
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevReady",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.devready.gr/assets/logo-320.webp",
+        "width": 320,
+        "height": 320
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": currentUrl
+    },
+    "keywords": tags.join(', '),
+    "articleSection": tags[0],
+    "inLanguage": language === 'gr' ? 'el' : 'en',
+    "wordCount": content.split(/\s+/).length
+  };
+
   const shareOnTwitter = () => {
     const text = `${title} - DevReady`;
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(currentUrl)}`, '_blank');
@@ -90,37 +124,9 @@ const BlogPost = () => {
         ogType="article"
         articlePublishedTime={post.date}
         articleAuthor={post.author}
+        language={language}
+        structuredData={blogPostSchema}
       />
-      {/* Structured Data for Blog Post */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": title,
-          "description": language === 'gr' ? post.excerptGr : post.excerpt,
-          "author": {
-            "@type": "Person",
-            "name": post.author
-          },
-          "datePublished": post.date,
-          "dateModified": post.date,
-          "publisher": {
-            "@type": "Organization",
-            "name": "DevReady",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.devready.gr/assets/logo-320.webp"
-            }
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": currentUrl
-          },
-          "keywords": tags.join(', '),
-          "articleSection": tags[0],
-          "inLanguage": language === 'gr' ? 'el' : 'en'
-        })}
-      </script>
       <Header />
       <div className="min-h-screen bg-background pt-20">
         {/* Skip to main content link */}

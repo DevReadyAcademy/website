@@ -15,6 +15,40 @@ const DevPress = () => {
   // Filter only published posts
   const publishedPosts = blogPosts.filter(post => post.published !== false);
 
+  // Structured data for blog
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "DevPress",
+    "description": "Tech insights and career advice from experienced software engineers",
+    "url": "https://www.devready.gr/devpress",
+    "inLanguage": language === 'gr' ? 'el' : 'en',
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevReady",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.devready.gr/assets/logo-320.webp",
+        "width": 320,
+        "height": 320
+      }
+    },
+    ...(publishedPosts.length > 0 && {
+      "blogPost": publishedPosts.map(post => ({
+        "@type": "BlogPosting",
+        "headline": language === 'gr' ? post.titleGr : post.title,
+        "description": language === 'gr' ? post.excerptGr : post.excerpt,
+        "url": `https://www.devready.gr/devpress/${post.slug}`,
+        "datePublished": post.date,
+        "image": post.image ? `https://www.devready.gr${post.image}` : undefined,
+        "author": {
+          "@type": "Person",
+          "name": post.author
+        }
+      }))
+    })
+  };
+
   return (
     <>
       <SEO
@@ -26,37 +60,9 @@ const DevPress = () => {
         keywords="tech blog, software engineering blog, career advice, programming tips, tech industry Greece"
         canonical="https://www.devready.gr/devpress"
         ogType="website"
+        language={language}
+        structuredData={blogSchema}
       />
-      {/* Structured Data for Blog */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Blog",
-          "name": "DevPress",
-          "description": "Tech insights and career advice from experienced software engineers",
-          "url": "https://www.devready.gr/devpress",
-          "publisher": {
-            "@type": "Organization",
-            "name": "DevReady",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.devready.gr/assets/logo-320.webp"
-            }
-          },
-          ...(publishedPosts.length > 0 && {
-            "blogPost": publishedPosts.map(post => ({
-              "@type": "BlogPosting",
-              "headline": language === 'gr' ? post.titleGr : post.title,
-              "url": `https://www.devready.gr/devpress/${post.slug}`,
-              "datePublished": post.date,
-              "author": {
-                "@type": "Person",
-                "name": post.author
-              }
-            }))
-          })
-        })}
-      </script>
       <Header />
       <div className="min-h-screen bg-background pt-20">
         {/* Skip to main content link */}

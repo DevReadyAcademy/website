@@ -48,6 +48,69 @@ const Bootcamp = () => {
   
   const notGoodFitData = t('bootcamp.notGoodFitItems');
   const notGoodFitItems = Array.isArray(notGoodFitData) ? notGoodFitData : [];
+
+  // Combined structured data with Course and FAQPage schemas
+  const bootcampStructuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Course",
+        "name": "Software Engineering Bootcamp",
+        "description": "12-week intensive bootcamp covering software engineering fundamentals, production-ready skills, and career preparation",
+        "provider": {
+          "@type": "Organization",
+          "name": "DevReady",
+          "url": "https://www.devready.gr/",
+          "logo": "https://www.devready.gr/assets/logo-320.webp"
+        },
+        "url": "https://www.devready.gr/bootcamp",
+        "courseCode": "DR-BOOTCAMP-2026",
+        "educationalLevel": "Beginner to Intermediate",
+        "teaches": [
+          "Software Engineering Fundamentals",
+          "System Design",
+          "Interview Preparation",
+          "Career Development"
+        ],
+        "numberOfCredits": "12 weeks",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "instructor": {
+            "@type": "Person",
+            "name": "Alexis Pavlidis"
+          },
+          "inLanguage": ["en", "el"]
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "399",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2026-01-01",
+          "url": "https://www.devready.gr/contact"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "ratingCount": "12",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      ...(faqs.length > 0 ? [{
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq: any) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer.replace(/\n/g, ' ').replace(/•/g, '-')
+          }
+        }))
+      }] : [])
+    ]
+  };
   
   // Helper function to format FAQ answers with bullet points and paragraphs
   const formatAnswer = (answer: string) => {
@@ -85,6 +148,8 @@ const Bootcamp = () => {
         description="Explore DevReady's comprehensive 12-week software engineering bootcamp curriculum. Learn coding fundamentals, system design, interview preparation, and career skills from industry experts."
         keywords="software engineering bootcamp curriculum, coding bootcamp syllabus, learn software development, bootcamp schedule, programming course, tech bootcamp Greece"
         canonical="https://www.devready.gr/bootcamp"
+        language={language}
+        structuredData={bootcampStructuredData}
       />
       <Header />
       <div className="min-h-screen bg-background pt-20">

@@ -10,7 +10,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -82,6 +82,7 @@ const Contact = () => {
           description="Ready to transform your career? Contact DevReady to learn more about our software engineering bootcamp, ask questions, or secure your spot in the next cohort. We're here to help!"
           keywords="contact DevReady, bootcamp enrollment, software engineering questions, apply to bootcamp, tech career help"
           canonical="https://www.devready.gr/contact"
+          language={language}
         />
         <div className="min-h-screen bg-background">
           {/* Header */}
