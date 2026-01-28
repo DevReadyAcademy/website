@@ -113,7 +113,7 @@
           "Testing fundamentals: unit tests, test structure και τι περιμένουν οι interviewers",
           "Building ενός real-world project βασισμένου σε industry standards",
           "Publishing και iterating στο project σου χρησιμοποιώντας GitHub",
-          "Μάθε πώς οι engineers σκέφτονται, communicate και structure τη δουλειά τους"
+          "Μάθε πώς οι engineers σκέφτονται, communicate και κάνουν structure τη δουλειά τους"
         ]
       },
       {
@@ -121,7 +121,7 @@
         "title": "AI & Personal Branding",
         "description": "Μάθε πώς να χρησιμοποιείς το AI responsibly και χτίσε μια clear, credible professional presence.",
         "details": [
-          "Πώς οι beginners misuse το AI και γιατί spoils το long-term growth",
+          "Πώς οι beginners κάνουν misuse το AI και γιατί αυτό τους επιβραδύνει long-term",
           "Χρήση του AI ως thinking partner, όχι shortcut",
           "Prompting framework για learning, reasoning και problem-solving",
           "Χρήση AI για debugging: κάνοντας τις σωστές ερωτήσεις και interpreting responses",
@@ -130,10 +130,9 @@
           "Γράφοντας strong CV bullet points χρησιμοποιώντας το XYZ method",
           "Δημιουργία ATS-ready CV που περνάει το automated screening",
           "GitHub profile optimization: README, pinned repos και contribution consistency",
-          "Building ενός portfolio website που λέει το story σου effectively",
           "LinkedIn optimization: headline, about section και professional networking",
           "Aligning CV, LinkedIn, GitHub και portfolio σε ένα clear narrative",
-          "Τι ΝΑ ΜΗΝ κάνεις: common personal branding mistakes που πληγώνουν το credibility σου"
+          "Τι ΝΑ ΜΗΝ κάνεις: common personal branding mistakes που κάνουν hurt το credibility σου"
         ]
       },
       {
@@ -146,7 +145,7 @@
           "Technical interviews: structured thinking και clear communication",
           "Interview dos: τι αυξάνει dramatically το success rate σου",
           "Interview don'ts: common mistakes που σου κοστίζουν το job",
-          "Πώς να communicate στα interviews: tone, pace και clarity που εκτιμούν οι hiring managers",
+          "Πώς να επικοινωνείς στα interviews: tone, pace και clarity που εκτιμούν οι hiring managers",
           "Κάνοντας smart ερωτήσεις που δείχνουν genuine interest και research",
           "Pair programming expectations και collaboration mindset",
           "Home assignment best practices: showcasing των skills σου effectively",
@@ -165,12 +164,12 @@
         "description": "Κλείσε call με την ομάδα μας για να συζητήσουμε τους στόχους σου και να κλείσεις τη θέση σου."
       },
       {
-        "title": "Μέρες 1-3: Confirmation & Pre-Work",
-        "description": "Ολοκλήρωσε την εγγραφή, πάρε τα pre-bootcamp materials και μπες στο Discord community μας."
+        "title": "Μέρες 1-3: Confirmation",
+        "description": "Ολοκλήρωσε την εγγραφή και μπες στο Discord community μας."
       },
       {
-        "title": "Εβδομάδα Πριν την Έναρξη: Onboarding",
-        "description": "Γνώρισε το cohort σου, στήσε το development environment σου και ετοιμάσου για την εβδομάδα 1."
+        "title": "Εβδομάδα Πριν την Έναρξη: Onboarding & Pre-Work",
+        "description": "Πάρε τα pre-bootcamp materials, γνώρισε το cohort σου, στήσε το development environment σου και ετοιμάσου για την εβδομάδα 1."
       },
       {
         "title": "Εβδομάδες 1-6: Το Bootcamp",
@@ -178,7 +177,7 @@
       },
       {
         "title": "Μετά την Εβδομάδα 6: DevReady Community",
-        "description": "Μπες στο DevReady Community, πρόσβαση σε όλα τα materials για πάντα και συνέχισε να μαθαίνεις με το cohort σου."
+        "description": "Μπες στο DevReady Community, όπου έχεις πρόσβαση σε όλα τα materials για πάντα και συνέχισε να μαθαίνεις με το cohort σου."
       }
     ],
     "whatsIncludedTitle": "Τι Περιλαμβάνεται",
@@ -201,11 +200,11 @@
       },
       {
         "title": "DevReady Community Access",
-        "description": "Συνδέσου με past cohorts για referrals και support"
+        "description": "Μπες στο Discord μας, μάθε με το cohort σου και συνδέσου με past cohorts για support"
       },
       {
-        "title": "Discord Community & Lifetime Materials",
-        "description": "Μπες στο Discord μας, μάθε με το cohort σου και πρόσβαση σε όλα τα resources για πάντα"
+        "title": "Lifetime Materials",
+        "description": "Έχεις πρόσβαση σε όλο το υλικό για πάντα: recordings, exercises, plan, resources, τα πάντα"
       }
     ],
     "whoShouldJoinTitle": "Είναι Για Εσένα;",
@@ -236,7 +235,7 @@
       },
       {
         "question": "Θα βρω δουλειά μετά το bootcamp?",
-        "answer": "Δεν μπορούμε να εγγυηθούμε job placement, αλλά σε εξοπλίζουμε με τα ακριβή skills, portfolio και interview preparation που αυξάνουν dramatically τις πιθανότητές σου. Η επιτυχία σου εξαρτάται από το effort και το commitment σου."
+        "answer": "Δεν μπορούμε να εγγυηθούμε job placement, αλλά σε εξοπλίζουμε με τα ακριβή skills, portfolio και interview preparation που αυξάνουν dramatically τις πιθανότητές σου. Πολλοί από τους μαθητές μας βρήκαν δουλειά μέσα στον επόμενο μήνα. Η επιτυχία σου εξαρτάται από το effort και το commitment σου."
       },
       {
         "question": "Ποια είναι η time commitment?",

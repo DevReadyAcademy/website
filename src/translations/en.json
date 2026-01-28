@@ -165,12 +165,12 @@
         "description": "Schedule a call with our team to discuss your goals and secure your spot."
       },
       {
-        "title": "Days 1-3: Confirmation & Pre-Work",
-        "description": "Complete enrollment, receive pre-bootcamp materials, and join our Discord community."
+        "title": "Days 1-3: Confirmation",
+        "description": "Complete enrollment and join our Discord community."
       },
       {
-        "title": "Week Before Start: Onboarding",
-        "description": "Meet your cohort, set up your development environment, and get ready for week 1."
+        "title": "Week Before Start: Onboarding & Pre-Work",
+        "description": "Receive pre-bootcamp materials, meet your cohort, set up your development environment, and get ready for week 1."
       },
       {
         "title": "Weeks 1-6: The Bootcamp",
@@ -201,11 +201,11 @@
       },
       {
         "title": "DevReady Community Access",
-        "description": "Connect with past cohorts for referrals and support"
+        "description": "Join our Discord, learn with your cohort, and connect with past cohorts for support"
       },
       {
-        "title": "Discord Community & Lifetime Materials",
-        "description": "Join our Discord, learn with your cohort, and access all resources forever"
+        "title": "Lifetime Materials",
+        "description": "Access all materials forever: recordings, exercises, plan, resources, everything"
       }
     ],
     "whoShouldJoinTitle": "Is This For You?",
@@ -237,7 +237,7 @@
       },
       {
         "question": "Will I get a job after the bootcamp?",
-        "answer": "We can't guarantee job placement, but we equip you with the exact skills, portfolio, and interview preparation that dramatically increase your chances. Your success depends on your effort and commitment."
+        "answer": "We can't guarantee job placement, but we equip you with the exact skills, portfolio, and interview preparation that dramatically increase your chances. Many of our students found jobs within the next month. Your success depends on your effort and commitment."
       },
       {
         "question": "What's the time commitment?",
