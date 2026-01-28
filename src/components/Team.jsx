@@ -11,7 +11,7 @@ const Team = () => {
   const teamImages = [
     '/assets/alex.jpg',
     '/assets/kostikas.jpg',
-    '/assets/sam.png'
+    '/assets/sam.webp'
   ];
   
   const teamMembers = (t('team.members') || []).map((member, index) => ({

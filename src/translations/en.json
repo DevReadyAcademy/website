@@ -441,7 +441,7 @@
         "name": "Vasilis Samoladas",
         "role": "Frontend Engineer at Kiwi",
         "location": "Prague, Czech Republic",
-        "image": "/assets/sam.png",
+        "image": "/assets/sam.webp",
         "bio": "A Frontend Engineer passionate about AI and building products people love. With 200+ user interviews conducted, Vasilis brings strong product thinking and design sensibility to engineering. He's proof that DevReady's mentorship model works—we helped him land his first role, and now he's paying it forward by helping others do the same.",
         "highlights": [
           "Passionate about AI and building user-centric products",
@@ -460,28 +460,28 @@
         "location": "Thessaloniki, Greece",
         "title": "The Beginning: Rejections, Rejections, Rejections",
         "description": "After graduating, Alex and Kostas tried to land jobs abroad. Reality hit hard: rejection after rejection. They quickly realized how much they didn't know. No one had taught them how the industry actually works, how to interview, or how to present themselves. So they helped each other, started their careers in Greece, learned the hard way, and eventually managed to land roles abroad.",
-        "image": "/assets/timeline/alex_kostas.png"
+        "image": "/assets/timeline/alex_kostas.webp"
       },
       {
         "date": "2018-2023",
         "location": "London, Greece, Barcelona, Belgium",
         "title": "Gaining Experience and Expertise",
         "description": "Alex and Kostas worked at different companies across London, Greece, Barcelona, and Belgium. They failed and learned, iterated and improved. Through trial and error, they became professionals in the industry, understanding not just how to code, but how the tech world really operates. They learned what companies actually look for and how to navigate interviews.",
-        "image": "/assets/timeline/merged.jpg"
+        "image": "/assets/timeline/merged.webp"
       },
       {
         "date": "2023",
         "location": "Remote",
         "title": "Vasilis's Break into Tech",
         "description": "Vasilis was a close friend of Alex and Kostas. After graduating, he struggled to find his first job in tech. He reached out for help, and they guided him through the process: engineering, interview prep, portfolio building, CV optimization. With their mentorship, Vasilis landed his first engineering role.",
-        "image": "/assets/timeline/maroco.jpg"
+        "image": "/assets/timeline/maroco.webp"
       },
       {
         "date": "2023-2024",
         "location": "Remote",
         "title": "We Did It Again and Again and Again",
         "description": "Organically, we started helping more friends break into tech. Then we began mentoring others 1-on-1, people we didn't even know. Alex had already started mentoring engineers at Codurance and Skyscanner. The pattern was clear: structured guidance works, and more people needed it.",
-        "image": "/assets/timeline/bill_kostas.JPG"
+        "image": "/assets/timeline/bill_kostas.webp"
       },
       {
         "date": "2024",
@@ -495,14 +495,14 @@
         "location": "Remote",
         "title": "Research, Validation & Our First Success Story",
         "description": "We interviewed 100+ aspiring developers across Greece to understand their pain points. The message was clear: Greece has the talent, but lacks structured paths, mentorship, and industry context. We built DevReady, ran our first cohort, and watched our first students land their dream jobs. The model works.",
-        "image": "/assets/timeline/students.png"
+        "image": "/assets/timeline/students.webp"
       },
       {
         "date": "2026",
         "location": "Remote",
         "title": "Next Step: You",
         "description": "Our first cohort launches in April 2026. We're ready to help the next generation of Greek developers break into tech with the exact blueprint we've refined over years. Will you be part of this journey?",
-        "image": "/assets/timeline/bill.png"
+        "image": "/assets/timeline/bill.webp"
       }
     ],
     "ctaTitle": "Ready to Start Your Journey?",

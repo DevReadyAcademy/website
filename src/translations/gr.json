@@ -440,7 +440,7 @@
         "name": "Vasilis Samoladas",
         "role": "Frontend Engineer at Kiwi",
         "location": "Πράγα, Τσεχία",
-        "image": "/assets/sam.png",
+        "image": "/assets/sam.webp",
         "bio": "Frontend Engineer passionate για AI και το να φτιάχνει products που οι άνθρωποι αγαπούν. Με 200+ user interviews, ο Βασίλης φέρνει strong product thinking και design sensibility στο engineering. Είναι η απόδειξη ότι το mentorship model του DevReady δουλεύει. Τον βοηθήσαμε να βρει το πρώτο του role, και τώρα βοηθάει τους άλλους να κάνουν το ίδιο.",
         "highlights": [
           "Passionate για AI και user-centric products",
@@ -459,28 +459,28 @@
         "location": "Θεσσαλονίκη, Ελλάδα",
         "title": "Η Αρχή: Rejections, Rejections, Rejections",
         "description": "Μετά την αποφοίτηση, ο Alex και ο Κώστας προσπάθησαν να βρουν δουλειά στο εξωτερικό. Η πραγματικότητα χτύπησε σκληρά: απόρριψη πίσω από απόρριψη. Γρήγορα κατάλαβαν πόσα δεν ήξεραν. Κανείς δεν τους είχε διδάξει πώς λειτουργεί πραγματικά η αγορά, πώς να κάνουν interview, ή πώς να παρουσιάσουν τον εαυτό τους. Έτσι βοήθησαν ο ένας τον άλλον, ξεκίνησαν την καριέρα τους στην Ελλάδα, έμαθαν με τον δύσκολο τρόπο, και τελικά κατάφεραν να βρουν δουλειές στο εξωτερικό.",
-        "image": "/assets/timeline/alex_kostas.png"
+        "image": "/assets/timeline/alex_kostas.webp"
       },
       {
         "date": "2018-2023",
         "location": "Λονδίνο, Ελλάδα, Βαρκελώνη, Βέλγιο",
         "title": "Gaining Experience and Expertise",
         "description": "Ο Alex και ο Κώστας δούλεψαν σε διαφορετικές εταιρείες σε Λονδίνο, Ελλάδα, Βαρκελώνη και Βέλγιο. Απέτυχαν και έμαθαν, επανέλαβαν και βελτιώθηκαν. Μέσα από trial and error, έγιναν επαγγελματίες στο industry, καταλαβαίνοντας όχι μόνο πώς να γράφουν κώδικα, αλλά πώς λειτουργεί πραγματικά ο tech κόσμος. Έμαθαν τι ψάχνουν πραγματικά οι εταιρείες και πώς να πλοηγηθούν σε interviews.",
-        "image": "/assets/timeline/merged.jpg"
+        "image": "/assets/timeline/merged.webp"
       },
       {
         "date": "2023",
         "location": "Remote",
         "title": "Το Break into Tech του Βασίλη",
         "description": "Ο Βασίλης ήταν στενός φίλος του Alex και του Κώστα. Μετά την αποφοίτησή του, δυσκολευόταν να βρει την πρώτη του δουλειά στο tech. Ζήτησε τη βοήθειά τους, και τον καθοδήγησαν σε όλη τη διαδικασία: engineering, interview prep, portfolio building, CV optimization. Με το mentorship τους, ο Βασίλης βρήκε το πρώτο του engineering role.",
-        "image": "/assets/timeline/maroco.jpg"
+        "image": "/assets/timeline/maroco.webp"
       },
       {
         "date": "2023-2024",
         "location": "Remote",
         "title": "Το Κάναμε Ξανά και Ξανά και Ξανά",
         "description": "Οργανικά, αρχίσαμε να βοηθάμε και άλλους φίλους να μπουν στο tech. Μετά ξεκινήσαμε να κάνουμε mentoring 1-on-1 και σε άλλους ανθρώπους που δεν γνωρίζαμε καν. Ο Alex είχε ήδη ξεκινήσει να κάνει mentoring σε engineers στην Codurance και στην Skyscanner. Το pattern ήταν ξεκάθαρο: η structured καθοδήγηση δουλεύει, και περισσότεροι άνθρωποι τη χρειάζονταν.",
-        "image": "/assets/timeline/bill_kostas.JPG"
+        "image": "/assets/timeline/bill_kostas.webp"
       },
       {
         "date": "2024",
@@ -494,14 +494,14 @@
         "location": "Remote",
         "title": "Research, Validation & Η Πρώτη μας Success Story",
         "description": "Κάναμε interview 100+ aspiring developers σε όλη την Ελλάδα για να καταλάβουμε τα pain points τους. Το μήνυμα ήταν ξεκάθαρο: η Ελλάδα έχει το talent, αλλά λείπουν structured paths, mentorship και industry context. Φτιάξαμε το DevReady, τρέξαμε το πρώτο μας cohort, και είδαμε τους πρώτους μας students να βρίσκουν τις dream δουλειές τους. Το model δουλεύει.",
-        "image": "/assets/timeline/students.png"
+        "image": "/assets/timeline/students.webp"
       },
       {
         "date": "2026",
         "location": "Remote",
         "title": "Επόμενο Βήμα: Εσύ",
         "description": "Το πρώτο μας cohort ξεκινάει τον Απρίλιο 2026. Είμαστε έτοιμοι να βοηθήσουμε την επόμενη γενιά Ελλήνων developers να μπουν στην tech με το ακριβές blueprint που έχουμε κάνει refine για χρόνια. Θα είσαι μέρος αυτού του ταξιδιού;",
-        "image": "/assets/timeline/bill.png"
+        "image": "/assets/timeline/bill.webp"
       }
     ],
     "ctaTitle": "Έτοιμος να Ξεκινήσεις το Ταξίδι σου;",
