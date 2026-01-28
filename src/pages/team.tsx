@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Calendar, MapPin, Linkedin, Github, ExternalLink, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, Linkedin, Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
