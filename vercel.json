@@ -4,6 +4,11 @@
       "source": "/bootcamp",
       "destination": "/accelerator",
       "permanent": true
+    },
+    {
+      "source": "/journey",
+      "destination": "/team",
+      "permanent": true
     }
   ],
   "rewrites": [

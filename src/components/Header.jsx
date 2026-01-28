@@ -95,12 +95,8 @@ const Header = () => {
 
   const navItems = [
     { name: t('header.home'), id: 'hero', type: 'scroll' },
-    { name: t('header.team'), path: '/journey', type: 'link' },
-    { name: t('header.ourApproach'), id: 'pillars', type: 'scroll' },
     { name: t('header.accelerator'), path: '/accelerator', type: 'link' },
-    { name: t('header.team'), id: 'team', type: 'scroll' },
-    { name: t('header.testimonials'), id: 'testimonials', type: 'scroll' },
-    { name: t('header.whyDifferent'), id: 'why-different', type: 'scroll' },
+    { name: t('header.team'), path: '/team', type: 'link' },
     { name: t('header.devpress'), path: '/devpress', type: 'link' },
   ];
 

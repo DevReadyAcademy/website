@@ -7,7 +7,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 
-const Journey = () => {
+const Team = () => {
   const { t } = useLanguage();
 
   const teamMembers = t('journey.teamMembers') || [];
@@ -19,7 +19,7 @@ const Journey = () => {
         title="Our Journey - Meet the DevReady Team"
         description="From dozens of job rejections to building DevReady. Learn how Alex, Kostas, and Vasilis went from struggling graduates to helping others break into tech."
         keywords="DevReady team, about us, tech education Greece, software engineering mentors, our story, career journey, tech mentorship"
-        canonical="https://www.devready.gr/journey"
+        canonical="https://www.devready.gr/team"
       />
       <Header />
       <div className="min-h-screen bg-background pt-20">
@@ -252,4 +252,4 @@ const Journey = () => {
   );
 };
 
-export default Journey;
+export default Team;
