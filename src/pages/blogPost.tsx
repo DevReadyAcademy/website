@@ -10,7 +10,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Header from "../components/Header";
 import Newsletter from "../components/Newsletter";
-import BootcampCTA from "../components/BootcampCTA";
+import AcceleratorCTA from "../components/AcceleratorCTA";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -255,7 +255,7 @@ const BlogPost = () => {
 
             {/* CTA */}
             <div className="mt-12">
-              <BootcampCTA />
+              <AcceleratorCTA />
             </div>
           </div>
         </article>

@@ -7,7 +7,7 @@ import SEO from "../components/SEO";
 import { blogPosts } from "../data/blogPosts";
 import Header from "../components/Header";
 import Newsletter from "../components/Newsletter";
-import BootcampCTA from "../components/BootcampCTA";
+import AcceleratorCTA from "../components/AcceleratorCTA";
 
 const DevPress = () => {
   const { language, t } = useLanguage();
@@ -201,7 +201,7 @@ const DevPress = () => {
         {/* CTA Section */}
         <section className="pt-6 pb-16 px-4 bg-gradient-subtle">
           <div className="container mx-auto max-w-4xl">
-            <BootcampCTA />
+            <AcceleratorCTA />
           </div>
         </section>
 

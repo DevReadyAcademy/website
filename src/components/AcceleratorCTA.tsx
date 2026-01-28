@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
 
-const BootcampCTA = () => {
+const AcceleratorCTA = () => {
   const { t } = useLanguage();
 
   return (
@@ -12,10 +12,10 @@ const BootcampCTA = () => {
         {t('devpress.readyToTakeNextStep')}
       </h2>
       <p className="mb-6 opacity-90">
-        {t('devpress.bootcampCTA')}
+        {t('devpress.acceleratorCTA')}
       </p>
       <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
-        <Link to="/bootcamp">
+        <Link to="/accelerator">
           {t('devpress.viewProgram')}
         </Link>
       </Button>
@@ -23,4 +23,4 @@ const BootcampCTA = () => {
   );
 };
 
-export default BootcampCTA;
+export default AcceleratorCTA;

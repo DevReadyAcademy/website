@@ -17,9 +17,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "DevReady - Transform Your Career in Software Engineering | Intensive Bootcamp",
-  description = "Master software engineering with DevReady's intensive bootcamp. Learn production-ready skills, build real-world projects, and land your dream tech job. Join our next cohort today.",
-  keywords = "software engineering bootcamp, coding bootcamp, learn programming, software development, tech career, DevReady, career change, software engineer training",
+  title = "DevReady - Transform Your Career in Software Engineering | Intensive Accelerator",
+  description = "Master software engineering with DevReady's intensive accelerator. Learn production-ready skills, build real-world projects, and land your dream tech job. Join our next cohort today.",
+  keywords = "software engineering accelerator, coding accelerator, learn programming, software development, tech career, DevReady, career change, software engineer training",
   canonical = "https://www.devready.gr/",
   ogImage = "https://www.devready.gr/assets/logo-320.webp",
   ogTitle,

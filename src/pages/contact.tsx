@@ -79,8 +79,8 @@ const Contact = () => {
       <>
         <SEO
           title="Contact Us - Get in Touch with DevReady"
-          description="Ready to transform your career? Contact DevReady to learn more about our software engineering bootcamp, ask questions, or secure your spot in the next cohort. We're here to help!"
-          keywords="contact DevReady, bootcamp enrollment, software engineering questions, apply to bootcamp, tech career help"
+          description="Ready to transform your career? Contact DevReady to learn more about our software engineering accelerator, ask questions, or secure your spot in the next cohort. We're here to help!"
+          keywords="contact DevReady, accelerator enrollment, software engineering questions, apply to accelerator, tech career help"
           canonical="https://www.devready.gr/contact"
           language={language}
         />

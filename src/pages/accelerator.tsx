@@ -21,10 +21,10 @@ const iconMap = {
 };
 
 
-const Bootcamp = () => {
+const Accelerator = () => {
   const { t, language } = useLanguage();
   
-  const modulesData = t('bootcamp.modules');
+  const modulesData = t('accelerator.modules');
   const modules = (Array.isArray(modulesData) ? modulesData : []).map((module: any, index: number) => ({
     id: `week-${index}`,
     week: module.week,
@@ -34,37 +34,37 @@ const Bootcamp = () => {
     details: module.details,
   }));
   
-  const timelineData = t('bootcamp.timelineSteps');
+  const timelineData = t('accelerator.timelineSteps');
   const timeline = Array.isArray(timelineData) ? timelineData : [];
   
-  const whatsIncludedData = t('bootcamp.whatsIncludedItems');
+  const whatsIncludedData = t('accelerator.whatsIncludedItems');
   const whatsIncluded = Array.isArray(whatsIncludedData) ? whatsIncludedData : [];
   
-  const faqsData = t('bootcamp.faqs');
+  const faqsData = t('accelerator.faqs');
   const faqs = Array.isArray(faqsData) ? faqsData : [];
   
-  const goodFitData = t('bootcamp.goodFitItems');
+  const goodFitData = t('accelerator.goodFitItems');
   const goodFitItems = Array.isArray(goodFitData) ? goodFitData : [];
   
-  const notGoodFitData = t('bootcamp.notGoodFitItems');
+  const notGoodFitData = t('accelerator.notGoodFitItems');
   const notGoodFitItems = Array.isArray(notGoodFitData) ? notGoodFitData : [];
 
   // Combined structured data with Course and FAQPage schemas
-  const bootcampStructuredData = {
+  const acceleratorStructuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Course",
-        "name": "Software Engineering Bootcamp",
-        "description": "12-week intensive bootcamp covering software engineering fundamentals, production-ready skills, and career preparation",
+        "name": "Software Engineering Accelerator",
+        "description": "6-week intensive accelerator covering software engineering fundamentals, production-ready skills, and career preparation",
         "provider": {
           "@type": "Organization",
           "name": "DevReady",
           "url": "https://www.devready.gr/",
           "logo": "https://www.devready.gr/assets/logo-320.webp"
         },
-        "url": "https://www.devready.gr/bootcamp",
-        "courseCode": "DR-BOOTCAMP-2026",
+        "url": "https://www.devready.gr/accelerator",
+        "courseCode": "DR-ACCELERATOR-2026",
         "educationalLevel": "Beginner to Intermediate",
         "teaches": [
           "Software Engineering Fundamentals",
@@ -144,12 +144,12 @@ const Bootcamp = () => {
   return (
     <>
       <SEO
-        title="Software Engineering Bootcamp - Full Curriculum & Details"
-        description="Explore DevReady's comprehensive 12-week software engineering bootcamp curriculum. Learn coding fundamentals, system design, interview preparation, and career skills from industry experts."
-        keywords="software engineering bootcamp curriculum, coding bootcamp syllabus, learn software development, bootcamp schedule, programming course, tech bootcamp Greece"
-        canonical="https://www.devready.gr/bootcamp"
+        title="Software Engineering Accelerator - Full Curriculum & Details"
+        description="Explore DevReady's comprehensive 6-week software engineering accelerator curriculum. Learn coding fundamentals, system design, interview preparation, and career skills from industry experts."
+        keywords="software engineering accelerator curriculum, coding accelerator syllabus, learn software development, accelerator schedule, programming course, tech accelerator Greece"
+        canonical="https://www.devready.gr/accelerator"
         language={language}
-        structuredData={bootcampStructuredData}
+        structuredData={acceleratorStructuredData}
       />
       <Header />
       <div className="min-h-screen bg-background pt-20">
@@ -159,22 +159,22 @@ const Bootcamp = () => {
           <div className="container mx-auto max-w-5xl text-center">
             <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full text-sm font-semibold mb-6">
               <Calendar className="inline-block w-4 h-4 mr-2" />
-              {t('bootcamp.cohortBadge')}
+              {t('accelerator.cohortBadge')}
             </div>
             
             <h1 className="text-5xl md:text-6xl font-black mb-4 bg-gradient-primary bg-clip-text text-transparent pb-2">
-              {t('bootcamp.pageTitle')}
+              {t('accelerator.pageTitle')}
             </h1>
             
             <div className="max-w-3xl mx-auto mb-8 space-y-3">
               <p className="text-xl md:text-2xl text-foreground/90">
-                {t('bootcamp.heroSubtitle')}
+                {t('accelerator.heroSubtitle')}
               </p>
               <p className="text-base md:text-lg text-primary font-semibold">
-                {t('bootcamp.languageAgnostic')}
+                {t('accelerator.languageAgnostic')}
               </p>
               <p className="text-muted-foreground">
-                {t('bootcamp.heroDescription')}
+                {t('accelerator.heroDescription')}
               </p>
             </div>
 
@@ -194,24 +194,24 @@ const Bootcamp = () => {
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-6">
                 <Clock className="w-8 h-8 text-primary mb-3 mx-auto" />
-                <h3 className="font-semibold text-lg mb-2">{t('bootcamp.infoCards.timeCommitmentTitle')}</h3>
-                <p className="text-muted-foreground">{t('bootcamp.infoCards.timeCommitment')}</p>
-                <p className="text-sm text-muted-foreground mt-1">{t('bootcamp.infoCards.timeCommitmentDetail')}</p>
+                <h3 className="font-semibold text-lg mb-2">{t('accelerator.infoCards.timeCommitmentTitle')}</h3>
+                <p className="text-muted-foreground">{t('accelerator.infoCards.timeCommitment')}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t('accelerator.infoCards.timeCommitmentDetail')}</p>
               </div>
               <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-6">
                 <Calendar className="w-8 h-8 text-primary mb-3 mx-auto" />
-                <h3 className="font-semibold text-lg mb-2">{t('bootcamp.infoCards.formatTitle')}</h3>
-                <p className="text-muted-foreground">{t('bootcamp.infoCards.format')}</p>
-                <p className="text-sm text-muted-foreground mt-1">{t('bootcamp.infoCards.formatDetail')}</p>
+                <h3 className="font-semibold text-lg mb-2">{t('accelerator.infoCards.formatTitle')}</h3>
+                <p className="text-muted-foreground">{t('accelerator.infoCards.format')}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t('accelerator.infoCards.formatDetail')}</p>
               </div>
               <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-6">
                 <Target className="w-8 h-8 text-primary mb-3 mx-auto" />
-                <h3 className="font-semibold text-lg mb-2">{t('bootcamp.infoCards.investmentTitle')}</h3>
+                <h3 className="font-semibold text-lg mb-2">{t('accelerator.infoCards.investmentTitle')}</h3>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-muted-foreground line-through">{t('bootcamp.infoCards.investmentOriginal')}</span>
-                  <span className="text-2xl font-bold text-primary">{t('bootcamp.infoCards.investmentCurrent')}</span>
+                  <span className="text-muted-foreground line-through">{t('accelerator.infoCards.investmentOriginal')}</span>
+                  <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
                 </div>
-                <p className="text-sm text-primary font-medium mt-1">{t('bootcamp.infoCards.investmentNote')}</p>
+                <p className="text-sm text-primary font-medium mt-1">{t('accelerator.infoCards.investmentNote')}</p>
               </div>
             </div>
           </div>
@@ -222,10 +222,10 @@ const Bootcamp = () => {
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                {t('bootcamp.curriculumTitle')}
+                {t('accelerator.curriculumTitle')}
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                {t('bootcamp.curriculumDescription')}
+                {t('accelerator.curriculumDescription')}
               </p>
             </div>
 
@@ -252,7 +252,7 @@ const Bootcamp = () => {
                   </AccordionTrigger>
                   <AccordionContent className="pb-6">
                     <div className="pl-[76px]">
-                      <h4 className="font-medium text-foreground mb-4">{t('bootcamp.curriculumLearnLabel')}</h4>
+                      <h4 className="font-medium text-foreground mb-4">{t('accelerator.curriculumLearnLabel')}</h4>
                       <ul className="space-y-3">
                         {module.details.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex items-start gap-3">
@@ -274,10 +274,10 @@ const Bootcamp = () => {
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                {t('bootcamp.timelineTitle')}
+                {t('accelerator.timelineTitle')}
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                {t('bootcamp.timelineDescription')}
+                {t('accelerator.timelineDescription')}
               </p>
             </div>
 
@@ -307,7 +307,7 @@ const Bootcamp = () => {
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                {t('bootcamp.whatsIncludedTitle')}
+                {t('accelerator.whatsIncludedTitle')}
               </h2>
             </div>
             
@@ -330,13 +330,13 @@ const Bootcamp = () => {
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                {t('bootcamp.whoShouldJoinTitle')}
+                {t('accelerator.whoShouldJoinTitle')}
               </h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-8 rounded-2xl border-2 border-primary/20 bg-card">
-                <h3 className="text-2xl font-bold mb-4 text-primary">{t('bootcamp.goodFitTitle')}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-primary">{t('accelerator.goodFitTitle')}</h3>
                 <ul className="space-y-3">
                   {goodFitItems.map((item: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
@@ -348,7 +348,7 @@ const Bootcamp = () => {
               </div>
 
               <div className="p-8 rounded-2xl border-2 border-border/50 bg-card/50">
-                <h3 className="text-2xl font-bold mb-4">{t('bootcamp.notGoodFitTitle')}</h3>
+                <h3 className="text-2xl font-bold mb-4">{t('accelerator.notGoodFitTitle')}</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   {notGoodFitItems.map((item: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
@@ -367,7 +367,7 @@ const Bootcamp = () => {
           <div className="container mx-auto max-w-3xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                {t('bootcamp.faqTitle')}
+                {t('accelerator.faqTitle')}
               </h2>
             </div>
 
@@ -398,13 +398,13 @@ const Bootcamp = () => {
                 ⏰ {earlyBirdConfig.getSpotsLeftText(language)} {language === 'gr' ? 'στα' : 'at'} {earlyBirdConfig.earlyBirdPrice}
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                {t('bootcamp.finalCtaTitle')}
+                {t('accelerator.finalCtaTitle')}
               </h2>
               <p className="text-xl opacity-90 mb-2 max-w-2xl mx-auto">
-                {t('bootcamp.finalCtaDescription')}
+                {t('accelerator.finalCtaDescription')}
               </p>
               <p className="text-base opacity-80 mb-8 max-w-2xl mx-auto">
-                {t('bootcamp.finalCtaPricing')}
+                {t('accelerator.finalCtaPricing')}
               </p>
               <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-lg">
                 <Link to="/contact">
@@ -413,7 +413,7 @@ const Bootcamp = () => {
                 </Link>
               </Button>
               <p className="text-sm opacity-80 mt-6">
-                {t('bootcamp.finalCtaNote')}
+                {t('accelerator.finalCtaNote')}
               </p>
             </div>
           </div>
@@ -430,5 +430,5 @@ const Bootcamp = () => {
   );
 };
 
-export default Bootcamp;
+export default Accelerator;
 

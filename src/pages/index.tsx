@@ -31,7 +31,7 @@ const Index = () => {
                     "width": 320,
                     "height": 320
                 },
-                "description": "Intensive software engineering bootcamp helping aspiring developers transform their careers",
+                "description": "Intensive software engineering accelerator helping aspiring developers transform their careers",
                 "address": {
                     "@type": "PostalAddress",
                     "addressCountry": "GR"
@@ -51,7 +51,7 @@ const Index = () => {
                 "@id": "https://www.devready.gr/#website",
                 "url": "https://www.devready.gr/",
                 "name": "DevReady",
-                "description": "Transform your career in software engineering with our intensive bootcamp",
+                "description": "Transform your career in software engineering with our intensive accelerator",
                 "publisher": {
                     "@id": "https://www.devready.gr/#organization"
                 },

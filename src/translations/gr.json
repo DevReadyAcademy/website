@@ -14,7 +14,7 @@
   "header": {
     "home": "Αρχική",
     "ourApproach": "Η Προσέγγισή μας",
-    "bootcamp": "Bootcamp",
+    "accelerator": "Accelerator",
     "devpress": "DevPress",
     "testimonials": "Testimonials",
     "team": "Ομάδα",
@@ -32,7 +32,7 @@
     "trust3": "Early Bird: {EARLY_BIRD_PRICE}"
   },
   "course": {
-    "title": "6-Week Tech Bootcamp",
+    "title": "6-Week Tech Accelerator",
     "cohortDate": "Επόμενο Cohort: {COHORT_DATE}",
     "forAllDevelopers": "Για Όλους τους Developers: Frontend · Backend · Full-Stack · Mobile · Οποιοδήποτε Tech Stack",
     "description": "Ένα εντατικό πρόγραμμα σχεδιασμένο να σε μετατρέψει σε έναν industry-ready tech professional.",
@@ -61,9 +61,9 @@
     "perProgram": "/πρόγραμμα",
     "earlyBirdMessage": "Κλείσε το early bird rate πριν εξαντληθεί"
   },
-  "bootcamp": {
+  "accelerator": {
     "backToHome": "Πίσω στην Αρχική",
-    "pageTitle": "6-Week Tech Bootcamp",
+    "pageTitle": "6-Week Tech Accelerator",
     "cohortBadge": "Επόμενο Cohort: {COHORT_DATE}",
     "heroSubtitle": "Μάθε τα engineering skills, το mindset και το professional branding που ψάχνουν πραγματικά οι tech εταιρείες.",
     "languageAgnostic": "Language & Stack Agnostic — works for JavaScript, Python, Java, Go, you name it",
@@ -88,7 +88,7 @@
         "title": "Plan Your Path",
         "description": "Απόκτησε clarity στην κατεύθυνσή σου στο tech και φτιάξε ένα concrete, realistic plan για να το πετύχεις.",
         "details": [
-          "Bootcamp onboarding, expectations & code of conduct",
+          "Program onboarding, expectations & code of conduct",
           "Confidence check & goal setting",
           "Κατανόηση του τι θέλει πραγματικά το industry από junior engineers",
           "Building ενός personalized plan βασισμένου στα necessary skills για τον target tech ρόλο σου",
@@ -169,10 +169,10 @@
       },
       {
         "title": "Εβδομάδα Πριν την Έναρξη: Onboarding & Pre-Work",
-        "description": "Πάρε τα pre-bootcamp materials, γνώρισε το cohort σου, στήσε το development environment σου και ετοιμάσου για την εβδομάδα 1."
+        "description": "Πάρε τα pre-program materials, γνώρισε το cohort σου, στήσε το development environment σου και ετοιμάσου για την εβδομάδα 1."
       },
       {
-        "title": "Εβδομάδες 1-6: Το Bootcamp",
+        "title": "Εβδομάδες 1-6: Το Πρόγραμμα",
         "description": "Live sessions, project work, code reviews και career preparation."
       },
       {
@@ -227,14 +227,14 @@
     "faqs": [
       {
         "question": "Χρειάζεται να ξέρω συγκεκριμένη γλώσσα προγραμματισμού ή framework?",
-        "answer": "Όχι. Αυτό το bootcamp είναι language και framework-agnostic. Είτε είσαι React developer, Python backend engineer, Java developer, mobile developer, ή οτιδήποτε άλλο, τα skills που διδάσκουμε (engineering thinking, clean code, Git, interviewing, branding) ισχύουν universal σε οποιονδήποτε tech ρόλο."
+        "answer": "Όχι. Αυτό το accelerator είναι language και framework-agnostic. Είτε είσαι React developer, Python backend engineer, Java developer, mobile developer, ή οτιδήποτε άλλο, τα skills που διδάσκουμε (engineering thinking, clean code, Git, interviewing, branding) ισχύουν universal σε οποιονδήποτε tech ρόλο."
       },
       {
         "question": "Χρειάζεται prior coding experience?",
         "answer": "Ναι, αλλά τίποτα fancy. Αν έχεις τα παρακάτω basics, είσαι έτοιμος:\n\n• Variables και data types\n• Control flow\n• Loops\n• Functions και parameters\n• Basic κατανόηση μιας γλώσσας προγραμματισμού\n\nΕστιάζουμε στο να γεφυρώσουμε το gap από 'ξέρω να γράφω κώδικα' σε 'είμαι industry-ready,' όχι να διδάξουμε programming από το μηδέν.\n\nΤι σημαίνει 'basic knowledge'; Θα πρέπει να μπορείς να γράψεις simple programs και να καταλαβαίνεις basic error messages. Think: έχεις λύσει κάποια coding challenges, ολοκλήρωσες ένα beginner tutorial, ή έφτιαξες ένα μικρό personal project."
       },
       {
-        "question": "Θα βρω δουλειά μετά το bootcamp?",
+        "question": "Θα βρω δουλειά μετά το accelerator?",
         "answer": "Δεν μπορούμε να εγγυηθούμε job placement, αλλά σε εξοπλίζουμε με τα ακριβή skills, portfolio και interview preparation που αυξάνουν dramatically τις πιθανότητές σου. Πολλοί από τους μαθητές μας βρήκαν δουλειά μέσα στον επόμενο μήνα. Η επιτυχία σου εξαρτάται από το effort και το commitment σου."
       },
       {
@@ -243,10 +243,10 @@
       },
       {
         "question": "Πόσα άτομα θα είναι στο cohort μου?",
-        "answer": "Maximum 15 άτομα ανά cohort. Αυτό το μικρό μέγεθος εξασφαλίζει ότι μπορούμε να παρέχουμε targeted, personalized care και να απαντήσουμε στις specific ανάγκες σου καθ' όλη τη διάρκεια του bootcamp."
+        "answer": "Maximum 15 άτομα ανά cohort. Αυτό το μικρό μέγεθος εξασφαλίζει ότι μπορούμε να παρέχουμε targeted, personalized care και να απαντήσουμε στις specific ανάγκες σου καθ' όλη τη διάρκεια του προγράμματος."
       },
       {
-        "question": "Είναι το bootcamp remote?",
+        "question": "Είναι το accelerator remote?",
         "answer": "Ναι, 100% remote. Όλα τα sessions διεξάγονται online, καθιστώντας το accessible από οπουδήποτε στην Ελλάδα."
       },
       {
@@ -255,7 +255,7 @@
       },
       {
         "question": "Είναι μόνο για άτομα που ψάχνουν δουλειά στην Ελλάδα?",
-        "answer": "Όχι. Ενώ έχουμε base στην Ελλάδα και πολλοί από τους students μας αναζητούν Greek ευκαιρίες, τα skills και η approach δουλεύουν globally. Το bootcamp σε ετοιμάζει για tech roles οπουδήποτε."
+        "answer": "Όχι. Ενώ έχουμε base στην Ελλάδα και πολλοί από τους students μας αναζητούν Greek ευκαιρίες, τα skills και η approach δουλεύουν globally. Το accelerator σε ετοιμάζει για tech roles οπουδήποτε."
       },
       {
         "question": "Τι γίνεται αφού κλείσω call?",
@@ -286,7 +286,7 @@
     "linkCopiedDescription": "Το link του άρθρου αντιγράφηκε στο clipboard",
     "aboutAuthor": "Σχετικά με τον συγγραφέα",
     "readyToTakeNextStep": "Έτοιμος να Γίνεις Industry-Ready;",
-    "bootcampCTA": "Μάθε πώς το DevReady bootcamp μπορεί να σε κάνει industry-ready σε 6 εβδομάδες",
+    "acceleratorCTA": "Μάθε πώς το DevReady accelerator μπορεί να σε κάνει industry-ready σε 6 εβδομάδες",
     "viewProgram": "Λεπτομέρειες Προγράμματος",
     "postNotFound": "Το άρθρο δεν βρέθηκε",
     "postNotFoundDescription": "Το άρθρο που ψάχνεις δεν υπάρχει ή έχει μετακινηθεί.",
@@ -302,7 +302,7 @@
   "contact": {
     "backToHome": "Πίσω στην Αρχική",
     "pageTitle": "Έτοιμος να Συμμετέχεις;",
-    "pageSubtitle": "Για να κλείσεις τη θέση σου στο Bootcamp, κλείσε ένα call μαζί μας.",
+    "pageSubtitle": "Για να κλείσεις τη θέση σου στο Accelerator, κλείσε ένα call μαζί μας.",
     "pageDescription": "Έχεις ερωτήσεις πρώτα; Στείλε μας ένα μήνυμα ή κλείσε call για να μάθεις περισσότερα.",
     "formTitle": "Έχεις Ερωτήσεις;",
     "formDescription": "Στείλε μας τις ερωτήσεις σου και θα σου απαντήσουμε εντός 24 ωρών",
