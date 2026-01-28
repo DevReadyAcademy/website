@@ -11,7 +11,6 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
-  const [inFaqsSection, setInFaqsSection] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,25 +31,13 @@ const Header = () => {
             }
           }
         }
-      } else if (location.pathname === '/bootcamp') {
-        // Check if FAQs section is in view
-        const faqsElement = document.getElementById('faqs');
-        if (faqsElement) {
-          const scrollPosition = window.scrollY + 200; // Offset for header
-          const { offsetTop, offsetHeight } = faqsElement;
-          setInFaqsSection(scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight);
-        } else {
-          setInFaqsSection(false);
-        }
-      } else {
-        setInFaqsSection(false);
       }
     };
 
     handleScroll(); // Call once on mount
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [location.pathname, location.hash]);
+  }, [location.pathname]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -95,22 +82,9 @@ const Header = () => {
 
   const isActivePage = (item) => {
     if (item.type === 'link') {
-      // Handle hash links (e.g., /bootcamp#faqs)
-      if (item.path && item.path.includes('#')) {
-        const [path, hash] = item.path.split('#');
-        // Check if we're on the right page and either have the hash in URL or are scrolled to that section
-        if (location.pathname === path) {
-          return location.hash === `#${hash}` || (hash === 'faqs' && inFaqsSection);
-        }
-        return false;
-      }
       return location.pathname === item.path;
     }
     if (item.type === 'scroll') {
-      // Home should always be highlighted when on homepage
-      if (item.id === 'hero' && location.pathname === '/') {
-        return true;
-      }
       // On homepage, check if this section is active
       if (location.pathname === '/') {
         return activeSection === item.id;
@@ -121,8 +95,12 @@ const Header = () => {
 
   const navItems = [
     { name: t('header.home'), id: 'hero', type: 'scroll' },
-    { name: t('header.bootcamp'), path: '/bootcamp', type: 'link' },
     { name: t('header.team'), path: '/journey', type: 'link' },
+    { name: t('header.ourApproach'), id: 'pillars', type: 'scroll' },
+    { name: t('header.accelerator'), path: '/accelerator', type: 'link' },
+    { name: t('header.team'), id: 'team', type: 'scroll' },
+    { name: t('header.testimonials'), id: 'testimonials', type: 'scroll' },
+    { name: t('header.whyDifferent'), id: 'why-different', type: 'scroll' },
     { name: t('header.devpress'), path: '/devpress', type: 'link' },
   ];
 

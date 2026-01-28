@@ -1,5 +1,20 @@
 {
+  "redirects": [
+    {
+      "source": "/bootcamp",
+      "destination": "/accelerator",
+      "permanent": true
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/devpress/:slug",
+      "destination": "/devpress/:slug/index.html"
+    },
+    {
+      "source": "/devpress",
+      "destination": "/devpress/index.html"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"

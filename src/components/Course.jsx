@@ -92,7 +92,7 @@ const Course = () => {
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="w-full" asChild>
-                  <Link to="/bootcamp">
+                  <Link to="/accelerator">
                     {t('common.viewFullCurriculum')}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>

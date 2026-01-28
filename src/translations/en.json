@@ -14,9 +14,8 @@
   "header": {
     "home": "Home",
     "ourApproach": "Our Approach",
-    "bootcamp": "Bootcamp",
+    "accelerator": "Accelerator",
     "team": "The Team",
-    "faqs": "FAQs",
     "journey": "Our Journey",
     "devpress": "DevPress",
     "testimonials": "Testimonials",
@@ -34,7 +33,7 @@
     "trust3": "Early Bird: {EARLY_BIRD_PRICE}"
   },
   "course": {
-    "title": "6-Week Tech Bootcamp",
+    "title": "6-Week Tech Accelerator",
     "cohortDate": "Next Cohort: {COHORT_DATE}",
     "forAllDevelopers": "For All Developers: Frontend · Backend · Full-Stack · Mobile · Any Tech Stack",
     "description": "An intensive program designed to transform you into an industry-ready tech professional.",
@@ -63,9 +62,9 @@
     "perProgram": "/program",
     "earlyBirdMessage": "Secure your early bird rate before it's gone"
   },
-  "bootcamp": {
+  "accelerator": {
     "backToHome": "Back to Home",
-    "pageTitle": "6-Week Tech Bootcamp",
+    "pageTitle": "6-Week Tech Accelerator",
     "cohortBadge": "Next Cohort: {COHORT_DATE}",
     "heroSubtitle": "Master the engineering skills, mindset, and professional branding that tech companies actually look for.",
     "languageAgnostic": "Language & Stack Agnostic — Works for JavaScript, Python, Java, Go, or Any Language",
@@ -90,7 +89,7 @@
         "title": "Plan Your Path",
         "description": "Get clarity on your direction in tech and build a concrete, realistic plan to reach it.",
         "details": [
-          "Bootcamp onboarding, expectations & code of conduct",
+          "Program onboarding, expectations & code of conduct",
           "Confidence check & goal setting",
           "Understanding what the industry actually wants from junior engineers",
           "Building a personalized plan based on the necessary skills for your target tech role",
@@ -167,15 +166,15 @@
         "description": "Schedule a call with our team to discuss your goals and secure your spot."
       },
       {
-        "title": "Days 1-3: Confirmation & Pre-Work",
-        "description": "Complete enrollment, receive pre-bootcamp materials, and join our Discord community."
+        "title": "Days 1-3: Confirmation",
+        "description": "Complete enrollment and join our Discord community."
       },
       {
-        "title": "Week Before Start: Onboarding",
-        "description": "Meet your cohort, set up your development environment, and get ready for week 1."
+        "title": "Week Before Start: Onboarding & Pre-Work",
+        "description": "Receive pre-program materials, meet your cohort, set up your development environment, and get ready for week 1."
       },
       {
-        "title": "Weeks 1-6: The Bootcamp",
+        "title": "Weeks 1-6: The Program",
         "description": "Live sessions, project work, code reviews, and career preparation."
       },
       {
@@ -203,11 +202,11 @@
       },
       {
         "title": "DevReady Community Access",
-        "description": "Connect with past cohorts for referrals and support"
+        "description": "Join our Discord, learn with your cohort, and connect with past cohorts for support"
       },
       {
-        "title": "Discord Community & Lifetime Materials",
-        "description": "Join our Discord, learn with your cohort, and access all resources forever"
+        "title": "Lifetime Materials",
+        "description": "Access all materials forever: recordings, exercises, plan, resources, everything"
       }
     ],
     "whoShouldJoinTitle": "Is This For You?",
@@ -231,15 +230,15 @@
     "faqs": [
       {
         "question": "Do I need to know a specific programming language or framework?",
-        "answer": "No. This bootcamp is language and framework-agnostic. Whether you're a React developer, Python backend engineer, Java developer, mobile developer, or anything else — the skills we teach (engineering thinking, clean code, Git, interviewing, branding) apply universally to any tech role."
+        "answer": "No. This accelerator is language and framework-agnostic. Whether you're a React developer, Python backend engineer, Java developer, mobile developer, or anything else — the skills we teach (engineering thinking, clean code, Git, interviewing, branding) apply universally to any tech role."
       },
       {
         "question": "Do I need prior coding experience?",
         "answer": "Yes, but nothing fancy. If you have the following basics, you're ready:\n\n• Variables and data types\n• Control flow\n• Loops\n• Functions and parameters\n• Basic understanding of one programming language\n\nWe focus on bridging the gap from 'I can code' to 'I'm industry-ready,' not teaching programming from scratch.\n\nWhat does 'basic knowledge' mean? You should be able to write simple programs and understand basic error messages. Think: solved some coding challenges, completed a beginner tutorial, or built a small personal project."
       },
       {
-        "question": "Will I get a job after the bootcamp?",
-        "answer": "We can't guarantee job placement, but we equip you with the exact skills, portfolio, and interview preparation that dramatically increase your chances. Your success depends on your effort and commitment."
+        "question": "Will I get a job after the accelerator?",
+        "answer": "We can't guarantee job placement, but we equip you with the exact skills, portfolio, and interview preparation that dramatically increase your chances. Many of our students found jobs within the next month. Your success depends on your effort and commitment."
       },
       {
         "question": "What's the time commitment?",
@@ -247,10 +246,10 @@
       },
       {
         "question": "How many people will be in my cohort?",
-        "answer": "Maximum 15 people per cohort. This small size ensures we can provide targeted, personalized care and address your specific needs throughout the bootcamp."
+        "answer": "Maximum 15 people per cohort. This small size ensures we can provide targeted, personalized care and address your specific needs throughout the program."
       },
       {
-        "question": "Is this bootcamp remote?",
+        "question": "Is this accelerator remote?",
         "answer": "Yes, 100% remote. All sessions are conducted online, making it accessible from anywhere in Greece."
       },
       {
@@ -259,7 +258,7 @@
       },
       {
         "question": "Is this only for people looking for jobs in Greece?",
-        "answer": "No. While we're based in Greece and many of our students seek Greek opportunities, the skills and approach work globally. The bootcamp prepares you for tech roles anywhere."
+        "answer": "No. While we're based in Greece and many of our students seek Greek opportunities, the skills and approach work globally. The accelerator prepares you for tech roles anywhere."
       },
       {
         "question": "What happens after I book a call?",
@@ -270,7 +269,7 @@
     "finalCtaDescription": "Book a call with our team to secure your spot at the early bird rate of €299.",
     "finalCtaPricing": "Regular price: €449 • Next cohort may not be until Summer 2026",
     "finalCtaNote": "During the call, we'll answer your questions and finalize your enrollment.",
-    "urgencyBadge": "⏰ Only 5 Early Bird Spots at €299"
+    "urgencyBadge": "⏰ {SPOTS_LEFT} at {EARLY_BIRD_PRICE}"
   },
   "devpress": {
     "headline": "From Coding to Hiring",
@@ -280,7 +279,7 @@
     "readMore": "Read More",
     "readArticle": "Read article",
     "backToDevPress": "Back to DevPress",
-    "shareArticle": "Share article",
+    "shareArticle": "Share",
     "socialShareButtons": "Social share buttons",
     "shareOnTwitter": "Share on Twitter",
     "shareOnFacebook": "Share on Facebook",
@@ -289,9 +288,9 @@
     "linkCopied": "Link copied!",
     "linkCopiedDescription": "Article link copied to clipboard",
     "aboutAuthor": "About the Author",
-    "readyToTakeNextStep": "Ready to Take the Next Step?",
-    "bootcampCTA": "Learn how DevReady bootcamp can make you industry-ready in 6 weeks",
-    "viewProgram": "View Program",
+    "readyToTakeNextStep": "Ready to Become Industry-Ready?",
+    "acceleratorCTA": "Learn how DevReady accelerator can make you industry-ready in 6 weeks",
+    "viewProgram": "Program Details",
     "postNotFound": "Post Not Found",
     "postNotFoundDescription": "The post you're looking for doesn't exist or has been moved.",
     "backToDevPressButton": "Back to DevPress",
@@ -306,7 +305,7 @@
   "contact": {
     "backToHome": "Back to Home",
     "pageTitle": "Ready to Join Us?",
-    "pageSubtitle": "To secure your spot in our Bootcamp, book a call with us.",
+    "pageSubtitle": "To secure your spot in our Accelerator, book a call with us.",
     "pageDescription": "Have questions first? Send us a message or schedule a call to learn more.",
     "formTitle": "Have Questions?",
     "formDescription": "Send us your questions and we'll get back to you within 24 hours",
@@ -322,7 +321,7 @@
     "formSending": "Sending...",
     "enrollBadge": "⚡ ENROLL HERE",
     "enrollTitle": "Book Your Enrollment Call",
-    "enrollDescription": "Ready to join? Schedule a call with our team to complete your enrollment and secure one of the 5 early bird spots at €299.",
+    "enrollDescription": "Ready to join? Schedule a call with our team to complete your enrollment and secure one of the early bird spots at {EARLY_BIRD_PRICE}.",
     "enrollCta": "Book Enrollment Call",
     "enrollNote": "💡 During the call, we'll answer your questions and finalize your enrollment",
     "connectTitle": "Connect With Us",
@@ -510,8 +509,8 @@
     "ctaDescription": "Join our first cohort and learn from engineers who've been exactly where you are now."
   },
   "newsletter": {
-    "title": "Stay Updated",
-    "description": "Get the latest articles, tech insights, and career tips delivered straight to your inbox. No spam, just valuable content.",
+    "title": "Get Free Weekly Engineering Tips",
+    "description": "Join developers learning real engineering skills, career strategies, and industry insights. Delivered straight to your inbox, no spam, just value.",
     "emailPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
     "subscribing": "Subscribing...",

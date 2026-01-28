@@ -14,7 +14,7 @@
   "header": {
     "home": "Αρχική",
     "ourApproach": "Η Προσέγγισή μας",
-    "bootcamp": "Bootcamp",
+    "accelerator": "Accelerator",
     "team": "Η Ομάδα",
     "faqs": "FAQs",
     "journey": "Το Ταξίδι Μας",
@@ -34,7 +34,7 @@
     "trust3": "Early Bird: {EARLY_BIRD_PRICE}"
   },
   "course": {
-    "title": "6-Week Tech Bootcamp",
+    "title": "6-Week Tech Accelerator",
     "cohortDate": "Επόμενο Cohort: {COHORT_DATE}",
     "forAllDevelopers": "Για Όλους τους Developers: Frontend · Backend · Full-Stack · Mobile · Οποιοδήποτε Tech Stack",
     "description": "Ένα εντατικό πρόγραμμα σχεδιασμένο να σε μετατρέψει σε έναν industry-ready tech professional.",
@@ -63,9 +63,9 @@
     "perProgram": "/πρόγραμμα",
     "earlyBirdMessage": "Κλείσε το early bird rate πριν εξαντληθεί"
   },
-  "bootcamp": {
+  "accelerator": {
     "backToHome": "Πίσω στην Αρχική",
-    "pageTitle": "6-Week Tech Bootcamp",
+    "pageTitle": "6-Week Tech Accelerator",
     "cohortBadge": "Επόμενο Cohort: {COHORT_DATE}",
     "heroSubtitle": "Μάθε τα engineering skills, το mindset και το professional branding που ψάχνουν πραγματικά οι tech εταιρείες.",
     "languageAgnostic": "Language & Stack Agnostic — works for JavaScript, Python, Java, Go, you name it",
@@ -90,7 +90,7 @@
         "title": "Plan Your Path",
         "description": "Απόκτησε clarity στην κατεύθυνσή σου στο tech και φτιάξε ένα concrete, realistic plan για να το πετύχεις.",
         "details": [
-          "Bootcamp onboarding, expectations & code of conduct",
+          "Program onboarding, expectations & code of conduct",
           "Confidence check & goal setting",
           "Κατανόηση του τι θέλει πραγματικά το industry από junior engineers",
           "Building ενός personalized plan βασισμένου στα necessary skills για τον target tech ρόλο σου",
@@ -115,7 +115,7 @@
           "Testing fundamentals: unit tests, test structure και τι περιμένουν οι interviewers",
           "Building ενός real-world project βασισμένου σε industry standards",
           "Publishing και iterating στο project σου χρησιμοποιώντας GitHub",
-          "Μάθε πώς οι engineers σκέφτονται, communicate και structure τη δουλειά τους"
+          "Μάθε πώς οι engineers σκέφτονται, communicate και κάνουν structure τη δουλειά τους"
         ]
       },
       {
@@ -123,7 +123,7 @@
         "title": "AI & Personal Branding",
         "description": "Μάθε πώς να χρησιμοποιείς το AI responsibly και χτίσε μια clear, credible professional presence.",
         "details": [
-          "Πώς οι beginners misuse το AI και γιατί spoils το long-term growth",
+          "Πώς οι beginners κάνουν misuse το AI και γιατί αυτό τους επιβραδύνει long-term",
           "Χρήση του AI ως thinking partner, όχι shortcut",
           "Prompting framework για learning, reasoning και problem-solving",
           "Χρήση AI για debugging: κάνοντας τις σωστές ερωτήσεις και interpreting responses",
@@ -132,10 +132,9 @@
           "Γράφοντας strong CV bullet points χρησιμοποιώντας το XYZ method",
           "Δημιουργία ATS-ready CV που περνάει το automated screening",
           "GitHub profile optimization: README, pinned repos και contribution consistency",
-          "Building ενός portfolio website που λέει το story σου effectively",
           "LinkedIn optimization: headline, about section και professional networking",
           "Aligning CV, LinkedIn, GitHub και portfolio σε ένα clear narrative",
-          "Τι ΝΑ ΜΗΝ κάνεις: common personal branding mistakes που πληγώνουν το credibility σου"
+          "Τι ΝΑ ΜΗΝ κάνεις: common personal branding mistakes που κάνουν hurt το credibility σου"
         ]
       },
       {
@@ -148,7 +147,7 @@
           "Technical interviews: structured thinking και clear communication",
           "Interview dos: τι αυξάνει dramatically το success rate σου",
           "Interview don'ts: common mistakes που σου κοστίζουν το job",
-          "Πώς να communicate στα interviews: tone, pace και clarity που εκτιμούν οι hiring managers",
+          "Πώς να επικοινωνείς στα interviews: tone, pace και clarity που εκτιμούν οι hiring managers",
           "Κάνοντας smart ερωτήσεις που δείχνουν genuine interest και research",
           "Pair programming expectations και collaboration mindset",
           "Home assignment best practices: showcasing των skills σου effectively",
@@ -167,20 +166,20 @@
         "description": "Κλείσε call με την ομάδα μας για να συζητήσουμε τους στόχους σου και να κλείσεις τη θέση σου."
       },
       {
-        "title": "Μέρες 1-3: Confirmation & Pre-Work",
-        "description": "Ολοκλήρωσε την εγγραφή, πάρε τα pre-bootcamp materials και μπες στο Discord community μας."
+        "title": "Μέρες 1-3: Confirmation",
+        "description": "Ολοκλήρωσε την εγγραφή και μπες στο Discord community μας."
       },
       {
-        "title": "Εβδομάδα Πριν την Έναρξη: Onboarding",
-        "description": "Γνώρισε το cohort σου, στήσε το development environment σου και ετοιμάσου για την εβδομάδα 1."
+        "title": "Εβδομάδα Πριν την Έναρξη: Onboarding & Pre-Work",
+        "description": "Πάρε τα pre-program materials, γνώρισε το cohort σου, στήσε το development environment σου και ετοιμάσου για την εβδομάδα 1."
       },
       {
-        "title": "Εβδομάδες 1-6: Το Bootcamp",
+        "title": "Εβδομάδες 1-6: Το Πρόγραμμα",
         "description": "Live sessions, project work, code reviews και career preparation."
       },
       {
         "title": "Μετά την Εβδομάδα 6: DevReady Community",
-        "description": "Μπες στο DevReady Community, πρόσβαση σε όλα τα materials για πάντα και συνέχισε να μαθαίνεις με το cohort σου."
+        "description": "Μπες στο DevReady Community, όπου έχεις πρόσβαση σε όλα τα materials για πάντα και συνέχισε να μαθαίνεις με το cohort σου."
       }
     ],
     "whatsIncludedTitle": "Τι Περιλαμβάνεται",
@@ -203,11 +202,11 @@
       },
       {
         "title": "DevReady Community Access",
-        "description": "Συνδέσου με past cohorts για referrals και support"
+        "description": "Μπες στο Discord μας, μάθε με το cohort σου και συνδέσου με past cohorts για support"
       },
       {
-        "title": "Discord Community & Lifetime Materials",
-        "description": "Μπες στο Discord μας, μάθε με το cohort σου και πρόσβαση σε όλα τα resources για πάντα"
+        "title": "Lifetime Materials",
+        "description": "Έχεις πρόσβαση σε όλο το υλικό για πάντα: recordings, exercises, plan, resources, τα πάντα"
       }
     ],
     "whoShouldJoinTitle": "Είναι Για Εσένα;",
@@ -230,15 +229,15 @@
     "faqs": [
       {
         "question": "Χρειάζεται να ξέρω συγκεκριμένη γλώσσα προγραμματισμού ή framework?",
-        "answer": "Όχι. Αυτό το bootcamp είναι language και framework-agnostic. Είτε είσαι React developer, Python backend engineer, Java developer, mobile developer, ή οτιδήποτε άλλο, τα skills που διδάσκουμε (engineering thinking, clean code, Git, interviewing, branding) ισχύουν universal σε οποιονδήποτε tech ρόλο."
+        "answer": "Όχι. Αυτό το accelerator είναι language και framework-agnostic. Είτε είσαι React developer, Python backend engineer, Java developer, mobile developer, ή οτιδήποτε άλλο, τα skills που διδάσκουμε (engineering thinking, clean code, Git, interviewing, branding) ισχύουν universal σε οποιονδήποτε tech ρόλο."
       },
       {
         "question": "Χρειάζεται prior coding experience?",
         "answer": "Ναι, αλλά τίποτα fancy. Αν έχεις τα παρακάτω basics, είσαι έτοιμος:\n\n• Variables και data types\n• Control flow\n• Loops\n• Functions και parameters\n• Basic κατανόηση μιας γλώσσας προγραμματισμού\n\nΕστιάζουμε στο να γεφυρώσουμε το gap από 'ξέρω να γράφω κώδικα' σε 'είμαι industry-ready,' όχι να διδάξουμε programming από το μηδέν.\n\nΤι σημαίνει 'basic knowledge'; Θα πρέπει να μπορείς να γράψεις simple programs και να καταλαβαίνεις basic error messages. Think: έχεις λύσει κάποια coding challenges, ολοκλήρωσες ένα beginner tutorial, ή έφτιαξες ένα μικρό personal project."
       },
       {
-        "question": "Θα βρω δουλειά μετά το bootcamp?",
-        "answer": "Δεν μπορούμε να εγγυηθούμε job placement, αλλά σε εξοπλίζουμε με τα ακριβή skills, portfolio και interview preparation που αυξάνουν dramatically τις πιθανότητές σου. Η επιτυχία σου εξαρτάται από το effort και το commitment σου."
+        "question": "Θα βρω δουλειά μετά το accelerator?",
+        "answer": "Δεν μπορούμε να εγγυηθούμε job placement, αλλά σε εξοπλίζουμε με τα ακριβή skills, portfolio και interview preparation που αυξάνουν dramatically τις πιθανότητές σου. Πολλοί από τους μαθητές μας βρήκαν δουλειά μέσα στον επόμενο μήνα. Η επιτυχία σου εξαρτάται από το effort και το commitment σου."
       },
       {
         "question": "Ποια είναι η time commitment?",
@@ -246,10 +245,10 @@
       },
       {
         "question": "Πόσα άτομα θα είναι στο cohort μου?",
-        "answer": "Maximum 15 άτομα ανά cohort. Αυτό το μικρό μέγεθος εξασφαλίζει ότι μπορούμε να παρέχουμε targeted, personalized care και να απαντήσουμε στις specific ανάγκες σου καθ' όλη τη διάρκεια του bootcamp."
+        "answer": "Maximum 15 άτομα ανά cohort. Αυτό το μικρό μέγεθος εξασφαλίζει ότι μπορούμε να παρέχουμε targeted, personalized care και να απαντήσουμε στις specific ανάγκες σου καθ' όλη τη διάρκεια του προγράμματος."
       },
       {
-        "question": "Είναι το bootcamp remote?",
+        "question": "Είναι το accelerator remote?",
         "answer": "Ναι, 100% remote. Όλα τα sessions διεξάγονται online, καθιστώντας το accessible από οπουδήποτε στην Ελλάδα."
       },
       {
@@ -258,7 +257,7 @@
       },
       {
         "question": "Είναι μόνο για άτομα που ψάχνουν δουλειά στην Ελλάδα?",
-        "answer": "Όχι. Ενώ έχουμε base στην Ελλάδα και πολλοί από τους students μας αναζητούν Greek ευκαιρίες, τα skills και η approach δουλεύουν globally. Το bootcamp σε ετοιμάζει για tech roles οπουδήποτε."
+        "answer": "Όχι. Ενώ έχουμε base στην Ελλάδα και πολλοί από τους students μας αναζητούν Greek ευκαιρίες, τα skills και η approach δουλεύουν globally. Το accelerator σε ετοιμάζει για tech roles οπουδήποτε."
       },
       {
         "question": "Τι γίνεται αφού κλείσω call?",
@@ -269,7 +268,7 @@
     "finalCtaDescription": "Κλείσε call με την ομάδα μας για να κλείσεις τη θέση σου στο early bird rate των €299.",
     "finalCtaPricing": "Κανονική τιμή: €449 • Το επόμενο cohort μπορεί να μην είναι μέχρι το Καλοκαίρι 2026",
     "finalCtaNote": "Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου.",
-    "urgencyBadge": "⏰ Μόνο 5 Early Bird Θέσεις στα €299"
+    "urgencyBadge": "⏰ {SPOTS_LEFT} στα {EARLY_BIRD_PRICE}"
   },
   "devpress": {
     "headline": "From Coding to Hiring",
@@ -279,7 +278,7 @@
     "readMore": "Διάβασε περισσότερα",
     "readArticle": "Διάβασε το άρθρο",
     "backToDevPress": "Πίσω στο DevPress",
-    "shareArticle": "Κοινοποίηση άρθρου",
+    "shareArticle": "Share",
     "socialShareButtons": "Κουμπιά κοινοποίησης",
     "shareOnTwitter": "Κοινοποίηση στο Twitter",
     "shareOnFacebook": "Κοινοποίηση στο Facebook",
@@ -288,9 +287,9 @@
     "linkCopied": "Το link αντιγράφηκε!",
     "linkCopiedDescription": "Το link του άρθρου αντιγράφηκε στο clipboard",
     "aboutAuthor": "Σχετικά με τον συγγραφέα",
-    "readyToTakeNextStep": "Έτοιμος να Κάνεις το Επόμενο Βήμα;",
-    "bootcampCTA": "Μάθε πώς το DevReady bootcamp μπορεί να σε κάνει industry-ready σε 6 εβδομάδες",
-    "viewProgram": "Δες το Πρόγραμμα",
+    "readyToTakeNextStep": "Έτοιμος να Γίνεις Industry-Ready;",
+    "acceleratorCTA": "Μάθε πώς το DevReady accelerator μπορεί να σε κάνει industry-ready σε 6 εβδομάδες",
+    "viewProgram": "Λεπτομέρειες Προγράμματος",
     "postNotFound": "Το άρθρο δεν βρέθηκε",
     "postNotFoundDescription": "Το άρθρο που ψάχνεις δεν υπάρχει ή έχει μετακινηθεί.",
     "backToDevPressButton": "Πίσω στο DevPress",
@@ -305,7 +304,7 @@
   "contact": {
     "backToHome": "Πίσω στην Αρχική",
     "pageTitle": "Έτοιμος να Συμμετέχεις;",
-    "pageSubtitle": "Για να κλείσεις τη θέση σου στο Bootcamp, κλείσε ένα call μαζί μας.",
+    "pageSubtitle": "Για να κλείσεις τη θέση σου στο Accelerator, κλείσε ένα call μαζί μας.",
     "pageDescription": "Έχεις ερωτήσεις πρώτα; Στείλε μας ένα μήνυμα ή κλείσε call για να μάθεις περισσότερα.",
     "formTitle": "Έχεις Ερωτήσεις;",
     "formDescription": "Στείλε μας τις ερωτήσεις σου και θα σου απαντήσουμε εντός 24 ωρών",
@@ -321,7 +320,7 @@
     "formSending": "Αποστολή...",
     "enrollBadge": "⚡ ΕΓΓΡΑΦΗ ΕΔΩ",
     "enrollTitle": "Κλείσε το Enrollment Call σου",
-    "enrollDescription": "Έτοιμος να συμμετέχεις; Κλείσε call με την ομάδα μας για να ολοκληρώσεις την εγγραφή σου και να κλείσεις μία από τις 5 early bird θέσεις στα €299.",
+    "enrollDescription": "Έτοιμος να συμμετέχεις; Κλείσε call με την ομάδα μας για να ολοκληρώσεις την εγγραφή σου και να κλείσεις μία early bird θέση στα {EARLY_BIRD_PRICE}.",
     "enrollCta": "Κλείσε Enrollment Call",
     "enrollNote": "💡 Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου",
     "connectTitle": "Επικοινώνησε Μαζί Μας",
@@ -363,7 +362,7 @@
     "members": [
       {
         "name": "Alexis Pavlidis",
-        "description": "London-based Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable distributed systems σε top companies και στην καθοδήγηση engineers, don't do this shit, don't do that, do this, do that. Είναι passionate για clean code, distributed systems, και στο να βοηθάει άλλους να να κανουν navigate στο tech industry μέσω mentoring, writing και speaking."
+        "description": "London-based Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable distributed systems σε top companies και στην καθοδήγηση engineers. Είναι passionate για clean code, distributed systems, και στο να βοηθάει άλλους να να κανουν navigate στο tech industry μέσω mentoring, writing και speaking."
       },
       {
         "name": "Kostikas Visnia",
@@ -509,8 +508,8 @@
     "ctaDescription": "Έλα στο πρώτο μας cohort και μάθε από engineers που ήταν ακριβώς εκεί που είσαι τώρα."
   },
   "newsletter": {
-    "title": "Μείνε Ενημερωμένος",
-    "description": "Λάβε τα τελευταία άρθρα, tech insights και career tips απευθείας στο inbox σου. Χωρίς spam, μόνο χρήσιμο περιεχόμενο.",
+    "title": "Δωρεάν Weekly Engineering Tips",
+    "description": "Real-world code practices, career hacks, και insider tips από engineers που δουλεύουν σε top companies. Κάθε βδομάδα στο inbox σου, zero spam, pure value.",
     "emailPlaceholder": "Το email σου",
     "subscribe": "Εγγραφή",
     "subscribing": "Εγγραφή...",

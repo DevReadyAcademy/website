@@ -7,7 +7,10 @@ import SEO from "../components/SEO";
 import { blogPosts } from "../data/blogPosts";
 import { useToast } from "../components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import Header from "../components/Header";
+import Newsletter from "../components/Newsletter";
+import AcceleratorCTA from "../components/AcceleratorCTA";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -51,7 +54,42 @@ const BlogPost = () => {
   const tags = language === 'gr' ? post.tagsGr : post.tags;
   const readTime = language === 'gr' ? post.readTimeGr : post.readTime;
 
+  // Always use production URL for sharing (social media can't access localhost)
   const currentUrl = `https://www.devready.gr/devpress/${post.slug}`;
+
+  // Structured data for blog post
+  const blogPostSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": language === 'gr' ? post.excerptGr : post.excerpt,
+    "image": post.image ? `https://www.devready.gr${post.image}` : "https://www.devready.gr/assets/logo-320.webp",
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+      "url": "https://www.devready.gr/"
+    },
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevReady",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.devready.gr/assets/logo-320.webp",
+        "width": 320,
+        "height": 320
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": currentUrl
+    },
+    "keywords": tags.join(', '),
+    "articleSection": tags[0],
+    "inLanguage": language === 'gr' ? 'el' : 'en',
+    "wordCount": content.split(/\s+/).length
+  };
 
   const shareOnTwitter = () => {
     const text = `${title} - DevReady`;
@@ -81,40 +119,14 @@ const BlogPost = () => {
         description={language === 'gr' ? post.excerptGr : post.excerpt}
         keywords={tags.join(', ')}
         canonical={currentUrl}
+        ogTitle={title}
+        ogImage={post.image ? `https://www.devready.gr${post.image}` : undefined}
         ogType="article"
         articlePublishedTime={post.date}
         articleAuthor={post.author}
+        language={language}
+        structuredData={blogPostSchema}
       />
-      {/* Structured Data for Blog Post */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": title,
-          "description": language === 'gr' ? post.excerptGr : post.excerpt,
-          "author": {
-            "@type": "Person",
-            "name": post.author
-          },
-          "datePublished": post.date,
-          "dateModified": post.date,
-          "publisher": {
-            "@type": "Organization",
-            "name": "DevReady",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.devready.gr/assets/logo-320.webp"
-            }
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": currentUrl
-          },
-          "keywords": tags.join(', '),
-          "articleSection": tags[0],
-          "inLanguage": language === 'gr' ? 'el' : 'en'
-        })}
-      </script>
       <Header />
       <div className="min-h-screen bg-background pt-20">
         {/* Skip to main content link */}
@@ -216,7 +228,7 @@ const BlogPost = () => {
             </div>
 
             {/* Content */}
-            <div className="prose prose-lg max-w-none
+            <div className="prose prose-lg max-w-none dark:prose-invert
               prose-headings:font-bold prose-headings:text-foreground
               prose-h1:text-4xl prose-h1:mb-6
               prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4
@@ -225,38 +237,26 @@ const BlogPost = () => {
               prose-a:text-primary prose-a:no-underline hover:prose-a:underline
               prose-strong:text-foreground prose-strong:font-semibold
               prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
+              prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
               prose-li:text-foreground/90 prose-li:mb-2
-              prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
-              prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic"
+              prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+              prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic
+              prose-table:border-collapse prose-table:w-full
+              prose-th:border prose-th:border-border prose-th:p-2 prose-th:bg-muted
+              prose-td:border prose-td:border-border prose-td:p-2"
             >
-              <ReactMarkdown>{content}</ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
             </div>
 
-            {/* Author Bio */}
-            <aside className="mt-12 p-6 bg-card rounded-xl border border-border/50" aria-label={t('devpress.authorInfo')}>
-              <h2 className="text-xl font-bold mb-2">{t('devpress.aboutAuthor')}</h2>
-              <p className="text-muted-foreground">
-                <strong>{post.author}</strong> {language === 'gr' 
-                  ? 'είναι Software Engineer με έδρα το Λονδίνο και co-founder του DevReady. Έχει βοηθήσει πάνω από 50 developers να μπουν στο tech industry.'
-                  : 'is a London-based Software Engineer and co-founder of DevReady. He has helped over 50 developers break into the tech industry.'
-                }
-              </p>
-            </aside>
+            {/* Newsletter */}
+            <div className="mt-12">
+              <Newsletter />
+            </div>
 
             {/* CTA */}
-            <aside className="mt-12 p-8 bg-gradient-primary rounded-xl text-center text-primary-foreground" aria-label={t('devpress.callToAction')}>
-              <h2 className="text-2xl font-bold mb-4">
-                {t('devpress.readyToTakeNextStep')}
-              </h2>
-              <p className="mb-6 opacity-90">
-                {t('devpress.bootcampCTA')}
-              </p>
-              <Button asChild size="lg" variant="secondary">
-                <Link to="/bootcamp">
-                  {t('devpress.viewProgram')}
-                </Link>
-              </Button>
-            </aside>
+            <div className="mt-12">
+              <AcceleratorCTA />
+            </div>
           </div>
         </article>
 

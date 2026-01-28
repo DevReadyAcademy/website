@@ -6,7 +6,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/index";
 import NotFound from "./pages/notFound";
 import Contact from "./pages/contact";
-import Bootcamp from "./pages/bootcamp";
+import Accelerator from "./pages/accelerator";
 import Journey from "./pages/journey";
 import DevPress from "./pages/devpress";
 import BlogPost from "./pages/blogPost";
@@ -21,7 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/bootcamp" element={<Bootcamp />} />
+          <Route path="/accelerator" element={<Accelerator />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/devpress" element={<DevPress />} />
           <Route path="/devpress/:slug" element={<BlogPost />} />

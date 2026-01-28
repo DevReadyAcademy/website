@@ -7,7 +7,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.devready.gr/</loc>
-    <lastmod>2026-01-17</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- Bootcamp Page -->
   <url>
     <loc>https://www.devready.gr/bootcamp</loc>
-    <lastmod>2026-01-17</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -23,7 +23,7 @@
   <!-- Contact Page -->
   <url>
     <loc>https://www.devready.gr/contact</loc>
-    <lastmod>2026-01-17</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -31,13 +31,17 @@
   <!-- DevPress Blog -->
   <url>
     <loc>https://www.devready.gr/devpress</loc>
-    <lastmod>2026-01-17</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog Posts -->
-  <!-- No posts published yet - will be added as content is published -->
+  <url>
+    <loc>https://www.devready.gr/devpress/software-interviews-dos-and-donts</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
-
