@@ -31,7 +31,7 @@ const testimonialsEn = [
   {
     name: "Marios",
     role: "Software Engineer",
-    quote: "All three of them were exceptional, they helped me learn how to organize my thinking and break down a problem into smaller manageable pieces. Whether you're interested in backend or frontend, the bootcamp covers both. Their feedback was very helpful and the projects were genuinely interesting. Finally, the interview preparation part and their tips were really useful and give you a real picture of how companies think, helping me prepare better. I wholeheartedly recommend it.",
+    quote: "All three of them were exceptional, they helped me learn how to organize my thinking and break down a problem into smaller manageable pieces. Whether you're interested in backend or frontend, the accelerator covers both. Their feedback was very helpful and the projects were genuinely interesting. Finally, the interview preparation part and their tips were really useful and give you a real picture of how companies think, helping me prepare better. I wholeheartedly recommend it.",
     image: "/assets/students/marios.jpeg",
   },
 ];
@@ -64,7 +64,7 @@ const testimonialsGr = [
   {
     name: "Marios",
     role: "Software Engineer",
-    quote: "Τα παιδιά ήταν εξαιρετικά και οι τρεις τους, με βοήθησαν να μάθω πώς να οργανώνω τη σκέψη μου και να σπάω ένα πρόβλημα σε μικρότερα διαχειρίσιμα κομμάτια. Είτε σε ενδιαφέρει το backend είτε το frontend, το bootcamp καλύπτει και τα δύο. Το feedback τους ήταν πολύ χρήσιμο και τα projects πραγματικά ενδιαφέροντα. Τέλος, το κομμάτι της προετοιμασίας για συνεντεύξεις και τα tips τους ήταν πραγματικά πολύ χρήσιμα και σου δίνουν πραγματική εικόνα για το πώς σκέφτονται οι εταιρείες και με βοήθησαν να προετοιμαστώ καλύτερα. Το συνιστώ ανεπιφύλακτα.",
+    quote: "Τα παιδιά ήταν εξαιρετικά και οι τρεις τους, με βοήθησαν να μάθω πώς να οργανώνω τη σκέψη μου και να σπάω ένα πρόβλημα σε μικρότερα διαχειρίσιμα κομμάτια. Είτε σε ενδιαφέρει το backend είτε το frontend, το accelerator καλύπτει και τα δύο. Το feedback τους ήταν πολύ χρήσιμο και τα projects πραγματικά ενδιαφέροντα. Τέλος, το κομμάτι της προετοιμασίας για συνεντεύξεις και τα tips τους ήταν πραγματικά πολύ χρήσιμα και σου δίνουν πραγματική εικόνα για το πώς σκέφτονται οι εταιρείες και με βοήθησαν να προετοιμαστώ καλύτερα. Το συνιστώ ανεπιφύλακτα.",
     image: "/assets/students/marios.jpeg",
   },
 ];

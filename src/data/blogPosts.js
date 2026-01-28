@@ -111,7 +111,7 @@ In this blog, I discussed different types of interviews and shared some of my le
 
 **Want to learn more?** This is just the beginning! I have specific dos and don'ts for each interview type - from acing algorithmic challenges to crushing system design interviews. Subscribe to our newsletter below to get these deep-dive tips delivered straight to your inbox.
 
-At DevReady, we've helped dozens of developers successfully navigate these interviews and land their dream roles. If you want personalized guidance on preparing for interviews, check out our [6-week bootcamp](/bootcamp) where we cover everything from technical preparation to behavioral interview techniques.
+At DevReady, we've helped dozens of developers successfully navigate these interviews and land their dream roles. If you want personalized guidance on preparing for interviews, check out our [6-week accelerator](/accelerator) where we cover everything from technical preparation to behavioral interview techniques.
     `,
     contentGr: `# 💼 Software Interviews - Dos & Donts
 
@@ -217,7 +217,7 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
 
 **Θέλεις να μάθεις περισσότερα;** Αυτό είναι μόνο η αρχή! Έχω συγκεκριμένα dos και don'ts για κάθε τύπο interview - από algorithmic challenges μέχρι system design interviews. Κάνε subscribe στο newsletter μας παρακάτω για να λαμβάνεις αυτά τα εις βάθος tips απευθείας στο inbox σου.
 
-Στο DevReady, έχουμε βοηθήσει δεκάδες developers να αντιμετωπίσουν με επιτυχία αυτά τα interviews και να βρουν το dream role τους. Αν θέλεις personalized guidance για την προετοιμασία για interviews, δες το [6-week bootcamp μας](/bootcamp) όπου καλύπτουμε τα πάντα από technical preparation έως behavioral interview techniques.
+Στο DevReady, έχουμε βοηθήσει δεκάδες developers να αντιμετωπίσουν με επιτυχία αυτά τα interviews και να βρουν το dream role τους. Αν θέλεις personalized guidance για την προετοιμασία για interviews, δες το [6-week accelerator μας](/accelerator) όπου καλύπτουμε τα πάντα από technical preparation έως behavioral interview techniques.
     `,
     author: "Alexis Pavlidis",
     date: "2026-01-24",
@@ -331,7 +331,7 @@ Your online presence matters:
 
 ## The Path Forward
 
-Here's the truth: **you don't need another bootcamp that teaches you React**.
+Here's the truth: **you don't need another program that teaches you React**.
 
 You need:
 - **Structured guidance** on what to build
@@ -355,7 +355,7 @@ The journey from student to engineer isn't easy. But it's absolutely possible.
 
 ---
 
-Want to accelerate your journey? Check out our [6-week program](/bootcamp) designed specifically for Greek developers looking to break into the industry.
+Want to accelerate your journey? Check out our [6-week program](/accelerator) designed specifically for Greek developers looking to break into the industry.
     `,
     contentGr: `
 # Από Φοιτητής σε Software Engineer: Το Πραγματικό Ταξίδι
@@ -451,7 +451,7 @@ Want to accelerate your journey? Check out our [6-week program](/bootcamp) desig
 
 ## Το Μονοπάτι Μπροστά
 
-Η αλήθεια: **δεν χρειάζεσαι άλλο ένα bootcamp που διδάσκει React**.
+Η αλήθεια: **δεν χρειάζεσαι άλλο ένα πρόγραμμα που διδάσκει React**.
 
 Χρειάζεσαι:
 - **Structured guidance** για το τι να φτιάξεις
@@ -475,7 +475,7 @@ Want to accelerate your journey? Check out our [6-week program](/bootcamp) desig
 
 ---
 
-Θέλεις να επιταχύνεις το ταξίδι σου; Δες το [6-week πρόγραμμά μας](/bootcamp) σχεδιασμένο ειδικά για Έλληνες developers που θέλουν να μπουν στο industry.
+Θέλεις να επιταχύνεις το ταξίδι σου; Δες το [6-week πρόγραμμά μας](/accelerator) σχεδιασμένο ειδικά για Έλληνες developers που θέλουν να μπουν στο industry.
     `,
     author: "Alexis Pavlidis",
     date: "2025-01-15",

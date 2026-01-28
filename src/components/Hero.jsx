@@ -92,7 +92,7 @@ const Hero = () => {
             size="lg"
             className="px-8 py-6 text-lg font-semibold border-2"
           >
-            <Link to="/bootcamp">
+            <Link to="/accelerator">
               {t('common.viewProgramDetails')}
             </Link>
           </Button>

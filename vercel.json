@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/bootcamp",
+      "destination": "/accelerator",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/devpress/:slug",
