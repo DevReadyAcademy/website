@@ -7,6 +7,7 @@ interface SEOProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
+  ogTitle?: string;
   ogType?: string;
   noindex?: boolean;
   articlePublishedTime?: string;
@@ -19,12 +20,14 @@ const SEO: React.FC<SEOProps> = ({
   keywords = "software engineering bootcamp, coding bootcamp, learn programming, software development, tech career, DevReady, career change, software engineer training",
   canonical = "https://www.devready.gr/",
   ogImage = "https://www.devready.gr/assets/logo-320.webp",
+  ogTitle,
   ogType = "website",
   noindex = false,
   articlePublishedTime,
   articleAuthor,
 }) => {
   const fullTitle = title.includes('DevReady') ? title : `${title} | DevReady`;
+  const ogTitleFinal = ogTitle || fullTitle;
 
   return (
     <Helmet>
@@ -40,7 +43,7 @@ const SEO: React.FC<SEOProps> = ({
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical} />
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og:title" content={ogTitleFinal} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       
@@ -55,7 +58,7 @@ const SEO: React.FC<SEOProps> = ({
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={canonical} />
-      <meta property="twitter:title" content={fullTitle} />
+      <meta property="twitter:title" content={ogTitleFinal} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={ogImage} />
     </Helmet>
