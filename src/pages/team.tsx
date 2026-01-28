@@ -16,13 +16,13 @@ const Team = () => {
   return (
     <>
       <SEO
-        title="Our Journey - Meet the DevReady Team"
-        description="From dozens of job rejections to building DevReady. Learn how Alex, Kostas, and Vasilis went from struggling graduates to helping others break into tech."
-        keywords="DevReady team, about us, tech education Greece, software engineering mentors, our story, career journey, tech mentorship"
+        title="Meet the Team - DevReady"
+        description="Meet Alex, Kostas, and Vasilis - the team behind DevReady. From dozens of job rejections to helping others break into tech."
+        keywords="DevReady team, about us, tech education Greece, software engineering mentors, meet the team, tech mentorship"
         canonical="https://www.devready.gr/team"
       />
       <Header />
-      <div className="min-h-screen bg-background pt-20">
+      <div className="min-h-screen bg-background pt-20 overflow-x-hidden">
         <main>
           {/* Hero Section */}
           <section className="py-16 px-4 bg-gradient-hero">
@@ -155,7 +155,7 @@ const Team = () => {
                 </p>
               </div>
 
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 {/* Timeline Line */}
                 <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 transform md:-translate-x-1/2" />
 
@@ -220,13 +220,13 @@ const Team = () => {
                   ⏰ Only 5 Early Bird Spots at €299
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                  {t('bootcamp.finalCtaTitle')}
+                  {t('accelerator.finalCtaTitle')}
                 </h2>
                 <p className="text-xl opacity-90 mb-2 max-w-2xl mx-auto">
-                  {t('bootcamp.finalCtaDescription')}
+                  {t('accelerator.finalCtaDescription')}
                 </p>
                 <p className="text-base opacity-80 mb-8 max-w-2xl mx-auto">
-                  {t('bootcamp.finalCtaPricing')}
+                  {t('accelerator.finalCtaPricing')}
                 </p>
                 <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-lg">
                   <Link to="/contact">
@@ -235,7 +235,7 @@ const Team = () => {
                   </Link>
                 </Button>
                 <p className="text-sm opacity-80 mt-6">
-                  {t('bootcamp.finalCtaNote')}
+                  {t('accelerator.finalCtaNote')}
                 </p>
               </div>
             </div>

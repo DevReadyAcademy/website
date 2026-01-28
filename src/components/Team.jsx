@@ -100,7 +100,7 @@ const Team = () => {
           
           {/* Learn More Button */}
           <Button asChild size="lg" variant="outline" className="group">
-            <Link to="/journey">
+            <Link to="/team">
               {t('team.learnMoreAboutTeam')}
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
