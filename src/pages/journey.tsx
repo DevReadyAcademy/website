@@ -17,8 +17,8 @@ const Journey = () => {
     <>
       <SEO
         title="Our Journey - Meet the DevReady Team"
-        description="Learn about the DevReady team and our journey to transform tech education in Greece. From helping one friend to building a structured program for aspiring developers."
-        keywords="DevReady team, about us, tech education Greece, software engineering mentors, our story"
+        description="From dozens of job rejections to building DevReady. Learn how Alex, Kostas, and Vasilis went from struggling graduates to helping others break into tech."
+        keywords="DevReady team, about us, tech education Greece, software engineering mentors, our story, career journey, tech mentorship"
         canonical="https://www.devready.gr/journey"
       />
       <Header />
