@@ -1,15 +1,20 @@
+import { lazy, Suspense } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import ScrollToTop from "./components/ScrollToTop";
 import { LanguageProvider } from "./contexts/LanguageContext";
+
+// Eagerly load the main page for fast initial load
 import Index from "./pages/index";
-import NotFound from "./pages/notFound";
-import Contact from "./pages/contact";
-import Accelerator from "./pages/accelerator";
-import Team from "./pages/team";
-import DevPress from "./pages/devpress";
-import BlogPost from "./pages/blogPost";
+
+// Lazy load secondary pages to reduce initial bundle size
+const Accelerator = lazy(() => import("./pages/accelerator"));
+const Team = lazy(() => import("./pages/team"));
+const DevPress = lazy(() => import("./pages/devpress"));
+const BlogPost = lazy(() => import("./pages/blogPost"));
+const Contact = lazy(() => import("./pages/contact"));
+const NotFound = lazy(() => import("./pages/notFound"));
 
 const queryClient = new QueryClient();
 
@@ -18,16 +23,22 @@ const App = () => (
     <LanguageProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/accelerator" element={<Accelerator />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/devpress" element={<DevPress />} />
-          <Route path="/devpress/:slug" element={<BlogPost />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={
+          <div className="min-h-screen bg-background flex items-center justify-center">
+            <div className="animate-pulse text-primary text-lg">Loading...</div>
+          </div>
+        }>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/accelerator" element={<Accelerator />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/devpress" element={<DevPress />} />
+            <Route path="/devpress/:slug" element={<BlogPost />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
       <Toaster />
     </LanguageProvider>
