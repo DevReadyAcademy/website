@@ -496,14 +496,14 @@
         "location": "Remote",
         "title": "Research, Validation & Our First Success Story",
         "description": "We interviewed 100+ aspiring developers across Greece to understand their pain points. The message was clear: Greece has the talent, but lacks structured paths, mentorship, and industry context. We built DevReady, ran our first cohort, and watched our first students land their dream jobs. The model works.",
-        "image": "/assets/students/maria_zavola.jpeg"
+        "image": "/assets/students/students.png"
       },
       {
         "date": "2026",
         "location": "Remote",
         "title": "Next Step: You",
         "description": "Our first cohort launches in April 2026. We're ready to help the next generation of Greek developers break into tech with the exact blueprint we've refined over years. Will you be part of this journey?",
-        "image": "/assets/alex.jpg"
+        "image": "/assets/sam.png"
       }
     ],
     "ctaTitle": "Ready to Start Your Journey?",
