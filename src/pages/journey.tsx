@@ -195,11 +195,11 @@ const Journey = () => {
                           {event.description}
                         </p>
                         {event.image && (
-                          <div className="rounded-xl overflow-hidden">
+                          <div className={`rounded-xl overflow-hidden ${event.imageContainerClass || ''}`}>
                             <img
                               src={event.image}
                               alt={event.title}
-                              className={`w-full h-48 object-cover ${event.imagePosition || 'object-center'}`}
+                              className={event.imageClass || `w-full h-48 object-cover ${event.imagePosition || 'object-center'}`}
                               loading="lazy"
                             />
                           </div>
