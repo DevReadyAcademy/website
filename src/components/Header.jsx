@@ -120,7 +120,7 @@ const Header = () => {
                 width="80"
                 height="80"
                 loading="eager"
-                fetchPriority="high"
+                fetchpriority="high"
               />
               <span className="text-lg sm:text-2xl font-bold text-foreground" aria-hidden="true">
                 {t('common.brandName')}
