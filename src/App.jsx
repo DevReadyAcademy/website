@@ -7,6 +7,7 @@ import Index from "./pages/index";
 import NotFound from "./pages/notFound";
 import Contact from "./pages/contact";
 import Accelerator from "./pages/accelerator";
+import Team from "./pages/team";
 import DevPress from "./pages/devpress";
 import BlogPost from "./pages/blogPost";
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/accelerator" element={<Accelerator />} />
+          <Route path="/team" element={<Team />} />
           <Route path="/devpress" element={<DevPress />} />
           <Route path="/devpress/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

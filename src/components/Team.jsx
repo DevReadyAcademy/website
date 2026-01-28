@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from './ui/button';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Team = () => {
@@ -9,19 +11,12 @@ const Team = () => {
   const teamImages = [
     '/assets/alex.jpg',
     '/assets/kostikas.jpg',
-    '/assets/sam.jpg'
-  ];
-  
-  const linkedinUrls = [
-    'https://www.linkedin.com/in/apavlidi/',
-    'https://www.linkedin.com/in/kvisnia/',
-    'https://www.linkedin.com/in/vasilis-samoladas/'
+    '/assets/sam.png'
   ];
   
   const teamMembers = (t('team.members') || []).map((member, index) => ({
     ...member,
-    imageUrl: teamImages[index],
-    linkedin: linkedinUrls[index]
+    imageUrl: teamImages[index]
   }));
   
   return (
@@ -57,7 +52,7 @@ const Team = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="flex flex-col items-center text-center p-6 bg-card rounded-2xl border border-border/50 hover:border-primary/30 hover:shadow-elegant transition-all"
+              className="flex flex-col items-center text-center"
             >
               <div className="w-40 h-40 rounded-full overflow-hidden mb-4 shadow-xl">
                 {member.imageUrl ? (
@@ -83,23 +78,9 @@ const Team = () => {
                 )}
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{member.name}</h3>
-              <div className="flex-1 flex flex-col justify-between w-full">
-                <p className="text-muted-foreground text-base leading-relaxed mb-4">
-                  {member.description}
-                </p>
-                {member.linkedin && (
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium mx-auto"
-                    aria-label={`${member.name}'s LinkedIn`}
-                  >
-                    <Linkedin className="w-4 h-4" />
-                    <span>{t('team.connectLinkedIn')}</span>
-                  </a>
-                )}
-              </div>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                {member.description}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -113,9 +94,17 @@ const Team = () => {
           className="max-w-3xl mx-auto mt-16 text-center"
         >
           <h3 className="text-2xl font-bold mb-4 text-foreground">{t('team.storyTitle')}</h3>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed mb-8">
             {t('team.storyText')}
           </p>
+          
+          {/* Learn More Button */}
+          <Button asChild size="lg" variant="outline" className="group">
+            <Link to="/journey">
+              {t('team.learnMoreAboutTeam')}
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

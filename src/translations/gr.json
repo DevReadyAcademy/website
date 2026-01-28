@@ -15,9 +15,11 @@
     "home": "Αρχική",
     "ourApproach": "Η Προσέγγισή μας",
     "accelerator": "Accelerator",
+    "team": "Η Ομάδα",
+    "faqs": "FAQs",
+    "journey": "Το Ταξίδι Μας",
     "devpress": "DevPress",
     "testimonials": "Testimonials",
-    "team": "Ομάδα",
     "whyDifferent": "Γιατί Διαφέρουμε"
   },
   "hero": {
@@ -355,6 +357,7 @@
     "description": "Είμαστε passionate professionals αφοσιωμένοι να κάνουμε transform το tech education στην Ελλάδα",
     "storyTitle": "Γιατί φτιάξαμε το DevReady",
     "storyText": "Ο Alex αντιμετώπισε το ίδιο πρόβλημα που αντιμετωπίζετε και εσείς, πώς να κάνεις το άλμα από 'ξέρω να γράφω κώδικα' σε 'I got hired'. Μετά από πολλές απορρίψεις σε εταιρείες του εξωτερικού και μαθαίνοντας με τον δύσκολο τρόπο, συνεργάστηκε με τον Κώστα και κατάφεραν να μπουν σε top εταιρείες στο εξωτερικό. Ύστερα βοήθησαν τον Βασίλη και δεκάδες άλλους να μπουν στο industry. Γνωρίζουμε ότι η Ελλάδα έχει great talent στο engineering, αλλά λείπει το structured path, το mentorship και το industry context. Έτσι φτιάξαμε το DevReady.",
+    "learnMoreAboutTeam": "Μάθε Περισσότερα για την Ομάδα",
     "connectLinkedIn": "LinkedIn",
     "members": [
       {
@@ -367,7 +370,7 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "description": "Prague-based Frontend Engineer, passionate για AI, automation, και στο να φτιάχνει products που οι άνθρωποι ειναι excited to use. Με εμπειρία στο travel industry και αγάπη για ταξίδια, συνδυάζει engineering, business thinking, και ένα questionable χιούμορ, νοοτροπία, read a book, the laws of human nature."
+        "description": "Prague-based Frontend Engineer, passionate για AI και στο να φτιάχνει products που οι άνθρωποι αγαπούν. Με 200+ user interviews, φέρνει strong product thinking και design sensibility στο engineering. Συνδυάζει technical skills με user empathy και ένα questionable χιούμορ."
       }
     ]
   },
@@ -395,6 +398,114 @@
         "description": "Structured path, industry mentorship και peer community. Όχι άλλα random tutorials."
       }
     ]
+  },
+  "journey": {
+    "pageTitle": "Το Ταξίδι Μας",
+    "pageSubtitle": "Από δεκάδες απορρίψεις σε δουλειές στο να χτίσουμε ένα πρόγραμμα που βοηθάει άλλους να μπουν στο tech",
+    "pageDescription": "Δεν είμαστε απλά εκπαιδευτές, είμαστε working engineers που έχουμε περπατήσει το μονοπάτι που προσπαθείς να περπατήσεις.",
+    "teamTitle": "Η Ομάδα",
+    "teamDescription": "Engineers, mentors και career coaches passionate για να κάνουν transform το tech education στην Ελλάδα",
+    "teamMembers": [
+      {
+        "name": "Alexis Pavlidis",
+        "role": "Backend Engineer at Monzo | Skyscanner, Writer, Speaker, and Mentor",
+        "location": "Λονδίνο, UK",
+        "image": "/assets/alex.jpg",
+        "bio": "Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable systems σε top companies όπως η Stoiximan, Monzo και Skyscanner. Κατά τη διάρκεια της καριέρας του, ο Alex έχει αλλάξει πολλούς ρόλους: consultant, frontend engineer, fullstack engineer, και τελικά τον κέρδισε το backend engineering. Με 5+ χρόνια εμπειρίας στο interviewing προγραμματιστών, από entry/junior roles μέχρι staff engineers, και 3+ χρόνια mentoring σε engineers, έχει βοηθήσει δεκάδες νέους engineers να μπουν στο industry και να βρουν roles σε όλη την Ευρώπη.",
+        "highlights": [
+          "7+ χρόνια software engineer σε top εταιρείες σε Ελλάδα και Λονδίνο: Stoiximan, Monzo, Skyscanner",
+          "5+ χρόνια interviewing προγραμματιστών, από entry/junior μέχρι staff engineers",
+          "3+ χρόνια mentoring σε engineers",
+          "Ειδικότητα σε backend engineering, system design και career transitions"
+        ],
+        "linkedin": "https://www.linkedin.com/in/apavlidi/",
+        "github": "https://github.com/apavlidi",
+        "website": "https://apavlidi.com"
+      },
+      {
+        "name": "Kostas Visnia",
+        "role": "Technical Account Manager at Dynatrace",
+        "location": "Βαρκελώνη, Ισπανία",
+        "image": "/assets/kostikas.jpg",
+        "bio": "Technical Account Manager με deep expertise σε networking, cloud infrastructure και enterprise systems. Ο Κώστας έκανε transition από hands-on technical roles σε senior consulting, δουλεύοντας με global Fortune 500 companies για να διασφαλίσει ότι τα συστήματά τους τρέχουν flawlessly. Φέρνει ένα unique business-aware approach στο engineering education, διδάσκοντας όχι μόνο πώς να γράφεις κώδικα, αλλά πώς να σκέφτεσαι σαν professional engineer σε corporate περιβάλλον.",
+        "highlights": [
+          "Expert σε cloud infrastructure και networking at scale",
+          "Δουλεύει με Fortune 500 companies σε technical strategy",
+          "Passionate για να διδάξει το business side του engineering",
+          "Γεφυρώνει το χάσμα μεταξύ technical excellence και business needs"
+        ],
+        "linkedin": "https://www.linkedin.com/in/kvisnia/"
+      },
+      {
+        "name": "Vasilis Samoladas",
+        "role": "Frontend Engineer at Kiwi",
+        "location": "Πράγα, Τσεχία",
+        "image": "/assets/sam.png",
+        "bio": "Frontend Engineer passionate για AI και το να φτιάχνει products που οι άνθρωποι αγαπούν. Με 200+ user interviews, ο Βασίλης φέρνει strong product thinking και design sensibility στο engineering. Είναι η απόδειξη ότι το mentorship model του DevReady δουλεύει. Τον βοηθήσαμε να βρει το πρώτο του role, και τώρα βοηθάει τους άλλους να κάνουν το ίδιο.",
+        "highlights": [
+          "Passionate για AI και user-centric products",
+          "200+ user interviews, βαθιά κατανόηση των αναγκών των χρηστών",
+          "Strong product thinking και design sensibility",
+          "Ο πρώτος μας mentee πριν καν υπάρξει το DevReady, τώρα βοηθάει άλλους"
+        ],
+        "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/"
+      }
+    ],
+    "timelineTitle": "Το Ταξίδι",
+    "timelineDescription": "Πώς πήγαμε από δεκάδες απορρίψεις σε δουλειές στο να χτίσουμε το DevReady",
+    "timeline": [
+      {
+        "date": "2017-2018",
+        "location": "Θεσσαλονίκη, Ελλάδα",
+        "title": "Η Αρχή: Rejections, Rejections, Rejections",
+        "description": "Μετά την αποφοίτηση, ο Alex και ο Κώστας προσπάθησαν να βρουν δουλειά στο εξωτερικό. Η πραγματικότητα χτύπησε σκληρά: απόρριψη πίσω από απόρριψη. Γρήγορα κατάλαβαν πόσα δεν ήξεραν. Κανείς δεν τους είχε διδάξει πώς λειτουργεί πραγματικά η αγορά, πώς να κάνουν interview, ή πώς να παρουσιάσουν τον εαυτό τους. Έτσι βοήθησαν ο ένας τον άλλον, ξεκίνησαν την καριέρα τους στην Ελλάδα, έμαθαν με τον δύσκολο τρόπο, και τελικά κατάφεραν να βρουν δουλειές στο εξωτερικό.",
+        "image": "/assets/timeline/alex_kostas.png"
+      },
+      {
+        "date": "2018-2023",
+        "location": "Λονδίνο, Ελλάδα, Βαρκελώνη, Βέλγιο",
+        "title": "Gaining Experience and Expertise",
+        "description": "Ο Alex και ο Κώστας δούλεψαν σε διαφορετικές εταιρείες σε Λονδίνο, Ελλάδα, Βαρκελώνη και Βέλγιο. Απέτυχαν και έμαθαν, επανέλαβαν και βελτιώθηκαν. Μέσα από trial and error, έγιναν επαγγελματίες στο industry, καταλαβαίνοντας όχι μόνο πώς να γράφουν κώδικα, αλλά πώς λειτουργεί πραγματικά ο tech κόσμος. Έμαθαν τι ψάχνουν πραγματικά οι εταιρείες, πώς να πλοηγηθούν σε interviews, και πώς να χτίσουν καριέρα.",
+        "image": "/assets/timeline/merged.jpg"
+      },
+      {
+        "date": "2023",
+        "location": "Remote",
+        "title": "Το Break into Tech του Βασίλη",
+        "description": "Ο Βασίλης ήταν στενός φίλος του Alex και του Κώστα. Μετά την αποφοίτησή του, δυσκολευόταν να βρει την πρώτη του δουλειά στο tech. Ζήτησε τη βοήθειά τους, και τον καθοδήγησαν σε όλη τη διαδικασία: interview prep, portfolio building, CV optimization. Με το mentorship τους, ο Βασίλης βρήκε το πρώτο του engineering role.",
+        "image": "/assets/timeline/maroco.jpg"
+      },
+      {
+        "date": "2023-2024",
+        "location": "Remote",
+        "title": "Το Κάναμε Ξανά και Ξανά και Ξανά",
+        "description": "Οργανικά, αρχίσαμε να βοηθάμε και άλλους φίλους να μπουν στο tech. Μετά ξεκινήσαμε να κάνουμε mentoring 1-on-1 και σε άλλους ανθρώπους που δεν γνωρίζαμε καν. Ο Alex είχε ήδη ξεκινήσει να κάνει mentoring σε engineers στην Codurance και στην Skyscanner. Το pattern ήταν ξεκάθαρο: η structured καθοδήγηση δουλεύει, και περισσότεροι άνθρωποι τη χρειάζονταν.",
+        "image": "/assets/timeline/bill_kostas.JPG"
+      },
+      {
+        "date": "2024",
+        "location": "Αθήνα, Ελλάδα",
+        "title": "Η Ιδέα του DevReady Γεννιέται",
+        "description": "Καθόμασταν σε ένα καφέ στην Αθήνα όταν η ιδέα μας ήρθε, σχεδόν φευγαλέα. Τι θα γινόταν αν μετατρέπαμε όλα όσα μάθαμε σε κάτι structured; Τι θα γινόταν αν μπορούσαμε να βοηθήσουμε περισσότερους ανθρώπους, όχι μόνο έναν-έναν, αλλά at scale; Εκεί άρχισε να παίρνει μορφή το DevReady.",
+        "image": "/assets/timeline/logo.svg"
+      },
+      {
+        "date": "2025",
+        "location": "Remote",
+        "title": "Research, Validation & Η Πρώτη μας Success Story",
+        "description": "Κάναμε interview 100+ aspiring developers σε όλη την Ελλάδα για να καταλάβουμε τα pain points τους. Το μήνυμα ήταν ξεκάθαρο: η Ελλάδα έχει το talent, αλλά λείπουν structured paths, mentorship και industry context. Φτιάξαμε το DevReady, τρέξαμε το πρώτο μας cohort, και είδαμε τους πρώτους μας students να βρίσκουν τις dream δουλειές τους. Το model δουλεύει.",
+        "image": "/assets/timeline/students.png"
+      },
+      {
+        "date": "2026",
+        "location": "Remote",
+        "title": "Επόμενο Βήμα: Εσύ",
+        "description": "Το πρώτο μας cohort ξεκινάει τον Απρίλιο 2026. Είμαστε έτοιμοι να βοηθήσουμε την επόμενη γενιά Ελλήνων developers να μπουν στην tech με το ακριβές blueprint που έχουμε refine για χρόνια. Θα είσαι μέρος αυτού του ταξιδιού;",
+        "image": "/assets/timeline/bill.png"
+      }
+    ],
+    "ctaTitle": "Έτοιμος να Ξεκινήσεις το Ταξίδι σου;",
+    "ctaDescription": "Έλα στο πρώτο μας cohort και μάθε από engineers που ήταν ακριβώς εκεί που είσαι τώρα."
   },
   "newsletter": {
     "title": "Δωρεάν Weekly Engineering Tips",
