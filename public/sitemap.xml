@@ -12,12 +12,20 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Bootcamp Page -->
+  <!-- Accelerator Page -->
   <url>
-    <loc>https://www.devready.gr/bootcamp</loc>
+    <loc>https://www.devready.gr/accelerator</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- Team Page -->
+  <url>
+    <loc>https://www.devready.gr/team</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Contact Page -->
@@ -25,7 +33,7 @@
     <loc>https://www.devready.gr/contact</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- DevPress Blog -->
