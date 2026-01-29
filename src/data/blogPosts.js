@@ -119,7 +119,7 @@ Don't be afraid to ask people to mentor you; most people will be happy to do it.
     readTimeGr: "6 λεπτά διάβασμα",
     tags: ["Mentoring", "Career", "Growth"],
     tagsGr: ["Mentoring", "Καριέρα", "Ανάπτυξη"],
-    image: "/assets/blogs/mentoring/mentoring.jpg",
+    image: "/assets/blogs/mentoring/mentoring.webp",
     published: true
   },
   {
