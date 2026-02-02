@@ -185,9 +185,6 @@ const Accelerator = () => {
                   {t('common.bookCall')}
                 </Link>
               </Button>
-              <p className="text-xs text-muted-foreground mt-3">
-                {t('common.moneyBackGuarantee')}
-              </p>
             </div>
 
             {/* Key Info Cards */}
