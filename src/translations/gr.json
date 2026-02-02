@@ -299,7 +299,14 @@
     "backToHome": "Επιστροφή στην αρχική",
     "backToArticleList": "Επιστροφή στη λίστα άρθρων",
     "authorInfo": "Πληροφορίες συγγραφέα",
-    "callToAction": "Κλήση σε δράση"
+    "callToAction": "Κλήση σε δράση",
+    "blogGateTitle": "Συνέχισε την ανάγνωση",
+    "blogGateDescription": "Βάλε το email σου για να διαβάσεις το πλήρες άρθρο.\n\nReal-world code practices, career hacks, και insider tips από engineers που δουλεύουν σε top companies.",
+    "blogGatePlaceholder": "Το email σου",
+    "blogGateButton": "Συνέχεια",
+    "blogGateSuccess": "Ευχαριστούμε! Απόλαυσε το υπόλοιπο άρθρο.",
+    "blogGatePrivacy": "Σεβόμαστε το privacy σου. Unsubscribe ανά πάσα στιγμή.",
+    "newsletterIntro": "Θέλεις περισσότερα άρθρα και συμβουλές; Λάβε δωρεάν weekly engineering tips στο inbox σου."
   },
   "contact": {
     "backToHome": "Πίσω στην Αρχική",

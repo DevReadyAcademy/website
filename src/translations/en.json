@@ -300,7 +300,14 @@
     "backToHome": "Back to home",
     "backToArticleList": "Back to article list",
     "authorInfo": "Author information",
-    "callToAction": "Call to action"
+    "callToAction": "Call to action",
+    "blogGateTitle": "Continue reading",
+    "blogGateDescription": "Enter your email to read the full article.",
+    "blogGatePlaceholder": "Your email",
+    "blogGateButton": "Continue",
+    "blogGateSuccess": "Thanks! Enjoy the rest of the article.",
+    "blogGatePrivacy": "We respect your privacy. Unsubscribe at any time.",
+    "newsletterIntro": "Want more articles and tips like this? Get our weekly engineering tips in your inbox."
   },
   "contact": {
     "backToHome": "Back to Home",
