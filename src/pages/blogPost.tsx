@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, Calendar, Clock, Share2, Facebook, Twitter, Linkedin, Link as LinkIcon } from "lucide-react";
+import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin, Link as LinkIcon } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
@@ -9,8 +9,9 @@ import { useToast } from "../components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Header from "../components/Header";
-import Newsletter from "../components/Newsletter";
 import AcceleratorCTA from "../components/AcceleratorCTA";
+import BlogReadGate, { BLOG_ACCESS_KEY } from "../components/BlogReadGate";
+
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -53,6 +54,8 @@ const BlogPost = () => {
   const content = language === 'gr' ? post.contentGr : post.content;
   const tags = language === 'gr' ? post.tagsGr : post.tags;
   const readTime = language === 'gr' ? post.readTimeGr : post.readTime;
+
+  const [hasAccess, setHasAccess] = useState(() => typeof window !== 'undefined' && !!localStorage.getItem(BLOG_ACCESS_KEY));
 
   // Always use production URL for sharing (social media can't access localhost)
   const currentUrl = `https://www.devready.gr/devpress/${post.slug}`;
@@ -228,30 +231,56 @@ const BlogPost = () => {
             </div>
 
             {/* Content */}
-            <div className="prose prose-lg max-w-none dark:prose-invert
-              prose-headings:font-bold prose-headings:text-foreground
-              prose-h1:text-4xl prose-h1:mb-6
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
-              prose-p:text-foreground/90 prose-p:leading-relaxed prose-p:mb-6
-              prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-              prose-strong:text-foreground prose-strong:font-semibold
-              prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
-              prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-              prose-li:text-foreground/90 prose-li:mb-2
-              prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
-              prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic
-              prose-table:border-collapse prose-table:w-full
-              prose-th:border prose-th:border-border prose-th:p-2 prose-th:bg-muted
-              prose-td:border prose-td:border-border prose-td:p-2"
-            >
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-            </div>
-
-            {/* Newsletter */}
-            <div className="mt-12">
-              <Newsletter />
-            </div>
+            {!hasAccess ? (
+              <>
+                <div className="relative max-h-[80vh] overflow-hidden">
+                  <div className="prose prose-lg max-w-none dark:prose-invert
+                    prose-headings:font-bold prose-headings:text-foreground
+                    prose-h1:text-4xl prose-h1:mb-6
+                    prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4
+                    prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
+                    prose-p:text-foreground/90 prose-p:leading-relaxed prose-p:mb-6
+                    prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+                    prose-strong:text-foreground prose-strong:font-semibold
+                    prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
+                    prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
+                    prose-li:text-foreground/90 prose-li:mb-2
+                    prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+                    prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic
+                    prose-table:border-collapse prose-table:w-full
+                    prose-th:border prose-th:border-border prose-th:p-2 prose-th:bg-muted
+                    prose-td:border prose-td:border-border prose-td:p-2"
+                  >
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+                  </div>
+                  <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent"
+                    aria-hidden
+                  />
+                </div>
+                <BlogReadGate onUnlock={() => setHasAccess(true)} />
+              </>
+            ) : (
+              <div className="prose prose-lg max-w-none dark:prose-invert
+                prose-headings:font-bold prose-headings:text-foreground
+                prose-h1:text-4xl prose-h1:mb-6
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4
+                prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
+                prose-p:text-foreground/90 prose-p:leading-relaxed prose-p:mb-6
+                prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+                prose-strong:text-foreground prose-strong:font-semibold
+                prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
+                prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
+                prose-li:text-foreground/90 prose-li:mb-2
+                prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic
+                prose-table:border-collapse prose-table:w-full
+                prose-th:border prose-th:border-border prose-th:p-2 prose-th:bg-muted
+                prose-td:border prose-td:border-border prose-td:p-2"
+              >
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+              </div>
+            )}
 
             {/* CTA */}
             <div className="mt-12">
