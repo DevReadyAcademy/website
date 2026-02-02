@@ -263,6 +263,10 @@
       {
         "question": "What happens after I book a call?",
         "answer": "We'll discuss your goals, answer any questions, and if it's a good fit, we'll finalize your enrollment and secure your early bird pricing."
+      },
+      {
+        "question": "What are the payment options?",
+        "answer": "Pay the full amount now, or 50% upfront and 50% at the start of the program, if that works for you.\n\nIf neither option works for you, send us a message and we'll try to find a solution together."
       }
     ],
     "finalCtaTitle": "Ready to Become Industry-Ready?",
