@@ -39,7 +39,7 @@
     "description": "An intensive program designed to transform you into an industry-ready tech professional.",
     "timeCommitmentTitle": "Time Commitment",
     "timeCommitment": "6 weeks intensive",
-    "timeCommitmentDetail": "~8 hrs/week total (incl. your work)",
+    "timeCommitmentDetail": "~2-3 hrs/week",
     "formatTitle": "Format",
     "format": "100% Remote",
     "formatDetail": "Live + recordings",
@@ -72,7 +72,7 @@
     "infoCards": {
       "timeCommitmentTitle": "Time Commitment",
       "timeCommitment": "6 weeks intensive",
-      "timeCommitmentDetail": "~8 hrs/week total",
+      "timeCommitmentDetail": "~2-3 hrs/week",
       "formatTitle": "Format",
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
@@ -242,7 +242,7 @@
       },
       {
         "question": "What's the time commitment?",
-        "answer": "Expect around 8 hours per week total: 2-3 hours of live teaching sessions, plus 5-6 hours for project work and independent learning."
+        "answer": "Expect ~2-3 hours per week of live sessions. The other ~5 hours are from your personal effort (project work and independent learning)."
       },
       {
         "question": "How many people will be in my cohort?",

@@ -40,7 +40,7 @@
     "description": "Ένα εντατικό πρόγραμμα σχεδιασμένο να σε μετατρέψει σε έναν industry-ready tech professional.",
     "timeCommitmentTitle": "Διάρκεια",
     "timeCommitment": "6 εβδομάδες εντατικά",
-    "timeCommitmentDetail": "~8 ώρες/εβδομάδα συνολικά",
+    "timeCommitmentDetail": "~2-3 ώρες/εβδομάδα",
     "formatTitle": "Format",
     "format": "100% Remote",
     "formatDetail": "Live + recordings",
@@ -73,7 +73,7 @@
     "infoCards": {
       "timeCommitmentTitle": "Διάρκεια",
       "timeCommitment": "6 εβδομάδες εντατικά",
-      "timeCommitmentDetail": "~8 ώρες/εβδομάδα συνολικά",
+      "timeCommitmentDetail": "~2-3 ώρες/εβδομάδα",
       "formatTitle": "Format",
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
@@ -241,7 +241,7 @@
       },
       {
         "question": "Ποια είναι η time commitment?",
-        "answer": "Περίμενε περίπου 8 ώρες την εβδομάδα συνολικά: 2-3 ώρες live teaching sessions, συν 5-6 ώρες για project work και independent learning."
+        "answer": "Περίμενε ~2-3 ώρες την εβδομάδα για live sessions. Οι υπόλοιπες ~5 ώρες προέρχονται από την προσωπική σου αφοσίωση (project work και independent learning)."
       },
       {
         "question": "Πόσα άτομα θα είναι στο cohort μου?",
