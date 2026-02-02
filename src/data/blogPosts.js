@@ -4,13 +4,13 @@ export const blogPosts = [
     slug: "software-interviews-dos-and-donts",
     title: "Software Interviews - Dos & Donts",
     titleGr: "Software Interviews - Dos & Donts",
-    excerpt: "I've done 400+ interviews and interviewed 300+ engineers across all levels. Here's what you should and shouldn't do to increase your chances of passing software engineering interviews.",
-    excerptGr: "Έχω κάνει 400+ interviews και έχω πάρει interview σε 300+ engineers σε όλα τα levels. Εδώ είναι τι πρέπει και τι δεν πρέπει να κάνεις για να αυξήσεις τις πιθανότητες να περάσεις software engineering interviews.",
+    excerpt: "I've done 500+ interviews and interviewed 200+ software engineers across all levels. Here's what you should and shouldn't do to increase your chances of passing software engineering interviews.",
+    excerptGr: "Έχω κάνει 500+ interviews και έχω πάρει interview σε 200+ software engineers σε όλα τα levels. Εδώ είναι τι πρέπει και τι δεν πρέπει να κάνεις για να αυξήσεις τις πιθανότητες να περάσεις software engineering interviews.",
     content: `# 💼 Software Interviews - Dos & Donts
 
 ## 👋 Intro
 
-I've done more than 400 interviews and interviewed more than 300 engineers in various roles, from junior to staff engineers throughout my career. Last year I found myself coaching many people in my network regarding interviews, so I thought I could write a blog post about it. The idea of the blog post is to give you summarized information of what interviews look like in software engineering and what you should and shouldn't do to increase your chance of passing your interviews. Every company does this differently, and the difficulty level also differs based on the position. I will focus on general notes that do apply everywhere unless mentioned otherwise.
+I've done more than 500 interviews and interviewed more than 200 software engineers in various roles, from junior to staff engineers throughout my career. Last year I found myself coaching many people in my network regarding interviews, so I thought I could write a blog post about it. The idea of the blog post is to give you summarized information of what interviews look like in software engineering and what you should and shouldn't do to increase your chance of passing your interviews. Every company does this differently, and the difficulty level also differs based on the position. I will focus on general notes that do apply everywhere unless mentioned otherwise.
 
 ## 🗣️ Behavioural
 
@@ -117,7 +117,7 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
 
 ## 👋 Εισαγωγή
 
-Έχω κάνει πάνω από 400 interviews και έχω πάρει interview σε περισσότερους από 300 engineers σε διάφορους ρόλους, από junior έως staff engineers στην καριέρα μου. Πέρυσι βρέθηκα να κάνω coach πολλούς ανθρώπους στο δίκτυό μου σχετικά με interviews, οπότε σκέφτηκα να γράψω ένα blog post γι' αυτό. Η ιδέα του blog post είναι να σου δώσω συνοπτικές πληροφορίες για το πώς είναι τα interviews στο software engineering και τι πρέπει και τι δεν πρέπει να κάνεις για να αυξήσεις την πιθανότητα να περάσεις τα interviews σου. Κάθε εταιρεία το κάνει διαφορετικά και το επίπεδο δυσκολίας διαφέρει ανάλογα με τη θέση. Θα εστιάσω σε γενικές σημειώσεις που ισχύουν παντού, εκτός αν αναφέρεται διαφορετικά.
+Έχω κάνει πάνω από 500 interviews και έχω πάρει interview σε περισσότερους από 200 software engineers σε διάφορους ρόλους, από junior έως staff engineers στην καριέρα μου. Πέρυσι βρέθηκα να κάνω coach πολλούς ανθρώπους στο δίκτυό μου σχετικά με interviews, οπότε σκέφτηκα να γράψω ένα blog post γι' αυτό. Η ιδέα του blog post είναι να σου δώσω συνοπτικές πληροφορίες για το πώς είναι τα interviews στο software engineering και τι πρέπει και τι δεν πρέπει να κάνεις για να αυξήσεις την πιθανότητα να περάσεις τα interviews σου. Κάθε εταιρεία το κάνει διαφορετικά και το επίπεδο δυσκολίας διαφέρει ανάλογα με τη θέση. Θα εστιάσω σε γενικές σημειώσεις που ισχύουν παντού, εκτός αν αναφέρεται διαφορετικά.
 
 ## 🗣️ Behavioural
 
