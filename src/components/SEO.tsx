@@ -7,6 +7,8 @@ interface SEOProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
+  /** Alt text for og:image / twitter:image (accessibility & SEO when sharing) */
+  ogImageAlt?: string;
   ogTitle?: string;
   ogType?: string;
   noindex?: boolean;
@@ -22,6 +24,7 @@ const SEO: React.FC<SEOProps> = ({
   keywords = "software engineering accelerator, coding accelerator, learn programming, software development, tech career, DevReady, career change, software engineer training",
   canonical = "https://www.devready.gr/",
   ogImage = "https://www.devready.gr/assets/logo-320.webp",
+  ogImageAlt,
   ogTitle,
   ogType = "website",
   noindex = false,
@@ -79,7 +82,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={ogTitleFinal} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content={`${fullTitle} - DevReady`} />
+      <meta name="twitter:image:alt" content={ogImageAlt ?? `${fullTitle} - DevReady`} />
 
       {/* Structured Data / JSON-LD */}
       {structuredData && (
