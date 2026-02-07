@@ -12,8 +12,10 @@ import AcceleratorCTA from "../components/AcceleratorCTA";
 const DevPress = () => {
   const { language, t } = useLanguage();
   
-  // Filter only published posts
-  const publishedPosts = blogPosts.filter(post => post.published !== false);
+  // Filter only published posts, latest first
+  const publishedPosts = blogPosts
+    .filter(post => post.published !== false)
+    .sort((a, b) => b.date.localeCompare(a.date));
 
   // Structured data for blog
   const blogSchema = {

@@ -55,7 +55,12 @@ const BlogPost = () => {
   const tags = language === 'gr' ? post.tagsGr : post.tags;
   const readTime = language === 'gr' ? post.readTimeGr : post.readTime;
 
-  const [hasAccess, setHasAccess] = useState(() => typeof window !== 'undefined' && !!localStorage.getItem(BLOG_ACCESS_KEY));
+  const isLocalDev =
+    typeof window !== 'undefined' &&
+    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+  const [hasAccess, setHasAccess] = useState(
+    () => typeof window !== 'undefined' && (!!localStorage.getItem(BLOG_ACCESS_KEY) || isLocalDev)
+  );
 
   // Always use production URL for sharing (social media can't access localhost)
   const currentUrl = `https://www.devready.gr/devpress/${post.slug}`;
@@ -124,6 +129,16 @@ const BlogPost = () => {
         canonical={currentUrl}
         ogTitle={title}
         ogImage={post.image ? `https://www.devready.gr${post.image}` : undefined}
+        ogImageAlt={
+          (() => {
+            const p = post as { imageAlt?: string; imageAltGr?: string };
+            return p.imageAlt != null
+              ? language === 'gr'
+                ? p.imageAltGr ?? p.imageAlt
+                : p.imageAlt
+              : undefined;
+          })()
+        }
         ogType="article"
         articlePublishedTime={post.date}
         articleAuthor={post.author}
