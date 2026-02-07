@@ -127,7 +127,8 @@ const BlogPost = () => {
         description={language === 'gr' ? post.excerptGr : post.excerpt}
         keywords={tags.join(', ')}
         canonical={currentUrl}
-        ogTitle={title}
+        ogTitle={post.titleGr}
+        ogDescription={post.excerptGr}
         ogImage={post.image ? `https://www.devready.gr${post.image}` : undefined}
         ogImageAlt={
           (() => {
