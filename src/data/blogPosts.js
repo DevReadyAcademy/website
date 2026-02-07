@@ -228,263 +228,265 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
     image: "/assets/blogs/interview.jpg",
     published: true // Set to false to hide this post from DevPress
   },
-  // Sample post - hidden for now
-  /*
   {
-    id: 1,
-    slug: "from-student-to-engineer",
-    title: "From Student to Software Engineer: The Real Journey",
-    titleGr: "Από Φοιτητής σε Software Engineer: Το Πραγματικό Ταξίδι",
-    excerpt: "The path from university to landing your first tech job isn't what most CS programs teach you. Here's what actually matters.",
-    excerptGr: "Η πορεία από το πανεπιστήμιο στην πρώτη σου δουλειά στο tech δεν είναι αυτό που διδάσκουν τα CS προγράμματα. Αυτό που πραγματικά μετράει.",
-    content: `
-# From Student to Software Engineer: The Real Journey
+    id: 3,
+    slug: "a-project-that-gets-you-hired",
+    title: "A Project That Gets You Hired",
+    titleGr: "A Project That Gets You Hired",
+    excerpt:
+        "What project should I build to showcase engineering abilities and actually get hired? You don’t need rocket science. You need one project that shows real engineering disciplines and practices.",
+    excerptGr:
+        "Τι project πρέπει να φτιάξω για να δείξω engineering abilities και να με κάνουν hire; Δεν χρειάζεσαι rocket science. Χρειάζεσαι ένα project που δείχνει engineering disciplines και practices.",
+    content: `# A Project That Gets You Hired
 
-If you're a computer science student or recent graduate in Greece, you've probably noticed something: **your degree isn't enough**.
+## 👋 Intro
 
-You can solve algorithms. You understand data structures. You've passed your exams. But when you look at job postings from companies abroad—or even great Greek tech companies—you realize something is missing.
+One of the most common questions we get is: **"What project should I build to showcase my engineering abilities and actually get hired?"**
 
-## The Gap Nobody Talks About
+A lot of people assume the answer is something complex. Something impressive. Like rocket science or something.
 
-Universities teach you **computer science**. The industry needs **software engineering**.
+That assumption is wrong.
 
-Here's what I mean:
+You don’t get hired because your project is complex. You get hired because your project shows **engineering disciplines and practices**. Hiring managers look for signals that you understand how software is built in the real world: how you scope work, make decisions, keep things clean, document them, and actually finish.
 
-### What University Teaches:
-- Algorithms and complexity
-- Theoretical foundations
-- Academic problem-solving
-- Individual assignments
-
-### What Industry Needs:
-- Building production systems
-- Working with existing codebases
-- Team collaboration
-- Git, CI/CD, testing
-- Communication skills
-
-**The gap is real.** And most students discover it the hard way—after dozens of rejections.
-
-## My Story
-
-I graduated with good grades. I could solve LeetCode mediums. I thought I was ready.
-
-**I was wrong.**
-
-My first 20 applications? Rejections. I didn't even understand why.
-
-Then I realized: I knew how to code, but I didn't know how to **engineer**.
-
-- I didn't know how to structure a real project
-- My GitHub looked like a graveyard of half-finished tutorials
-- I couldn't explain my work in interviews
-- I had no portfolio that demonstrated real skills
-
-So I spent 6 months learning the hard way:
-- Built a real project (not a todo app)
-- Learned Git properly
-- Practiced system design
-- Rewrote my CV 15 times
-- Mock interviewed with friends
-
-**Then everything changed.** Within 2 months, I had 3 offers from companies in London.
-
-## What Actually Matters
-
-After working in the industry and mentoring 50+ developers, here's what I've learned:
-
-### 1. Build Real Projects
-Not tutorials. Not courses. **Real projects** that solve real problems.
-
-Your GitHub should show:
-- Production-quality code
-- Proper project structure
-- Tests
-- Documentation
-- Deployed applications
-
-### 2. Master the Fundamentals
-Not theory—**engineering fundamentals**:
-- How to structure code
-- How to work with APIs
-- How to debug effectively
-- How to use Git in a team
-- How to write tests
-
-### 3. Learn to Communicate
-Tech interviews aren't coding tests. They're **conversations**.
-
-You need to:
-- Explain your thinking process
-- Ask clarifying questions
-- Discuss trade-offs
-- Collaborate on solutions
-
-### 4. Build Your Brand
-Companies don't just hire skills—they hire **people**.
-
-Your online presence matters:
-- Professional GitHub
-- Well-written CV
-- LinkedIn that tells your story
-- Portfolio that showcases your work
-
-## The Path Forward
-
-Here's the truth: **you don't need another program that teaches you React**.
-
-You need:
-- **Structured guidance** on what to build
-- **Real feedback** on your code and projects
-- **Industry mentorship** from people who've been there
-- **Interview preparation** that actually works
-
-That's why we built DevReady.
-
-## What You Can Do Today
-
-1. **Pick ONE project** and build it properly
-2. **Push to GitHub** daily
-3. **Apply to 5 companies** (even if you feel "not ready")
-4. **Connect with engineers** on LinkedIn
-5. **Share your progress** publicly
-
-The journey from student to engineer isn't easy. But it's absolutely possible.
-
-**You don't need to be perfect. You need to be ready.**
+In this post, we’ll look at what kind of project helps you stand out, what it needs to include, and what are common mistakes junior engineers make.
 
 ---
 
-Want to accelerate your journey? Check out our [6-week program](/accelerator) designed specifically for Greek developers looking to break into the industry.
-    `,
-    contentGr: `
-# Από Φοιτητής σε Software Engineer: Το Πραγματικό Ταξίδι
+## 🧠 The biggest misconception about projects
 
-Αν είσαι φοιτητής ή πρόσφατος απόφοιτος πληροφορικής στην Ελλάδα, μάλλον έχεις παρατηρήσει κάτι: **ο τίτλος σου δεν είναι αρκετός**.
+Most candidates try to impress with complexity. More features, more tools, more buzzwords.
 
-Μπορείς να λύνεις αλγορίθμους. Καταλαβαίνεις data structures. Πέρασες τις εξετάσεις. Αλλά όταν βλέπεις job postings από εταιρείες του εξωτερικού—ή ακόμα και από μεγάλες ελληνικές tech εταιρείες—καταλαβαίνεις ότι κάτι λείπει.
+What interviewers are actually looking for is simpler: can you take a small problem and solve it properly?
 
-## Το Χάσμα που Κανείς δεν Μιλάει
+Real engineering is not about how much you know. It’s about clarity, trade-offs, and principles.  
+A smaller project done well says much more than a big project that’s half-finished.
 
-Τα πανεπιστήμια διδάσκουν **computer science**. Η αγορά χρειάζεται **software engineering**.
-
-Να τι εννοώ:
-
-### Τι Διδάσκει το Πανεπιστήμιο:
-- Αλγόριθμους και complexity
-- Θεωρητικά θεμέλια
-- Ακαδημαϊκή επίλυση προβλημάτων
-- Ατομικές εργασίες
-
-### Τι Χρειάζεται η Αγορά:
-- Κατασκευή production συστημάτων
-- Δουλειά με existing codebases
-- Team collaboration
-- Git, CI/CD, testing
-- Communication skills
-
-**Το χάσμα είναι πραγματικό.** Και οι περισσότεροι φοιτητές το ανακαλύπτουν με τον δύσκολο τρόπο—μετά από δεκάδες απορρίψεις.
-
-## Η Δική μου Ιστορία
-
-Αποφοίτησα με καλούς βαθμούς. Μπορούσα να λύνω LeetCode mediums. Νόμιζα ότι ήμουν έτοιμος.
-
-**Έκανα λάθος.**
-
-Οι πρώτες μου 20 αιτήσεις; Απορρίψεις. Δεν καταλάβαινα καν γιατί.
-
-Μετά το κατάλαβα: Ήξερα να κάνω code, αλλά δεν ήξερα πώς να κάνω **engineering**.
-
-- Δεν ήξερα πώς να δομήσω ένα πραγματικό project
-- Το GitHub μου έμοιαζε με νεκροταφείο μισοτελειωμένων tutorials
-- Δεν μπορούσα να εξηγήσω τη δουλειά μου σε interviews
-- Δεν είχα portfolio που να δείχνει πραγματικά skills
-
-Οπότε πέρασα 6 μήνες μαθαίνοντας με τον δύσκολο τρόπο:
-- Έφτιαξα ένα πραγματικό project (όχι todo app)
-- Έμαθα Git σωστά
-- Εξασκήθηκα σε system design
-- Ξαναέγραψα το CV μου 15 φορές
-- Έκανα mock interviews με φίλους
-
-**Μετά όλα άλλαξαν.** Μέσα σε 2 μήνες, είχα 3 προσφορές από εταιρείες στο Λονδίνο.
-
-## Τι Πραγματικά Μετράει
-
-Αφού δούλεψα στο industry και έκανα mentor 50+ developers, αυτό έμαθα:
-
-### 1. Φτιάξε Πραγματικά Projects
-Όχι tutorials. Όχι courses. **Πραγματικά projects** που λύνουν πραγματικά προβλήματα.
-
-Το GitHub σου πρέπει να δείχνει:
-- Production-quality code
-- Σωστή project structure
-- Tests
-- Documentation
-- Deployed applications
-
-### 2. Master τα Fundamentals
-Όχι θεωρία—**engineering fundamentals**:
-- Πώς να δομήσεις code
-- Πώς να δουλέψεις με APIs
-- Πώς να κάνεις debug αποτελεσματικά
-- Πώς να χρησιμοποιήσεις Git σε team
-- Πώς να γράψεις tests
-
-### 3. Μάθε να Επικοινωνείς
-Τα tech interviews δεν είναι coding tests. Είναι **συζητήσεις**.
-
-Πρέπει να:
-- Εξηγήσεις τη σκέψη σου
-- Κάνεις clarifying questions
-- Συζητήσεις trade-offs
-- Συνεργαστείς σε λύσεις
-
-### 4. Χτίσε το Brand σου
-Οι εταιρείες δεν προσλαμβάνουν μόνο skills—προσλαμβάνουν **ανθρώπους**.
-
-Η online παρουσία σου μετράει:
-- Professional GitHub
-- Καλογραμμένο CV
-- LinkedIn που λέει την ιστορία σου
-- Portfolio που δείχνει τη δουλειά σου
-
-## Το Μονοπάτι Μπροστά
-
-Η αλήθεια: **δεν χρειάζεσαι άλλο ένα πρόγραμμα που διδάσκει React**.
-
-Χρειάζεσαι:
-- **Structured guidance** για το τι να φτιάξεις
-- **Real feedback** στον κώδικα και τα projects σου
-- **Industry mentorship** από ανθρώπους που έχουν περάσει από εκεί
-- **Interview preparation** που πραγματικά δουλεύει
-
-Γι' αυτό φτιάξαμε το DevReady.
-
-## Τι Μπορείς να Κάνεις Σήμερα
-
-1. **Διάλεξε ΕΝΑ project** και φτιάξε το σωστά
-2. **Push στο GitHub** καθημερινά
-3. **Κάνε αίτηση σε 5 εταιρείες** (ακόμα κι αν νιώθεις "not ready")
-4. **Συνδέσου με engineers** στο LinkedIn
-5. **Μοιράσου την πρόοδό σου** δημοσίως
-
-Το ταξίδι από φοιτητής σε engineer δεν είναι εύκολο. Αλλά είναι απολύτως εφικτό.
-
-**Δεν χρειάζεται να είσαι perfect. Χρειάζεται να είσαι ready.**
+That’s why many GitHub profiles with lots of repositories don’t stand out. They show activity, not engineering maturity.
 
 ---
 
-Θέλεις να επιταχύνεις το ταξίδι σου; Δες το [6-week πρόγραμμά μας](/accelerator) σχεδιασμένο ειδικά για Έλληνες developers που θέλουν να μπουν στο industry.
-    `,
+## ✅ So what kind of project should you build?
+
+To be honest, the idea itself doesn’t really matter. What matters is whether the project gives you enough room to demonstrate solid engineering practices.
+
+A great example is a **Kanban-style project or task manager**. Not because Kanban is special, but because it naturally includes things companies care about: state transitions, data modeling, business rules, UI state, and edge cases.
+
+It also resembles internal tools that engineers actually build in real companies.
+
+You are not being evaluated on originality. You are being evaluated on execution.
+
+---
+
+## 🧱 The blueprint: what your project must include
+
+This is where most projects fail. Not because the idea is bad, but because the basics required to be production ready are missing.
+
+### 📖 A proper README
+
+This is non-negotiable.
+
+Your README is essentially the **documentation and the brand of the project (and yourself)**. In real teams, engineers rely heavily on READMEs to quickly understand a system and run it locally. A good README shows professionalism and respect for other engineers’ time.
+
+It should clearly explain what the project does, how it runs, and which key decisions or assumptions you made. If someone has to read the code to understand your project, that’s already a problem.
+
+---
+
+### 🌍 Deployment
+
+Deployment matters because shipping software is part of the job.
+
+A deployed project shows that you understand environments, configuration, and the whole lifecycle of software development. It also allows reviewers to try your project without any setup.
+
+Even a simple free deployment is enough. The goal isn’t scale. The goal is that your project actually runs in a production environment.
+
+---
+
+### 🧹 Clean Code & Structure
+
+Writing clean code is a skill.
+
+Folder structure, naming, and separation of responsibilities show how you think as an engineer. In real teams, code is read far more often than it’s written.
+
+Clean code signals that you can collaborate and maintain software over time.
+
+---
+
+### 🧪 Testing
+
+You don’t need perfect coverage or dozens of tests.
+
+What matters is showing that you understand why tests exist and what is worth testing. A few meaningful tests around core logic are enough to demonstrate maturity.
+
+Tests show that you care about reliability, not just happy paths.
+
+---
+
+### 🤖 Basic automation (CI)
+
+Even a simple CI setup goes a long way.
+
+Running linting or tests automatically on every push shows that you are familiar with modern workflows and value consistency. This is how real teams protect code quality.
+
+---
+
+## ⚠️ Common issues that hurt otherwise good projects
+
+One common mistake is overengineering. Many people add features just to make the project look bigger, but end up with shallow implementations and unfinished work. Scope control is a real engineering skill.
+
+Another issue is missing documentation. Without a README, reviewers lack context and don’t know what to focus on or why decisions were made.
+
+Projects that run only locally feel more like university assignments than products, and many reviewers won’t even try to set them up.
+
+Finally, messy commits or copy-pasted code are easy to spot and usually signal rushing or lack of ownership.
+
+---
+
+## ❓ But what tech stack should I use?
+
+Honestly, it doesn’t matter that much.
+
+What matters is whether your stack allows you to demonstrate the things we talked about above. Choose a modern stack you’re comfortable with, or one relevant to the roles you’re applying for.
+
+No one will hire you because you picked a trendy framework. They will hire you because you used whatever you chose correctly.
+
+---
+
+## 🎯 Wrap up
+
+You don’t need many projects to break into tech. You need one project that clearly shows how you think and how you work. A project with proper scope, a strong README, deployment, clean code, testing, and thoughtful decisions is more than enough to stand out and gives you strong interview material.
+
+At DevReady, we help developers build exactly these kinds of projects. Not portfolio fluff, but realistic engineering work that hiring managers actually care about. If you want guidance, feedback from working engineers, and help turning your project into a real hiring asset, check out our [6-week accelerator](/accelerator).
+
+You don’t need to be impressive. You need to be ready.
+`,
+    contentGr: `# Ένα Project που σε Κάνει Hire
+
+## 👋 Intro
+
+Μία από τις πιο συχνές ερωτήσεις που δεχόμαστε είναι: **"Τι project πρέπει να φτιάξω για να δείξω engineering abilities και να με κάνουν hire;"**
+
+Πολλοί πιστεύουν ότι η απάντηση είναι κάτι complex. Κάτι εντυπωσιακό. Like "rocket science" or something.
+
+Αυτό δεν ισχύει.
+
+Δεν προσλαμβάνεσαι επειδή το project σου είναι complex. Προσλαμβάνεσαι επειδή δείχνει **engineering disciplines and practices**. Αυτό που κοιτάνε οι hiring managers είναι αν το project δείχνει ότι καταλαβαίνεις πώς χτίζεται software στον πραγματικό κόσμο: πώς ορίζεις scope, πώς παίρνεις αποφάσεις, πώς κρατάς τα πράγματα καθαρά, πώς τα τεκμηριώνεις και αν μπορείς να τα ολοκληρώσεις.
+
+Σε αυτό το post θα δούμε τι είδους project σε βοηθάει να ξεχωρίσεις, τι πρέπει να περιλαμβάνει και ποια είναι συχνά λάθη που κάνουν junior engineers.
+
+---
+
+## 🧠 Η μεγαλύτερη παρεξήγηση για τα projects
+
+Οι περισσότεροι προσπαθούν να εντυπωσιάσουν με πολυπλοκότητα. Περισσότερα features, περισσότερα εργαλεία, περισσότερα buzzwords.
+
+Αυτό που ψάχνουν οι interviewers είναι πιο απλό: μπορείς να πάρεις ένα μικρό πρόβλημα και να το λύσεις σωστά;
+
+Το πραγματικό engineering δεν έχει να κάνει με το πόσα ξέρεις, αλλά με τη σαφήνεια, τα trade-offs και τα principles.  
+Ένα smaller project καλοφτιαγμένο λέει πολύ περισσότερα από ένα μεγάλο project μισοτελειωμένο.
+
+Γι’ αυτό και πολλά GitHub profiles με πολλά repos δεν ξεχωρίζουν. Δείχνουν activity, όχι engineering maturity.
+
+---
+
+## ✅ Τι project πρέπει τελικά να φτιάξεις;
+
+To be honest η απάντηση είναι ότι η ιδέα δεν έχει τόση σημασία. Σημασία έχει αν το project σου σου δίνει χώρο να δείξεις σωστά engineering practices.
+
+Ένα πολύ καλό παράδειγμα είναι ένα **Kanban-style project ή task manager**. Όχι επειδή το Kanban είναι κάτι ιδιαίτερο, αλλά επειδή περιλαμβάνει φυσικά πράγματα που ενδιαφέρουν τις εταιρείες: state transitions, data modeling, business rules, UI state και edge cases.
+
+Δεν αξιολογείσαι για την πρωτοτυπία. Αξιολογείσαι για την εκτέλεση.
+
+---
+
+## 🧱 Το blueprint: τι πρέπει να περιλαμβάνει
+
+Εδώ αποτυγχάνουν τα περισσότερα projects. Όχι επειδή η ιδέα είναι κακή, αλλά επειδή λείπουν τα βασικά για να είναι production ready.
+
+### 📖 Ένα σωστό README
+
+Αυτό είναι non-negotiable.
+
+Το README σου είναι ουσιαστικά το **documentation and the brand of the project (and yourself)**. Στον πραγματικό κόσμο, οι engineers βασίζονται στα READMEs για να καταλάβουν γρήγορα ένα σύστημα και να το τρέξουν locally. Ένα καλό README δείχνει professionalism και ότι σέβεσαι τον χρόνο των άλλων.
+
+Πρέπει να εξηγεί καθαρά τι κάνει το project, πώς τρέχει και ποιες βασικές αποφάσεις ή assumptions έκανες. Αν κάποιος πρέπει να διαβάσει τον κώδικα για να καταλάβει το project, αυτό είναι ήδη πρόβλημα.
+
+---
+
+### 🌍 Deployment
+
+Το deployment έχει σημασία γιατί το να κάνεις ship software είναι μέρος της δουλειάς.
+
+Ένα deployed project δείχνει ότι καταλαβαίνεις environments, configuration και το whole lifecycle of a software development. Επίσης επιτρέπει σε κάποιον να δοκιμάσει το project χωρίς setup.
+
+Ακόμα και ένα απλό free deployment αρκεί. Ο στόχος δεν είναι το scale, αλλά το ότι το project σου όντως να τρέχει σε κάποιο production environment.
+
+---
+
+### 🧹 Clean Code & Structure
+
+Το να γράφεις clean code είναι skill.
+
+Η δομή των φακέλων, τα ονόματα και το separation of responsibilities δείχνουν πώς σκέφτεσαι ως engineer. Στις ομάδες, ο κώδικας διαβάζεται πολύ περισσότερο απ’ όσο γράφεται.
+
+Το clean code δείχνει ότι μπορείς να συνεργαστείς και να συντηρήσεις software σε βάθος χρόνου.
+
+---
+
+### 🧪 Testing
+
+Δεν χρειάζεσαι τέλειο coverage ή δεκάδες tests.
+
+Χρειάζεται να δείξεις ότι καταλαβαίνεις γιατί υπάρχουν τα tests και τι αξίζει να τεσταριστεί. Λίγα αλλά ουσιαστικά tests στο core logic είναι αρκετά για να δείξουν maturity.
+
+---
+
+### 🤖 Basic automation (CI)
+
+Ακόμα και ένα απλό CI setup κάνει μεγάλη διαφορά.
+
+Το να τρέχουν αυτόματα linting ή tests σε κάθε push δείχνει ότι είσαι εξοικειωμένος με σύγχρονα workflows και ότι σε νοιάζει η συνέπεια.
+
+---
+
+## ⚠️ Συχνά λάθη που κοστίζουν
+
+Ένα συχνό λάθος είναι το overengineering. Πολλοί προσθέτουν features μόνο και μόνο για να φαίνεται μεγάλο το project, αλλά καταλήγουν με μισές υλοποιήσεις και ανολοκλήρωτη δουλειά.
+
+Το να τρέχει το project μόνο locally το κάνει να μοιάζει περισσότερο με university assignment παρά με product και πολλοί reviewers δεν θα μπουν καν στη διαδικασία να το στήσουν.
+
+Τέλος, messy commits ή copy-paste code φαίνονται εύκολα και συνήθως δείχνουν βιασύνη ή έλλειψη ownership.
+
+---
+
+## ❓ "Αλλά ποιο tech stack να χρησιμοποιήσω;"
+
+Honestly, δεν έχει τόση σημασία.
+
+Σημασία έχει αν το stack σου επιτρέπει να δείξεις όλα όσα αναφέραμε παραπάνω. Διάλεξε ένα σύγχρονο stack που σου είναι άνετο ή που ταιριάζει με τις θέσεις στις οποίες κάνεις apply.
+
+Κανείς δεν θα σε προσλάβει επειδή διάλεξες trendy framework. Θα σε προσλάβει επειδή χρησιμοποίησες ό,τι διάλεξες σωστά.
+
+---
+
+## 🎯 Wrap up
+
+Δεν χρειάζεσαι πολλά projects για να μπεις στο tech. Χρειάζεσαι ένα project που να δείχνει καθαρά πώς σκέφτεσαι και πώς δουλεύεις. Ένα project με σωστό scope, καλό README, deployment, clean code, testing και σωστές αποφάσεις είναι αρκετό για να ξεχωρίσεις.
+
+Στο DevReady βοηθάμε developers να χτίσουν ακριβώς τέτοιου τύπου projects. Όχι portfolio fluff, αλλά ρεαλιστική engineering δουλειά που ενδιαφέρει τους hiring managers. Αν θέλεις καθοδήγηση, feedback από working engineers και βοήθεια να κάνεις το project σου πραγματικό hiring asset, δες το [6-week accelerator](/accelerator).
+
+Δεν χρειάζεται να είσαι impressive. Χρειάζεται να είσαι ready.
+`,
     author: "Alexis Pavlidis",
-    date: "2025-01-15",
-    readTime: "8 min read",
-    readTimeGr: "8 λεπτά διάβασμα",
-    tags: ["Career", "Learning", "Getting Started"],
-    tagsGr: ["Καριέρα", "Μάθηση", "Ξεκίνημα"],
-    image: "/assets/blog/student-to-engineer.jpg"
+    date: "2026-02-07",
+    readTime: "7 min read",
+    readTimeGr: "7 λεπτά διάβασμα",
+    tags: ["Projects", "Portfolio", "Career"],
+    tagsGr: ["Projects", "Portfolio", "Career"],
+    image: "/assets/blogs/project.jpg",
+    imageAlt: "Project and portfolio concept: one strong project that demonstrates engineering practices can get you hired.",
+    imageAltGr: "Ένα project που δείχνει engineering practices και σε κάνει hire: ιδέα για portfolio.",
+    published: true
   }
-  */
 ];
 

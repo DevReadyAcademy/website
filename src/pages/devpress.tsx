@@ -112,12 +112,12 @@ const DevPress = () => {
                 {publishedPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="bg-card rounded-xl border border-border/50 overflow-hidden hover:shadow-lg transition-all duration-300 group"
+                  className="bg-card rounded-xl border border-border/50 overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col h-full"
                   role="listitem"
                   aria-labelledby={`post-title-${post.id}`}
                 >
                   {/* Blog Image */}
-                  <div className="aspect-video bg-gradient-primary relative overflow-hidden">
+                  <div className="aspect-video bg-gradient-primary relative overflow-hidden flex-shrink-0">
                     {post.image ? (
                       <img 
                         src={post.image} 
@@ -133,8 +133,8 @@ const DevPress = () => {
                     )}
                   </div>
 
-                  {/* Content */}
-                  <div className="p-6">
+                  {/* Content: flex so CTA aligns at bottom across cards */}
+                  <div className="p-6 flex flex-col flex-1 min-h-0">
                     {/* Meta */}
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                       <div className="flex items-center gap-1">
@@ -157,7 +157,7 @@ const DevPress = () => {
                     </h2>
 
                     {/* Excerpt */}
-                    <p className="text-muted-foreground mb-4 line-clamp-3">
+                    <p className="text-muted-foreground mb-4 line-clamp-3 flex-1 min-h-0">
                       {language === 'gr' ? post.excerptGr : post.excerpt}
                     </p>
 
@@ -173,10 +173,11 @@ const DevPress = () => {
                       ))}
                     </div>
 
-                    {/* Read More */}
+                    {/* Read More: mt-auto keeps CTA aligned at bottom of card */}
                     <Link 
                       to={`/devpress/${post.slug}`}
                       aria-label={`${t('devpress.readArticle')}: ${language === 'gr' ? post.titleGr : post.title}`}
+                      className="mt-auto block"
                     >
                       <Button variant="ghost" className="group/btn w-full justify-between">
                         <span>{t('devpress.readMore')}</span>
