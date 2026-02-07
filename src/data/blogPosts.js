@@ -521,7 +521,7 @@ Up to you. Δεν υπάρχει hard rule. Αν το χρησιμοποιήσε
 Στο DevReady accelerator δουλεύουμε hands-on πάνω σε πραγματικά CVs, με review από working engineers και recruiters. Δες περισσότερα στο [6-week accelerator](/accelerator).
 `,
     author: "Alexis Pavlidis",
-    date: "2026-02-04",
+    date: "2026-02-07",
     readTime: "6 min read",
     readTimeGr: "6 λεπτά διάβασμα",
     tags: ["CV", "Career", "Tips"],
