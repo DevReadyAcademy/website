@@ -15,6 +15,7 @@ const DevPress = lazy(() => import("./pages/devpress"));
 const BlogPost = lazy(() => import("./pages/blogPost"));
 const Contact = lazy(() => import("./pages/contact"));
 const NotFound = lazy(() => import("./pages/notFound"));
+const CvReviewResults = lazy(() => import("./pages/cvReviewResults"));
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/team" element={<Team />} />
             <Route path="/devpress" element={<DevPress />} />
             <Route path="/devpress/:slug" element={<BlogPost />} />
+            <Route path="/cv-review/:id" element={<CvReviewResults />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
