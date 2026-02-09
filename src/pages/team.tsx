@@ -6,6 +6,7 @@ import { Button } from "../components/ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Team = () => {
   const { t } = useLanguage();
@@ -62,9 +63,8 @@ const Team = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className={`flex flex-col ${
-                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                    } gap-8 items-center bg-card rounded-2xl border border-border/50 p-8 shadow-elegant`}
+                    className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                      } gap-8 items-center bg-card rounded-2xl border border-border/50 p-8 shadow-elegant`}
                   >
                     {/* Photo */}
                     <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl">
@@ -84,7 +84,7 @@ const Team = () => {
                         <MapPin className="w-4 h-4" />
                         <span>{member.location}</span>
                       </div>
-                      
+
                       <p className="text-muted-foreground leading-relaxed mb-4">
                         {member.bio}
                       </p>
@@ -166,9 +166,8 @@ const Team = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className={`relative flex ${
-                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                    } gap-8 mb-12 md:mb-16`}
+                    className={`relative flex ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                      } gap-8 mb-12 md:mb-16`}
                   >
                     {/* Timeline Dot */}
                     <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 border-4 border-background" />
@@ -242,12 +241,8 @@ const Team = () => {
           </section>
         </main>
 
-        <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
-          <p className="text-sm">
-            {t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}
-          </p>
-        </footer>
-      </div>
+        <Footer />
+      </div >
     </>
   );
 };

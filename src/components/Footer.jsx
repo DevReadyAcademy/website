@@ -1,21 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
+
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
-    <footer className="relative py-12 px-4 border-t border-gray-200 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center text-gray-500"
-        >
-          <p>
-            © 2025 DreamJob. All rights reserved.
-          </p>
-        </motion.div>
+    <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
+      <p className="text-sm">
+        {t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}
+      </p>
+      <div className="mt-2 text-sm space-x-4">
+        <Link to="/terms" className="hover:underline">{t('terms.title')}</Link>
+        <Link to="/privacy" className="hover:underline">{t('privacy.title')}</Link>
       </div>
     </footer>
   );

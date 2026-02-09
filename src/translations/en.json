@@ -531,6 +531,94 @@
   },
   "footer": {
     "copyright": "© {year} DevReady."
+  },
+  "cvReview": {
+    "pageTitle": "CV Review - Results",
+    "loading": "Loading results...",
+    "errorNotFound": "No results found for this link.",
+    "errorGeneric": "An error occurred while fetching the results."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: February 10, 2026",
+    "intro": "Please read the following terms carefully before using the website devready.gr. Use of the site implies unconditional acceptance of these terms.",
+    "section1": {
+      "title": "1. General Terms",
+      "content": "devready.gr provides information, services, and content related to software development and technology. We reserve the right to modify the content or terms of use at any time without notice."
+    },
+    "section2": {
+      "title": "2. Intellectual Property",
+      "content": "All content on the site (text, graphics, logos, code, articles) is the intellectual property of devready.gr and is protected by relevant provisions of Greek and international law. Reproduction, republication, or modification without written permission is prohibited."
+    },
+    "section3": {
+      "title": "3. Limitation of Liability",
+      "content": {
+        "item1": "<strong>Content:</strong> The content is provided \"as is\" for informational purposes. While we make every effort to ensure the accuracy of the information, we do not guarantee its absolute correctness.",
+        "item2": "<strong>Technical Operation:</strong> We are not responsible for any temporary unavailability of the site or for damages that may be caused by viruses or other malicious elements.",
+        "item3": "<strong>External Links:</strong> The site may contain links to third-party websites. We bear no responsibility for their content or privacy policy."
+      }
+    },
+    "section4": {
+      "title": "4. User Obligations",
+      "content": "The user agrees not to use the site for illegal actions, sending spam, or any activity that may harm the operation of the platform."
+    },
+    "section5": {
+      "title": "5. Applicable Law",
+      "content": "These terms are governed by Greek Law. For any dispute that arises, the courts of Thessaloniki are competent."
+    },
+    "section6": {
+      "title": "6. Communication",
+      "content": "For any question regarding the Terms of Service, you can contact us at: hello@devready.gr."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy & Data Protection (GDPR)",
+    "lastUpdated": "Last Updated: February 10, 2026",
+    "intro": "Welcome to devready.gr. Protecting your personal data is a matter of principle for us. This policy explains how we collect, process, and protect your information, ensuring our compliance with the General Data Protection Regulation (GDPR).",
+    "section1": {
+      "title": "1. Data Controller",
+      "content": "Responsible for the collection and processing of your data is:",
+      "list": {
+        "item1": "<strong>Name:</strong> DevReady",
+        "item2": "<strong>Website:</strong> devready.gr",
+        "item3": "<strong>Contact Email:</strong> hello@devready.gr"
+      }
+    },
+    "section2": {
+      "title": "2. What Data We Collect and Why",
+      "subsectionA": {
+        "title": "a. Data you provide",
+        "content": "We collect information you enter in contact forms (e.g., Name, Email, Message) for the purpose of serving your requests and communicating with you."
+      },
+      "subsectionB": {
+        "title": "b. Automatic Collection & Third-Party Tools",
+        "content": "To improve your experience and the technical integrity of the site, we use the following tools:",
+        "list": {
+          "item1": "<strong>Google Analytics:</strong> Used for measuring traffic. Data is anonymized (IP Anonymization).",
+          "item2": "<strong>Dynatrace (Application Performance Monitoring):</strong> We use Dynatrace for real-time performance monitoring, error diagnosis, and user experience optimization.",
+          "item3": "<strong>Server Logs:</strong> Your IP address is temporarily recorded for security reasons and protection against malicious attacks."
+        }
+      }
+    },
+    "section3": {
+      "title": "3. Cookies Policy",
+      "content": "We use cookies for the proper functioning of the website. Cookies are divided into:",
+      "list": {
+        "item1": "<strong>Necessary:</strong> For basic operation and security.",
+        "item2": "<strong>Statistics/Performance:</strong> Via Google Analytics and Dynatrace for site improvement."
+      }
+    },
+    "section4": {
+      "title": "4. Legal Basis for Processing",
+      "content": "Processing is based on your <strong>consent</strong> (for cookies/communication) and our <strong>legitimate interest</strong> for the security and performance of our website."
+    },
+    "section5": {
+      "title": "5. Your Rights",
+      "content": "According to GDPR, you have the right to access, rectify, delete (\"right to be forgotten\"), restrict processing, and portability of your data. For any request, contact us at hello@devready.gr."
+    },
+    "section6": {
+      "title": "6. Security",
+      "content": "We apply SSL/TLS encryption throughout the site to ensure your data is transferred securely."
+    }
   }
 }
-
