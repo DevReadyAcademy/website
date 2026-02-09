@@ -18,6 +18,7 @@ const NotFound = lazy(() => import("./pages/notFound"));
 const CvReviewResults = lazy(() => import("./pages/cvReviewResults"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const CvReview = lazy(() => import("./pages/CvReview"));
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/cv-review/:id" element={<CvReviewResults />} />
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/cv-review" element={<CvReview />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

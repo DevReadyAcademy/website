@@ -19,7 +19,8 @@
     "journey": "Το Ταξίδι Μας",
     "devpress": "DevPress",
     "testimonials": "Testimonials",
-    "whyDifferent": "Γιατί Διαφέρουμε"
+    "whyDifferent": "Γιατί Διαφέρουμε",
+    "freeCvReview": "Δωρεάν Αξιολόγηση CV"
   },
   "hero": {
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE} · ⏰ {SPOTS_LEFT}",
