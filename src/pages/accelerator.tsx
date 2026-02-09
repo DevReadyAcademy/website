@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, CheckCircle, Users, Clock, Target, Code, Brain, FileText, Compass } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { Button } from "../components/ui/button.tsx";
 import {
   Accordion,
   AccordionContent,
