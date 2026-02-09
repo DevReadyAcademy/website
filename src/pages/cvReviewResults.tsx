@@ -20,10 +20,10 @@ const CvReviewResults = () => {
             try {
                 const response = await fetch(`https://api.devready.gr/cv-review/results/${id}`);
                 if (response.status === 404) {
-                    throw new Error(t('cvReview.errorNotFound'));
+                    throw new Error(t('cvReviewPage.errorNotFound'));
                 }
                 if (!response.ok) {
-                    throw new Error(t('cvReview.errorGeneric'));
+                    throw new Error(t('cvReviewPage.errorGeneric'));
                 }
                 const data = await response.json();
                 const html = (data.results || '').replace(/\\n/g, ''); // Remove escaped newlines if present
@@ -45,8 +45,8 @@ const CvReviewResults = () => {
         <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-grow container mx-auto px-4 py-8 pt-24 flex flex-col items-center">
-                <h1 className="text-3xl font-bold mb-8 text-center text-primary">{t('cvReview.pageTitle')}</h1>
-                {loading && <div className="text-xl">{t('cvReview.loading')}</div>}
+                <h1 className="text-3xl font-bold mb-8 text-center text-primary">{t('cvReviewPage.resultsTitle')}</h1>
+                {loading && <div className="text-xl">{t('cvReviewPage.loading')}</div>}
                 {error && <div className="text-red-500 text-xl text-center font-medium">{error}</div>}
                 {htmlContent && (
                     <div

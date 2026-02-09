@@ -535,6 +535,7 @@
   },
   "cvReviewPage": {
     "title": "Free CV Review",
+    "resultsTitle": "Results of the CV Review",
     "heroTitle": "Is Your CV Costing You Interviews?",
     "heroSubtitle": "Get a free, professional review from Senior Engineers. We know exactly what tech companies look for.",
     "cta": "Get Your Free Review",
