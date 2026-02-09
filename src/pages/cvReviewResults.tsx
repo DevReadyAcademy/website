@@ -19,8 +19,11 @@ const CvReviewResults = () => {
         const fetchResults = async () => {
             try {
                 const response = await fetch(`https://api.devready.gr/cv-review/results/${id}`);
+                if (response.status === 404) {
+                    throw new Error("Δεν βρέθηκαν αποτελέσματα για αυτόν τον σύνδεσμο.");
+                }
                 if (!response.ok) {
-                    throw new Error("Failed to fetch results");
+                    throw new Error("Προέκυψε σφάλμα κατά την ανάκτηση των αποτελεσμάτων.");
                 }
                 const data = await response.json();
                 const html = (data.results || '').replace(/\\n/g, ''); // Remove escaped newlines if present
@@ -44,7 +47,7 @@ const CvReviewResults = () => {
             <main className="flex-grow container mx-auto px-4 py-8 pt-24 flex flex-col items-center">
                 <h1 className="text-3xl font-bold mb-8 text-center text-primary">Αξιολόγηση Βιογραφικού - Αποτελέσματά</h1>
                 {loading && <div className="text-xl">Loading results...</div>}
-                {error && <div className="text-red-500 text-xl">Error: {error}</div>}
+                {error && <div className="text-red-500 text-xl text-center font-medium">{error}</div>}
                 {htmlContent && (
                     <div
                         className="prose max-w-none w-full bg-white p-8 rounded-lg shadow-md"
