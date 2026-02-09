@@ -533,8 +533,23 @@
   "footer": {
     "copyright": "© {year} DevReady."
   },
-  "cvReview": {
-    "pageTitle": "CV Review - Results",
+  "cvReviewPage": {
+    "title": "Free CV Review",
+    "heroTitle": "Is Your CV Costing You Interviews?",
+    "heroSubtitle": "Get a free, professional review from Senior Engineers. We know exactly what tech companies look for.",
+    "cta": "Get Your Free Review",
+    "startHere": "Start Your Free Review",
+    "benefits": {
+      "title": "Why Your CV Matters",
+      "atsTitle": "Beat the ATS",
+      "atsDescription": "75% of CVs are rejected by automated systems before a human ever sees them. We'll show you how to parse correctly.",
+      "recruiterTitle": "The 6-Second Scan",
+      "recruiterDescription": "Recruiters spend an average of 6 seconds on a CV. We help you highlight your impact immediately.",
+      "engineeringTitle": "Engineering Focus",
+      "engineeringDescription": "Generic HR advice doesn't work for devs. We review your code, stack, and projects from an engineering perspective.",
+      "freeTitle": "100% Free",
+      "freeDescription": "No hidden costs, no credit card required. We believe every junior developer deserves a fair shot at the industry."
+    },
     "loading": "Loading results...",
     "errorNotFound": "No results found for this link.",
     "errorGeneric": "An error occurred while fetching the results."
