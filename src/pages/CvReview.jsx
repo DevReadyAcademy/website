@@ -15,12 +15,14 @@ import SEO from '../components/SEO';
 
 const CvReview = () => {
     const { t } = useLanguage();
-    const [iframeHeight, setIframeHeight] = useState('100%');
+    const [iframeHeight, setIframeHeight] = useState('500px');
 
     useEffect(() => {
         const handleMessage = (event) => {
+            // console.log('CV Review Message:', event.data); // Debugging
             if (event.data && event.data.type === 'resize' && event.data.height) {
-                setIframeHeight(`${event.data.height}px`);
+                // Trim 30px to remove excess whitespace at the bottom
+                setIframeHeight(`${event.data.height - 30}px`);
             }
         };
         window.addEventListener('message', handleMessage);
@@ -122,15 +124,16 @@ const CvReview = () => {
                                         {t('cvReviewPage.startHere')}
                                     </Button>
                                 </DialogTrigger>
-                                <DialogContent className="max-w-5xl h-[90vh] p-0 overflow-hidden flex flex-col">
+                                <DialogContent className="max-w-5xl max-h-[98vh] overflow-y-auto p-0 gap-0 flex flex-col">
                                     <DialogHeader className="px-6 py-4 border-b">
                                         <DialogTitle>{t('cvReviewPage.title')}</DialogTitle>
                                     </DialogHeader>
-                                    <div className="flex-grow bg-gray-50 relative overflow-hidden">
+                                    <div className="bg-gray-50 relative transition-all duration-300 ease-in-out" style={{ height: iframeHeight }}>
                                         <iframe
                                             src="https://lms.devready.gr/cv-review"
                                             title="CV Review Tool"
-                                            className="w-full h-full border-0"
+                                            scrolling="no"
+                                            className="w-full h-full border-0 block"
                                         />
                                     </div>
                                 </DialogContent>
