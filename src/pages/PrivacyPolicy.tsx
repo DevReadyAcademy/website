@@ -3,12 +3,37 @@ import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+// @ts-ignore
+import SEO from '../components/SEO';
 
 const PrivacyPolicy: React.FC = () => {
     const { t } = useLanguage();
 
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": t('privacy.title'),
+        "description": t('privacy.intro'),
+        "url": "https://www.devready.gr/privacy-policy",
+        "publisher": {
+            "@type": "Organization",
+            "name": "DevReady",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.devready.gr/assets/logo-320.webp"
+            }
+        }
+    };
+
     return (
         <div className="min-h-screen flex flex-col">
+            <SEO
+                title={`${t('privacy.title')} | DevReady`}
+                description="Read our Privacy Policy to understand how DevReady collects, uses, and protects your personal information."
+                canonical="https://www.devready.gr/privacy-policy"
+                keywords="privacy policy, data protection, gdpr, devready privacy, terms"
+                structuredData={structuredData}
+            />
             <Header />
             <main className="flex-grow container mx-auto px-4 py-8 pt-24 max-w-4xl">
                 <div className="prose max-w-none">

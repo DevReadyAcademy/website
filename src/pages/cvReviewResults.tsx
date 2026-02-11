@@ -8,6 +8,8 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { earlyBirdConfig } from "../config/earlyBird";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+// @ts-ignore
+import SEO from "../components/SEO";
 
 const CvReviewResults = () => {
     const { id } = useParams();
@@ -48,6 +50,11 @@ const CvReviewResults = () => {
 
     return (
         <div className="min-h-screen flex flex-col bg-slate-50">
+            <SEO
+                title={`${t('cvReviewPage.resultsTitle')} | DevReady`}
+                description={t('cvReviewPage.heroSubtitle')}
+                noindex={true}
+            />
             <Header />
             <main className="flex-grow pt-24 pb-12">
                 <div className="container mx-auto px-4 max-w-5xl">

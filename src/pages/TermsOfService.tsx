@@ -3,12 +3,37 @@ import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+// @ts-ignore
+import SEO from '../components/SEO';
 
 const TermsOfService: React.FC = () => {
     const { t } = useLanguage();
 
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": t('terms.title'),
+        "description": t('terms.intro'),
+        "url": "https://www.devready.gr/terms-of-service",
+        "publisher": {
+            "@type": "Organization",
+            "name": "DevReady",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.devready.gr/assets/logo-320.webp"
+            }
+        }
+    };
+
     return (
         <div className="min-h-screen flex flex-col">
+            <SEO
+                title={`${t('terms.title')} | DevReady`}
+                description="Read our Terms of Service to understand the rules and regulations for using DevReady's website and services."
+                canonical="https://www.devready.gr/terms-of-service"
+                keywords="terms of service, user agreement, legal, devready terms"
+                structuredData={structuredData}
+            />
             <Header />
             <main className="flex-grow container mx-auto px-4 py-8 pt-24 max-w-4xl">
                 <div className="prose max-w-none">

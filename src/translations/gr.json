@@ -228,43 +228,43 @@
     "faqTitle": "Frequently Asked Questions",
     "faqs": [
       {
-        "question": "Χρειάζεται να ξέρω συγκεκριμένη γλώσσα προγραμματισμού ή framework?",
+        "question": "Χρειάζεται να ξέρω συγκεκριμένη γλώσσα προγραμματισμού ή framework;",
         "answer": "Όχι. Αυτό το accelerator είναι language και framework-agnostic. Είτε είσαι React developer, Python backend engineer, Java developer, mobile developer, ή οτιδήποτε άλλο, τα skills που διδάσκουμε (engineering thinking, clean code, Git, interviewing, branding) ισχύουν universal σε οποιονδήποτε tech ρόλο."
       },
       {
-        "question": "Χρειάζεται prior coding experience?",
+        "question": "Χρειάζεται prior coding experience;",
         "answer": "Ναι, αλλά τίποτα fancy. Αν έχεις τα παρακάτω basics, είσαι έτοιμος:\n\n• Variables και data types\n• Control flow\n• Loops\n• Functions και parameters\n• Basic κατανόηση μιας γλώσσας προγραμματισμού\n\nΕστιάζουμε στο να γεφυρώσουμε το gap από 'ξέρω να γράφω κώδικα' σε 'είμαι industry-ready,' όχι να διδάξουμε programming από το μηδέν.\n\nΤι σημαίνει 'basic knowledge'; Θα πρέπει να μπορείς να γράψεις simple programs και να καταλαβαίνεις basic error messages. Think: έχεις λύσει κάποια coding challenges, ολοκλήρωσες ένα beginner tutorial, ή έφτιαξες ένα μικρό personal project."
       },
       {
-        "question": "Θα βρω δουλειά μετά το accelerator?",
+        "question": "Θα βρω δουλειά μετά το accelerator;",
         "answer": "Δεν μπορούμε να εγγυηθούμε job placement, αλλά σε εξοπλίζουμε με τα ακριβή skills, portfolio και interview preparation που αυξάνουν dramatically τις πιθανότητές σου. Πολλοί από τους μαθητές μας βρήκαν δουλειά μέσα στον επόμενο μήνα. Η επιτυχία σου εξαρτάται από το effort και το commitment σου."
       },
       {
-        "question": "Ποια είναι η time commitment?",
+        "question": "Ποια είναι η time commitment;",
         "answer": "Περίμενε ~2-3 ώρες την εβδομάδα για live sessions. Οι υπόλοιπες ~5 ώρες προέρχονται από την προσωπική σου αφοσίωση (project work και independent learning)."
       },
       {
-        "question": "Πόσα άτομα θα είναι στο cohort μου?",
+        "question": "Πόσα άτομα θα είναι στο cohort μου;",
         "answer": "Maximum 15 άτομα ανά cohort. Αυτό το μικρό μέγεθος εξασφαλίζει ότι μπορούμε να παρέχουμε targeted, personalized care και να απαντήσουμε στις specific ανάγκες σου καθ' όλη τη διάρκεια του προγράμματος."
       },
       {
-        "question": "Είναι το accelerator remote?",
+        "question": "Είναι το accelerator remote;",
         "answer": "Ναι, 100% remote. Όλα τα sessions διεξάγονται online, καθιστώντας το accessible από οπουδήποτε στην Ελλάδα."
       },
       {
-        "question": "Τι γίνεται αν χάσω ένα live session?",
+        "question": "Τι γίνεται αν χάσω ένα live session;",
         "answer": "Όλα τα sessions καταγράφονται. Ενώ ενθαρρύνουμε έντονα την live παρουσία για Q&A, mentorship και networking, μπορείς να το παρακολουθήσεις asynchronously αν χρειαστεί."
       },
       {
-        "question": "Είναι μόνο για άτομα που ψάχνουν δουλειά στην Ελλάδα?",
+        "question": "Είναι μόνο για άτομα που ψάχνουν δουλειά στην Ελλάδα;",
         "answer": "Όχι. Ενώ έχουμε base στην Ελλάδα και πολλοί από τους students μας αναζητούν Greek ευκαιρίες, τα skills και η approach δουλεύουν globally. Το accelerator σε ετοιμάζει για tech roles οπουδήποτε."
       },
       {
-        "question": "Τι γίνεται αφού κλείσω call?",
+        "question": "Τι γίνεται αφού κλείσω call;",
         "answer": "Θα συζητήσουμε τους στόχους σου, θα απαντήσουμε σε τυχόν ερωτήσεις και αν είναι good fit, θα ολοκληρώσουμε την εγγραφή σου και θα εξασφαλίσουμε το early bird pricing σου."
       },
       {
-        "question": "Ποιες είναι οι επιλογές πληρωμής?",
+        "question": "Ποιες είναι οι επιλογές πληρωμής;",
         "answer": "Eξόφληση του συνολικού ποσού από τώρα, ή 50% προκαταβολή και 50% με την έναρξη του προγράμματος, αν σε εξυπηρετεί.\n\nΑν καμία από τις παραπάνω επιλογές δεν σε βολεύει, στείλε μας μήνυμα και θα προσπαθήσουμε να βρούμε μαζί μια λύση."
       }
     ],
@@ -535,7 +535,7 @@
   "cvReviewPage": {
     "title": "Δωρεάν Αξιολόγηση CV",
     "resultsTitle": "Αποτελέσματα Αξιολόγησης CV",
-    "heroTitle": "Μήπως το CV σου Σου Κοστίζει Συνεντεύξεις?",
+    "heroTitle": "Μήπως το CV σου Σου Κοστίζει Συνεντεύξεις;",
     "heroSubtitle": "Λάβε δωρεάν, επαγγελματική αξιολόγηση από το DevReady. Ξέρουμε ακριβώς τι ψάχνουν οι tech εταιρείες.",
     "cta": "Ζήτησε Δωρεάν Αξιολόγηση",
     "startHere": "Ξεκίνα Την Δωρεάν Αξιολόγηση",
