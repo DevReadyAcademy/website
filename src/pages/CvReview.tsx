@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
-import { Button } from "@/components/ui/button.tsx";
+import { Button } from "@/components/ui/button";
 import {
     Dialog,
     DialogContent,
@@ -9,17 +9,18 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog";
+// @ts-ignore
 import { useLanguage } from '../contexts/LanguageContext';
 import Footer from '../components/Footer';
+// @ts-ignore
 import SEO from '../components/SEO';
 
-const CvReview = () => {
-    const { t } = useLanguage();
-    const [iframeHeight, setIframeHeight] = useState('500px');
+const CvReview: React.FC = () => {
+    const { t, language } = useLanguage();
+    const [iframeHeight, setIframeHeight] = useState<string>('500px');
 
     useEffect(() => {
-        const handleMessage = (event) => {
-            // console.log('CV Review Message:', event.data); // Debugging
+        const handleMessage = (event: MessageEvent) => {
             if (event.data && event.data.type === 'resize' && event.data.height) {
                 // Trim 30px to remove excess whitespace at the bottom
                 setIframeHeight(`${event.data.height - 30}px`);
@@ -29,12 +30,33 @@ const CvReview = () => {
         return () => window.removeEventListener('message', handleMessage);
     }, []);
 
+    const seoKeywords = language === 'gr'
+        ? "αξιολόγηση βιογραφικού, δωρεάν cv review, έλεγχος βιογραφικού, software engineer cv, προγραμματιστής, καριέρα tech"
+        : "cv review, resume review, software engineer resume, tech career, free cv check, devready";
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": t('cvReviewPage.title'),
+        "provider": {
+            "@type": "Organization",
+            "name": "DevReady",
+            "url": "https://www.devready.gr"
+        },
+        "description": t('cvReviewPage.heroSubtitle'),
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        }
+    };
+
     const benefits = [
         {
             title: t('cvReviewPage.benefits.atsTitle'),
             description: t('cvReviewPage.benefits.atsDescription'),
             icon: (
-                <svg className="w-12 h-12 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg aria-hidden="true" className="w-12 h-12 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             )
@@ -43,7 +65,7 @@ const CvReview = () => {
             title: t('cvReviewPage.benefits.recruiterTitle'),
             description: t('cvReviewPage.benefits.recruiterDescription'),
             icon: (
-                <svg className="w-12 h-12 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg aria-hidden="true" className="w-12 h-12 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             )
@@ -52,7 +74,7 @@ const CvReview = () => {
             title: t('cvReviewPage.benefits.engineeringTitle'),
             description: t('cvReviewPage.benefits.engineeringDescription'),
             icon: (
-                <svg className="w-12 h-12 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg aria-hidden="true" className="w-12 h-12 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
             )
@@ -61,7 +83,7 @@ const CvReview = () => {
             title: t('cvReviewPage.benefits.freeTitle'),
             description: t('cvReviewPage.benefits.freeDescription'),
             icon: (
-                <svg className="w-12 h-12 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg aria-hidden="true" className="w-12 h-12 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             )
@@ -73,6 +95,10 @@ const CvReview = () => {
             <SEO
                 title={`${t('cvReviewPage.title')} | DevReady`}
                 description={t('cvReviewPage.heroSubtitle')}
+                keywords={seoKeywords}
+                canonical="https://www.devready.gr/cv-review"
+                language={language}
+                structuredData={structuredData}
             />
             <Header />
             <main className="pt-24 min-h-screen flex flex-col bg-gray-50">
@@ -100,6 +126,9 @@ const CvReview = () => {
                 {/* Benefits Section */}
                 <section className="px-4 pb-16">
                     <div className="container mx-auto max-w-7xl">
+                        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+                            {t('cvReviewPage.benefits.title')}
+                        </h2>
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                             {benefits.map((benefit, index) => (
                                 <motion.div

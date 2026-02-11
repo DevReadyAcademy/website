@@ -1,9 +1,10 @@
 import React from 'react';
+// @ts-ignore
 import { useLanguage } from '../contexts/LanguageContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const TermsOfService = () => {
+const TermsOfService: React.FC = () => {
     const { t } = useLanguage();
 
     return (
