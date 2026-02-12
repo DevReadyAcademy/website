@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button.tsx";
 import { useLanguage } from '../contexts/LanguageContext';
+
+import { useFeatureFlags } from '../contexts/FeatureFlagContext';
 
 const Header = () => {
   const { t } = useLanguage();
+  const { isFeatureEnabled } = useFeatureFlags();
+
   const location = useLocation();
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
@@ -111,7 +115,7 @@ const Header = () => {
             className="flex items-center flex-shrink-0"
           >
             <Link to="/" className="flex items-center gap-2 sm:gap-3" aria-label={`${t('common.brandName')} - Go to homepage`}>
-              <img 
+              <img
                 src="/assets/logo-80.webp"
                 srcSet="/assets/logo-80.webp 80w, /assets/logo-120.webp 120w, /assets/logo-320.webp 320w"
                 sizes="(max-width: 640px) 32px, 80px"
@@ -135,11 +139,10 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`text-sm font-medium transition-colors relative ${
-                    isActivePage(item) 
-                      ? 'text-foreground after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-0.5 after:bg-primary' 
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
+                  className={`text-sm font-medium transition-colors relative ${isActivePage(item)
+                    ? 'text-foreground after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-0.5 after:bg-primary'
+                    : 'text-muted-foreground hover:text-foreground'
+                    }`}
                   aria-current={isActivePage(item) ? 'page' : undefined}
                 >
                   {item.name}
@@ -148,11 +151,10 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item)}
-                  className={`text-sm font-medium transition-colors relative ${
-                    isActivePage(item) 
-                      ? 'text-foreground after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-0.5 after:bg-primary' 
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
+                  className={`text-sm font-medium transition-colors relative ${isActivePage(item)
+                    ? 'text-foreground after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-0.5 after:bg-primary'
+                    : 'text-muted-foreground hover:text-foreground'
+                    }`}
                   aria-current={isActivePage(item) ? 'location' : undefined}
                   aria-label={`${item.name}${isActivePage(item) ? ' (current section)' : ''}`}
                 >
@@ -161,7 +163,18 @@ const Header = () => {
               )
             ))}
             {/* <LanguageSwitcher /> */}
-            <Button 
+            {isFeatureEnabled('CV_REVIEW') && (
+              <Button
+                asChild
+                variant="outline"
+                className="hidden sm:inline-flex mr-2"
+              >
+                <Link to="/cv-review">
+                  {t('header.freeCvReview')}
+                </Link>
+              </Button>
+            )}
+            <Button
               asChild
               className="bg-primary hover:bg-primary/90 shadow-lg"
             >
@@ -213,11 +226,10 @@ const Header = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-colors ${
-                    isActivePage(item)
-                      ? 'text-foreground bg-accent font-semibold'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                  }`}
+                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-colors ${isActivePage(item)
+                    ? 'text-foreground bg-accent font-semibold'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                    }`}
                   aria-current={isActivePage(item) ? 'page' : undefined}
                 >
                   {item.name}
@@ -226,11 +238,10 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item)}
-                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-colors ${
-                    isActivePage(item)
-                      ? 'text-foreground bg-accent font-semibold'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                  }`}
+                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-colors ${isActivePage(item)
+                    ? 'text-foreground bg-accent font-semibold'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                    }`}
                   aria-current={isActivePage(item) ? 'location' : undefined}
                   aria-label={`${item.name}${isActivePage(item) ? ' (current section)' : ''}`}
                 >
@@ -238,8 +249,20 @@ const Header = () => {
                 </button>
               )
             ))}
-            <div className="px-4 pt-4 pb-2">
-              <Button 
+            <div className="px-4 pt-4 pb-2 space-y-2">
+              {isFeatureEnabled('CV_REVIEW') && (
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="w-full"
+                >
+                  <Link to="/cv-review" onClick={() => setMobileMenuOpen(false)}>
+                    {t('header.freeCvReview')}
+                  </Link>
+                </Button>
+              )}
+              <Button
                 asChild
                 size="lg"
                 className="w-full bg-primary hover:bg-primary/90 shadow-lg"

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin, Link as LinkIcon } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { Button } from "../components/ui/button.tsx";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import { blogPosts } from "../data/blogPosts";
@@ -9,6 +9,7 @@ import { useToast } from "../components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import AcceleratorCTA from "../components/AcceleratorCTA";
 import BlogReadGate, { BLOG_ACCESS_KEY } from "../components/BlogReadGate";
 
@@ -17,7 +18,7 @@ const BlogPost = () => {
   const { slug } = useParams();
   const { language, t } = useLanguage();
   const { toast } = useToast();
-  
+
   const post = blogPosts.find(p => p.slug === slug);
 
   if (!post) {
@@ -306,12 +307,8 @@ const BlogPost = () => {
         </article>
 
         {/* Footer */}
-        <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground" role="contentinfo">
-          <p className="text-sm">
-            © {new Date().getFullYear()} DevReady. All rights reserved.
-          </p>
-        </footer>
-      </div>
+        <Footer />
+      </div >
     </>
   );
 };

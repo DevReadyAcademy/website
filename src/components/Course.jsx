@@ -1,5 +1,5 @@
 import { Calendar, Users, ArrowRight, CheckCircle, Clock, Target } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button.tsx";
 import { Link } from "react-router-dom";
 import { useLanguage } from '../contexts/LanguageContext';
 
