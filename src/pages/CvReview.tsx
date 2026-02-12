@@ -159,7 +159,7 @@ const CvReview: React.FC = () => {
                                     </DialogHeader>
                                     <div className="bg-gray-50 relative transition-all duration-300 ease-in-out" style={{ height: iframeHeight }}>
                                         <iframe
-                                            src="https://lms.devready.gr/cv-review"
+                                            src="https://my.devready.gr/cv-review"
                                             title="CV Review Tool"
                                             scrolling="no"
                                             className="w-full h-full border-0 block"
