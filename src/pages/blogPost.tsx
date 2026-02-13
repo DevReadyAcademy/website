@@ -101,7 +101,7 @@ const BlogPost = () => {
   };
 
   const shareOnTwitter = () => {
-    const text = `${title} - DevReady`;
+    const text = `${post.titleGr} - DevReady`;
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(currentUrl)}`, '_blank');
   };
 
