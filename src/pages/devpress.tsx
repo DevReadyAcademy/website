@@ -113,56 +113,56 @@ const DevPress = () => {
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
                 {publishedPosts.map((post) => (
-                  <article
-                    key={post.id}
-                    className="bg-card rounded-xl border border-border/50 overflow-hidden hover:shadow-lg transition-all duration-300 group"
-                    role="listitem"
-                    aria-labelledby={`post-title-${post.id}`}
-                  >
-                    {/* Blog Image */}
-                    <div className="aspect-video bg-gradient-primary relative overflow-hidden">
-                      {post.image ? (
-                        <img
-                          src={post.image}
-                          alt={language === 'gr' ? post.titleGr : post.title}
-                          loading="lazy"
-                          decoding="async"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      ) : (
-                        <div className="absolute inset-0 flex items-center justify-center text-primary-foreground text-4xl font-bold opacity-20">
-                          DevReady
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      {/* Meta */}
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          <span>{new Date(post.date).toLocaleDateString(language === 'gr' ? 'el-GR' : 'en-US', {
-                            year: 'numeric',
-                            month: 'short',
-                            day: 'numeric'
-                          })}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{language === 'gr' ? post.readTimeGr : post.readTime}</span>
-                        </div>
+                <article
+                  key={post.id}
+                  className="bg-card rounded-xl border border-border/50 overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col h-full"
+                  role="listitem"
+                  aria-labelledby={`post-title-${post.id}`}
+                >
+                  {/* Blog Image */}
+                  <div className="aspect-video bg-gradient-primary relative overflow-hidden flex-shrink-0">
+                    {post.image ? (
+                      <img 
+                        src={post.image} 
+                        alt={language === 'gr' ? post.titleGr : post.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-primary-foreground text-4xl font-bold opacity-20">
+                        DevReady
                       </div>
+                    )}
+                  </div>
+
+                  {/* Content: flex so CTA aligns at bottom across cards */}
+                  <div className="p-6 flex flex-col flex-1 min-h-0">
+                    {/* Meta */}
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>{new Date(post.date).toLocaleDateString(language === 'gr' ? 'el-GR' : 'en-US', { 
+                          year: 'numeric', 
+                          month: 'short', 
+                          day: 'numeric' 
+                        })}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        <span>{language === 'gr' ? post.readTimeGr : post.readTime}</span>
+                      </div>
+                    </div>
 
                       {/* Title */}
                       <h2 id={`post-title-${post.id}`} className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                         {language === 'gr' ? post.titleGr : post.title}
                       </h2>
 
-                      {/* Excerpt */}
-                      <p className="text-muted-foreground mb-4 line-clamp-3">
-                        {language === 'gr' ? post.excerptGr : post.excerpt}
-                      </p>
+                    {/* Excerpt */}
+                    <p className="text-muted-foreground mb-4 line-clamp-3 flex-1 min-h-0">
+                      {language === 'gr' ? post.excerptGr : post.excerpt}
+                    </p>
 
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-4">
@@ -176,19 +176,20 @@ const DevPress = () => {
                         ))}
                       </div>
 
-                      {/* Read More */}
-                      <Link
-                        to={`/devpress/${post.slug}`}
-                        aria-label={`${t('devpress.readArticle')}: ${language === 'gr' ? post.titleGr : post.title}`}
-                      >
-                        <Button variant="ghost" className="group/btn w-full justify-between">
-                          <span>{t('devpress.readMore')}</span>
-                          <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </article>
-                ))}
+                    {/* Read More: mt-auto keeps CTA aligned at bottom of card */}
+                    <Link
+                      to={`/devpress/${post.slug}`}
+                      aria-label={`${t('devpress.readArticle')}: ${language === 'gr' ? post.titleGr : post.title}`}
+                      className="mt-auto block"
+                    >
+                      <Button variant="ghost" className="group/btn w-full justify-between">
+                        <span>{t('devpress.readMore')}</span>
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
+                  </div>
+                </article>
+              ))}
               </div>
             )}
           </div>
