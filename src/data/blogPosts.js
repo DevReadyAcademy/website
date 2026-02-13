@@ -781,7 +781,7 @@ Honestly, δεν έχει τόση σημασία.
 Δεν χρειάζεται να είσαι impressive. Χρειάζεται να είσαι ready.
 `,
     author: "Alexis Pavlidis",
-    date: "2026-02-07",
+    date: "2026-02-13",
     readTime: "7 min read",
     readTimeGr: "7 λεπτά διάβασμα",
     tags: ["Projects", "Portfolio", "Career"],
