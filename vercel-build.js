@@ -68,15 +68,15 @@ console.log('Generated: /devpress/index.html');
 // Generate HTML for each blog post
 blogPosts.forEach(post => {
   const ogImage = post.image ? `https://www.devready.gr${post.image}` : 'https://www.devready.gr/assets/logo-320.webp';
-  
+
   let html = baseHtml
     .replace(
       /<meta property="og:title" content="[^"]*" \/>/,
-      `<meta property="og:title" content="${post.title}" />`
+      `<meta property="og:title" content="${post.titleGr}" />`
     )
     .replace(
       /<meta property="og:description" content="[^"]*" \/>/,
-      `<meta property="og:description" content="${post.excerpt.replace(/"/g, '&quot;')}" />`
+      `<meta property="og:description" content="${post.excerptGr.replace(/"/g, '&quot;')}" />`
     )
     .replace(
       /<meta property="og:image" content="[^"]*" \/>/,
@@ -92,11 +92,11 @@ blogPosts.forEach(post => {
     )
     .replace(
       /<meta property="twitter:title" content="[^"]*" \/>/,
-      `<meta property="twitter:title" content="${post.title}" />`
+      `<meta property="twitter:title" content="${post.titleGr}" />`
     )
     .replace(
       /<meta property="twitter:description" content="[^"]*" \/>/,
-      `<meta property="twitter:description" content="${post.excerpt.replace(/"/g, '&quot;')}" />`
+      `<meta property="twitter:description" content="${post.excerptGr.replace(/"/g, '&quot;')}" />`
     )
     .replace(
       /<meta property="twitter:image" content="[^"]*" \/>/,
@@ -118,13 +118,13 @@ blogPosts.forEach(post => {
       /<link rel="canonical" href="[^"]*" \/>/,
       `<link rel="canonical" href="https://www.devready.gr/devpress/${post.slug}" />`
     );
-  
+
   // Create directory for this blog post
   const postDir = path.join(devpressDir, post.slug);
   if (!fs.existsSync(postDir)) {
     fs.mkdirSync(postDir, { recursive: true });
   }
-  
+
   // Write the HTML file
   fs.writeFileSync(path.join(postDir, 'index.html'), html);
   console.log(`Generated: /devpress/${post.slug}/index.html`);
