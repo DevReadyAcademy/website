@@ -10,12 +10,13 @@ import Vision from "../components/Vision";
 import Testimonials from "../components/Testimonials";
 import Subscribe from "../components/Subscribe";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const Index = () => {
     const { t, language } = useLanguage();
-    
+
     // Homepage structured data with Organization and WebSite schemas
     const homepageStructuredData = {
         "@context": "https://schema.org",
@@ -59,10 +60,10 @@ const Index = () => {
             }
         ]
     };
-    
+
     return (
         <>
-            <SEO 
+            <SEO
                 language={language}
                 structuredData={homepageStructuredData}
             />
@@ -70,26 +71,22 @@ const Index = () => {
                 Skip to main content
             </a>
             <div className="min-h-screen">
-            <Header/>
-            <main id="main-content">
-            <Hero/>
-            {/* <Vision/> */}
-            <Pillars/>
-            <Course/>
-            <Team/>
-            <Testimonials/>
-            <WhyDifferent/>
-            </main>
+                <Header />
+                <main id="main-content">
+                    <Hero />
+                    {/* <Vision/> */}
+                    <Pillars />
+                    <Course />
+                    <Team />
+                    <Testimonials />
+                    <WhyDifferent />
+                </main>
 
-            {/* <ComingSoon /> */}
-            {/*<Subscribe />*/}
+                {/* <ComingSoon /> */}
+                {/*<Subscribe />*/}
 
-            <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground" role="contentinfo">
-                <p className="text-sm">
-                    {t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}
-                </p>
-            </footer>
-            </div>
+                <Footer />
+            </div >
         </>
     );
 };

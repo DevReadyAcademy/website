@@ -1,19 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { Button } from "../components/ui/button.tsx";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import { blogPosts } from "../data/blogPosts";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
 import AcceleratorCTA from "../components/AcceleratorCTA";
 
 const DevPress = () => {
   const { language, t } = useLanguage();
-  
-  // Filter only published posts
-  const publishedPosts = blogPosts.filter(post => post.published !== false);
+
+  // Filter only published posts, latest first
+  const publishedPosts = blogPosts
+    .filter(post => post.published !== false)
+    .sort((a, b) => b.date.localeCompare(a.date));
 
   // Structured data for blog
   const blogSchema = {
@@ -53,7 +56,7 @@ const DevPress = () => {
     <>
       <SEO
         title="DevPress - Tech Insights & Career Advice"
-        description={publishedPosts.length === 0 
+        description={publishedPosts.length === 0
           ? "DevPress blog coming soon! We'll be sharing practical advice from experienced engineers on software engineering and career development."
           : "Read our latest articles on software engineering, career development, and breaking into the tech industry. Practical advice from experienced engineers."
         }
@@ -83,7 +86,7 @@ const DevPress = () => {
                 {t('hero.urgencyBadge')}
               </span>
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t('devpress.headline')}
             </h1>
@@ -151,30 +154,30 @@ const DevPress = () => {
                       </div>
                     </div>
 
-                    {/* Title */}
-                    <h2 id={`post-title-${post.id}`} className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                      {language === 'gr' ? post.titleGr : post.title}
-                    </h2>
+                      {/* Title */}
+                      <h2 id={`post-title-${post.id}`} className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                        {language === 'gr' ? post.titleGr : post.title}
+                      </h2>
 
                     {/* Excerpt */}
                     <p className="text-muted-foreground mb-4 line-clamp-3 flex-1 min-h-0">
                       {language === 'gr' ? post.excerptGr : post.excerpt}
                     </p>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {(language === 'gr' ? post.tagsGr : post.tags).map((tag, index) => (
-                        <span
-                          key={index}
-                          className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {(language === 'gr' ? post.tagsGr : post.tags).map((tag, index) => (
+                          <span
+                            key={index}
+                            className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
 
                     {/* Read More: mt-auto keeps CTA aligned at bottom of card */}
-                    <Link 
+                    <Link
                       to={`/devpress/${post.slug}`}
                       aria-label={`${t('devpress.readArticle')}: ${language === 'gr' ? post.titleGr : post.title}`}
                       className="mt-auto block"
@@ -207,12 +210,8 @@ const DevPress = () => {
         </section>
 
         {/* Footer */}
-        <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground" role="contentinfo">
-          <p className="text-sm">
-            © {new Date().getFullYear()} DevReady. All rights reserved.
-          </p>
-        </footer>
-      </div>
+        <Footer />
+      </div >
     </>
   );
 };

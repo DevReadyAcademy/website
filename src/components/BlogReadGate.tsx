@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { Button } from './ui/button';
+import { Button } from './ui/button.tsx';
 import { Input } from './ui/input';
 import { useLanguage } from '../contexts/LanguageContext';
 

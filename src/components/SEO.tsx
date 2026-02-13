@@ -7,7 +7,11 @@ interface SEOProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
+  /** Alt text for og:image / twitter:image (accessibility & SEO when sharing) */
+  ogImageAlt?: string;
   ogTitle?: string;
+  /** When set, used for og:description and twitter:description (e.g. always Greek for blog) */
+  ogDescription?: string;
   ogType?: string;
   noindex?: boolean;
   articlePublishedTime?: string;
@@ -22,7 +26,9 @@ const SEO: React.FC<SEOProps> = ({
   keywords = "software engineering accelerator, coding accelerator, learn programming, software development, tech career, DevReady, career change, software engineer training",
   canonical = "https://www.devready.gr/",
   ogImage = "https://www.devready.gr/assets/logo-320.webp",
+  ogImageAlt,
   ogTitle,
+  ogDescription,
   ogType = "website",
   noindex = false,
   articlePublishedTime,
@@ -32,6 +38,7 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
   const fullTitle = title.includes('DevReady') ? title : `${title} | DevReady`;
   const ogTitleFinal = ogTitle || fullTitle;
+  const ogDescriptionFinal = ogDescription ?? description;
   const ogLocale = language === 'gr' ? 'el_GR' : 'en_US';
   const alternateLocale = language === 'gr' ? 'en_US' : 'el_GR';
 
@@ -56,7 +63,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical} />
       <meta property="og:title" content={ogTitleFinal} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={ogDescriptionFinal} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -77,9 +84,9 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:site" content="@devreadygr" />
       <meta name="twitter:creator" content="@devreadygr" />
       <meta name="twitter:title" content={ogTitleFinal} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:description" content={ogDescriptionFinal} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content={`${fullTitle} - DevReady`} />
+      <meta name="twitter:image:alt" content={ogImageAlt ?? `${fullTitle} - DevReady`} />
 
       {/* Structured Data / JSON-LD */}
       {structuredData && (

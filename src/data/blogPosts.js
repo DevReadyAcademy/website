@@ -229,6 +229,309 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
     published: true // Set to false to hide this post from DevPress
   },
   {
+    id: 2,
+    slug: "how-to-write-killer-cv",
+    title: "How to Write a Killer CV (That Actually Gets Read)",
+    titleGr: "Πώς να Γράψεις ένα Killer CV (That Actually Gets Read)",
+    excerpt: "Your CV isn't read—it's scanned. Recruiters spend less than a minute deciding. Here's how to write a CV that shows impact, respects their time, and works as your personal brand.",
+    excerptGr: "Το CV σου δεν διαβάζεται—σκανάρεται. Οι recruiters αφιερώνουν λιγότερο από 1 λεπτό. Εδώ είναι πώς να γράψεις ένα CV που δείχνει impact, σέβεται τον χρόνο τους και λειτουργεί σαν personal brand.",
+    content: `
+## 👋 Introduction
+
+Let's start with an uncomfortable truth:
+
+👉 **Your CV isn't read. It's scanned.**
+
+At most companies, recruiters spend **less than 1 minute** deciding whether to move forward or not. That means they don't read stories. They don't analyse paragraphs. They don't "look for" your strong point.
+
+If they don't see it immediately, it simply doesn't exist.
+
+In this post we'll look at how to write a **killer CV** that:
+- is quick to read
+- shows impact
+- respects the recruiter's time
+- works as **personal brand**
+
+---
+
+## 🧠 How to Think About Your CV
+
+Think of your CV as a **newspaper**.
+
+- The most important news is **at the top**
+- The less important is **at the bottom**
+
+If something is important, you don't hide it on page two.
+
+---
+
+## 📏 Rule #1: One Page (Yes, Almost Always)
+
+For **90% of candidates**, the CV should be **one page**.
+
+**Exceptions:**
+- PhD candidates
+- Academic career
+- Very senior profiles with decades of experience
+
+For everyone else:
+
+👉 **1 page. Period.**
+
+If it doesn't fit, it's not a space issue—it's a **prioritization** issue.
+
+---
+
+## 🧩 Structure: What Goes In and Where
+
+The recommended order is:
+
+1. **Experience**
+2. **Education**
+3. **Skills**
+4. **Projects (optional)**
+
+Why?
+
+👉 Because **experience** answers first the question:  
+_"Can this person do the job?"_
+
+---
+
+## 💥 Use Strong Verbs (Not Passive Voice)
+
+Avoid bullets like:
+
+- Responsible for…
+- Worked on…
+- Helped with…
+
+Use **strong action verbs**:
+
+- Built
+- Designed
+- Led
+- Improved
+- Optimized
+- Delivered
+
+We want **ownership**, not job description.
+
+---
+
+## 🔢 The XYZ Formula (Show Impact)
+
+One of the most powerful patterns for CV bullets is the **XYZ pattern**:
+
+> **Achieved X by doing Y resulting in Z**
+
+Examples:
+
+- Improved page load time **by 35%** by optimizing API calls and caching
+- Reduced production bugs **by 20%** by introducing automated tests
+- Increased conversion rate **by 15%** by redesigning the checkout flow
+
+Numbers:
+- catch the eye
+- show result
+- make the CV more credible
+
+Even if they're estimates—**they're better than nothing**.
+
+---
+
+## 🧱 Formatting Is Not Decoration — It's Strategy
+
+Formatting **isn't an aesthetic choice**. It's a reading tool.
+
+Rules:
+- Use **bullets**
+- Avoid long paragraphs
+- Keep consistent spacing & fonts
+- Same style across all sections
+
+Your CV is a **brand artifact**. If it's messy, that's what it communicates.
+
+---
+
+## ⚔️ Controversial (But Important) Questions
+
+### ❓ Do I need an abstract / summary at the top?
+
+👉 **Up to you.**
+
+There's no hard rule.
+
+If you do it:
+- 2–3 lines max
+- specific, not generic fluff
+- not "passionate software engineer…"
+
+---
+
+### 🎓 Are internships work experience?
+
+**Yes. 100%.**
+
+If you're a student or junior:
+- put internships normally under Experience
+- highlight what you did, not that you "were an intern"
+
+---
+
+### 🚀 Do I need a big project on my CV?
+
+Projects have value **while you're junior**.
+
+As you gain experience:
+- projects fade out
+- industry experience takes over
+
+**Exception:**
+- open-source project with serious adoption  
+- e.g. **10k GitHub stars**
+
+Otherwise, focus on:
+- clean code
+- CI/CD
+- testing
+- collaboration principles
+
+Those count more in the market.
+
+---
+
+## 🧠 Final Checklist
+
+Before you send your CV, ask:
+
+- Can it be read in **30–60 seconds**?
+- Is it clear what impact I had?
+- Is it one page?
+- Is it consistent?
+- Does it tell my story without exhausting the reader?
+
+If yes → you're on the right track.
+
+---
+
+## 🎯 Wrap Up
+
+A good CV doesn't try to impress.  
+It tries to **communicate clearly**.
+
+In the real world of interviews, your CV is just the ticket to the next conversation. Keep it simple, clear, and honest.
+
+---
+
+**Want feedback on your CV?**  
+In the DevReady accelerator we work hands-on on real CVs, with review from working engineers and recruiters.
+
+Find out more at the [6-week accelerator](/accelerator).
+    `,
+    contentGr: `
+## 👋 Εισαγωγή
+
+Ας ξεκινήσουμε με μια άβολη αλήθεια: **Το CV σου δεν διαβάζεται. Σκανάρεται.**
+
+Στις περισσότερες εταιρείες, recruiters αφιερώνουν λιγότερο από **1 λεπτό** για να αποφασίσουν αν θα προχωρήσουν ή όχι. Δεν διαβάζουν ιστορίες, δεν αναλύουν paragraphs και σίγουρα δεν ψάχνουν το «καλό σημείο» σου. Αν δεν το δουν άμεσα, απλά δεν υπάρχει και πηγαίνουν στον/στην επόμενο/η.
+
+Σε αυτό το post θα δούμε πώς να γράψεις ένα **killer CV** που διαβάζεται γρήγορα, δείχνει impact, σέβεται τον χρόνο του recruiter και λειτουργεί σαν **personal brand**.
+
+## 🧠 Πώς να Σκέφτεσαι το CV σου
+
+Σκέψου το CV σου σαν **εφημερίδα**. Τα πιο σημαντικά νέα είναι πάνω, τα λιγότερο σημαντικά κάτω. Αν κάτι είναι σημαντικό, δεν το κρύβεις στη δεύτερη σελίδα ή το βάζεις κάτω κάτω.
+
+## 📏 Rule #1: One Page (Ναι, σχεδόν πάντα)
+
+Για το **90% των candidates**, το CV πρέπει να είναι **one-pager**.  Υπάρχουν εξαιρέσεις, όπως PhD candidates, ακαδημαϊκή καριέρα ή πολύ senior profiles. Για όλους τους άλλους ισχύει ένα πράγμα: **1 σελίδα.** Αν δεν χωράει, δεν είναι θέμα χώρου. Είναι θέμα **prioritization**.
+
+## 🧩 Structure: Τι Μπαίνει και Πού
+
+Η προτεινόμενη σειρά είναι: **Experience → Education → Skills → Projects (optional)**.  
+Ο λόγος είναι απλός. Το **experience** απαντά πρώτο στο ερώτημα: «Μπορεί αυτός ο άνθρωπος να κάνει τη δουλειά;». Αν δεν έχετε experience no worries, εξακολουθείτε να ακουλουθείτε την ίδια σειρά.
+
+## 💥 Use Strong Verbs (Όχι Παθητική Φωνή)
+
+Απόφυγε εκφράσεις τύπου *Responsible for*, *Worked on*, *Helped with*. Δεν δείχνουν ownership ούτε impact.
+
+Παράδειγμα:  
+- Weak: Responsible for improving application performance  
+- Strong: Improved application performance by optimizing database queries  
+
+Strong action verbs όπως *built*, *designed*, *led*, *improved*, *optimized*, *delivered* δείχνουν ξεκάθαρα ότι **εσύ έκανες τη δουλειά** και ότι υπήρχε αποτέλεσμα.
+
+Το CV δεν είναι περιγραφή καθηκόντων. Είναι proof of your impact.
+
+## 🔢 The XYZ Formula (Show Impact)
+
+Ένα από τα πιο δυνατά patterns για CV bullets είναι το **XYZ pattern**:  
+Achieved **X** by doing **Y** resulting in **Z**.
+
+Δες τη διαφορά:  
+- Χωρίς XYZ: Worked on improving page performance  
+- Με XYZ: Improved page load time **by 35%** by optimizing API calls and caching  
+
+Άλλο παράδειγμα:  
+- Χωρίς XYZ: Helped reduce bugs in production  
+- Με XYZ: Reduced production bugs **by 20%** by introducing automated tests  
+
+Οι αριθμοί τραβάνε το μάτι, δείχνουν αποτέλεσμα και κάνουν το CV πιο credible. Ακόμα κι αν είναι estimates, είναι πολύ καλύτερα από το τίποτα.
+
+## 🧱 Formatting Is Not Decoration
+
+Το formatting δεν είναι αισθητική επιλογή. Είναι εργαλείο ανάγνωσης. Χρησιμοποίησε bullets, απόφυγε μεγάλα paragraphs και κράτα consistent spacing και fonts.
+Το CV σου είναι **brand artifact**. Αν είναι messy, αυτό επικοινωνεί.
+
+## 🚩 Popular Issues We See in CVs
+
+Κάποια λάθη εμφανίζονται ξανά και ξανά. Τα περισσότερα δεν είναι θέμα γνώσεων, αλλά **presentation και focus**.
+
+- **Πάρα πολλές σελίδες και κακό formatting.** Δύο ή τρεις σελίδες χωρίς structure, μεγάλα paragraphs και no clear prioritisation of the information.
+- **Μη ξεκάθαρος ρόλος.** Front-end engineer, Back-end engineer, real estate agent, lawyer (you get the vibe) στο ίδιο CV είναι no-no.
+- **Generic soft skills.** “Communication”, “team player”, “problem solving” ειναι fluff, ολοι ειμαστε team-players και εχουμε communication skills.
+- **Καμία ένδειξη impact.** Περιγραφές καθηκόντων without impact.
+- **Πάρα πολλά projects χωρίς βάθος.** Ένα καλοφτιαγμένο project λέει περισσότερα από πέντε μισοτελειωμένα.
+
+Αν αναγνωρίζεις τον εαυτό σου σε κάποιο από τα παραπάνω, μην ανησυχείς. Είναι προβλήματα που λύνονται σχετικά εύκολα με σωστή καθοδήγηση και feedback.
+
+## ⚔️ Controversial (But Important) Questions
+
+### Χρειάζομαι abstract / summary στην αρχή;
+
+Up to you. Δεν υπάρχει hard rule. Αν το χρησιμοποιήσεις, κράτησέ το στις 2–3 γραμμές, συγκεκριμένο και χωρίς generic fluff τύπου “passionate software engineer”.
+
+### Are internships work experience;
+
+**Ναι.** Αν είσαι student ή junior, βάλε internships κανονικά στο Experience και highlight τι έκανες, όχι απλώς ότι «ήσουν intern».
+
+### Χρειάζομαι μεγάλο project στο CV;
+
+Τα projects έχουν αξία όσο είσαι junior. Καθώς αποκτάς εμπειρία, σταδιακά χάνουν βάρος και το industry experience ανεβαίνει. Εξαίρεση υπάρχει μόνο αν έχεις open-source project με σοβαρό adoption, π.χ. **10k GitHub stars**.
+
+Διαφορετικά, μην προσπαθήσεις να φτιάξεις κάτι τεράστιο ή overly complex. Καλύτερα **ένα project**, σωστά δομημένο, που δείχνει τα **principles of good engineering**: καθαρό code, σωστό structure, tests, CI/CD, documentation και ξεκάθαρες αποφάσεις.
+
+Ένα απλό αλλά καλοφτιαγμένο project λέει πολύ περισσότερα από ένα “μεγάλο” project χωρίς ποιότητα.
+
+## 🎯 Wrap Up
+
+Ένα καλό CV δεν προσπαθεί να εντυπωσιάσει. Προσπαθεί να **επικοινωνήσει καθαρά**. Στον πραγματικό κόσμο των interviews, το CV σου είναι απλά το εισιτήριο για την επόμενη συζήτηση.
+
+**Θέλεις feedback στο CV σου;**  
+Στο DevReady accelerator δουλεύουμε hands-on πάνω σε πραγματικά CVs, με review από working engineers και recruiters. Δες περισσότερα στο [6-week accelerator](/accelerator).
+`,
+    author: "Alexis Pavlidis",
+    date: "2026-02-07",
+    readTime: "6 min read",
+    readTimeGr: "6 λεπτά διάβασμα",
+    tags: ["CV", "Career", "Tips"],
+    tagsGr: ["CV", "Καριέρα", "Tips"],
+    image: "/assets/blogs/killer-cv.jpg",
+    imageAlt: "Recruiter reviewing CVs on screen with magnifying glass; approved candidate with checkmark. How to write a killer CV that gets read.",
+    imageAltGr: "Recruiter ελέγχει CV σε οθόνη με μεγεθυντικό φακό· επιλεγμένος υποψήφιος με checkmark. Πώς να γράψεις ένα killer CV που διαβάζεται.",
+    published: true
+  },
+  {
     id: 3,
     slug: "a-project-that-gets-you-hired",
     title: "A Project That Gets You Hired",

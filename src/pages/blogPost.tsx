@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin, Link as LinkIcon } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { Button } from "../components/ui/button.tsx";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import { blogPosts } from "../data/blogPosts";
@@ -9,6 +9,7 @@ import { useToast } from "../components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import AcceleratorCTA from "../components/AcceleratorCTA";
 import BlogReadGate, { BLOG_ACCESS_KEY } from "../components/BlogReadGate";
 
@@ -17,7 +18,7 @@ const BlogPost = () => {
   const { slug } = useParams();
   const { language, t } = useLanguage();
   const { toast } = useToast();
-  
+
   const post = blogPosts.find(p => p.slug === slug);
 
   if (!post) {
@@ -55,7 +56,12 @@ const BlogPost = () => {
   const tags = language === 'gr' ? post.tagsGr : post.tags;
   const readTime = language === 'gr' ? post.readTimeGr : post.readTime;
 
-  const [hasAccess, setHasAccess] = useState(() => typeof window !== 'undefined' && !!localStorage.getItem(BLOG_ACCESS_KEY));
+  const isLocalDev =
+    typeof window !== 'undefined' &&
+    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+  const [hasAccess, setHasAccess] = useState(
+    () => typeof window !== 'undefined' && (!!localStorage.getItem(BLOG_ACCESS_KEY) || isLocalDev)
+  );
 
   // Always use production URL for sharing (social media can't access localhost)
   const currentUrl = `https://www.devready.gr/devpress/${post.slug}`;
@@ -122,8 +128,19 @@ const BlogPost = () => {
         description={language === 'gr' ? post.excerptGr : post.excerpt}
         keywords={tags.join(', ')}
         canonical={currentUrl}
-        ogTitle={title}
+        ogTitle={post.titleGr}
+        ogDescription={post.excerptGr}
         ogImage={post.image ? `https://www.devready.gr${post.image}` : undefined}
+        ogImageAlt={
+          (() => {
+            const p = post as { imageAlt?: string; imageAltGr?: string };
+            return p.imageAlt != null
+              ? language === 'gr'
+                ? p.imageAltGr ?? p.imageAlt
+                : p.imageAlt
+              : undefined;
+          })()
+        }
         ogType="article"
         articlePublishedTime={post.date}
         articleAuthor={post.author}
@@ -290,12 +307,8 @@ const BlogPost = () => {
         </article>
 
         {/* Footer */}
-        <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground" role="contentinfo">
-          <p className="text-sm">
-            © {new Date().getFullYear()} DevReady. All rights reserved.
-          </p>
-        </footer>
-      </div>
+        <Footer />
+      </div >
     </>
   );
 };

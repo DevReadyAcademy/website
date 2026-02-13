@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Mail, MapPin, Send, Linkedin, Instagram, Calendar } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { Button } from "../components/ui/button.tsx";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { Label } from "../components/ui/label";
 import { useToast } from "../components/ui/use-toast";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   const { t, language } = useLanguage();
@@ -67,7 +68,7 @@ const Contact = () => {
   };
 
   const handleChange = (
-      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -76,27 +77,27 @@ const Contact = () => {
   };
 
   return (
-      <>
-        <SEO
-          title="Contact Us - Get in Touch with DevReady"
-          description="Ready to transform your career? Contact DevReady to learn more about our software engineering accelerator, ask questions, or secure your spot in the next cohort. We're here to help!"
-          keywords="contact DevReady, accelerator enrollment, software engineering questions, apply to accelerator, tech career help"
-          canonical="https://www.devready.gr/contact"
-          language={language}
-        />
-        <div className="min-h-screen bg-background">
-          {/* Header */}
-          <header className="py-4 sm:py-6 px-3 sm:px-4 border-b border-border/50">
+    <>
+      <SEO
+        title="Contact Us - Get in Touch with DevReady"
+        description="Ready to transform your career? Contact DevReady to learn more about our software engineering accelerator, ask questions, or secure your spot in the next cohort. We're here to help!"
+        keywords="contact DevReady, accelerator enrollment, software engineering questions, apply to accelerator, tech career help"
+        canonical="https://www.devready.gr/contact"
+        language={language}
+      />
+      <div className="min-h-screen bg-background">
+        {/* Header */}
+        <header className="py-4 sm:py-6 px-3 sm:px-4 border-b border-border/50">
           <div className="container mx-auto max-w-6xl flex items-center justify-between">
             <Link
-                to="/"
-                className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-foreground transition-colors flex-shrink-0"
+              to="/"
+              className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-foreground transition-colors flex-shrink-0"
             >
               <ArrowLeft className="w-4 h-4 flex-shrink-0" />
               <span className="text-sm sm:text-base">{t('contact.backToHome')}</span>
             </Link>
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-              <img 
+              <img
                 src="/assets/logo-80.webp"
                 srcSet="/assets/logo-80.webp 80w, /assets/logo-120.webp 120w, /assets/logo-320.webp 320w"
                 sizes="(max-width: 640px) 32px, 80px"
@@ -138,63 +139,63 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="name">{t('contact.formName')}</Label>
                       <Input
-                          id="name"
-                          name="name"
-                          placeholder={t('contact.formNamePlaceholder')}
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
+                        id="name"
+                        name="name"
+                        placeholder={t('contact.formNamePlaceholder')}
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">{t('contact.formEmail')}</Label>
                       <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          placeholder={t('contact.formEmailPlaceholder')}
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder={t('contact.formEmailPlaceholder')}
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">{t('contact.formSubject')}</Label>
                     <Input
-                        id="subject"
-                        name="subject"
-                        placeholder={t('contact.formSubjectPlaceholder')}
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
+                      id="subject"
+                      name="subject"
+                      placeholder={t('contact.formSubjectPlaceholder')}
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">{t('contact.formMessage')}</Label>
                     <Textarea
-                        id="message"
-                        name="message"
-                        placeholder={t('contact.formMessagePlaceholder')}
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
+                      id="message"
+                      name="message"
+                      placeholder={t('contact.formMessagePlaceholder')}
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                   <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full"
-                      disabled={isSubmitting}
+                    type="submit"
+                    size="lg"
+                    className="w-full"
+                    disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                        t('contact.formSending')
+                      t('contact.formSending')
                     ) : (
-                        <>
-                          <Send className="w-4 h-4 mr-2" />
-                          {t('contact.formSubmit')}
-                        </>
+                      <>
+                        <Send className="w-4 h-4 mr-2" />
+                        {t('contact.formSubmit')}
+                      </>
                     )}
                   </Button>
                 </form>
@@ -213,9 +214,9 @@ const Contact = () => {
                   </p>
                   <Button asChild className="w-full bg-white text-primary hover:bg-white/90 shadow-lg" size="lg">
                     <a
-                        href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Calendar className="w-4 h-4 mr-2" />
                       {t('contact.enrollCta')}
@@ -237,8 +238,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-medium mb-1">{t('contact.email')}</h3>
                         <a
-                            href="mailto:hello@devready.gr"
-                            className="text-muted-foreground hover:text-primary transition-colors"
+                          href="mailto:hello@devready.gr"
+                          className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           hello@devready.gr
                         </a>
@@ -257,20 +258,20 @@ const Contact = () => {
                       <h3 className="font-medium mb-3">{t('contact.followUs')}</h3>
                       <div className="flex gap-3">
                         <a
-                            href="https://www.linkedin.com/company/devreadygr"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                            aria-label="Follow us on LinkedIn"
+                          href="https://www.linkedin.com/company/devreadygr"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          aria-label="Follow us on LinkedIn"
                         >
                           <Linkedin className="w-5 h-5" />
                         </a>
                         <a
-                            href="https://www.instagram.com/devreadygr/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                            aria-label="Follow us on Instagram"
+                          href="https://www.instagram.com/devreadygr/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          aria-label="Follow us on Instagram"
                         >
                           <Instagram className="w-5 h-5" />
                         </a>
@@ -283,13 +284,9 @@ const Contact = () => {
           </div>
         </main>
 
-        <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
-          <p className="text-sm">
-            {t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}
-          </p>
-        </footer>
-        </div>
-      </>
+        <Footer />
+      </div>
+    </>
   );
 };
 
