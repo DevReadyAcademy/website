@@ -525,7 +525,7 @@ Up to you. Δεν υπάρχει hard rule. Αν το χρησιμοποιήσε
     readTime: "6 min read",
     readTimeGr: "6 λεπτά διάβασμα",
     tags: ["CV", "Career", "Tips"],
-    tagsGr: ["CV", "Καριέρα", "Tips"],
+    tagsGr: ["CV", "Career", "Tips"],
     image: "/assets/blogs/killer-cv.jpg",
     imageAlt: "Recruiter reviewing CVs on screen with magnifying glass; approved candidate with checkmark. How to write a killer CV that gets read.",
     imageAltGr: "Recruiter ελέγχει CV σε οθόνη με μεγεθυντικό φακό· επιλεγμένος υποψήφιος με checkmark. Πώς να γράψεις ένα killer CV που διαβάζεται.",
@@ -534,14 +534,13 @@ Up to you. Δεν υπάρχει hard rule. Αν το χρησιμοποιήσε
   {
     id: 3,
     slug: "a-project-that-gets-you-hired",
-    title: "A Project That Gets You Hired",
-    titleGr: "A Project That Gets You Hired",
+    title: "The Project Actually Gets You Hired in Tech",
+    titleGr: "Το Project που Πραγματικά σε Κάνει Hire στο Tech",
     excerpt:
         "What project should I build to showcase engineering abilities and actually get hired? You don’t need rocket science. You need one project that shows real engineering disciplines and practices.",
     excerptGr:
         "Τι project πρέπει να φτιάξω για να δείξω engineering abilities και να με κάνουν hire; Δεν χρειάζεσαι rocket science. Χρειάζεσαι ένα project που δείχνει engineering disciplines και practices.",
-    content: `# The Project Actually Gets You Hired in Tech
-
+    content: `
 ## 👋 Intro
 
 One of the most common questions we get is: **"What project should I build to showcase my engineering abilities and actually get hired?"**
@@ -663,7 +662,7 @@ At DevReady, we help developers build exactly these kinds of projects. Not portf
 
 You don’t need to be impressive. You need to be ready.
 `,
-    contentGr: `# Το Project που Πραγματικά σε Κάνει Hire στο Tech
+    contentGr: `
 
 ## 👋 Intro
 
