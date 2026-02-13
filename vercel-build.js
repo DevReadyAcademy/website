@@ -108,11 +108,11 @@ blogPosts.forEach(post => {
     )
     .replace(
       /<title>[^<]*<\/title>/,
-      `<title>${post.title} | DevPress | DevReady</title>`
+      `<title>${post.titleGr} | DevPress | DevReady</title>`
     )
     .replace(
       /<meta name="description" content="[^"]*" \/>/,
-      `<meta name="description" content="${post.excerpt.replace(/"/g, '&quot;')}" />`
+      `<meta name="description" content="${post.excerptGr.replace(/"/g, '&quot;')}" />`
     )
     .replace(
       /<link rel="canonical" href="[^"]*" \/>/,
