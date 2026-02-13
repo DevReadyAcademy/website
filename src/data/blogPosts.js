@@ -540,7 +540,7 @@ Up to you. Δεν υπάρχει hard rule. Αν το χρησιμοποιήσε
         "What project should I build to showcase engineering abilities and actually get hired? You don’t need rocket science. You need one project that shows real engineering disciplines and practices.",
     excerptGr:
         "Τι project πρέπει να φτιάξω για να δείξω engineering abilities και να με κάνουν hire; Δεν χρειάζεσαι rocket science. Χρειάζεσαι ένα project που δείχνει engineering disciplines και practices.",
-    content: `# A Project That Gets You Hired
+    content: `# The Project Actually Gets You Hired in Tech
 
 ## 👋 Intro
 
@@ -663,15 +663,13 @@ At DevReady, we help developers build exactly these kinds of projects. Not portf
 
 You don’t need to be impressive. You need to be ready.
 `,
-    contentGr: `# Ένα Project που σε Κάνει Hire
+    contentGr: `# Το Project που Πραγματικά σε Κάνει Hire στο Tech
 
 ## 👋 Intro
 
 Μία από τις πιο συχνές ερωτήσεις που δεχόμαστε είναι: **"Τι project πρέπει να φτιάξω για να δείξω engineering abilities και να με κάνουν hire;"**
 
-Πολλοί πιστεύουν ότι η απάντηση είναι κάτι complex. Κάτι εντυπωσιακό. Like "rocket science" or something.
-
-Αυτό δεν ισχύει.
+Πολλοί πιστεύουν ότι η απάντηση είναι κάτι complex. Κάτι εντυπωσιακό. Like "rocket science" or something. Αυτό δεν ισχύει.
 
 Δεν προσλαμβάνεσαι επειδή το project σου είναι complex. Προσλαμβάνεσαι επειδή δείχνει **engineering disciplines and practices**. Αυτό που κοιτάνε οι hiring managers είναι αν το project δείχνει ότι καταλαβαίνεις πώς χτίζεται software στον πραγματικό κόσμο: πώς ορίζεις scope, πώς παίρνεις αποφάσεις, πώς κρατάς τα πράγματα καθαρά, πώς τα τεκμηριώνεις και αν μπορείς να τα ολοκληρώσεις.
 
