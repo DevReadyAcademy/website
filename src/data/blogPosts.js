@@ -553,8 +553,6 @@ You don’t get hired because your project is complex. You get hired because you
 
 In this post, we’ll look at what kind of project helps you stand out, what it needs to include, and what are common mistakes junior engineers make.
 
----
-
 ## 🧠 The biggest misconception about projects
 
 Most candidates try to impress with complexity. More features, more tools, more buzzwords.
@@ -566,8 +564,6 @@ A smaller project done well says much more than a big project that’s half-fini
 
 That’s why many GitHub profiles with lots of repositories don’t stand out. They show activity, not engineering maturity.
 
----
-
 ## ✅ So what kind of project should you build?
 
 To be honest, the idea itself doesn’t really matter. What matters is whether the project gives you enough room to demonstrate solid engineering practices.
@@ -577,8 +573,6 @@ A great example is a **Kanban-style project or task manager**. Not because Kanba
 It also resembles internal tools that engineers actually build in real companies.
 
 You are not being evaluated on originality. You are being evaluated on execution.
-
----
 
 ## 🧱 The blueprint: what your project must include
 
@@ -592,8 +586,6 @@ Your README is essentially the **documentation and the brand of the project (and
 
 It should clearly explain what the project does, how it runs, and which key decisions or assumptions you made. If someone has to read the code to understand your project, that’s already a problem.
 
----
-
 ### 🌍 Deployment
 
 Deployment matters because shipping software is part of the job.
@@ -601,8 +593,6 @@ Deployment matters because shipping software is part of the job.
 A deployed project shows that you understand environments, configuration, and the whole lifecycle of software development. It also allows reviewers to try your project without any setup.
 
 Even a simple free deployment is enough. The goal isn’t scale. The goal is that your project actually runs in a production environment.
-
----
 
 ### 🧹 Clean Code & Structure
 
@@ -612,8 +602,6 @@ Folder structure, naming, and separation of responsibilities show how you think 
 
 Clean code signals that you can collaborate and maintain software over time.
 
----
-
 ### 🧪 Testing
 
 You don’t need perfect coverage or dozens of tests.
@@ -622,15 +610,11 @@ What matters is showing that you understand why tests exist and what is worth te
 
 Tests show that you care about reliability, not just happy paths.
 
----
-
 ### 🤖 Basic automation (CI)
 
 Even a simple CI setup goes a long way.
 
 Running linting or tests automatically on every push shows that you are familiar with modern workflows and value consistency. This is how real teams protect code quality.
-
----
 
 ## ⚠️ Common issues that hurt otherwise good projects
 
@@ -642,8 +626,6 @@ Projects that run only locally feel more like university assignments than produc
 
 Finally, messy commits or copy-pasted code are easy to spot and usually signal rushing or lack of ownership.
 
----
-
 ## ❓ But what tech stack should I use?
 
 Honestly, it doesn’t matter that much.
@@ -651,8 +633,6 @@ Honestly, it doesn’t matter that much.
 What matters is whether your stack allows you to demonstrate the things we talked about above. Choose a modern stack you’re comfortable with, or one relevant to the roles you’re applying for.
 
 No one will hire you because you picked a trendy framework. They will hire you because you used whatever you chose correctly.
-
----
 
 ## 🎯 Wrap up
 
@@ -674,8 +654,6 @@ You don’t need to be impressive. You need to be ready.
 
 Σε αυτό το post θα δούμε τι είδους project σε βοηθάει να ξεχωρίσεις, τι πρέπει να περιλαμβάνει και ποια είναι συχνά λάθη που κάνουν junior engineers.
 
----
-
 ## 🧠 Η μεγαλύτερη παρεξήγηση για τα projects
 
 Οι περισσότεροι προσπαθούν να εντυπωσιάσουν με πολυπλοκότητα. Περισσότερα features, περισσότερα εργαλεία, περισσότερα buzzwords.
@@ -687,8 +665,6 @@ You don’t need to be impressive. You need to be ready.
 
 Γι’ αυτό και πολλά GitHub profiles με πολλά repos δεν ξεχωρίζουν. Δείχνουν activity, όχι engineering maturity.
 
----
-
 ## ✅ Τι project πρέπει τελικά να φτιάξεις;
 
 To be honest η απάντηση είναι ότι η ιδέα δεν έχει τόση σημασία. Σημασία έχει αν το project σου σου δίνει χώρο να δείξεις σωστά engineering practices.
@@ -696,8 +672,6 @@ To be honest η απάντηση είναι ότι η ιδέα δεν έχει �
 Ένα πολύ καλό παράδειγμα είναι ένα **Kanban-style project ή task manager**. Όχι επειδή το Kanban είναι κάτι ιδιαίτερο, αλλά επειδή περιλαμβάνει φυσικά πράγματα που ενδιαφέρουν τις εταιρείες: state transitions, data modeling, business rules, UI state και edge cases.
 
 Δεν αξιολογείσαι για την πρωτοτυπία. Αξιολογείσαι για την εκτέλεση.
-
----
 
 ## 🧱 Το blueprint: τι πρέπει να περιλαμβάνει
 
@@ -711,8 +685,6 @@ To be honest η απάντηση είναι ότι η ιδέα δεν έχει �
 
 Πρέπει να εξηγεί καθαρά τι κάνει το project, πώς τρέχει και ποιες βασικές αποφάσεις ή assumptions έκανες. Αν κάποιος πρέπει να διαβάσει τον κώδικα για να καταλάβει το project, αυτό είναι ήδη πρόβλημα.
 
----
-
 ### 🌍 Deployment
 
 Το deployment έχει σημασία γιατί το να κάνεις ship software είναι μέρος της δουλειάς.
@@ -720,8 +692,6 @@ To be honest η απάντηση είναι ότι η ιδέα δεν έχει �
 Ένα deployed project δείχνει ότι καταλαβαίνεις environments, configuration και το whole lifecycle of a software development. Επίσης επιτρέπει σε κάποιον να δοκιμάσει το project χωρίς setup.
 
 Ακόμα και ένα απλό free deployment αρκεί. Ο στόχος δεν είναι το scale, αλλά το ότι το project σου όντως να τρέχει σε κάποιο production environment.
-
----
 
 ### 🧹 Clean Code & Structure
 
@@ -731,23 +701,17 @@ To be honest η απάντηση είναι ότι η ιδέα δεν έχει �
 
 Το clean code δείχνει ότι μπορείς να συνεργαστείς και να συντηρήσεις software σε βάθος χρόνου.
 
----
-
 ### 🧪 Testing
 
 Δεν χρειάζεσαι τέλειο coverage ή δεκάδες tests.
 
 Χρειάζεται να δείξεις ότι καταλαβαίνεις γιατί υπάρχουν τα tests και τι αξίζει να τεσταριστεί. Λίγα αλλά ουσιαστικά tests στο core logic είναι αρκετά για να δείξουν maturity.
 
----
-
 ### 🤖 Basic automation (CI)
 
 Ακόμα και ένα απλό CI setup κάνει μεγάλη διαφορά.
 
 Το να τρέχουν αυτόματα linting ή tests σε κάθε push δείχνει ότι είσαι εξοικειωμένος με σύγχρονα workflows και ότι σε νοιάζει η συνέπεια.
-
----
 
 ## ⚠️ Συχνά λάθη που κοστίζουν
 
@@ -757,8 +721,6 @@ To be honest η απάντηση είναι ότι η ιδέα δεν έχει �
 
 Τέλος, messy commits ή copy-paste code φαίνονται εύκολα και συνήθως δείχνουν βιασύνη ή έλλειψη ownership.
 
----
-
 ## ❓ "Αλλά ποιο tech stack να χρησιμοποιήσω;"
 
 Honestly, δεν έχει τόση σημασία.
@@ -766,8 +728,6 @@ Honestly, δεν έχει τόση σημασία.
 Σημασία έχει αν το stack σου επιτρέπει να δείξεις όλα όσα αναφέραμε παραπάνω. Διάλεξε ένα σύγχρονο stack που σου είναι άνετο ή που ταιριάζει με τις θέσεις στις οποίες κάνεις apply.
 
 Κανείς δεν θα σε προσλάβει επειδή διάλεξες trendy framework. Θα σε προσλάβει επειδή χρησιμοποίησες ό,τι διάλεξες σωστά.
-
----
 
 ## 🎯 Wrap up
 
