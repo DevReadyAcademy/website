@@ -1,5 +1,128 @@
 export const blogPosts = [
   {
+    id: 3,
+    slug: "why-do-you-need-a-mentor",
+    title: "Why Do You Need a Mentor?",
+    titleGr: "Γιατί Χρειάζεσαι έναν Mentor;",
+    excerpt: "Having a mentor can be a valuable asset in your personal and professional growth.",
+    excerptGr: "Το να έχεις έναν mentor μπορεί να είναι πολύτιμο asset για την προσωπική και επαγγελματική σου ανάπτυξη.",
+    content: `# 🧭 Why Do You Need a Mentor?
+
+Throughout my life, I have relied on my friends and family to help me with problems and ideas as I navigated life. However, as I have become more proficient in my field, I have found that their help is limited and it's completely normal. Problems can become more complex or take on dimensions that I have never dealt with before. Recently, I realized that to improve my profession and life in general, I need mentors, not just one, but several.
+
+## ❓ Why Do You Need Mentors
+
+As you grow older, you expose yourself to multiple fields that may require expertise. For instance, I have been trying to secure a home loan to buy my first house, and I discovered that I knew nothing about real estate and loans. Moreover, no one in my network knew anything about it either, so I had to learn everything by myself. Finance is not my area of expertise, but as I explore more opportunities and options, I realize that I need to equip myself with more knowledge in this domain. It's tough to jump into a new field all by yourself, and that's when it hit me: **I need a mentor!**
+
+Here are some reasons why you may need a mentor:
+
+1. **Gain knowledge and expertise:** A mentor can share their experience and expertise with you and help you learn new skills and knowledge that can benefit your personal and professional life.
+2. **Receive guidance and support:** A mentor can provide guidance and support in making important decisions and navigating challenges. They can help you see things from a different perspective and provide you with constructive feedback.
+3. **Build confidence and self-esteem:** A mentor can help you build your confidence and self-esteem by encouraging you and helping you identify your strengths and weaknesses.
+4. **Expand your network:** A mentor can introduce you to new people in your industry or field, which can help you expand your professional network.
+5. **Learn from their mistakes:** A mentor can help you avoid making the same mistakes they did and provide you with insights into how to navigate difficult situations.
+
+Mentors can help you save time by giving you shortcuts and sharing their experiences with you, so you can make wiser decisions and navigate your way more effectively. However, they are not just efficiency tools; they can also assist you in living a more relaxed and healthier life. Sometimes, it's not just about career or finance but also about the life lessons that you can learn from a more experienced person. I firmly believe that a mentoring relationship is unique and can sometimes turn into a great friendship too. Overall, having a mentor can be a valuable asset in your personal and professional growth.
+
+## 🔍 Where to Look for Mentors
+
+1. Start by looking at your networks. If you have friends who are more experienced than you, learn from them. Give them a chance to teach you something you're interested in learning.
+
+2. Your workplace is an excellent place to look for mentors too. I have found throughout my career that many people are more than willing to help you. Companies usually have a mentoring program, but even if they don't, don't let that stop you. You can ask someone to mentor you unofficially. At Skyscanner, I have one official mentor and two more unofficial ones with whom I have regular talks about my concerns and ideas. You will be amazed at how much time you can save and what you can learn from your mentors.
+
+3. Depending on the field you want to be mentored in, try to search in places where mentors usually live, like industry events, conferences, seminars.
+
+4. You can also find mentors through several online platforms that connect mentors with mentees, such as LinkedIn and MentorCruise.
+
+## 👔 Lead Your Mentoring Relationship
+
+It's your responsibility to lead the mentoring relationship. Your mentor is also learning, and it's really beneficial for them, but mainly, it's about you. You have to come up with topics and goals and schedule the length of the engagement, the place, and the frequency. You are responsible for maintaining the mentoring relationship. One suggestion for people who are not familiar with mentoring is to keep the mentoring relationship **short-term** in the beginning. People often make the mistake of committing for a long time and then feel reluctant to break it off when there is no value anymore. Leadership requires courage, and you will need that when you realize that there is no more reason to meet with your mentor.
+
+Being a mentee is a great experience, and besides learning what you aimed for, you learn how to lead relationships and take actions and initiatives. So please start small with a short-term relationship and then adjust according to your needs.
+
+### 💡 Tips for Mentees
+
+1. **Be clear about your goals:** Know what you want to achieve from the mentorship relationship and communicate your goals clearly to your mentor. This will help your mentor provide more targeted guidance and support.
+
+2. **Be open and receptive:** Be open to feedback and new perspectives. Your mentor may challenge you and push you out of your comfort zone, but this can lead to growth and learning.
+
+3. **Take ownership of your learning:** While your mentor is there to guide you, it's essential to take responsibility for your own learning and development. Be proactive in seeking out resources and opportunities to learn.
+
+4. **Respect your mentor's time:** Be mindful of your mentor's time and availability. Come prepared to each meeting with specific questions or topics to discuss, and be respectful of their schedule.
+
+5. **Show gratitude:** Express gratitude and appreciation for your mentor's time and guidance. Let them know how their mentorship has impacted you and your growth.
+
+Remember that mentorship is a **two-way** street, and both parties can learn and benefit from the relationship.
+
+## 🙏 Conclusion
+
+Don't be afraid to ask people to mentor you; most people will be happy to do it. I've learnt so many valuable lessons from my mentors in so many different parts of life. I would not be here without my mentors, my family, Vasilis, Patroklos, Dimitris, PJ, Stratos, and Tudor, thank you for teaching me all these amazing lessons.
+
+---
+
+**Looking for mentorship in software engineering?** Check out our [6-week accelerator](/accelerator) where experienced engineers guide you through your journey into tech.
+    `,
+    contentGr: `# 🧭 Εισαγωγή
+
+Σε όλη μου τη ζωή, βασιζόμουν σε φίλους και οικογένεια για να με βοηθήσουν με προβλήματα και ιδέες. Ωστόσο, καθώς εξελίχθηκα επαγγελματικά, κατάλαβα ότι η βοήθειά τους έχει όρια και αυτό είναι απόλυτα φυσιολογικό. Τα ζητήματα γίνονται πιο σύνθετα και παίρνουν διαστάσεις που δεν έχω αντιμετωπίσει ποτέ πριν. Νωρίς στην καριέρα μου συνειδητοποίησα ότι για να αναβαθμίσω τόσο την καριέρα όσο και τη ζωή μου χρειάζομαι mentors, όχι έναν αλλά αρκετούς.
+
+## ❓ Γιατί Χρειάζεσαι Mentors
+
+Καθώς εκτίθεσαι σε νέους χώρους και ευκαιρίες, συναντάς προβλήματα που απαιτούν expertise. Για παράδειγμα, όταν προσπαθούσα να βρω στεγαστικό δάνειο, ανακάλυψα ότι δεν γνώριζα τίποτα για real estate ή δάνεια. Και κανείς στο network μου δεν είχε εμπειρία, οπότε έπρεπε να μάθω τα πάντα μόνος μου. Τα finance δεν είναι ο κύριος τομέας expertise μου, αλλά καθώς εξετάζω περισσότερες επιλογές, καταλαβαίνω ότι πρέπει να εξοπλίσω τον εαυτό μου με γνώση και σε αυτό τον χώρο. Είναι δύσκολο να μπαίνεις μόνος σου σε έναν καινούριο τομέα, και τότε κατάλαβα: **Χρειάζομαι mentor!**
+
+Μερικοί λόγοι για να έχεις mentor:
+
+1. **Απόκτηση γνώσης και εμπειρίας:** Ο mentor μοιράζεται την εμπειρία και το expertise του για να μάθεις νέα skills που σε βοηθούν στην προσωπική και επαγγελματική σου ζωή.
+2. **Καθοδήγηση και υποστήριξη:** Ο mentor σε βοηθάει να παίρνεις σημαντικές αποφάσεις, να αντιμετωπίζεις προκλήσεις και να βλέπεις τα πράγματα από διαφορετική οπτική μέσα από feedback.
+3. **Ενίσχυση αυτοπεποίθησης:** Ο mentor σε ενθαρρύνει, σου δείχνει ποια είναι τα δυνατά σου σημεία και σε βοηθά να βρεις τις αδυναμίες σου.
+4. **Επέκταση του δικτύου σου:** Ένας mentor μπορεί να σε συστήσει σε ανθρώπους του κλάδου και να ανοίξει δρόμους δικτύωσης (networking).
+5. **Μάθηση από λάθη άλλων:** Ο mentor σου δείχνει πως να αποφύγεις παγίδες και πώς να χειριστείς δύσκολες καταστάσεις.
+
+Οι mentors σου εξοικονομούν χρόνο, μοιράζοντας shortcuts και εμπειρίες για να παίρνεις πιο ώριμες αποφάσεις. Δεν είναι απλώς εργαλεία αποτελεσματικότητας, μπορούν να σε βοηθήσουν να ζήσεις πιο ήρεμα, healthy και ισορροπημένα. Μερικές φορές, πρόκειται για life lessons που δεν μαθαίνεις αλλού. Πιστεύω ότι μια mentoring σχέση είναι μοναδική και συχνά εξελίσσεται σε καλή φιλία. Συνολικά, ένας mentor είναι ένα πολύτιμο asset για την εξέλιξή σου.
+
+## 🔍 Πού να Ψάξεις Mentors
+
+1. Κοίταξε στο άμεσο network σου: φίλοι με περισσότερη εμπειρία μπορούν να σου μάθουν κάτι που σε ενδιαφέρει.
+
+2. Ο χώρος εργασίας σου είναι εξαιρετικός. Έχω διαπιστώσει ότι πολλοί συνάδελφοι θέλουν να βοηθήσουν. Αν δεν υπάρχει επίσημο mentoring πρόγραμμα, ζήτα έναν mentor ανεπίσημα. Στη Skyscanner είχα έναν official mentor και δύο unofficial με τους οποίους συζητούσα τακτικά.
+
+3. Αναζήτησε mentors σε industry events, conferences και seminars ανάλογα με το πεδίο που σε ενδιαφέρει.
+
+4. Υπάρχουν πολλές πλατφόρμες που συνδέουν mentors με mentees—επέλεξε αυτή που ταιριάζει περισσότερο στο πεδίο σου.
+
+## 👔 Οδήγησε την Mentoring Σχέση
+
+Είναι δική σου ευθύνη να οδηγήσεις τη σχέση. Ο mentor σου μαθαίνει επίσης, αλλά πάνω απ’ όλα αφορά εσένα. Θέσε topics και στόχους, προγραμμάτισε διάρκεια, τόπο και συχνότητα των συναντήσεων. Εσύ είσαι υπεύθυνος για την εξέλιξη της σχέσης. Στην αρχή κράτα τη σχέση **short-term**, γιατί πολλοί δεσμεύονται για πολύ και μετά δυσκολεύονται να το διακόψουν όταν δεν υπάρχει τόσο value. Το leadership απαιτεί τόλμη όταν καταλαβαίνεις ότι έχει τελειώσει ο κύκλος με τον mentor.
+
+Το να είσαι mentee σου μαθαίνει πώς να διαχειρίζεσαι σχέσεις και να παίρνεις initiative. Start small με μια short-term σχέση και προσαρμόσου ανάλογα με τις ανάγκες σου.
+
+### 💡 Tips για Mentees
+
+1. **Να έχεις ξεκάθαρους στόχους:** Επικοινώνησέ τους στον mentor ώστε να σου παρέχει στοχευμένη καθοδήγηση.
+2. **Να είσαι ανοικτός:** Δέξου το feedback και τις νέες οπτικές, ακόμα κι αν σε βγάζουν από την comfort zone.
+3. **Ανάλαβε ευθύνη για τη μάθησή σου:** Ο mentor είναι συνοδηγός, αλλά εσύ έχεις το τιμονί.
+4. **Σεβάσου τον χρόνο του mentor:** Έλα προετοιμασμένος με ερωτήσεις και topics και σεβάσου το πρόγραμμα του.
+5. **Δείξε ευγνωμοσύνη:** Ενημέρωσέ τον πώς σε έχει βοηθήσει ο mentor στο growth σου.
+
+Το mentorship είναι **two-way** street όπου και οι δύο πλευρές ωφελούνται.
+
+## 🙏 Wrap Up
+
+Μη φοβάσαι να ζητήσεις mentorship. Οι περισσότεροι θα το δέχονται με χαρά και είναι ένα πολύτιμο ταξίδι μάθησης. Έχω μάθει τόσα lessons από τους mentors μου σε κάθε πτυχή της ζωής μου.
+
+
+**Ψάχνεις mentorship στο software engineering;** Δες το [6-week accelerator μας](/accelerator) όπου έμπειροι engineers σε καθοδηγούν στο ταξίδι σου στο tech.
+    `,
+    author: "Alexis Pavlidis",
+    date: "2023-03-06",
+    readTime: "6 min read",
+    readTimeGr: "6 λεπτά διάβασμα",
+    tags: ["Mentoring", "Career", "Growth"],
+    tagsGr: ["Mentoring", "Καριέρα", "Ανάπτυξη"],
+    image: "/assets/blogs/mentoring/mentoring.webp",
+    published: true
+  },
+  {
     id: 1,
     slug: "software-interviews-dos-and-donts",
     title: "Software Interviews - Dos & Donts",
