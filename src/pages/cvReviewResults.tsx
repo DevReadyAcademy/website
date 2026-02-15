@@ -68,6 +68,7 @@ const CvReviewResults = () => {
                         >
                             <h1 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
                                 {t('cvReviewPage.resultsTitle')}
+                                <span className="block mt-2 w-fit mx-auto px-2.5 py-0.5 text-sm font-bold uppercase tracking-wider text-blue-600 bg-blue-100 rounded-full">Beta</span>
                                 {firstName && <span className="text-primary block mt-2 text-3xl md:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">{firstName} {lastName}</span>}
                             </h1>
                         </motion.div>

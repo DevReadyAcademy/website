@@ -111,6 +111,7 @@ const CvReview: React.FC = () => {
                             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
                         >
                             {t('cvReviewPage.heroTitle')}
+                            <span className="block mt-3 w-fit mx-auto px-2.5 py-0.5 text-sm font-bold uppercase tracking-wider text-blue-600 bg-blue-100 rounded-full">Beta</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
