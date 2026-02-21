@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Mail, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from '../components/ui/button.tsx';
 import { Input } from '../components/ui/input';
@@ -18,12 +18,6 @@ const TemplatePage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    if (localStorage.getItem(BLOG_ACCESS_KEY) === '1') {
-      window.location.href = CANVA_URL;
-    }
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
