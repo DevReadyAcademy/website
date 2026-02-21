@@ -21,6 +21,7 @@ const CvReviewResults = lazy(() => import("./pages/cvReviewResults"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const CvReview = lazy(() => import("./pages/CvReview"));
+const CvTemplate = lazy(() => import("./pages/CvTemplate"));
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,7 @@ const App = () => (
                   </FeatureGuard>
                 }
               />
+              <Route path="/cv-template" element={<CvTemplate />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -636,5 +636,12 @@
       "title": "6. Security",
       "content": "We apply SSL/TLS encryption throughout the site to ensure your data is transferred securely."
     }
+  },
+  "templateGate": {
+    "title": "Get Free Access",
+    "description": "Enter your email to get instant access to the template.",
+    "button": "Get Access",
+    "success": "You're in! Redirecting you now...",
+    "redirecting": "Opening the template in a moment..."
   }
 }
