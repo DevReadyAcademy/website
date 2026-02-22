@@ -5,7 +5,6 @@
     "enrollNow": "Εγγραφή",
     "learnMore": "Μάθε Περισσότερα",
     "skipToMain": "Μετάβαση στο κύριο περιεχόμενο",
-    "moneyBackGuarantee": "💰 Πλήρης επιστροφή χρημάτων αν τελικά δεν συμμετάσχεις στο πρόγραμμα",
     "bookCall": "Εγγραφή",
     "viewFullCurriculum": "Δες το Πρόγραμμα",
     "viewProgramDetails": "Λεπτομέρειες Προγράμματος",
@@ -20,7 +19,8 @@
     "journey": "Το Ταξίδι Μας",
     "devpress": "DevPress",
     "testimonials": "Testimonials",
-    "whyDifferent": "Γιατί Διαφέρουμε"
+    "whyDifferent": "Γιατί Διαφέρουμε",
+    "freeCvReview": "Δωρεάν Αξιολόγηση CV"
   },
   "hero": {
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE} · ⏰ {SPOTS_LEFT}",
@@ -40,7 +40,7 @@
     "description": "Ένα εντατικό πρόγραμμα σχεδιασμένο να σε μετατρέψει σε έναν industry-ready tech professional.",
     "timeCommitmentTitle": "Διάρκεια",
     "timeCommitment": "6 εβδομάδες εντατικά",
-    "timeCommitmentDetail": "~8 ώρες/εβδομάδα συνολικά",
+    "timeCommitmentDetail": "~2-3 ώρες/εβδομάδα",
     "formatTitle": "Format",
     "format": "100% Remote",
     "formatDetail": "Live + recordings",
@@ -73,7 +73,7 @@
     "infoCards": {
       "timeCommitmentTitle": "Διάρκεια",
       "timeCommitment": "6 εβδομάδες εντατικά",
-      "timeCommitmentDetail": "~8 ώρες/εβδομάδα συνολικά",
+      "timeCommitmentDetail": "~2-3 ώρες/εβδομάδα",
       "formatTitle": "Format",
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
@@ -215,8 +215,7 @@
       "Έχεις βασικές γνώσεις προγραμματισμού και θέλεις να γίνεις industry-ready",
       "Είσαι developer σε οποιονδήποτε ρόλο: frontend, backend, full-stack, mobile, ή άλλο tech stack",
       "Είσαι διατεθειμένος να αφιερώσεις περίπου 7-8 ώρες την εβδομάδα",
-      "Θέλεις ειλικρινές feedback από engineers που δουλεύουν στην αγορά",
-      "Εκτιμάς τα πρακτικά skills περισσότερο από τα certificates"
+      "Θέλεις ειλικρινές feedback από engineers που δουλεύουν στην αγορά"
     ],
     "notGoodFitTitle": "❌ Not a Good Fit Αν:",
     "notGoodFitItems": [
@@ -228,40 +227,44 @@
     "faqTitle": "Frequently Asked Questions",
     "faqs": [
       {
-        "question": "Χρειάζεται να ξέρω συγκεκριμένη γλώσσα προγραμματισμού ή framework?",
+        "question": "Χρειάζεται να ξέρω συγκεκριμένη γλώσσα προγραμματισμού ή framework;",
         "answer": "Όχι. Αυτό το accelerator είναι language και framework-agnostic. Είτε είσαι React developer, Python backend engineer, Java developer, mobile developer, ή οτιδήποτε άλλο, τα skills που διδάσκουμε (engineering thinking, clean code, Git, interviewing, branding) ισχύουν universal σε οποιονδήποτε tech ρόλο."
       },
       {
-        "question": "Χρειάζεται prior coding experience?",
+        "question": "Χρειάζεται prior coding experience;",
         "answer": "Ναι, αλλά τίποτα fancy. Αν έχεις τα παρακάτω basics, είσαι έτοιμος:\n\n• Variables και data types\n• Control flow\n• Loops\n• Functions και parameters\n• Basic κατανόηση μιας γλώσσας προγραμματισμού\n\nΕστιάζουμε στο να γεφυρώσουμε το gap από 'ξέρω να γράφω κώδικα' σε 'είμαι industry-ready,' όχι να διδάξουμε programming από το μηδέν.\n\nΤι σημαίνει 'basic knowledge'; Θα πρέπει να μπορείς να γράψεις simple programs και να καταλαβαίνεις basic error messages. Think: έχεις λύσει κάποια coding challenges, ολοκλήρωσες ένα beginner tutorial, ή έφτιαξες ένα μικρό personal project."
       },
       {
-        "question": "Θα βρω δουλειά μετά το accelerator?",
+        "question": "Θα βρω δουλειά μετά το accelerator;",
         "answer": "Δεν μπορούμε να εγγυηθούμε job placement, αλλά σε εξοπλίζουμε με τα ακριβή skills, portfolio και interview preparation που αυξάνουν dramatically τις πιθανότητές σου. Πολλοί από τους μαθητές μας βρήκαν δουλειά μέσα στον επόμενο μήνα. Η επιτυχία σου εξαρτάται από το effort και το commitment σου."
       },
       {
-        "question": "Ποια είναι η time commitment?",
-        "answer": "Περίμενε περίπου 8 ώρες την εβδομάδα συνολικά: 2-3 ώρες live teaching sessions, συν 5-6 ώρες για project work και independent learning."
+        "question": "Ποια είναι η time commitment;",
+        "answer": "Περίμενε ~2-3 ώρες την εβδομάδα για live sessions. Οι υπόλοιπες ~5 ώρες προέρχονται από την προσωπική σου αφοσίωση (project work και independent learning)."
       },
       {
-        "question": "Πόσα άτομα θα είναι στο cohort μου?",
+        "question": "Πόσα άτομα θα είναι στο cohort μου;",
         "answer": "Maximum 15 άτομα ανά cohort. Αυτό το μικρό μέγεθος εξασφαλίζει ότι μπορούμε να παρέχουμε targeted, personalized care και να απαντήσουμε στις specific ανάγκες σου καθ' όλη τη διάρκεια του προγράμματος."
       },
       {
-        "question": "Είναι το accelerator remote?",
+        "question": "Είναι το accelerator remote;",
         "answer": "Ναι, 100% remote. Όλα τα sessions διεξάγονται online, καθιστώντας το accessible από οπουδήποτε στην Ελλάδα."
       },
       {
-        "question": "Τι γίνεται αν χάσω ένα live session?",
+        "question": "Τι γίνεται αν χάσω ένα live session;",
         "answer": "Όλα τα sessions καταγράφονται. Ενώ ενθαρρύνουμε έντονα την live παρουσία για Q&A, mentorship και networking, μπορείς να το παρακολουθήσεις asynchronously αν χρειαστεί."
       },
       {
-        "question": "Είναι μόνο για άτομα που ψάχνουν δουλειά στην Ελλάδα?",
+        "question": "Είναι μόνο για άτομα που ψάχνουν δουλειά στην Ελλάδα;",
         "answer": "Όχι. Ενώ έχουμε base στην Ελλάδα και πολλοί από τους students μας αναζητούν Greek ευκαιρίες, τα skills και η approach δουλεύουν globally. Το accelerator σε ετοιμάζει για tech roles οπουδήποτε."
       },
       {
-        "question": "Τι γίνεται αφού κλείσω call?",
+        "question": "Τι γίνεται αφού κλείσω call;",
         "answer": "Θα συζητήσουμε τους στόχους σου, θα απαντήσουμε σε τυχόν ερωτήσεις και αν είναι good fit, θα ολοκληρώσουμε την εγγραφή σου και θα εξασφαλίσουμε το early bird pricing σου."
+      },
+      {
+        "question": "Ποιες είναι οι επιλογές πληρωμής;",
+        "answer": "Eξόφληση του συνολικού ποσού από τώρα, ή 50% προκαταβολή και 50% με την έναρξη του προγράμματος, αν σε εξυπηρετεί.\n\nΑν καμία από τις παραπάνω επιλογές δεν σε βολεύει, στείλε μας μήνυμα και θα προσπαθήσουμε να βρούμε μαζί μια λύση."
       }
     ],
     "finalCtaTitle": "Έτοιμος να Γίνεις Industry-Ready;",
@@ -299,7 +302,14 @@
     "backToHome": "Επιστροφή στην αρχική",
     "backToArticleList": "Επιστροφή στη λίστα άρθρων",
     "authorInfo": "Πληροφορίες συγγραφέα",
-    "callToAction": "Κλήση σε δράση"
+    "callToAction": "Κλήση σε δράση",
+    "blogGateTitle": "Συνέχισε την ανάγνωση",
+    "blogGateDescription": "Βάλε το email σου για να διαβάσεις το πλήρες άρθρο.\n\nReal-world code practices, career hacks, και insider tips από engineers που δουλεύουν σε top companies.",
+    "blogGatePlaceholder": "Το email σου",
+    "blogGateButton": "Συνέχεια",
+    "blogGateSuccess": "Ευχαριστούμε! Απόλαυσε το υπόλοιπο άρθρο.",
+    "blogGatePrivacy": "Σεβόμαστε το privacy σου. Unsubscribe ανά πάσα στιγμή.",
+    "newsletterIntro": "Θέλεις περισσότερα άρθρα και συμβουλές; Λάβε δωρεάν weekly engineering tips στο inbox σου."
   },
   "contact": {
     "backToHome": "Πίσω στην Αρχική",
@@ -362,7 +372,7 @@
     "members": [
       {
         "name": "Alexis Pavlidis",
-        "description": "London-based Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable distributed systems σε top companies και στην καθοδήγηση engineers. Είναι passionate για clean code, distributed systems, και στο να βοηθάει άλλους να να κανουν navigate στο tech industry μέσω mentoring, writing και speaking."
+        "description": "London-based Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable distributed systems σε top companies και στην καθοδήγηση engineers. Είναι passionate για clean code, distributed systems, και στο να βοηθάει άλλους να κανουν navigate στο tech industry μέσω mentoring, writing και speaking."
       },
       {
         "name": "Kostikas Visnia",
@@ -492,7 +502,7 @@
       {
         "date": "2025",
         "location": "Remote",
-        "title": "Research, Validation & Η Πρώτη μας Success Story",
+        "title": "Research, Validation & Το Πρώτo μας Success Story",
         "description": "Κάναμε interview 100+ aspiring developers σε όλη την Ελλάδα για να καταλάβουμε τα pain points τους. Το μήνυμα ήταν ξεκάθαρο: η Ελλάδα έχει το talent, αλλά λείπουν structured paths, mentorship και industry context. Φτιάξαμε το DevReady, τρέξαμε το πρώτο μας cohort, και είδαμε τους πρώτους μας students να βρίσκουν τις dream δουλειές τους. Το model δουλεύει.",
         "image": "/assets/timeline/students.webp"
       },
@@ -520,6 +530,117 @@
   },
   "footer": {
     "copyright": "© {year} DevReady."
+  },
+  "cvReviewPage": {
+    "title": "Δωρεάν Αξιολόγηση CV",
+    "resultsTitle": "Αποτελέσματα Αξιολόγησης CV",
+    "heroTitle": "Μήπως το CV σου Σου Κοστίζει Συνεντεύξεις;",
+    "heroSubtitle": "Λάβε δωρεάν, επαγγελματική αξιολόγηση από το DevReady. Ξέρουμε ακριβώς τι ψάχνουν οι tech εταιρείες.",
+    "cta": "Ζήτησε Δωρεάν Αξιολόγηση",
+    "startHere": "Ξεκίνα Την Δωρεάν Αξιολόγηση",
+    "benefits": {
+      "title": "Γιατί το CV σου Έχει Σημασία",
+      "atsTitle": "Κέρδισε τα ATS",
+      "atsDescription": "Το 75% των βιογραφικών απορρίπτονται από αυτοματοποιημένα συστήματα πριν τα δει άνθρωπος. Θα σου δείξουμε πώς να περνάς τα φίλτρα.",
+      "recruiterTitle": "Η Σάρωση των 6 Δευτερολέπτων",
+      "recruiterDescription": "Οι recruiters αφιερώνουν κατά μέσο όρο 6 δευτερόλεπτα σε κάθε CV. Σε βοηθάμε να αναδείξεις την αξία σου άμεσα.",
+      "engineeringTitle": "Engineering Focus",
+      "engineeringDescription": "Οι γενικές συμβουλές HR δεν δουλεύουν για devs. Αξιολογούμε το βιογραφικό σου με το μάτι ενός technical recruiter.",
+      "freeTitle": "100% Δωρεάν",
+      "freeDescription": "Χωρίς κρυφές χρεώσεις, χωρίς πιστωτική κάρτα. Πιστεύουμε ότι κάθε junior developer αξίζει μια δίκαιη ευκαιρία στον κλάδο."
+    },
+    "loading": "Φόρτωση αποτελεσμάτων...",
+    "errorNotFound": "Δεν βρέθηκαν αποτελέσματα για αυτόν τον σύνδεσμο.",
+    "errorGeneric": "Προέκυψε σφάλμα κατά την ανάκτηση των αποτελεσμάτων."
+  },
+  "terms": {
+    "title": "Όροι Χρήσης",
+    "lastUpdated": "Τελευταία Ενημέρωση: 10 Φεβρουαρίου 2026",
+    "intro": "Παρακαλούμε διαβάστε προσεκτικά τους παρακάτω όρους πριν χρησιμοποιήσετε την ιστοσελίδα devready.gr. Η χρήση του ιστότοπου συνεπάγεται την ανεπιφύλακτη αποδοχή των παρόντων όρων.",
+    "section1": {
+      "title": "1. Γενικοί Όροι",
+      "content": "Το devready.gr παρέχει πληροφορίες, υπηρεσίες και περιεχόμενο σχετικό με την ανάπτυξη λογισμικού και την τεχνολογία. Διατηρούμε το δικαίωμα να τροποποιούμε το περιεχόμενο ή τους όρους χρήσης ανά πάσα στιγμή χωρίς προειδοποίηση."
+    },
+    "section2": {
+      "title": "2. Πνευματική Ιδιοκτησία",
+      "content": "Όλο το περιεχόμενο του ιστότοπου (κείμενα, γραφικά, λογότυπα, κώδικας, άρθρα) αποτελεί πνευματική ιδιοκτησία του devready.gr και προστατεύεται από τις σχετικές διατάξεις του ελληνικού και διεθνούς δικαίου. Απαγορεύεται η αναπαραγωγή, αναδημοσίευση ή τροποποίηση χωρίς γραπτή άδεια."
+    },
+    "section3": {
+      "title": "3. Περιορισμός Ευθύνης",
+      "content": {
+        "item1": "<strong>Περιεχόμενο:</strong> Το περιεχόμενο παρέχεται \"ως έχει\" για ενημερωτικούς σκοπούς. Παρόλο που καταβάλλουμε κάθε δυνατή προσπάθεια για την ακρίβεια των πληροφοριών, δεν εγγυόμαστε την απόλυτη ορθότητά τους.",
+        "item2": "<strong>Τεχνική Λειτουργία:</strong> Δεν φέρουμε ευθύνη για τυχόν προσωρινή μη διαθεσιμότητα του ιστότοπου ή για ζημιές που μπορεί να προκληθούν από ιούς ή άλλα κακόβουλα στοιχεία.",
+        "item3": "<strong>Εξωτερικοί Σύνδεσμοι:</strong> Το site ενδέχεται να περιέχει συνδέσμους προς τρίτους ιστότοπους. Δεν φέρουμε καμία ευθύνη για το περιεχόμενο ή την πολιτική απορρήτου αυτών."
+      }
+    },
+    "section4": {
+      "title": "4. Υποχρεώσεις Χρήστη",
+      "content": "Ο χρήστης συμφωνεί να μην χρησιμοποιεί τον ιστότοπο για παράνομες ενέργειες, αποστολή spam ή οποιαδήποτε δραστηριότητα που μπορεί να βλάψει τη λειτουργία της πλατφόρμας."
+    },
+    "section5": {
+      "title": "5. Εφαρμοστέο Δίκαιο",
+      "content": "Οι παρόντες όροι διέπονται από το Ελληνικό Δίκαιο. Για οποιαδήποτε διαφορά προκύψει, αρμόδια είναι τα δικαστήρια της Θεσσαλονίκης."
+    },
+    "section6": {
+      "title": "6. Επικοινωνία",
+      "content": "Για οποιαδήποτε ερώτηση σχετικά με τους Όρους Χρήσης, μπορείτε να επικοινωνήσετε μαζί μας στο: hello@devready.gr."
+    }
+  },
+  "privacy": {
+    "title": "Πολιτική Απορρήτου & Προστασίας Δεδομένων (GDPR)",
+    "lastUpdated": "Τελευταία Ενημέρωση: 10 Φεβρουαρίου 2026",
+    "intro": "Καλώς ήρθατε στο devready.gr. Η προστασία των προσωπικών σας δεδομένων είναι για εμάς θέμα αρχής. Η παρούσα πολιτική εξηγεί πώς συλλέγουμε, επεξεργαζόμαστε και προστατεύουμε τις πληροφορίες σας, διασφαλίζοντας τη συμμόρφωσή μας με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR).",
+    "section1": {
+      "title": "1. Υπεύθυνος Επεξεργασίας",
+      "content": "Υπεύθυνος για τη συλλογή και επεξεργασία των δεδομένων σας είναι:",
+      "list": {
+        "item1": "<strong>Επωνυμία:</strong> DevReady",
+        "item2": "<strong>Ιστότοπος:</strong> devready.gr",
+        "item3": "<strong>Email Επικοινωνίας:</strong> hello@devready.gr"
+      }
+    },
+    "section2": {
+      "title": "2. Ποια Δεδομένα Συλλέγουμε και Γιατί",
+      "subsectionA": {
+        "title": "α. Δεδομένα που παρέχετε εσείς",
+        "content": "Συλλέγουμε τις πληροφορίες που εισάγετε στις φόρμες επικοινωνίας (π.χ. Όνομα, Email, Μήνυμα) με σκοπό την εξυπηρέτηση των αιτημάτων σας και την επικοινωνία μαζί σας."
+      },
+      "subsectionB": {
+        "title": "β. Αυτόματη Συλλογή & Εργαλεία Τρίτων",
+        "content": "Για τη βελτίωση της εμπειρίας σας και την τεχνική αρτιότητα του site, χρησιμοποιούμε τα εξής εργαλεία:",
+        "list": {
+          "item1": "<strong>Google Analytics:</strong> Χρησιμοποιείται για τη μέτρηση της επισκεψιμότητας. Τα δεδομένα είναι ανωνυμοποιημένα (IP Anonymization).",
+          "item2": "<strong>Dynatrace (Application Performance Monitoring):</strong> Χρησιμοποιούμε το Dynatrace για την παρακολούθηση της απόδοσης σε πραγματικό χρόνο, τη διάγνωση σφαλμάτων και τη βελτιστοποίηση της εμπειρίας χρήστη.",
+          "item3": "<strong>Logs Διακομιστή:</strong> Η διεύθυνση IP σας καταγράφεται προσωρινά για λόγους ασφαλείας και προστασίας από κακόβουλες επιθέσεις."
+        }
+      }
+    },
+    "section3": {
+      "title": "3. Πολιτική Cookies",
+      "content": "Χρησιμοποιούμε cookies για τη σωστή λειτουργία του ιστότοπου. Τα cookies χωρίζονται σε:",
+      "list": {
+        "item1": "<strong>Απαραίτητα:</strong> Για τη βασική λειτουργία και ασφάλεια.",
+        "item2": "<strong>Στατιστικά/Επιδόσεων:</strong> Μέσω Google Analytics και Dynatrace για τη βελτίωση του site."
+      }
+    },
+    "section4": {
+      "title": "4. Νομική Βάση Επεξεργασίας",
+      "content": "Η επεξεργασία βασίζεται στη <strong>συγκατάθεσή σας</strong> (για cookies/επικοινωνία) και στο <strong>έννομο συμφέρον μας</strong> για την ασφάλεια και την απόδοση της ιστοσελίδας μας."
+    },
+    "section5": {
+      "title": "5. Τα Δικαιώματά σας",
+      "content": "Σύμφωνα με το GDPR, έχετε το δικαίωμα πρόσβασης, διόρθωσης, διαγραφής (\"δικαίωμα στη λήθη\"), περιορισμού της επεξεργασίας και φορητότητας των δεδομένων σας. Για οποιοδήποτε αίτημα, επικοινωνήστε μαζί μας στο hello@devready.gr."
+    },
+    "section6": {
+      "title": "6. Ασφάλεια",
+      "content": "Εφαρμόζουμε κρυπτογράφηση SSL/TLS σε όλο τον ιστότοπο για να διασφαλίσουμε ότι τα δεδομένα σας μεταφέρονται με ασφάλεια."
+    }
+  },
+  "templateGate": {
+    "title": "Αποκτήστε Δωρεάν Πρόσβαση",
+    "description": "Βάλε το email σου για άμεση πρόσβαση στο template.",
+    "button": "Αποκτήστε Πρόσβαση",
+    "success": "Είσαι μέσα! Θα μεταφερθείς τώρα...",
+    "redirecting": "Ανοίγει το template σε λίγο..."
   }
 }
-

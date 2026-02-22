@@ -242,122 +242,13 @@ Looking to accelerate your software engineering career? Check out our [6-week ac
   {
     id: 1,
     slug: "software-interviews-dos-and-donts",
-    title: "Software Interviews - Dos & Donts",
     titleGr: "Software Interviews - Dos & Donts",
-    excerpt: "I've done 400+ interviews and interviewed 300+ engineers across all levels. Here's what you should and shouldn't do to increase your chances of passing software engineering interviews.",
-    excerptGr: "Έχω κάνει 400+ interviews και έχω πάρει interview σε 300+ engineers σε όλα τα levels. Εδώ είναι τι πρέπει και τι δεν πρέπει να κάνεις για να αυξήσεις τις πιθανότητες να περάσεις software engineering interviews.",
-    content: `# 💼 Software Interviews - Dos & Donts
-
-## 👋 Intro
-
-I've done more than 400 interviews and interviewed more than 300 engineers in various roles, from junior to staff engineers throughout my career. Last year I found myself coaching many people in my network regarding interviews, so I thought I could write a blog post about it. The idea of the blog post is to give you summarized information of what interviews look like in software engineering and what you should and shouldn't do to increase your chance of passing your interviews. Every company does this differently, and the difficulty level also differs based on the position. I will focus on general notes that do apply everywhere unless mentioned otherwise.
-
-## 🗣️ Behavioural
-
-A behavioral interview focuses on questions that allow candidates to reflect and share their past professional behavior. The interviewer uses this interview technique to determine a professional's skills, personality, and capabilities. They are also known as \`Value Assessment\` or \`Cultural Interview\`.
-
-The following questions are some behavioral questions that you could be asked
-
-- When was the last time you received constructive feedback?
-- Tell me an example of a conflict you had with a colleague, and how did you manage to solve it?
-- Give me an example of where your decision influenced the end-user?
-- Tell me a challenge you had, where the best way forward was not clear cut. How did you decide what to do?
-
-For more junior people or undergrads, there is a high chance that these questions could be around a hypothetical scenario, for example, \`What would you do if you identified an issue in X?\`. That's not a rule, and it could happen to more senior people, but since more junior people have less experience, the interview will try to extract the information given a context.
-
-## 💻 Technical
-
-Technical interviews are designed to assess your problem-solving abilities and how you approach the presented problem itself. Those kinds of interviews can vary. Below I listed the most common ones you might face during your interview process.
-
-- Verbal technical questions
-- Algorithmics
-- Take-home project
-- Pair programming
-- System design
-- A combination of the above mentioned, e.g., Verbal technical questions & algorithmics
-
-These also depend on the seniority level. For example, system design is not appropriate for a junior position. It tends to be common from mid to more senior positions.
-
-## ✅ Dos & Donts
-
-### 😊 Good vibes
-
-Interviews are not only about you. Try to make their time joyful. I mean, they are already investing time to interview you, and leaving a good taste when the interview finishes is really important.
-
-### ❓ Ask!
-
-Always ask questions! These are free points and shows interest in the employer. You can do some research about the company before your interview.
-There are different kinds of questions you can ask
-
-1. Genuine Questions - That you actually want to know the answer
-   - _What are the roles within the team?_
-2. Insightful Questions - Demonstrate your knowledge or understanding of technology
-   - _Why for product A you choose to use the X protocol over the Y protocol?_
-3. Passion Questions - Demonstrate your passion for technology
-   - _I'm not familiar with technology X, but sounds interesting. Can you please tell me a bit more?_
-
-### ⭐ Use STAR/PAR technique
-
-The STAR technique is a common system used to answer behavioral interview questions. It provides a structure for you to remember to include the correct data in your answers.
-
-- **S** – **Situation** - background info
-- **T** – **Task** - what you had to do
-- **A** – **Activity** - what you did - this should be the longest part of the answer
-- **R** – **Results** - positive; quantifiable; what you learned; what you would do differently next time
-
-If you get asked a behavioral question, answer by going through the letters in order.
-The PAR technique is the same as STAR but combines the S and the T steps.
-
-### 👥 "We" vs "I"
-
-When answering questions about your experience, you should try balancing your answers by using both _we_ and _I_. Using the _we_ in an answer shows that you are a team player and you are an active member of the team. On the other hand, using _I_ will show that you are taking more initiatives and will show off your leadership skills. Answering with only one of those subject pronouns will not have good results because you are either not self-independent or are not a team player. It's pretty essential to give both perspectives to the interviewer.
-
-### 🤷 It's ok to say "I don't know"
-
-Don't lie in things that you cannot support. If you get asked about a specific technology that you don't know or never heard of, don't lie! Professional interviewers will eventually find out, and you will possibly get rejected. It's totally fine not to know some stuff; honesty is not harmful. One suggestion is to show some interest in things you don't know and ask for more details about the subject if there is time.
-
-### 📖 Prepare your stories
-
-Prepare some examples of challenges, conflicts, failures, leadership in your work experience or projects so that you can have something to talk about. It's challenging to improvise in the interview in real-time.
-This is a table I think I've taken from the [Cracking the Coding Interview](https://www.amazon.co.uk/Cracking-Coding-Interview-6th-Programming/dp/0984782850/ref=sr_1_1?adgrpid=56176823187&hvadid=259151807165&hvdev=c&hvlocphy=1006886&hvnetw=g&hvqmt=e&hvrand=14006929763397277600&hvtargid=kwd-297264693965&hydadcr=17616_1817786&keywords=cracking+the+coding+interview&qid=1645058943&sr=8-1) book where it can be helpful.
-
-| Questions                 | Project 1 | Project 2 |
-| ------------------------- | --------- | --------- |
-| Challenges                | ...       | ...       |
-| Mistakes/Failures         | ...       | ...       |
-| Enjoyed                   | ...       | ...       |
-| Leadership                | ...       | ...       |
-| What you'd do differently | ...       | ...       |
-
-### 📝 Take notes
-
-After finishing the interview, write down everything that happened. This is helping me with my self-assessment to have a better understanding of my performance. It is also helpful in your next or upcoming interviews. Of course, you can always ask for feedback, but not all companies take the time to give you any.
-
-### 🎭 Mock interviews
-
-Mock interviews are an ideal way to practice for real job interviews because you are in a situation that mirrors an actual interview with a company. When you review your interview with the interviewer, you'll be able to modify your responses and interview behavior, if necessary. Practice interviews familiarize you with the interview process and allow you to practice answering common interview questions with confidence. Some platforms offer this as a service, but you can always find a friend to help you out.
-
-### 💪 Perseverance
-
-There would be times when the problem you asked to solve might be complex, or there is no straightforward solution. You always have to demonstrate perseverance! Perseverance is determining to keep on going in the face of setbacks and challenges. When you are stuck, don't give up. Keep trying to solve the problem, and that will show off your grit and independence.
-
-### 🎉 Enjoy it!
-
-I find interviews really challenging, and it's fascinating to me. It's almost like having exams within your career. I know that it can get frustrating and stressful, but I think it will certainly pay off if you put in the effort.
-
-## 🎯 Wrap up
-
-In this blog, I discussed different types of interviews and shared some of my learnings after so many interviews, along with techniques and tips that I use to help me perform better. 
-
-**Want to learn more?** This is just the beginning! I have specific dos and don'ts for each interview type - from acing algorithmic challenges to crushing system design interviews. Subscribe to our newsletter below to get these deep-dive tips delivered straight to your inbox.
-
-At DevReady, we've helped dozens of developers successfully navigate these interviews and land their dream roles. If you want personalized guidance on preparing for interviews, check out our [6-week accelerator](/accelerator) where we cover everything from technical preparation to behavioral interview techniques.
-    `,
+    excerptGr: "Έχω κάνει 500+ interviews και έχω πάρει interview σε 200+ software engineers σε όλα τα levels. Εδώ είναι τι πρέπει και τι δεν πρέπει να κάνεις για να αυξήσεις τις πιθανότητες να περάσεις software engineering interviews.",
     contentGr: `# 💼 Software Interviews - Dos & Donts
 
 ## 👋 Εισαγωγή
 
-Έχω κάνει πάνω από 400 interviews και έχω πάρει interview σε περισσότερους από 300 engineers σε διάφορους ρόλους, από junior έως staff engineers στην καριέρα μου. Πέρυσι βρέθηκα να κάνω coach πολλούς ανθρώπους στο δίκτυό μου σχετικά με interviews, οπότε σκέφτηκα να γράψω ένα blog post γι' αυτό. Η ιδέα του blog post είναι να σου δώσω συνοπτικές πληροφορίες για το πώς είναι τα interviews στο software engineering και τι πρέπει και τι δεν πρέπει να κάνεις για να αυξήσεις την πιθανότητα να περάσεις τα interviews σου. Κάθε εταιρεία το κάνει διαφορετικά και το επίπεδο δυσκολίας διαφέρει ανάλογα με τη θέση. Θα εστιάσω σε γενικές σημειώσεις που ισχύουν παντού, εκτός αν αναφέρεται διαφορετικά.
+Έχω κάνει πάνω από 500 interviews και έχω πάρει interview σε περισσότερους από 200 software engineers σε διάφορους ρόλους, από junior έως staff engineers στην καριέρα μου. Πέρυσι βρέθηκα να κάνω coach πολλούς ανθρώπους στο δίκτυό μου σχετικά με interviews, οπότε σκέφτηκα να γράψω ένα blog post γι' αυτό. Η ιδέα του blog post είναι να σου δώσω συνοπτικές πληροφορίες για το πώς είναι τα interviews στο software engineering και τι πρέπει και τι δεν πρέπει να κάνεις για να αυξήσεις την πιθανότητα να περάσεις τα interviews σου. Κάθε εταιρεία το κάνει διαφορετικά και το επίπεδο δυσκολίας διαφέρει ανάλογα με τη θέση. Θα εστιάσω σε γενικές σημειώσεις που ισχύουν παντού, εκτός αν αναφέρεται διαφορετικά.
 
 ## 🗣️ Behavioural
 
@@ -468,263 +359,224 @@ At DevReady, we've helped dozens of developers successfully navigate these inter
     image: "/assets/blogs/interview.jpg",
     published: true // Set to false to hide this post from DevPress
   },
-  // Sample post - hidden for now
-  /*
   {
-    id: 1,
-    slug: "from-student-to-engineer",
-    title: "From Student to Software Engineer: The Real Journey",
-    titleGr: "Από Φοιτητής σε Software Engineer: Το Πραγματικό Ταξίδι",
-    excerpt: "The path from university to landing your first tech job isn't what most CS programs teach you. Here's what actually matters.",
-    excerptGr: "Η πορεία από το πανεπιστήμιο στην πρώτη σου δουλειά στο tech δεν είναι αυτό που διδάσκουν τα CS προγράμματα. Αυτό που πραγματικά μετράει.",
-    content: `
-# From Student to Software Engineer: The Real Journey
-
-If you're a computer science student or recent graduate in Greece, you've probably noticed something: **your degree isn't enough**.
-
-You can solve algorithms. You understand data structures. You've passed your exams. But when you look at job postings from companies abroad—or even great Greek tech companies—you realize something is missing.
-
-## The Gap Nobody Talks About
-
-Universities teach you **computer science**. The industry needs **software engineering**.
-
-Here's what I mean:
-
-### What University Teaches:
-- Algorithms and complexity
-- Theoretical foundations
-- Academic problem-solving
-- Individual assignments
-
-### What Industry Needs:
-- Building production systems
-- Working with existing codebases
-- Team collaboration
-- Git, CI/CD, testing
-- Communication skills
-
-**The gap is real.** And most students discover it the hard way—after dozens of rejections.
-
-## My Story
-
-I graduated with good grades. I could solve LeetCode mediums. I thought I was ready.
-
-**I was wrong.**
-
-My first 20 applications? Rejections. I didn't even understand why.
-
-Then I realized: I knew how to code, but I didn't know how to **engineer**.
-
-- I didn't know how to structure a real project
-- My GitHub looked like a graveyard of half-finished tutorials
-- I couldn't explain my work in interviews
-- I had no portfolio that demonstrated real skills
-
-So I spent 6 months learning the hard way:
-- Built a real project (not a todo app)
-- Learned Git properly
-- Practiced system design
-- Rewrote my CV 15 times
-- Mock interviewed with friends
-
-**Then everything changed.** Within 2 months, I had 3 offers from companies in London.
-
-## What Actually Matters
-
-After working in the industry and mentoring 50+ developers, here's what I've learned:
-
-### 1. Build Real Projects
-Not tutorials. Not courses. **Real projects** that solve real problems.
-
-Your GitHub should show:
-- Production-quality code
-- Proper project structure
-- Tests
-- Documentation
-- Deployed applications
-
-### 2. Master the Fundamentals
-Not theory—**engineering fundamentals**:
-- How to structure code
-- How to work with APIs
-- How to debug effectively
-- How to use Git in a team
-- How to write tests
-
-### 3. Learn to Communicate
-Tech interviews aren't coding tests. They're **conversations**.
-
-You need to:
-- Explain your thinking process
-- Ask clarifying questions
-- Discuss trade-offs
-- Collaborate on solutions
-
-### 4. Build Your Brand
-Companies don't just hire skills—they hire **people**.
-
-Your online presence matters:
-- Professional GitHub
-- Well-written CV
-- LinkedIn that tells your story
-- Portfolio that showcases your work
-
-## The Path Forward
-
-Here's the truth: **you don't need another program that teaches you React**.
-
-You need:
-- **Structured guidance** on what to build
-- **Real feedback** on your code and projects
-- **Industry mentorship** from people who've been there
-- **Interview preparation** that actually works
-
-That's why we built DevReady.
-
-## What You Can Do Today
-
-1. **Pick ONE project** and build it properly
-2. **Push to GitHub** daily
-3. **Apply to 5 companies** (even if you feel "not ready")
-4. **Connect with engineers** on LinkedIn
-5. **Share your progress** publicly
-
-The journey from student to engineer isn't easy. But it's absolutely possible.
-
-**You don't need to be perfect. You need to be ready.**
-
----
-
-Want to accelerate your journey? Check out our [6-week program](/accelerator) designed specifically for Greek developers looking to break into the industry.
-    `,
+    id: 2,
+    slug: "how-to-write-killer-cv",
+    titleGr: "Πώς να Γράψεις ένα Killer CV (That Actually Gets Read)",
+    excerptGr: "Το CV σου δεν διαβάζεται—σκανάρεται. Οι recruiters αφιερώνουν λιγότερο από 1 λεπτό. Εδώ είναι πώς να γράψεις ένα CV που δείχνει impact, σέβεται τον χρόνο τους και λειτουργεί σαν personal brand.",
     contentGr: `
-# Από Φοιτητής σε Software Engineer: Το Πραγματικό Ταξίδι
+## 👋 Εισαγωγή
 
-Αν είσαι φοιτητής ή πρόσφατος απόφοιτος πληροφορικής στην Ελλάδα, μάλλον έχεις παρατηρήσει κάτι: **ο τίτλος σου δεν είναι αρκετός**.
+Ας ξεκινήσουμε με μια άβολη αλήθεια: **Το CV σου δεν διαβάζεται. Σκανάρεται.**
 
-Μπορείς να λύνεις αλγορίθμους. Καταλαβαίνεις data structures. Πέρασες τις εξετάσεις. Αλλά όταν βλέπεις job postings από εταιρείες του εξωτερικού—ή ακόμα και από μεγάλες ελληνικές tech εταιρείες—καταλαβαίνεις ότι κάτι λείπει.
+Στις περισσότερες εταιρείες, recruiters αφιερώνουν λιγότερο από **1 λεπτό** για να αποφασίσουν αν θα προχωρήσουν ή όχι. Δεν διαβάζουν ιστορίες, δεν αναλύουν paragraphs και σίγουρα δεν ψάχνουν το «καλό σημείο» σου. Αν δεν το δουν άμεσα, απλά δεν υπάρχει και πηγαίνουν στον/στην επόμενο/η.
 
-## Το Χάσμα που Κανείς δεν Μιλάει
+Σε αυτό το post θα δούμε πώς να γράψεις ένα **killer CV** που διαβάζεται γρήγορα, δείχνει impact, σέβεται τον χρόνο του recruiter και λειτουργεί σαν **personal brand**.
 
-Τα πανεπιστήμια διδάσκουν **computer science**. Η αγορά χρειάζεται **software engineering**.
+## 🧠 Πώς να Σκέφτεσαι το CV σου
 
-Να τι εννοώ:
+Σκέψου το CV σου σαν **εφημερίδα**. Τα πιο σημαντικά νέα είναι πάνω, τα λιγότερο σημαντικά κάτω. Αν κάτι είναι σημαντικό, δεν το κρύβεις στη δεύτερη σελίδα ή το βάζεις κάτω κάτω.
 
-### Τι Διδάσκει το Πανεπιστήμιο:
-- Αλγόριθμους και complexity
-- Θεωρητικά θεμέλια
-- Ακαδημαϊκή επίλυση προβλημάτων
-- Ατομικές εργασίες
+## 📏 Rule #1: One Page (Ναι, σχεδόν πάντα)
 
-### Τι Χρειάζεται η Αγορά:
-- Κατασκευή production συστημάτων
-- Δουλειά με existing codebases
-- Team collaboration
-- Git, CI/CD, testing
-- Communication skills
+Για το **90% των candidates**, το CV πρέπει να είναι **one-pager**.  Υπάρχουν εξαιρέσεις, όπως PhD candidates, ακαδημαϊκή καριέρα ή πολύ senior profiles. Για όλους τους άλλους ισχύει ένα πράγμα: **1 σελίδα.** Αν δεν χωράει, δεν είναι θέμα χώρου. Είναι θέμα **prioritization**.
 
-**Το χάσμα είναι πραγματικό.** Και οι περισσότεροι φοιτητές το ανακαλύπτουν με τον δύσκολο τρόπο—μετά από δεκάδες απορρίψεις.
+## 🧩 Structure: Τι Μπαίνει και Πού
 
-## Η Δική μου Ιστορία
+Η προτεινόμενη σειρά είναι: **Experience → Education → Skills → Projects (optional)**.  
+Ο λόγος είναι απλός. Το **experience** απαντά πρώτο στο ερώτημα: «Μπορεί αυτός ο άνθρωπος να κάνει τη δουλειά;». Αν δεν έχετε experience no worries, εξακολουθείτε να ακουλουθείτε την ίδια σειρά.
 
-Αποφοίτησα με καλούς βαθμούς. Μπορούσα να λύνω LeetCode mediums. Νόμιζα ότι ήμουν έτοιμος.
+## 💥 Use Strong Verbs (Όχι Παθητική Φωνή)
 
-**Έκανα λάθος.**
+Απόφυγε εκφράσεις τύπου *Responsible for*, *Worked on*, *Helped with*. Δεν δείχνουν ownership ούτε impact.
 
-Οι πρώτες μου 20 αιτήσεις; Απορρίψεις. Δεν καταλάβαινα καν γιατί.
+Παράδειγμα:  
+- Weak: Responsible for improving application performance  
+- Strong: Improved application performance by optimizing database queries  
 
-Μετά το κατάλαβα: Ήξερα να κάνω code, αλλά δεν ήξερα πώς να κάνω **engineering**.
+Strong action verbs όπως *built*, *designed*, *led*, *improved*, *optimized*, *delivered* δείχνουν ξεκάθαρα ότι **εσύ έκανες τη δουλειά** και ότι υπήρχε αποτέλεσμα.
 
-- Δεν ήξερα πώς να δομήσω ένα πραγματικό project
-- Το GitHub μου έμοιαζε με νεκροταφείο μισοτελειωμένων tutorials
-- Δεν μπορούσα να εξηγήσω τη δουλειά μου σε interviews
-- Δεν είχα portfolio που να δείχνει πραγματικά skills
+Το CV δεν είναι περιγραφή καθηκόντων. Είναι proof of your impact.
 
-Οπότε πέρασα 6 μήνες μαθαίνοντας με τον δύσκολο τρόπο:
-- Έφτιαξα ένα πραγματικό project (όχι todo app)
-- Έμαθα Git σωστά
-- Εξασκήθηκα σε system design
-- Ξαναέγραψα το CV μου 15 φορές
-- Έκανα mock interviews με φίλους
+## 🔢 The XYZ Formula (Show Impact)
 
-**Μετά όλα άλλαξαν.** Μέσα σε 2 μήνες, είχα 3 προσφορές από εταιρείες στο Λονδίνο.
+Ένα από τα πιο δυνατά patterns για CV bullets είναι το **XYZ pattern**:  
+Achieved **X** by doing **Y** resulting in **Z**.
 
-## Τι Πραγματικά Μετράει
+Δες τη διαφορά:  
+- Χωρίς XYZ: Worked on improving page performance  
+- Με XYZ: Improved page load time **by 35%** by optimizing API calls and caching  
 
-Αφού δούλεψα στο industry και έκανα mentor 50+ developers, αυτό έμαθα:
+Άλλο παράδειγμα:  
+- Χωρίς XYZ: Helped reduce bugs in production  
+- Με XYZ: Reduced production bugs **by 20%** by introducing automated tests  
 
-### 1. Φτιάξε Πραγματικά Projects
-Όχι tutorials. Όχι courses. **Πραγματικά projects** που λύνουν πραγματικά προβλήματα.
+Οι αριθμοί τραβάνε το μάτι, δείχνουν αποτέλεσμα και κάνουν το CV πιο credible. Ακόμα κι αν είναι estimates, είναι πολύ καλύτερα από το τίποτα.
 
-Το GitHub σου πρέπει να δείχνει:
-- Production-quality code
-- Σωστή project structure
-- Tests
-- Documentation
-- Deployed applications
+## 🧱 Formatting Is Not Decoration
 
-### 2. Master τα Fundamentals
-Όχι θεωρία—**engineering fundamentals**:
-- Πώς να δομήσεις code
-- Πώς να δουλέψεις με APIs
-- Πώς να κάνεις debug αποτελεσματικά
-- Πώς να χρησιμοποιήσεις Git σε team
-- Πώς να γράψεις tests
+Το formatting δεν είναι αισθητική επιλογή. Είναι εργαλείο ανάγνωσης. Χρησιμοποίησε bullets, απόφυγε μεγάλα paragraphs και κράτα consistent spacing και fonts.
+Το CV σου είναι **brand artifact**. Αν είναι messy, αυτό επικοινωνεί.
 
-### 3. Μάθε να Επικοινωνείς
-Τα tech interviews δεν είναι coding tests. Είναι **συζητήσεις**.
+## 🚩 Popular Issues We See in CVs
 
-Πρέπει να:
-- Εξηγήσεις τη σκέψη σου
-- Κάνεις clarifying questions
-- Συζητήσεις trade-offs
-- Συνεργαστείς σε λύσεις
+Κάποια λάθη εμφανίζονται ξανά και ξανά. Τα περισσότερα δεν είναι θέμα γνώσεων, αλλά **presentation και focus**.
 
-### 4. Χτίσε το Brand σου
-Οι εταιρείες δεν προσλαμβάνουν μόνο skills—προσλαμβάνουν **ανθρώπους**.
+- **Πάρα πολλές σελίδες και κακό formatting.** Δύο ή τρεις σελίδες χωρίς structure, μεγάλα paragraphs και no clear prioritisation of the information.
+- **Μη ξεκάθαρος ρόλος.** Front-end engineer, Back-end engineer, real estate agent, lawyer (you get the vibe) στο ίδιο CV είναι no-no.
+- **Generic soft skills.** “Communication”, “team player”, “problem solving” ειναι fluff, ολοι ειμαστε team-players και εχουμε communication skills.
+- **Καμία ένδειξη impact.** Περιγραφές καθηκόντων without impact.
+- **Πάρα πολλά projects χωρίς βάθος.** Ένα καλοφτιαγμένο project λέει περισσότερα από πέντε μισοτελειωμένα.
 
-Η online παρουσία σου μετράει:
-- Professional GitHub
-- Καλογραμμένο CV
-- LinkedIn που λέει την ιστορία σου
-- Portfolio που δείχνει τη δουλειά σου
+Αν αναγνωρίζεις τον εαυτό σου σε κάποιο από τα παραπάνω, μην ανησυχείς. Είναι προβλήματα που λύνονται σχετικά εύκολα με σωστή καθοδήγηση και feedback.
 
-## Το Μονοπάτι Μπροστά
+## ⚔️ Controversial (But Important) Questions
 
-Η αλήθεια: **δεν χρειάζεσαι άλλο ένα πρόγραμμα που διδάσκει React**.
+### Χρειάζομαι abstract / summary στην αρχή;
 
-Χρειάζεσαι:
-- **Structured guidance** για το τι να φτιάξεις
-- **Real feedback** στον κώδικα και τα projects σου
-- **Industry mentorship** από ανθρώπους που έχουν περάσει από εκεί
-- **Interview preparation** που πραγματικά δουλεύει
+Up to you. Δεν υπάρχει hard rule. Αν το χρησιμοποιήσεις, κράτησέ το στις 2–3 γραμμές, συγκεκριμένο και χωρίς generic fluff τύπου “passionate software engineer”.
 
-Γι' αυτό φτιάξαμε το DevReady.
+### Are internships work experience;
 
-## Τι Μπορείς να Κάνεις Σήμερα
+**Ναι.** Αν είσαι student ή junior, βάλε internships κανονικά στο Experience και highlight τι έκανες, όχι απλώς ότι «ήσουν intern».
 
-1. **Διάλεξε ΕΝΑ project** και φτιάξε το σωστά
-2. **Push στο GitHub** καθημερινά
-3. **Κάνε αίτηση σε 5 εταιρείες** (ακόμα κι αν νιώθεις "not ready")
-4. **Συνδέσου με engineers** στο LinkedIn
-5. **Μοιράσου την πρόοδό σου** δημοσίως
+### Χρειάζομαι μεγάλο project στο CV;
 
-Το ταξίδι από φοιτητής σε engineer δεν είναι εύκολο. Αλλά είναι απολύτως εφικτό.
+Τα projects έχουν αξία όσο είσαι junior. Καθώς αποκτάς εμπειρία, σταδιακά χάνουν βάρος και το industry experience ανεβαίνει. Εξαίρεση υπάρχει μόνο αν έχεις open-source project με σοβαρό adoption, π.χ. **10k GitHub stars**.
 
-**Δεν χρειάζεται να είσαι perfect. Χρειάζεται να είσαι ready.**
+Διαφορετικά, μην προσπαθήσεις να φτιάξεις κάτι τεράστιο ή overly complex. Καλύτερα **ένα project**, σωστά δομημένο, που δείχνει τα **principles of good engineering**: καθαρό code, σωστό structure, tests, CI/CD, documentation και ξεκάθαρες αποφάσεις.
 
----
+Ένα απλό αλλά καλοφτιαγμένο project λέει πολύ περισσότερα από ένα “μεγάλο” project χωρίς ποιότητα.
 
-Θέλεις να επιταχύνεις το ταξίδι σου; Δες το [6-week πρόγραμμά μας](/accelerator) σχεδιασμένο ειδικά για Έλληνες developers που θέλουν να μπουν στο industry.
-    `,
+## 🎯 Wrap Up
+
+Ένα καλό CV δεν προσπαθεί να εντυπωσιάσει. Προσπαθεί να **επικοινωνήσει καθαρά**. Στον πραγματικό κόσμο των interviews, το CV σου είναι απλά το εισιτήριο για την επόμενη συζήτηση.
+
+**Θέλεις feedback στο CV σου;**  
+Στο DevReady accelerator δουλεύουμε hands-on πάνω σε πραγματικά CVs, με review από working engineers και recruiters. Δες περισσότερα στο [6-week accelerator](/accelerator).
+`,
     author: "Alexis Pavlidis",
-    date: "2025-01-15",
-    readTime: "8 min read",
-    readTimeGr: "8 λεπτά διάβασμα",
-    tags: ["Career", "Learning", "Getting Started"],
-    tagsGr: ["Καριέρα", "Μάθηση", "Ξεκίνημα"],
-    image: "/assets/blog/student-to-engineer.jpg"
+    date: "2026-02-07",
+    readTime: "6 min read",
+    readTimeGr: "6 λεπτά διάβασμα",
+    tags: ["CV", "Career", "Tips"],
+    tagsGr: ["CV", "Career", "Tips"],
+    image: "/assets/blogs/killer-cv.jpg",
+    imageAlt: "Recruiter reviewing CVs on screen with magnifying glass; approved candidate with checkmark. How to write a killer CV that gets read.",
+    imageAltGr: "Recruiter ελέγχει CV σε οθόνη με μεγεθυντικό φακό· επιλεγμένος υποψήφιος με checkmark. Πώς να γράψεις ένα killer CV που διαβάζεται.",
+    published: true
+  },
+  {
+    id: 3,
+    slug: "a-project-that-gets-you-hired",
+    titleGr: "Το Project που Πραγματικά σε Κάνει Hire στο Tech",
+    excerptGr:
+        "Τι project πρέπει να φτιάξω για να δείξω engineering abilities και να με κάνουν hire; Δεν χρειάζεσαι rocket science. Χρειάζεσαι ένα project που δείχνει engineering disciplines και practices.",
+    contentGr: `
+
+## 👋 Intro
+
+Μία από τις πιο συχνές ερωτήσεις που δεχόμαστε είναι: **"Τι project πρέπει να φτιάξω για να δείξω engineering abilities και να με κάνουν hire;"**
+
+Πολλοί πιστεύουν ότι η απάντηση είναι κάτι complex. Κάτι εντυπωσιακό. Like "rocket science" or something. Αυτό δεν ισχύει.
+
+Δεν προσλαμβάνεσαι επειδή το project σου είναι complex. Προσλαμβάνεσαι επειδή δείχνει **engineering disciplines and practices**. Αυτό που κοιτάνε οι hiring managers είναι αν το project δείχνει ότι καταλαβαίνεις πώς χτίζεται software στον πραγματικό κόσμο: πώς ορίζεις scope, πώς παίρνεις αποφάσεις, πώς κρατάς τα πράγματα καθαρά, πώς τα τεκμηριώνεις και αν μπορείς να τα ολοκληρώσεις.
+
+Σε αυτό το post θα δούμε τι είδους project σε βοηθάει να ξεχωρίσεις, τι πρέπει να περιλαμβάνει και ποια είναι συχνά λάθη που κάνουν junior engineers.
+
+## 🧠 Η μεγαλύτερη παρεξήγηση για τα projects
+
+Οι περισσότεροι προσπαθούν να εντυπωσιάσουν με πολυπλοκότητα. Περισσότερα features, περισσότερα εργαλεία, περισσότερα buzzwords.
+
+Αυτό που ψάχνουν οι interviewers είναι πιο απλό: μπορείς να πάρεις ένα μικρό πρόβλημα και να το λύσεις σωστά;
+
+Το πραγματικό engineering δεν έχει να κάνει με το πόσα ξέρεις, αλλά με τη σαφήνεια, τα trade-offs και τα principles.  
+Ένα smaller project καλοφτιαγμένο λέει πολύ περισσότερα από ένα μεγάλο project μισοτελειωμένο.
+
+Γι’ αυτό και πολλά GitHub profiles με πολλά repos δεν ξεχωρίζουν. Δείχνουν activity, όχι engineering maturity.
+
+## ✅ Τι project πρέπει τελικά να φτιάξεις;
+
+To be honest η απάντηση είναι ότι η ιδέα δεν έχει τόση σημασία. Σημασία έχει αν το project σου σου δίνει χώρο να δείξεις σωστά engineering practices.
+
+Ένα πολύ καλό παράδειγμα είναι ένα **Kanban-style project ή task manager**. Όχι επειδή το Kanban είναι κάτι ιδιαίτερο, αλλά επειδή περιλαμβάνει φυσικά πράγματα που ενδιαφέρουν τις εταιρείες: state transitions, data modeling, business rules, UI state και edge cases.
+
+Δεν αξιολογείσαι για την πρωτοτυπία. Αξιολογείσαι για την εκτέλεση.
+
+## 🧱 Το blueprint: τι πρέπει να περιλαμβάνει
+
+Εδώ αποτυγχάνουν τα περισσότερα projects. Όχι επειδή η ιδέα είναι κακή, αλλά επειδή λείπουν τα βασικά για να είναι production ready.
+
+### 📖 Ένα σωστό README
+
+Αυτό είναι non-negotiable.
+
+Το README σου είναι ουσιαστικά το **documentation and the brand of the project (and yourself)**. Στον πραγματικό κόσμο, οι engineers βασίζονται στα READMEs για να καταλάβουν γρήγορα ένα σύστημα και να το τρέξουν locally. Ένα καλό README δείχνει professionalism και ότι σέβεσαι τον χρόνο των άλλων.
+
+Πρέπει να εξηγεί καθαρά τι κάνει το project, πώς τρέχει και ποιες βασικές αποφάσεις ή assumptions έκανες. Αν κάποιος πρέπει να διαβάσει τον κώδικα για να καταλάβει το project, αυτό είναι ήδη πρόβλημα.
+
+### 🌍 Deployment
+
+Το deployment έχει σημασία γιατί το να κάνεις ship software είναι μέρος της δουλειάς.
+
+Ένα deployed project δείχνει ότι καταλαβαίνεις environments, configuration και το whole lifecycle of a software development. Επίσης επιτρέπει σε κάποιον να δοκιμάσει το project χωρίς setup.
+
+Ακόμα και ένα απλό free deployment αρκεί. Ο στόχος δεν είναι το scale, αλλά το ότι το project σου όντως να τρέχει σε κάποιο production environment.
+
+### 🧹 Clean Code & Structure
+
+Το να γράφεις clean code είναι skill.
+
+Η δομή των φακέλων, τα ονόματα και το separation of responsibilities δείχνουν πώς σκέφτεσαι ως engineer. Στις ομάδες, ο κώδικας διαβάζεται πολύ περισσότερο απ’ όσο γράφεται.
+
+Το clean code δείχνει ότι μπορείς να συνεργαστείς και να συντηρήσεις software σε βάθος χρόνου.
+
+### 🧪 Testing
+
+Δεν χρειάζεσαι τέλειο coverage ή δεκάδες tests.
+
+Χρειάζεται να δείξεις ότι καταλαβαίνεις γιατί υπάρχουν τα tests και τι αξίζει να τεσταριστεί. Λίγα αλλά ουσιαστικά tests στο core logic είναι αρκετά για να δείξουν maturity.
+
+### 🤖 Basic automation (CI)
+
+Ακόμα και ένα απλό CI setup κάνει μεγάλη διαφορά.
+
+Το να τρέχουν αυτόματα linting ή tests σε κάθε push δείχνει ότι είσαι εξοικειωμένος με σύγχρονα workflows και ότι σε νοιάζει η συνέπεια.
+
+## ⚠️ Συχνά λάθη που κοστίζουν
+
+Ένα συχνό λάθος είναι το overengineering. Πολλοί προσθέτουν features μόνο και μόνο για να φαίνεται μεγάλο το project, αλλά καταλήγουν με μισές υλοποιήσεις και ανολοκλήρωτη δουλειά.
+
+Το να τρέχει το project μόνο locally το κάνει να μοιάζει περισσότερο με university assignment παρά με product και πολλοί reviewers δεν θα μπουν καν στη διαδικασία να το στήσουν.
+
+Τέλος, messy commits ή copy-paste code φαίνονται εύκολα και συνήθως δείχνουν βιασύνη ή έλλειψη ownership.
+
+## ❓ "Αλλά ποιο tech stack να χρησιμοποιήσω;"
+
+Honestly, δεν έχει τόση σημασία.
+
+Σημασία έχει αν το stack σου επιτρέπει να δείξεις όλα όσα αναφέραμε παραπάνω. Διάλεξε ένα σύγχρονο stack που σου είναι άνετο ή που ταιριάζει με τις θέσεις στις οποίες κάνεις apply.
+
+Κανείς δεν θα σε προσλάβει επειδή διάλεξες trendy framework. Θα σε προσλάβει επειδή χρησιμοποίησες ό,τι διάλεξες σωστά.
+
+## 🎯 Wrap up
+
+Δεν χρειάζεσαι πολλά projects για να μπεις στο tech. Χρειάζεσαι ένα project που να δείχνει καθαρά πώς σκέφτεσαι και πώς δουλεύεις. Ένα project με σωστό scope, καλό README, deployment, clean code, testing και σωστές αποφάσεις είναι αρκετό για να ξεχωρίσεις.
+
+Στο DevReady βοηθάμε developers να χτίσουν ακριβώς τέτοιου τύπου projects. Όχι portfolio fluff, αλλά ρεαλιστική engineering δουλειά που ενδιαφέρει τους hiring managers. Αν θέλεις καθοδήγηση, feedback από working engineers και βοήθεια να κάνεις το project σου πραγματικό hiring asset, δες το [6-week accelerator](/accelerator).
+
+Δεν χρειάζεται να είσαι impressive. Χρειάζεται να είσαι ready.
+`,
+    author: "Alexis Pavlidis",
+    date: "2026-02-13",
+    readTime: "7 min read",
+    readTimeGr: "7 λεπτά διάβασμα",
+    tags: ["Projects", "Portfolio", "Career"],
+    tagsGr: ["Projects", "Portfolio", "Career"],
+    image: "/assets/blogs/project.jpg",
+    imageAlt: "Project and portfolio concept: one strong project that demonstrates engineering practices can get you hired.",
+    imageAltGr: "Ένα project που δείχνει engineering practices και σε κάνει hire: ιδέα για portfolio.",
+    published: true
   }
-  */
 ];
 

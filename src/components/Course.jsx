@@ -1,5 +1,5 @@
 import { Calendar, Users, ArrowRight, CheckCircle, Clock, Target } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button.tsx";
 import { Link } from "react-router-dom";
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -99,9 +99,6 @@ const Course = () => {
                 </Button>
               </div>
             </div>
-            <p className="text-xs sm:text-sm text-primary/90 mt-6 max-w-md mx-auto">
-              {t('common.moneyBackGuarantee')}
-            </p>
           </div>
         </div>
       </section>

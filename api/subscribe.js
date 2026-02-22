@@ -1,4 +1,4 @@
-// Vercel Serverless Function for Mailchimp API Integration
+// Vercel Serverless Function for Custom Subscription API Integration
 // This endpoint handles newsletter subscriptions
 
 export default async function handler(req, res) {
@@ -14,62 +14,54 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Valid email is required' });
   }
 
-  // Get Mailchimp credentials from environment variables
-  const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY_DEVREADY;
-  const MAILCHIMP_AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID_DEVREADY;
-  const MAILCHIMP_SERVER_PREFIX = process.env.MAILCHIMP_SERVER_PREFIX_DEVREADY;
+  const CUSTOM_API_URL = process.env.CUSTOM_SUBSCRIBE_API_URL;
+  const CUSTOM_API_KEY = process.env.CUSTOM_SUBSCRIBE_API_KEY;
 
-  if (!MAILCHIMP_API_KEY || !MAILCHIMP_AUDIENCE_ID || !MAILCHIMP_SERVER_PREFIX) {
-    console.error('Missing Mailchimp configuration');
+  if (!CUSTOM_API_URL || !CUSTOM_API_KEY) {
+    console.error('Missing Custom Subscription API configuration');
     return res.status(500).json({ error: 'Server configuration error' });
   }
 
   try {
-    // Mailchimp API endpoint
-    const url = `https://${MAILCHIMP_SERVER_PREFIX}.api.mailchimp.com/3.0/lists/${MAILCHIMP_AUDIENCE_ID}/members`;
-
-    // Subscribe user to Mailchimp
-    const response = await fetch(url, {
+    // Subscribe user to custom endpoint
+    const response = await fetch(CUSTOM_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Basic ${Buffer.from(`anystring:${MAILCHIMP_API_KEY}`).toString('base64')}`,
+        'x-api-key': CUSTOM_API_KEY,
       },
-      body: JSON.stringify({
-        email_address: email,
-        status: 'subscribed', // or 'pending' for double opt-in
-      }),
+      body: JSON.stringify({ email }),
     });
 
     const data = await response.json();
 
-    // Handle Mailchimp API response
+    // Handle API response
     if (!response.ok) {
-      // Check if user is already subscribed
-      if (data.title === 'Member Exists') {
-        return res.status(200).json({ 
-          success: true, 
+      const errorMessage = (data.message || data.msg || '').toLowerCase();
+      if (response.status === 409 || errorMessage.includes('already')) {
+        return res.status(200).json({
+          success: true,
           messageKey: 'alreadySubscribed'
         });
       }
 
-      console.error('Mailchimp error:', data);
-      return res.status(400).json({ 
-        error: data.detail || 'Failed to subscribe',
+      console.error('Subscription API error:', data);
+      return res.status(response.status).json({
+        error: data.message || data.msg || 'Failed to subscribe',
         messageKey: 'error'
       });
     }
 
     // Success
-    return res.status(200).json({ 
-      success: true, 
+    return res.status(200).json({
+      success: true,
       messageKey: 'success'
     });
 
   } catch (error) {
     console.error('Subscription error:', error);
-    return res.status(500).json({ 
-      error: 'An error occurred. Please try again.' 
+    return res.status(500).json({
+      error: 'An error occurred. Please try again.'
     });
   }
 }
