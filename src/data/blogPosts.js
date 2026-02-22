@@ -6,8 +6,7 @@ export const blogPosts = [
     titleGr: "Πώς κάνω keep up στο Software",
     excerpt: "There is no end to learning in the IT industry. Keeping up with software is certainly a hard task. In this blog post I will explain my approach.",
     excerptGr: "Δεν υπάρχει τέλος στη μάθηση στον κλάδο της πληροφορικής. Το να παρακολουθείς τις εξελίξεις στο software είναι σίγουρα δύσκολο. Σε αυτό το blog post θα εξηγήσω την προσέγγισή μου.",
-    content: `# 📚 How I Keep Up with Software
-
+    content: `
 ## 👋 Intro
 
 The software industry is really dynamic and it requires a lot of effort to keep up with the latest trends. Basically, there is no end to learning in the IT industry. One of the most important skills that a software engineer must have is the way of staying up to date with the latest updates. I'm often asked how I keep up with the trends in the field of software engineering, and how I learn new stuff. Undeniably an important part of learning is practice. I still remember Uncle Bob's quote in the Clean Coders book
@@ -119,8 +118,7 @@ The world of IT is changing regularly and hence you have to evolve as IT evolves
 
 Looking to accelerate your software engineering career? Check out our [6-week accelerator](/accelerator) where we help developers build the skills that matter most.
     `,
-    contentGr: `# 📚 Πώς Παρακολουθώ τις Εξελίξεις στο Software
-
+    contentGr: `
 ## 👋 Εισαγωγή
 
 Ο κλάδος του software είναι πραγματικά δυναμικός και απαιτεί πολλή προσπάθεια για να παρακολουθείς τις τελευταίες τάσεις. Βασικά, δεν υπάρχει τέλος στη μάθηση στον κλάδο της πληροφορικής. Μία από τις πιο σημαντικές δεξιότητες που πρέπει να έχει ένας software engineer είναι ο τρόπος με τον οποίο παραμένει ενημερωμένος με τις τελευταίες εξελίξεις. Συχνά με ρωτούν πώς παρακολουθώ τις τάσεις στον τομέα του software engineering και πώς μαθαίνω νέα πράγματα. Αναμφισβήτητα, ένα σημαντικό μέρος της μάθησης είναι η πρακτική εξάσκηση. Θυμάμαι ακόμα το quote του Uncle Bob στο βιβλίο Clean Coders
@@ -146,7 +144,7 @@ Looking to accelerate your software engineering career? Check out our [6-week ac
 
 ## 📖 Βιβλία
 
-Η ανάγνωση βιβλίων φαίνεται κάπως ξεπερασμένη. Αλλά τα βιβλία έχουν αποτελέσει σημαντικό μέρος της διαδικασίας μάθησής μου. Αν θέλεις να εξερευνήσεις ένα τεχνικό θέμα σε βάθος, τότε τα βιβλία είναι μια εξαιρετική επιλογή. Ναι, ο κλάδος εξελίσσεται απίστευτα γρήγορα, αλλά ορισμένα βιβλία θα σε βοηθήσουν να εξερευνήσεις τον τομέα εργασίας σου σε πολύ βαθύτερο επίπεδο. Το αγαπημένο μου βιβλίο είναι το Clean Code του Uncle Bob. Διάβασα αυτό το βιβλίο όταν ήμουν στο δεύτερο έτος των σπουδών μου και άλλαξε εντελώς τη νοοτροπία μου για το software. Τότε δεν ήξερα ποιος ήταν ο Uncle Bob, οπότε μετά από googling έμαθα για τον Martin Fowler, τον Kent Beck, τον Grady Booch, τον Jim Coplien και όλους τους γνωστούς ανθρώπους στον κλάδο του software. Αυτό φυσικά με βοήθησε να δημιουργήσω ένα backlog από βιβλία που έπρεπε να διαβάσω, καθώς ορισμένα από αυτά τα βιβλία είναι "must-reads" για όλους τους software engineers ανεξάρτητα από την εμπειρία τους.
+Η ανάγνωση βιβλίων φαίνεται κάπως ξεπερασμένη. Αλλά τα βιβλία έχουν αποτελέσει σημαντικό μέρος της διαδικασίας μάθησής μου. Αν θέλεις να εξερευνήσεις ένα τεχνικό θέμα σε βάθος, τότε τα βιβλία είναι μια εξαιρετική επιλογή. Ναι, ο κλάδος εξελίσσεται απίστευτα γρήγορα, αλλά ορισμένα βιβλία θα σε βοηθήσουν να εξερευνήσεις τον τομέα εργασίας σου σε πολύ βαθύτερο επίπεδο. Το αγαπημένο μου βιβλίο είναι το Clean Code του Uncle Bob. Διάβασα αυτό το βιβλίο όταν ήμουν στο δεύτερο έτος των σπουδών μου και άλλαξε εντελώς τη νοοτροπία μου για το software. Τότε δεν ήξερα ποιος ήταν ο Uncle Bob, οπότε μετά από googling έμαθα για τον Martin Fowler, τον Kent Beck, τον Grady Booch, τον Jim Coplien και όλους τους γνωστούς ανθρώπους στον κλάδο του software. Αυτό φυσικά με βοήθησε να δημιουργήσω ένα backlog από βιβλία που "έπρεπε" να διαβάσω, καθώς ορισμένα από αυτά τα βιβλία είναι "must-reads" για όλους τους software engineers ανεξάρτητα από την εμπειρία τους.
 
 Εδώ είναι η σελίδα μου στο Notion με τα Βιβλία που έχω διαβάσει ή πρόκειται να διαβάσω σύντομα:
 
@@ -154,7 +152,7 @@ Looking to accelerate your software engineering career? Check out our [6-week ac
 
 ## 🎤 Συμμετοχή σε Events
 
-Τα συνέδρια και τα meetups είναι ένας εξαιρετικός τρόπος για να παρακολουθείς νέες τάσεις. Πολλά νέα προϊόντα και εξελίξεις στον τομέα της πληροφορικής παρουσιάζονται σε συνέδρια και meetups. Ένα από τα πιο σημαντικά οφέλη τέτοιων events είναι η δυνατότητα να γνωρίσεις νέους ανθρώπους από τον κλάδο του software και να δημιουργήσεις connections. Είναι επίσης ένας εξαιρετικός τρόπος για να συζητάς για software, να ανταλλάσσεις ιδέες με ανθρώπους που δουλεύουν σε διαφορετικούς τομείς/εταιρείες με διαφορετικές δυναμικές. Μερικά από τα events που θα πρότεινα να παρακολουθήσεις είναι τα εξής.
+Τα συνέδρια και τα meetups είναι ένας εξαιρετικός τρόπος για να παρακολουθείς new trends. Πολλά νέα products και εξελίξεις στον τομέα της πληροφορικής παρουσιάζονται σε συνέδρια και meetups. Ένα από τα πιο σημαντικά οφέλη τέτοιων events είναι η δυνατότητα να γνωρίσεις νέους ανθρώπους από τον κλάδο του software και να δημιουργήσεις connections. Είναι επίσης ένας εξαιρετικός τρόπος για να συζητάς για software, να ανταλλάσσεις ιδέες με ανθρώπους που δουλεύουν σε διαφορετικούς τομείς/εταιρείες με διαφορετικές δυναμικές. Μερικά από τα events που θα πρότεινα να παρακολουθήσεις είναι τα εξής.
 
 ### Συνέδρια
 
@@ -168,7 +166,6 @@ Looking to accelerate your software engineering career? Check out our [6-week ac
 
 - [Thessaloniki not-only Java Meetup Group](https://www.meetup.com/Thessaloniki-Not-Only-Java/)
 - [Thessaloníki .NET Meetup](https://www.meetup.com/Thessaloniki-NET-Meetup/)
-- [Domain-Driven Design London](https://www.meetup.com/dddlondon/)
 - [London Software Craftsmanship Community](https://www.meetup.com/london-software-craftsmanship/)
 - [LJC - London Java Community](https://www.meetup.com/Londonjavacommunity/)
 - [London Microservices](https://www.meetup.com/London-Microservices/)
@@ -231,11 +228,11 @@ Looking to accelerate your software engineering career? Check out our [6-week ac
 Θέλεις να επιταχύνεις την καριέρα σου στο software engineering; Δες το [6-week accelerator μας](/accelerator) όπου βοηθάμε developers να χτίσουν τις δεξιότητες που έχουν τη μεγαλύτερη σημασία.
     `,
     author: "Alexis Pavlidis",
-    date: "2021-03-13",
+    date: "2026-02-22",
     readTime: "8 min read",
     readTimeGr: "8 λεπτά διάβασμα",
     tags: ["Learning", "Career", "Productivity"],
-    tagsGr: ["Μάθηση", "Καριέρα", "Παραγωγικότητα"],
+    tagsGr: ["Learning", "Career", "Tips"],
     image: "/assets/blogs/how-to-keep-up/how-to-keep-up.jpg",
     published: true
   },
