@@ -1,5 +1,242 @@
 export const blogPosts = [
   {
+    id: 2,
+    slug: "how-i-keep-up-with-software",
+    title: "How I Keep Up with Software",
+    titleGr: "Πώς κάνω keep up στο Software",
+    excerpt: "There is no end to learning in the IT industry. Keeping up with software is certainly a hard task. In this blog post I will explain my approach.",
+    excerptGr: "Δεν υπάρχει τέλος στη μάθηση στον κλάδο της πληροφορικής. Το να παρακολουθείς τις εξελίξεις στο software είναι σίγουρα δύσκολο. Σε αυτό το blog post θα εξηγήσω την προσέγγισή μου.",
+    content: `
+## 👋 Intro
+
+The software industry is really dynamic and it requires a lot of effort to keep up with the latest trends. Basically, there is no end to learning in the IT industry. One of the most important skills that a software engineer must have is the way of staying up to date with the latest updates. I'm often asked how I keep up with the trends in the field of software engineering, and how I learn new stuff. Undeniably an important part of learning is practice. I still remember Uncle Bob's quote in the Clean Coders book
+
+> *It is not your employer's responsibility to make sure you are marketable. It is not your employer's responsibility to train you, or send you to conferences, or buy your books. These things are your responsibility. You should plan on working 60 hours a week. The first 40 are for your employer. The remaining 20 are for you. During this remaining 20 hours you should be reading, practising, learning, and otherwise enhancing your career.*
+
+Saying that I thought writing a blog post will give some guidelines to people that are finding it hard to follow up with software or want to discover other alternatives of learning.
+
+## 🎧 Podcasts
+
+Podcasts are a great way to learn new stuff and keep up with trends. I've been listening to podcasts since I was an undergrad and it's been an important way of learning for me. I used to listen to podcasts during my commute but nowadays working remotely I will probably do it in parallel with another activity. I prefer podcasts that are less than an hour because it does not require a lot of time commitment.
+
+- [Hanselminutes](https://www.hanselminutes.com/)
+- [Codurance Talks](https://www.codurance.com/publications/tag/podcasts)
+- [ThoughtWorks Technology](https://www.thoughtworks.com/podcasts)
+- [AWS Podcast](https://aws.amazon.com/podcasts/aws-podcast/?podcast-list.sort-by=item.additionalFields.EpisodeNum&podcast-list.sort-order=desc)
+- [The Stack Overflow Podcast](https://stackoverflow.blog/podcast/)
+- [The 6 Figure Developer](https://6figuredev.com/category/podcast/)
+- [JS Party: Javascript & Web Dev](https://changelog.com/jsparty)
+- [Simple Programmer](https://simpleprogrammer.libsyn.com/)
+- [InfoQ](https://www.infoq.com/the-infoq-podcast/podcasts/)
+- [Agile for Humans](https://ryanripley.com/agile-for-humans/)
+
+## 📖 Books
+
+Reading books seems kinda outdated. But books have been an important way of my learning process. If you want to explore a technical topic in-depth, then books are an excellent choice. Yes, the industry evolves incredibly fast, but certain books will help you explore your field of work on a much deeper level. The most influential thing throughout my career was reading Clean Code by Uncle Bob. I read that book while I was in the second year of my studies and it completely changed my mindset about software. Back then I did not know who Uncle Bob was, so after googling I learnt about Martin Fowler, Kent Beck, Grady Booch, Jim Coplien and all the well-known people in the software industry. This of course helped me create a backlog of books that I had to read since some of those books are "must-reads" for all software engineers regardless of their experience.
+
+Here is my notion page of Books that I've read or about to read soon:
+
+![Books I've read or plan to read](/assets/blogs/how-to-keep-up/books.webp)
+
+## 🎤 Attend Events
+
+Conferences and meetings are an excellent way to follow new trends. Many new products and developments in the IT realm are presented at conferences and meetups. One of the most important benefits of such events is the ability to meet new people from the software industry and make valuable contacts. It's also a great way of discussing software, exchanging ideas with people that work in different domains/companies with different dynamics. Some of the events I would recommend attending are the following.
+
+### Conferences
+
+- [London Software Craftsmanship Conference](https://sc-london.com/)
+- [VoxxedDays Athens](https://voxxeddays.com/athens/)
+- [VoxxedDays Thessaloniki](https://voxxeddays.com/thessaloniki/)
+- [Devoxx](https://devoxx.com/)
+- [GOTO conference](https://gotopia.tech/)
+
+### Meetups
+
+- [Thessaloniki not-only Java Meetup Group](https://www.meetup.com/Thessaloniki-Not-Only-Java/)
+- [Thessaloníki .NET Meetup](https://www.meetup.com/Thessaloniki-NET-Meetup/)
+- [Domain-Driven Design London](https://www.meetup.com/dddlondon/)
+- [London Software Craftsmanship Community](https://www.meetup.com/london-software-craftsmanship/)
+- [LJC - London Java Community](https://www.meetup.com/Londonjavacommunity/)
+- [London Microservices](https://www.meetup.com/London-Microservices/)
+
+I've met great people throughout my participation in those events and they helped me massively with my career progression. I feel really lucky that I had the chance to participate in such events which boosted my knowledge.
+
+## 💪 Practice
+
+Whenever I learn a new technology, tool, or programming language I will always use Stack Overflow to verify my knowledge and try to answer questions regarding the new topic. One of the best ways to learn something is using the Feynman Technique where you try to explain in a simple way solutions to other people's problems. Answering questions in Stack Overflow helps me a lot construct my thoughts and potentially find gaps in my explanation. A second benefit of using Stack Overflow when learning a new subject is that you can quickly get a good essence of the common issues and problems other devs are facing regarding that subject. Another good way of practising a new topic I am learning is by doing code katas.
+
+> *A code kata is an exercise in programming which helps programmers hone their skills through practice and repetition.*
+
+Code katas are an excellent way of practising a new tool, library, concept, programming language, or a new design technique. It's a practice session where the goal is not only to solve the problem but to practice and sharpen your skills during the process of solving it. You can find some of the katas I have solved in my GitHub account [here](https://github.com/apavlidi).
+
+There are two websites I use for finding katas:
+
+- [Katalyst](https://katalyst.codurance.com/)
+- [CodingDojo](https://codingdojo.org/kata/)
+
+One thing to note here is that pairing is extremely useful when solving code katas or working on side project. I strongly recommend working on a team so you can share tips, resources and experience.
+
+## 🎓 Online Courses
+
+Software is an industry where most of the information is publicly available through the internet. There are a huge number of tutorials that can help you learn new stuff. Tutorials are a great way of learning by doing, which for me is an effective technique of learning. Online education is really popular in our industry due to its low cost, and time-saving advantages. Besides, experience beats theory most of the time - so combining both is probably a more effective way of learning. These are the platforms I am using:
+
+- [Udemy](https://www.udemy.com/)
+- [Pluralsight](https://www.pluralsight.com/)
+- [Oreilly](https://www.oreilly.com/)
+- [LinkedIn](https://www.linkedin.com/learning)
+
+Youtube has a lot of good tutorials as well but compared to the above mentions the quality on average is much lower but there are exceptions.
+
+## 📝 Have a Plan
+
+Keeping up with software is certainly a hard task. Things do change constantly at a fast pace. The amount of information we as software engineers consume every day is huge and keeping track of everything is really difficult. Having a plan or a list of topics you want to learn can be quite helpful. I've been using tools as my second brain to help me structure all this information. To be honest I had a hard time finding a good tool to fulfil that purpose. I used Trello, Asana, Miro, Google Keep, Evernote but nothing quite worked for me.
+
+Last 3 months I've been using Notion as my second brain tool and it's been an awesome experience. Notion has components for notes, kanban boards, wikis, databases, calendars etc. By connecting those components you can create systems for knowledge, data and project management. Here you can see my dashboard for the software section. I have subpages to each one of those pages but you probably get the idea. Everything new that I might need to read later, will go to the Reading List. If I have an idea of a project, or a blog post it will add that to Ideas and so forth.
+
+![My Notion dashboard](/assets/blogs/how-to-keep-up/dashboard.webp)
+
+Another useful resource I used throughout the years is the [roadmap.sh](https://roadmap.sh/). It's been a great guide for me to pick up the next topic I want to learn especially when I was more junior and I was overwhelmed by all the different topics under the software umbrella.
+
+## 🔗 Other Ways of Following Trends
+
+The following list is resources that I don't heavily rely on and it's more like optional ways for me for learning new stuff.
+
+- Surveys - Surveys are great for giving you insights into the trends in software. In my opinion [Stack Overflow Survey](https://insights.stackoverflow.com/survey/) is by far the best one related to software.
+- Follow People that Talk about Tech
+- [GitHub Explore](https://github.com/explore)
+- Newsletters: [HackerNews](https://news.ycombinator.com/), [TLDR](https://www.tldrnewsletter.com/)
+- Certifications: [AWS Cloud](https://aws.amazon.com/certification/)
+- Competitions: [HashCode](https://codingcompetitions.withgoogle.com/hashcode/), [IEEEXtreme](https://ieeextreme.org/)
+
+## 🎯 Final Thoughts
+
+The world of IT is changing regularly and hence you have to evolve as IT evolves. Staying ahead of the competition and on top of your game requires a formidable effort. A final suggestion would be to read, practice, repeat.
+
+---
+
+**Want more insights like this?** Subscribe to our newsletter below to get career tips and learning strategies delivered straight to your inbox.
+
+Looking to accelerate your software engineering career? Check out our [6-week accelerator](/accelerator) where we help developers build the skills that matter most.
+    `,
+    contentGr: `
+## 👋 Εισαγωγή
+
+Ο κλάδος του software είναι πραγματικά δυναμικός και απαιτεί πολλή προσπάθεια για να παρακολουθείς τις τελευταίες τάσεις. Βασικά, δεν υπάρχει τέλος στη μάθηση στον κλάδο της πληροφορικής. Μία από τις πιο σημαντικές δεξιότητες που πρέπει να έχει ένας software engineer είναι ο τρόπος με τον οποίο παραμένει ενημερωμένος με τις τελευταίες εξελίξεις. Συχνά με ρωτούν πώς παρακολουθώ τις τάσεις στον τομέα του software engineering και πώς μαθαίνω νέα πράγματα. Αναμφισβήτητα, ένα σημαντικό μέρος της μάθησης είναι η πρακτική εξάσκηση. Θυμάμαι ακόμα το quote του Uncle Bob στο βιβλίο Clean Coders
+
+> *Δεν είναι ευθύνη του εργοδότη σου να σε κάνει ελκυστικό στην αγορά εργασίας. Δεν είναι ευθύνη του εργοδότη σου να σε εκπαιδεύσει, να σε στείλει σε συνέδρια ή να σου αγοράσει βιβλία. Αυτά είναι δική σου ευθύνη. Πρέπει να σχεδιάζεις να δουλεύεις 60 ώρες την εβδομάδα. Οι πρώτες 40 είναι για τον εργοδότη σου. Οι υπόλοιπες 20 είναι για σένα. Κατά τη διάρκεια αυτών των 20 ωρών πρέπει να διαβάζεις, να εξασκείσαι, να μαθαίνεις και να βελτιώνεις την καριέρα σου.*
+
+Λέγοντας αυτό, σκέφτηκα ότι το να γράψω ένα blog post θα δώσει κάποιες κατευθύνσεις σε ανθρώπους που δυσκολεύονται να ακολουθούν τις εξελίξεις στο software ή θέλουν να ανακαλύψουν εναλλακτικούς τρόπους μάθησης.
+
+## 🎧 Podcasts
+
+Τα podcasts είναι ένας εξαιρετικός τρόπος για να μαθαίνεις νέα πράγματα και να παρακολουθείς τις τάσεις. Ακούω podcasts από τότε που ήμουν φοιτητής και έχει αποτελέσει σημαντικό τρόπο μάθησης για μένα. Συνήθιζα να ακούω podcasts κατά τη διάρκεια κάποιου commute, αλλά τώρα που δουλεύω απομακρυσμένα πιθανότατα θα το κάνω παράλληλα με κάποια άλλη δραστηριότητα. Προτιμώ podcasts που διαρκούν λιγότερο από μία ώρα γιατί δεν απαιτούν μεγάλη δέσμευση χρόνου.
+
+- [Hanselminutes](https://www.hanselminutes.com/)
+- [Codurance Talks](https://www.codurance.com/publications/tag/podcasts)
+- [ThoughtWorks Technology](https://www.thoughtworks.com/podcasts)
+- [AWS Podcast](https://aws.amazon.com/podcasts/aws-podcast/?podcast-list.sort-by=item.additionalFields.EpisodeNum&podcast-list.sort-order=desc)
+- [The Stack Overflow Podcast](https://stackoverflow.blog/podcast/)
+- [The 6 Figure Developer](https://6figuredev.com/category/podcast/)
+- [JS Party: Javascript & Web Dev](https://changelog.com/jsparty)
+- [Simple Programmer](https://simpleprogrammer.libsyn.com/)
+- [InfoQ](https://www.infoq.com/the-infoq-podcast/podcasts/)
+- [Agile for Humans](https://ryanripley.com/agile-for-humans/)
+
+## 📖 Βιβλία
+
+Η ανάγνωση βιβλίων φαίνεται κάπως ξεπερασμένη. Αλλά τα βιβλία έχουν αποτελέσει σημαντικό μέρος της διαδικασίας μάθησής μου. Αν θέλεις να εξερευνήσεις ένα τεχνικό θέμα σε βάθος, τότε τα βιβλία είναι μια εξαιρετική επιλογή. Ναι, ο κλάδος εξελίσσεται απίστευτα γρήγορα, αλλά ορισμένα βιβλία θα σε βοηθήσουν να εξερευνήσεις τον τομέα εργασίας σου σε πολύ βαθύτερο επίπεδο. Το αγαπημένο μου βιβλίο είναι το Clean Code του Uncle Bob. Διάβασα αυτό το βιβλίο όταν ήμουν στο δεύτερο έτος των σπουδών μου και άλλαξε εντελώς τη νοοτροπία μου για το software. Τότε δεν ήξερα ποιος ήταν ο Uncle Bob, οπότε μετά από googling έμαθα για τον Martin Fowler, τον Kent Beck, τον Grady Booch, τον Jim Coplien και όλους τους γνωστούς ανθρώπους στον κλάδο του software. Αυτό φυσικά με βοήθησε να δημιουργήσω ένα backlog από βιβλία που "έπρεπε" να διαβάσω, καθώς ορισμένα από αυτά τα βιβλία είναι "must-reads" για όλους τους software engineers ανεξάρτητα από την εμπειρία τους.
+
+Εδώ είναι η σελίδα μου στο Notion με τα Βιβλία που έχω διαβάσει ή πρόκειται να διαβάσω σύντομα:
+
+![Βιβλία που έχω διαβάσει ή σχεδιάζω να διαβάσω](/assets/blogs/how-to-keep-up/books.webp)
+
+## 🎤 Συμμετοχή σε Events
+
+Τα συνέδρια και τα meetups είναι ένας εξαιρετικός τρόπος για να παρακολουθείς new trends. Πολλά νέα products και εξελίξεις στον τομέα της πληροφορικής παρουσιάζονται σε συνέδρια και meetups. Ένα από τα πιο σημαντικά οφέλη τέτοιων events είναι η δυνατότητα να γνωρίσεις νέους ανθρώπους από τον κλάδο του software και να δημιουργήσεις connections. Είναι επίσης ένας εξαιρετικός τρόπος για να συζητάς για software, να ανταλλάσσεις ιδέες με ανθρώπους που δουλεύουν σε διαφορετικούς τομείς/εταιρείες με διαφορετικές δυναμικές. Μερικά από τα events που θα πρότεινα να παρακολουθήσεις είναι τα εξής.
+
+### Συνέδρια
+
+- [London Software Craftsmanship Conference](https://sc-london.com/)
+- [VoxxedDays Athens](https://voxxeddays.com/athens/)
+- [VoxxedDays Thessaloniki](https://voxxeddays.com/thessaloniki/)
+- [Devoxx](https://devoxx.com/)
+- [GOTO conference](https://gotopia.tech/)
+
+### Meetups
+
+- [Thessaloniki not-only Java Meetup Group](https://www.meetup.com/Thessaloniki-Not-Only-Java/)
+- [Thessaloníki .NET Meetup](https://www.meetup.com/Thessaloniki-NET-Meetup/)
+- [London Software Craftsmanship Community](https://www.meetup.com/london-software-craftsmanship/)
+- [LJC - London Java Community](https://www.meetup.com/Londonjavacommunity/)
+- [London Microservices](https://www.meetup.com/London-Microservices/)
+
+Έχω γνωρίσει υπέροχους ανθρώπους μέσα από τη συμμετοχή μου σε αυτά τα events και με βοήθησαν τεράστια με την εξέλιξη της καριέρας μου. Νιώθω πολύ τυχερός που είχα την ευκαιρία να συμμετάσχω σε τέτοια events που ενίσχυσαν τις γνώσεις μου.
+
+## 💪 Practice
+
+Κάθε φορά που μαθαίνω μια νέα τεχνολογία, εργαλείο ή γλώσσα προγραμματισμού, θα χρησιμοποιώ πάντα το Stack Overflow για να επαληθεύσω τις γνώσεις μου και να προσπαθήσω να απαντήσω ερωτήσεις σχετικά με το νέο θέμα. Ένας από τους καλύτερους τρόπους για να μάθεις κάτι είναι να χρησιμοποιήσεις την Τεχνική Feynman όπου προσπαθείς να εξηγήσεις με απλό τρόπο λύσεις στα προβλήματα άλλων ανθρώπων. Το να απαντάω ερωτήσεις στο Stack Overflow με βοηθάει πολύ να δομώ τις σκέψεις μου και ενδεχομένως να βρίσκω κενά στην εξήγησή μου. Ένα δεύτερο όφελος της χρήσης του Stack Overflow όταν μαθαίνεις ένα νέο θέμα είναι ότι μπορείς γρήγορα να αποκτήσεις μια καλή αίσθηση των κοινών προβλημάτων που αντιμετωπίζουν άλλοι developers σχετικά με αυτό το θέμα. Ένας άλλος καλός τρόπος εξάσκησης σε ένα νέο θέμα που μαθαίνω είναι κάνοντας code katas.
+
+> *Ένα code kata είναι μια άσκηση στον προγραμματισμό που βοηθάει τους προγραμματιστές να ακονίσουν τις δεξιότητές τους μέσω πρακτικής και επανάληψης.*
+
+Τα code katas είναι ένας εξαιρετικός τρόπος εξάσκησης σε ένα νέο εργαλείο, βιβλιοθήκη, concept, γλώσσα προγραμματισμού ή μια νέα τεχνική σχεδίασης. Είναι ένα practicing exercise όπου ο στόχος δεν είναι μόνο να λύσεις το πρόβλημα αλλά να εξασκηθείς και να ακονίσεις τις δεξιότητές σου κατά τη διαδικασία επίλυσής του. Μπορείς να βρεις μερικά από τα katas που έχω λύσει στον GitHub λογαριασμό μου [εδώ](https://github.com/apavlidi).
+
+Υπάρχουν δύο ιστοσελίδες που χρησιμοποιώ για να βρίσκω katas:
+
+- [Katalyst](https://katalyst.codurance.com/)
+- [CodingDojo](https://codingdojo.org/kata/)
+
+Ένα πράγμα που πρέπει να σημειωθεί εδώ είναι ότι το pairing είναι εξαιρετικά χρήσιμο όταν λύνεις code katas ή δουλεύεις σε side project. Συνιστώ ανεπιφύλακτα να δουλεύεις σε ομάδα ώστε να μπορείς να μοιράζεσαι tips, resources και εμπειρία.
+
+## 🎓 Online Courses
+
+Το software είναι ένας κλάδος όπου οι περισσότερες πληροφορίες είναι δημόσια διαθέσιμες μέσω του internet. Υπάρχει τεράστιος αριθμός tutorials που μπορούν να σε βοηθήσουν να μάθεις νέα πράγματα. Τα tutorials είναι ένας εξαιρετικός τρόπος μάθησης μέσω πράξης, που για μένα είναι μια αποτελεσματική τεχνική μάθησης. Η online εκπαίδευση είναι πολύ δημοφιλής στον κλάδο μας λόγω του χαμηλού κόστους και των πλεονεκτημάτων εξοικονόμησης χρόνου. Εξάλλου, η εμπειρία ξεπερνά τη θεωρία τις περισσότερες φορές - οπότε ο συνδυασμός και των δύο είναι πιθανώς ένας πιο αποτελεσματικός τρόπος μάθησης. Αυτές είναι οι πλατφόρμες που χρησιμοποιώ:
+
+- [Udemy](https://www.udemy.com/)
+- [Pluralsight](https://www.pluralsight.com/)
+- [Oreilly](https://www.oreilly.com/)
+- [LinkedIn](https://www.linkedin.com/learning)
+
+Το Youtube έχει επίσης πολλά καλά tutorials, αλλά σε σύγκριση με τα παραπάνω η ποιότητα κατά μέσο όρο είναι πολύ χαμηλότερη, αλλά υπάρχουν εξαιρέσεις.
+
+## 📝 You Need a Plan
+
+Το να παρακολουθείς τις εξελίξεις στο software είναι σίγουρα δύσκολο. Τα πράγματα αλλάζουν συνεχώς με γρήγορο ρυθμό. Ο όγκος πληροφοριών που καταναλώνουμε ως software engineers κάθε μέρα είναι τεράστιος και η παρακολούθηση όλων είναι πραγματικά δύσκολη. Το να έχεις ένα πλάνο ή μια λίστα θεμάτων που θέλεις να μάθεις μπορεί να είναι αρκετά χρήσιμο. Χρησιμοποιώ εργαλεία ως second brain μου για να με βοηθήσουν να δομήσω όλες αυτές τις πληροφορίες. Για να είμαι ειλικρινής, δυσκολεύτηκα να βρω ένα καλό εργαλείο για αυτόν τον σκοπό. Χρησιμοποίησα Trello, Asana, Miro, Google Keep, Evernote αλλά τίποτα δεν λειτούργησε πραγματικά για μένα.
+
+Τα τελευταία 5 χρόνια χρησιμοποιώ το Notion ως second brain tool και ήταν μια φανταστική εμπειρία. Το Notion έχει components για σημειώσεις, kanban boards, wikis, βάσεις δεδομένων, ημερολόγια κ.λπ. Συνδυάζοντας αυτά τα components μπορείς να δημιουργήσεις συστήματα για διαχείριση γνώσης, δεδομένων και projects. Εδώ μπορείς να δεις το dashboard μου για την ενότητα software. Έχω subpages σε κάθε ένα από αυτά τα pages, you get the idea. Οτιδήποτε νέο που μπορεί να χρειαστεί να διαβάσω αργότερα, θα πάει στο Reading List. Αν έχω μια ιδέα για project ή blog post, θα το προσθέσω στο Ideas κ.ο.κ.
+
+![Το Notion dashboard μου](/assets/blogs/how-to-keep-up/dashboard.webp)
+
+Ένας άλλος χρήσιμος πόρος που χρησιμοποίησα κατά τη διάρκεια των ετών είναι το [roadmap.sh](https://roadmap.sh/). Ήταν ένας εξαιρετικός οδηγός για να επιλέξω το επόμενο θέμα που θέλω να μάθω, ειδικά όταν ήμουν πιο junior και ήμουν overwhelmed από όλα τα διαφορετικά θέματα κάτω από την ομπρέλα του software.
+
+## 🔗 Other Ways
+
+Η παρακάτω λίστα περιέχει resources στα οποία δεν βασίζομαι heavily και είναι περισσότερο σαν προαιρετικοί τρόποι για μένα για να μαθαίνω νέα πράγματα.
+
+- Surveys - Τα surveys είναι εξαιρετικά για να σου δίνουν insights στις τάσεις του software. Κατά τη γνώμη μου το [Stack Overflow Survey](https://insights.stackoverflow.com/survey/) είναι μακράν το καλύτερο που σχετίζεται με το software.
+- Ακολούθησε Ανθρώπους που Μιλούν για Tech
+- [GitHub Explore](https://github.com/explore)
+- Newsletters: [HackerNews](https://news.ycombinator.com/), [TLDR](https://www.tldrnewsletter.com/)
+- Πιστοποιήσεις: [AWS Cloud](https://aws.amazon.com/certification/)
+- Διαγωνισμοί: [HashCode](https://codingcompetitions.withgoogle.com/hashcode/), [IEEEXtreme](https://ieeextreme.org/)
+
+## 🎯 Final Thoughts
+
+Ο κόσμος της πληροφορικής αλλάζει τακτικά και επομένως πρέπει να εξελίσσεσαι όπως εξελίσσεται η πληροφορική. Το να μένεις μπροστά από τον ανταγωνισμό και στην κορυφή απαιτεί τρομερή προσπάθεια. Ένα τελευταίο note είναι: read, practice, repeat.
+
+**Θέλεις περισσότερα insights όπως αυτά;** Κάνε subscribe στο newsletter μας παρακάτω για να λαμβάνεις συμβουλές καριέρας και στρατηγικές μάθησης απευθείας στο inbox σου.
+
+Θέλεις να επιταχύνεις την καριέρα σου στο software engineering; Δες το [6-week accelerator μας](/accelerator) όπου βοηθάμε developers να χτίσουν τις δεξιότητες που έχουν τη μεγαλύτερη σημασία.
+    `,
+    author: "Alexis Pavlidis",
+    date: "2026-02-22",
+    readTime: "8 min read",
+    readTimeGr: "8 λεπτά διάβασμα",
+    tags: ["Learning", "Career", "Productivity"],
+    tagsGr: ["Learning", "Career", "Tips"],
+    image: "/assets/blogs/how-to-keep-up/how-to-keep-up.jpg",
+    published: true
+  },
+  {
     id: 1,
     slug: "software-interviews-dos-and-donts",
     titleGr: "Software Interviews - Dos & Donts",
