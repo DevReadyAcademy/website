@@ -1,6 +1,6 @@
 export const blogPosts = [
   {
-    id: 3,
+    id: 4,
     slug: "why-do-you-need-a-mentor",
     title: "Why Do You Need a Mentor?",
     titleGr: "Γιατί Χρειάζεσαι έναν Mentor;",
@@ -114,12 +114,12 @@ Don't be afraid to ask people to mentor you; most people will be happy to do it.
 **Ψάχνεις mentorship στο software engineering;** Δες το [6-week accelerator μας](/accelerator) όπου έμπειροι engineers σε καθοδηγούν στο ταξίδι σου στο tech.
     `,
     author: "Alexis Pavlidis",
-    date: "2023-03-06",
+    date: "2026-02-25",
     readTime: "6 min read",
     readTimeGr: "6 λεπτά διάβασμα",
     tags: ["Mentoring", "Career", "Growth"],
     tagsGr: ["Mentoring", "Καριέρα", "Ανάπτυξη"],
-    image: "/assets/blogs/mentoring/mentoring.webp",
+    image: "/assets/blogs/mentoring/mentoring.jpg",
     published: true
   },
   {
