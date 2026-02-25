@@ -643,5 +643,122 @@
     "button": "Get Access",
     "success": "You're in! Redirecting you now...",
     "redirecting": "Opening the template in a moment..."
+  },
+  "readinessQuiz": {
+    "pageTitle": "Backend Readiness Quiz | DevReady",
+    "pageDescription": "Check how ready you are for a backend developer role and see how DevReady helps you get there faster.",
+    "intro": {
+      "badge": "Self-Assessment",
+      "title": "Are You Ready for a Backend Job?",
+      "subtitle": "Check off the skills you already have and see what your timeline looks like to your first job.",
+      "startButton": "Start the Quiz"
+    },
+    "steps": {
+      "stepOf": "Step {current} of {total}",
+      "next": "Next",
+      "previous": "Previous",
+      "seeResults": "See Results"
+    },
+    "categories": {
+      "internet": {
+        "title": "Internet & Basics",
+        "items": [
+          "I understand how HTTP/HTTPS works (requests, responses, status codes)",
+          "I understand the difference between client and server",
+          "I know what DNS is and how it works",
+          "I'm familiar with basic networking concepts (IP, TCP/UDP, ports)",
+          "I understand how browsers work"
+        ]
+      },
+      "language": {
+        "title": "Backend Language",
+        "items": [
+          "I've worked with a backend language (Python, Node.js, Java, etc.)",
+          "I understand OOP concepts (classes, inheritance, polymorphism)",
+          "I can write clean, readable code",
+          "I know how to handle exceptions and errors"
+        ]
+      },
+      "git": {
+        "title": "Version Control (Git)",
+        "items": [
+          "I can create commits, branches, and merge",
+          "I use GitHub/GitLab for my projects",
+          "I know how to resolve merge conflicts",
+          "I understand Git workflows (feature branches, PRs)"
+        ]
+      },
+      "databases": {
+        "title": "Databases",
+        "items": [
+          "I can write basic SQL queries (SELECT, INSERT, UPDATE, DELETE)",
+          "I know what relational databases are and when to use them",
+          "I've used at least one NoSQL database (MongoDB, Redis)",
+          "I understand indexes and their importance for performance",
+          "I know basic schema design concepts"
+        ]
+      },
+      "apis": {
+        "title": "APIs & Web Frameworks",
+        "items": [
+          "I've built a RESTful API",
+          "I know what CRUD operations are",
+          "I've used a web framework (Express, FastAPI, Spring, etc.)",
+          "I understand authentication (sessions, JWT tokens)",
+          "I know how to handle JSON data"
+        ]
+      },
+      "security": {
+        "title": "Basic Security",
+        "items": [
+          "I know what SQL injection is and how to prevent it",
+          "I understand HTTPS and when it's required",
+          "I know basic authentication/authorization principles",
+          "I know how to store passwords securely (hashing)"
+        ]
+      },
+      "tools": {
+        "title": "Terminal & Tools",
+        "items": [
+          "I'm comfortable using the command line / terminal",
+          "I can install packages and manage dependencies",
+          "I've deployed an app (Heroku, Railway, VPS, etc.)"
+        ]
+      }
+    },
+    "results": {
+      "title": "Your Readiness",
+      "scoreLabel": "Readiness",
+      "withoutDevReady": "Without DevReady",
+      "withDevReady": "With DevReady",
+      "months": "months",
+      "readyNow": "Ready to apply now!",
+      "savingsBadge": "Save {months} months sooner",
+      "ctaButton": "Start the Program",
+      "ctaSubtext": "Accelerate your path to the job market",
+      "timelineTitle": "Your path to the first job",
+      "disclaimer": "Estimate based on average. Timeline depends on your personal pace and effort.",
+      "scoreHeadlines": {
+        "veryLow": "Your Journey Starts Here",
+        "low": "Good Start — Keep Going",
+        "mid": "Halfway There",
+        "high": "Almost Ready!",
+        "veryHigh": "So Close!",
+        "ready": "Ready to Apply Now!"
+      },
+      "breakdown": {
+        "title": "Breakdown by Category"
+      },
+      "beyondTech": {
+        "title": "Technical skills alone won't land you the job",
+        "subtitle": "Even if you checked everything above, companies also evaluate:",
+        "brandingTitle": "Personal Branding",
+        "brandingDesc": "GitHub profile, LinkedIn presence, online portfolio — first impressions before you even talk to a recruiter.",
+        "cvTitle": "CV & LinkedIn",
+        "cvDesc": "A resume that clears ATS filters and gets recruiters to actually call you.",
+        "interviewsTitle": "Interviews",
+        "interviewsDesc": "Technical questions, system design, behavioral rounds — skills that require practice and mentoring."
+      }
+    }
   }
 }

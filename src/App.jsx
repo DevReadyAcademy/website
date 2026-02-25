@@ -22,6 +22,7 @@ const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const CvReview = lazy(() => import("./pages/CvReview"));
 const CvTemplate = lazy(() => import("./pages/CvTemplate"));
+const ReadinessQuiz = lazy(() => import("./pages/readinessQuiz"));
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,7 @@ const App = () => (
                 }
               />
               <Route path="/cv-template" element={<CvTemplate />} />
+              <Route path="/readiness-quiz" element={<ReadinessQuiz />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

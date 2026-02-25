@@ -642,5 +642,122 @@
     "button": "Αποκτήστε Πρόσβαση",
     "success": "Είσαι μέσα! Θα μεταφερθείς τώρα...",
     "redirecting": "Ανοίγει το template σε λίγο..."
+  },
+  "readinessQuiz": {
+    "pageTitle": "Backend Readiness Quiz | DevReady",
+    "pageDescription": "Έλεγξε πόσο έτοιμος είσαι για μια θέση backend developer και δες πώς το DevReady σε βοηθά να φτάσεις εκεί πιο γρήγορα.",
+    "intro": {
+      "badge": "Self-Assessment",
+      "title": "Είσαι Έτοιμος για Backend Job;",
+      "subtitle": "Σημείωσε τα skills που ήδη έχεις και δες ποιο είναι το timeline σου για την πρώτη σου δουλειά.",
+      "startButton": "Ξεκίνα το Quiz"
+    },
+    "steps": {
+      "stepOf": "Βήμα {current} από {total}",
+      "next": "Επόμενο",
+      "previous": "Προηγούμενο",
+      "seeResults": "Δες τα Αποτελέσματα"
+    },
+    "categories": {
+      "internet": {
+        "title": "Internet & Βασικά",
+        "items": [
+          "Ξέρω πώς λειτουργεί το HTTP/HTTPS (requests, responses, status codes)",
+          "Καταλαβαίνω τη διαφορά μεταξύ client και server",
+          "Ξέρω τι είναι DNS και πώς λειτουργεί",
+          "Γνωρίζω τις βασικές έννοιες networking (IP, TCP/UDP, ports)",
+          "Καταλαβαίνω πώς λειτουργούν τα browsers"
+        ]
+      },
+      "language": {
+        "title": "Backend Γλώσσα",
+        "items": [
+          "Έχω δουλέψει με μια backend γλώσσα (Python, Node.js, Java, κ.α.)",
+          "Κατανοώ OOP concepts (classes, inheritance, polymorphism)",
+          "Μπορώ να γράψω clean, readable code",
+          "Ξέρω πώς να κάνω handle exceptions και errors"
+        ]
+      },
+      "git": {
+        "title": "Version Control (Git)",
+        "items": [
+          "Μπορώ να δημιουργώ commits, branches και να κάνω merge",
+          "Χρησιμοποιώ GitHub/GitLab για τα projects μου",
+          "Ξέρω πώς να λύσω merge conflicts",
+          "Καταλαβαίνω Git workflows (feature branches, PRs)"
+        ]
+      },
+      "databases": {
+        "title": "Βάσεις Δεδομένων",
+        "items": [
+          "Μπορώ να γράψω βασικά SQL queries (SELECT, INSERT, UPDATE, DELETE)",
+          "Ξέρω τι είναι relational databases και πότε τις χρησιμοποιώ",
+          "Έχω χρησιμοποιήσει τουλάχιστον μια NoSQL βάση (MongoDB, Redis)",
+          "Καταλαβαίνω indexes και τη σημασία τους για performance",
+          "Γνωρίζω βασικές έννοιες schema design"
+        ]
+      },
+      "apis": {
+        "title": "APIs & Web Frameworks",
+        "items": [
+          "Έχω δημιουργήσει ένα RESTful API",
+          "Ξέρω τι είναι CRUD operations",
+          "Έχω χρησιμοποιήσει ένα web framework (Express, FastAPI, Spring, κ.α.)",
+          "Καταλαβαίνω authentication (sessions, JWT tokens)",
+          "Ξέρω πώς να κάνω handle JSON data"
+        ]
+      },
+      "security": {
+        "title": "Βασική Ασφάλεια",
+        "items": [
+          "Ξέρω τι είναι SQL injection και πώς να το αποτρέψω",
+          "Καταλαβαίνω HTTPS και πότε είναι απαραίτητο",
+          "Γνωρίζω βασικές αρχές authentication/authorization",
+          "Ξέρω πώς να αποθηκεύω passwords με ασφάλεια (hashing)"
+        ]
+      },
+      "tools": {
+        "title": "Terminal & Εργαλεία",
+        "items": [
+          "Χρησιμοποιώ άνετα το command line / terminal",
+          "Μπορώ να εγκαταστήσω packages και να διαχειριστώ dependencies",
+          "Έχω deploάρει μια εφαρμογή (Heroku, Railway, VPS, κ.α.)"
+        ]
+      }
+    },
+    "results": {
+      "title": "Η Ετοιμότητά Σου",
+      "scoreLabel": "Readiness",
+      "withoutDevReady": "Χωρίς DevReady",
+      "withDevReady": "Με DevReady",
+      "months": "μήνες",
+      "readyNow": "Έτοιμος να κάνεις αίτηση τώρα!",
+      "savingsBadge": "Εξοικονομείς {months} μήνες νωρίτερα",
+      "ctaButton": "Ξεκίνα το Πρόγραμμα",
+      "ctaSubtext": "Επιτάχυνε την πορεία σου στην αγορά εργασίας",
+      "timelineTitle": "Ο χρόνος σου ως την πρώτη θέση εργασίας",
+      "disclaimer": "Εκτίμηση βάσει μέσου όρου. Ο χρόνος εξαρτάται από τον προσωπικό σου ρυθμό και effort.",
+      "scoreHeadlines": {
+        "veryLow": "Η Διαδρομή Ξεκινά Εδώ",
+        "low": "Καλή Αρχή — Συνέχισε",
+        "mid": "Στα Μισά της Διαδρομής",
+        "high": "Σχεδόν Έτοιμος!",
+        "veryHigh": "Πολύ Κοντά!",
+        "ready": "Έτοιμος να Κάνεις Αίτηση!"
+      },
+      "breakdown": {
+        "title": "Ανάλυση ανά Κατηγορία"
+      },
+      "beyondTech": {
+        "title": "Τα Technical Skills δεν φτάνουν μόνα τους",
+        "subtitle": "Ακόμα κι αν έχεις όλα τα technical skills παραπάνω, οι εταιρείες αξιολογούν επίσης:",
+        "brandingTitle": "Personal Branding",
+        "brandingDesc": "GitHub profile, LinkedIn presence, online portfolio — η πρώτη εντύπωση πριν καν μιλήσεις με κάποιον recruiter.",
+        "cvTitle": "CV & LinkedIn",
+        "cvDesc": "Ένα βιογραφικό που περνά ATS φίλτρα και κάνει recruiters να σε καλέσουν για interview.",
+        "interviewsTitle": "Interviews",
+        "interviewsDesc": "Technical questions, system design, behavioral rounds — skills που χρειάζονται εξάσκηση και mentoring."
+      }
+    }
   }
 }
