@@ -9,7 +9,8 @@ import SEO from '../components/SEO';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
-const CATEGORY_KEYS = ['internet', 'language', 'git', 'databases', 'apis', 'security', 'tools'] as const;
+const BACKEND_CATEGORY_KEYS = ['internet', 'language', 'git', 'databases', 'apis', 'security', 'tools'] as const;
+const FRONTEND_CATEGORY_KEYS = ['html', 'css', 'javascript', 'frameworks', 'buildTools', 'testing', 'performance'] as const;
 const TOTAL_ITEMS = 30;
 
 function getBaseMonths(score: number): number | null {
@@ -42,7 +43,11 @@ function getScoreColor(score: number): string {
 const ReadinessQuiz: React.FC = () => {
     const { t, language } = useLanguage();
     const [step, setStep] = useState(0);
+    const [path, setPath] = useState<'backend' | 'frontend' | null>(null);
     const [checked, setChecked] = useState<Record<string, boolean>>({});
+
+    const activeCategoryKeys = path === 'frontend' ? FRONTEND_CATEGORY_KEYS : BACKEND_CATEGORY_KEYS;
+    const pathKey = path ?? 'backend';
 
     const totalChecked = Object.values(checked).filter(Boolean).length;
     const scorePercent = Math.round((totalChecked / TOTAL_ITEMS) * 100);
@@ -50,18 +55,24 @@ const ReadinessQuiz: React.FC = () => {
     const devreadyMonths = baseMonths !== null ? Math.round(baseMonths * 0.75) : null;
     const savings = baseMonths !== null && devreadyMonths !== null ? baseMonths - devreadyMonths : null;
 
+    const selectPath = (newPath: 'backend' | 'frontend') => {
+        setPath(newPath);
+        setChecked({});
+        setStep(1);
+    };
+
     const toggleItem = (id: string) => {
         setChecked(prev => ({ ...prev, [id]: !prev[id] }));
     };
 
-    const currentCategoryKey = step >= 1 && step <= 7 ? CATEGORY_KEYS[step - 1] : null;
+    const currentCategoryKey = step >= 1 && step <= 7 ? activeCategoryKeys[step - 1] : null;
 
     const getCategoryItems = (key: string): string[] => {
-        const items = t(`readinessQuiz.categories.${key}.items`);
+        const items = t(`readinessQuiz.${pathKey}.categories.${key}.items`);
         return Array.isArray(items) ? items : [];
     };
 
-    const categorySummary = CATEGORY_KEYS.map(key => {
+    const categorySummary = activeCategoryKeys.map(key => {
         const items = getCategoryItems(key);
         const total = items.length;
         const done = items.filter((_, idx) => !!checked[`${key}-${idx}`]).length;
@@ -70,8 +81,8 @@ const ReadinessQuiz: React.FC = () => {
     });
 
     const seoKeywords = language === 'gr'
-        ? "backend developer skills, readiness quiz, πόσο έτοιμος είμαι για developer job, backend roadmap, devready"
-        : "backend developer quiz, readiness assessment, backend skills checklist, how ready am I for a developer job, devready";
+        ? "developer skills, readiness quiz, πόσο έτοιμος είμαι για developer job, frontend backend roadmap, devready"
+        : "developer quiz, readiness assessment, frontend backend skills checklist, how ready am I for a developer job, devready";
 
     const stepLabel = (t('readinessQuiz.steps.stepOf') as string)
         .replace('{current}', String(step))
@@ -96,7 +107,7 @@ const ReadinessQuiz: React.FC = () => {
                     {/* Step indicator */}
                     {step >= 1 && step <= 7 && (
                         <div className="flex justify-center gap-2 mb-10">
-                            {CATEGORY_KEYS.map((_, i) => (
+                            {activeCategoryKeys.map((_, i) => (
                                 <div
                                     key={i}
                                     className={`w-3 h-3 rounded-full transition-colors duration-300 ${
@@ -107,7 +118,7 @@ const ReadinessQuiz: React.FC = () => {
                         </div>
                     )}
 
-                    {/* Intro */}
+                    {/* Intro + Path Selector */}
                     {step === 0 && (
                         <AnimatePresence mode="wait">
                             <motion.div
@@ -126,13 +137,59 @@ const ReadinessQuiz: React.FC = () => {
                                 <p className="text-xl text-gray-600 mb-10 max-w-lg mx-auto">
                                     {t('readinessQuiz.intro.subtitle')}
                                 </p>
-                                <Button
-                                    size="lg"
-                                    className="text-lg px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                                    onClick={() => setStep(1)}
-                                >
-                                    {t('readinessQuiz.intro.startButton')}
-                                </Button>
+
+                                {/* Path selector cards */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto text-left">
+                                    {/* Backend card */}
+                                    <button
+                                        type="button"
+                                        onClick={() => selectPath('backend')}
+                                        className={`group p-6 bg-white rounded-2xl border-2 cursor-pointer text-left transition-all hover:shadow-md ${
+                                            path === 'backend'
+                                                ? 'border-primary bg-primary/5'
+                                                : 'border-gray-200 hover:border-primary/40'
+                                        }`}
+                                    >
+                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${
+                                            path === 'backend' ? 'bg-primary/20' : 'bg-primary/10 group-hover:bg-primary/20'
+                                        }`}>
+                                            <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                                            </svg>
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 text-lg mb-1">
+                                            {t('readinessQuiz.intro.backendCard')}
+                                        </h3>
+                                        <p className="text-sm text-gray-500">
+                                            {t('readinessQuiz.intro.backendCardDesc')}
+                                        </p>
+                                    </button>
+
+                                    {/* Frontend card */}
+                                    <button
+                                        type="button"
+                                        onClick={() => selectPath('frontend')}
+                                        className={`group p-6 bg-white rounded-2xl border-2 cursor-pointer text-left transition-all hover:shadow-md ${
+                                            path === 'frontend'
+                                                ? 'border-primary bg-primary/5'
+                                                : 'border-gray-200 hover:border-primary/40'
+                                        }`}
+                                    >
+                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${
+                                            path === 'frontend' ? 'bg-primary/20' : 'bg-primary/10 group-hover:bg-primary/20'
+                                        }`}>
+                                            <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 text-lg mb-1">
+                                            {t('readinessQuiz.intro.frontendCard')}
+                                        </h3>
+                                        <p className="text-sm text-gray-500">
+                                            {t('readinessQuiz.intro.frontendCardDesc')}
+                                        </p>
+                                    </button>
+                                </div>
                             </motion.div>
                         </AnimatePresence>
                     )}
@@ -149,7 +206,7 @@ const ReadinessQuiz: React.FC = () => {
                             >
                                 <p className="text-sm text-gray-500 mb-1">{stepLabel}</p>
                                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                                    {t(`readinessQuiz.categories.${currentCategoryKey}.title`)}
+                                    {t(`readinessQuiz.${pathKey}.categories.${currentCategoryKey}.title`)}
                                 </h2>
 
                                 <div className="space-y-3 mb-10">
@@ -199,6 +256,11 @@ const ReadinessQuiz: React.FC = () => {
                         >
                             {/* ── Score hero ── */}
                             <div className="text-center mb-8">
+                                <span className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-widest">
+                                    {path === 'frontend'
+                                        ? t('readinessQuiz.intro.frontendCard')
+                                        : t('readinessQuiz.intro.backendCard')}
+                                </span>
                                 <div className="flex justify-center mb-5">
                                     <ScoreCircle score={scorePercent} label={t('readinessQuiz.results.scoreLabel') as string} color={scoreColor} />
                                 </div>
@@ -235,7 +297,6 @@ const ReadinessQuiz: React.FC = () => {
                                                 {devreadyMonths} {t('readinessQuiz.results.months')}
                                             </span>
                                         </div>
-                                        {/* Bar: primary portion + green "saved" portion together = 100% */}
                                         <div className="h-10 w-full bg-gray-100 rounded-lg overflow-hidden flex">
                                             <motion.div
                                                 className="h-full bg-primary flex items-center justify-end pr-3 shrink-0"
@@ -316,7 +377,7 @@ const ReadinessQuiz: React.FC = () => {
                                             <div key={key}>
                                                 <div className="flex justify-between items-center mb-1.5">
                                                     <span className="text-sm font-medium text-gray-700">
-                                                        {t(`readinessQuiz.categories.${key}.title`)}
+                                                        {t(`readinessQuiz.${pathKey}.categories.${key}.title`)}
                                                     </span>
                                                     <span className={`text-sm font-bold tabular-nums ${textColor}`}>
                                                         {done}/{total}

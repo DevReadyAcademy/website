@@ -645,13 +645,16 @@
     "redirecting": "Opening the template in a moment..."
   },
   "readinessQuiz": {
-    "pageTitle": "Backend Readiness Quiz | DevReady",
-    "pageDescription": "Check how ready you are for a backend developer role and see how DevReady helps you get there faster.",
+    "pageTitle": "Developer Readiness Quiz | DevReady",
+    "pageDescription": "Check how ready you are for a developer role — frontend or backend — and see how DevReady helps you get there faster.",
     "intro": {
       "badge": "Self-Assessment",
-      "title": "Are You Ready for a Backend Job?",
-      "subtitle": "Check off the skills you already have and see what your timeline looks like to your first job.",
-      "startButton": "Start the Quiz"
+      "title": "Are You Ready for a Dev Job?",
+      "subtitle": "Choose your path and check off the skills you already have. See your estimated timeline to the first job.",
+      "backendCard": "Backend Developer",
+      "backendCardDesc": "Servers, APIs, databases & deployment",
+      "frontendCard": "Frontend Developer",
+      "frontendCardDesc": "HTML, CSS, JavaScript & frameworks"
     },
     "steps": {
       "stepOf": "Step {current} of {total}",
@@ -659,71 +662,142 @@
       "previous": "Previous",
       "seeResults": "See Results"
     },
-    "categories": {
-      "internet": {
-        "title": "Internet & Basics",
-        "items": [
-          "I understand how HTTP/HTTPS works (requests, responses, status codes)",
-          "I understand the difference between client and server",
-          "I know what DNS is and how it works",
-          "I'm familiar with basic networking concepts (IP, TCP/UDP, ports)",
-          "I understand how browsers work"
-        ]
-      },
-      "language": {
-        "title": "Backend Language",
-        "items": [
-          "I've worked with a backend language (Python, Node.js, Java, etc.)",
-          "I understand OOP concepts (classes, inheritance, polymorphism)",
-          "I can write clean, readable code",
-          "I know how to handle exceptions and errors"
-        ]
-      },
-      "git": {
-        "title": "Version Control (Git)",
-        "items": [
-          "I can create commits, branches, and merge",
-          "I use GitHub/GitLab for my projects",
-          "I know how to resolve merge conflicts",
-          "I understand Git workflows (feature branches, PRs)"
-        ]
-      },
-      "databases": {
-        "title": "Databases",
-        "items": [
-          "I can write basic SQL queries (SELECT, INSERT, UPDATE, DELETE)",
-          "I know what relational databases are and when to use them",
-          "I've used at least one NoSQL database (MongoDB, Redis)",
-          "I understand indexes and their importance for performance",
-          "I know basic schema design concepts"
-        ]
-      },
-      "apis": {
-        "title": "APIs & Web Frameworks",
-        "items": [
-          "I've built a RESTful API",
-          "I know what CRUD operations are",
-          "I've used a web framework (Express, FastAPI, Spring, etc.)",
-          "I understand authentication (sessions, JWT tokens)",
-          "I know how to handle JSON data"
-        ]
-      },
-      "security": {
-        "title": "Basic Security",
-        "items": [
-          "I know what SQL injection is and how to prevent it",
-          "I understand HTTPS and when it's required",
-          "I know basic authentication/authorization principles",
-          "I know how to store passwords securely (hashing)"
-        ]
-      },
-      "tools": {
-        "title": "Terminal & Tools",
-        "items": [
-          "I'm comfortable using the command line / terminal",
-          "I can install packages and manage dependencies",
-          "I've deployed an app (Heroku, Railway, VPS, etc.)"
-        ]
+    "backend": {
+      "categories": {
+        "internet": {
+          "title": "Internet & Basics",
+          "items": [
+            "I understand how HTTP/HTTPS works (requests, responses, status codes)",
+            "I understand the difference between client and server",
+            "I know what DNS is and how it works",
+            "I'm familiar with basic networking concepts (IP, TCP/UDP, ports)",
+            "I understand how browsers work"
+          ]
+        },
+        "language": {
+          "title": "Backend Language",
+          "items": [
+            "I've worked with a backend language (Python, Node.js, Java, etc.)",
+            "I understand OOP concepts (classes, inheritance, polymorphism)",
+            "I can write clean, readable code",
+            "I know how to handle exceptions and errors"
+          ]
+        },
+        "git": {
+          "title": "Version Control (Git)",
+          "items": [
+            "I can create commits, branches, and merge",
+            "I use GitHub/GitLab for my projects",
+            "I know how to resolve merge conflicts",
+            "I understand Git workflows (feature branches, PRs)"
+          ]
+        },
+        "databases": {
+          "title": "Databases",
+          "items": [
+            "I can write basic SQL queries (SELECT, INSERT, UPDATE, DELETE)",
+            "I know what relational databases are and when to use them",
+            "I've used at least one NoSQL database (MongoDB, Redis)",
+            "I understand indexes and their importance for performance",
+            "I know basic schema design concepts"
+          ]
+        },
+        "apis": {
+          "title": "APIs & Web Frameworks",
+          "items": [
+            "I've built a RESTful API",
+            "I know what CRUD operations are",
+            "I've used a web framework (Express, FastAPI, Spring, etc.)",
+            "I understand authentication (sessions, JWT tokens)",
+            "I know how to handle JSON data"
+          ]
+        },
+        "security": {
+          "title": "Basic Security",
+          "items": [
+            "I know what SQL injection is and how to prevent it",
+            "I understand HTTPS and when it's required",
+            "I know basic authentication/authorization principles",
+            "I know how to store passwords securely (hashing)"
+          ]
+        },
+        "tools": {
+          "title": "Terminal & Tools",
+          "items": [
+            "I'm comfortable using the command line / terminal",
+            "I can install packages and manage dependencies",
+            "I've deployed an app (Heroku, Railway, VPS, etc.)"
+          ]
+        }
+      }
+    },
+    "frontend": {
+      "categories": {
+        "html": {
+          "title": "HTML & Web Fundamentals",
+          "items": [
+            "I understand semantic HTML and use the right elements (article, nav, section, aside, etc.)",
+            "I know how browsers render web pages and understand the DOM",
+            "I understand how HTTP/HTTPS works (requests, responses, status codes)",
+            "I know what web accessibility (a11y) means and can write accessible markup",
+            "I'm familiar with browser APIs (localStorage, sessionStorage, fetch, etc.)"
+          ]
+        },
+        "css": {
+          "title": "CSS & Styling",
+          "items": [
+            "I can build layouts with Flexbox and CSS Grid",
+            "I understand the box model, specificity, and the cascade",
+            "I can write responsive designs with media queries (mobile-first)",
+            "I've used a CSS framework or utility library (Tailwind CSS, Bootstrap, etc.)",
+            "I know CSS custom properties (variables) and basic animations/transitions"
+          ]
+        },
+        "javascript": {
+          "title": "JavaScript",
+          "items": [
+            "I understand JS fundamentals (scope, closures, hoisting, prototypes)",
+            "I'm comfortable with ES6+ features (arrow functions, destructuring, spread, modules)",
+            "I can manipulate the DOM and handle events",
+            "I understand asynchronous JavaScript (promises, async/await)",
+            "I've consumed an API using fetch or axios"
+          ]
+        },
+        "frameworks": {
+          "title": "Frameworks & TypeScript",
+          "items": [
+            "I've built a project with a frontend framework (React, Vue, Angular, or Svelte)",
+            "I understand component-based architecture and hooks/lifecycle methods",
+            "I can manage application state (useState, Zustand, Redux, Pinia, etc.)",
+            "I know TypeScript basics (type annotations, interfaces, generics)",
+            "I've implemented client-side routing (React Router, Vue Router, etc.)"
+          ]
+        },
+        "buildTools": {
+          "title": "Build Tools & Version Control",
+          "items": [
+            "I use npm/yarn/pnpm to install and manage packages",
+            "I've used a module bundler or dev server (Vite, Webpack, etc.)",
+            "I use Git for version control and collaborate on GitHub/GitLab",
+            "I can configure and use a linter and formatter (ESLint, Prettier)"
+          ]
+        },
+        "testing": {
+          "title": "Testing & Debugging",
+          "items": [
+            "I've written unit tests for components or functions (Jest, Vitest)",
+            "I understand the basics of end-to-end testing (Playwright, Cypress)",
+            "I'm comfortable using browser DevTools for debugging and profiling"
+          ]
+        },
+        "performance": {
+          "title": "Performance & Deployment",
+          "items": [
+            "I know the basics of web performance (Core Web Vitals, lazy loading, code splitting)",
+            "I've deployed a frontend app (Vercel, Netlify, GitHub Pages, etc.)",
+            "I understand browser caching, CDNs, and static vs dynamic rendering (SSR, SSG)"
+          ]
+        }
       }
     },
     "results": {

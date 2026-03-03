@@ -644,13 +644,16 @@
     "redirecting": "Ανοίγει το template σε λίγο..."
   },
   "readinessQuiz": {
-    "pageTitle": "Backend Readiness Quiz | DevReady",
-    "pageDescription": "Έλεγξε πόσο έτοιμος είσαι για μια θέση backend developer και δες πώς το DevReady σε βοηθά να φτάσεις εκεί πιο γρήγορα.",
+    "pageTitle": "Developer Readiness Quiz | DevReady",
+    "pageDescription": "Έλεγξε πόσο έτοιμος είσαι για μια θέση developer — frontend ή backend — και δες πώς το DevReady σε βοηθά να φτάσεις εκεί πιο γρήγορα.",
     "intro": {
       "badge": "Self-Assessment",
-      "title": "Είσαι Έτοιμος για Backend Job;",
-      "subtitle": "Σημείωσε τα skills που ήδη έχεις και δες ποιο είναι το timeline σου για την πρώτη σου δουλειά.",
-      "startButton": "Ξεκίνα το Quiz"
+      "title": "Είσαι Έτοιμος για Dev Job;",
+      "subtitle": "Επέλεξε το path σου και σημείωσε τα skills που ήδη έχεις. Δες το εκτιμώμενο timeline σου για την πρώτη δουλειά.",
+      "backendCard": "Backend Developer",
+      "backendCardDesc": "Servers, APIs, βάσεις δεδομένων & deployment",
+      "frontendCard": "Frontend Developer",
+      "frontendCardDesc": "HTML, CSS, JavaScript & frameworks"
     },
     "steps": {
       "stepOf": "Βήμα {current} από {total}",
@@ -658,71 +661,142 @@
       "previous": "Προηγούμενο",
       "seeResults": "Δες τα Αποτελέσματα"
     },
-    "categories": {
-      "internet": {
-        "title": "Internet & Βασικά",
-        "items": [
-          "Ξέρω πώς λειτουργεί το HTTP/HTTPS (requests, responses, status codes)",
-          "Καταλαβαίνω τη διαφορά μεταξύ client και server",
-          "Ξέρω τι είναι DNS και πώς λειτουργεί",
-          "Γνωρίζω τις βασικές έννοιες networking (IP, TCP/UDP, ports)",
-          "Καταλαβαίνω πώς λειτουργούν τα browsers"
-        ]
-      },
-      "language": {
-        "title": "Backend Γλώσσα",
-        "items": [
-          "Έχω δουλέψει με μια backend γλώσσα (Python, Node.js, Java, κ.α.)",
-          "Κατανοώ OOP concepts (classes, inheritance, polymorphism)",
-          "Μπορώ να γράψω clean, readable code",
-          "Ξέρω πώς να κάνω handle exceptions και errors"
-        ]
-      },
-      "git": {
-        "title": "Version Control (Git)",
-        "items": [
-          "Μπορώ να δημιουργώ commits, branches και να κάνω merge",
-          "Χρησιμοποιώ GitHub/GitLab για τα projects μου",
-          "Ξέρω πώς να λύσω merge conflicts",
-          "Καταλαβαίνω Git workflows (feature branches, PRs)"
-        ]
-      },
-      "databases": {
-        "title": "Βάσεις Δεδομένων",
-        "items": [
-          "Μπορώ να γράψω βασικά SQL queries (SELECT, INSERT, UPDATE, DELETE)",
-          "Ξέρω τι είναι relational databases και πότε τις χρησιμοποιώ",
-          "Έχω χρησιμοποιήσει τουλάχιστον μια NoSQL βάση (MongoDB, Redis)",
-          "Καταλαβαίνω indexes και τη σημασία τους για performance",
-          "Γνωρίζω βασικές έννοιες schema design"
-        ]
-      },
-      "apis": {
-        "title": "APIs & Web Frameworks",
-        "items": [
-          "Έχω δημιουργήσει ένα RESTful API",
-          "Ξέρω τι είναι CRUD operations",
-          "Έχω χρησιμοποιήσει ένα web framework (Express, FastAPI, Spring, κ.α.)",
-          "Καταλαβαίνω authentication (sessions, JWT tokens)",
-          "Ξέρω πώς να κάνω handle JSON data"
-        ]
-      },
-      "security": {
-        "title": "Βασική Ασφάλεια",
-        "items": [
-          "Ξέρω τι είναι SQL injection και πώς να το αποτρέψω",
-          "Καταλαβαίνω HTTPS και πότε είναι απαραίτητο",
-          "Γνωρίζω βασικές αρχές authentication/authorization",
-          "Ξέρω πώς να αποθηκεύω passwords με ασφάλεια (hashing)"
-        ]
-      },
-      "tools": {
-        "title": "Terminal & Εργαλεία",
-        "items": [
-          "Χρησιμοποιώ άνετα το command line / terminal",
-          "Μπορώ να εγκαταστήσω packages και να διαχειριστώ dependencies",
-          "Έχω deploάρει μια εφαρμογή (Heroku, Railway, VPS, κ.α.)"
-        ]
+    "backend": {
+      "categories": {
+        "internet": {
+          "title": "Internet & Βασικά",
+          "items": [
+            "Ξέρω πώς λειτουργεί το HTTP/HTTPS (requests, responses, status codes)",
+            "Καταλαβαίνω τη διαφορά μεταξύ client και server",
+            "Ξέρω τι είναι DNS και πώς λειτουργεί",
+            "Γνωρίζω τις βασικές έννοιες networking (IP, TCP/UDP, ports)",
+            "Καταλαβαίνω πώς λειτουργούν τα browsers"
+          ]
+        },
+        "language": {
+          "title": "Backend Γλώσσα",
+          "items": [
+            "Έχω δουλέψει με μια backend γλώσσα (Python, Node.js, Java, κ.α.)",
+            "Κατανοώ OOP concepts (classes, inheritance, polymorphism)",
+            "Μπορώ να γράψω clean, readable code",
+            "Ξέρω πώς να κάνω handle exceptions και errors"
+          ]
+        },
+        "git": {
+          "title": "Version Control (Git)",
+          "items": [
+            "Μπορώ να δημιουργώ commits, branches και να κάνω merge",
+            "Χρησιμοποιώ GitHub/GitLab για τα projects μου",
+            "Ξέρω πώς να λύσω merge conflicts",
+            "Καταλαβαίνω Git workflows (feature branches, PRs)"
+          ]
+        },
+        "databases": {
+          "title": "Βάσεις Δεδομένων",
+          "items": [
+            "Μπορώ να γράψω βασικά SQL queries (SELECT, INSERT, UPDATE, DELETE)",
+            "Ξέρω τι είναι relational databases και πότε τις χρησιμοποιώ",
+            "Έχω χρησιμοποιήσει τουλάχιστον μια NoSQL βάση (MongoDB, Redis)",
+            "Καταλαβαίνω indexes και τη σημασία τους για performance",
+            "Γνωρίζω βασικές έννοιες schema design"
+          ]
+        },
+        "apis": {
+          "title": "APIs & Web Frameworks",
+          "items": [
+            "Έχω δημιουργήσει ένα RESTful API",
+            "Ξέρω τι είναι CRUD operations",
+            "Έχω χρησιμοποιήσει ένα web framework (Express, FastAPI, Spring, κ.α.)",
+            "Καταλαβαίνω authentication (sessions, JWT tokens)",
+            "Ξέρω πώς να κάνω handle JSON data"
+          ]
+        },
+        "security": {
+          "title": "Βασική Ασφάλεια",
+          "items": [
+            "Ξέρω τι είναι SQL injection και πώς να το αποτρέψω",
+            "Καταλαβαίνω HTTPS και πότε είναι απαραίτητο",
+            "Γνωρίζω βασικές αρχές authentication/authorization",
+            "Ξέρω πώς να αποθηκεύω passwords με ασφάλεια (hashing)"
+          ]
+        },
+        "tools": {
+          "title": "Terminal & Εργαλεία",
+          "items": [
+            "Χρησιμοποιώ άνετα το command line / terminal",
+            "Μπορώ να εγκαταστήσω packages και να διαχειριστώ dependencies",
+            "Έχω deploάρει μια εφαρμογή (Heroku, Railway, VPS, κ.α.)"
+          ]
+        }
+      }
+    },
+    "frontend": {
+      "categories": {
+        "html": {
+          "title": "HTML & Web Fundamentals",
+          "items": [
+            "Ξέρω semantic HTML και χρησιμοποιώ τα σωστά στοιχεία (article, nav, section, aside, κ.α.)",
+            "Καταλαβαίνω πώς κάνουν render τα browsers (DOM, CSSOM, render tree)",
+            "Ξέρω πώς λειτουργεί το HTTP/HTTPS (requests, responses, status codes)",
+            "Ξέρω τι σημαίνει web accessibility (a11y) και μπορώ να γράψω accessible markup",
+            "Γνωρίζω βασικά browser APIs (localStorage, sessionStorage, fetch, κ.α.)"
+          ]
+        },
+        "css": {
+          "title": "CSS & Styling",
+          "items": [
+            "Μπορώ να φτιάξω layouts με Flexbox και CSS Grid",
+            "Καταλαβαίνω το box model, specificity και το cascade",
+            "Μπορώ να γράψω responsive designs με media queries (mobile-first)",
+            "Έχω χρησιμοποιήσει CSS framework ή utility library (Tailwind CSS, Bootstrap, κ.α.)",
+            "Ξέρω CSS custom properties (variables) και βασικά animations/transitions"
+          ]
+        },
+        "javascript": {
+          "title": "JavaScript",
+          "items": [
+            "Καταλαβαίνω τα fundamentals της JS (scope, closures, hoisting, prototypes)",
+            "Χρησιμοποιώ άνετα ES6+ features (arrow functions, destructuring, spread, modules)",
+            "Μπορώ να κάνω manipulate το DOM και να κάνω handle events",
+            "Καταλαβαίνω asynchronous JavaScript (promises, async/await)",
+            "Έχω καταναλώσει ένα API χρησιμοποιώντας fetch ή axios"
+          ]
+        },
+        "frameworks": {
+          "title": "Frameworks & TypeScript",
+          "items": [
+            "Έχω φτιάξει ένα project με frontend framework (React, Vue, Angular ή Svelte)",
+            "Καταλαβαίνω component-based architecture και hooks/lifecycle methods",
+            "Μπορώ να διαχειριστώ application state (useState, Zustand, Redux, Pinia, κ.α.)",
+            "Ξέρω βασικά TypeScript (type annotations, interfaces, generics)",
+            "Έχω υλοποιήσει client-side routing (React Router, Vue Router, κ.α.)"
+          ]
+        },
+        "buildTools": {
+          "title": "Build Tools & Version Control",
+          "items": [
+            "Χρησιμοποιώ npm/yarn/pnpm για να εγκαταστήσω και να διαχειριστώ packages",
+            "Έχω χρησιμοποιήσει ένα module bundler ή dev server (Vite, Webpack, κ.α.)",
+            "Χρησιμοποιώ Git για version control και συνεργάζομαι στο GitHub/GitLab",
+            "Μπορώ να ρυθμίσω και να χρησιμοποιήσω linter και formatter (ESLint, Prettier)"
+          ]
+        },
+        "testing": {
+          "title": "Testing & Debugging",
+          "items": [
+            "Έχω γράψει unit tests για components ή functions (Jest, Vitest)",
+            "Καταλαβαίνω τα βασικά end-to-end testing (Playwright, Cypress)",
+            "Χρησιμοποιώ άνετα τα browser DevTools για debugging και profiling"
+          ]
+        },
+        "performance": {
+          "title": "Performance & Deployment",
+          "items": [
+            "Ξέρω τα βασικά web performance (Core Web Vitals, lazy loading, code splitting)",
+            "Έχω κάνει deploy μια frontend εφαρμογή (Vercel, Netlify, GitHub Pages, κ.α.)",
+            "Καταλαβαίνω browser caching, CDNs και static vs dynamic rendering (SSR, SSG)"
+          ]
+        }
       }
     },
     "results": {
