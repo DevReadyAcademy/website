@@ -119,11 +119,8 @@ const Contact = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
                 {t('contact.pageTitle')}
               </h1>
-              <p className="text-lg text-foreground max-w-2xl mx-auto mb-2 font-medium">
+              <p className="text-lg text-foreground max-w-2xl mx-auto font-medium">
                 {t('contact.pageSubtitle')}
-              </p>
-              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-                {t('contact.pageDescription')}
               </p>
             </div>
 
