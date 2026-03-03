@@ -127,104 +127,96 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant animate-fade-in">
-                <h2 className="text-2xl font-semibold mb-2">{t('contact.formTitle')}</h2>
-                <p className="text-muted-foreground mb-6 text-sm">
-                  {t('contact.formDescription')}
-                </p>
-                <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">{t('contact.formName')}</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        placeholder={t('contact.formNamePlaceholder')}
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">{t('contact.formEmail')}</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder={t('contact.formEmailPlaceholder')}
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">{t('contact.formSubject')}</Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      placeholder={t('contact.formSubjectPlaceholder')}
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">{t('contact.formMessage')}</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder={t('contact.formMessagePlaceholder')}
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full"
-                    disabled={isSubmitting}
+            <div className="space-y-8">
+              {/* Row 1: PRIMARY CTA - Enrollment (full width) */}
+              <aside className="bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground shadow-lg animate-fade-in" aria-label="Enrollment CTA">
+                <h2 className="text-2xl font-bold mb-4">{t('contact.enrollTitle')}</h2>
+                <p className="mb-6 opacity-90">{t('contact.enrollDescription')}</p>
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
+                  <a
+                    href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    {isSubmitting ? (
-                      t('contact.formSending')
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4 mr-2" />
-                        {t('contact.formSubmit')}
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </div>
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {t('contact.enrollCta')}
+                  </a>
+                </Button>
+              </aside>
 
-              {/* Contact Info */}
-              <div className="space-y-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
-                {/* PRIMARY CTA - Enrollment */}
-                <div className="bg-gradient-primary rounded-2xl p-8 text-primary-foreground shadow-lg">
-                  <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-semibold mb-4">
-                    {t('contact.enrollBadge')}
-                  </div>
-                  <h2 className="text-2xl font-semibold mb-3">{t('contact.enrollTitle')}</h2>
-                  <p className="opacity-90 mb-6">
-                    {t('contact.enrollDescription')}
+              {/* Row 2: Contact Form + Contact Information */}
+              <div className="grid lg:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
+                {/* Contact Form */}
+                <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
+                  <h2 className="text-2xl font-semibold mb-2">{t('contact.formTitle')}</h2>
+                  <p className="text-muted-foreground mb-6 text-sm">
+                    {t('contact.formDescription')}
                   </p>
-                  <Button asChild className="w-full bg-white text-primary hover:bg-white/90 shadow-lg" size="lg">
-                    <a
-                      href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="name">{t('contact.formName')}</Label>
+                        <Input
+                          id="name"
+                          name="name"
+                          placeholder={t('contact.formNamePlaceholder')}
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email">{t('contact.formEmail')}</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder={t('contact.formEmailPlaceholder')}
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="subject">{t('contact.formSubject')}</Label>
+                      <Input
+                        id="subject"
+                        name="subject"
+                        placeholder={t('contact.formSubjectPlaceholder')}
+                        value={formData.subject}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="message">{t('contact.formMessage')}</Label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        placeholder={t('contact.formMessagePlaceholder')}
+                        rows={5}
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full"
+                      disabled={isSubmitting}
                     >
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {t('contact.enrollCta')}
-                    </a>
-                  </Button>
-                  <p className="text-sm opacity-80 mt-4 text-center">
-                    {t('contact.enrollNote')}
-                  </p>
+                      {isSubmitting ? (
+                        t('contact.formSending')
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4 mr-2" />
+                          {t('contact.formSubmit')}
+                        </>
+                      )}
+                    </Button>
+                  </form>
                 </div>
 
                 {/* Contact Information */}
