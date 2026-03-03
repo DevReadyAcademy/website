@@ -648,7 +648,7 @@
     "pageDescription": "Έλεγξε πόσο έτοιμος είσαι για μια θέση developer — frontend ή backend — και δες πώς το DevReady σε βοηθά να φτάσεις εκεί πιο γρήγορα.",
     "intro": {
       "badge": "Self-Assessment",
-      "title": "Είσαι Έτοιμος για Dev Job;",
+      "title": "Είσαι Έτοιμος για Software Engineering Job;",
       "subtitle": "Επέλεξε το path σου και σημείωσε τα skills που ήδη έχεις. Δες το εκτιμώμενο timeline σου για την πρώτη δουλειά.",
       "backendCard": "Backend Developer",
       "backendCardDesc": "Servers, APIs, βάσεις δεδομένων & deployment",
@@ -670,7 +670,7 @@
             "Καταλαβαίνω τη διαφορά μεταξύ client και server",
             "Ξέρω τι είναι DNS και πώς λειτουργεί",
             "Γνωρίζω τις βασικές έννοιες networking (IP, TCP/UDP, ports)",
-            "Καταλαβαίνω πώς λειτουργούν τα browsers"
+            "Καταλαβαίνω πώς λειτουργούν οι browsers"
           ]
         },
         "language": {
@@ -725,7 +725,7 @@
           "items": [
             "Χρησιμοποιώ άνετα το command line / terminal",
             "Μπορώ να εγκαταστήσω packages και να διαχειριστώ dependencies",
-            "Έχω deploάρει μια εφαρμογή (Heroku, Railway, VPS, κ.α.)"
+            "Έχω κάνει deploy μια εφαρμογή (Heroku, Railway, Vercel VPS, κ.α.)"
           ]
         }
       }
@@ -736,7 +736,7 @@
           "title": "HTML & Web Fundamentals",
           "items": [
             "Ξέρω semantic HTML και χρησιμοποιώ τα σωστά στοιχεία (article, nav, section, aside, κ.α.)",
-            "Καταλαβαίνω πώς κάνουν render τα browsers (DOM, CSSOM, render tree)",
+            "Καταλαβαίνω πώς κάνουν render οι browsers (DOM, CSSOM, render tree)",
             "Ξέρω πώς λειτουργεί το HTTP/HTTPS (requests, responses, status codes)",
             "Ξέρω τι σημαίνει web accessibility (a11y) και μπορώ να γράψω accessible markup",
             "Γνωρίζω βασικά browser APIs (localStorage, sessionStorage, fetch, κ.α.)"
@@ -759,7 +759,7 @@
             "Χρησιμοποιώ άνετα ES6+ features (arrow functions, destructuring, spread, modules)",
             "Μπορώ να κάνω manipulate το DOM και να κάνω handle events",
             "Καταλαβαίνω asynchronous JavaScript (promises, async/await)",
-            "Έχω καταναλώσει ένα API χρησιμοποιώντας fetch ή axios"
+            "Έχω κάνει consume ένα API χρησιμοποιώντας fetch ή axios ή άλλα libraries"
           ]
         },
         "frameworks": {
@@ -786,7 +786,7 @@
           "items": [
             "Έχω γράψει unit tests για components ή functions (Jest, Vitest)",
             "Καταλαβαίνω τα βασικά end-to-end testing (Playwright, Cypress)",
-            "Χρησιμοποιώ άνετα τα browser DevTools για debugging και profiling"
+            "Χρησιμοποιώ άνετα οι browser DevTools για debugging και profiling"
           ]
         },
         "performance": {
@@ -809,7 +809,7 @@
       "savingsBadge": "Εξοικονομείς {months} μήνες νωρίτερα",
       "ctaButton": "Ξεκίνα το Πρόγραμμα",
       "ctaSubtext": "Επιτάχυνε την πορεία σου στην αγορά εργασίας",
-      "timelineTitle": "Ο χρόνος σου ως την πρώτη θέση εργασίας",
+      "timelineTitle": "Ο χρόνος σου για ένα software engineering job",
       "disclaimer": "Εκτίμηση βάσει μέσου όρου. Ο χρόνος εξαρτάται από τον προσωπικό σου ρυθμό και effort.",
       "scoreHeadlines": {
         "veryLow": "Η Διαδρομή Ξεκινά Εδώ",

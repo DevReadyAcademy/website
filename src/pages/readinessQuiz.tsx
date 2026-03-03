@@ -52,7 +52,7 @@ const ReadinessQuiz: React.FC = () => {
     const totalChecked = Object.values(checked).filter(Boolean).length;
     const scorePercent = Math.round((totalChecked / TOTAL_ITEMS) * 100);
     const baseMonths = getBaseMonths(scorePercent);
-    const devreadyMonths = baseMonths !== null ? Math.round(baseMonths * 0.75) : null;
+    const devreadyMonths = baseMonths !== null ? Math.round(baseMonths * 0.5) : null;
     const savings = baseMonths !== null && devreadyMonths !== null ? baseMonths - devreadyMonths : null;
 
     const selectPath = (newPath: 'backend' | 'frontend') => {
