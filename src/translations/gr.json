@@ -648,7 +648,7 @@
     "pageDescription": "Έλεγξε πόσο έτοιμος είσαι για μια θέση developer — frontend ή backend — και δες πώς το DevReady σε βοηθά να φτάσεις εκεί πιο γρήγορα.",
     "intro": {
       "badge": "Self-Assessment",
-      "title": "Είσαι Έτοιμος για Software Engineering Job;",
+      "title": "Είσαι έτοιμος για Software Engineering Job;",
       "subtitle": "Επέλεξε το path σου και σημείωσε τα skills που ήδη έχεις. Δες το εκτιμώμενο timeline σου για την πρώτη δουλειά.",
       "backendCard": "Backend Developer",
       "backendCardDesc": "Servers, APIs, βάσεις δεδομένων & deployment",
