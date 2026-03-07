@@ -489,7 +489,7 @@ Honestly, δεν έχει τόση σημασία.
 
 ## 🗺️ Architecture Diagram & System Flow
 
-![CV Review Architecture Diagram](/assets/blogs/n8n_architecture.png)
+![CV Review Architecture Diagram](/assets/blogs/n8n_architecture.webp)
 
 Ολόκληρη η διαδικασία end-to-end:
 
