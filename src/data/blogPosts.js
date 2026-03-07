@@ -460,6 +460,143 @@ Honestly, δεν έχει τόση σημασία.
     imageAlt: "Project and portfolio concept: one strong project that demonstrates engineering practices can get you hired.",
     imageAltGr: "Ένα project που δείχνει engineering practices και σε κάνει hire: ιδέα για portfolio.",
     published: true
+  },
+  {
+    id: 5,
+    slug: "how-we-built-ai-cv-review",
+    title: "How We Built an AI-Powered CV Review Tool",
+    titleGr: "Πώς Χτίσαμε ένα AI-Powered CV Review Tool",
+    excerpt: "We wanted to give instant, actionable feedback on every CV uploaded to DevReady. Here's how we built it, from multi-step forms and S3 storage to n8n workflows and AI prompt engineering.",
+    excerptGr:
+        "Θέλαμε να δώσουμε instant, actionable feedback σε κάθε CV που ανεβαίνει στο DevReady. Εδώ είναι πώς το χτίσαμε, από multi-step form και S3 storage μέχρι n8n workflow και AI prompt engineering.",
+    contentGr: `
+## 👋 Εισαγωγή
+
+Ένα από τα πιο συχνά αιτήματα που παίρναμε στο DevReady ήταν: **"Μπορείς να μου κάνεις review το CV μου;"** Αν δεν το έχεις δει ακόμα, μιλάμε για το [δωρεάν CV Review tool](/cv-review) μας. Το κάναμε manually για αρκετό καιρό, αλλά δεν έκανε scale. Χρειαζόμασταν έναν τρόπο να δώσουμε instant, structured feedback σε κάθε developer που μας εμπιστεύεται το CV του.
+
+Η λύση ήταν ένα automated pipeline που παίρνει το CV σου σε PDF, το περνάει από AI με recruiter perspective, και σου γυρνάει detailed feedback σε λεπτά.
+Σε αυτό το post θα δεις πώς το χτίσαμε, τι τρέχει under the hood, και τι μάθαμε.
+
+## 🧩 High-Level Architecture
+
+Τρία components μιλάνε μεταξύ τους:
+
+1. **Frontend**: React multi-step form για τη συλλογή στοιχείων και upload
+2. **Backend (LMS API)**: Node.js/Express που χειρίζεται authentication, file storage και data processing
+3. **n8n Workflow**: Automation platform που κανει orchestrate το AI review pipeline
+
+Κάθε κομμάτι κάνει ένα πράγμα καλά και είναι αρκετά decoupled μεταξύ τους για first version. Αν θέλουμε αύριο να αλλάξουμε κάτι στο AI pipeline, δεν χρειάζεται να αγγίξουμε τo frontend ή το backend.
+
+## 🗺️ Architecture Diagram & System Flow
+
+![CV Review Architecture Diagram](/assets/blogs/n8n_architecture.png)
+
+Ολόκληρη η διαδικασία end-to-end:
+
+1. Ο χρήστης συμπληρώνει τα στοιχεία του στο **React frontend** και ανεβάζει το CV σε PDF
+2. Το **backend** αποθηκεύει το PDF στο **S3 (MinIO)**, δημιουργεί ένα CvReview document στο **MongoDB**, και κάνει trigger ένα **n8n webhook**
+3. Το **n8n** κατεβάζει το PDF από S3, κάνει extract το text, και το στέλνει στο **GPT-4o-mini** για review
+4. Το AI γυρνάει HTML feedback, το n8n κάνει **POST τα results πίσω στο backend** (callback pattern)
+5. Το backend αποθηκεύει τα results και το n8n **στέλνει email** στον χρήστη με link στα αποτελέσματα
+
+Περισσότερες λεπτομέρεις θα βρείτε παρακάτω.
+
+## 📝 User Journey
+
+1. **Step 1, Personal Info:** Ο χρήστης βάζει όνομα, email και τηλέφωνο.
+2. **Step 2, Email Verification:** Στέλνουμε 6-digit code στο email, ο χρήστης το επιβεβαιώνει.
+3. **Step 3, CV Upload:** Ανεβάζει το CV σε PDF (μέχρι 5MB).
+4. **Step 4, Results:** Μέσα σε λίγα λεπτά παίρνει email με link στα αποτελέσματα.
+
+## 📦 File Storage με S3 (MinIO)
+
+Δεν αποθηκεύουμε τα CVs στο filesystem του server. Χρησιμοποιούμε **MinIO**, ένα S3-compatible object store. Το PDF ανεβαίνει σε ένα dedicated bucket, με unique filename (timestamp + original name) για να αποφύγουμε collisions.
+
+Γιατί MinIO και όχι απευθείας AWS S3; Γιατί τρέχουμε τη δική μας infrastructure, self-hosted, και το MinIO μας δίνει full S3 API compatibility χωρίς vendor lock-in. Αν αύριο θέλουμε να μεταφερθούμε σε AWS, αλλάζουμε μόνο τα credentials.
+
+Μόλις ολοκληρωθεί το upload, δημιουργούμε ένα \`CvReview\` document στο MongoDB με τα metadata (fileKey, originalName, mimeType, size) και κάνουμε trigger το n8n webhook.
+
+## ⚡ Το n8n Workflow
+
+Το **n8n** είναι ένα open-source workflow automation tool. Σκέψου Zapier, αλλά self-hosted και πολύ πιο flexible. Το pipeline μας έχει 6 nodes σε σειρά:
+
+- **Webhook** : Ακούει για POST requests από το backend. Λαμβάνει email, firstName, lastName, fileName, fileUrl και cvReviewId.
+- **Download CV** : Κατεβάζει το PDF από το S3 bucket. Χρειαζόμαστε το actual file, όχι μόνο URL, γιατί το επόμενο node θέλει binary data.
+- **Extract Text** : Παίρνει το binary PDF και κάνει extract όλο το text content. Built-in n8n node, zero custom code.
+- **AI Review (GPT-4o-mini)** : Περνάει ολόκληρο το extracted text στο GPT-4o-mini μαζί με ένα πολύ specific system prompt. Το πιο σημαντικό κομμάτι του pipeline, θα μιλήσω αναλυτικά παρακάτω.
+- **Post Results Back** : Στέλνει τα HTML results πίσω στο LMS API, authenticated με shared API key.
+- **Send Email** : Στέλνει styled HTML email στον χρήστη με link στα αποτελέσματα. Retry on fail enabled γιατί δεν θέλουμε ένα email failure να χάσει τον χρήστη.
+
+Κάθε node τρέχει sequentially. Αν κάποιο αποτύχει, το pipeline σταματάει (εκτός από το email που κάνει retry).
+
+## 🧠 Prompt Engineering — Το Πιο Core Κομμάτι
+
+Το AI model μπορεί να είναι όσο smart θέλει, αλλά αν το prompt δεν είναι σωστό, τα results θα είναι generic και useless. Εδώ πήγε ο περισσότερος χρόνος: **iterating πάνω στο prompt μέχρι να βγάζει consistently καλά results.**
+
+Δομήσαμε το prompt με XML-style tags:
+
+**Persona & Constraints:**
+Το model παίζει ρόλο **έμπειρου Technical Recruiter**. Γράφει στα ελληνικά, σε 2ο πρόσωπο ("Το CV σου", "Θα μπορούσες να..."), και output format αυστηρά HTML (\`<p>\`, \`<ul>\`, \`<strong>\`).
+
+**Constraints που κάνουν τη διαφορά:**
+- **Don't comment on things done right.** Αν κάτι δουλεύει ήδη, δεν χρειάζεται compliment. Μόνο risks και improvements.
+- **If a section is missing, don't mention it.** Δεν θέλουμε να πει "You don't have a summary section" αν ο χρήστης δεν έβαλε.
+- **No greetings or introductions.** Ξεκινάει απευθείας με substance.
+
+**8 Evaluation Rules:**
+Αυτά δίνουν στο model ένα structured framework. Βγήκαν μετά από εκατοντάδες manual reviews, όχι θεωρητικά:
+
+1. **Information Density**: Αν υπάρχουν >3 γραμμές χωρίς bullets, flag it ως "hard to scan"
+2. **Role Clarity**: Αν οι ρόλοι δεν σχετίζονται, flag targeting ambiguity
+3. **Order & Priority**: Experience πάνω από Education, current role gets most detail
+4. **Bullet Quality**: Action verbs, αριθμοί, metrics
+5. **Soft Skills**: Αν είναι standalone λέξεις χωρίς context, flag as low-value
+6. **Projects**: "Πώς χτίστηκε" > "Τι κάνει"
+7. **Summary**: Generic summaries = no value
+8. **Overall Impression**: Αν μέσα σε 60'' δεν φαίνεται η αξία, η πληροφορία είναι "θαμμένη" (difficult to find)
+
+Γιατί **GPT-4o-mini** και όχι GPT-4o ή κάτι μεγαλύτερο; Τα results ήταν consistently καλά σε αυτό το task, κοστίζει σημαντικά λιγότερο, και η ταχύτητα μετράει. Ένα CV review πρέπει να γυρνάει σε λεπτά, όχι σε ώρες. To be honest, ήμασταν surprised με την ποιότητα. Με σωστό prompt engineering, τα μικρότερα models κάνουν εξαιρετική δουλειά σε focused tasks.
+
+## 🔄 Callback Pattern
+
+Αντί το backend να κάνει poll ("Τελείωσε; Τελείωσε; Τελείωσε;"), ο n8n κάνει POST τα results πίσω στο API μόλις τελειώσει. Authenticated με shared API key. Simple, decoupled, reliable.
+
+Ο χρήστης δεν χρειάζεται να κάθεται ανοιχτή η σελίδα. Ανεβάζει, φεύγει, παίρνει email μόλις είναι έτοιμα τα results. No polling, no webSockets.
+
+## 🔔 Monitoring & Alerts
+
+Τρέχουμε ένα **Agenda background job** που κάνει check κάθε ώρα. Αν βρεθεί CV review που είναι pending πάνω από 1 ώρα χωρίς results, στέλνει **Discord alert** στους admins.
+
+Υπάρχει και **admin dashboard** που δείχνει όλα τα reviews. Μπορείς επίσης να κάνεις **retrigger το webhook** αν το processing απέτυχε. Αυτό μας έχει σώσει αρκετές φορές μέχρι τώρα.
+
+## 🧪 Τι Μάθαμε
+
+**Prompt iteration is everything.** Το πρώτο prompt ήταν generic. Results τύπου "Your CV looks good but could use some improvements." Useless. Χρειάστηκαν αρκετά iterations μέχρι να βγαίνει consistently specific, actionable feedback. Τα XML-style tags βοήθησαν πολύ.
+
+**Small models, focused tasks.** Δεν χρειάζεσαι πάντα το μεγαλύτερο model. Αν το task είναι well-defined με clear rules, τα μικρότερα models αποδίδουν εξαιρετικά. Και κοστίζουν λιγότερο, σημαντικό αν θέλεις να κάνεις scale.
+
+**Monitoring from day one.** Βάλε monitoring ακόμα κι αν νομίζεις ότι δεν χρειάζεται. Ένα απλό hourly check + Discord alert μας γλίτωσε πολλές φορές.
+
+**Decouple everything.** Webhooks αντί για tight coupling. Μπορούμε να αλλάξουμε ολόκληρο το AI pipeline χωρίς να αγγίξουμε ούτε μια γραμμή στο backend.
+
+## 🎯 Wrap Up
+
+Δεν είναι rocket science. Καλό prompt engineering, σωστό architecture, monitoring, και focus στο user experience. Αυτά.
+
+Αν σε ενδιαφέρει να χτίζεις τέτοια πράγματα ή θέλεις να δεις πώς δουλεύει real-world software engineering, δες το [6-week accelerator](/accelerator) μας. Hands-on, production-grade projects, σαν αυτό.
+
+Και αν θέλεις να δοκιμάσεις το tool, [ανέβασε το CV σου δωρεάν](/cv-review) και πάρε feedback σε λίγα λεπτά.
+`,
+    author: "Alexis Pavlidis",
+    date: "2026-03-07",
+    readTime: "10 min read",
+    readTimeGr: "10 λεπτά διάβασμα",
+    tags: ["Engineering", "AI", "Architecture", "n8n"],
+    tagsGr: ["Engineering", "AI", "Architecture", "n8n"],
+    image: "/assets/blogs/n8n_architecture.png",
+    imageAlt: "Architecture diagram showing the CV Review pipeline: React frontend, Node.js backend, S3 storage, n8n workflow and GPT-4o-mini.",
+    imageAltGr: "Architecture diagram του CV Review pipeline: React frontend, Node.js backend, S3 storage, n8n workflow και GPT-4o-mini.",
+    published: true
   }
 ];
 
