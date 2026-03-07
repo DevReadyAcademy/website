@@ -23,7 +23,7 @@ const CvReviewResults = () => {
     useEffect(() => {
         const fetchResults = async () => {
             try {
-                const response = await fetch(`https://api.devready.gr/cv-review/results/${id}`);
+                const response = await fetch(`https://api.devready.gr/cv-reviews/results/${id}`);
                 if (response.status === 404) {
                     throw new Error(t('cvReviewPage.errorNotFound'));
                 }
