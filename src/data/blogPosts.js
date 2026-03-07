@@ -512,7 +512,7 @@ Honestly, δεν έχει τόση σημασία.
 
 Δεν αποθηκεύουμε τα CVs στο filesystem του server. Χρησιμοποιούμε **MinIO**, ένα S3-compatible object store. Το PDF ανεβαίνει σε ένα dedicated bucket, με unique filename (timestamp + original name) για να αποφύγουμε collisions.
 
-Γιατί MinIO και όχι απευθείας AWS S3; Γιατί τρέχουμε τη δική μας infrastructure, self-hosted, και το MinIO μας δίνει full S3 API compatibility χωρίς vendor lock-in. Αν αύριο θέλουμε να μεταφερθούμε σε AWS, αλλάζουμε μόνο τα credentials.
+Γιατί MinIO και όχι απευθείας AWS S3; Γιατί τρέχουμε το δικό μας infrastructure, self-hosted, και το MinIO μας δίνει full S3 API compatibility χωρίς vendor lock-in. Αν αύριο θέλουμε να μεταφερθούμε σε AWS, αλλάζουμε μόνο τα credentials.
 
 Μόλις ολοκληρωθεί το upload, δημιουργούμε ένα \`CvReview\` document στο MongoDB με τα metadata (fileKey, originalName, mimeType, size) και κάνουμε trigger το n8n webhook.
 
