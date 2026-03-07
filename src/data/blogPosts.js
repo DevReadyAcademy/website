@@ -472,7 +472,7 @@ Honestly, δεν έχει τόση σημασία.
     contentGr: `
 ## 👋 Εισαγωγή
 
-Ένα από τα πιο συχνά αιτήματα που παίρναμε στο DevReady ήταν: **"Μπορείς να μου κάνεις review το CV μου;"** Αν δεν το έχεις δει ακόμα, μιλάμε για το [δωρεάν CV Review tool](/cv-review) μας. Το κάναμε manually για αρκετό καιρό, αλλά δεν έκανε scale. Χρειαζόμασταν έναν τρόπο να δώσουμε instant, structured feedback σε κάθε developer που μας εμπιστεύεται το CV του.
+Ένα από τα πιο συχνά requests που παίρναμε στο DevReady ήταν: **"Μπορείς να μου κάνεις review το CV μου;"** Αν δεν το έχεις δει ακόμα, μιλάμε για το [δωρεάν CV Review tool](/cv-review) μας. Το κάναμε manually για αρκετό καιρό, αλλά δεν έκανε scale. Χρειαζόμασταν έναν τρόπο να δώσουμε instant, structured feedback σε κάθε developer που μας εμπιστεύεται το CV του.
 
 Η λύση ήταν ένα automated pipeline που παίρνει το CV σου σε PDF, το περνάει από AI με recruiter perspective, και σου γυρνάει detailed feedback σε λεπτά.
 Σε αυτό το post θα δεις πώς το χτίσαμε, τι τρέχει under the hood, και τι μάθαμε.
@@ -593,7 +593,7 @@ Honestly, δεν έχει τόση σημασία.
     readTimeGr: "10 λεπτά διάβασμα",
     tags: ["Engineering", "AI", "Architecture", "n8n"],
     tagsGr: ["Engineering", "AI", "Architecture", "n8n"],
-    image: "/assets/blogs/n8n_architecture.png",
+    image: "/assets/blogs/ai_n8n.webp",
     imageAlt: "Architecture diagram showing the CV Review pipeline: React frontend, Node.js backend, S3 storage, n8n workflow and GPT-4o-mini.",
     imageAltGr: "Architecture diagram του CV Review pipeline: React frontend, Node.js backend, S3 storage, n8n workflow και GPT-4o-mini.",
     published: true
