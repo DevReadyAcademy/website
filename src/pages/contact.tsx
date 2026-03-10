@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Mail, MapPin, Send, Linkedin, Instagram, Calendar } from "lucide-react";
+import { ArrowLeft, Mail, MapPin, Send, Linkedin, Instagram, Calendar, Facebook, Youtube } from "lucide-react";
 import { Button } from "../components/ui/button.tsx";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
@@ -245,7 +245,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium mb-3">{t('contact.followUs')}</h3>
-                      <div className="flex gap-3">
+                      <div className="flex flex-wrap gap-3">
                         <a
                           href="https://www.linkedin.com/company/devreadygr"
                           target="_blank"
@@ -263,6 +263,35 @@ const Contact = () => {
                           aria-label="Follow us on Instagram"
                         >
                           <Instagram className="w-5 h-5" />
+                        </a>
+                        <a
+                          href="https://www.facebook.com/devreadygr/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          aria-label="Follow us on Facebook"
+                        >
+                          <Facebook className="w-5 h-5" />
+                        </a>
+                        <a
+                          href="https://www.tiktok.com/@devreadygr"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          aria-label="Follow us on TikTok"
+                        >
+                          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.63a8.23 8.23 0 0 0 4.76 1.5v-3.4a4.85 4.85 0 0 1-1-.04z"/>
+                          </svg>
+                        </a>
+                        <a
+                          href="https://www.youtube.com/@devreadygr"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          aria-label="Follow us on YouTube"
+                        >
+                          <Youtube className="w-5 h-5" />
                         </a>
                       </div>
                     </div>
