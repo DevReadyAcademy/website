@@ -188,7 +188,7 @@ const Accelerator = () => {
               <div className="mb-12">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6" onClick={() => setInterestOpen(true)}>
                   <Users className="w-5 h-5 mr-2" />
-                  {t('contact.interestCta')}
+                  {t('common.secureYourSpot')}
                 </Button>
               </div>
 
@@ -294,7 +294,7 @@ const Accelerator = () => {
                       <p className="text-muted-foreground">{step.description}</p>
                       {index === 0 && (
                         <button type="button" onClick={() => setInterestOpen(true)} className="text-primary hover:underline text-sm font-medium inline-block mt-2">
-                          → {t('contact.interestCta')}
+                          → {t('common.secureYourSpot')}
                         </button>
                       )}
                     </div>
