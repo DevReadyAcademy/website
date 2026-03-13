@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, CheckCircle, Users, Clock, Target, Code, Brain, FileText, Compass } from "lucide-react";
 import { Button } from "../components/ui/button.tsx";
@@ -8,7 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import InterestDialog from "../components/InterestDialog";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
@@ -25,8 +24,6 @@ const iconMap = {
 
 const Accelerator = () => {
   const { t, language } = useLanguage();
-
-  const [interestOpen, setInterestOpen] = useState(false);
 
   const modulesData = t('accelerator.modules');
   const modules = (Array.isArray(modulesData) ? modulesData : []).map((module: any, index: number) => ({
@@ -186,9 +183,11 @@ const Accelerator = () => {
               </div>
 
               <div className="mb-12">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6" onClick={() => setInterestOpen(true)}>
-                  <Users className="w-5 h-5 mr-2" />
-                  {t('common.secureYourSpot')}
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
+                  <Link to="/contact">
+                    <Users className="w-5 h-5 mr-2" />
+                    {t('common.secureYourSpot')}
+                  </Link>
                 </Button>
               </div>
 
@@ -293,9 +292,9 @@ const Accelerator = () => {
                       <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                       <p className="text-muted-foreground">{step.description}</p>
                       {index === 0 && (
-                        <button type="button" onClick={() => setInterestOpen(true)} className="text-primary hover:underline text-sm font-medium inline-block mt-2">
+                        <Link to="/contact" className="text-primary hover:underline text-sm font-medium inline-block mt-2">
                           → {t('common.secureYourSpot')}
-                        </button>
+                        </Link>
                       )}
                     </div>
                   </div>
@@ -421,8 +420,6 @@ const Accelerator = () => {
             </div>
           </section>
         </main>
-
-        <InterestDialog open={interestOpen} onOpenChange={setInterestOpen} />
 
         <Footer />
       </div>
