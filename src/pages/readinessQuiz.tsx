@@ -100,8 +100,11 @@ const ReadinessQuiz: React.FC = () => {
                 canonical="https://www.devready.gr/readiness-quiz"
                 language={language}
             />
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
+                Skip to main content
+            </a>
             <Header />
-            <main className="pt-24 min-h-screen bg-gray-50">
+            <main id="main-content" className="pt-24 min-h-screen bg-gray-50">
                 <div className={`container mx-auto px-4 py-12 transition-all duration-300 ${step === 8 ? 'max-w-3xl' : 'max-w-2xl'}`}>
 
                     {/* Step indicator */}

@@ -8,13 +8,15 @@ import { useLanguage } from '../contexts/LanguageContext';
 import Header from '../components/Header';
 // @ts-ignore
 import Footer from '../components/Footer';
+// @ts-ignore
+import SEO from '../components/SEO';
 import { BLOG_ACCESS_KEY } from '../components/BlogReadGate';
 
 const CANVA_URL =
   'https://www.canva.com/design/DAG6u0hwUEE/Worswuy8qs5cBxWDhLAt5Q/edit?utm_content=DAG6u0hwUEE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton';
 
 const TemplatePage: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
@@ -53,8 +55,15 @@ const TemplatePage: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="CV Template - DevReady"
+        description="Get a free professional CV template designed for software engineers. Optimized layout, clean formatting, and proven structure to help you land interviews."
+        keywords="cv template, resume template, software engineer cv, developer resume, free cv template, tech cv"
+        canonical="https://www.devready.gr/cv-template"
+        language={language}
+      />
       <Header />
-      <main className="flex-grow flex items-center justify-center px-4 py-16 pt-28">
+      <main id="main-content" className="flex-grow flex items-center justify-center px-4 py-16 pt-28">
         <div className="w-full max-w-md rounded-2xl border border-border/50 bg-card/80 backdrop-blur p-8 md:p-10 text-center">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-5">
             <Mail className="w-7 h-7" aria-hidden />

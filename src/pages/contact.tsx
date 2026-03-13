@@ -85,6 +85,9 @@ const Contact = () => {
         canonical="https://www.devready.gr/contact"
         language={language}
       />
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
+        Skip to main content
+      </a>
       <div className="min-h-screen bg-background">
         {/* Header */}
         <header className="py-4 sm:py-6 px-3 sm:px-4 border-b border-border/50">
@@ -113,7 +116,7 @@ const Contact = () => {
             </div>
           </div>
         </header>
-        <main className="py-16 px-4">
+        <main id="main-content" className="py-16 px-4">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12 animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">

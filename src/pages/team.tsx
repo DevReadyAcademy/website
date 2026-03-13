@@ -9,7 +9,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Team = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const teamMembers = t('journey.teamMembers') || [];
   const timeline = t('journey.timeline') || [];
@@ -21,10 +21,14 @@ const Team = () => {
         description="Meet Alex, Kostas, and Vasilis - the team behind DevReady. From dozens of job rejections to helping others break into tech."
         keywords="DevReady team, about us, tech education Greece, software engineering mentors, meet the team, tech mentorship"
         canonical="https://www.devready.gr/team"
+        language={language}
       />
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
+        Skip to main content
+      </a>
       <Header />
       <div className="min-h-screen bg-background pt-20 overflow-x-hidden">
-        <main>
+        <main id="main-content">
           {/* Hero Section */}
           <section className="py-16 px-4 bg-gradient-hero">
             <div className="container mx-auto max-w-4xl text-center">

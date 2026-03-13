@@ -152,9 +152,12 @@ const Accelerator = () => {
         language={language}
         structuredData={acceleratorStructuredData}
       />
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
+        Skip to main content
+      </a>
       <Header />
       <div className="min-h-screen bg-background pt-20">
-        <main>
+        <main id="main-content">
           {/* Hero Section */}
           <section className="py-16 px-4 bg-gradient-hero">
             <div className="container mx-auto max-w-5xl text-center">
