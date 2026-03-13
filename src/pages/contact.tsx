@@ -7,6 +7,7 @@ import { Textarea } from "../components/ui/textarea";
 import { Label } from "../components/ui/label";
 import { useToast } from "../components/ui/use-toast";
 import { useLanguage } from "../contexts/LanguageContext";
+import InterestDialog from "../components/InterestDialog";
 import SEO from "../components/SEO";
 import Footer from "../components/Footer";
 
@@ -20,6 +21,8 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+
+  const [interestOpen, setInterestOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -128,21 +131,48 @@ const Contact = () => {
             </div>
 
             <div className="space-y-8">
-              {/* Row 1: PRIMARY CTA - Enrollment (full width) */}
-              <aside className="bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground shadow-lg animate-fade-in" aria-label="Enrollment CTA">
-                <h2 className="text-2xl font-bold mb-4">{t('contact.enrollTitle')}</h2>
-                <p className="mb-6 opacity-90">{t('contact.enrollDescription')}</p>
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
-                  <a
-                    href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {t('contact.enrollCta')}
-                  </a>
-                </Button>
-              </aside>
+              {/* Row 1: Two CTAs side by side */}
+              <div className="grid md:grid-cols-2 gap-6 animate-fade-in">
+                {/* LEFT: Primary CTA - Book a Call */}
+                <aside className="bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground shadow-lg flex flex-col justify-between" aria-label="Enrollment CTA">
+                  <div>
+                    <h2 className="text-2xl font-bold mb-4">{t('contact.enrollTitle')}</h2>
+                    <p className="mb-6 opacity-90">{t('contact.enrollDescription')}</p>
+                  </div>
+                  <div>
+                    <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
+                      <a
+                        href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {t('contact.enrollCta')}
+                      </a>
+                    </Button>
+                  </div>
+                </aside>
+
+                {/* RIGHT: Secondary CTA - Express Interest */}
+                <aside className="rounded-2xl border border-border/50 bg-card p-8 text-center shadow-elegant flex flex-col justify-between" aria-label="Express Interest CTA">
+                  <div>
+                    <h2 className="text-2xl font-bold mb-4 text-foreground">{t('contact.interestTitle')}</h2>
+                    <p className="mb-6 text-muted-foreground">{t('contact.interestDescription')}</p>
+                  </div>
+                  <div>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                      onClick={() => setInterestOpen(true)}
+                    >
+                      {t('contact.interestCta')}
+                    </Button>
+                  </div>
+                </aside>
+              </div>
+
+              <InterestDialog open={interestOpen} onOpenChange={setInterestOpen} />
 
               {/* Row 2: Contact Form + Contact Information */}
               <div className="grid lg:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "100ms" }}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, CheckCircle, Users, Clock, Target, Code, Brain, FileText, Compass } from "lucide-react";
 import { Button } from "../components/ui/button.tsx";
@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import InterestDialog from "../components/InterestDialog";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
@@ -24,6 +25,8 @@ const iconMap = {
 
 const Accelerator = () => {
   const { t, language } = useLanguage();
+
+  const [interestOpen, setInterestOpen] = useState(false);
 
   const modulesData = t('accelerator.modules');
   const modules = (Array.isArray(modulesData) ? modulesData : []).map((module: any, index: number) => ({
@@ -183,11 +186,9 @@ const Accelerator = () => {
               </div>
 
               <div className="mb-12">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
-                  <Link to="/contact">
-                    <Users className="w-5 h-5 mr-2" />
-                    {t('common.enroll')}
-                  </Link>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6" onClick={() => setInterestOpen(true)}>
+                  <Users className="w-5 h-5 mr-2" />
+                  {t('contact.interestCta')}
                 </Button>
               </div>
 
@@ -292,9 +293,9 @@ const Accelerator = () => {
                       <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                       <p className="text-muted-foreground">{step.description}</p>
                       {index === 0 && (
-                        <Link to="/contact" className="text-primary hover:underline text-sm font-medium inline-block mt-2">
-                          → {t('common.enroll')}
-                        </Link>
+                        <button type="button" onClick={() => setInterestOpen(true)} className="text-primary hover:underline text-sm font-medium inline-block mt-2">
+                          → {t('contact.interestCta')}
+                        </button>
                       )}
                     </div>
                   </div>
@@ -410,7 +411,7 @@ const Accelerator = () => {
                 <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-lg">
                   <Link to="/contact">
                     <Calendar className="w-5 h-5 mr-2" />
-                    {t('common.enroll')}
+                    {t('common.secureYourSpot')}
                   </Link>
                 </Button>
                 <p className="text-sm opacity-80 mt-6">
@@ -420,6 +421,9 @@ const Accelerator = () => {
             </div>
           </section>
         </main>
+
+        <InterestDialog open={interestOpen} onOpenChange={setInterestOpen} />
+
         <Footer />
       </div>
     </>
