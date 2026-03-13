@@ -2,13 +2,14 @@
   "common": {
     "brandName": "DevReady",
     "tagline": "Γεφυρώνοντας το χάσμα ανάμεσα στο πανεπιστήμιο και την αγορά εργασίας",
-    "enrollNow": "Εγγραφή",
+    "enrollNow": "Κλείσε τη Θέση σου",
     "learnMore": "Μάθε Περισσότερα",
     "skipToMain": "Μετάβαση στο κύριο περιεχόμενο",
-    "bookCall": "Εγγραφή",
+    "bookCall": "Κλείσε τη Θέση σου",
     "viewFullCurriculum": "Δες το Πρόγραμμα",
     "viewProgramDetails": "Λεπτομέρειες Προγράμματος",
-    "secureYourSpot": "Κλείσε τη Θέση σου"
+    "secureYourSpot": "Κλείσε τη Θέση σου",
+    "enroll": "Εγγραφή"
   },
   "header": {
     "home": "Αρχική",

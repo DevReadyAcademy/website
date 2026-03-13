@@ -183,7 +183,7 @@ const Accelerator = () => {
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
                   <Link to="/contact">
                     <Users className="w-5 h-5 mr-2" />
-                    {t('common.bookCall')}
+                    {t('common.enroll')}
                   </Link>
                 </Button>
               </div>
@@ -290,7 +290,7 @@ const Accelerator = () => {
                       <p className="text-muted-foreground">{step.description}</p>
                       {index === 0 && (
                         <Link to="/contact" className="text-primary hover:underline text-sm font-medium inline-block mt-2">
-                          → {t('common.enrollNow')}
+                          → {t('common.enroll')}
                         </Link>
                       )}
                     </div>
@@ -407,7 +407,7 @@ const Accelerator = () => {
                 <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-lg">
                   <Link to="/contact">
                     <Calendar className="w-5 h-5 mr-2" />
-                    {t('common.bookCall')}
+                    {t('common.enroll')}
                   </Link>
                 </Button>
                 <p className="text-sm opacity-80 mt-6">
