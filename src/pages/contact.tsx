@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Mail, MapPin, Send, Linkedin, Instagram, Calendar, Facebook, Youtube } from "lucide-react";
+import { ArrowLeft, ArrowDown, Send } from "lucide-react";
 import { Button } from "../components/ui/button.tsx";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
@@ -23,6 +23,33 @@ const Contact = () => {
   });
 
   const [interestOpen, setInterestOpen] = useState(false);
+
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Listen for Calendly event scheduled
+    const handleMessage = (e: MessageEvent) => {
+      if (e.data?.event === "calendly.event_scheduled") {
+        if (typeof window !== "undefined" && "gtag" in window) {
+          const gtag = (window as typeof window & { gtag: (...args: unknown[]) => void }).gtag;
+          gtag("event", "booked_a_call", {
+            event_category: "engagement",
+            event_label: "calendly",
+          });
+        }
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+    return () => {
+      window.removeEventListener("message", handleMessage);
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -130,61 +157,50 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="space-y-8">
-              {/* Row 1: Two CTAs side by side */}
-              <div className="grid md:grid-cols-2 gap-6 animate-fade-in">
-                {/* LEFT: Primary CTA - Book a Call */}
-                <aside className="bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground shadow-lg flex flex-col justify-between" aria-label="Enrollment CTA">
-                  <div>
-                    <h2 className="text-2xl font-bold mb-4">{t('contact.enrollTitle')}</h2>
-                    <p className="mb-6 opacity-90">{t('contact.enrollDescription')}</p>
-                  </div>
-                  <div>
-                    <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
-                      <a
-                        href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {t('contact.enrollCta')}
-                      </a>
-                    </Button>
-                  </div>
-                </aside>
+            <InterestDialog open={interestOpen} onOpenChange={setInterestOpen} />
 
-                {/* RIGHT: Secondary CTA - Express Interest */}
-                <aside className="rounded-2xl border border-border/50 bg-card p-8 text-center shadow-elegant flex flex-col justify-between" aria-label="Express Interest CTA">
-                  <div>
-                    <h2 className="text-2xl font-bold mb-4 text-foreground">{t('contact.interestTitle')}</h2>
-                    <p className="mb-6 text-muted-foreground">{t('contact.interestDescription')}</p>
-                  </div>
-                  <div>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                      onClick={() => setInterestOpen(true)}
-                    >
-                      {t('contact.interestCta')}
-                    </Button>
-                  </div>
-                </aside>
+            <div className="grid lg:grid-cols-2 gap-6 animate-fade-in">
+              {/* Left column: Enrollment CTA + Calendly (single merged card) */}
+              <div className="flex flex-col rounded-2xl overflow-hidden shadow-elegant border border-border/50">
+                <div className="bg-gradient-primary p-6 text-center text-primary-foreground">
+                  <h2 className="text-2xl font-bold mb-2">{t('contact.enrollTitle')}</h2>
+                  <p className="opacity-90 mb-3">{t('contact.enrollDescription')}</p>
+                  <ArrowDown className="w-5 h-5 mx-auto animate-bounce" />
+                </div>
+                <div className="flex-1">
+                  <div
+                    className="calendly-inline-widget"
+                    data-url="https://calendly.com/hello-devready/30min?hide_event_type_details=1&hide_gdpr_banner=1"
+                    style={{ minWidth: "280px", height: "700px" }}
+                  />
+                </div>
               </div>
 
-              <InterestDialog open={interestOpen} onOpenChange={setInterestOpen} />
+              {/* Right column: 3 separate cards */}
+              <div className="space-y-4">
+                {/* Card A: Express Interest CTA */}
+                <div className="rounded-2xl border border-border/50 shadow-elegant bg-primary/5 p-6 text-center">
+                  <h2 className="text-xl font-bold mb-2 text-foreground">{t('contact.interestTitle')}</h2>
+                  <p className="text-muted-foreground mb-4 text-sm">{t('contact.interestDescription')}</p>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    onClick={() => setInterestOpen(true)}
+                  >
+                    {t('contact.interestCta')}
+                  </Button>
+                </div>
 
-              {/* Row 2: Contact Form + Contact Information */}
-              <div className="grid lg:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
-                {/* Contact Form */}
-                <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
-                  <h2 className="text-2xl font-semibold mb-2">{t('contact.formTitle')}</h2>
-                  <p className="text-muted-foreground mb-6 text-sm">
+                {/* Card B: Contact Form */}
+                <div className="rounded-2xl border border-border/50 shadow-elegant bg-card p-6">
+                  <h2 className="text-xl font-semibold mb-1">{t('contact.formTitle')}</h2>
+                  <p className="text-muted-foreground mb-4 text-sm">
                     {t('contact.formDescription')}
                   </p>
-                  <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
+                  <form onSubmit={handleSubmit} className="space-y-4" aria-label="Contact form">
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      <div className="space-y-1.5">
                         <Label htmlFor="name">{t('contact.formName')}</Label>
                         <Input
                           id="name"
@@ -195,7 +211,7 @@ const Contact = () => {
                           required
                         />
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-1.5">
                         <Label htmlFor="email">{t('contact.formEmail')}</Label>
                         <Input
                           id="email"
@@ -208,7 +224,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-1.5">
                       <Label htmlFor="subject">{t('contact.formSubject')}</Label>
                       <Input
                         id="subject"
@@ -219,13 +235,13 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-1.5">
                       <Label htmlFor="message">{t('contact.formMessage')}</Label>
                       <Textarea
                         id="message"
                         name="message"
                         placeholder={t('contact.formMessagePlaceholder')}
-                        rows={5}
+                        rows={4}
                         value={formData.message}
                         onChange={handleChange}
                         required
@@ -249,87 +265,6 @@ const Contact = () => {
                   </form>
                 </div>
 
-                {/* Contact Information */}
-                <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
-                  <h2 className="text-2xl font-semibold mb-6">{t('contact.connectTitle')}</h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-primary/10 text-primary">
-                        <Mail className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium mb-1">{t('contact.email')}</h3>
-                        <a
-                          href="mailto:hello@devready.gr"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          hello@devready.gr
-                        </a>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-primary/10 text-primary">
-                        <MapPin className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium mb-1">{t('contact.location')}</h3>
-                        <p className="text-muted-foreground">{t('contact.locationValue')}</p>
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-medium mb-3">{t('contact.followUs')}</h3>
-                      <div className="flex flex-wrap gap-3">
-                        <a
-                          href="https://www.linkedin.com/company/devreadygr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                          aria-label="Follow us on LinkedIn"
-                        >
-                          <Linkedin className="w-5 h-5" />
-                        </a>
-                        <a
-                          href="https://www.instagram.com/devreadygr/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                          aria-label="Follow us on Instagram"
-                        >
-                          <Instagram className="w-5 h-5" />
-                        </a>
-                        <a
-                          href="https://www.facebook.com/devreadygr/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                          aria-label="Follow us on Facebook"
-                        >
-                          <Facebook className="w-5 h-5" />
-                        </a>
-                        <a
-                          href="https://www.tiktok.com/@devreadygr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                          aria-label="Follow us on TikTok"
-                        >
-                          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.63a8.23 8.23 0 0 0 4.76 1.5v-3.4a4.85 4.85 0 0 1-1-.04z"/>
-                          </svg>
-                        </a>
-                        <a
-                          href="https://www.youtube.com/@devreadygr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                          aria-label="Follow us on YouTube"
-                        >
-                          <Youtube className="w-5 h-5" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
