@@ -78,42 +78,46 @@ const Contact = () => {
             </div>
           </div>
         </header>
-        <main id="main-content" className="py-16 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                {t('contact.pageTitle')}
-              </h1>
-              <p className="text-lg text-foreground max-w-2xl mx-auto font-medium">
-                {t('contact.pageSubtitle')}
-              </p>
+        <main id="main-content" className="px-3 sm:px-4">
+          <div className="bg-gradient-to-b from-primary/10 via-primary/5 to-transparent pt-10 sm:pt-16 pb-8 sm:pb-12">
+            <div className="container mx-auto max-w-6xl">
+              <div className="text-center animate-fade-in">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
+                  {t('contact.pageTitle')}
+                </h1>
+                <p className="text-base sm:text-lg text-foreground max-w-2xl mx-auto font-medium px-2">
+                  {t('contact.pageSubtitle')}
+                </p>
+              </div>
             </div>
+          </div>
+          <div className="container mx-auto max-w-6xl pb-10 sm:pb-16">
 
             <InterestDialog open={interestOpen} onOpenChange={setInterestOpen} />
 
-            <div className="grid lg:grid-cols-2 gap-6 animate-fade-in">
+            <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 animate-fade-in">
               {/* Left column: Enrollment CTA + Calendly (single merged card) */}
-              <div className="flex flex-col rounded-2xl overflow-hidden shadow-elegant border border-border/50">
-                <div className="bg-gradient-primary p-6 text-center text-primary-foreground">
-                  <h2 className="text-2xl font-bold mb-2">{t('contact.enrollTitle')}</h2>
-                  <p className="opacity-90 mb-3">{t('contact.enrollDescription')}</p>
-                  <ArrowDown className="w-5 h-5 mx-auto animate-bounce" />
+              <section className="flex flex-col rounded-2xl overflow-hidden shadow-elegant border border-border/50" aria-label={t('contact.enrollTitle')}>
+                <div className="bg-gradient-primary p-4 sm:p-6 text-center text-primary-foreground">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2">{t('contact.enrollTitle')}</h2>
+                  <p className="opacity-90 mb-3 text-sm sm:text-base">{t('contact.enrollDescription')}</p>
+                  <ArrowDown className="w-7 h-7 mx-auto animate-bounce" aria-hidden="true" />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1" role="region" aria-label="Book a call calendar">
                   <div
                     className="calendly-inline-widget"
                     data-url="https://calendly.com/hello-devready/30min"
-                    style={{ minWidth: "280px", height: "700px" }}
+                    style={{ minWidth: "280px", height: "630px" }}
                   />
                 </div>
-              </div>
+              </section>
 
-              {/* Right column: 3 separate cards */}
+              {/* Right column */}
               <div className="space-y-4">
                 {/* Card A: Express Interest CTA */}
-                <div className="rounded-2xl border border-border/50 shadow-elegant bg-primary/5 p-6 text-center">
-                  <h2 className="text-xl font-bold mb-2 text-foreground">{t('contact.interestTitle')}</h2>
-                  <p className="text-muted-foreground mb-4 text-sm">{t('contact.interestDescription')}</p>
+                <section className="rounded-2xl border border-border/50 shadow-elegant bg-primary/5 p-4 sm:p-6 text-center" aria-label={t('contact.interestTitle')}>
+                  <h2 className="text-lg sm:text-xl font-bold mb-2 text-foreground">{t('contact.interestTitle')}</h2>
+                  <p className="text-muted-foreground mb-4 text-xs sm:text-sm">{t('contact.interestDescription')}</p>
                   <Button
                     size="lg"
                     variant="outline"
@@ -122,18 +126,18 @@ const Contact = () => {
                   >
                     {t('contact.interestCta')}
                   </Button>
-                </div>
+                </section>
 
                 {/* Card B: Contact Information */}
-                <div className="rounded-2xl border border-border/50 shadow-elegant bg-card overflow-hidden">
-                  <div className="px-6 pt-4 pb-1">
-                    <h2 className="text-xl font-semibold text-center">{t('contact.connectTitle')}</h2>
+                <section className="rounded-2xl border border-border/50 shadow-elegant bg-card overflow-hidden" aria-label={t('contact.connectTitle')}>
+                  <div className="px-4 sm:px-6 pt-4 pb-1">
+                    <h2 className="text-lg sm:text-xl font-semibold text-center">{t('contact.connectTitle')}</h2>
                   </div>
-                  <div className="px-6 pb-6 pt-2 space-y-4">
-                    <div className="flex justify-center gap-2">
+                  <div className="px-4 sm:px-6 pb-5 sm:pb-6 pt-2 space-y-4">
+                    <div className="flex justify-center gap-2 sm:gap-3">
                       <a
                         href="mailto:hello@devready.gr"
-                        className="group flex flex-col items-center gap-3 p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-40"
+                        className="group flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-36 sm:w-40"
                       >
                         <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                           <Mail className="w-5 h-5" />
@@ -143,7 +147,7 @@ const Contact = () => {
                           <p className="text-muted-foreground text-xs mt-0.5">hello@devready.gr</p>
                         </div>
                       </a>
-                      <div className="flex flex-col items-center gap-3 p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-40">
+                      <div className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-36 sm:w-40">
                         <div className="p-3 rounded-full bg-primary/10 text-primary">
                           <MapPin className="w-5 h-5" />
                         </div>
@@ -153,9 +157,9 @@ const Contact = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="pt-2">
-                      <h3 className="font-medium text-sm text-center mb-4">{t('contact.followUs')}</h3>
-                      <div className="flex justify-center gap-2">
+                    <nav className="pt-2" aria-label="Social media links">
+                      <h3 className="font-medium text-sm text-center mb-3 sm:mb-4">{t('contact.followUs')}</h3>
+                      <div className="flex justify-center gap-1.5 sm:gap-2">
                         <a
                           href="https://www.linkedin.com/company/devreadygr"
                           target="_blank"
@@ -204,9 +208,9 @@ const Contact = () => {
                           <Youtube className="w-5 h-5" />
                         </a>
                       </div>
-                    </div>
+                    </nav>
                   </div>
-                </div>
+                </section>
 
               </div>
             </div>
