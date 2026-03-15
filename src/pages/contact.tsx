@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowDown, Send } from "lucide-react";
+import { ArrowLeft, ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 import { Button } from "../components/ui/button.tsx";
-import { Input } from "../components/ui/input";
-import { Textarea } from "../components/ui/textarea";
-import { Label } from "../components/ui/label";
-import { useToast } from "../components/ui/use-toast";
 import { useLanguage } from "../contexts/LanguageContext";
 import InterestDialog from "../components/InterestDialog";
 import SEO from "../components/SEO";
@@ -13,15 +9,6 @@ import Footer from "../components/Footer";
 
 const Contact = () => {
   const { t, language } = useLanguage();
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
   const [interestOpen, setInterestOpen] = useState(false);
 
   useEffect(() => {
@@ -50,61 +37,6 @@ const Contact = () => {
       document.body.removeChild(script);
     };
   }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
-          to_email: "hello@devready.gr",
-          from_name: formData.name,
-          subject: `Contact Form: ${formData.subject}`,
-          message: formData.message,
-          email: formData.email,
-          // Additional fields for better email formatting
-          name: formData.name,
-          reply_to: formData.email,
-        }),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        toast({
-          title: "✅ Message sent successfully!",
-          description: "Thank you for reaching out. We'll get back to you as soon as possible.",
-        });
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        throw new Error(result.message || "Failed to send message");
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again or email us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
 
   return (
     <>
@@ -170,7 +102,7 @@ const Contact = () => {
                 <div className="flex-1">
                   <div
                     className="calendly-inline-widget"
-                    data-url="https://calendly.com/hello-devready/30min?hide_event_type_details=1&hide_gdpr_banner=1"
+                    data-url="https://calendly.com/hello-devready/30min"
                     style={{ minWidth: "280px", height: "700px" }}
                   />
                 </div>
@@ -192,77 +124,88 @@ const Contact = () => {
                   </Button>
                 </div>
 
-                {/* Card B: Contact Form */}
-                <div className="rounded-2xl border border-border/50 shadow-elegant bg-card p-6">
-                  <h2 className="text-xl font-semibold mb-1">{t('contact.formTitle')}</h2>
-                  <p className="text-muted-foreground mb-4 text-sm">
-                    {t('contact.formDescription')}
-                  </p>
-                  <form onSubmit={handleSubmit} className="space-y-4" aria-label="Contact form">
-                    <div className="grid sm:grid-cols-2 gap-3">
-                      <div className="space-y-1.5">
-                        <Label htmlFor="name">{t('contact.formName')}</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          placeholder={t('contact.formNamePlaceholder')}
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                      <div className="space-y-1.5">
-                        <Label htmlFor="email">{t('contact.formEmail')}</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          placeholder={t('contact.formEmailPlaceholder')}
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                        />
+                {/* Card B: Contact Information */}
+                <div className="rounded-2xl border border-border/50 shadow-elegant bg-card overflow-hidden">
+                  <div className="px-6 pt-4 pb-1">
+                    <h2 className="text-xl font-semibold text-center">{t('contact.connectTitle')}</h2>
+                  </div>
+                  <div className="px-6 pb-6 pt-2 space-y-4">
+                    <div className="flex justify-center gap-2">
+                      <a
+                        href="mailto:hello@devready.gr"
+                        className="group flex flex-col items-center gap-3 p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-40"
+                      >
+                        <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                          <Mail className="w-5 h-5" />
+                        </div>
+                        <div className="text-center">
+                          <h3 className="font-medium text-sm">{t('contact.email')}</h3>
+                          <p className="text-muted-foreground text-xs mt-0.5">hello@devready.gr</p>
+                        </div>
+                      </a>
+                      <div className="flex flex-col items-center gap-3 p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-40">
+                        <div className="p-3 rounded-full bg-primary/10 text-primary">
+                          <MapPin className="w-5 h-5" />
+                        </div>
+                        <div className="text-center">
+                          <h3 className="font-medium text-sm">{t('contact.location')}</h3>
+                          <p className="text-muted-foreground text-xs mt-0.5">{t('contact.locationValue')}</p>
+                        </div>
                       </div>
                     </div>
-                    <div className="space-y-1.5">
-                      <Label htmlFor="subject">{t('contact.formSubject')}</Label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        placeholder={t('contact.formSubjectPlaceholder')}
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                      />
+                    <div className="pt-2">
+                      <h3 className="font-medium text-sm text-center mb-4">{t('contact.followUs')}</h3>
+                      <div className="flex justify-center gap-2">
+                        <a
+                          href="https://www.linkedin.com/company/devreadygr"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                          aria-label="Follow us on LinkedIn"
+                        >
+                          <Linkedin className="w-5 h-5" />
+                        </a>
+                        <a
+                          href="https://www.instagram.com/devreadygr/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                          aria-label="Follow us on Instagram"
+                        >
+                          <Instagram className="w-5 h-5" />
+                        </a>
+                        <a
+                          href="https://www.facebook.com/devreadygr/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                          aria-label="Follow us on Facebook"
+                        >
+                          <Facebook className="w-5 h-5" />
+                        </a>
+                        <a
+                          href="https://www.tiktok.com/@devreadygr"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                          aria-label="Follow us on TikTok"
+                        >
+                          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.63a8.23 8.23 0 0 0 4.76 1.5v-3.4a4.85 4.85 0 0 1-1-.04z"/>
+                          </svg>
+                        </a>
+                        <a
+                          href="https://www.youtube.com/@devreadygr"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                          aria-label="Follow us on YouTube"
+                        >
+                          <Youtube className="w-5 h-5" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="space-y-1.5">
-                      <Label htmlFor="message">{t('contact.formMessage')}</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        placeholder={t('contact.formMessagePlaceholder')}
-                        rows={4}
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        t('contact.formSending')
-                      ) : (
-                        <>
-                          <Send className="w-4 h-4 mr-2" />
-                          {t('contact.formSubmit')}
-                        </>
-                      )}
-                    </Button>
-                  </form>
+                  </div>
                 </div>
 
               </div>
