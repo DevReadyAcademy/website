@@ -122,7 +122,7 @@ const Contact = () => {
                 <div className="flex-1" role="region" aria-label="Book a call calendar">
                   <div
                     className="calendly-inline-widget"
-                    data-url="https://calendly.com/hello-devready/30min"
+                    data-url="https://calendly.com/hello-devready/20min?primary_color=363fec"
                     style={{ minWidth: "280px", height: "630px" }}
                   />
                 </div>
