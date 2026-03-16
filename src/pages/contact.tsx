@@ -1,11 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Mail, MapPin, Send, Linkedin, Instagram, Calendar, Facebook, Youtube } from "lucide-react";
+import { ArrowLeft, ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 import { Button } from "../components/ui/button.tsx";
-import { Input } from "../components/ui/input";
-import { Textarea } from "../components/ui/textarea";
-import { Label } from "../components/ui/label";
-import { useToast } from "../components/ui/use-toast";
 import { useLanguage } from "../contexts/LanguageContext";
 import InterestDialog from "../components/InterestDialog";
 import SEO from "../components/SEO";
@@ -13,71 +9,50 @@ import Footer from "../components/Footer";
 
 const Contact = () => {
   const { t, language } = useLanguage();
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
   const [interestOpen, setInterestOpen] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
 
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
-          to_email: "hello@devready.gr",
-          from_name: formData.name,
-          subject: `Contact Form: ${formData.subject}`,
-          message: formData.message,
-          email: formData.email,
-          // Additional fields for better email formatting
-          name: formData.name,
-          reply_to: formData.email,
-        }),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        toast({
-          title: "✅ Message sent successfully!",
-          description: "Thank you for reaching out. We'll get back to you as soon as possible.",
-        });
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        throw new Error(result.message || "Failed to send message");
+    // Listen for Calendly event scheduled
+    const handleMessage = (e: MessageEvent) => {
+      if (e.data?.event === "calendly.event_scheduled") {
+        // Google Analytics
+        if (typeof window !== "undefined" && "gtag" in window) {
+          const gtag = (window as typeof window & { gtag: (...args: unknown[]) => void }).gtag;
+          gtag("event", "booked_a_call", {
+            event_category: "engagement",
+            event_label: "calendly",
+          });
+        }
+        // Meta Pixel
+        if (typeof window !== "undefined" && "fbq" in window) {
+          const fbq = (window as typeof window & { fbq: (...args: unknown[]) => void }).fbq;
+          fbq("track", "Schedule", {
+            content_name: "Book a Call",
+            content_category: "calendly",
+          });
+        }
+        // TikTok Pixel
+        if (typeof window !== "undefined" && "ttq" in window) {
+          const ttq = (window as typeof window & { ttq: { track: (...args: unknown[]) => void } }).ttq;
+          ttq.track("SubmitForm", {
+            content_name: "Book a Call",
+          });
+        }
       }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again or email us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
+    window.addEventListener("message", handleMessage);
+    return () => {
+      window.removeEventListener("message", handleMessage);
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <>
@@ -119,171 +94,93 @@ const Contact = () => {
             </div>
           </div>
         </header>
-        <main id="main-content" className="py-16 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                {t('contact.pageTitle')}
-              </h1>
-              <p className="text-lg text-foreground max-w-2xl mx-auto font-medium">
-                {t('contact.pageSubtitle')}
-              </p>
-            </div>
-
-            <div className="space-y-8">
-              {/* Row 1: Two CTAs side by side */}
-              <div className="grid md:grid-cols-2 gap-6 animate-fade-in">
-                {/* LEFT: Primary CTA - Book a Call */}
-                <aside className="bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground shadow-lg flex flex-col justify-between" aria-label="Enrollment CTA">
-                  <div>
-                    <h2 className="text-2xl font-bold mb-4">{t('contact.enrollTitle')}</h2>
-                    <p className="mb-6 opacity-90">{t('contact.enrollDescription')}</p>
-                  </div>
-                  <div>
-                    <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
-                      <a
-                        href="https://calendar.app.google/BxXRiBy4UHgZUaGcA"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {t('contact.enrollCta')}
-                      </a>
-                    </Button>
-                  </div>
-                </aside>
-
-                {/* RIGHT: Secondary CTA - Express Interest */}
-                <aside className="rounded-2xl border border-border/50 bg-card p-8 text-center shadow-elegant flex flex-col justify-between" aria-label="Express Interest CTA">
-                  <div>
-                    <h2 className="text-2xl font-bold mb-4 text-foreground">{t('contact.interestTitle')}</h2>
-                    <p className="mb-6 text-muted-foreground">{t('contact.interestDescription')}</p>
-                  </div>
-                  <div>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                      onClick={() => setInterestOpen(true)}
-                    >
-                      {t('contact.interestCta')}
-                    </Button>
-                  </div>
-                </aside>
+        <main id="main-content" className="px-3 sm:px-4">
+          <div className="bg-gradient-to-b from-primary/10 via-primary/5 to-transparent pt-10 sm:pt-16 pb-8 sm:pb-12">
+            <div className="container mx-auto max-w-6xl">
+              <div className="text-center animate-fade-in">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
+                  {t('contact.pageTitle')}
+                </h1>
+                <p className="text-base sm:text-lg text-foreground max-w-2xl mx-auto font-medium px-2">
+                  {t('contact.pageSubtitle')}
+                </p>
               </div>
+            </div>
+          </div>
+          <div className="container mx-auto max-w-6xl pb-10 sm:pb-16">
 
-              <InterestDialog open={interestOpen} onOpenChange={setInterestOpen} />
+            <InterestDialog open={interestOpen} onOpenChange={setInterestOpen} />
 
-              {/* Row 2: Contact Form + Contact Information */}
-              <div className="grid lg:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
-                {/* Contact Form */}
-                <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
-                  <h2 className="text-2xl font-semibold mb-2">{t('contact.formTitle')}</h2>
-                  <p className="text-muted-foreground mb-6 text-sm">
-                    {t('contact.formDescription')}
-                  </p>
-                  <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">{t('contact.formName')}</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          placeholder={t('contact.formNamePlaceholder')}
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">{t('contact.formEmail')}</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          placeholder={t('contact.formEmailPlaceholder')}
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">{t('contact.formSubject')}</Label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        placeholder={t('contact.formSubjectPlaceholder')}
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="message">{t('contact.formMessage')}</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        placeholder={t('contact.formMessagePlaceholder')}
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        t('contact.formSending')
-                      ) : (
-                        <>
-                          <Send className="w-4 h-4 mr-2" />
-                          {t('contact.formSubmit')}
-                        </>
-                      )}
-                    </Button>
-                  </form>
+            <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 animate-fade-in">
+              {/* Left column: Enrollment CTA + Calendly (single merged card) */}
+              <section className="flex flex-col rounded-2xl overflow-hidden shadow-elegant border border-border/50" aria-label={t('contact.enrollTitle')}>
+                <div className="bg-gradient-primary p-4 sm:p-6 text-center text-primary-foreground">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2">{t('contact.enrollTitle')}</h2>
+                  <p className="opacity-90 mb-3 text-sm sm:text-base">{t('contact.enrollDescription')}</p>
+                  <ArrowDown className="w-7 h-7 mx-auto animate-bounce" aria-hidden="true" />
                 </div>
+                <div className="flex-1" role="region" aria-label="Book a call calendar">
+                  <div
+                    className="calendly-inline-widget"
+                    data-url="https://calendly.com/hello-devready/20min?primary_color=363fec"
+                    style={{ minWidth: "280px", height: "630px" }}
+                  />
+                </div>
+              </section>
 
-                {/* Contact Information */}
-                <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-elegant">
-                  <h2 className="text-2xl font-semibold mb-6">{t('contact.connectTitle')}</h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-primary/10 text-primary">
-                        <Mail className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium mb-1">{t('contact.email')}</h3>
-                        <a
-                          href="mailto:hello@devready.gr"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          hello@devready.gr
-                        </a>
+              {/* Right column */}
+              <div className="space-y-4">
+                {/* Card A: Express Interest CTA */}
+                <section className="rounded-2xl border border-border/50 shadow-elegant bg-primary/5 p-4 sm:p-6 text-center" aria-label={t('contact.interestTitle')}>
+                  <h2 className="text-lg sm:text-xl font-bold mb-2 text-foreground">{t('contact.interestTitle')}</h2>
+                  <p className="text-muted-foreground mb-4 text-xs sm:text-sm">{t('contact.interestDescription')}</p>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    onClick={() => setInterestOpen(true)}
+                  >
+                    {t('contact.interestCta')}
+                  </Button>
+                </section>
+
+                {/* Card B: Contact Information */}
+                <section className="rounded-2xl border border-border/50 shadow-elegant bg-card overflow-hidden" aria-label={t('contact.connectTitle')}>
+                  <div className="px-4 sm:px-6 pt-4 pb-1">
+                    <h2 className="text-lg sm:text-xl font-semibold text-center">{t('contact.connectTitle')}</h2>
+                  </div>
+                  <div className="px-4 sm:px-6 pb-5 sm:pb-6 pt-2 space-y-4">
+                    <div className="flex justify-center gap-2 sm:gap-3">
+                      <a
+                        href="mailto:hello@devready.gr"
+                        className="group flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-36 sm:w-40"
+                      >
+                        <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                          <Mail className="w-5 h-5" />
+                        </div>
+                        <div className="text-center">
+                          <h3 className="font-medium text-sm">{t('contact.email')}</h3>
+                          <p className="text-muted-foreground text-xs mt-0.5">hello@devready.gr</p>
+                        </div>
+                      </a>
+                      <div className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-36 sm:w-40">
+                        <div className="p-3 rounded-full bg-primary/10 text-primary">
+                          <MapPin className="w-5 h-5" />
+                        </div>
+                        <div className="text-center">
+                          <h3 className="font-medium text-sm">{t('contact.location')}</h3>
+                          <p className="text-muted-foreground text-xs mt-0.5">{t('contact.locationValue')}</p>
+                        </div>
                       </div>
                     </div>
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-primary/10 text-primary">
-                        <MapPin className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium mb-1">{t('contact.location')}</h3>
-                        <p className="text-muted-foreground">{t('contact.locationValue')}</p>
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-medium mb-3">{t('contact.followUs')}</h3>
-                      <div className="flex flex-wrap gap-3">
+                    <nav className="pt-2" aria-label="Social media links">
+                      <h3 className="font-medium text-sm text-center mb-3 sm:mb-4">{t('contact.followUs')}</h3>
+                      <div className="flex justify-center gap-1.5 sm:gap-2">
                         <a
                           href="https://www.linkedin.com/company/devreadygr"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
                           aria-label="Follow us on LinkedIn"
                         >
                           <Linkedin className="w-5 h-5" />
@@ -292,7 +189,7 @@ const Contact = () => {
                           href="https://www.instagram.com/devreadygr/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
                           aria-label="Follow us on Instagram"
                         >
                           <Instagram className="w-5 h-5" />
@@ -301,7 +198,7 @@ const Contact = () => {
                           href="https://www.facebook.com/devreadygr/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
                           aria-label="Follow us on Facebook"
                         >
                           <Facebook className="w-5 h-5" />
@@ -310,7 +207,7 @@ const Contact = () => {
                           href="https://www.tiktok.com/@devreadygr"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
                           aria-label="Follow us on TikTok"
                         >
                           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -321,15 +218,16 @@ const Contact = () => {
                           href="https://www.youtube.com/@devreadygr"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
                           aria-label="Follow us on YouTube"
                         >
                           <Youtube className="w-5 h-5" />
                         </a>
                       </div>
-                    </div>
+                    </nav>
                   </div>
-                </div>
+                </section>
+
               </div>
             </div>
           </div>

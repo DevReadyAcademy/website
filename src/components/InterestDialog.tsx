@@ -88,6 +88,30 @@ const InterestDialog = ({ open, onOpenChange }: InterestDialogProps) => {
       });
       if (!response.ok) throw new Error();
       setStatus("success");
+
+      // Google Analytics
+      if (typeof window !== "undefined" && "gtag" in window) {
+        const gtag = (window as typeof window & { gtag: (...args: unknown[]) => void }).gtag;
+        gtag("event", "express_interest", {
+          event_category: "engagement",
+          event_label: "interest_form",
+        });
+      }
+      // Meta Pixel
+      if (typeof window !== "undefined" && "fbq" in window) {
+        const fbq = (window as typeof window & { fbq: (...args: unknown[]) => void }).fbq;
+        fbq("track", "Lead", {
+          content_name: "Express Interest",
+          content_category: "interest_form",
+        });
+      }
+      // TikTok Pixel
+      if (typeof window !== "undefined" && "ttq" in window) {
+        const ttq = (window as typeof window & { ttq: { track: (...args: unknown[]) => void } }).ttq;
+        ttq.track("SubmitForm", {
+          content_name: "Express Interest",
+        });
+      }
     } catch {
       setStatus("error");
     }
