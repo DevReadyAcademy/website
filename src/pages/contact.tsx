@@ -121,9 +121,8 @@ const Contact = () => {
                 </div>
                 <div className="flex-1" role="region" aria-label="Book a call calendar">
                   <div
-                    className="calendly-inline-widget"
+                    className="calendly-inline-widget min-w-[280px] h-[500px] sm:h-[630px]"
                     data-url="https://calendly.com/hello-devready/20min?primary_color=363fec"
-                    style={{ minWidth: "280px", height: "630px" }}
                   />
                 </div>
               </section>
@@ -153,7 +152,7 @@ const Contact = () => {
                     <div className="flex justify-center gap-2 sm:gap-3">
                       <a
                         href="mailto:hello@devready.gr"
-                        className="group flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-36 sm:w-40"
+                        className="group flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all flex-1 min-w-0"
                       >
                         <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                           <Mail className="w-5 h-5" />
@@ -163,7 +162,7 @@ const Contact = () => {
                           <p className="text-muted-foreground text-xs mt-0.5">hello@devready.gr</p>
                         </div>
                       </a>
-                      <div className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all w-36 sm:w-40">
+                      <div className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all flex-1 min-w-0">
                         <div className="p-3 rounded-full bg-primary/10 text-primary">
                           <MapPin className="w-5 h-5" />
                         </div>
