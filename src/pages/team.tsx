@@ -74,7 +74,7 @@ const Team = () => {
                     <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl">
                       <img
                         src={member.image}
-                        alt={member.name}
+                        alt={`${member.name} - ${member.role}`}
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />

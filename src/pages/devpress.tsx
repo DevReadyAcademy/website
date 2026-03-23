@@ -130,7 +130,7 @@ const DevPress = () => {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     ) : (
-                      <div className="absolute inset-0 flex items-center justify-center text-primary-foreground text-4xl font-bold opacity-20">
+                      <div className="absolute inset-0 flex items-center justify-center text-primary-foreground text-4xl font-bold opacity-20" aria-hidden="true">
                         DevReady
                       </div>
                     )}
@@ -141,7 +141,7 @@ const DevPress = () => {
                     {/* Meta */}
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                       <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
+                        <Calendar className="w-4 h-4" aria-hidden="true" />
                         <span>{new Date(post.date).toLocaleDateString(language === 'gr' ? 'el-GR' : 'en-US', { 
                           year: 'numeric', 
                           month: 'short', 
@@ -149,7 +149,7 @@ const DevPress = () => {
                         })}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4" aria-hidden="true" />
                         <span>{language === 'gr' ? post.readTimeGr : post.readTime}</span>
                       </div>
                     </div>

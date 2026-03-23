@@ -63,7 +63,7 @@ const Subscribe = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          <Mail className="w-12 h-12 text-muted-foreground mx-auto mb-6" />
+          <Mail className="w-12 h-12 text-muted-foreground mx-auto mb-6" aria-hidden="true" />
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">Ready to Start?</h2>
           <p className="text-lg text-muted-foreground mb-8">Be the first to know when we launch.</p>
         </motion.div>
@@ -77,21 +77,27 @@ const Subscribe = () => {
           className="space-y-4"
         >
           <div>
+            <label htmlFor="subscribe-name" className="sr-only">Your Name</label>
             <input
+              id="subscribe-name"
               type="text"
               placeholder="Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              aria-required="true"
               className="w-full px-5 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-smooth"
             />
           </div>
 
           <div>
+            <label htmlFor="subscribe-email" className="sr-only">Your Email</label>
             <input
+              id="subscribe-email"
               type="email"
               placeholder="Your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              aria-required="true"
               className="w-full px-5 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-smooth"
             />
           </div>
@@ -107,7 +113,7 @@ const Subscribe = () => {
                   animate={{ rotate: 360 }}
                   transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                 >
-                  <Send className="w-5 h-5" />
+                  <Send className="w-5 h-5" aria-hidden="true" />
                 </motion.div>
                 Submitting...
               </span>

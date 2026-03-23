@@ -56,7 +56,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ variant = 'default' }) => {
     return (
       <div className="bg-card rounded-xl border border-border/50 p-6">
         <div className="flex items-center gap-2 mb-3">
-          <Mail className="w-5 h-5 text-primary" />
+          <Mail className="w-5 h-5 text-primary" aria-hidden="true" />
           <h3 className="text-lg font-semibold">{t('newsletter.title')}</h3>
         </div>
         <p className="text-sm text-muted-foreground mb-4">
@@ -65,13 +65,13 @@ const Newsletter: React.FC<NewsletterProps> = ({ variant = 'default' }) => {
         
         {status === 'success' ? (
           <div className="flex items-center gap-2 text-sm text-green-600 bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
-            <CheckCircle className="w-4 h-4" />
+            <CheckCircle className="w-4 h-4" aria-hidden="true" />
             <span>{message}</span>
           </div>
         ) : status === 'error' ? (
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-sm text-red-600 bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
-              <AlertCircle className="w-4 h-4" />
+              <AlertCircle className="w-4 h-4" aria-hidden="true" />
               <span>{message}</span>
             </div>
             <form onSubmit={handleSubmit} className="flex gap-2">
@@ -83,13 +83,15 @@ const Newsletter: React.FC<NewsletterProps> = ({ variant = 'default' }) => {
                 required
                 className="flex-1"
                 disabled={status === 'loading'}
+                aria-label={t('newsletter.emailPlaceholder')}
               />
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 disabled={status === 'loading'}
                 className="flex-shrink-0"
+                aria-label="Subscribe"
               >
-                <Send className="w-4 h-4" />
+                <Send className="w-4 h-4" aria-hidden="true" />
               </Button>
             </form>
           </div>
@@ -103,13 +105,15 @@ const Newsletter: React.FC<NewsletterProps> = ({ variant = 'default' }) => {
               required
               className="flex-1"
               disabled={status === 'loading'}
+              aria-label={t('newsletter.emailPlaceholder')}
             />
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               disabled={status === 'loading'}
               className="flex-shrink-0"
+              aria-label="Subscribe"
             >
-              <Send className="w-4 h-4" />
+              <Send className="w-4 h-4" aria-hidden="true" />
             </Button>
           </form>
         )}
@@ -121,7 +125,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ variant = 'default' }) => {
     <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-primary-foreground">
       <div className="max-w-2xl mx-auto text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
-          <Mail className="w-8 h-8" />
+          <Mail className="w-8 h-8" aria-hidden="true" />
         </div>
         
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -133,7 +137,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ variant = 'default' }) => {
 
         {status === 'success' ? (
           <div className="flex items-center justify-center gap-3 text-lg bg-white/20 p-4 rounded-lg">
-            <CheckCircle className="w-6 h-6" />
+            <CheckCircle className="w-6 h-6" aria-hidden="true" />
             <span>{message}</span>
           </div>
         ) : (
@@ -150,6 +154,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ variant = 'default' }) => {
                 required
                 className="flex-1 bg-white text-foreground"
                 disabled={status === 'loading'}
+                aria-label={t('newsletter.emailPlaceholder')}
               />
               <Button 
                 type="submit" 
@@ -158,12 +163,12 @@ const Newsletter: React.FC<NewsletterProps> = ({ variant = 'default' }) => {
                 className="bg-white text-primary hover:bg-white/90"
               >
                 {status === 'loading' ? t('newsletter.subscribing') : t('newsletter.subscribe')}
-                <Send className="w-4 h-4 ml-2" />
+                <Send className="w-4 h-4 ml-2" aria-hidden="true" />
               </Button>
             </form>
             {status === 'error' && (
               <div className="flex items-center justify-center gap-2 text-sm bg-red-500/20 p-3 rounded-lg mt-4">
-                <AlertCircle className="w-4 h-4" />
+                <AlertCircle className="w-4 h-4" aria-hidden="true" />
                 <span>{message}</span>
               </div>
             )}

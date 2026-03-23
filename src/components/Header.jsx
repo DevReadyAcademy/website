@@ -194,6 +194,7 @@ const Header = () => {
           >
             <svg
               className="w-6 h-6"
+              aria-hidden="true"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"

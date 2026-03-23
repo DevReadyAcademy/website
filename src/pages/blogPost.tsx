@@ -272,7 +272,7 @@ const BlogPost = () => {
                   </div>
                   <div
                     className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent"
-                    aria-hidden
+                    aria-hidden="true"
                   />
                 </div>
                 <BlogReadGate onUnlock={() => setHasAccess(true)} />

@@ -21,6 +21,9 @@ const Contact = () => {
     // Listen for Calendly event scheduled
     const handleMessage = (e: MessageEvent) => {
       if (e.data?.event === "calendly.event_scheduled") {
+        // Generate a unique eventID for Meta deduplication (client + server)
+        const eventID = `cal_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
+
         // Google Analytics
         if (typeof window !== "undefined" && "gtag" in window) {
           const gtag = (window as typeof window & { gtag: (...args: unknown[]) => void }).gtag;
@@ -29,13 +32,13 @@ const Contact = () => {
             event_label: "calendly",
           });
         }
-        // Meta Pixel
+        // Meta Pixel (client-side — server-side also fires via Calendly webhook)
         if (typeof window !== "undefined" && "fbq" in window) {
           const fbq = (window as typeof window & { fbq: (...args: unknown[]) => void }).fbq;
           fbq("track", "Schedule", {
             content_name: "Book a Call",
             content_category: "calendly",
-          });
+          }, { eventID });
         }
         // TikTok Pixel
         if (typeof window !== "undefined" && "ttq" in window) {

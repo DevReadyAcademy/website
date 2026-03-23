@@ -67,7 +67,7 @@ const Index = () => {
                 language={language}
                 structuredData={homepageStructuredData}
             />
-            <a href="#main-content" className="skip-link">
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
                 Skip to main content
             </a>
             <div className="min-h-screen">

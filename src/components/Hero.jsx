@@ -20,7 +20,7 @@ const Hero = () => {
           className="mb-6"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full text-sm font-semibold backdrop-blur-sm">
-            <Calendar className="w-4 h-4" />
+            <Calendar className="w-4 h-4" aria-hidden="true" />
             {t('hero.urgencyBadge')}
           </span>
         </motion.div>
@@ -82,7 +82,7 @@ const Hero = () => {
           >
             <Link to="/contact">
               {t('common.secureYourSpot')}
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Link>
           </Button>
           
@@ -106,15 +106,15 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground"
         >
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-primary" />
+            <CheckCircle className="w-5 h-5 text-primary" aria-hidden="true" />
             <span>{t('hero.trust1')}</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-primary" />
+            <CheckCircle className="w-5 h-5 text-primary" aria-hidden="true" />
             <span>{t('hero.trust2')}</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-primary" />
+            <CheckCircle className="w-5 h-5 text-primary" aria-hidden="true" />
             <span>{t('hero.trust3')}</span>
           </div>
         </motion.div>

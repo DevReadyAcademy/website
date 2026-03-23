@@ -66,7 +66,7 @@ const TemplatePage: React.FC = () => {
       <main id="main-content" className="flex-grow flex items-center justify-center px-4 py-16 pt-28">
         <div className="w-full max-w-md rounded-2xl border border-border/50 bg-card/80 backdrop-blur p-8 md:p-10 text-center">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-5">
-            <Mail className="w-7 h-7" aria-hidden />
+            <Mail className="w-7 h-7" aria-hidden="true" />
           </div>
           <h1 className="text-2xl font-bold mb-2">{t('templateGate.title')}</h1>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
@@ -76,7 +76,7 @@ const TemplatePage: React.FC = () => {
           {status === 'success' ? (
             <div className="flex flex-col items-center gap-3">
               <div className="flex items-center justify-center gap-2 text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-4 rounded-lg w-full">
-                <CheckCircle className="w-5 h-5 flex-shrink-0" aria-hidden />
+                <CheckCircle className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
                 <span>{t('templateGate.success')}</span>
               </div>
               <p className="text-sm text-muted-foreground">{t('templateGate.redirecting')}</p>
@@ -96,12 +96,12 @@ const TemplatePage: React.FC = () => {
                 />
                 <Button type="submit" disabled={status === 'loading'} className="flex-shrink-0">
                   {status === 'loading' ? t('newsletter.subscribing') : t('templateGate.button')}
-                  <Send className="w-4 h-4 ml-2" aria-hidden />
+                  <Send className="w-4 h-4 ml-2" aria-hidden="true" />
                 </Button>
               </form>
               {status === 'error' && (
                 <div className="flex items-center justify-center gap-2 text-sm text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 p-3 rounded-lg mt-4">
-                  <AlertCircle className="w-4 h-4 flex-shrink-0" aria-hidden />
+                  <AlertCircle className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
                   <span>{message}</span>
                 </div>
               )}
