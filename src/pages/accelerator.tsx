@@ -209,6 +209,7 @@ const Accelerator = () => {
                   <Target className="w-8 h-8 text-primary mb-3 mx-auto" />
                   <h3 className="font-semibold text-lg mb-2">{t('accelerator.infoCards.investmentTitle')}</h3>
                   <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
+                  <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
                 </div>
               </div>
             </div>

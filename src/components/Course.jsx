@@ -74,6 +74,7 @@ const Course = () => {
                   </span>
                   <span className="text-sm sm:text-base text-muted-foreground">{t('course.perProgram')}</span>
                 </div>
+                <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
               </div>
               <div className="flex flex-col gap-3 w-full sm:w-auto sm:min-w-[240px]">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 w-full" asChild>
