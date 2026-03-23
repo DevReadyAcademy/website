@@ -23,7 +23,7 @@
     "freeCvReview": "Free CV Review"
   },
   "hero": {
-    "urgencyBadge": "{URGENCY_BADGE}",
+    "urgencyBadge": "Next Cohort: {COHORT_DATE}",
     "headline": "Become Industry-Ready In 6 Weeks",
     "headlineHighlight": "Industry-Ready",
     "readyToBecome": "Ready to Become Industry-Ready?",
@@ -31,7 +31,7 @@
     "description": "Bridge the gap between university and industry with real engineering skills, mentorship, and career coaching.",
     "trust1": "6-Week Remote Program",
     "trust2": "Industry Mentors",
-    "trust3": "Early Bird: {EARLY_BIRD_PRICE}"
+    "trust3": "Price: {PRICE}"
   },
   "course": {
     "title": "6-Week Tech Accelerator",
@@ -56,12 +56,9 @@
       "Build your professional brand: CV, LinkedIn, GitHub, and portfolio",
       "Ace interviews with proven strategies, dos & don'ts, and communication techniques"
     ],
-    "earlyBirdBadge": "🎯 Early Bird • {SPOTS_LEFT}",
     "investmentLabel": "Investment in your future",
-    "originalPrice": "{ORIGINAL_PRICE}",
-    "currentPrice": "{EARLY_BIRD_PRICE}",
-    "perProgram": "/program",
-    "earlyBirdMessage": "Secure your early bird rate before it's gone"
+    "currentPrice": "{PRICE}",
+    "perProgram": "/program"
   },
   "accelerator": {
     "backToHome": "Back to Home",
@@ -78,9 +75,7 @@
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
       "investmentTitle": "Investment",
-      "investmentOriginal": "{ORIGINAL_PRICE}",
-      "investmentCurrent": "{EARLY_BIRD_PRICE}",
-      "investmentNote": "{SPOTS_LEFT}"
+      "investmentCurrent": "{PRICE}"
     },
     "curriculumTitle": "Week-by-Week Curriculum",
     "curriculumDescription": "A structured path from planning your career to landing interviews—everything you need in 6 weeks.",
@@ -262,7 +257,7 @@
       },
       {
         "question": "What happens after I book a call?",
-        "answer": "We'll discuss your goals, answer any questions, and if it's a good fit, we'll finalize your enrollment and secure your early bird pricing."
+        "answer": "We'll discuss your goals, answer any questions, and if it's a good fit, we'll finalize your enrollment."
       },
       {
         "question": "What are the payment options?",
@@ -270,10 +265,10 @@
       }
     ],
     "finalCtaTitle": "Ready to Become Industry-Ready?",
-    "finalCtaDescription": "Book a call with our team to secure your spot at the early bird rate of €299.",
-    "finalCtaPricing": "Regular price: €449 • Next cohort may not be until Summer 2026",
+    "finalCtaDescription": "Book a call with our team to secure your spot.",
+    "finalCtaPricing": "Price: €449 • Next cohort may not be until Summer 2026",
     "finalCtaNote": "During the call, we'll answer your questions and finalize your enrollment.",
-    "urgencyBadge": "⏰ {SPOTS_LEFT} at {EARLY_BIRD_PRICE}"
+    "urgencyBadge": "Next Cohort: {COHORT_DATE}"
   },
   "devpress": {
     "headline": "From Coding to Hiring",

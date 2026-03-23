@@ -12,7 +12,7 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 pt-20 overflow-hidden bg-gradient-hero" aria-label="Hero section">
       <div className="relative z-10 max-w-5xl mx-auto">
         
-        {/* Early Bird Badge */}
+        {/* Cohort Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

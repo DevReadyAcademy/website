@@ -24,7 +24,7 @@
     "freeCvReview": "Δωρεάν Αξιολόγηση CV"
   },
   "hero": {
-    "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE} · ⏰ {SPOTS_LEFT}",
+    "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}",
     "headline": "Γίνε Industry-Ready Σε 6 Εβδομάδες",
     "headlineHighlight": "Industry-Ready",
     "readyToBecome": "Έτοιμος να Γίνεις Industry-Ready;",
@@ -32,7 +32,7 @@
     "description": "Real engineering skills, mentorship και career coaching για να γίνεις industry-ready.",
     "trust1": "6 Εβδομάδες Remote",
     "trust2": "Industry Mentors",
-    "trust3": "Early Bird: {EARLY_BIRD_PRICE}"
+    "trust3": "Τιμή: {PRICE}"
   },
   "course": {
     "title": "6-Week Tech Accelerator",
@@ -57,12 +57,9 @@
       "Φτίαξε το professional brand σου: CV, LinkedIn, GitHub και portfolio",
       "Πέτυχε σε interviews με proven strategies, dos & don'ts και communication techniques"
     ],
-    "earlyBirdBadge": "🎯 Early Bird • {SPOTS_LEFT}",
     "investmentLabel": "Επένδυση στο μέλλον σου",
-    "originalPrice": "{ORIGINAL_PRICE}",
-    "currentPrice": "{EARLY_BIRD_PRICE}",
-    "perProgram": "/πρόγραμμα",
-    "earlyBirdMessage": "Κλείσε το early bird rate πριν εξαντληθεί"
+    "currentPrice": "{PRICE}",
+    "perProgram": "/πρόγραμμα"
   },
   "accelerator": {
     "backToHome": "Πίσω στην Αρχική",
@@ -79,9 +76,7 @@
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
       "investmentTitle": "Επένδυση",
-      "investmentOriginal": "{ORIGINAL_PRICE}",
-      "investmentCurrent": "{EARLY_BIRD_PRICE}",
-      "investmentNote": "{SPOTS_LEFT}"
+      "investmentCurrent": "{PRICE}"
     },
     "curriculumTitle": "Week-by-Week Curriculum",
     "curriculumDescription": "Ένα structured path από το planning της καριέρας σου μέχρι τα interviews—όλα όσα χρειάζεσαι σε 6 εβδομάδες.",
@@ -261,7 +256,7 @@
       },
       {
         "question": "Τι γίνεται αφού κλείσω call;",
-        "answer": "Θα συζητήσουμε τους στόχους σου, θα απαντήσουμε σε τυχόν ερωτήσεις και αν είναι good fit, θα ολοκληρώσουμε την εγγραφή σου και θα εξασφαλίσουμε το early bird pricing σου."
+        "answer": "Θα συζητήσουμε τους στόχους σου, θα απαντήσουμε σε τυχόν ερωτήσεις και αν είναι good fit, θα ολοκληρώσουμε την εγγραφή σου."
       },
       {
         "question": "Ποιες είναι οι επιλογές πληρωμής;",
@@ -269,10 +264,10 @@
       }
     ],
     "finalCtaTitle": "Έτοιμος να Γίνεις Industry-Ready;",
-    "finalCtaDescription": "Κλείσε call με την ομάδα μας για να κλείσεις τη θέση σου στο early bird rate των €299.",
-    "finalCtaPricing": "Κανονική τιμή: €449 • Περιορισμένος αριθμός θέσεων",
+    "finalCtaDescription": "Κλείσε call με την ομάδα μας για να κλείσεις τη θέση σου.",
+    "finalCtaPricing": "Τιμή: €449 • Περιορισμένος αριθμός θέσεων",
     "finalCtaNote": "Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου.",
-    "urgencyBadge": "⏰ {SPOTS_LEFT} στα {EARLY_BIRD_PRICE}"
+    "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}"
   },
   "devpress": {
     "headline": "From Coding to Hiring",

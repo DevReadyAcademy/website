@@ -5,7 +5,7 @@ import { Calendar, ArrowRight, CheckCircle, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button.tsx";
 import { useLanguage } from "../contexts/LanguageContext";
-import { earlyBirdConfig } from "../config/earlyBird";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // @ts-ignore
@@ -111,7 +111,7 @@ const CvReviewResults = () => {
                         <div className="container mx-auto max-w-4xl">
                             <div className="text-center p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
                                 <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
-                                    ⏰ {earlyBirdConfig.getSpotsLeftText(language)} {language === 'gr' ? 'στα' : 'at'} {earlyBirdConfig.earlyBirdPrice}
+                                    {t('accelerator.urgencyBadge')}
                                 </div>
                                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
                                     {t('accelerator.finalCtaTitle')}

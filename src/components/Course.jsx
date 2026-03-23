@@ -67,22 +67,13 @@ const Course = () => {
           <div className="text-center p-6 sm:p-8 rounded-2xl bg-card border border-primary/20 shadow-elegant animate-fade-in">
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
               <div className="text-center md:text-left w-full md:w-auto">
-                <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold mb-3">
-                  {t('course.earlyBirdBadge')}
-                </div>
                 <p className="text-sm sm:text-base text-muted-foreground mb-2">{t('course.investmentLabel')}</p>
                 <div className="flex flex-col sm:flex-row items-center sm:items-baseline gap-1 sm:gap-2 justify-center md:justify-start">
-                  <span className="text-xl sm:text-2xl text-muted-foreground line-through">
-                    {t('course.originalPrice')}
-                  </span>
                   <span className="text-4xl sm:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                     {t('course.currentPrice')}
                   </span>
                   <span className="text-sm sm:text-base text-muted-foreground">{t('course.perProgram')}</span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground/80 mt-2">
-                  {t('course.earlyBirdMessage')}
-                </p>
               </div>
               <div className="flex flex-col gap-3 w-full sm:w-auto sm:min-w-[240px]">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 w-full" asChild>

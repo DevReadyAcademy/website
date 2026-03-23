@@ -220,7 +220,7 @@ const Team = () => {
             <div className="container mx-auto max-w-4xl">
               <div className="text-center p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
                 <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
-                  ⏰ Only 5 Early Bird Spots at €299
+                  {t('accelerator.urgencyBadge')}
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
                   {t('accelerator.finalCtaTitle')}

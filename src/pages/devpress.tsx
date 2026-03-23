@@ -79,7 +79,7 @@ const DevPress = () => {
         {/* Hero Section */}
         <section className="py-16 px-4 text-center bg-gradient-subtle" aria-label="DevPress introduction">
           <div className="container mx-auto max-w-4xl">
-            {/* Early Bird Badge */}
+            {/* Cohort Badge */}
             <div className="mb-6">
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full text-sm font-semibold backdrop-blur-sm">
                 <Calendar className="w-4 h-4" />

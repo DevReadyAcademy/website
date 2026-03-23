@@ -12,7 +12,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { earlyBirdConfig } from "../config/earlyBird";
+
 
 const iconMap = {
   0: Compass,
@@ -208,11 +208,7 @@ const Accelerator = () => {
                 <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-6">
                   <Target className="w-8 h-8 text-primary mb-3 mx-auto" />
                   <h3 className="font-semibold text-lg mb-2">{t('accelerator.infoCards.investmentTitle')}</h3>
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="text-muted-foreground line-through">{t('accelerator.infoCards.investmentOriginal')}</span>
-                    <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
-                  </div>
-                  <p className="text-sm text-primary font-medium mt-1">{t('accelerator.infoCards.investmentNote')}</p>
+                  <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
                 </div>
               </div>
             </div>
@@ -396,7 +392,7 @@ const Accelerator = () => {
             <div className="container mx-auto max-w-4xl">
               <div className="text-center p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
                 <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
-                  ⏰ {earlyBirdConfig.getSpotsLeftText(language)} {language === 'gr' ? 'στα' : 'at'} {earlyBirdConfig.earlyBirdPrice}
+                  {t('accelerator.urgencyBadge')}
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
                   {t('accelerator.finalCtaTitle')}
