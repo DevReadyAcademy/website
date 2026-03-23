@@ -390,7 +390,7 @@ const Accelerator = () => {
           {/* Final CTA */}
           <section className="py-20 px-4 bg-gradient-subtle">
             <div className="container mx-auto max-w-4xl">
-              <div className="text-center p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
+              <div className="text-center p-6 sm:p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
                 <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
                   {t('accelerator.urgencyBadge')}
                 </div>
@@ -403,7 +403,7 @@ const Accelerator = () => {
                 <p className="text-base opacity-80 mb-8 max-w-2xl mx-auto">
                   {t('accelerator.finalCtaPricing')}
                 </p>
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-lg">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 shadow-lg">
                   <Link to="/contact">
                     <Calendar className="w-5 h-5 mr-2" />
                     {t('common.secureYourSpot')}
