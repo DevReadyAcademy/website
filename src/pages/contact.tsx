@@ -32,13 +32,27 @@ const Contact = () => {
             event_label: "calendly",
           });
         }
-        // Meta Pixel (client-side — server-side also fires via Calendly webhook)
+        // Meta Pixel (client-side — may be blocked by ad blockers)
         if (typeof window !== "undefined" && "fbq" in window) {
           const fbq = (window as typeof window & { fbq: (...args: unknown[]) => void }).fbq;
           fbq("track", "Schedule", {
             content_name: "Book a Call",
             content_category: "calendly",
           }, { eventID });
+        }
+        // Server-side Meta CAPI (first-party request — NOT blocked by ad blockers)
+        const getCookie = (name: string) =>
+          document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`))?.[1] || "";
+        const trackingPayload = JSON.stringify({
+          eventID,
+          fbp: getCookie("_fbp"),
+          fbc: getCookie("_fbc"),
+          sourceUrl: window.location.href,
+        });
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon("/api/track-booking", new Blob([trackingPayload], { type: "application/json" }));
+        } else {
+          fetch("/api/track-booking", { method: "POST", body: trackingPayload, headers: { "Content-Type": "application/json" }, keepalive: true }).catch(() => {});
         }
         // TikTok Pixel
         if (typeof window !== "undefined" && "ttq" in window) {
