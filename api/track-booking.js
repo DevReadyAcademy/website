@@ -84,7 +84,15 @@ export default async function handler(req, res) {
       return res.status(502).json({ error: "Failed to send to Meta" });
     }
 
-    console.log("Meta CAPI event sent:", { eventID, result });
+    console.log("Meta CAPI event sent:", {
+      eventID,
+      fbp: fbp || "MISSING",
+      fbc: fbc || "MISSING",
+      hasIp: !!clientIp,
+      hasUserAgent: !!userAgent,
+      sourceUrl: sourceUrl || "default",
+      result,
+    });
     return res.status(200).json({ ok: true, eventID });
   } catch (error) {
     console.error("Track booking error:", error);
