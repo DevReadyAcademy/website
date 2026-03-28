@@ -19,6 +19,9 @@ export const earlyBirdConfig = {
   // Pricing
   price: "€449",
 
+  // Remaining spots
+  remainingSpots: 2,
+
   // Get cohort date range for specific language
   getCohortDateRange(lang = 'en') {
     const startMonth = this.cohortStartMonth[lang] || this.cohortStartMonth.en;

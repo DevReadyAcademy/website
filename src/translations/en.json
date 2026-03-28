@@ -59,7 +59,7 @@
     "investmentLabel": "Investment in your future",
     "currentPrice": "{PRICE}",
     "perProgram": "/program",
-    "spotsLeft": "Only 6 spots left!"
+    "spotsLeft": "Only {SPOTS} spots left!"
   },
   "accelerator": {
     "backToHome": "Back to Home",
@@ -267,7 +267,7 @@
     ],
     "finalCtaTitle": "Ready to Become Industry-Ready?",
     "finalCtaDescription": "Book a call with our team to secure your spot.",
-    "finalCtaPricing": "Price: €449 • Only 6 Spots Left!",
+    "finalCtaPricing": "Price: {PRICE} • Only {SPOTS} Spots Left!",
     "finalCtaNote": "During the call, we'll answer your questions and finalize your enrollment.",
     "urgencyBadge": "Next Cohort: {COHORT_DATE}"
   },

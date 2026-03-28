@@ -9,6 +9,7 @@ export const injectEarlyBirdValues = (translations, lang = 'en') => {
     '{COHORT_DATE}': earlyBirdConfig.getCohortDateRange(lang),
     '{PRICE}': earlyBirdConfig.price,
     '{COHORT_YEAR}': earlyBirdConfig.cohortYear.toString(),
+    '{SPOTS}': earlyBirdConfig.remainingSpots.toString(),
   };
 
   const replaceInObject = (obj) => {

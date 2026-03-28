@@ -60,7 +60,7 @@
     "investmentLabel": "Επένδυση στο μέλλον σου",
     "currentPrice": "{PRICE}",
     "perProgram": "/πρόγραμμα",
-    "spotsLeft": "Μόνο 6 θέσεις απομένουν!"
+    "spotsLeft": "Μόνο {SPOTS} θέσεις απομένουν!"
   },
   "accelerator": {
     "backToHome": "Πίσω στην Αρχική",
@@ -266,7 +266,7 @@
     ],
     "finalCtaTitle": "Έτοιμος να Γίνεις Industry-Ready;",
     "finalCtaDescription": "Κλείσε call με την ομάδα μας για να κλείσεις τη θέση σου.",
-    "finalCtaPricing": "Τιμή: €449 • Μόνο 6 Θέσεις!",
+    "finalCtaPricing": "Τιμή: {PRICE} • Μόνο {SPOTS} Θέσεις!",
     "finalCtaNote": "Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου.",
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}"
   },
