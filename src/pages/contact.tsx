@@ -1,15 +1,12 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
-import { Button } from "../components/ui/button.tsx";
 import { useLanguage } from "../contexts/LanguageContext";
-import InterestDialog from "../components/InterestDialog";
 import SEO from "../components/SEO";
 import Footer from "../components/Footer";
 
 const Contact = () => {
   const { t, language } = useLanguage();
-  const [interestOpen, setInterestOpen] = useState(false);
 
   useEffect(() => {
     // Load Calendly widget script
@@ -126,17 +123,15 @@ const Contact = () => {
           </div>
           <div className="container mx-auto max-w-6xl pb-10 sm:pb-16">
 
-            <InterestDialog open={interestOpen} onOpenChange={setInterestOpen} />
-
-            <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 animate-fade-in">
-              {/* Left column: Enrollment CTA + Calendly (single merged card) */}
+            <div className="space-y-4 sm:space-y-6 max-w-3xl mx-auto animate-fade-in">
+              {/* Book a Call — Calendly */}
               <section className="flex flex-col rounded-2xl overflow-hidden shadow-elegant border border-border/50" aria-label={t('contact.enrollTitle')}>
                 <div className="bg-gradient-primary p-4 sm:p-6 text-center text-primary-foreground">
                   <h2 className="text-xl sm:text-2xl font-bold mb-2">{t('contact.enrollTitle')}</h2>
                   <p className="opacity-90 mb-3 text-sm sm:text-base">{t('contact.enrollDescription')}</p>
                   <ArrowDown className="w-7 h-7 mx-auto animate-bounce" aria-hidden="true" />
                 </div>
-                <div className="flex-1" role="region" aria-label="Book a call calendar">
+                <div role="region" aria-label="Book a call calendar">
                   <div
                     className="calendly-inline-widget min-w-[280px] h-[500px] sm:h-[630px]"
                     data-url="https://calendly.com/hello-devready/20min?primary_color=363fec"
@@ -144,107 +139,89 @@ const Contact = () => {
                 </div>
               </section>
 
-              {/* Right column */}
-              <div className="space-y-4">
-                {/* Card A: Express Interest CTA */}
-                <section className="rounded-2xl border border-border/50 shadow-elegant bg-primary/5 p-4 sm:p-6 text-center" aria-label={t('contact.interestTitle')}>
-                  <h2 className="text-lg sm:text-xl font-bold mb-2 text-foreground">{t('contact.interestTitle')}</h2>
-                  <p className="text-muted-foreground mb-4 text-xs sm:text-sm">{t('contact.interestDescription')}</p>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                    onClick={() => setInterestOpen(true)}
-                  >
-                    {t('contact.interestCta')}
-                  </Button>
-                </section>
-
-                {/* Card B: Contact Information */}
-                <section className="rounded-2xl border border-border/50 shadow-elegant bg-card overflow-hidden" aria-label={t('contact.connectTitle')}>
-                  <div className="px-4 sm:px-6 pt-4 pb-1">
-                    <h2 className="text-lg sm:text-xl font-semibold text-center">{t('contact.connectTitle')}</h2>
-                  </div>
-                  <div className="px-4 sm:px-6 pb-5 sm:pb-6 pt-2 space-y-4">
-                    <div className="flex justify-center gap-2 sm:gap-3">
-                      <a
-                        href="mailto:hello@devready.gr"
-                        className="group flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all flex-1 min-w-0"
-                      >
-                        <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                          <Mail className="w-5 h-5" />
-                        </div>
-                        <div className="text-center">
-                          <h3 className="font-medium text-sm">{t('contact.email')}</h3>
-                          <p className="text-muted-foreground text-xs mt-0.5">hello@devready.gr</p>
-                        </div>
-                      </a>
-                      <div className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all flex-1 min-w-0">
-                        <div className="p-3 rounded-full bg-primary/10 text-primary">
-                          <MapPin className="w-5 h-5" />
-                        </div>
-                        <div className="text-center">
-                          <h3 className="font-medium text-sm">{t('contact.location')}</h3>
-                          <p className="text-muted-foreground text-xs mt-0.5">{t('contact.locationValue')}</p>
-                        </div>
+              {/* Contact Information */}
+              <section className="rounded-2xl border border-border/50 shadow-elegant bg-card overflow-hidden" aria-label={t('contact.connectTitle')}>
+                <div className="px-4 sm:px-6 pt-4 pb-1">
+                  <h2 className="text-lg sm:text-xl font-semibold text-center">{t('contact.connectTitle')}</h2>
+                </div>
+                <div className="px-4 sm:px-6 pb-5 sm:pb-6 pt-2 space-y-4">
+                  <div className="flex justify-center gap-2 sm:gap-3">
+                    <a
+                      href="mailto:hello@devready.gr"
+                      className="group flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all flex-1 min-w-0"
+                    >
+                      <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        <Mail className="w-5 h-5" />
+                      </div>
+                      <div className="text-center">
+                        <h3 className="font-medium text-sm">{t('contact.email')}</h3>
+                        <p className="text-muted-foreground text-xs mt-0.5">hello@devready.gr</p>
+                      </div>
+                    </a>
+                    <div className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:bg-primary/5 hover:scale-105 transition-all flex-1 min-w-0">
+                      <div className="p-3 rounded-full bg-primary/10 text-primary">
+                        <MapPin className="w-5 h-5" />
+                      </div>
+                      <div className="text-center">
+                        <h3 className="font-medium text-sm">{t('contact.location')}</h3>
+                        <p className="text-muted-foreground text-xs mt-0.5">{t('contact.locationValue')}</p>
                       </div>
                     </div>
-                    <nav className="pt-2" aria-label="Social media links">
-                      <h3 className="font-medium text-sm text-center mb-3 sm:mb-4">{t('contact.followUs')}</h3>
-                      <div className="flex justify-center gap-1.5 sm:gap-2">
-                        <a
-                          href="https://www.linkedin.com/company/devreadygr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
-                          aria-label="Follow us on LinkedIn"
-                        >
-                          <Linkedin className="w-5 h-5" />
-                        </a>
-                        <a
-                          href="https://www.instagram.com/devreadygr/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
-                          aria-label="Follow us on Instagram"
-                        >
-                          <Instagram className="w-5 h-5" />
-                        </a>
-                        <a
-                          href="https://www.facebook.com/devreadygr/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
-                          aria-label="Follow us on Facebook"
-                        >
-                          <Facebook className="w-5 h-5" />
-                        </a>
-                        <a
-                          href="https://www.tiktok.com/@devreadygr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
-                          aria-label="Follow us on TikTok"
-                        >
-                          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.63a8.23 8.23 0 0 0 4.76 1.5v-3.4a4.85 4.85 0 0 1-1-.04z"/>
-                          </svg>
-                        </a>
-                        <a
-                          href="https://www.youtube.com/@devreadygr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
-                          aria-label="Follow us on YouTube"
-                        >
-                          <Youtube className="w-5 h-5" />
-                        </a>
-                      </div>
-                    </nav>
                   </div>
-                </section>
-
-              </div>
+                  <nav className="pt-2" aria-label="Social media links">
+                    <h3 className="font-medium text-sm text-center mb-3 sm:mb-4">{t('contact.followUs')}</h3>
+                    <div className="flex justify-center gap-1.5 sm:gap-2">
+                      <a
+                        href="https://www.linkedin.com/company/devreadygr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                        aria-label="Follow us on LinkedIn"
+                      >
+                        <Linkedin className="w-5 h-5" />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/devreadygr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                        aria-label="Follow us on Instagram"
+                      >
+                        <Instagram className="w-5 h-5" />
+                      </a>
+                      <a
+                        href="https://www.facebook.com/devreadygr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                        aria-label="Follow us on Facebook"
+                      >
+                        <Facebook className="w-5 h-5" />
+                      </a>
+                      <a
+                        href="https://www.tiktok.com/@devreadygr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                        aria-label="Follow us on TikTok"
+                      >
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.63a8.23 8.23 0 0 0 4.76 1.5v-3.4a4.85 4.85 0 0 1-1-.04z"/>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://www.youtube.com/@devreadygr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                        aria-label="Follow us on YouTube"
+                      >
+                        <Youtube className="w-5 h-5" />
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </section>
             </div>
           </div>
         </main>
