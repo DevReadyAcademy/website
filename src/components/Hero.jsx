@@ -4,6 +4,7 @@ import { ArrowRight, Calendar, Users, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button.tsx";
 import { useLanguage } from '../contexts/LanguageContext';
+import CohortCountdown from './CohortCountdown';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -23,6 +24,16 @@ const Hero = () => {
             <Calendar className="w-4 h-4" aria-hidden="true" />
             {t('hero.urgencyBadge')}
           </span>
+        </motion.div>
+
+        {/* Countdown Timer */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mb-8"
+        >
+          <CohortCountdown variant="prominent" />
         </motion.div>
 
         {/* Main Headline - Value Proposition */}

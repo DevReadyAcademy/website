@@ -12,6 +12,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import CohortCountdown from "../components/CohortCountdown";
 
 
 const iconMap = {
@@ -164,6 +165,10 @@ const Accelerator = () => {
               <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full text-sm font-semibold mb-6">
                 <Calendar className="inline-block w-4 h-4 mr-2" />
                 {t('accelerator.cohortBadge')}
+              </div>
+
+              <div className="mb-8">
+                <CohortCountdown variant="prominent" />
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black mb-4 bg-gradient-primary bg-clip-text text-transparent pb-2">
@@ -401,9 +406,12 @@ const Accelerator = () => {
                 <p className="text-xl opacity-90 mb-2 max-w-2xl mx-auto">
                   {t('accelerator.finalCtaDescription')}
                 </p>
-                <p className="text-base opacity-80 mb-8 max-w-2xl mx-auto">
+                <p className="text-base opacity-80 mb-4 max-w-2xl mx-auto">
                   {t('accelerator.finalCtaPricing')}
                 </p>
+                <div className="mb-8">
+                  <CohortCountdown variant="compact" inverted />
+                </div>
                 <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 shadow-lg">
                   <Link to="/contact">
                     <Calendar className="w-5 h-5 mr-2" />

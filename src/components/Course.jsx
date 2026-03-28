@@ -2,6 +2,7 @@ import { Calendar, Users, ArrowRight, CheckCircle, Clock, Target } from "lucide-
 import { Button } from "@/components/ui/button.tsx";
 import { Link } from "react-router-dom";
 import { useLanguage } from '../contexts/LanguageContext';
+import CohortCountdown from './CohortCountdown';
 
 const Course = () => {
   const { t } = useLanguage();
@@ -75,6 +76,7 @@ const Course = () => {
                   <span className="text-sm sm:text-base text-muted-foreground">{t('course.perProgram')}</span>
                 </div>
                 <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
+                <CohortCountdown variant="compact" />
               </div>
               <div className="flex flex-col gap-3 w-full sm:w-auto sm:min-w-[240px]">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 w-full" asChild>

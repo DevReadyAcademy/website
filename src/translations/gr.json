@@ -22,7 +22,7 @@
     "testimonials": "Testimonials",
     "whyDifferent": "Γιατί Διαφέρουμε",
     "freeCvReview": "Δωρεάν Αξιολόγηση CV",
-    "urgencyBanner": "Μόνο {SPOTS} θέσεις απομένουν για το cohort {COHORT_DATE} — Κλείσε τη δική σου τώρα!"
+    "urgencyBanner": "Μόνο {SPOTS} θέσεις απομένουν για το cohort {COHORT_DATE} • Κλείσε τη δική σου τώρα!"
   },
   "hero": {
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}",
@@ -33,7 +33,12 @@
     "description": "Real engineering skills, mentorship και career coaching για να γίνεις industry-ready.",
     "trust1": "6 Εβδομάδες Remote",
     "trust2": "Industry Mentors",
-    "trust3": "Τιμή: {PRICE}"
+    "trust3": "Τιμή: {PRICE}",
+    "countdownTitle": "Το cohort ξεκινάει σε",
+    "countdownDays": "Μέρες",
+    "countdownHours": "Ώρες",
+    "countdownMinutes": "Λεπ",
+    "countdownSeconds": "Δευ"
   },
   "course": {
     "title": "6-Week Tech Accelerator",

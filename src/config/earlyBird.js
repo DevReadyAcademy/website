@@ -22,6 +22,9 @@ export const earlyBirdConfig = {
   // Remaining spots
   remainingSpots: 2,
 
+  // Cohort start date (used for countdown timer)
+  cohortStartDate: '2026-04-27T00:00:00+03:00',
+
   // Get cohort date range for specific language
   getCohortDateRange(lang = 'en') {
     const startMonth = this.cohortStartMonth[lang] || this.cohortStartMonth.en;

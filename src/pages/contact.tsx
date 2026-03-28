@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
+import { ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Contact = () => {
@@ -80,34 +80,8 @@ const Contact = () => {
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
         Skip to main content
       </a>
-      <div className="min-h-screen bg-background">
-        {/* Header */}
-        <header className="py-4 sm:py-6 px-3 sm:px-4 border-b border-border/50">
-          <div className="container mx-auto max-w-6xl flex items-center justify-between">
-            <Link
-              to="/"
-              className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-foreground transition-colors flex-shrink-0"
-            >
-              <ArrowLeft className="w-4 h-4 flex-shrink-0" />
-              <span className="text-sm sm:text-base">{t('contact.backToHome')}</span>
-            </Link>
-            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-              <img
-                src="/assets/logo-80.webp"
-                srcSet="/assets/logo-80.webp 80w, /assets/logo-120.webp 120w, /assets/logo-320.webp 320w"
-                sizes="(max-width: 640px) 32px, 80px"
-                alt={`${t('common.brandName')} logo`}
-                className="h-8 w-8 sm:h-10 sm:w-10"
-                width="80"
-                height="80"
-                loading="eager"
-              />
-              <span className="text-base sm:text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                {t('common.brandName')}
-              </span>
-            </div>
-          </div>
-        </header>
+      <div className="min-h-screen bg-background pt-28">
+        <Header />
         <main id="main-content" className="px-3 sm:px-4">
           <div className="bg-gradient-to-b from-primary/10 via-primary/5 to-transparent pt-10 sm:pt-16 pb-8 sm:pb-12">
             <div className="container mx-auto max-w-6xl">
