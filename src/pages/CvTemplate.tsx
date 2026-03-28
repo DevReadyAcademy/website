@@ -63,7 +63,7 @@ const TemplatePage: React.FC = () => {
         language={language}
       />
       <Header />
-      <main id="main-content" className="flex-grow flex items-center justify-center px-4 py-16 pt-28">
+      <main id="main-content" className="flex-grow flex items-center justify-center px-4 py-16 pt-36">
         <div className="w-full max-w-md rounded-2xl border border-border/50 bg-card/80 backdrop-blur p-8 md:p-10 text-center">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-5">
             <Mail className="w-7 h-7" aria-hidden="true" />

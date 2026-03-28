@@ -20,7 +20,8 @@
     "devpress": "DevPress",
     "testimonials": "Testimonials",
     "whyDifferent": "Why Different",
-    "freeCvReview": "Free CV Review"
+    "freeCvReview": "Free CV Review",
+    "urgencyBanner": "Only {SPOTS} spots left for the {COHORT_DATE} cohort — Secure yours now!"
   },
   "hero": {
     "urgencyBadge": "Next Cohort: {COHORT_DATE}",

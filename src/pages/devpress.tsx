@@ -67,7 +67,7 @@ const DevPress = () => {
         structuredData={blogSchema}
       />
       <Header />
-      <div className="min-h-screen bg-background pt-20">
+      <div className="min-h-screen bg-background pt-28">
         {/* Skip to main content link */}
         <a
           href="#main-content"

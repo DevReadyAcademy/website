@@ -31,7 +31,7 @@ const BlogPost = () => {
           noindex={true}
         />
         <Header />
-        <div className="min-h-screen bg-background flex items-center justify-center pt-20" role="main">
+        <div className="min-h-screen bg-background flex items-center justify-center pt-28" role="main">
           <div className="text-center">
             <div className="text-6xl mb-4" role="img" aria-label={t('devpress.errorIcon')}>❌</div>
             <h1 className="text-4xl font-bold mb-4">
@@ -148,7 +148,7 @@ const BlogPost = () => {
         structuredData={blogPostSchema}
       />
       <Header />
-      <div className="min-h-screen bg-background pt-20">
+      <div className="min-h-screen bg-background pt-28">
         {/* Skip to main content link */}
         <a
           href="#main-content"

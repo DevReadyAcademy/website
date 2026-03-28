@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button.tsx";
 import { useLanguage } from '../contexts/LanguageContext';
-
 import { useFeatureFlags } from '../contexts/FeatureFlagContext';
+import earlyBirdConfig from '../config/earlyBird';
 
 const Header = () => {
   const { t } = useLanguage();
@@ -23,7 +23,7 @@ const Header = () => {
       // Scroll spy - detect which section is in view
       if (location.pathname === '/') {
         const sections = ['hero', 'pillars', 'team', 'testimonials', 'why-different'];
-        const scrollPosition = window.scrollY + 100; // Offset for header
+        const scrollPosition = window.scrollY + 130; // Offset for header + urgency banner
 
         for (const sectionId of sections) {
           const element = document.getElementById(sectionId);
@@ -46,7 +46,7 @@ const Header = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80; // Height of header
+      const offset = 112; // Height of header + urgency banner
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -70,7 +70,7 @@ const Header = () => {
         setTimeout(() => {
           const element = document.getElementById(item.id);
           if (element) {
-            const offset = 80;
+            const offset = 112;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - offset;
             window.scrollTo({
@@ -106,6 +106,17 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${scrolled || mobileMenuOpen ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`} role="banner">
+      {earlyBirdConfig.remainingSpots > 0 && (
+        <div className="bg-primary text-primary-foreground text-center py-2 px-4 text-xs sm:text-sm font-medium">
+          <span className="inline-flex items-center gap-1.5">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+            </span>
+            {t('header.urgencyBanner')}
+          </span>
+        </div>
+      )}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <motion.div

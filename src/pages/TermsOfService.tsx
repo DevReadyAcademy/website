@@ -39,7 +39,7 @@ const TermsOfService: React.FC = () => {
                 structuredData={structuredData}
             />
             <Header />
-            <main id="main-content" className="flex-grow container mx-auto px-4 py-8 pt-24 max-w-4xl">
+            <main id="main-content" className="flex-grow container mx-auto px-4 py-8 pt-32 max-w-4xl">
                 <div className="prose max-w-none">
                     <h1 className="text-3xl font-bold mb-4">{t('terms.title')}</h1>
                     <p className="mb-4"><strong>{t('terms.lastUpdated')}</strong></p>

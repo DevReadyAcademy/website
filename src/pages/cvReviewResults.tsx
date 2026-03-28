@@ -56,7 +56,7 @@ const CvReviewResults = () => {
                 noindex={true}
             />
             <Header />
-            <main className="flex-grow pt-24 pb-12">
+            <main className="flex-grow pt-32 pb-12">
                 <div className="container mx-auto px-4 max-w-5xl">
 
                     {/* Header Section */}

@@ -21,7 +21,8 @@
     "devpress": "DevPress",
     "testimonials": "Testimonials",
     "whyDifferent": "Γιατί Διαφέρουμε",
-    "freeCvReview": "Δωρεάν Αξιολόγηση CV"
+    "freeCvReview": "Δωρεάν Αξιολόγηση CV",
+    "urgencyBanner": "Μόνο {SPOTS} θέσεις απομένουν για το cohort {COHORT_DATE} — Κλείσε τη δική σου τώρα!"
   },
   "hero": {
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}",

@@ -104,7 +104,7 @@ const CvReview: React.FC = () => {
                 Skip to main content
             </a>
             <Header />
-            <main id="main-content" className="pt-24 min-h-screen flex flex-col bg-gray-50">
+            <main id="main-content" className="pt-32 min-h-screen flex flex-col bg-gray-50">
                 {/* Hero Section */}
                 <section className="px-4 py-12 md:py-20 text-center">
                     <div className="container mx-auto max-w-4xl">

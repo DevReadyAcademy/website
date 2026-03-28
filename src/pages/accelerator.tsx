@@ -156,7 +156,7 @@ const Accelerator = () => {
         Skip to main content
       </a>
       <Header />
-      <div className="min-h-screen bg-background pt-20">
+      <div className="min-h-screen bg-background pt-28">
         <main id="main-content">
           {/* Hero Section */}
           <section className="py-16 px-4 bg-gradient-hero">
