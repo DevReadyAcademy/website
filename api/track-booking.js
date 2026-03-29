@@ -9,6 +9,26 @@ function sha256Hash(value) {
     .digest("hex");
 }
 
+/**
+ * Fetch invitee email from Calendly API using the invitee URI.
+ * Requires CALENDLY_API_TOKEN env var. Returns null if unavailable.
+ */
+async function fetchCalendlyInviteeEmail(inviteeUri) {
+  const calendlyToken = process.env.CALENDLY_API_TOKEN;
+  if (!calendlyToken || !inviteeUri) return null;
+
+  try {
+    const response = await fetch(inviteeUri, {
+      headers: { Authorization: `Bearer ${calendlyToken}` },
+    });
+    if (!response.ok) return null;
+    const data = await response.json();
+    return data?.resource?.email || null;
+  } catch {
+    return null;
+  }
+}
+
 export default async function handler(req, res) {
   // Allow POST and sendBeacon (which sends POST)
   if (req.method !== "POST") {
@@ -25,7 +45,7 @@ export default async function handler(req, res) {
 
   try {
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-    const { eventID, fbp, fbc, sourceUrl } = body;
+    const { eventID, fbp, fbc, sourceUrl, inviteeUri } = body;
 
     if (!eventID) {
       return res.status(400).json({ error: "Missing eventID" });
@@ -50,6 +70,13 @@ export default async function handler(req, res) {
 
     // fbc cookie (Meta click ID from ad click) — strongest matching signal
     if (fbc) userData.fbc = fbc;
+
+    // Fetch invitee email from Calendly and send hashed to Meta
+    // This significantly improves event match quality score
+    const inviteeEmail = await fetchCalendlyInviteeEmail(inviteeUri);
+    if (inviteeEmail) {
+      userData.em = [sha256Hash(inviteeEmail)];
+    }
 
     const eventData = {
       event_name: "Schedule",
@@ -88,6 +115,7 @@ export default async function handler(req, res) {
       eventID,
       fbp: fbp || "MISSING",
       fbc: fbc || "MISSING",
+      hasEmail: !!inviteeEmail,
       hasIp: !!clientIp,
       hasUserAgent: !!userAgent,
       sourceUrl: sourceUrl || "default",

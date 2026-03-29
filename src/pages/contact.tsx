@@ -40,11 +40,22 @@ const Contact = () => {
         // Server-side Meta CAPI (first-party request — NOT blocked by ad blockers)
         const getCookie = (name: string) =>
           document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`))?.[1] || "";
+
+        // Get fbc: prefer cookie, fallback to localStorage backup from fbclid capture
+        let fbcValue = getCookie("_fbc");
+        if (!fbcValue) {
+          try { fbcValue = localStorage.getItem("_fbc_backup") || ""; } catch {}
+        }
+
+        // Extract invitee URI from Calendly payload to fetch email server-side
+        const inviteeUri = e.data?.payload?.invitee?.uri || "";
+
         const trackingPayload = JSON.stringify({
           eventID,
           fbp: getCookie("_fbp"),
-          fbc: getCookie("_fbc"),
+          fbc: fbcValue,
           sourceUrl: window.location.href,
+          inviteeUri,
         });
         if (navigator.sendBeacon) {
           navigator.sendBeacon("/api/track-booking", new Blob([trackingPayload], { type: "application/json" }));

@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
@@ -6,6 +6,22 @@ import ScrollToTop from "./components/ScrollToTop";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { FeatureFlagProvider } from "./contexts/FeatureFlagContext";
 import FeatureGuard from "./components/FeatureGuard";
+
+/**
+ * Captures fbclid from Meta ad click URLs and persists it to localStorage.
+ * This ensures the fbc parameter is available when someone later books a call,
+ * even if the Meta Pixel _fbc cookie was blocked or the user navigated away.
+ */
+function useFbclidCapture() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const fbclid = params.get("fbclid");
+    if (fbclid) {
+      const fbcValue = `fb.1.${Date.now()}.${fbclid}`;
+      try { localStorage.setItem("_fbc_backup", fbcValue); } catch {}
+    }
+  }, []);
+}
 
 // Eagerly load the main page for fast initial load
 import Index from "./pages/index";
@@ -26,7 +42,10 @@ const ReadinessQuiz = lazy(() => import("./pages/readinessQuiz"));
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  useFbclidCapture();
+
+  return (
   <QueryClientProvider client={queryClient}>
     <LanguageProvider>
       <FeatureFlagProvider>
@@ -73,6 +92,7 @@ const App = () => (
       </FeatureFlagProvider>
     </LanguageProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;
