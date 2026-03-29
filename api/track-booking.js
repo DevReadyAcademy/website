@@ -10,20 +10,39 @@ function sha256Hash(value) {
 }
 
 /**
- * Fetch invitee email from Calendly API using the invitee URI.
+ * Fetch the invitee email from the most recent Calendly booking.
+ * Since this runs immediately after a booking, the latest event is the one we need.
  * Requires CALENDLY_API_TOKEN env var. Returns null if unavailable.
  */
-async function fetchCalendlyInviteeEmail(inviteeUri) {
+async function fetchLatestCalendlyInviteeEmail() {
   const calendlyToken = process.env.CALENDLY_API_TOKEN;
-  if (!calendlyToken || !inviteeUri) return null;
+  if (!calendlyToken) return null;
+
+  const headers = { Authorization: `Bearer ${calendlyToken}` };
 
   try {
-    const response = await fetch(inviteeUri, {
-      headers: { Authorization: `Bearer ${calendlyToken}` },
-    });
-    if (!response.ok) return null;
-    const data = await response.json();
-    return data?.resource?.email || null;
+    // 1. Get the authenticated Calendly user URI
+    const meRes = await fetch("https://api.calendly.com/users/me", { headers });
+    if (!meRes.ok) return null;
+    const meData = await meRes.json();
+    const userUri = meData?.resource?.uri;
+    if (!userUri) return null;
+
+    // 2. Get the most recent scheduled event
+    const eventsRes = await fetch(
+      `https://api.calendly.com/scheduled_events?user=${encodeURIComponent(userUri)}&count=1&sort=start_time:desc&status=active`,
+      { headers },
+    );
+    if (!eventsRes.ok) return null;
+    const eventsData = await eventsRes.json();
+    const eventUri = eventsData?.collection?.[0]?.uri;
+    if (!eventUri) return null;
+
+    // 3. Get the invitee email from that event
+    const inviteesRes = await fetch(`${eventUri}/invitees`, { headers });
+    if (!inviteesRes.ok) return null;
+    const inviteesData = await inviteesRes.json();
+    return inviteesData?.collection?.[0]?.email || null;
   } catch {
     return null;
   }
@@ -45,7 +64,7 @@ export default async function handler(req, res) {
 
   try {
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-    const { eventID, fbp, fbc, sourceUrl, inviteeUri } = body;
+    const { eventID, fbp, fbc, sourceUrl } = body;
 
     if (!eventID) {
       return res.status(400).json({ error: "Missing eventID" });
@@ -71,9 +90,9 @@ export default async function handler(req, res) {
     // fbc cookie (Meta click ID from ad click) — strongest matching signal
     if (fbc) userData.fbc = fbc;
 
-    // Fetch invitee email from Calendly and send hashed to Meta
+    // Fetch invitee email from the latest Calendly booking and send hashed to Meta
     // This significantly improves event match quality score
-    const inviteeEmail = await fetchCalendlyInviteeEmail(inviteeUri);
+    const inviteeEmail = await fetchLatestCalendlyInviteeEmail();
     if (inviteeEmail) {
       userData.em = [sha256Hash(inviteeEmail)];
     }

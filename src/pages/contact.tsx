@@ -47,15 +47,11 @@ const Contact = () => {
           try { fbcValue = localStorage.getItem("_fbc_backup") || ""; } catch {}
         }
 
-        // Extract invitee URI from Calendly payload to fetch email server-side
-        const inviteeUri = e.data?.payload?.invitee?.uri || "";
-
         const trackingPayload = JSON.stringify({
           eventID,
           fbp: getCookie("_fbp"),
           fbc: fbcValue,
           sourceUrl: window.location.href,
-          inviteeUri,
         });
         if (navigator.sendBeacon) {
           navigator.sendBeacon("/api/track-booking", new Blob([trackingPayload], { type: "application/json" }));
