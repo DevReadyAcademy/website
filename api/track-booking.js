@@ -90,6 +90,9 @@ export default async function handler(req, res) {
     // fbc cookie (Meta click ID from ad click) — strongest matching signal
     if (fbc) userData.fbc = fbc;
 
+    // External ID — helps Meta deduplicate and match across devices
+    if (eventID) userData.external_id = [sha256Hash(eventID)];
+
     // Fetch invitee email from the latest Calendly booking and send hashed to Meta
     // This significantly improves event match quality score
     const inviteeEmail = await fetchLatestCalendlyInviteeEmail();
