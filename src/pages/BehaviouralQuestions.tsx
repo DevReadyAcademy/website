@@ -11,6 +11,8 @@ import Footer from '../components/Footer';
 // @ts-ignore
 import SEO from '../components/SEO';
 import { BLOG_ACCESS_KEY } from '../components/BlogReadGate';
+// @ts-ignore
+import AcceleratorCTA from '../components/AcceleratorCTA';
 
 const BehaviouralQuestions: React.FC = () => {
   const { t, language } = useLanguage();
@@ -121,6 +123,27 @@ const BehaviouralQuestions: React.FC = () => {
             <p className="text-muted-foreground mb-8 text-center">
               {t('behaviouralQuestions.contentDescription')}
             </p>
+
+            <div className="rounded-2xl border border-border/50 bg-card/80 backdrop-blur p-6 md:p-8 mb-8">
+              <h2 className="text-xl font-bold mb-2">{t('behaviouralQuestions.starTitle')}</h2>
+              <p className="text-muted-foreground mb-5 text-sm">
+                {t('behaviouralQuestions.starDescription')}
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {(['Situation', 'Task', 'Action', 'Result'] as const).map((step) => (
+                  <div key={step} className="rounded-lg bg-primary/5 p-4">
+                    <span className="text-primary font-bold text-lg">{step.charAt(0)}</span>
+                    <span className="font-semibold ml-1">
+                      {t(`behaviouralQuestions.star${step}`)}
+                    </span>
+                    <p className="text-muted-foreground text-sm mt-1">
+                      {t(`behaviouralQuestions.star${step}Desc`)}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className="rounded-2xl border border-border/50 bg-card/80 backdrop-blur p-6 md:p-8">
               <ol className="space-y-4">
                 {questions.map((question: string, index: number) => (
@@ -132,6 +155,10 @@ const BehaviouralQuestions: React.FC = () => {
                   </li>
                 ))}
               </ol>
+            </div>
+
+            <div className="mt-10">
+              <AcceleratorCTA />
             </div>
           </div>
         )}
