@@ -86,7 +86,7 @@
       "investmentCurrent": "{PRICE}"
     },
     "curriculumTitle": "Week-by-Week Curriculum",
-    "curriculumDescription": "Ένα structured path από το planning της καριέρας σου μέχρι τα interviews—όλα όσα χρειάζεσαι σε 6 εβδομάδες.",
+    "curriculumDescription": "Ένα structured path από το planning της καριέρας σου μέχρι τα interviews, όλα όσα χρειάζεσαι σε 6 εβδομάδες.",
     "modules": [
       {
         "week": "Εβδομάδα 1",
@@ -162,7 +162,7 @@
     ],
     "curriculumLearnLabel": "Τι θα μάθεις:",
     "timelineTitle": "Your Journey Timeline",
-    "timelineDescription": "Από την εγγραφή μέχρι τα interviews—what to expect.",
+    "timelineDescription": "Από την εγγραφή μέχρι τα interviews, what to expect.",
     "timelineSteps": [
       {
         "title": "Σήμερα: Κλείσε το Enrollment Call",
