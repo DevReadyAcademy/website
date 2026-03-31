@@ -600,9 +600,9 @@ Don't be afraid to ask people to mentor you; most people will be happy to do it.
   },
     {
         id: 6,
-        slug: "how-i-keep-up-with-software",
-        title: "How I Keep Up with Software",
-        titleGr: "Πώς κάνω keep up στο Software",
+        slug: "how-to-stay-relevant-in-tech",
+        title: "How to Stay Relevant in Tech",
+        titleGr: "Πώς να Μένεις Relevant στο Tech",
         excerpt: "There is no end to learning in the IT industry. Keeping up with software is certainly a hard task. In this blog post I will explain my approach.",
         excerptGr: "Δεν υπάρχει τέλος στη μάθηση στον κλάδο της πληροφορικής. Το να παρακολουθείς τις εξελίξεις στο software είναι σίγουρα δύσκολο. Σε αυτό το blog post θα εξηγήσω την προσέγγισή μου.",
         content: `
