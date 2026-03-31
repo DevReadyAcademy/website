@@ -12,7 +12,8 @@ import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { earlyBirdConfig } from "../config/earlyBird";
+import CohortCountdown from "../components/CohortCountdown";
+
 
 const iconMap = {
   0: Compass,
@@ -152,15 +153,22 @@ const Accelerator = () => {
         language={language}
         structuredData={acceleratorStructuredData}
       />
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
+        Skip to main content
+      </a>
       <Header />
-      <div className="min-h-screen bg-background pt-20">
-        <main>
+      <div className="min-h-screen bg-background pt-28">
+        <main id="main-content">
           {/* Hero Section */}
           <section className="py-16 px-4 bg-gradient-hero">
             <div className="container mx-auto max-w-5xl text-center">
               <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full text-sm font-semibold mb-6">
                 <Calendar className="inline-block w-4 h-4 mr-2" />
                 {t('accelerator.cohortBadge')}
+              </div>
+
+              <div className="mb-8">
+                <CohortCountdown variant="prominent" />
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black mb-4 bg-gradient-primary bg-clip-text text-transparent pb-2">
@@ -183,7 +191,7 @@ const Accelerator = () => {
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
                   <Link to="/contact">
                     <Users className="w-5 h-5 mr-2" />
-                    {t('common.bookCall')}
+                    {t('common.secureYourSpot')}
                   </Link>
                 </Button>
               </div>
@@ -205,11 +213,8 @@ const Accelerator = () => {
                 <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-6">
                   <Target className="w-8 h-8 text-primary mb-3 mx-auto" />
                   <h3 className="font-semibold text-lg mb-2">{t('accelerator.infoCards.investmentTitle')}</h3>
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="text-muted-foreground line-through">{t('accelerator.infoCards.investmentOriginal')}</span>
-                    <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
-                  </div>
-                  <p className="text-sm text-primary font-medium mt-1">{t('accelerator.infoCards.investmentNote')}</p>
+                  <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
+                  <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
                 </div>
               </div>
             </div>
@@ -290,7 +295,7 @@ const Accelerator = () => {
                       <p className="text-muted-foreground">{step.description}</p>
                       {index === 0 && (
                         <Link to="/contact" className="text-primary hover:underline text-sm font-medium inline-block mt-2">
-                          → {t('common.enrollNow')}
+                          → {t('common.secureYourSpot')}
                         </Link>
                       )}
                     </div>
@@ -391,9 +396,9 @@ const Accelerator = () => {
           {/* Final CTA */}
           <section className="py-20 px-4 bg-gradient-subtle">
             <div className="container mx-auto max-w-4xl">
-              <div className="text-center p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
+              <div className="text-center p-6 sm:p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
                 <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
-                  ⏰ {earlyBirdConfig.getSpotsLeftText(language)} {language === 'gr' ? 'στα' : 'at'} {earlyBirdConfig.earlyBirdPrice}
+                  {t('accelerator.urgencyBadge')}
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
                   {t('accelerator.finalCtaTitle')}
@@ -401,13 +406,16 @@ const Accelerator = () => {
                 <p className="text-xl opacity-90 mb-2 max-w-2xl mx-auto">
                   {t('accelerator.finalCtaDescription')}
                 </p>
-                <p className="text-base opacity-80 mb-8 max-w-2xl mx-auto">
+                <p className="text-base opacity-80 mb-4 max-w-2xl mx-auto">
                   {t('accelerator.finalCtaPricing')}
                 </p>
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-lg">
+                <div className="mb-8">
+                  <CohortCountdown variant="compact" inverted />
+                </div>
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 shadow-lg">
                   <Link to="/contact">
                     <Calendar className="w-5 h-5 mr-2" />
-                    {t('common.bookCall')}
+                    {t('common.secureYourSpot')}
                   </Link>
                 </Button>
                 <p className="text-sm opacity-80 mt-6">
@@ -417,6 +425,7 @@ const Accelerator = () => {
             </div>
           </section>
         </main>
+
         <Footer />
       </div>
     </>

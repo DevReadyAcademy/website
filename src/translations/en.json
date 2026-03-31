@@ -8,7 +8,8 @@
     "bookCall": "Book Your Enrollment Call",
     "viewFullCurriculum": "View Full Curriculum",
     "viewProgramDetails": "View Program Details",
-    "secureYourSpot": "Secure Your Spot"
+    "secureYourSpot": "Secure Your Spot",
+    "enroll": "Enroll"
   },
   "header": {
     "home": "Home",
@@ -19,10 +20,11 @@
     "devpress": "DevPress",
     "testimonials": "Testimonials",
     "whyDifferent": "Why Different",
-    "freeCvReview": "Free CV Review"
+    "freeCvReview": "Free CV Review",
+    "urgencyBanner": "Only {SPOTS} spots left for the {COHORT_DATE} cohort — Secure yours now!"
   },
   "hero": {
-    "urgencyBadge": "{URGENCY_BADGE}",
+    "urgencyBadge": "Next Cohort: {COHORT_DATE}",
     "headline": "Become Industry-Ready In 6 Weeks",
     "headlineHighlight": "Industry-Ready",
     "readyToBecome": "Ready to Become Industry-Ready?",
@@ -30,7 +32,12 @@
     "description": "Bridge the gap between university and industry with real engineering skills, mentorship, and career coaching.",
     "trust1": "6-Week Remote Program",
     "trust2": "Industry Mentors",
-    "trust3": "Early Bird: {EARLY_BIRD_PRICE}"
+    "trust3": "Price: {PRICE}",
+    "countdownTitle": "Registrations close in",
+    "countdownDays": "Days",
+    "countdownHours": "Hours",
+    "countdownMinutes": "Min",
+    "countdownSeconds": "Sec"
   },
   "course": {
     "title": "6-Week Tech Accelerator",
@@ -55,12 +62,10 @@
       "Build your professional brand: CV, LinkedIn, GitHub, and portfolio",
       "Ace interviews with proven strategies, dos & don'ts, and communication techniques"
     ],
-    "earlyBirdBadge": "🎯 Early Bird • {SPOTS_LEFT}",
     "investmentLabel": "Investment in your future",
-    "originalPrice": "{ORIGINAL_PRICE}",
-    "currentPrice": "{EARLY_BIRD_PRICE}",
+    "currentPrice": "{PRICE}",
     "perProgram": "/program",
-    "earlyBirdMessage": "Secure your early bird rate before it's gone"
+    "spotsLeft": "Only {SPOTS} spots left!"
   },
   "accelerator": {
     "backToHome": "Back to Home",
@@ -77,9 +82,7 @@
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
       "investmentTitle": "Investment",
-      "investmentOriginal": "{ORIGINAL_PRICE}",
-      "investmentCurrent": "{EARLY_BIRD_PRICE}",
-      "investmentNote": "{SPOTS_LEFT}"
+      "investmentCurrent": "{PRICE}"
     },
     "curriculumTitle": "Week-by-Week Curriculum",
     "curriculumDescription": "A structured path from planning your career to landing interviews—everything you need in 6 weeks.",
@@ -159,7 +162,7 @@
     ],
     "curriculumLearnLabel": "What you'll learn:",
     "timelineTitle": "Your Journey Timeline",
-    "timelineDescription": "From enrollment to landing interviews—here's what to expect.",
+    "timelineDescription": "From enrollment to landing interviews, here's what to expect.",
     "timelineSteps": [
       {
         "title": "Today: Book Your Enrollment Call",
@@ -261,7 +264,7 @@
       },
       {
         "question": "What happens after I book a call?",
-        "answer": "We'll discuss your goals, answer any questions, and if it's a good fit, we'll finalize your enrollment and secure your early bird pricing."
+        "answer": "We'll discuss your goals, answer any questions, and if it's a good fit, we'll finalize your enrollment."
       },
       {
         "question": "What are the payment options?",
@@ -269,10 +272,10 @@
       }
     ],
     "finalCtaTitle": "Ready to Become Industry-Ready?",
-    "finalCtaDescription": "Book a call with our team to secure your spot at the early bird rate of €299.",
-    "finalCtaPricing": "Regular price: €449 • Next cohort may not be until Summer 2026",
+    "finalCtaDescription": "Book a call with our team to secure your spot.",
+    "finalCtaPricing": "Price: {PRICE} • Only {SPOTS} Spots Left!",
     "finalCtaNote": "During the call, we'll answer your questions and finalize your enrollment.",
-    "urgencyBadge": "⏰ {SPOTS_LEFT} at {EARLY_BIRD_PRICE}"
+    "urgencyBadge": "Next Cohort: {COHORT_DATE}"
   },
   "devpress": {
     "headline": "From Coding to Hiring",
@@ -316,7 +319,6 @@
     "backToHome": "Back to Home",
     "pageTitle": "Ready to Join Us?",
     "pageSubtitle": "To secure your spot in our Accelerator, book a call with us.",
-    "pageDescription": "Have questions first? Send us a message or schedule a call to learn more.",
     "formTitle": "Have Questions?",
     "formDescription": "Send us your questions and we'll get back to you within 24 hours",
     "formName": "Name",
@@ -329,11 +331,9 @@
     "formMessagePlaceholder": "Tell us more...",
     "formSubmit": "Send Message",
     "formSending": "Sending...",
-    "enrollBadge": "⚡ ENROLL HERE",
-    "enrollTitle": "Book Your Enrollment Call",
-    "enrollDescription": "Ready to join? Schedule a call with our team to complete your enrollment and secure one of the early bird spots at {EARLY_BIRD_PRICE}.",
-    "enrollCta": "Book Enrollment Call",
-    "enrollNote": "💡 During the call, we'll answer your questions and finalize your enrollment",
+    "enrollTitle": "Ready to Become Industry-Ready?",
+    "enrollDescription": "Learn how the DevReady accelerator can make you industry-ready in 6 weeks — book your free call today.",
+    "enrollCta": "Book Free Call",
     "connectTitle": "Connect With Us",
     "email": "Email",
     "location": "Location",
@@ -643,5 +643,240 @@
     "button": "Get Access",
     "success": "You're in! Redirecting you now...",
     "redirecting": "Opening the template in a moment..."
+  },
+  "behaviouralQuestions": {
+    "pageTitle": "Behavioural Interview Questions - DevReady",
+    "pageDescription": "A curated list of 22 common behavioural interview questions to help you prepare for your next software engineering interview.",
+    "gateTitle": "Unlock Interview Questions",
+    "gateDescription": "Enter your email to access a curated list of common behavioural interview questions used by top tech companies.",
+    "gateButton": "Get Questions",
+    "gateSuccess": "You're in! Loading your questions...",
+    "contentTitle": "Common Behavioural Interview Questions",
+    "contentDescription": "Prepare for these frequently asked behavioural questions in tech interviews.",
+    "starTitle": "How to Answer: The STAR Technique",
+    "starDescription": "Structure your answers using the STAR framework to give clear, concise, and impactful responses.",
+    "starSituation": "Situation",
+    "starSituationDesc": "Set the scene. Describe the context and background of the situation you were in.",
+    "starTask": "Task",
+    "starTaskDesc": "Explain the challenge or responsibility you faced. What was expected of you?",
+    "starAction": "Action",
+    "starActionDesc": "Describe the specific steps you took. Focus on what you did and why.",
+    "starResult": "Result",
+    "starResultDesc": "Share the outcome. Quantify the impact when possible and mention what you learned.",
+    "questions": [
+      "Tell me about yourself.",
+      "Tell me a challenge you had, where the best way forward was not clear-cut. How did you decide what to do?",
+      "Tell me about a time where you've made a mistake.",
+      "Give me an example of something you tried to accomplish but failed.",
+      "Why did you apply to us?",
+      "Give me an example of a time when you showed initiative.",
+      "Tell me about a time when you delegated a project effectively.",
+      "When was the last time you received constructive feedback?",
+      "Tell me an example you had a conflict with a colleague and how did you manage to solve it?",
+      "Why do you want to leave your current job?",
+      "What is your weakness?",
+      "What is your greatest strength?",
+      "What are your responsibilities?",
+      "What are the responsibilities you are looking for?",
+      "Where do you see yourself in 5 years?",
+      "Let's say you identify an issue in the process, what do you do?",
+      "Tell me about a challenge you had.",
+      "Have you been a mentor to anyone before?",
+      "How do you study? How do you keep up with software?",
+      "Give me an example of where your decision influenced the end user.",
+      "Give me an example of a time when you motivated others.",
+      "Give me an example of where your decision influenced the business."
+    ]
+  },
+  "readinessQuiz": {
+    "pageTitle": "Developer Readiness Quiz | DevReady",
+    "pageDescription": "Check how ready you are for a developer role — frontend or backend — and see how DevReady helps you get there faster.",
+    "intro": {
+      "badge": "Self-Assessment",
+      "title": "Are You Ready for a Dev Job?",
+      "subtitle": "Choose your path and check off the skills you already have. See your estimated timeline to the first job.",
+      "backendCard": "Backend Developer",
+      "backendCardDesc": "Servers, APIs, databases & deployment",
+      "frontendCard": "Frontend Developer",
+      "frontendCardDesc": "HTML, CSS, JavaScript & frameworks"
+    },
+    "steps": {
+      "stepOf": "Step {current} of {total}",
+      "next": "Next",
+      "previous": "Previous",
+      "seeResults": "See Results"
+    },
+    "backend": {
+      "categories": {
+        "internet": {
+          "title": "Internet & Basics",
+          "items": [
+            "I understand how HTTP/HTTPS works (requests, responses, status codes)",
+            "I understand the difference between client and server",
+            "I know what DNS is and how it works",
+            "I'm familiar with basic networking concepts (IP, TCP/UDP, ports)",
+            "I understand how browsers work"
+          ]
+        },
+        "language": {
+          "title": "Backend Language",
+          "items": [
+            "I've worked with a backend language (Python, Node.js, Java, etc.)",
+            "I understand OOP concepts (classes, inheritance, polymorphism)",
+            "I can write clean, readable code",
+            "I know how to handle exceptions and errors"
+          ]
+        },
+        "git": {
+          "title": "Version Control (Git)",
+          "items": [
+            "I can create commits, branches, and merge",
+            "I use GitHub/GitLab for my projects",
+            "I know how to resolve merge conflicts",
+            "I understand Git workflows (feature branches, PRs)"
+          ]
+        },
+        "databases": {
+          "title": "Databases",
+          "items": [
+            "I can write basic SQL queries (SELECT, INSERT, UPDATE, DELETE)",
+            "I know what relational databases are and when to use them",
+            "I've used at least one NoSQL database (MongoDB, Redis)",
+            "I understand indexes and their importance for performance",
+            "I know basic schema design concepts"
+          ]
+        },
+        "apis": {
+          "title": "APIs & Web Frameworks",
+          "items": [
+            "I've built a RESTful API",
+            "I know what CRUD operations are",
+            "I've used a web framework (Express, FastAPI, Spring, etc.)",
+            "I understand authentication (sessions, JWT tokens)",
+            "I know how to handle JSON data"
+          ]
+        },
+        "security": {
+          "title": "Basic Security",
+          "items": [
+            "I know what SQL injection is and how to prevent it",
+            "I understand HTTPS and when it's required",
+            "I know basic authentication/authorization principles",
+            "I know how to store passwords securely (hashing)"
+          ]
+        },
+        "tools": {
+          "title": "Terminal & Tools",
+          "items": [
+            "I'm comfortable using the command line / terminal",
+            "I can install packages and manage dependencies",
+            "I've deployed an app (Heroku, Railway, VPS, etc.)"
+          ]
+        }
+      }
+    },
+    "frontend": {
+      "categories": {
+        "html": {
+          "title": "HTML & Web Fundamentals",
+          "items": [
+            "I understand semantic HTML and use the right elements (article, nav, section, aside, etc.)",
+            "I know how browsers render web pages and understand the DOM",
+            "I understand how HTTP/HTTPS works (requests, responses, status codes)",
+            "I know what web accessibility (a11y) means and can write accessible markup",
+            "I'm familiar with browser APIs (localStorage, sessionStorage, fetch, etc.)"
+          ]
+        },
+        "css": {
+          "title": "CSS & Styling",
+          "items": [
+            "I can build layouts with Flexbox and CSS Grid",
+            "I understand the box model, specificity, and the cascade",
+            "I can write responsive designs with media queries (mobile-first)",
+            "I've used a CSS framework or utility library (Tailwind CSS, Bootstrap, etc.)",
+            "I know CSS custom properties (variables) and basic animations/transitions"
+          ]
+        },
+        "javascript": {
+          "title": "JavaScript",
+          "items": [
+            "I understand JS fundamentals (scope, closures, hoisting, prototypes)",
+            "I'm comfortable with ES6+ features (arrow functions, destructuring, spread, modules)",
+            "I can manipulate the DOM and handle events",
+            "I understand asynchronous JavaScript (promises, async/await)",
+            "I've consumed an API using fetch or axios"
+          ]
+        },
+        "frameworks": {
+          "title": "Frameworks & TypeScript",
+          "items": [
+            "I've built a project with a frontend framework (React, Vue, Angular, or Svelte)",
+            "I understand component-based architecture and hooks/lifecycle methods",
+            "I can manage application state (useState, Zustand, Redux, Pinia, etc.)",
+            "I know TypeScript basics (type annotations, interfaces, generics)",
+            "I've implemented client-side routing (React Router, Vue Router, etc.)"
+          ]
+        },
+        "buildTools": {
+          "title": "Build Tools & Version Control",
+          "items": [
+            "I use npm/yarn/pnpm to install and manage packages",
+            "I've used a module bundler or dev server (Vite, Webpack, etc.)",
+            "I use Git for version control and collaborate on GitHub/GitLab",
+            "I can configure and use a linter and formatter (ESLint, Prettier)"
+          ]
+        },
+        "testing": {
+          "title": "Testing & Debugging",
+          "items": [
+            "I've written unit tests for components or functions (Jest, Vitest)",
+            "I understand the basics of end-to-end testing (Playwright, Cypress)",
+            "I'm comfortable using browser DevTools for debugging and profiling"
+          ]
+        },
+        "performance": {
+          "title": "Performance & Deployment",
+          "items": [
+            "I know the basics of web performance (Core Web Vitals, lazy loading, code splitting)",
+            "I've deployed a frontend app (Vercel, Netlify, GitHub Pages, etc.)",
+            "I understand browser caching, CDNs, and static vs dynamic rendering (SSR, SSG)"
+          ]
+        }
+      }
+    },
+    "results": {
+      "title": "Your Readiness",
+      "scoreLabel": "Readiness",
+      "withoutDevReady": "Without DevReady",
+      "withDevReady": "With DevReady",
+      "months": "months",
+      "readyNow": "Ready to apply now!",
+      "savingsBadge": "Save {months} months sooner",
+      "ctaButton": "Start the Program",
+      "ctaSubtext": "Accelerate your path to the job market",
+      "timelineTitle": "Your path to the first job",
+      "disclaimer": "Estimate based on average. Timeline depends on your personal pace and effort.",
+      "scoreHeadlines": {
+        "veryLow": "Your Journey Starts Here",
+        "low": "Good Start — Keep Going",
+        "mid": "Halfway There",
+        "high": "Almost Ready!",
+        "veryHigh": "So Close!",
+        "ready": "Ready to Apply Now!"
+      },
+      "breakdown": {
+        "title": "Breakdown by Category"
+      },
+      "beyondTech": {
+        "title": "Technical skills alone won't land you the job",
+        "subtitle": "Even if you checked everything above, companies also evaluate:",
+        "brandingTitle": "Personal Branding",
+        "brandingDesc": "GitHub profile, LinkedIn presence, online portfolio — first impressions before you even talk to a recruiter.",
+        "cvTitle": "CV & LinkedIn",
+        "cvDesc": "A resume that clears ATS filters and gets recruiters to actually call you.",
+        "interviewsTitle": "Interviews",
+        "interviewsDesc": "Technical questions, system design, behavioral rounds — skills that require practice and mentoring."
+      }
+    }
   }
 }

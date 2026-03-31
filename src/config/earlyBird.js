@@ -3,9 +3,8 @@
 
 export const earlyBirdConfig = {
   // Early bird availability
-  spotsLeft: 3,
-  isActive: true,
-  
+  isActive: false,
+
   // Cohort dates (English and Greek)
   cohortStartMonth: {
     en: "April",
@@ -16,30 +15,21 @@ export const earlyBirdConfig = {
     gr: "Μάιος"
   },
   cohortYear: 2026,
-  
+
   // Pricing
-  originalPrice: "€449",
-  earlyBirdPrice: "€299",
-  
+  price: "€449",
+
+  // Remaining spots
+  remainingSpots: 2,
+
+  // Registration deadline (used for countdown timer)
+  cohortStartDate: '2026-04-20T00:00:00+03:00',
+
   // Get cohort date range for specific language
   getCohortDateRange(lang = 'en') {
     const startMonth = this.cohortStartMonth[lang] || this.cohortStartMonth.en;
     const endMonth = this.cohortEndMonth[lang] || this.cohortEndMonth.en;
     return `${startMonth}–${endMonth} ${this.cohortYear}`;
-  },
-  
-  // Get spots left text for specific language
-  getSpotsLeftText(lang = 'en') {
-    if (lang === 'gr') {
-      return `Μόνο ${this.spotsLeft} Early Bird Θέσεις`;
-    }
-    return `Only ${this.spotsLeft} Early Bird Spots Left`;
-  },
-  
-  // Get urgency badge for specific language
-  getUrgencyBadge(lang = 'en') {
-    const nextCohort = lang === 'gr' ? 'Επόμενο Cohort' : 'Next Cohort';
-    return `${nextCohort}: ${this.getCohortDateRange(lang)} · ⏰ ${this.getSpotsLeftText(lang)}`;
   }
 };
 

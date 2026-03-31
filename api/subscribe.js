@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email } = req.body;
+  const { email, firstName, lastName, phone, pipelineStage } = req.body;
 
   // Validate email
   if (!email || !email.includes('@')) {
@@ -30,7 +30,13 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
         'x-api-key': CUSTOM_API_KEY,
       },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({
+        email,
+        ...(firstName && { firstName }),
+        ...(lastName && { lastName }),
+        ...(phone && { phone }),
+        ...(pipelineStage && { pipelineStage }),
+      }),
     });
 
     const data = await response.json();

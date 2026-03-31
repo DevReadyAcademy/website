@@ -32,7 +32,7 @@ const Pillars = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14 rounded-lg bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Icon className="w-7 h-7 text-primary-foreground" />
+                  <Icon className="w-7 h-7 text-primary-foreground" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3 text-foreground">{pillar.title}</h3>
                 <p className="text-base text-muted-foreground leading-relaxed">

@@ -2,13 +2,14 @@
   "common": {
     "brandName": "DevReady",
     "tagline": "Γεφυρώνοντας το χάσμα ανάμεσα στο πανεπιστήμιο και την αγορά εργασίας",
-    "enrollNow": "Εγγραφή",
+    "enrollNow": "Κλείσε τη Θέση σου",
     "learnMore": "Μάθε Περισσότερα",
     "skipToMain": "Μετάβαση στο κύριο περιεχόμενο",
-    "bookCall": "Εγγραφή",
+    "bookCall": "Κλείσε τη Θέση σου",
     "viewFullCurriculum": "Δες το Πρόγραμμα",
     "viewProgramDetails": "Λεπτομέρειες Προγράμματος",
-    "secureYourSpot": "Κλείσε τη Θέση σου"
+    "secureYourSpot": "Κλείσε τη Θέση σου",
+    "enroll": "Εγγραφή"
   },
   "header": {
     "home": "Αρχική",
@@ -20,18 +21,24 @@
     "devpress": "DevPress",
     "testimonials": "Testimonials",
     "whyDifferent": "Γιατί Διαφέρουμε",
-    "freeCvReview": "Δωρεάν Αξιολόγηση CV"
+    "freeCvReview": "Δωρεάν Αξιολόγηση CV",
+    "urgencyBanner": "Μόνο {SPOTS} θέσεις απομένουν για το cohort {COHORT_DATE} • Κλείσε τη δική σου τώρα!"
   },
   "hero": {
-    "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE} · ⏰ {SPOTS_LEFT}",
+    "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}",
     "headline": "Γίνε Industry-Ready Σε 6 Εβδομάδες",
     "headlineHighlight": "Industry-Ready",
     "readyToBecome": "Έτοιμος να Γίνεις Industry-Ready;",
-    "subheadline": "Μάθε τα engineering skills, το mindset και το branding που ψάχνουν οι tech εταιρείες—no degree required.",
+    "subheadline": "Μάθε τα engineering skills, το mindset και το branding που ψάχνουν οι tech εταιρείες, no degree required.",
     "description": "Real engineering skills, mentorship και career coaching για να γίνεις industry-ready.",
     "trust1": "6 Εβδομάδες Remote",
     "trust2": "Industry Mentors",
-    "trust3": "Early Bird: {EARLY_BIRD_PRICE}"
+    "trust3": "Τιμή: {PRICE}",
+    "countdownTitle": "Οι εγγραφές κλείνουν σε",
+    "countdownDays": "Μέρες",
+    "countdownHours": "Ώρες",
+    "countdownMinutes": "Λεπ",
+    "countdownSeconds": "Δευ"
   },
   "course": {
     "title": "6-Week Tech Accelerator",
@@ -56,20 +63,18 @@
       "Φτίαξε το professional brand σου: CV, LinkedIn, GitHub και portfolio",
       "Πέτυχε σε interviews με proven strategies, dos & don'ts και communication techniques"
     ],
-    "earlyBirdBadge": "🎯 Early Bird • {SPOTS_LEFT}",
     "investmentLabel": "Επένδυση στο μέλλον σου",
-    "originalPrice": "{ORIGINAL_PRICE}",
-    "currentPrice": "{EARLY_BIRD_PRICE}",
+    "currentPrice": "{PRICE}",
     "perProgram": "/πρόγραμμα",
-    "earlyBirdMessage": "Κλείσε το early bird rate πριν εξαντληθεί"
+    "spotsLeft": "Μόνο {SPOTS} θέσεις απομένουν!"
   },
   "accelerator": {
     "backToHome": "Πίσω στην Αρχική",
     "pageTitle": "6-Week Tech Accelerator",
     "cohortBadge": "Επόμενο Cohort: {COHORT_DATE}",
     "heroSubtitle": "Μάθε τα engineering skills, το mindset και το professional branding που ψάχνουν πραγματικά οι tech εταιρείες.",
-    "languageAgnostic": "Language & Stack Agnostic — works for JavaScript, Python, Java, Go, you name it",
-    "heroDescription": "Σχεδιασμένο για οποιονδήποτε στην Ελλάδα με ένα laptop και πάθος—no degree required.",
+    "languageAgnostic": "Language & Stack Agnostic. Works for JavaScript, Python, Java, Go, you name it",
+    "heroDescription": "Σχεδιασμένο για οποιονδήποτε στην Ελλάδα με ένα laptop και πάθος, no degree required.",
     "infoCards": {
       "timeCommitmentTitle": "Διάρκεια",
       "timeCommitment": "6 εβδομάδες εντατικά",
@@ -78,12 +83,10 @@
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
       "investmentTitle": "Επένδυση",
-      "investmentOriginal": "{ORIGINAL_PRICE}",
-      "investmentCurrent": "{EARLY_BIRD_PRICE}",
-      "investmentNote": "{SPOTS_LEFT}"
+      "investmentCurrent": "{PRICE}"
     },
     "curriculumTitle": "Week-by-Week Curriculum",
-    "curriculumDescription": "Ένα structured path από το planning της καριέρας σου μέχρι τα interviews—όλα όσα χρειάζεσαι σε 6 εβδομάδες.",
+    "curriculumDescription": "Ένα structured path από το planning της καριέρας σου μέχρι τα interviews, όλα όσα χρειάζεσαι σε 6 εβδομάδες.",
     "modules": [
       {
         "week": "Εβδομάδα 1",
@@ -93,7 +96,7 @@
           "Program onboarding, expectations & code of conduct",
           "Confidence check & goal setting",
           "Κατανόηση του τι θέλει πραγματικά το industry από junior engineers",
-          "Building ενός personalized plan βασισμένου στα necessary skills για τον target tech ρόλο σου",
+          "Building ενός personalized plan βασισμένο στα necessary skills για τον target tech ρόλο σου",
           "Guidance για να navigate το maze του engineering χωρίς να νιώθεις lost",
           "Reviewing και refining το plan σου βάσει των specific career goals σου",
           "Kanban methodology: ένα critical skill για tech εταιρείες και project management",
@@ -113,7 +116,7 @@
           "Git fundamentals: tracking work, commits, branching και basic workflows",
           "CI/CD basics: τι είναι τα pipelines και γιατί πρέπει να τα καταλαβαίνουν οι juniors",
           "Testing fundamentals: unit tests, test structure και τι περιμένουν οι interviewers",
-          "Building ενός real-world project βασισμένου σε industry standards",
+          "Building ενός real-world project βασισμένο σε industry standards",
           "Publishing και iterating στο project σου χρησιμοποιώντας GitHub",
           "Μάθε πώς οι engineers σκέφτονται, communicate και κάνουν structure τη δουλειά τους"
         ]
@@ -121,7 +124,7 @@
       {
         "week": "Εβδομάδα 5",
         "title": "AI & Personal Branding",
-        "description": "Μάθε πώς να χρησιμοποιείς το AI responsibly και χτίσε μια clear, credible professional presence.",
+        "description": "Μάθε πώς να χρησιμοποιείς το AI responsibly και χτίσε ένα clear, credible professional presence.",
         "details": [
           "Πώς οι beginners κάνουν misuse το AI και γιατί αυτό τους επιβραδύνει long-term",
           "Χρήση του AI ως thinking partner, όχι shortcut",
@@ -159,7 +162,7 @@
     ],
     "curriculumLearnLabel": "Τι θα μάθεις:",
     "timelineTitle": "Your Journey Timeline",
-    "timelineDescription": "Από την εγγραφή μέχρι τα interviews—what to expect.",
+    "timelineDescription": "Από την εγγραφή μέχρι τα interviews, what to expect.",
     "timelineSteps": [
       {
         "title": "Σήμερα: Κλείσε το Enrollment Call",
@@ -260,7 +263,7 @@
       },
       {
         "question": "Τι γίνεται αφού κλείσω call;",
-        "answer": "Θα συζητήσουμε τους στόχους σου, θα απαντήσουμε σε τυχόν ερωτήσεις και αν είναι good fit, θα ολοκληρώσουμε την εγγραφή σου και θα εξασφαλίσουμε το early bird pricing σου."
+        "answer": "Θα συζητήσουμε τους στόχους σου, θα απαντήσουμε σε τυχόν ερωτήσεις και αν είναι good fit, θα ολοκληρώσουμε την εγγραφή σου."
       },
       {
         "question": "Ποιες είναι οι επιλογές πληρωμής;",
@@ -268,10 +271,10 @@
       }
     ],
     "finalCtaTitle": "Έτοιμος να Γίνεις Industry-Ready;",
-    "finalCtaDescription": "Κλείσε call με την ομάδα μας για να κλείσεις τη θέση σου στο early bird rate των €299.",
-    "finalCtaPricing": "Κανονική τιμή: €449 • Το επόμενο cohort μπορεί να μην είναι μέχρι το Καλοκαίρι 2026",
+    "finalCtaDescription": "Κλείσε call με την ομάδα μας για να κλείσεις τη θέση σου.",
+    "finalCtaPricing": "Τιμή: {PRICE} • Μόνο {SPOTS} Θέσεις!",
     "finalCtaNote": "Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου.",
-    "urgencyBadge": "⏰ {SPOTS_LEFT} στα {EARLY_BIRD_PRICE}"
+    "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}"
   },
   "devpress": {
     "headline": "From Coding to Hiring",
@@ -314,8 +317,7 @@
   "contact": {
     "backToHome": "Πίσω στην Αρχική",
     "pageTitle": "Έτοιμος να Συμμετέχεις;",
-    "pageSubtitle": "Για να κλείσεις τη θέση σου στο Accelerator, κλείσε ένα call μαζί μας.",
-    "pageDescription": "Έχεις ερωτήσεις πρώτα; Στείλε μας ένα μήνυμα ή κλείσε call για να μάθεις περισσότερα.",
+    "pageSubtitle": "Για να κλείσεις τη θέση σου στο Accelerator, κλείσε ένα quick call μαζί μας.",
     "formTitle": "Έχεις Ερωτήσεις;",
     "formDescription": "Στείλε μας τις ερωτήσεις σου και θα σου απαντήσουμε εντός 24 ωρών",
     "formName": "Όνομα",
@@ -328,11 +330,9 @@
     "formMessagePlaceholder": "Πες μας περισσότερα...",
     "formSubmit": "Αποστολή",
     "formSending": "Αποστολή...",
-    "enrollBadge": "⚡ ΕΓΓΡΑΦΗ ΕΔΩ",
-    "enrollTitle": "Κλείσε το Enrollment Call σου",
-    "enrollDescription": "Έτοιμος να συμμετέχεις; Κλείσε call με την ομάδα μας για να ολοκληρώσεις την εγγραφή σου και να κλείσεις μία early bird θέση στα {EARLY_BIRD_PRICE}.",
-    "enrollCta": "Κλείσε Enrollment Call",
-    "enrollNote": "💡 Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου",
+    "enrollTitle": "Έτοιμος να Γίνεις Industry-Ready;",
+    "enrollDescription": "Μάθε πώς το DevReady accelerator μπορεί να σε κάνει industry-ready σε 6 εβδομάδες, κλείσε το δωρεάν call σου σήμερα.",
+    "enrollCta": "Κλείσε Δωρεάν Call",
     "connectTitle": "Επικοινώνησε Μαζί Μας",
     "email": "Email",
     "location": "Τοποθεσία",
@@ -342,7 +342,7 @@
   "pillars": {
     "title": "Οι 4 Βασικοί Πυλώνες",
     "subtitle": "Αυτοί οι τέσσερις πυλώνες καθορίζουν πώς σε ετοιμάζουμε για ένα successful career στο tech.",
-    "description": "No degree required. No shortcuts. Μόνο τα necessary skills και το mindset που ζητάνε οι top εταιρείες.",
+    "description": "No degree required. Μόνο τα necessary skills και το mindset που ζητάνε οι top εταιρείες.",
     "items": [
       {
         "title": "Mentorship & Career Coaching",
@@ -642,5 +642,240 @@
     "button": "Αποκτήστε Πρόσβαση",
     "success": "Είσαι μέσα! Θα μεταφερθείς τώρα...",
     "redirecting": "Ανοίγει το template σε λίγο..."
+  },
+  "behaviouralQuestions": {
+    "pageTitle": "Behavioural Interview Questions - DevReady",
+    "pageDescription": "Μια λίστα με 22 συνηθισμένες behavioural ερωτήσεις συνέντευξης για να προετοιμαστείς για την επόμενη συνέντευξή σου.",
+    "gateTitle": "Ξεκλείδωσε τις Ερωτήσεις",
+    "gateDescription": "Βάλε το email σου για άμεση πρόσβαση στις πιο δημοφιλής behavioural ερωτήσεις.",
+    "gateButton": "Πάρε τις Ερωτήσεις",
+    "gateSuccess": "Είσαι μέσα! Φορτώνονται οι ερωτήσεις...",
+    "contentTitle": "Συνηθισμένες Behavioural Ερωτήσεις Συνέντευξης",
+    "contentDescription": "Προετοιμάσου για αυτές τις συχνά ερωτώμενες behavioural ερωτήσεις σε tech interviews.",
+    "starTitle": "Πώς να Απαντάς: Η Τεχνική STAR",
+    "starDescription": "Δόμησε τις απαντήσεις σου με το STAR framework για ξεκάθαρες, συνοπτικές και ουσιαστικές απαντήσεις.",
+    "starSituation": "Situation",
+    "starSituationDesc": "Περίγραψε το context. Ποιο ήταν το πλαίσιο και η κατάσταση που αντιμετώπιζες;",
+    "starTask": "Task",
+    "starTaskDesc": "Εξήγησε την πρόκληση ή την ευθύνη που είχες. Τι αναμενόταν από εσένα;",
+    "starAction": "Action",
+    "starActionDesc": "Περίγραψε τα συγκεκριμένα βήματα που πήρες. Εστίασε στο τι έκανες και γιατί.",
+    "starResult": "Result",
+    "starResultDesc": "Μοιράσου το αποτέλεσμα. Ποσοτικοποίησε τον αντίκτυπο όπου μπορείς και ανέφερε τι έμαθες.",
+    "questions": [
+      "Πες μου λίγα λόγια για εσένα.",
+      "Πες μου για μια πρόκληση που αντιμετώπισες, όπου ο σωστός δρόμος δεν ήταν ξεκάθαρος. Πώς αποφάσισες τι να κάνεις;",
+      "Πες μου για μια φορά που έκανες λάθος.",
+      "Δώσε μου ένα παράδειγμα κάτι που προσπάθησες να πετύχεις αλλά απέτυχες.",
+      "Γιατί έκανες αίτηση σε εμάς;",
+      "Δώσε μου ένα παράδειγμα που πήρες πρωτοβουλία.",
+      "Πες μου για μια φορά που ανέθεσες ένα project αποτελεσματικά.",
+      "Πότε ήταν η τελευταία φορά που δέχτηκες constructive feedback;",
+      "Πες μου ένα παράδειγμα που είχες σύγκρουση με συνάδελφο και πώς τη διαχειρίστηκες;",
+      "Γιατί θέλεις να φύγεις από τη τωρινή σου δουλειά;",
+      "Ποια είναι η αδυναμία σου;",
+      "Ποιο είναι το μεγαλύτερο δυνατό σου σημείο;",
+      "Ποιες είναι οι αρμοδιότητές σου;",
+      "Τι αρμοδιότητες αναζητάς;",
+      "Πού βλέπεις τον εαυτό σου σε 5 χρόνια;",
+      "Ας πούμε ότι εντοπίζεις ένα πρόβλημα στη διαδικασία, τι κάνεις;",
+      "Πες μου για μια πρόκληση που αντιμετώπισες.",
+      "Έχεις γίνει mentor σε κάποιον στο παρελθόν;",
+      "Πώς μελετάς; Πώς μένεις ενημερωμένος με το software;",
+      "Δώσε μου ένα παράδειγμα όπου η απόφασή σου επηρέασε τον τελικό χρήστη.",
+      "Δώσε μου ένα παράδειγμα που παρακίνησες άλλους.",
+      "Δώσε μου ένα παράδειγμα όπου η απόφασή σου επηρέασε το business."
+    ]
+  },
+  "readinessQuiz": {
+    "pageTitle": "Developer Readiness Quiz | DevReady",
+    "pageDescription": "Έλεγξε πόσο έτοιμος είσαι για μια θέση developer — frontend ή backend — και δες πώς το DevReady σε βοηθά να φτάσεις εκεί πιο γρήγορα.",
+    "intro": {
+      "badge": "Self-Assessment",
+      "title": "Είσαι έτοιμος για Software Engineering Job;",
+      "subtitle": "Επέλεξε το path σου και σημείωσε τα skills που ήδη έχεις. Δες το εκτιμώμενο timeline σου για ένα software engineering job.",
+      "backendCard": "Backend Developer",
+      "backendCardDesc": "Servers, APIs, βάσεις δεδομένων & deployment",
+      "frontendCard": "Frontend Developer",
+      "frontendCardDesc": "HTML, CSS, JavaScript & frameworks"
+    },
+    "steps": {
+      "stepOf": "Βήμα {current} από {total}",
+      "next": "Επόμενο",
+      "previous": "Προηγούμενο",
+      "seeResults": "Δες τα Αποτελέσματα"
+    },
+    "backend": {
+      "categories": {
+        "internet": {
+          "title": "Internet & Βασικά",
+          "items": [
+            "Ξέρω πώς λειτουργεί το HTTP/HTTPS (requests, responses, status codes)",
+            "Καταλαβαίνω τη διαφορά μεταξύ client και server",
+            "Ξέρω τι είναι DNS και πώς λειτουργεί",
+            "Γνωρίζω τις βασικές έννοιες networking (IP, TCP/UDP, ports)",
+            "Καταλαβαίνω πώς λειτουργούν οι browsers"
+          ]
+        },
+        "language": {
+          "title": "Backend Γλώσσα",
+          "items": [
+            "Έχω δουλέψει με μια backend γλώσσα (Python, Node.js, Java, κ.α.)",
+            "Κατανοώ OOP concepts (classes, inheritance, polymorphism)",
+            "Μπορώ να γράψω clean, readable code",
+            "Ξέρω πώς να κάνω handle exceptions και errors"
+          ]
+        },
+        "git": {
+          "title": "Version Control (Git)",
+          "items": [
+            "Μπορώ να δημιουργώ commits, branches και να κάνω merge",
+            "Χρησιμοποιώ GitHub/GitLab για τα projects μου",
+            "Ξέρω πώς να λύσω merge conflicts",
+            "Καταλαβαίνω Git workflows (feature branches, PRs)"
+          ]
+        },
+        "databases": {
+          "title": "Βάσεις Δεδομένων",
+          "items": [
+            "Μπορώ να γράψω βασικά SQL queries (SELECT, INSERT, UPDATE, DELETE)",
+            "Ξέρω τι είναι relational databases και πότε τις χρησιμοποιώ",
+            "Έχω χρησιμοποιήσει τουλάχιστον μια NoSQL βάση (MongoDB, Redis)",
+            "Καταλαβαίνω indexes και τη σημασία τους για performance",
+            "Γνωρίζω βασικές έννοιες schema design"
+          ]
+        },
+        "apis": {
+          "title": "APIs & Web Frameworks",
+          "items": [
+            "Έχω δημιουργήσει ένα RESTful API",
+            "Ξέρω τι είναι CRUD operations",
+            "Έχω χρησιμοποιήσει ένα web framework (Express, FastAPI, Spring, κ.α.)",
+            "Καταλαβαίνω authentication (sessions, JWT tokens)",
+            "Ξέρω πώς να κάνω handle JSON data"
+          ]
+        },
+        "security": {
+          "title": "Βασική Ασφάλεια",
+          "items": [
+            "Ξέρω τι είναι SQL injection και πώς να το αποτρέψω",
+            "Καταλαβαίνω HTTPS και πότε είναι απαραίτητο",
+            "Γνωρίζω βασικές αρχές authentication/authorization",
+            "Ξέρω πώς να αποθηκεύω passwords με ασφάλεια (hashing)"
+          ]
+        },
+        "tools": {
+          "title": "Terminal & Εργαλεία",
+          "items": [
+            "Χρησιμοποιώ άνετα το command line / terminal",
+            "Μπορώ να εγκαταστήσω packages και να διαχειριστώ dependencies",
+            "Έχω κάνει deploy μια εφαρμογή (Heroku, Railway, Vercel VPS, κ.α.)"
+          ]
+        }
+      }
+    },
+    "frontend": {
+      "categories": {
+        "html": {
+          "title": "HTML & Web Fundamentals",
+          "items": [
+            "Ξέρω semantic HTML και χρησιμοποιώ τα σωστά στοιχεία (article, nav, section, aside, κ.α.)",
+            "Καταλαβαίνω πώς κάνουν render οι browsers (DOM, CSSOM, render tree)",
+            "Ξέρω πώς λειτουργεί το HTTP/HTTPS (requests, responses, status codes)",
+            "Ξέρω τι σημαίνει web accessibility (a11y) και μπορώ να γράψω accessible markup",
+            "Γνωρίζω βασικά browser APIs (localStorage, sessionStorage, fetch, κ.α.)"
+          ]
+        },
+        "css": {
+          "title": "CSS & Styling",
+          "items": [
+            "Μπορώ να φτιάξω layouts με Flexbox και CSS Grid",
+            "Καταλαβαίνω το box model, specificity και το cascade",
+            "Μπορώ να γράψω responsive designs με media queries (mobile-first)",
+            "Έχω χρησιμοποιήσει CSS framework ή utility library (Tailwind CSS, Bootstrap, κ.α.)",
+            "Ξέρω CSS custom properties (variables) και βασικά animations/transitions"
+          ]
+        },
+        "javascript": {
+          "title": "JavaScript",
+          "items": [
+            "Καταλαβαίνω τα fundamentals της JS (scope, closures, hoisting, prototypes)",
+            "Χρησιμοποιώ άνετα ES6+ features (arrow functions, destructuring, spread, modules)",
+            "Μπορώ να κάνω manipulate το DOM και να κάνω handle events",
+            "Καταλαβαίνω asynchronous JavaScript (promises, async/await)",
+            "Έχω κάνει consume ένα API χρησιμοποιώντας fetch ή axios ή άλλα libraries"
+          ]
+        },
+        "frameworks": {
+          "title": "Frameworks & TypeScript",
+          "items": [
+            "Έχω φτιάξει ένα project με frontend framework (React, Vue, Angular ή Svelte)",
+            "Καταλαβαίνω component-based architecture και hooks/lifecycle methods",
+            "Μπορώ να διαχειριστώ application state (useState, Zustand, Redux, Pinia, κ.α.)",
+            "Ξέρω βασικά TypeScript (type annotations, interfaces, generics)",
+            "Έχω υλοποιήσει client-side routing (React Router, Vue Router, κ.α.)"
+          ]
+        },
+        "buildTools": {
+          "title": "Build Tools & Version Control",
+          "items": [
+            "Χρησιμοποιώ npm/yarn/pnpm για να εγκαταστήσω και να διαχειριστώ packages",
+            "Έχω χρησιμοποιήσει ένα module bundler ή dev server (Vite, Webpack, κ.α.)",
+            "Χρησιμοποιώ Git για version control και συνεργάζομαι στο GitHub/GitLab",
+            "Μπορώ να ρυθμίσω και να χρησιμοποιήσω linter και formatter (ESLint, Prettier)"
+          ]
+        },
+        "testing": {
+          "title": "Testing & Debugging",
+          "items": [
+            "Έχω γράψει unit tests για components ή functions (Jest, Vitest)",
+            "Καταλαβαίνω τα βασικά end-to-end testing (Playwright, Cypress)",
+            "Χρησιμοποιώ άνετα οι browser DevTools για debugging και profiling"
+          ]
+        },
+        "performance": {
+          "title": "Performance & Deployment",
+          "items": [
+            "Ξέρω τα βασικά web performance (Core Web Vitals, lazy loading, code splitting)",
+            "Έχω κάνει deploy μια frontend εφαρμογή (Vercel, Netlify, GitHub Pages, κ.α.)",
+            "Καταλαβαίνω browser caching, CDNs και static vs dynamic rendering (SSR, SSG)"
+          ]
+        }
+      }
+    },
+    "results": {
+      "title": "Η Ετοιμότητά Σου",
+      "scoreLabel": "Readiness",
+      "withoutDevReady": "Χωρίς DevReady",
+      "withDevReady": "Με DevReady",
+      "months": "μήνες",
+      "readyNow": "Έτοιμος να κάνεις αίτηση τώρα!",
+      "savingsBadge": "Εξοικονομείς {months} μήνες νωρίτερα",
+      "ctaButton": "Ξεκίνα το Πρόγραμμα",
+      "ctaSubtext": "Επιτάχυνε την πορεία σου στην αγορά εργασίας",
+      "timelineTitle": "Ο χρόνος σου για ένα software engineering job",
+      "disclaimer": "Εκτίμηση βάσει μέσου όρου. Ο χρόνος εξαρτάται από τον προσωπικό σου ρυθμό και effort.",
+      "scoreHeadlines": {
+        "veryLow": "Η Διαδρομή Ξεκινά Εδώ",
+        "low": "Καλή Αρχή — Συνέχισε",
+        "mid": "Στα Μισά της Διαδρομής",
+        "high": "Σχεδόν Έτοιμος!",
+        "veryHigh": "Πολύ Κοντά!",
+        "ready": "Έτοιμος να Κάνεις Αίτηση!"
+      },
+      "breakdown": {
+        "title": "Ανάλυση ανά Κατηγορία"
+      },
+      "beyondTech": {
+        "title": "Τα Technical Skills δεν φτάνουν μόνα τους",
+        "subtitle": "Ακόμα κι αν έχεις όλα τα technical skills παραπάνω, οι εταιρείες αξιολογούν επίσης:",
+        "brandingTitle": "Personal Branding",
+        "brandingDesc": "GitHub profile, LinkedIn presence, online portfolio — η πρώτη εντύπωση πριν καν μιλήσεις με κάποιον recruiter.",
+        "cvTitle": "CV & LinkedIn",
+        "cvDesc": "Ένα βιογραφικό που περνά ATS φίλτρα και κάνει recruiters να σε καλέσουν για interview.",
+        "interviewsTitle": "Interviews",
+        "interviewsDesc": "Technical questions, system design, behavioral rounds — skills που χρειάζονται εξάσκηση και mentoring."
+      }
+    }
   }
 }

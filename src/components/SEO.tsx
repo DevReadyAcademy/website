@@ -36,7 +36,7 @@ const SEO: React.FC<SEOProps> = ({
   language = 'en',
   structuredData,
 }) => {
-  const fullTitle = title.includes('DevReady') ? title : `${title} | DevReady`;
+  const fullTitle = title?.includes('DevReady') ? title : `${title || ''} | DevReady`;
   const ogTitleFinal = ogTitle || fullTitle;
   const ogDescriptionFinal = ogDescription ?? description;
   const ogLocale = language === 'gr' ? 'el_GR' : 'en_US';

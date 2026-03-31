@@ -7,14 +7,14 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const TermsOfService: React.FC = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
 
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": t('terms.title'),
         "description": t('terms.intro'),
-        "url": "https://www.devready.gr/terms-of-service",
+        "url": "https://www.devready.gr/terms",
         "publisher": {
             "@type": "Organization",
             "name": "DevReady",
@@ -27,15 +27,19 @@ const TermsOfService: React.FC = () => {
 
     return (
         <div className="min-h-screen flex flex-col">
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
+                Skip to main content
+            </a>
             <SEO
                 title={`${t('terms.title')} | DevReady`}
                 description="Read our Terms of Service to understand the rules and regulations for using DevReady's website and services."
-                canonical="https://www.devready.gr/terms-of-service"
+                canonical="https://www.devready.gr/terms"
                 keywords="terms of service, user agreement, legal, devready terms"
+                language={language}
                 structuredData={structuredData}
             />
             <Header />
-            <main className="flex-grow container mx-auto px-4 py-8 pt-24 max-w-4xl">
+            <main id="main-content" className="flex-grow container mx-auto px-4 py-8 pt-32 max-w-4xl">
                 <div className="prose max-w-none">
                     <h1 className="text-3xl font-bold mb-4">{t('terms.title')}</h1>
                     <p className="mb-4"><strong>{t('terms.lastUpdated')}</strong></p>

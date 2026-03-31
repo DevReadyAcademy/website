@@ -1,17 +1,15 @@
 import earlyBirdConfig from '../config/earlyBird';
 
 /**
- * Replaces placeholders in translation strings with early bird config values
- * Placeholders: {COHORT_DATE}, {SPOTS_LEFT}, {URGENCY_BADGE}, {ORIGINAL_PRICE}, {EARLY_BIRD_PRICE}
+ * Replaces placeholders in translation strings with config values
+ * Placeholders: {COHORT_DATE}, {PRICE}, {COHORT_YEAR}
  */
 export const injectEarlyBirdValues = (translations, lang = 'en') => {
   const placeholders = {
     '{COHORT_DATE}': earlyBirdConfig.getCohortDateRange(lang),
-    '{SPOTS_LEFT}': earlyBirdConfig.getSpotsLeftText(lang),
-    '{URGENCY_BADGE}': earlyBirdConfig.getUrgencyBadge(lang),
-    '{ORIGINAL_PRICE}': earlyBirdConfig.originalPrice,
-    '{EARLY_BIRD_PRICE}': earlyBirdConfig.earlyBirdPrice,
+    '{PRICE}': earlyBirdConfig.price,
     '{COHORT_YEAR}': earlyBirdConfig.cohortYear.toString(),
+    '{SPOTS}': earlyBirdConfig.remainingSpots.toString(),
   };
 
   const replaceInObject = (obj) => {

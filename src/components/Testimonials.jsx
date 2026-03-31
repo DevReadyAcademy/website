@@ -152,7 +152,7 @@ const Testimonials = () => {
             <Button
                 variant="outline"
                 size="icon"
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 rounded-full shadow-lg bg-background"
+                className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-2 md:-translate-x-6 rounded-full shadow-lg bg-background"
                 onClick={goToPrevious}
                 aria-label="Previous testimonial"
                 title="Previous testimonial"
@@ -162,7 +162,7 @@ const Testimonials = () => {
             <Button
                 variant="outline"
                 size="icon"
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 rounded-full shadow-lg bg-background"
+                className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-2 md:translate-x-6 rounded-full shadow-lg bg-background"
                 onClick={goToNext}
                 aria-label="Next testimonial"
                 title="Next testimonial"

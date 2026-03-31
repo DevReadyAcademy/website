@@ -7,14 +7,14 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const PrivacyPolicy: React.FC = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
 
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": t('privacy.title'),
         "description": t('privacy.intro'),
-        "url": "https://www.devready.gr/privacy-policy",
+        "url": "https://www.devready.gr/privacy",
         "publisher": {
             "@type": "Organization",
             "name": "DevReady",
@@ -27,15 +27,19 @@ const PrivacyPolicy: React.FC = () => {
 
     return (
         <div className="min-h-screen flex flex-col">
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
+                Skip to main content
+            </a>
             <SEO
                 title={`${t('privacy.title')} | DevReady`}
                 description="Read our Privacy Policy to understand how DevReady collects, uses, and protects your personal information."
-                canonical="https://www.devready.gr/privacy-policy"
+                canonical="https://www.devready.gr/privacy"
                 keywords="privacy policy, data protection, gdpr, devready privacy, terms"
+                language={language}
                 structuredData={structuredData}
             />
             <Header />
-            <main className="flex-grow container mx-auto px-4 py-8 pt-24 max-w-4xl">
+            <main id="main-content" className="flex-grow container mx-auto px-4 py-8 pt-32 max-w-4xl">
                 <div className="prose max-w-none">
                     <h1 className="text-3xl font-bold mb-4">{t('privacy.title')}</h1>
                     <p className="mb-4"><strong>{t('privacy.lastUpdated')}</strong></p>

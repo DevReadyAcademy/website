@@ -1,6 +1,129 @@
 export const blogPosts = [
   {
-    id: 2,
+    id: 4,
+    slug: "why-do-you-need-a-mentor",
+    title: "Why Do You Need a Mentor?",
+    titleGr: "Γιατί Χρειάζεσαι έναν Mentor;",
+    excerpt: "Having a mentor can be a valuable asset in your personal and professional growth.",
+    excerptGr: "Το να έχεις έναν mentor μπορεί να είναι πολύτιμο asset για την προσωπική και επαγγελματική σου ανάπτυξη.",
+    content: `# 🧭 Why Do You Need a Mentor?
+
+Throughout my life, I have relied on my friends and family to help me with problems and ideas as I navigated life. However, as I have become more proficient in my field, I have found that their help is limited and it's completely normal. Problems can become more complex or take on dimensions that I have never dealt with before. Recently, I realized that to improve my profession and life in general, I need mentors, not just one, but several.
+
+## ❓ Why Do You Need Mentors
+
+As you grow older, you expose yourself to multiple fields that may require expertise. For instance, I have been trying to secure a home loan to buy my first house, and I discovered that I knew nothing about real estate and loans. Moreover, no one in my network knew anything about it either, so I had to learn everything by myself. Finance is not my area of expertise, but as I explore more opportunities and options, I realize that I need to equip myself with more knowledge in this domain. It's tough to jump into a new field all by yourself, and that's when it hit me: **I need a mentor!**
+
+Here are some reasons why you may need a mentor:
+
+1. **Gain knowledge and expertise:** A mentor can share their experience and expertise with you and help you learn new skills and knowledge that can benefit your personal and professional life.
+2. **Receive guidance and support:** A mentor can provide guidance and support in making important decisions and navigating challenges. They can help you see things from a different perspective and provide you with constructive feedback.
+3. **Build confidence and self-esteem:** A mentor can help you build your confidence and self-esteem by encouraging you and helping you identify your strengths and weaknesses.
+4. **Expand your network:** A mentor can introduce you to new people in your industry or field, which can help you expand your professional network.
+5. **Learn from their mistakes:** A mentor can help you avoid making the same mistakes they did and provide you with insights into how to navigate difficult situations.
+
+Mentors can help you save time by giving you shortcuts and sharing their experiences with you, so you can make wiser decisions and navigate your way more effectively. However, they are not just efficiency tools; they can also assist you in living a more relaxed and healthier life. Sometimes, it's not just about career or finance but also about the life lessons that you can learn from a more experienced person. I firmly believe that a mentoring relationship is unique and can sometimes turn into a great friendship too. Overall, having a mentor can be a valuable asset in your personal and professional growth.
+
+## 🔍 Where to Look for Mentors
+
+1. Start by looking at your networks. If you have friends who are more experienced than you, learn from them. Give them a chance to teach you something you're interested in learning.
+
+2. Your workplace is an excellent place to look for mentors too. I have found throughout my career that many people are more than willing to help you. Companies usually have a mentoring program, but even if they don't, don't let that stop you. You can ask someone to mentor you unofficially. At Skyscanner, I have one official mentor and two more unofficial ones with whom I have regular talks about my concerns and ideas. You will be amazed at how much time you can save and what you can learn from your mentors.
+
+3. Depending on the field you want to be mentored in, try to search in places where mentors usually live, like industry events, conferences, seminars.
+
+4. You can also find mentors through several online platforms that connect mentors with mentees, such as LinkedIn and MentorCruise.
+
+## 👔 Lead Your Mentoring Relationship
+
+It's your responsibility to lead the mentoring relationship. Your mentor is also learning, and it's really beneficial for them, but mainly, it's about you. You have to come up with topics and goals and schedule the length of the engagement, the place, and the frequency. You are responsible for maintaining the mentoring relationship. One suggestion for people who are not familiar with mentoring is to keep the mentoring relationship **short-term** in the beginning. People often make the mistake of committing for a long time and then feel reluctant to break it off when there is no value anymore. Leadership requires courage, and you will need that when you realize that there is no more reason to meet with your mentor.
+
+Being a mentee is a great experience, and besides learning what you aimed for, you learn how to lead relationships and take actions and initiatives. So please start small with a short-term relationship and then adjust according to your needs.
+
+### 💡 Tips for Mentees
+
+1. **Be clear about your goals:** Know what you want to achieve from the mentorship relationship and communicate your goals clearly to your mentor. This will help your mentor provide more targeted guidance and support.
+
+2. **Be open and receptive:** Be open to feedback and new perspectives. Your mentor may challenge you and push you out of your comfort zone, but this can lead to growth and learning.
+
+3. **Take ownership of your learning:** While your mentor is there to guide you, it's essential to take responsibility for your own learning and development. Be proactive in seeking out resources and opportunities to learn.
+
+4. **Respect your mentor's time:** Be mindful of your mentor's time and availability. Come prepared to each meeting with specific questions or topics to discuss, and be respectful of their schedule.
+
+5. **Show gratitude:** Express gratitude and appreciation for your mentor's time and guidance. Let them know how their mentorship has impacted you and your growth.
+
+Remember that mentorship is a **two-way** street, and both parties can learn and benefit from the relationship.
+
+## 🙏 Conclusion
+
+Don't be afraid to ask people to mentor you; most people will be happy to do it. I've learnt so many valuable lessons from my mentors in so many different parts of life. I would not be here without my mentors, my family, Vasilis, Patroklos, Dimitris, PJ, Stratos, and Tudor, thank you for teaching me all these amazing lessons.
+
+---
+
+**Looking for mentorship in software engineering?** Check out our [6-week accelerator](/accelerator) where experienced engineers guide you through your journey into tech.
+    `,
+    contentGr: `# 🧭 Εισαγωγή
+
+Σε όλη μου τη ζωή, βασιζόμουν σε φίλους και οικογένεια για να με βοηθήσουν με προβλήματα και ιδέες. Ωστόσο, καθώς εξελίχθηκα επαγγελματικά, κατάλαβα ότι η βοήθειά τους έχει όρια και αυτό είναι απόλυτα φυσιολογικό. Τα ζητήματα γίνονται πιο σύνθετα και παίρνουν διαστάσεις που δεν έχω αντιμετωπίσει ποτέ πριν. Νωρίς στην καριέρα μου συνειδητοποίησα ότι για να αναβαθμίσω τόσο την καριέρα όσο και τη ζωή μου χρειάζομαι mentors, όχι έναν αλλά αρκετούς.
+
+## ❓ Γιατί Χρειάζεσαι Mentors
+
+Καθώς εκτίθεσαι σε νέους χώρους και ευκαιρίες, συναντάς προβλήματα που απαιτούν expertise. Για παράδειγμα, όταν προσπαθούσα να βρω στεγαστικό δάνειο, ανακάλυψα ότι δεν γνώριζα τίποτα για real estate ή δάνεια. Και κανείς στο network μου δεν είχε εμπειρία, οπότε έπρεπε να μάθω τα πάντα μόνος μου. Τα finance δεν είναι ο κύριος τομέας expertise μου, αλλά καθώς εξετάζω περισσότερες επιλογές, καταλαβαίνω ότι πρέπει να εξοπλίσω τον εαυτό μου με γνώση και σε αυτό τον χώρο. Είναι δύσκολο να μπαίνεις μόνος σου σε έναν καινούριο τομέα, και τότε κατάλαβα: **Χρειάζομαι mentor!**
+
+Μερικοί λόγοι για να έχεις mentor:
+
+1. **Απόκτηση γνώσης και εμπειρίας:** Ο mentor μοιράζεται την εμπειρία και το expertise του για να μάθεις νέα skills που σε βοηθούν στην προσωπική και επαγγελματική σου ζωή.
+2. **Καθοδήγηση και υποστήριξη:** Ο mentor σε βοηθάει να παίρνεις σημαντικές αποφάσεις, να αντιμετωπίζεις προκλήσεις και να βλέπεις τα πράγματα από διαφορετική οπτική μέσα από feedback.
+3. **Ενίσχυση αυτοπεποίθησης:** Ο mentor σε ενθαρρύνει, σου δείχνει ποια είναι τα δυνατά σου σημεία και σε βοηθά να βρεις τις αδυναμίες σου.
+4. **Επέκταση του δικτύου σου:** Ένας mentor μπορεί να σε συστήσει σε ανθρώπους του κλάδου και να ανοίξει δρόμους δικτύωσης (networking).
+5. **Μάθηση από λάθη άλλων:** Ο mentor σου δείχνει πως να αποφύγεις παγίδες και πώς να χειριστείς δύσκολες καταστάσεις.
+
+Οι mentors σου εξοικονομούν χρόνο, μοιράζοντας shortcuts και εμπειρίες για να παίρνεις πιο ώριμες αποφάσεις. Δεν είναι απλώς εργαλεία αποτελεσματικότητας, μπορούν να σε βοηθήσουν να ζήσεις πιο ήρεμα, healthy και ισορροπημένα. Μερικές φορές, πρόκειται για life lessons που δεν μαθαίνεις αλλού. Πιστεύω ότι μια mentoring σχέση είναι μοναδική και συχνά εξελίσσεται σε καλή φιλία. Συνολικά, ένας mentor είναι ένα πολύτιμο asset για την εξέλιξή σου.
+
+## 🔍 Πού να Ψάξεις Mentors
+
+1. Κοίταξε στο άμεσο network σου: φίλοι με περισσότερη εμπειρία μπορούν να σου μάθουν κάτι που σε ενδιαφέρει.
+
+2. Ο χώρος εργασίας σου είναι εξαιρετικός. Έχω διαπιστώσει ότι πολλοί συνάδελφοι θέλουν να βοηθήσουν. Αν δεν υπάρχει επίσημο mentoring πρόγραμμα, ζήτα έναν mentor ανεπίσημα. Στη Skyscanner είχα έναν official mentor και δύο unofficial με τους οποίους συζητούσα τακτικά.
+
+3. Αναζήτησε mentors σε industry events, conferences και seminars ανάλογα με το πεδίο που σε ενδιαφέρει.
+
+4. Υπάρχουν πολλές πλατφόρμες που συνδέουν mentors με mentees—επέλεξε αυτή που ταιριάζει περισσότερο στο πεδίο σου.
+
+## 👔 Οδήγησε την Mentoring Σχέση
+
+Είναι δική σου ευθύνη να οδηγήσεις τη σχέση. Ο mentor σου μαθαίνει επίσης, αλλά πάνω απ’ όλα αφορά εσένα. Θέσε topics και στόχους, προγραμμάτισε διάρκεια, τόπο και συχνότητα των συναντήσεων. Εσύ είσαι υπεύθυνος για την εξέλιξη της σχέσης. Στην αρχή κράτα τη σχέση **short-term**, γιατί πολλοί δεσμεύονται για πολύ και μετά δυσκολεύονται να το διακόψουν όταν δεν υπάρχει τόσο value. Το leadership απαιτεί τόλμη όταν καταλαβαίνεις ότι έχει τελειώσει ο κύκλος με τον mentor.
+
+Το να είσαι mentee σου μαθαίνει πώς να διαχειρίζεσαι σχέσεις και να παίρνεις initiative. Start small με μια short-term σχέση και προσαρμόσου ανάλογα με τις ανάγκες σου.
+
+### 💡 Tips για Mentees
+
+1. **Να έχεις ξεκάθαρους στόχους:** Επικοινώνησέ τους στον mentor ώστε να σου παρέχει στοχευμένη καθοδήγηση.
+2. **Να είσαι ανοικτός:** Δέξου το feedback και τις νέες οπτικές, ακόμα κι αν σε βγάζουν από την comfort zone.
+3. **Ανάλαβε ευθύνη για τη μάθησή σου:** Ο mentor είναι συνοδηγός, αλλά εσύ έχεις το τιμονί.
+4. **Σεβάσου τον χρόνο του mentor:** Έλα προετοιμασμένος με ερωτήσεις και topics και σεβάσου το πρόγραμμα του.
+5. **Δείξε ευγνωμοσύνη:** Ενημέρωσέ τον πώς σε έχει βοηθήσει ο mentor στο growth σου.
+
+Το mentorship είναι **two-way** street όπου και οι δύο πλευρές ωφελούνται.
+
+## 🙏 Wrap Up
+
+Μη φοβάσαι να ζητήσεις mentorship. Οι περισσότεροι θα το δέχονται με χαρά και είναι ένα πολύτιμο ταξίδι μάθησης. Έχω μάθει τόσα lessons από τους mentors μου σε κάθε πτυχή της ζωής μου.
+
+
+**Ψάχνεις mentorship στο software engineering;** Δες το [6-week accelerator μας](/accelerator) όπου έμπειροι engineers σε καθοδηγούν στο ταξίδι σου στο tech.
+    `,
+    author: "Alexis Pavlidis",
+    date: "2026-02-25",
+    readTime: "6 min read",
+    readTimeGr: "6 λεπτά διάβασμα",
+    tags: ["Mentoring", "Career", "Growth"],
+    tagsGr: ["Mentoring", "Career", "Growth"],
+    image: "/assets/blogs/mentoring/mentoring.jpg",
+    published: true
+  },
+  {
+    id: 6,
     slug: "how-i-keep-up-with-software",
     title: "How I Keep Up with Software",
     titleGr: "Πώς κάνω keep up στο Software",
@@ -573,6 +696,143 @@ Honestly, δεν έχει τόση σημασία.
     image: "/assets/blogs/project.jpg",
     imageAlt: "Project and portfolio concept: one strong project that demonstrates engineering practices can get you hired.",
     imageAltGr: "Ένα project που δείχνει engineering practices και σε κάνει hire: ιδέα για portfolio.",
+    published: true
+  },
+  {
+    id: 5,
+    slug: "how-we-built-ai-cv-review",
+    title: "How We Built an AI-Powered CV Review Tool",
+    titleGr: "Πώς Χτίσαμε ένα AI-Powered CV Review Tool",
+    excerpt: "We wanted to give instant, actionable feedback on every CV uploaded to DevReady. Here's how we built it, from multi-step forms and S3 storage to n8n workflows and AI prompt engineering.",
+    excerptGr:
+        "Θέλαμε να δώσουμε instant, actionable feedback σε κάθε CV που ανεβαίνει στο DevReady. Εδώ είναι πώς το χτίσαμε, από multi-step form και S3 storage μέχρι n8n workflow και AI prompt engineering.",
+    contentGr: `
+## 👋 Εισαγωγή
+
+Ένα από τα πιο συχνά requests που παίρναμε στο DevReady ήταν: **"Μπορείς να μου κάνεις review το CV μου;"** Αν δεν το έχεις δει ακόμα, μιλάμε για το [δωρεάν CV Review tool](/cv-review) μας. Το κάναμε manually για αρκετό καιρό, αλλά δεν έκανε scale. Χρειαζόμασταν έναν τρόπο να δώσουμε instant, structured feedback σε κάθε developer που μας εμπιστεύεται το CV του.
+
+Η λύση ήταν ένα automated pipeline που παίρνει το CV σου σε PDF, το περνάει από AI με recruiter perspective, και σου γυρνάει detailed feedback σε λεπτά.
+Σε αυτό το post θα δεις πώς το χτίσαμε, τι τρέχει under the hood, και τι μάθαμε.
+
+## 🧩 High-Level Architecture
+
+Τρία components μιλάνε μεταξύ τους:
+
+1. **Frontend**: React multi-step form για τη συλλογή στοιχείων και upload
+2. **Backend (LMS API)**: Node.js/Express που χειρίζεται authentication, file storage και data processing
+3. **n8n Workflow**: Automation platform που κανει orchestrate το AI review pipeline
+
+Κάθε κομμάτι κάνει ένα πράγμα καλά και είναι αρκετά decoupled μεταξύ τους για first version. Αν θέλουμε αύριο να αλλάξουμε κάτι στο AI pipeline, δεν χρειάζεται να αγγίξουμε τo frontend ή το backend.
+
+## 🗺️ Architecture Diagram & System Flow
+
+![CV Review Architecture Diagram](/assets/blogs/n8n_architecture.webp)
+
+Ολόκληρη η διαδικασία end-to-end:
+
+1. Ο χρήστης συμπληρώνει τα στοιχεία του στο **React frontend** και ανεβάζει το CV σε PDF
+2. Το **backend** αποθηκεύει το PDF στο **S3 (MinIO)**, δημιουργεί ένα CvReview document στο **MongoDB**, και κάνει trigger ένα **n8n webhook**
+3. Το **n8n** κατεβάζει το PDF από S3, κάνει extract το text, και το στέλνει στο **GPT-4o-mini** για review
+4. Το AI γυρνάει HTML feedback, το n8n κάνει **POST τα results πίσω στο backend** (callback pattern)
+5. Το backend αποθηκεύει τα results και το n8n **στέλνει email** στον χρήστη με link στα αποτελέσματα
+
+Περισσότερες λεπτομέρεις θα βρείτε παρακάτω.
+
+## 📝 User Journey
+
+1. **Step 1, Personal Info:** Ο χρήστης βάζει όνομα, email και τηλέφωνο.
+2. **Step 2, Email Verification:** Στέλνουμε 6-digit code στο email, ο χρήστης το επιβεβαιώνει.
+3. **Step 3, CV Upload:** Ανεβάζει το CV σε PDF (μέχρι 5MB).
+4. **Step 4, Results:** Μέσα σε λίγα λεπτά παίρνει email με link στα αποτελέσματα.
+
+## 📦 File Storage με S3 (MinIO)
+
+Δεν αποθηκεύουμε τα CVs στο filesystem του server. Χρησιμοποιούμε **MinIO**, ένα S3-compatible object store. Το PDF ανεβαίνει σε ένα dedicated bucket, με unique filename (timestamp + original name) για να αποφύγουμε collisions.
+
+Γιατί MinIO και όχι απευθείας AWS S3; Γιατί τρέχουμε το δικό μας infrastructure, self-hosted, και το MinIO μας δίνει full S3 API compatibility χωρίς vendor lock-in. Αν αύριο θέλουμε να μεταφερθούμε σε AWS, αλλάζουμε μόνο τα credentials.
+
+Μόλις ολοκληρωθεί το upload, δημιουργούμε ένα \`CvReview\` document στο MongoDB με τα metadata (fileKey, originalName, mimeType, size) και κάνουμε trigger το n8n webhook.
+
+## ⚡ Το n8n Workflow
+
+Το **n8n** είναι ένα open-source workflow automation tool. Σκέψου Zapier, αλλά self-hosted και πολύ πιο flexible. Το pipeline μας έχει 6 nodes σε σειρά:
+
+- **Webhook** : Ακούει για POST requests από το backend. Λαμβάνει email, firstName, lastName, fileName, fileUrl και cvReviewId.
+- **Download CV** : Κατεβάζει το PDF από το S3 bucket. Χρειαζόμαστε το actual file, όχι μόνο URL, γιατί το επόμενο node θέλει binary data.
+- **Extract Text** : Παίρνει το binary PDF και κάνει extract όλο το text content. Built-in n8n node, zero custom code.
+- **AI Review (GPT-4o-mini)** : Περνάει ολόκληρο το extracted text στο GPT-4o-mini μαζί με ένα πολύ specific system prompt. Το πιο σημαντικό κομμάτι του pipeline, θα μιλήσω αναλυτικά παρακάτω.
+- **Post Results Back** : Στέλνει τα HTML results πίσω στο LMS API, authenticated με shared API key.
+- **Send Email** : Στέλνει styled HTML email στον χρήστη με link στα αποτελέσματα. Retry on fail enabled γιατί δεν θέλουμε ένα email failure να χάσει τον χρήστη.
+
+Κάθε node τρέχει sequentially. Αν κάποιο αποτύχει, το pipeline σταματάει (εκτός από το email που κάνει retry).
+
+## 🧠 Prompt Engineering — Το Πιο Core Κομμάτι
+
+Το AI model μπορεί να είναι όσο smart θέλει, αλλά αν το prompt δεν είναι σωστό, τα results θα είναι generic και useless. Εδώ πήγε ο περισσότερος χρόνος: **iterating πάνω στο prompt μέχρι να βγάζει consistently καλά results.**
+
+Δομήσαμε το prompt με XML-style tags:
+
+**Persona & Constraints:**
+Το model παίζει ρόλο **έμπειρου Technical Recruiter**. Γράφει στα ελληνικά, σε 2ο πρόσωπο ("Το CV σου", "Θα μπορούσες να..."), και output format αυστηρά HTML (\`<p>\`, \`<ul>\`, \`<strong>\`).
+
+**Constraints που κάνουν τη διαφορά:**
+- **Don't comment on things done right.** Αν κάτι δουλεύει ήδη, δεν χρειάζεται compliment. Μόνο risks και improvements.
+- **If a section is missing, don't mention it.** Δεν θέλουμε να πει "You don't have a summary section" αν ο χρήστης δεν έβαλε.
+- **No greetings or introductions.** Ξεκινάει απευθείας με substance.
+
+**8 Evaluation Rules:**
+Αυτά δίνουν στο model ένα structured framework. Βγήκαν μετά από εκατοντάδες manual reviews, όχι θεωρητικά:
+
+1. **Information Density**: Αν υπάρχουν >3 γραμμές χωρίς bullets, flag it ως "hard to scan"
+2. **Role Clarity**: Αν οι ρόλοι δεν σχετίζονται, flag targeting ambiguity
+3. **Order & Priority**: Experience πάνω από Education, current role gets most detail
+4. **Bullet Quality**: Action verbs, αριθμοί, metrics
+5. **Soft Skills**: Αν είναι standalone λέξεις χωρίς context, flag as low-value
+6. **Projects**: "Πώς χτίστηκε" > "Τι κάνει"
+7. **Summary**: Generic summaries = no value
+8. **Overall Impression**: Αν μέσα σε 60'' δεν φαίνεται η αξία, η πληροφορία είναι "θαμμένη" (difficult to find)
+
+Γιατί **GPT-4o-mini** και όχι GPT-4o ή κάτι μεγαλύτερο; Τα results ήταν consistently καλά σε αυτό το task, κοστίζει σημαντικά λιγότερο, και η ταχύτητα μετράει. Ένα CV review πρέπει να γυρνάει σε λεπτά, όχι σε ώρες. To be honest, ήμασταν surprised με την ποιότητα. Με σωστό prompt engineering, τα μικρότερα models κάνουν εξαιρετική δουλειά σε focused tasks.
+
+## 🔄 Callback Pattern
+
+Αντί το backend να κάνει poll ("Τελείωσε; Τελείωσε; Τελείωσε;"), ο n8n κάνει POST τα results πίσω στο API μόλις τελειώσει. Authenticated με shared API key. Simple, decoupled, reliable.
+
+Ο χρήστης δεν χρειάζεται να κάθεται ανοιχτή η σελίδα. Ανεβάζει, φεύγει, παίρνει email μόλις είναι έτοιμα τα results. No polling, no webSockets.
+
+## 🔔 Monitoring & Alerts
+
+Τρέχουμε ένα **Agenda background job** που κάνει check κάθε ώρα. Αν βρεθεί CV review που είναι pending πάνω από 1 ώρα χωρίς results, στέλνει **Discord alert** στους admins.
+
+Υπάρχει και **admin dashboard** που δείχνει όλα τα reviews. Μπορείς επίσης να κάνεις **retrigger το webhook** αν το processing απέτυχε. Αυτό μας έχει σώσει αρκετές φορές μέχρι τώρα.
+
+## 🧪 Τι Μάθαμε
+
+**Prompt iteration is everything.** Το πρώτο prompt ήταν generic. Results τύπου "Your CV looks good but could use some improvements." Useless. Χρειάστηκαν αρκετά iterations μέχρι να βγαίνει consistently specific, actionable feedback. Τα XML-style tags βοήθησαν πολύ.
+
+**Small models, focused tasks.** Δεν χρειάζεσαι πάντα το μεγαλύτερο model. Αν το task είναι well-defined με clear rules, τα μικρότερα models αποδίδουν εξαιρετικά. Και κοστίζουν λιγότερο, σημαντικό αν θέλεις να κάνεις scale.
+
+**Monitoring from day one.** Βάλε monitoring ακόμα κι αν νομίζεις ότι δεν χρειάζεται. Ένα απλό hourly check + Discord alert μας γλίτωσε πολλές φορές.
+
+**Decouple everything.** Webhooks αντί για tight coupling. Μπορούμε να αλλάξουμε ολόκληρο το AI pipeline χωρίς να αγγίξουμε ούτε μια γραμμή στο backend.
+
+## 🎯 Wrap Up
+
+Δεν είναι rocket science. Καλό prompt engineering, σωστό architecture, monitoring, και focus στο user experience. Αυτά.
+
+Αν σε ενδιαφέρει να χτίζεις τέτοια πράγματα ή θέλεις να δεις πώς δουλεύει real-world software engineering, δες το [6-week accelerator](/accelerator) μας. Hands-on, production-grade projects, σαν αυτό.
+
+Και αν θέλεις να δοκιμάσεις το tool, [ανέβασε το CV σου δωρεάν](/cv-review) και πάρε feedback σε λίγα λεπτά.
+`,
+    author: "Alexis Pavlidis",
+    date: "2026-03-07",
+    readTime: "10 min read",
+    readTimeGr: "10 λεπτά διάβασμα",
+    tags: ["Engineering", "AI", "Architecture", "n8n"],
+    tagsGr: ["Engineering", "AI", "Architecture", "n8n"],
+    image: "/assets/blogs/ai_n8n.webp",
+    imageAlt: "Architecture diagram showing the CV Review pipeline: React frontend, Node.js backend, S3 storage, n8n workflow and GPT-4o-mini.",
+    imageAltGr: "Architecture diagram του CV Review pipeline: React frontend, Node.js backend, S3 storage, n8n workflow και GPT-4o-mini.",
     published: true
   }
 ];

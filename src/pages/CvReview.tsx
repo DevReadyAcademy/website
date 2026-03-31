@@ -100,8 +100,11 @@ const CvReview: React.FC = () => {
                 language={language}
                 structuredData={structuredData}
             />
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
+                Skip to main content
+            </a>
             <Header />
-            <main className="pt-24 min-h-screen flex flex-col bg-gray-50">
+            <main id="main-content" className="pt-32 min-h-screen flex flex-col bg-gray-50">
                 {/* Hero Section */}
                 <section className="px-4 py-12 md:py-20 text-center">
                     <div className="container mx-auto max-w-4xl">

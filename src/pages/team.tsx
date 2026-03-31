@@ -9,7 +9,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Team = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const teamMembers = t('journey.teamMembers') || [];
   const timeline = t('journey.timeline') || [];
@@ -21,10 +21,14 @@ const Team = () => {
         description="Meet Alex, Kostas, and Vasilis - the team behind DevReady. From dozens of job rejections to helping others break into tech."
         keywords="DevReady team, about us, tech education Greece, software engineering mentors, meet the team, tech mentorship"
         canonical="https://www.devready.gr/team"
+        language={language}
       />
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">
+        Skip to main content
+      </a>
       <Header />
-      <div className="min-h-screen bg-background pt-20 overflow-x-hidden">
-        <main>
+      <div className="min-h-screen bg-background pt-28 overflow-x-hidden">
+        <main id="main-content">
           {/* Hero Section */}
           <section className="py-16 px-4 bg-gradient-hero">
             <div className="container mx-auto max-w-4xl text-center">
@@ -70,7 +74,7 @@ const Team = () => {
                     <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl">
                       <img
                         src={member.image}
-                        alt={member.name}
+                        alt={`${member.name} - ${member.role}`}
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
@@ -216,7 +220,7 @@ const Team = () => {
             <div className="container mx-auto max-w-4xl">
               <div className="text-center p-12 rounded-3xl bg-gradient-primary text-primary-foreground shadow-2xl">
                 <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
-                  ⏰ Only 5 Early Bird Spots at €299
+                  {t('accelerator.urgencyBadge')}
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
                   {t('accelerator.finalCtaTitle')}

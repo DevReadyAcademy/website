@@ -4,15 +4,16 @@ import { ArrowRight, Calendar, Users, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button.tsx";
 import { useLanguage } from '../contexts/LanguageContext';
+import CohortCountdown from './CohortCountdown';
 
 const Hero = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 pt-20 overflow-hidden bg-gradient-hero" aria-label="Hero section">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 pt-28 overflow-hidden bg-gradient-hero" aria-label="Hero section">
       <div className="relative z-10 max-w-5xl mx-auto">
         
-        {/* Early Bird Badge */}
+        {/* Cohort Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -20,9 +21,19 @@ const Hero = () => {
           className="mb-6"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full text-sm font-semibold backdrop-blur-sm">
-            <Calendar className="w-4 h-4" />
+            <Calendar className="w-4 h-4" aria-hidden="true" />
             {t('hero.urgencyBadge')}
           </span>
+        </motion.div>
+
+        {/* Countdown Timer */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mb-8"
+        >
+          <CohortCountdown variant="prominent" />
         </motion.div>
 
         {/* Main Headline - Value Proposition */}
@@ -82,7 +93,7 @@ const Hero = () => {
           >
             <Link to="/contact">
               {t('common.secureYourSpot')}
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Link>
           </Button>
           
@@ -106,15 +117,15 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground"
         >
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-primary" />
+            <CheckCircle className="w-5 h-5 text-primary" aria-hidden="true" />
             <span>{t('hero.trust1')}</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-primary" />
+            <CheckCircle className="w-5 h-5 text-primary" aria-hidden="true" />
             <span>{t('hero.trust2')}</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-primary" />
+            <CheckCircle className="w-5 h-5 text-primary" aria-hidden="true" />
             <span>{t('hero.trust3')}</span>
           </div>
         </motion.div>
