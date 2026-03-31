@@ -1,128 +1,5 @@
 export const blogPosts = [
   {
-    id: 4,
-    slug: "why-do-you-need-a-mentor",
-    title: "Why Do You Need a Mentor?",
-    titleGr: "Γιατί Χρειάζεσαι έναν Mentor;",
-    excerpt: "Having a mentor can be a valuable asset in your personal and professional growth.",
-    excerptGr: "Το να έχεις έναν mentor μπορεί να είναι πολύτιμο asset για την προσωπική και επαγγελματική σου ανάπτυξη.",
-    content: `# 🧭 Why Do You Need a Mentor?
-
-Throughout my life, I have relied on my friends and family to help me with problems and ideas as I navigated life. However, as I have become more proficient in my field, I have found that their help is limited and it's completely normal. Problems can become more complex or take on dimensions that I have never dealt with before. Recently, I realized that to improve my profession and life in general, I need mentors, not just one, but several.
-
-## ❓ Why Do You Need Mentors
-
-As you grow older, you expose yourself to multiple fields that may require expertise. For instance, I have been trying to secure a home loan to buy my first house, and I discovered that I knew nothing about real estate and loans. Moreover, no one in my network knew anything about it either, so I had to learn everything by myself. Finance is not my area of expertise, but as I explore more opportunities and options, I realize that I need to equip myself with more knowledge in this domain. It's tough to jump into a new field all by yourself, and that's when it hit me: **I need a mentor!**
-
-Here are some reasons why you may need a mentor:
-
-1. **Gain knowledge and expertise:** A mentor can share their experience and expertise with you and help you learn new skills and knowledge that can benefit your personal and professional life.
-2. **Receive guidance and support:** A mentor can provide guidance and support in making important decisions and navigating challenges. They can help you see things from a different perspective and provide you with constructive feedback.
-3. **Build confidence and self-esteem:** A mentor can help you build your confidence and self-esteem by encouraging you and helping you identify your strengths and weaknesses.
-4. **Expand your network:** A mentor can introduce you to new people in your industry or field, which can help you expand your professional network.
-5. **Learn from their mistakes:** A mentor can help you avoid making the same mistakes they did and provide you with insights into how to navigate difficult situations.
-
-Mentors can help you save time by giving you shortcuts and sharing their experiences with you, so you can make wiser decisions and navigate your way more effectively. However, they are not just efficiency tools; they can also assist you in living a more relaxed and healthier life. Sometimes, it's not just about career or finance but also about the life lessons that you can learn from a more experienced person. I firmly believe that a mentoring relationship is unique and can sometimes turn into a great friendship too. Overall, having a mentor can be a valuable asset in your personal and professional growth.
-
-## 🔍 Where to Look for Mentors
-
-1. Start by looking at your networks. If you have friends who are more experienced than you, learn from them. Give them a chance to teach you something you're interested in learning.
-
-2. Your workplace is an excellent place to look for mentors too. I have found throughout my career that many people are more than willing to help you. Companies usually have a mentoring program, but even if they don't, don't let that stop you. You can ask someone to mentor you unofficially. At Skyscanner, I have one official mentor and two more unofficial ones with whom I have regular talks about my concerns and ideas. You will be amazed at how much time you can save and what you can learn from your mentors.
-
-3. Depending on the field you want to be mentored in, try to search in places where mentors usually live, like industry events, conferences, seminars.
-
-4. You can also find mentors through several online platforms that connect mentors with mentees, such as LinkedIn and MentorCruise.
-
-## 👔 Lead Your Mentoring Relationship
-
-It's your responsibility to lead the mentoring relationship. Your mentor is also learning, and it's really beneficial for them, but mainly, it's about you. You have to come up with topics and goals and schedule the length of the engagement, the place, and the frequency. You are responsible for maintaining the mentoring relationship. One suggestion for people who are not familiar with mentoring is to keep the mentoring relationship **short-term** in the beginning. People often make the mistake of committing for a long time and then feel reluctant to break it off when there is no value anymore. Leadership requires courage, and you will need that when you realize that there is no more reason to meet with your mentor.
-
-Being a mentee is a great experience, and besides learning what you aimed for, you learn how to lead relationships and take actions and initiatives. So please start small with a short-term relationship and then adjust according to your needs.
-
-### 💡 Tips for Mentees
-
-1. **Be clear about your goals:** Know what you want to achieve from the mentorship relationship and communicate your goals clearly to your mentor. This will help your mentor provide more targeted guidance and support.
-
-2. **Be open and receptive:** Be open to feedback and new perspectives. Your mentor may challenge you and push you out of your comfort zone, but this can lead to growth and learning.
-
-3. **Take ownership of your learning:** While your mentor is there to guide you, it's essential to take responsibility for your own learning and development. Be proactive in seeking out resources and opportunities to learn.
-
-4. **Respect your mentor's time:** Be mindful of your mentor's time and availability. Come prepared to each meeting with specific questions or topics to discuss, and be respectful of their schedule.
-
-5. **Show gratitude:** Express gratitude and appreciation for your mentor's time and guidance. Let them know how their mentorship has impacted you and your growth.
-
-Remember that mentorship is a **two-way** street, and both parties can learn and benefit from the relationship.
-
-## 🙏 Conclusion
-
-Don't be afraid to ask people to mentor you; most people will be happy to do it. I've learnt so many valuable lessons from my mentors in so many different parts of life. I would not be here without my mentors, my family, Vasilis, Patroklos, Dimitris, PJ, Stratos, and Tudor, thank you for teaching me all these amazing lessons.
-
----
-
-**Looking for mentorship in software engineering?** Check out our [6-week accelerator](/accelerator) where experienced engineers guide you through your journey into tech.
-    `,
-    contentGr: `# 🧭 Εισαγωγή
-
-Σε όλη μου τη ζωή, βασιζόμουν σε φίλους και οικογένεια για να με βοηθήσουν με προβλήματα και ιδέες. Ωστόσο, καθώς εξελίχθηκα επαγγελματικά, κατάλαβα ότι η βοήθειά τους έχει όρια και αυτό είναι απόλυτα φυσιολογικό. Τα ζητήματα γίνονται πιο σύνθετα και παίρνουν διαστάσεις που δεν έχω αντιμετωπίσει ποτέ πριν. Νωρίς στην καριέρα μου συνειδητοποίησα ότι για να αναβαθμίσω τόσο την καριέρα όσο και τη ζωή μου χρειάζομαι mentors, όχι έναν αλλά αρκετούς.
-
-## ❓ Γιατί Χρειάζεσαι Mentors
-
-Καθώς εκτίθεσαι σε νέους χώρους και ευκαιρίες, συναντάς προβλήματα που απαιτούν expertise. Για παράδειγμα, όταν προσπαθούσα να βρω στεγαστικό δάνειο, ανακάλυψα ότι δεν γνώριζα τίποτα για real estate ή δάνεια. Και κανείς στο network μου δεν είχε εμπειρία, οπότε έπρεπε να μάθω τα πάντα μόνος μου. Τα finance δεν είναι ο κύριος τομέας expertise μου, αλλά καθώς εξετάζω περισσότερες επιλογές, καταλαβαίνω ότι πρέπει να εξοπλίσω τον εαυτό μου με γνώση και σε αυτό τον χώρο. Είναι δύσκολο να μπαίνεις μόνος σου σε έναν καινούριο τομέα, και τότε κατάλαβα: **Χρειάζομαι mentor!**
-
-Μερικοί λόγοι για να έχεις mentor:
-
-1. **Απόκτηση γνώσης και εμπειρίας:** Ο mentor μοιράζεται την εμπειρία και το expertise του για να μάθεις νέα skills που σε βοηθούν στην προσωπική και επαγγελματική σου ζωή.
-2. **Καθοδήγηση και υποστήριξη:** Ο mentor σε βοηθάει να παίρνεις σημαντικές αποφάσεις, να αντιμετωπίζεις προκλήσεις και να βλέπεις τα πράγματα από διαφορετική οπτική μέσα από feedback.
-3. **Ενίσχυση αυτοπεποίθησης:** Ο mentor σε ενθαρρύνει, σου δείχνει ποια είναι τα δυνατά σου σημεία και σε βοηθά να βρεις τις αδυναμίες σου.
-4. **Επέκταση του δικτύου σου:** Ένας mentor μπορεί να σε συστήσει σε ανθρώπους του κλάδου και να ανοίξει δρόμους δικτύωσης (networking).
-5. **Μάθηση από λάθη άλλων:** Ο mentor σου δείχνει πως να αποφύγεις παγίδες και πώς να χειριστείς δύσκολες καταστάσεις.
-
-Οι mentors σου εξοικονομούν χρόνο, μοιράζοντας shortcuts και εμπειρίες για να παίρνεις πιο ώριμες αποφάσεις. Δεν είναι απλώς εργαλεία αποτελεσματικότητας, μπορούν να σε βοηθήσουν να ζήσεις πιο ήρεμα, healthy και ισορροπημένα. Μερικές φορές, πρόκειται για life lessons που δεν μαθαίνεις αλλού. Πιστεύω ότι μια mentoring σχέση είναι μοναδική και συχνά εξελίσσεται σε καλή φιλία. Συνολικά, ένας mentor είναι ένα πολύτιμο asset για την εξέλιξή σου.
-
-## 🔍 Πού να Ψάξεις Mentors
-
-1. Κοίταξε στο άμεσο network σου: φίλοι με περισσότερη εμπειρία μπορούν να σου μάθουν κάτι που σε ενδιαφέρει.
-
-2. Ο χώρος εργασίας σου είναι εξαιρετικός. Έχω διαπιστώσει ότι πολλοί συνάδελφοι θέλουν να βοηθήσουν. Αν δεν υπάρχει επίσημο mentoring πρόγραμμα, ζήτα έναν mentor ανεπίσημα. Στη Skyscanner είχα έναν official mentor και δύο unofficial με τους οποίους συζητούσα τακτικά.
-
-3. Αναζήτησε mentors σε industry events, conferences και seminars ανάλογα με το πεδίο που σε ενδιαφέρει.
-
-4. Υπάρχουν πολλές πλατφόρμες που συνδέουν mentors με mentees—επέλεξε αυτή που ταιριάζει περισσότερο στο πεδίο σου.
-
-## 👔 Οδήγησε την Mentoring Σχέση
-
-Είναι δική σου ευθύνη να οδηγήσεις τη σχέση. Ο mentor σου μαθαίνει επίσης, αλλά πάνω απ’ όλα αφορά εσένα. Θέσε topics και στόχους, προγραμμάτισε διάρκεια, τόπο και συχνότητα των συναντήσεων. Εσύ είσαι υπεύθυνος για την εξέλιξη της σχέσης. Στην αρχή κράτα τη σχέση **short-term**, γιατί πολλοί δεσμεύονται για πολύ και μετά δυσκολεύονται να το διακόψουν όταν δεν υπάρχει τόσο value. Το leadership απαιτεί τόλμη όταν καταλαβαίνεις ότι έχει τελειώσει ο κύκλος με τον mentor.
-
-Το να είσαι mentee σου μαθαίνει πώς να διαχειρίζεσαι σχέσεις και να παίρνεις initiative. Start small με μια short-term σχέση και προσαρμόσου ανάλογα με τις ανάγκες σου.
-
-### 💡 Tips για Mentees
-
-1. **Να έχεις ξεκάθαρους στόχους:** Επικοινώνησέ τους στον mentor ώστε να σου παρέχει στοχευμένη καθοδήγηση.
-2. **Να είσαι ανοικτός:** Δέξου το feedback και τις νέες οπτικές, ακόμα κι αν σε βγάζουν από την comfort zone.
-3. **Ανάλαβε ευθύνη για τη μάθησή σου:** Ο mentor είναι συνοδηγός, αλλά εσύ έχεις το τιμονί.
-4. **Σεβάσου τον χρόνο του mentor:** Έλα προετοιμασμένος με ερωτήσεις και topics και σεβάσου το πρόγραμμα του.
-5. **Δείξε ευγνωμοσύνη:** Ενημέρωσέ τον πώς σε έχει βοηθήσει ο mentor στο growth σου.
-
-Το mentorship είναι **two-way** street όπου και οι δύο πλευρές ωφελούνται.
-
-## 🙏 Wrap Up
-
-Μη φοβάσαι να ζητήσεις mentorship. Οι περισσότεροι θα το δέχονται με χαρά και είναι ένα πολύτιμο ταξίδι μάθησης. Έχω μάθει τόσα lessons από τους mentors μου σε κάθε πτυχή της ζωής μου.
-
-
-**Ψάχνεις mentorship στο software engineering;** Δες το [6-week accelerator μας](/accelerator) όπου έμπειροι engineers σε καθοδηγούν στο ταξίδι σου στο tech.
-    `,
-    author: "Alexis Pavlidis",
-    date: "2026-02-25",
-    readTime: "6 min read",
-    readTimeGr: "6 λεπτά διάβασμα",
-    tags: ["Mentoring", "Career", "Growth"],
-    tagsGr: ["Mentoring", "Career", "Growth"],
-    image: "/assets/blogs/mentoring/mentoring.jpg",
-    published: true
-  },
-  {
     id: 1,
     slug: "software-interviews-dos-and-donts",
     titleGr: "Software Interviews - Dos & Donts",
@@ -461,6 +338,129 @@ Honestly, δεν έχει τόση σημασία.
     imageAltGr: "Ένα project που δείχνει engineering practices και σε κάνει hire: ιδέα για portfolio.",
     published: true
   },
+    {
+        id: 4,
+        slug: "why-do-you-need-a-mentor",
+        title: "Why Do You Need a Mentor?",
+        titleGr: "Γιατί Χρειάζεσαι έναν Mentor;",
+        excerpt: "Having a mentor can be a valuable asset in your personal and professional growth.",
+        excerptGr: "Το να έχεις έναν mentor μπορεί να είναι πολύτιμο asset για την προσωπική και επαγγελματική σου ανάπτυξη.",
+        content: `# 🧭 Why Do You Need a Mentor?
+
+Throughout my life, I have relied on my friends and family to help me with problems and ideas as I navigated life. However, as I have become more proficient in my field, I have found that their help is limited and it's completely normal. Problems can become more complex or take on dimensions that I have never dealt with before. Recently, I realized that to improve my profession and life in general, I need mentors, not just one, but several.
+
+## ❓ Why Do You Need Mentors
+
+As you grow older, you expose yourself to multiple fields that may require expertise. For instance, I have been trying to secure a home loan to buy my first house, and I discovered that I knew nothing about real estate and loans. Moreover, no one in my network knew anything about it either, so I had to learn everything by myself. Finance is not my area of expertise, but as I explore more opportunities and options, I realize that I need to equip myself with more knowledge in this domain. It's tough to jump into a new field all by yourself, and that's when it hit me: **I need a mentor!**
+
+Here are some reasons why you may need a mentor:
+
+1. **Gain knowledge and expertise:** A mentor can share their experience and expertise with you and help you learn new skills and knowledge that can benefit your personal and professional life.
+2. **Receive guidance and support:** A mentor can provide guidance and support in making important decisions and navigating challenges. They can help you see things from a different perspective and provide you with constructive feedback.
+3. **Build confidence and self-esteem:** A mentor can help you build your confidence and self-esteem by encouraging you and helping you identify your strengths and weaknesses.
+4. **Expand your network:** A mentor can introduce you to new people in your industry or field, which can help you expand your professional network.
+5. **Learn from their mistakes:** A mentor can help you avoid making the same mistakes they did and provide you with insights into how to navigate difficult situations.
+
+Mentors can help you save time by giving you shortcuts and sharing their experiences with you, so you can make wiser decisions and navigate your way more effectively. However, they are not just efficiency tools; they can also assist you in living a more relaxed and healthier life. Sometimes, it's not just about career or finance but also about the life lessons that you can learn from a more experienced person. I firmly believe that a mentoring relationship is unique and can sometimes turn into a great friendship too. Overall, having a mentor can be a valuable asset in your personal and professional growth.
+
+## 🔍 Where to Look for Mentors
+
+1. Start by looking at your networks. If you have friends who are more experienced than you, learn from them. Give them a chance to teach you something you're interested in learning.
+
+2. Your workplace is an excellent place to look for mentors too. I have found throughout my career that many people are more than willing to help you. Companies usually have a mentoring program, but even if they don't, don't let that stop you. You can ask someone to mentor you unofficially. At Skyscanner, I have one official mentor and two more unofficial ones with whom I have regular talks about my concerns and ideas. You will be amazed at how much time you can save and what you can learn from your mentors.
+
+3. Depending on the field you want to be mentored in, try to search in places where mentors usually live, like industry events, conferences, seminars.
+
+4. You can also find mentors through several online platforms that connect mentors with mentees, such as LinkedIn and MentorCruise.
+
+## 👔 Lead Your Mentoring Relationship
+
+It's your responsibility to lead the mentoring relationship. Your mentor is also learning, and it's really beneficial for them, but mainly, it's about you. You have to come up with topics and goals and schedule the length of the engagement, the place, and the frequency. You are responsible for maintaining the mentoring relationship. One suggestion for people who are not familiar with mentoring is to keep the mentoring relationship **short-term** in the beginning. People often make the mistake of committing for a long time and then feel reluctant to break it off when there is no value anymore. Leadership requires courage, and you will need that when you realize that there is no more reason to meet with your mentor.
+
+Being a mentee is a great experience, and besides learning what you aimed for, you learn how to lead relationships and take actions and initiatives. So please start small with a short-term relationship and then adjust according to your needs.
+
+### 💡 Tips for Mentees
+
+1. **Be clear about your goals:** Know what you want to achieve from the mentorship relationship and communicate your goals clearly to your mentor. This will help your mentor provide more targeted guidance and support.
+
+2. **Be open and receptive:** Be open to feedback and new perspectives. Your mentor may challenge you and push you out of your comfort zone, but this can lead to growth and learning.
+
+3. **Take ownership of your learning:** While your mentor is there to guide you, it's essential to take responsibility for your own learning and development. Be proactive in seeking out resources and opportunities to learn.
+
+4. **Respect your mentor's time:** Be mindful of your mentor's time and availability. Come prepared to each meeting with specific questions or topics to discuss, and be respectful of their schedule.
+
+5. **Show gratitude:** Express gratitude and appreciation for your mentor's time and guidance. Let them know how their mentorship has impacted you and your growth.
+
+Remember that mentorship is a **two-way** street, and both parties can learn and benefit from the relationship.
+
+## 🙏 Conclusion
+
+Don't be afraid to ask people to mentor you; most people will be happy to do it. I've learnt so many valuable lessons from my mentors in so many different parts of life. I would not be here without my mentors, my family, Vasilis, Patroklos, Dimitris, PJ, Stratos, and Tudor, thank you for teaching me all these amazing lessons.
+
+---
+
+**Looking for mentorship in software engineering?** Check out our [6-week accelerator](/accelerator) where experienced engineers guide you through your journey into tech.
+    `,
+        contentGr: `# 🧭 Εισαγωγή
+
+Σε όλη μου τη ζωή, βασιζόμουν σε φίλους και οικογένεια για να με βοηθήσουν με προβλήματα και ιδέες. Ωστόσο, καθώς εξελίχθηκα επαγγελματικά, κατάλαβα ότι η βοήθειά τους έχει όρια και αυτό είναι απόλυτα φυσιολογικό. Τα ζητήματα γίνονται πιο σύνθετα και παίρνουν διαστάσεις που δεν έχω αντιμετωπίσει ποτέ πριν. Νωρίς στην καριέρα μου συνειδητοποίησα ότι για να αναβαθμίσω τόσο την καριέρα όσο και τη ζωή μου χρειάζομαι mentors, όχι έναν αλλά αρκετούς.
+
+## ❓ Γιατί Χρειάζεσαι Mentors
+
+Καθώς εκτίθεσαι σε νέους χώρους και ευκαιρίες, συναντάς προβλήματα που απαιτούν expertise. Για παράδειγμα, όταν προσπαθούσα να βρω στεγαστικό δάνειο, ανακάλυψα ότι δεν γνώριζα τίποτα για real estate ή δάνεια. Και κανείς στο network μου δεν είχε εμπειρία, οπότε έπρεπε να μάθω τα πάντα μόνος μου. Τα finance δεν είναι ο κύριος τομέας expertise μου, αλλά καθώς εξετάζω περισσότερες επιλογές, καταλαβαίνω ότι πρέπει να εξοπλίσω τον εαυτό μου με γνώση και σε αυτό τον χώρο. Είναι δύσκολο να μπαίνεις μόνος σου σε έναν καινούριο τομέα, και τότε κατάλαβα: **Χρειάζομαι mentor!**
+
+Μερικοί λόγοι για να έχεις mentor:
+
+1. **Απόκτηση γνώσης και εμπειρίας:** Ο mentor μοιράζεται την εμπειρία και το expertise του για να μάθεις νέα skills που σε βοηθούν στην προσωπική και επαγγελματική σου ζωή.
+2. **Καθοδήγηση και υποστήριξη:** Ο mentor σε βοηθάει να παίρνεις σημαντικές αποφάσεις, να αντιμετωπίζεις προκλήσεις και να βλέπεις τα πράγματα από διαφορετική οπτική μέσα από feedback.
+3. **Ενίσχυση αυτοπεποίθησης:** Ο mentor σε ενθαρρύνει, σου δείχνει ποια είναι τα δυνατά σου σημεία και σε βοηθά να βρεις τις αδυναμίες σου.
+4. **Επέκταση του δικτύου σου:** Ένας mentor μπορεί να σε συστήσει σε ανθρώπους του κλάδου και να ανοίξει δρόμους δικτύωσης (networking).
+5. **Μάθηση από λάθη άλλων:** Ο mentor σου δείχνει πως να αποφύγεις παγίδες και πώς να χειριστείς δύσκολες καταστάσεις.
+
+Οι mentors σου εξοικονομούν χρόνο, μοιράζοντας shortcuts και εμπειρίες για να παίρνεις πιο ώριμες αποφάσεις. Δεν είναι απλώς εργαλεία αποτελεσματικότητας, μπορούν να σε βοηθήσουν να ζήσεις πιο ήρεμα, healthy και ισορροπημένα. Μερικές φορές, πρόκειται για life lessons που δεν μαθαίνεις αλλού. Πιστεύω ότι μια mentoring σχέση είναι μοναδική και συχνά εξελίσσεται σε καλή φιλία. Συνολικά, ένας mentor είναι ένα πολύτιμο asset για την εξέλιξή σου.
+
+## 🔍 Πού να Ψάξεις Mentors
+
+1. Κοίταξε στο άμεσο network σου: φίλοι με περισσότερη εμπειρία μπορούν να σου μάθουν κάτι που σε ενδιαφέρει.
+
+2. Ο χώρος εργασίας σου είναι εξαιρετικός. Έχω διαπιστώσει ότι πολλοί συνάδελφοι θέλουν να βοηθήσουν. Αν δεν υπάρχει επίσημο mentoring πρόγραμμα, ζήτα έναν mentor ανεπίσημα. Στη Skyscanner είχα έναν official mentor και δύο unofficial με τους οποίους συζητούσα τακτικά.
+
+3. Αναζήτησε mentors σε industry events, conferences και seminars ανάλογα με το πεδίο που σε ενδιαφέρει.
+
+4. Υπάρχουν πολλές πλατφόρμες που συνδέουν mentors με mentees—επέλεξε αυτή που ταιριάζει περισσότερο στο πεδίο σου.
+
+## 👔 Οδήγησε την Mentoring Σχέση
+
+Είναι δική σου ευθύνη να οδηγήσεις τη σχέση. Ο mentor σου μαθαίνει επίσης, αλλά πάνω απ’ όλα αφορά εσένα. Θέσε topics και στόχους, προγραμμάτισε διάρκεια, τόπο και συχνότητα των συναντήσεων. Εσύ είσαι υπεύθυνος για την εξέλιξη της σχέσης. Στην αρχή κράτα τη σχέση **short-term**, γιατί πολλοί δεσμεύονται για πολύ και μετά δυσκολεύονται να το διακόψουν όταν δεν υπάρχει τόσο value. Το leadership απαιτεί τόλμη όταν καταλαβαίνεις ότι έχει τελειώσει ο κύκλος με τον mentor.
+
+Το να είσαι mentee σου μαθαίνει πώς να διαχειρίζεσαι σχέσεις και να παίρνεις initiative. Start small με μια short-term σχέση και προσαρμόσου ανάλογα με τις ανάγκες σου.
+
+### 💡 Tips για Mentees
+
+1. **Να έχεις ξεκάθαρους στόχους:** Επικοινώνησέ τους στον mentor ώστε να σου παρέχει στοχευμένη καθοδήγηση.
+2. **Να είσαι ανοικτός:** Δέξου το feedback και τις νέες οπτικές, ακόμα κι αν σε βγάζουν από την comfort zone.
+3. **Ανάλαβε ευθύνη για τη μάθησή σου:** Ο mentor είναι συνοδηγός, αλλά εσύ έχεις το τιμονί.
+4. **Σεβάσου τον χρόνο του mentor:** Έλα προετοιμασμένος με ερωτήσεις και topics και σεβάσου το πρόγραμμα του.
+5. **Δείξε ευγνωμοσύνη:** Ενημέρωσέ τον πώς σε έχει βοηθήσει ο mentor στο growth σου.
+
+Το mentorship είναι **two-way** street όπου και οι δύο πλευρές ωφελούνται.
+
+## 🙏 Wrap Up
+
+Μη φοβάσαι να ζητήσεις mentorship. Οι περισσότεροι θα το δέχονται με χαρά και είναι ένα πολύτιμο ταξίδι μάθησης. Έχω μάθει τόσα lessons από τους mentors μου σε κάθε πτυχή της ζωής μου.
+
+
+**Ψάχνεις mentorship στο software engineering;** Δες το [6-week accelerator μας](/accelerator) όπου έμπειροι engineers σε καθοδηγούν στο ταξίδι σου στο tech.
+    `,
+        author: "Alexis Pavlidis",
+        date: "2026-02-25",
+        readTime: "6 min read",
+        readTimeGr: "6 λεπτά διάβασμα",
+        tags: ["Mentoring", "Career", "Growth"],
+        tagsGr: ["Mentoring", "Career", "Growth"],
+        image: "/assets/blogs/mentoring/mentoring.jpg",
+        published: true
+    },
   {
     id: 5,
     slug: "how-we-built-ai-cv-review",
@@ -597,6 +597,243 @@ Honestly, δεν έχει τόση σημασία.
     imageAlt: "Architecture diagram showing the CV Review pipeline: React frontend, Node.js backend, S3 storage, n8n workflow and GPT-4o-mini.",
     imageAltGr: "Architecture diagram του CV Review pipeline: React frontend, Node.js backend, S3 storage, n8n workflow και GPT-4o-mini.",
     published: true
-  }
+  },
+    {
+        id: 6,
+        slug: "how-i-keep-up-with-software",
+        title: "How I Keep Up with Software",
+        titleGr: "Πώς κάνω keep up στο Software",
+        excerpt: "There is no end to learning in the IT industry. Keeping up with software is certainly a hard task. In this blog post I will explain my approach.",
+        excerptGr: "Δεν υπάρχει τέλος στη μάθηση στον κλάδο της πληροφορικής. Το να παρακολουθείς τις εξελίξεις στο software είναι σίγουρα δύσκολο. Σε αυτό το blog post θα εξηγήσω την προσέγγισή μου.",
+        content: `
+## 👋 Intro
+
+The software industry is really dynamic and it requires a lot of effort to keep up with the latest trends. Basically, there is no end to learning in the IT industry. One of the most important skills that a software engineer must have is the way of staying up to date with the latest updates. I'm often asked how I keep up with the trends in the field of software engineering, and how I learn new stuff. Undeniably an important part of learning is practice. I still remember Uncle Bob's quote in the Clean Coders book
+
+> *It is not your employer's responsibility to make sure you are marketable. It is not your employer's responsibility to train you, or send you to conferences, or buy your books. These things are your responsibility. You should plan on working 60 hours a week. The first 40 are for your employer. The remaining 20 are for you. During this remaining 20 hours you should be reading, practising, learning, and otherwise enhancing your career.*
+
+Saying that I thought writing a blog post will give some guidelines to people that are finding it hard to follow up with software or want to discover other alternatives of learning.
+
+## 🎧 Podcasts
+
+Podcasts are a great way to learn new stuff and keep up with trends. I've been listening to podcasts since I was an undergrad and it's been an important way of learning for me. I used to listen to podcasts during my commute but nowadays working remotely I will probably do it in parallel with another activity. I prefer podcasts that are less than an hour because it does not require a lot of time commitment.
+
+- [Hanselminutes](https://www.hanselminutes.com/)
+- [Codurance Talks](https://www.codurance.com/publications/tag/podcasts)
+- [ThoughtWorks Technology](https://www.thoughtworks.com/podcasts)
+- [AWS Podcast](https://aws.amazon.com/podcasts/aws-podcast/?podcast-list.sort-by=item.additionalFields.EpisodeNum&podcast-list.sort-order=desc)
+- [The Stack Overflow Podcast](https://stackoverflow.blog/podcast/)
+- [The 6 Figure Developer](https://6figuredev.com/category/podcast/)
+- [JS Party: Javascript & Web Dev](https://changelog.com/jsparty)
+- [Simple Programmer](https://simpleprogrammer.libsyn.com/)
+- [InfoQ](https://www.infoq.com/the-infoq-podcast/podcasts/)
+- [Agile for Humans](https://ryanripley.com/agile-for-humans/)
+
+## 📖 Books
+
+Reading books seems kinda outdated. But books have been an important way of my learning process. If you want to explore a technical topic in-depth, then books are an excellent choice. Yes, the industry evolves incredibly fast, but certain books will help you explore your field of work on a much deeper level. The most influential thing throughout my career was reading Clean Code by Uncle Bob. I read that book while I was in the second year of my studies and it completely changed my mindset about software. Back then I did not know who Uncle Bob was, so after googling I learnt about Martin Fowler, Kent Beck, Grady Booch, Jim Coplien and all the well-known people in the software industry. This of course helped me create a backlog of books that I had to read since some of those books are "must-reads" for all software engineers regardless of their experience.
+
+Here is my notion page of Books that I've read or about to read soon:
+
+![Books I've read or plan to read](/assets/blogs/how-to-keep-up/books.webp)
+
+## 🎤 Attend Events
+
+Conferences and meetings are an excellent way to follow new trends. Many new products and developments in the IT realm are presented at conferences and meetups. One of the most important benefits of such events is the ability to meet new people from the software industry and make valuable contacts. It's also a great way of discussing software, exchanging ideas with people that work in different domains/companies with different dynamics. Some of the events I would recommend attending are the following.
+
+### Conferences
+
+- [London Software Craftsmanship Conference](https://sc-london.com/)
+- [VoxxedDays Athens](https://voxxeddays.com/athens/)
+- [VoxxedDays Thessaloniki](https://voxxeddays.com/thessaloniki/)
+- [Devoxx](https://devoxx.com/)
+- [GOTO conference](https://gotopia.tech/)
+
+### Meetups
+
+- [Thessaloniki not-only Java Meetup Group](https://www.meetup.com/Thessaloniki-Not-Only-Java/)
+- [Thessaloníki .NET Meetup](https://www.meetup.com/Thessaloniki-NET-Meetup/)
+- [Domain-Driven Design London](https://www.meetup.com/dddlondon/)
+- [London Software Craftsmanship Community](https://www.meetup.com/london-software-craftsmanship/)
+- [LJC - London Java Community](https://www.meetup.com/Londonjavacommunity/)
+- [London Microservices](https://www.meetup.com/London-Microservices/)
+
+I've met great people throughout my participation in those events and they helped me massively with my career progression. I feel really lucky that I had the chance to participate in such events which boosted my knowledge.
+
+## 💪 Practice
+
+Whenever I learn a new technology, tool, or programming language I will always use Stack Overflow to verify my knowledge and try to answer questions regarding the new topic. One of the best ways to learn something is using the Feynman Technique where you try to explain in a simple way solutions to other people's problems. Answering questions in Stack Overflow helps me a lot construct my thoughts and potentially find gaps in my explanation. A second benefit of using Stack Overflow when learning a new subject is that you can quickly get a good essence of the common issues and problems other devs are facing regarding that subject. Another good way of practising a new topic I am learning is by doing code katas.
+
+> *A code kata is an exercise in programming which helps programmers hone their skills through practice and repetition.*
+
+Code katas are an excellent way of practising a new tool, library, concept, programming language, or a new design technique. It's a practice session where the goal is not only to solve the problem but to practice and sharpen your skills during the process of solving it. You can find some of the katas I have solved in my GitHub account [here](https://github.com/apavlidi).
+
+There are two websites I use for finding katas:
+
+- [Katalyst](https://katalyst.codurance.com/)
+- [CodingDojo](https://codingdojo.org/kata/)
+
+One thing to note here is that pairing is extremely useful when solving code katas or working on side project. I strongly recommend working on a team so you can share tips, resources and experience.
+
+## 🎓 Online Courses
+
+Software is an industry where most of the information is publicly available through the internet. There are a huge number of tutorials that can help you learn new stuff. Tutorials are a great way of learning by doing, which for me is an effective technique of learning. Online education is really popular in our industry due to its low cost, and time-saving advantages. Besides, experience beats theory most of the time - so combining both is probably a more effective way of learning. These are the platforms I am using:
+
+- [Udemy](https://www.udemy.com/)
+- [Pluralsight](https://www.pluralsight.com/)
+- [Oreilly](https://www.oreilly.com/)
+- [LinkedIn](https://www.linkedin.com/learning)
+
+Youtube has a lot of good tutorials as well but compared to the above mentions the quality on average is much lower but there are exceptions.
+
+## 📝 Have a Plan
+
+Keeping up with software is certainly a hard task. Things do change constantly at a fast pace. The amount of information we as software engineers consume every day is huge and keeping track of everything is really difficult. Having a plan or a list of topics you want to learn can be quite helpful. I've been using tools as my second brain to help me structure all this information. To be honest I had a hard time finding a good tool to fulfil that purpose. I used Trello, Asana, Miro, Google Keep, Evernote but nothing quite worked for me.
+
+Last 3 months I've been using Notion as my second brain tool and it's been an awesome experience. Notion has components for notes, kanban boards, wikis, databases, calendars etc. By connecting those components you can create systems for knowledge, data and project management. Here you can see my dashboard for the software section. I have subpages to each one of those pages but you probably get the idea. Everything new that I might need to read later, will go to the Reading List. If I have an idea of a project, or a blog post it will add that to Ideas and so forth.
+
+![My Notion dashboard](/assets/blogs/how-to-keep-up/dashboard.webp)
+
+Another useful resource I used throughout the years is the [roadmap.sh](https://roadmap.sh/). It's been a great guide for me to pick up the next topic I want to learn especially when I was more junior and I was overwhelmed by all the different topics under the software umbrella.
+
+## 🔗 Other Ways of Following Trends
+
+The following list is resources that I don't heavily rely on and it's more like optional ways for me for learning new stuff.
+
+- Surveys - Surveys are great for giving you insights into the trends in software. In my opinion [Stack Overflow Survey](https://insights.stackoverflow.com/survey/) is by far the best one related to software.
+- Follow People that Talk about Tech
+- [GitHub Explore](https://github.com/explore)
+- Newsletters: [HackerNews](https://news.ycombinator.com/), [TLDR](https://www.tldrnewsletter.com/)
+- Certifications: [AWS Cloud](https://aws.amazon.com/certification/)
+- Competitions: [HashCode](https://codingcompetitions.withgoogle.com/hashcode/), [IEEEXtreme](https://ieeextreme.org/)
+
+## 🎯 Final Thoughts
+
+The world of IT is changing regularly and hence you have to evolve as IT evolves. Staying ahead of the competition and on top of your game requires a formidable effort. A final suggestion would be to read, practice, repeat.
+
+---
+
+**Want more insights like this?** Subscribe to our newsletter below to get career tips and learning strategies delivered straight to your inbox.
+
+Looking to accelerate your software engineering career? Check out our [6-week accelerator](/accelerator) where we help developers build the skills that matter most.
+    `,
+        contentGr: `
+## 👋 Εισαγωγή
+
+Ο κλάδος του software είναι πραγματικά δυναμικός και απαιτεί πολλή προσπάθεια για να παρακολουθείς τις τελευταίες τάσεις. Βασικά, δεν υπάρχει τέλος στη μάθηση στον κλάδο της πληροφορικής. Μία από τις πιο σημαντικές δεξιότητες που πρέπει να έχει ένας software engineer είναι ο τρόπος με τον οποίο παραμένει ενημερωμένος με τις τελευταίες εξελίξεις. Συχνά με ρωτούν πώς παρακολουθώ τις τάσεις στον τομέα του software engineering και πώς μαθαίνω νέα πράγματα. Αναμφισβήτητα, ένα σημαντικό μέρος της μάθησης είναι η πρακτική εξάσκηση. Θυμάμαι ακόμα το quote του Uncle Bob στο βιβλίο Clean Coders
+
+> *Δεν είναι ευθύνη του εργοδότη σου να σε κάνει ελκυστικό στην αγορά εργασίας. Δεν είναι ευθύνη του εργοδότη σου να σε εκπαιδεύσει, να σε στείλει σε συνέδρια ή να σου αγοράσει βιβλία. Αυτά είναι δική σου ευθύνη. Πρέπει να σχεδιάζεις να δουλεύεις 60 ώρες την εβδομάδα. Οι πρώτες 40 είναι για τον εργοδότη σου. Οι υπόλοιπες 20 είναι για σένα. Κατά τη διάρκεια αυτών των 20 ωρών πρέπει να διαβάζεις, να εξασκείσαι, να μαθαίνεις και να βελτιώνεις την καριέρα σου.*
+
+Λέγοντας αυτό, σκέφτηκα ότι το να γράψω ένα blog post θα δώσει κάποιες κατευθύνσεις σε ανθρώπους που δυσκολεύονται να ακολουθούν τις εξελίξεις στο software ή θέλουν να ανακαλύψουν εναλλακτικούς τρόπους μάθησης.
+
+## 🎧 Podcasts
+
+Τα podcasts είναι ένας εξαιρετικός τρόπος για να μαθαίνεις νέα πράγματα και να παρακολουθείς τις τάσεις. Ακούω podcasts από τότε που ήμουν φοιτητής και έχει αποτελέσει σημαντικό τρόπο μάθησης για μένα. Συνήθιζα να ακούω podcasts κατά τη διάρκεια κάποιου commute, αλλά τώρα που δουλεύω απομακρυσμένα πιθανότατα θα το κάνω παράλληλα με κάποια άλλη δραστηριότητα. Προτιμώ podcasts που διαρκούν λιγότερο από μία ώρα γιατί δεν απαιτούν μεγάλη δέσμευση χρόνου.
+
+- [Hanselminutes](https://www.hanselminutes.com/)
+- [Codurance Talks](https://www.codurance.com/publications/tag/podcasts)
+- [ThoughtWorks Technology](https://www.thoughtworks.com/podcasts)
+- [AWS Podcast](https://aws.amazon.com/podcasts/aws-podcast/?podcast-list.sort-by=item.additionalFields.EpisodeNum&podcast-list.sort-order=desc)
+- [The Stack Overflow Podcast](https://stackoverflow.blog/podcast/)
+- [The 6 Figure Developer](https://6figuredev.com/category/podcast/)
+- [JS Party: Javascript & Web Dev](https://changelog.com/jsparty)
+- [Simple Programmer](https://simpleprogrammer.libsyn.com/)
+- [InfoQ](https://www.infoq.com/the-infoq-podcast/podcasts/)
+- [Agile for Humans](https://ryanripley.com/agile-for-humans/)
+
+## 📖 Βιβλία
+
+Η ανάγνωση βιβλίων φαίνεται κάπως ξεπερασμένη. Αλλά τα βιβλία έχουν αποτελέσει σημαντικό μέρος της διαδικασίας μάθησής μου. Αν θέλεις να εξερευνήσεις ένα τεχνικό θέμα σε βάθος, τότε τα βιβλία είναι μια εξαιρετική επιλογή. Ναι, ο κλάδος εξελίσσεται απίστευτα γρήγορα, αλλά ορισμένα βιβλία θα σε βοηθήσουν να εξερευνήσεις τον τομέα εργασίας σου σε πολύ βαθύτερο επίπεδο. Το αγαπημένο μου βιβλίο είναι το Clean Code του Uncle Bob. Διάβασα αυτό το βιβλίο όταν ήμουν στο δεύτερο έτος των σπουδών μου και άλλαξε εντελώς τη νοοτροπία μου για το software. Τότε δεν ήξερα ποιος ήταν ο Uncle Bob, οπότε μετά από googling έμαθα για τον Martin Fowler, τον Kent Beck, τον Grady Booch, τον Jim Coplien και όλους τους γνωστούς ανθρώπους στον κλάδο του software. Αυτό φυσικά με βοήθησε να δημιουργήσω ένα backlog από βιβλία που "έπρεπε" να διαβάσω, καθώς ορισμένα από αυτά τα βιβλία είναι "must-reads" για όλους τους software engineers ανεξάρτητα από την εμπειρία τους.
+
+Εδώ είναι η σελίδα μου στο Notion με τα Βιβλία που έχω διαβάσει ή πρόκειται να διαβάσω σύντομα:
+
+![Βιβλία που έχω διαβάσει ή σχεδιάζω να διαβάσω](/assets/blogs/how-to-keep-up/books.webp)
+
+## 🎤 Συμμετοχή σε Events
+
+Τα συνέδρια και τα meetups είναι ένας εξαιρετικός τρόπος για να παρακολουθείς new trends. Πολλά νέα products και εξελίξεις στον τομέα της πληροφορικής παρουσιάζονται σε συνέδρια και meetups. Ένα από τα πιο σημαντικά οφέλη τέτοιων events είναι η δυνατότητα να γνωρίσεις νέους ανθρώπους από τον κλάδο του software και να δημιουργήσεις connections. Είναι επίσης ένας εξαιρετικός τρόπος για να συζητάς για software, να ανταλλάσσεις ιδέες με ανθρώπους που δουλεύουν σε διαφορετικούς τομείς/εταιρείες με διαφορετικές δυναμικές. Μερικά από τα events που θα πρότεινα να παρακολουθήσεις είναι τα εξής.
+
+### Συνέδρια
+
+- [London Software Craftsmanship Conference](https://sc-london.com/)
+- [VoxxedDays Athens](https://voxxeddays.com/athens/)
+- [VoxxedDays Thessaloniki](https://voxxeddays.com/thessaloniki/)
+- [Devoxx](https://devoxx.com/)
+- [GOTO conference](https://gotopia.tech/)
+
+### Meetups
+
+- [Thessaloniki not-only Java Meetup Group](https://www.meetup.com/Thessaloniki-Not-Only-Java/)
+- [Thessaloníki .NET Meetup](https://www.meetup.com/Thessaloniki-NET-Meetup/)
+- [London Software Craftsmanship Community](https://www.meetup.com/london-software-craftsmanship/)
+- [LJC - London Java Community](https://www.meetup.com/Londonjavacommunity/)
+- [London Microservices](https://www.meetup.com/London-Microservices/)
+
+Έχω γνωρίσει υπέροχους ανθρώπους μέσα από τη συμμετοχή μου σε αυτά τα events και με βοήθησαν τεράστια με την εξέλιξη της καριέρας μου. Νιώθω πολύ τυχερός που είχα την ευκαιρία να συμμετάσχω σε τέτοια events που ενίσχυσαν τις γνώσεις μου.
+
+## 💪 Practice
+
+Κάθε φορά που μαθαίνω μια νέα τεχνολογία, εργαλείο ή γλώσσα προγραμματισμού, θα χρησιμοποιώ πάντα το Stack Overflow για να επαληθεύσω τις γνώσεις μου και να προσπαθήσω να απαντήσω ερωτήσεις σχετικά με το νέο θέμα. Ένας από τους καλύτερους τρόπους για να μάθεις κάτι είναι να χρησιμοποιήσεις την Τεχνική Feynman όπου προσπαθείς να εξηγήσεις με απλό τρόπο λύσεις στα προβλήματα άλλων ανθρώπων. Το να απαντάω ερωτήσεις στο Stack Overflow με βοηθάει πολύ να δομώ τις σκέψεις μου και ενδεχομένως να βρίσκω κενά στην εξήγησή μου. Ένα δεύτερο όφελος της χρήσης του Stack Overflow όταν μαθαίνεις ένα νέο θέμα είναι ότι μπορείς γρήγορα να αποκτήσεις μια καλή αίσθηση των κοινών προβλημάτων που αντιμετωπίζουν άλλοι developers σχετικά με αυτό το θέμα. Ένας άλλος καλός τρόπος εξάσκησης σε ένα νέο θέμα που μαθαίνω είναι κάνοντας code katas.
+
+> *Ένα code kata είναι μια άσκηση στον προγραμματισμό που βοηθάει τους προγραμματιστές να ακονίσουν τις δεξιότητές τους μέσω πρακτικής και επανάληψης.*
+
+Τα code katas είναι ένας εξαιρετικός τρόπος εξάσκησης σε ένα νέο εργαλείο, βιβλιοθήκη, concept, γλώσσα προγραμματισμού ή μια νέα τεχνική σχεδίασης. Είναι ένα practicing exercise όπου ο στόχος δεν είναι μόνο να λύσεις το πρόβλημα αλλά να εξασκηθείς και να ακονίσεις τις δεξιότητές σου κατά τη διαδικασία επίλυσής του. Μπορείς να βρεις μερικά από τα katas που έχω λύσει στον GitHub λογαριασμό μου [εδώ](https://github.com/apavlidi).
+
+Υπάρχουν δύο ιστοσελίδες που χρησιμοποιώ για να βρίσκω katas:
+
+- [Katalyst](https://katalyst.codurance.com/)
+- [CodingDojo](https://codingdojo.org/kata/)
+
+Ένα πράγμα που πρέπει να σημειωθεί εδώ είναι ότι το pairing είναι εξαιρετικά χρήσιμο όταν λύνεις code katas ή δουλεύεις σε side project. Συνιστώ ανεπιφύλακτα να δουλεύεις σε ομάδα ώστε να μπορείς να μοιράζεσαι tips, resources και εμπειρία.
+
+## 🎓 Online Courses
+
+Το software είναι ένας κλάδος όπου οι περισσότερες πληροφορίες είναι δημόσια διαθέσιμες μέσω του internet. Υπάρχει τεράστιος αριθμός tutorials που μπορούν να σε βοηθήσουν να μάθεις νέα πράγματα. Τα tutorials είναι ένας εξαιρετικός τρόπος μάθησης μέσω πράξης, που για μένα είναι μια αποτελεσματική τεχνική μάθησης. Η online εκπαίδευση είναι πολύ δημοφιλής στον κλάδο μας λόγω του χαμηλού κόστους και των πλεονεκτημάτων εξοικονόμησης χρόνου. Εξάλλου, η εμπειρία ξεπερνά τη θεωρία τις περισσότερες φορές - οπότε ο συνδυασμός και των δύο είναι πιθανώς ένας πιο αποτελεσματικός τρόπος μάθησης. Αυτές είναι οι πλατφόρμες που χρησιμοποιώ:
+
+- [Udemy](https://www.udemy.com/)
+- [Pluralsight](https://www.pluralsight.com/)
+- [Oreilly](https://www.oreilly.com/)
+- [LinkedIn](https://www.linkedin.com/learning)
+
+Το Youtube έχει επίσης πολλά καλά tutorials, αλλά σε σύγκριση με τα παραπάνω η ποιότητα κατά μέσο όρο είναι πολύ χαμηλότερη, αλλά υπάρχουν εξαιρέσεις.
+
+## 📝 You Need a Plan
+
+Το να παρακολουθείς τις εξελίξεις στο software είναι σίγουρα δύσκολο. Τα πράγματα αλλάζουν συνεχώς με γρήγορο ρυθμό. Ο όγκος πληροφοριών που καταναλώνουμε ως software engineers κάθε μέρα είναι τεράστιος και η παρακολούθηση όλων είναι πραγματικά δύσκολη. Το να έχεις ένα πλάνο ή μια λίστα θεμάτων που θέλεις να μάθεις μπορεί να είναι αρκετά χρήσιμο. Χρησιμοποιώ εργαλεία ως second brain μου για να με βοηθήσουν να δομήσω όλες αυτές τις πληροφορίες. Για να είμαι ειλικρινής, δυσκολεύτηκα να βρω ένα καλό εργαλείο για αυτόν τον σκοπό. Χρησιμοποίησα Trello, Asana, Miro, Google Keep, Evernote αλλά τίποτα δεν λειτούργησε πραγματικά για μένα.
+
+Τα τελευταία 5 χρόνια χρησιμοποιώ το Notion ως second brain tool και ήταν μια φανταστική εμπειρία. Το Notion έχει components για σημειώσεις, kanban boards, wikis, βάσεις δεδομένων, ημερολόγια κ.λπ. Συνδυάζοντας αυτά τα components μπορείς να δημιουργήσεις συστήματα για διαχείριση γνώσης, δεδομένων και projects. Εδώ μπορείς να δεις το dashboard μου για την ενότητα software. Έχω subpages σε κάθε ένα από αυτά τα pages, you get the idea. Οτιδήποτε νέο που μπορεί να χρειαστεί να διαβάσω αργότερα, θα πάει στο Reading List. Αν έχω μια ιδέα για project ή blog post, θα το προσθέσω στο Ideas κ.ο.κ.
+
+![Το Notion dashboard μου](/assets/blogs/how-to-keep-up/dashboard.webp)
+
+Ένας άλλος χρήσιμος πόρος που χρησιμοποίησα κατά τη διάρκεια των ετών είναι το [roadmap.sh](https://roadmap.sh/). Ήταν ένας εξαιρετικός οδηγός για να επιλέξω το επόμενο θέμα που θέλω να μάθω, ειδικά όταν ήμουν πιο junior και ήμουν overwhelmed από όλα τα διαφορετικά θέματα κάτω από την ομπρέλα του software.
+
+## 🔗 Other Ways
+
+Η παρακάτω λίστα περιέχει resources στα οποία δεν βασίζομαι heavily και είναι περισσότερο σαν προαιρετικοί τρόποι για μένα για να μαθαίνω νέα πράγματα.
+
+- Surveys - Τα surveys είναι εξαιρετικά για να σου δίνουν insights στις τάσεις του software. Κατά τη γνώμη μου το [Stack Overflow Survey](https://insights.stackoverflow.com/survey/) είναι μακράν το καλύτερο που σχετίζεται με το software.
+- Ακολούθησε Ανθρώπους που Μιλούν για Tech
+- [GitHub Explore](https://github.com/explore)
+- Newsletters: [HackerNews](https://news.ycombinator.com/), [TLDR](https://www.tldrnewsletter.com/)
+- Πιστοποιήσεις: [AWS Cloud](https://aws.amazon.com/certification/)
+- Διαγωνισμοί: [HashCode](https://codingcompetitions.withgoogle.com/hashcode/), [IEEEXtreme](https://ieeextreme.org/)
+
+## 🎯 Final Thoughts
+
+Ο κόσμος της πληροφορικής αλλάζει τακτικά και επομένως πρέπει να εξελίσσεσαι όπως εξελίσσεται η πληροφορική. Το να μένεις μπροστά από τον ανταγωνισμό και στην κορυφή απαιτεί τρομερή προσπάθεια. Ένα τελευταίο note είναι: read, practice, repeat.
+
+**Θέλεις περισσότερα insights όπως αυτά;** Κάνε subscribe στο newsletter μας παρακάτω για να λαμβάνεις συμβουλές καριέρας και στρατηγικές μάθησης απευθείας στο inbox σου.
+
+Θέλεις να επιταχύνεις την καριέρα σου στο software engineering; Δες το [6-week accelerator μας](/accelerator) όπου βοηθάμε developers να χτίσουν τις δεξιότητες που έχουν τη μεγαλύτερη σημασία.
+    `,
+        author: "Alexis Pavlidis",
+        date: "2026-03-31",
+        readTime: "8 min read",
+        readTimeGr: "8 λεπτά διάβασμα",
+        tags: ["Learning", "Career", "Productivity"],
+        tagsGr: ["Learning", "Career", "Tips"],
+        image: "/assets/blogs/how-to-keep-up/how-to-keep-up.jpg",
+        published: true
+    },
 ];
 
