@@ -21,7 +21,7 @@
     "testimonials": "Testimonials",
     "whyDifferent": "Why Different",
     "freeCvReview": "Free CV Review",
-    "urgencyBanner": "Only {SPOTS} spots left for the {COHORT_DATE} cohort — Secure yours now!"
+    "urgencyBanner": "Only {SPOTS} {SPOTS_LABEL} left for the {COHORT_DATE} cohort — Secure yours now!"
   },
   "hero": {
     "urgencyBadge": "Next Cohort: {COHORT_DATE}",
@@ -65,7 +65,7 @@
     "investmentLabel": "Investment in your future",
     "currentPrice": "{PRICE}",
     "perProgram": "/program",
-    "spotsLeft": "Only {SPOTS} spots left!"
+    "spotsLeft": "Only {SPOTS} {SPOTS_LABEL} left!"
   },
   "accelerator": {
     "backToHome": "Back to Home",
@@ -273,7 +273,7 @@
     ],
     "finalCtaTitle": "Ready to Become Industry-Ready?",
     "finalCtaDescription": "Book a call with our team to secure your spot.",
-    "finalCtaPricing": "Price: {PRICE} • Only {SPOTS} Spots Left!",
+    "finalCtaPricing": "Price: {PRICE} • Only {SPOTS} {SPOTS_LABEL} Left!",
     "finalCtaNote": "During the call, we'll answer your questions and finalize your enrollment.",
     "urgencyBadge": "Next Cohort: {COHORT_DATE}"
   },

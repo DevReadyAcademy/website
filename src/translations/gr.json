@@ -22,7 +22,7 @@
     "testimonials": "Testimonials",
     "whyDifferent": "Γιατί Διαφέρουμε",
     "freeCvReview": "Δωρεάν Αξιολόγηση CV",
-    "urgencyBanner": "Μόνο {SPOTS} θέσεις απομένουν για το cohort {COHORT_DATE} • Κλείσε τη δική σου τώρα!"
+    "urgencyBanner": "Μόνο {SPOTS} {SPOTS_LABEL} {SPOTS_VERB} για το cohort {COHORT_DATE} • Κλείσε τη δική σου τώρα!"
   },
   "hero": {
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}",
@@ -66,7 +66,7 @@
     "investmentLabel": "Επένδυση στο μέλλον σου",
     "currentPrice": "{PRICE}",
     "perProgram": "/πρόγραμμα",
-    "spotsLeft": "Μόνο {SPOTS} θέσεις απομένουν!"
+    "spotsLeft": "Μόνο {SPOTS} {SPOTS_LABEL} {SPOTS_VERB}!"
   },
   "accelerator": {
     "backToHome": "Πίσω στην Αρχική",
@@ -272,7 +272,7 @@
     ],
     "finalCtaTitle": "Έτοιμος να Γίνεις Industry-Ready;",
     "finalCtaDescription": "Κλείσε call με την ομάδα μας για να κλείσεις τη θέση σου.",
-    "finalCtaPricing": "Τιμή: {PRICE} • Μόνο {SPOTS} Θέσεις!",
+    "finalCtaPricing": "Τιμή: {PRICE} • Μόνο {SPOTS} {SPOTS_LABEL}!",
     "finalCtaNote": "Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου.",
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}"
   },
