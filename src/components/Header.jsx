@@ -3,13 +3,11 @@ import { motion } from 'framer-motion';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button.tsx";
 import { useLanguage } from '../contexts/LanguageContext';
-import { useFeatureFlags } from '../contexts/FeatureFlagContext';
+
 import earlyBirdConfig from '../config/earlyBird';
 
 const Header = () => {
   const { t } = useLanguage();
-  const { isFeatureEnabled } = useFeatureFlags();
-
   const location = useLocation();
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
@@ -174,17 +172,6 @@ const Header = () => {
               )
             ))}
             {/* <LanguageSwitcher /> */}
-            {isFeatureEnabled('CV_REVIEW') && (
-              <Button
-                asChild
-                variant="outline"
-                className="hidden sm:inline-flex mr-2"
-              >
-                <Link to="/cv-review">
-                  {t('header.freeCvReview')}
-                </Link>
-              </Button>
-            )}
             <Button
               asChild
               className="bg-primary hover:bg-primary/90 shadow-lg"
@@ -262,18 +249,6 @@ const Header = () => {
               )
             ))}
             <div className="px-4 pt-4 pb-2 space-y-2">
-              {isFeatureEnabled('CV_REVIEW') && (
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="w-full"
-                >
-                  <Link to="/cv-review" onClick={() => setMobileMenuOpen(false)}>
-                    {t('header.freeCvReview')}
-                  </Link>
-                </Button>
-              )}
               <Button
                 asChild
                 size="lg"
