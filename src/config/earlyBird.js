@@ -23,7 +23,7 @@ export const earlyBirdConfig = {
   remainingSpots: 1,
 
   // Registration deadline (used for countdown timer)
-  cohortStartDate: '2026-04-20T00:00:00+03:00',
+  cohortStartDate: '2026-04-18T00:00:00+03:00',
 
   // Get cohort date range for specific language
   getCohortDateRange(lang = 'en') {
