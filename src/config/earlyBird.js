@@ -7,12 +7,12 @@ export const earlyBirdConfig = {
 
   // Cohort dates (English and Greek)
   cohortStartMonth: {
-    en: "April",
-    gr: "Απρίλιος"
+    en: "September",
+    gr: "Σεπτέμβριος"
   },
   cohortEndMonth: {
-    en: "May",
-    gr: "Μάιος"
+    en: "October",
+    gr: "Οκτώβριος"
   },
   cohortYear: 2026,
 
@@ -23,7 +23,7 @@ export const earlyBirdConfig = {
   remainingSpots: 1,
 
   // Registration deadline (used for countdown timer)
-  cohortStartDate: '2026-04-18T00:00:00+03:00',
+  cohortStartDate: '2026-09-01T00:00:00+03:00',
 
   // Get cohort date range for specific language
   getCohortDateRange(lang = 'en') {

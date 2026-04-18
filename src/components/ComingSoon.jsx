@@ -12,15 +12,15 @@ const ComingSoon = () => {
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 animate-fade-in">
           <Rocket className="h-4 w-4 text-primary" />
-          <span className="text-sm font-medium text-primary">Coming January 2026</span>
+          <span className="text-sm font-medium text-primary">Coming September 2026</span>
         </div>
 
         <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in bg-gradient-primary bg-clip-text text-transparent">
-          Your Tech Career Starts in January
+          Your Tech Career Starts in September
         </h2>
 
         <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto animate-fade-in leading-relaxed">
-          We're launching our first cohort in January 2026. Join the waitlist now to secure your spot 
+          We're launching our next cohort in September 2026. Join the waitlist now to secure your spot 
           and get early access to exclusive resources.
         </p>
 

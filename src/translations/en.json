@@ -65,7 +65,7 @@
     "investmentLabel": "Investment in your future",
     "currentPrice": "{PRICE}",
     "perProgram": "/program",
-    "spotsLeft": "Only {SPOTS} {SPOTS_LABEL} left!"
+    "spotsLeft": "Limited spots remaining!"
   },
   "accelerator": {
     "backToHome": "Back to Home",
@@ -511,7 +511,7 @@
         "date": "2026",
         "location": "Remote",
         "title": "Next Step: You",
-        "description": "Our first cohort launches in April 2026. We're ready to help the next generation of Greek developers break into tech with the exact blueprint we've refined over years. Will you be part of this journey?",
+        "description": "Our next cohort launches in September 2026. We're ready to help the next generation of Greek developers break into tech with the exact blueprint we've refined over years. Will you be part of this journey?",
         "image": "/assets/timeline/bill.webp"
       }
     ],

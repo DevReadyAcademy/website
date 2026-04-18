@@ -66,7 +66,7 @@
     "investmentLabel": "Επένδυση στο μέλλον σου",
     "currentPrice": "{PRICE}",
     "perProgram": "/πρόγραμμα",
-    "spotsLeft": "Μόνο {SPOTS} {SPOTS_LABEL} {SPOTS_VERB}!"
+    "spotsLeft": "Περιορισμένες θέσεις απομένουν!"
   },
   "accelerator": {
     "backToHome": "Πίσω στην Αρχική",
@@ -510,7 +510,7 @@
         "date": "2026",
         "location": "Remote",
         "title": "Επόμενο Βήμα: Εσύ",
-        "description": "Το πρώτο μας cohort ξεκινάει τον Απρίλιο 2026. Είμαστε έτοιμοι να βοηθήσουμε την επόμενη γενιά Ελλήνων developers να μπουν στην tech με το ακριβές blueprint που έχουμε κάνει refine για χρόνια. Θα είσαι μέρος αυτού του ταξιδιού;",
+        "description": "Το επόμενο cohort ξεκινάει τον Σεπτέμβριο 2026. Είμαστε έτοιμοι να βοηθήσουμε την επόμενη γενιά Ελλήνων developers να μπουν στην tech με το ακριβές blueprint που έχουμε κάνει refine για χρόνια. Θα είσαι μέρος αυτού του ταξιδιού;",
         "image": "/assets/timeline/bill.webp"
       }
     ],
