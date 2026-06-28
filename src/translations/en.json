@@ -387,7 +387,7 @@
     ]
   },
   "testimonials": {
-    "title": "What Our Students Say",
+    "title": "Success Stories",
     "seeAll": "See All Success Stories"
   },
   "successStories": {
@@ -396,8 +396,8 @@
     "title": "Success Stories",
     "subtitle": "Real results from real students. Here's what they have to say about their DevReady experience.",
     "stat1Label": "Students Trained",
-    "stat2Label": "Found Jobs Within a Month",
-    "stat3Label": "Countries",
+    "stat2Label": "Landed Interviews or Jobs",
+    "stat3Label": "Would Recommend",
     "featuredTitle": "Featured Stories",
     "allTitle": "More From Our Students",
     "ctaTitle": "Ready to Write Your Own Success Story?",

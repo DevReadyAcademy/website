@@ -1,10 +1,11 @@
-import { Quote, ArrowRight } from "lucide-react";
+import { Quote, ArrowRight, Users, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from '../contexts/LanguageContext';
 import { testimonialsEn, testimonialsGr } from '../data/testimonials';
 
-// Show the 3 strongest testimonials on the homepage
-const FEATURED_INDICES = [0, 3, 4];
+// Show the 3 strongest outcome testimonials on the homepage:
+// Giorgos Perdikaris (found first job), Vangelis Agapiou (2 interviews in first week), Christos Grekas (progressed at company)
+const FEATURED_INDICES = [6, 7, 8];
 
 const Testimonials = () => {
   const { t, language } = useLanguage();
@@ -13,49 +14,59 @@ const Testimonials = () => {
 
   return (
       <section id="testimonials" className="py-20 px-4" aria-label="Student testimonials">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 animate-fade-in">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-10 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
               {t('testimonials.title')}
             </h2>
+            <div className="flex items-center justify-center gap-8 text-base md:text-lg text-muted-foreground">
+              <span className="inline-flex items-center gap-2">
+                <Users className="w-5 h-5 text-primary" />
+                <strong className="text-foreground text-xl md:text-2xl">15+</strong> {t('successStories.stat1Label')}
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Briefcase className="w-5 h-5 text-primary" />
+                <strong className="text-foreground text-xl md:text-2xl">70%</strong> {t('successStories.stat2Label')}
+              </span>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featured.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-card border border-border/50 rounded-2xl p-6 shadow-elegant flex flex-col animate-fade-in"
+                className="bg-card border border-border/50 rounded-2xl p-8 shadow-elegant flex flex-col animate-fade-in"
               >
-                <Quote className="w-8 h-8 text-primary/20 mb-4 flex-shrink-0" aria-hidden="true" />
-                <blockquote className="text-foreground leading-relaxed mb-6 flex-1 line-clamp-6">
+                <Quote className="w-10 h-10 text-primary/20 mb-5 flex-shrink-0" aria-hidden="true" />
+                <blockquote className="text-foreground text-base md:text-lg leading-relaxed mb-6 flex-1 line-clamp-[8]">
                   {testimonial.quote}
                 </blockquote>
-                <div className="flex items-center gap-3 pt-4 border-t border-border/30">
+                <div className="flex items-center gap-4 pt-5 border-t border-border/30">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-11 h-11 rounded-full object-cover border-2 border-primary/20"
-                    width="44"
-                    height="44"
+                    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+                    width="56"
+                    height="56"
                     loading="lazy"
                     decoding="async"
                   />
                   <div>
-                    <h4 className="font-semibold text-sm">{testimonial.name}</h4>
-                    <p className="text-muted-foreground text-xs">{testimonial.role}</p>
+                    <h4 className="font-semibold text-base">{testimonial.name}</h4>
+                    <p className="text-muted-foreground text-sm">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <div className="text-center mt-12">
             <Link
               to="/success-stories"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium text-lg transition-colors"
             >
               {t('testimonials.seeAll')}
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

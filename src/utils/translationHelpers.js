@@ -16,6 +16,7 @@ export const injectEarlyBirdValues = (translations, lang = 'en') => {
   const placeholders = {
     '{COHORT_DATE}': earlyBirdConfig.getCohortDateRange(lang),
     '{PRICE}': earlyBirdConfig.price,
+    '{REGULAR_PRICE}': earlyBirdConfig.regularPrice || earlyBirdConfig.price,
     '{COHORT_YEAR}': earlyBirdConfig.cohortYear.toString(),
     '{SPOTS}': spots.toString(),
     '{SPOTS_LABEL}': spotsLabel,

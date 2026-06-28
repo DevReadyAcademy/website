@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useLanguage } from "../contexts/LanguageContext";
+import earlyBirdConfig from "../config/earlyBird";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -208,6 +209,9 @@ const Accelerator = () => {
                 <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-6">
                   <Target className="w-8 h-8 text-primary mb-3 mx-auto" />
                   <h3 className="font-semibold text-lg mb-2">{t('accelerator.infoCards.investmentTitle')}</h3>
+                  {earlyBirdConfig.isActive && earlyBirdConfig.regularPrice && (
+                    <span className="text-lg text-muted-foreground line-through mr-2">{earlyBirdConfig.regularPrice}</span>
+                  )}
                   <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
                   <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
                 </div>

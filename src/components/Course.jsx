@@ -2,6 +2,7 @@ import { Calendar, Users, ArrowRight, CheckCircle, Clock, Target } from "lucide-
 import { Button } from "@/components/ui/button.tsx";
 import { Link } from "react-router-dom";
 import { useLanguage } from '../contexts/LanguageContext';
+import earlyBirdConfig from '../config/earlyBird';
 
 const Course = () => {
   const { t } = useLanguage();
@@ -69,6 +70,9 @@ const Course = () => {
               <div className="text-center md:text-left w-full md:w-auto">
                 <p className="text-sm sm:text-base text-muted-foreground mb-2">{t('course.investmentLabel')}</p>
                 <div className="flex flex-col sm:flex-row items-center sm:items-baseline gap-1 sm:gap-2 justify-center md:justify-start">
+                  {earlyBirdConfig.isActive && earlyBirdConfig.regularPrice && (
+                    <span className="text-xl sm:text-2xl text-muted-foreground line-through">{earlyBirdConfig.regularPrice}</span>
+                  )}
                   <span className="text-4xl sm:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                     {t('course.currentPrice')}
                   </span>

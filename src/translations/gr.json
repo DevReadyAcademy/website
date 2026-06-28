@@ -386,7 +386,7 @@
     ]
   },
   "testimonials": {
-    "title": "Testimonials",
+    "title": "Success Stories",
     "seeAll": "Δες Όλα τα Success Stories"
   },
   "successStories": {
@@ -395,8 +395,8 @@
     "title": "Success Stories",
     "subtitle": "Πραγματικά αποτελέσματα από πραγματικούς students. Δες τι λένε για την εμπειρία τους στο DevReady.",
     "stat1Label": "Students Trained",
-    "stat2Label": "Βρήκαν Δουλειά Μέσα σε Ένα Μήνα",
-    "stat3Label": "Χώρες",
+    "stat2Label": "Πήραν Interviews ή Δουλειά",
+    "stat3Label": "Θα το Πρότειναν",
     "featuredTitle": "Featured Stories",
     "allTitle": "Περισσότερα Από τους Students Μας",
     "ctaTitle": "Έτοιμος να Γράψεις το Δικό σου Success Story;",
