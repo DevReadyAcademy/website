@@ -22,7 +22,7 @@ const Testimonials = () => {
             <div className="flex items-center justify-center gap-8 text-base md:text-lg text-muted-foreground">
               <span className="inline-flex items-center gap-2">
                 <Users className="w-5 h-5 text-primary" />
-                <strong className="text-foreground text-xl md:text-2xl">15+</strong> {t('successStories.stat1Label')}
+                <strong className="text-foreground text-xl md:text-2xl">30+</strong> {t('successStories.stat1Label')}
               </span>
               <span className="inline-flex items-center gap-2">
                 <Briefcase className="w-5 h-5 text-primary" />
