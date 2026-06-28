@@ -367,17 +367,13 @@
     "title": "Το Team",
     "description": "Είμαστε passionate professionals αφοσιωμένοι να κάνουμε transform το tech education στην Ελλάδα",
     "storyTitle": "Γιατί φτιάξαμε το DevReady",
-    "storyText": "Ο Alex αντιμετώπισε το ίδιο πρόβλημα που αντιμετωπίζετε και εσείς, πώς να κάνεις το άλμα από 'ξέρω να γράφω κώδικα' σε 'I got hired'. Μετά από πολλές απορρίψεις σε εταιρείες του εξωτερικού και μαθαίνοντας με τον δύσκολο τρόπο, συνεργάστηκε με τον Κώστα και κατάφεραν να μπουν σε top εταιρείες στο εξωτερικό. Ύστερα βοήθησαν τον Βασίλη και δεκάδες άλλους να μπουν στο industry. Γνωρίζουμε ότι η Ελλάδα έχει great talent στο engineering, αλλά λείπει το structured path, το mentorship και το industry context. Έτσι φτιάξαμε το DevReady.",
+    "storyText": "Ο Alex αντιμετώπισε το ίδιο πρόβλημα που αντιμετωπίζετε και εσείς, πώς να κάνεις το άλμα από 'ξέρω να γράφω κώδικα' σε 'I got hired'. Μετά από πολλές απορρίψεις σε εταιρείες του εξωτερικού και μαθαίνοντας με τον δύσκολο τρόπο, βοήθησε τον Βασίλη και δεκάδες άλλους να μπουν στο industry. Γνωρίζουμε ότι η Ελλάδα έχει great talent στο engineering, αλλά λείπει το structured path, το mentorship και το industry context. Έτσι φτιάξαμε το DevReady.",
     "learnMoreAboutTeam": "Μάθε Περισσότερα για την Ομάδα",
     "connectLinkedIn": "LinkedIn",
     "members": [
       {
         "name": "Alexis Pavlidis",
         "description": "London-based Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable distributed systems σε top companies και στην καθοδήγηση engineers. Είναι passionate για clean code, distributed systems, και στο να βοηθάει άλλους να κανουν navigate στο tech industry μέσω mentoring, writing και speaking."
-      },
-      {
-        "name": "Kostikas Visnia",
-        "description": "Barcelona-based Technical Account Manager με deep technical background σε networking και cloud infrastructure. Έχοντας κάνει transition από hands-on technical support σε senior consulting ρόλους, φέρνει ένα business-aware approach στο engineering, διασφαλίζοντας ότι τα complex software συστήματα δουλεύουν όπως πρέπει για global enterprises και τους χρήστες τους."
       },
       {
         "name": "Vasilis Samoladas",
@@ -401,7 +397,7 @@
     "allTitle": "Περισσότερα Από τους Students Μας",
     "ctaTitle": "Έτοιμος να Γράψεις το Δικό σου Success Story;",
     "ctaDescription": "Μπες στο επόμενο cohort και απόκτησε τα skills, το mentorship και την αυτοπεποίθηση για τον dream tech ρόλο σου.",
-    "ctaButton": "Κλείσε το Enrollment Call",
+    "ctaButton": "Κλείσε τη Θέση σου",
     "midCtaText": "Θέλεις αποτελέσματα σαν αυτά;"
   },
   "whyDifferent": {
@@ -448,20 +444,6 @@
         "linkedin": "https://www.linkedin.com/in/apavlidi/",
         "github": "https://github.com/apavlidi",
         "website": "https://apavlidi.com"
-      },
-      {
-        "name": "Kostas Visnia",
-        "role": "Technical Account Manager at Dynatrace",
-        "location": "Βαρκελώνη, Ισπανία",
-        "image": "/assets/kostikas.jpg",
-        "bio": "Technical Account Manager με deep expertise σε networking, cloud infrastructure και enterprise systems. Ο Κώστας έκανε transition από hands-on technical roles σε senior consulting, δουλεύοντας με global Fortune 500 companies για να διασφαλίσει ότι τα συστήματά τους τρέχουν flawlessly. Φέρνει ένα unique business-aware approach στο engineering education, διδάσκοντας όχι μόνο πώς να γράφεις κώδικα, αλλά πώς να σκέφτεσαι σαν professional engineer σε corporate περιβάλλον.",
-        "highlights": [
-          "Expert σε cloud infrastructure και networking at scale",
-          "Δουλεύει με Fortune 500 companies σε technical strategy",
-          "Passionate για να διδάξει το business side του engineering",
-          "Γεφυρώνει το χάσμα μεταξύ technical excellence και business needs"
-        ],
-        "linkedin": "https://www.linkedin.com/in/kvisnia/"
       },
       {
         "name": "Vasilis Samoladas",
