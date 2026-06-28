@@ -469,11 +469,12 @@
         "location": "Thessaloniki, Greece",
         "title": "The Beginning: Rejections, Rejections, Rejections",
         "description": "After graduating, Alex tried to land jobs abroad. Reality hit hard: rejection after rejection. He quickly realized how much he didn't know. No one had taught him how the industry actually works, how to interview, or how to present himself. So he started his career in Greece, learned the hard way, and eventually managed to land a role abroad.",
-        "image": "/assets/timeline/alex_codurance.png"
+        "image": "/assets/timeline/alex_codurance.jpg",
+        "imageClass": "w-full h-48 object-cover object-top"
       },
       {
         "date": "2018-2023",
-        "location": "London, Greece, Barcelona, Belgium",
+        "location": "London, Greece",
         "title": "Gaining Experience and Expertise",
         "description": "Alex worked at different companies across Greece and London. He failed and learned, iterated and improved. Through trial and error, he became a professional in the industry, understanding not just how to code, but how the tech world really operates. He learned what companies actually look for and how to navigate interviews.",
         "image": "/assets/timeline/alex_presentation.png"
