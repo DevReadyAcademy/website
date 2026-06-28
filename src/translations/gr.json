@@ -67,7 +67,7 @@
     "investmentLabel": "Επένδυση στο μέλλον σου",
     "currentPrice": "{PRICE}",
     "perProgram": "/πρόγραμμα",
-    "spotsLeft": "Περιορισμένες θέσεις απομένουν!"
+    "spotsLeft": "Μόνο {SPOTS} {SPOTS_LABEL} {SPOTS_VERB}!"
   },
   "accelerator": {
     "backToHome": "Πίσω στην Αρχική",

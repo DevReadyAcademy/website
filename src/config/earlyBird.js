@@ -21,7 +21,7 @@ export const earlyBirdConfig = {
   regularPrice: "€599",
 
   // Remaining spots
-  remainingSpots: 1,
+  remainingSpots: 10,
 
   // Registration deadline (used for countdown timer)
   cohortStartDate: '2026-09-01T00:00:00+03:00',
