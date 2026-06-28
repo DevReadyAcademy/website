@@ -99,7 +99,7 @@ const SuccessStories = () => {
               <div className="grid grid-cols-2 gap-4 max-w-md mx-auto mb-4">
                 <div className="text-center p-4 rounded-xl bg-card border border-border/50">
                   <Users className="w-5 h-5 text-primary mx-auto mb-2" aria-hidden="true" />
-                  <p className="text-2xl md:text-3xl font-bold text-foreground">15+</p>
+                  <p className="text-2xl md:text-3xl font-bold text-foreground">30+</p>
                   <p className="text-xs md:text-sm text-muted-foreground">{t('successStories.stat1Label')}</p>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-card border border-border/50">
