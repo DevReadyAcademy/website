@@ -18,7 +18,7 @@ const Team = () => {
     <>
       <SEO
         title="Meet the Team - DevReady"
-        description="Meet Alex, Kostas, and Vasilis - the team behind DevReady. From dozens of job rejections to helping others break into tech."
+        description="Meet Alex and Vasilis - the team behind DevReady. From dozens of job rejections to helping others break into tech."
         keywords="DevReady team, about us, tech education Greece, software engineering mentors, meet the team, tech mentorship"
         canonical="https://www.devready.gr/team"
         language={language}

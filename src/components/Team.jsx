@@ -10,7 +10,6 @@ const Team = () => {
 
   const teamImages = [
     '/assets/alex.jpg',
-    '/assets/kostikas.jpg',
     '/assets/sam.webp'
   ];
 
@@ -44,7 +43,7 @@ const Team = () => {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}

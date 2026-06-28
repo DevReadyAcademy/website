@@ -368,17 +368,13 @@
     "title": "Meet The Team",
     "description": "We're a group of passionate professionals dedicated to transforming tech education in Greece",
     "storyTitle": "Why We Built DevReady",
-    "storyText": "Alex faced the same problem you're facing—how to make the jump from 'I can code' to 'I got hired'. After years working at tech companies abroad, he teamed up with Kostas and helped Vasilis and dozens of others break into the industry. We realized Greece has the talent—but lacks the structured path, mentorship, and industry context. So we built DevReady.",
+    "storyText": "Alex faced the same problem you're facing—how to make the jump from 'I can code' to 'I got hired'. After years working at tech companies abroad, he helped Vasilis and dozens of others break into the industry. We realized Greece has the talent—but lacks the structured path, mentorship, and industry context. So we built DevReady.",
     "learnMoreAboutTeam": "Learn More About the Team",
     "connectLinkedIn": "LinkedIn",
     "members": [
       {
         "name": "Alexis Pavlidis",
         "description": "A London-based Software Engineer over seven years of experience building scalable systems and guiding early-career developers. He is passionate about clean code, practical engineering, and helping others navigate the tech industry through mentoring, writing, and speaking."
-      },
-      {
-        "name": "Kostikas Visnia",
-        "description": "A Barcelona-based Technical Account Manager with a deep technical background in networking and cloud infrastructure. Having transitioned from hands-on technical support to senior consulting roles, he brings a business-aware approach to engineering, ensuring complex software systems work perfectly for global enterprises and their users."
       },
       {
         "name": "Vasilis Samoladas",
@@ -449,20 +445,6 @@
         "linkedin": "https://www.linkedin.com/in/apavlidi/",
         "github": "https://github.com/apavlidi",
         "website": "https://apavlidi.com"
-      },
-      {
-        "name": "Kostas Visnia",
-        "role": "Technical Account Manager at Dynatrace",
-        "location": "Barcelona, Spain",
-        "image": "/assets/kostikas.jpg",
-        "bio": "A Technical Account Manager with deep expertise in networking, cloud infrastructure, and enterprise systems. Kostas transitioned from hands-on technical roles to senior consulting, working with global Fortune 500 companies to ensure their systems run flawlessly. He brings a unique business-aware approach to engineering education, teaching not just how to code, but how to think like a professional engineer in a corporate environment.",
-        "highlights": [
-          "Expert in cloud infrastructure and networking at scale",
-          "Works with Fortune 500 companies on technical strategy",
-          "Passionate about teaching the business side of engineering",
-          "Bridges the gap between technical excellence and business needs"
-        ],
-        "linkedin": "https://www.linkedin.com/in/kvisnia/"
       },
       {
         "name": "Vasilis Samoladas",
