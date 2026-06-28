@@ -75,8 +75,8 @@ const Course = () => {
                   </span>
                 )}
                 <div className="flex flex-col sm:flex-row items-center sm:items-baseline gap-1 sm:gap-2 justify-center md:justify-start">
-                  {earlyBirdConfig.isActive && earlyBirdConfig.regularPrice && (
-                    <span className="text-xl sm:text-2xl text-muted-foreground line-through">{earlyBirdConfig.regularPrice}</span>
+                  {earlyBirdConfig.isActive && earlyBirdConfig.originalPrice && (
+                    <span className="text-xl sm:text-2xl text-muted-foreground line-through">{earlyBirdConfig.originalPrice}</span>
                   )}
                   <span className="text-4xl sm:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                     {t('course.currentPrice')}

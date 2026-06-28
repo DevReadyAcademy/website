@@ -5,7 +5,7 @@ import earlyBirdConfig from '../config/earlyBird';
  * Placeholders: {COHORT_DATE}, {PRICE}, {COHORT_YEAR}
  */
 export const injectEarlyBirdValues = (translations, lang = 'en') => {
-  const spots = earlyBirdConfig.remainingSpots;
+  const spots = earlyBirdConfig.spotsLeft;
   const spotsLabel = lang === 'gr'
     ? (spots === 1 ? 'θέση' : 'θέσεις')
     : (spots === 1 ? 'spot' : 'spots');
@@ -13,10 +13,13 @@ export const injectEarlyBirdValues = (translations, lang = 'en') => {
     ? (spots === 1 ? 'απομένει' : 'απομένουν')
     : (spots === 1 ? 'remains' : 'remain');
 
+  const price = earlyBirdConfig.isActive ? earlyBirdConfig.earlyBirdPrice : earlyBirdConfig.originalPrice;
+
   const placeholders = {
     '{COHORT_DATE}': earlyBirdConfig.getCohortDateRange(lang),
-    '{PRICE}': earlyBirdConfig.price,
-    '{REGULAR_PRICE}': earlyBirdConfig.regularPrice || earlyBirdConfig.price,
+    '{PRICE}': price,
+    '{REGULAR_PRICE}': earlyBirdConfig.originalPrice,
+    '{EARLY_BIRD_PRICE}': earlyBirdConfig.earlyBirdPrice,
     '{COHORT_YEAR}': earlyBirdConfig.cohortYear.toString(),
     '{SPOTS}': spots.toString(),
     '{SPOTS_LABEL}': spotsLabel,

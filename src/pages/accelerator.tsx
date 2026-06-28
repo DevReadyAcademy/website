@@ -215,8 +215,8 @@ const Accelerator = () => {
                     </span>
                   )}
                   <div>
-                    {earlyBirdConfig.isActive && earlyBirdConfig.regularPrice && (
-                      <span className="text-lg text-muted-foreground line-through mr-2">{earlyBirdConfig.regularPrice}</span>
+                    {earlyBirdConfig.isActive && earlyBirdConfig.originalPrice && (
+                      <span className="text-lg text-muted-foreground line-through mr-2">{earlyBirdConfig.originalPrice}</span>
                     )}
                     <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
                   </div>
