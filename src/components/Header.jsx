@@ -99,6 +99,7 @@ const Header = () => {
     { name: t('header.accelerator'), path: '/accelerator', type: 'link' },
     { name: t('header.team'), path: '/team', type: 'link' },
     { name: t('header.devpress'), path: '/devpress', type: 'link' },
+    { name: t('header.successStories'), path: '/success-stories', type: 'link' },
   ];
 
   return (
