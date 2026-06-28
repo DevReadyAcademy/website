@@ -1,194 +1,73 @@
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { Button } from "@/components/ui/button.tsx";
+import { Quote, ArrowRight, Users, Briefcase } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from '../contexts/LanguageContext';
+import { testimonialsEn, testimonialsGr } from '../data/testimonials';
 
-const testimonialsEn = [
-  {
-    name: "Maria Balafouti",
-    role: "Applied Informatics Student | STEM Educator",
-    quote: "I have to say that so many parts of the roadmap I had in mind were unlocked, and countless questions I'd been carrying for a long time were finally answered.\nAlso, I absolutely loved the incredible chemistry you had as a team, it was so inspiring and you passed that same vibe on to us! Im ready to crush all my interviews thanks to you!",
-    image: "/assets/students/maria_balafouti.jpeg",
-  },
-  {
-    name: "Kostas Kotsis",
-    role: "Frontend Developer",
-    quote: "It felt extremely useful for my journey in software engineering, especially in terms of the guidelines I should follow. I will definitely follow the advice and material you provided, particularly around CV branding and interviewing.",
-    image: "/assets/students/kostas_kotsis.jpeg",
-  },
-  {
-    name: "Maria Zavola",
-    role: "Biomedical Engineer",
-    quote: "My main goal was to get an understanding of how the industry works. The information covered many different areas, giving me a good first taste.\n\nThe feedback from your own experiences, along with realistic examples, helped me manage my stress and boost my confidence, making the journey feel a bit more achievable.",
-    image: "/assets/students/maria_zavola.jpeg",
-  },
-  {
-    name: "Kostantinos Apostolidis",
-    role: "Computer Science Student (UoM) | Front-End Development, IoT & Cybersecurity Enthusiast",
-    quote: "As a third-year student, the boost I got from this program was huge. You pushed me out of my comfort zone, challenged me in a positive way, and helped me see my future a little more clearly. The knowledge I gained is extensive, and much of it consists of things that are hard to 'learn' at university. You gave me one of the most beautiful 'first milestones' on my journey into technology.",
-    image: "/assets/students/kostas_apostolidis.jpeg",
-  },
-  {
-    name: "Marios",
-    role: "Software Engineer",
-    quote: "All three of them were exceptional, they helped me learn how to organize my thinking and break down a problem into smaller manageable pieces. Whether you're interested in backend or frontend, the accelerator covers both. Their feedback was very helpful and the projects were genuinely interesting. Finally, the interview preparation part and their tips were really useful and give you a real picture of how companies think, helping me prepare better. I wholeheartedly recommend it.",
-    image: "/assets/students/marios.jpeg",
-  },
-];
-
-const testimonialsGr = [
-  {
-    name: "Maria Balafouti",
-    role: "Applied Informatics Student | STEM Educator",
-    quote: "Πρέπει να πω ότι ξεκλείδωσαν πάρα πολλά κομμάτια του roadmap που είχα στο μυαλό μου και αναρίθμητες ερωτήσεις που κουβαλούσα εδώ και πολύ καιρό βρήκαν επιτέλους απαντήσεις.\nΕπίσης, λάτρεψα πραγματικά την απίστευτη χημεία που είχατε ως ομάδα — ήταν τόσο εμπνευστική και μεταδώσατε ακριβώς την ίδια ενέργεια και σε εμάς!",
-    image: "/assets/students/maria_balafouti.jpeg",
-  },
-  {
-    name: "Kostas Kotsis",
-    role: "Frontend Developer",
-    quote: "Μου φάνηκε πάρα πολύ χρήσιμο για την πορεία μου στο software engineering, ως προς τις κατευθυντήριες γραμμές που πρέπει να ακολουθήσω. Δηλαδή σίγουρα θα ακολουθήσω τις συμβουλές και το υλικό που μάς δώσατε, ειδικότερα σε CV branding και interviewing. Νομίζω ήταν οι ενότητες με τη μεγαλύτερη αξία (για μένα).",
-    image: "/assets/students/kostas_kotsis.jpeg",
-  },
-  {
-    name: "Maria Zavola",
-    role: "Biomedical Engineer",
-    quote: "Βασικός μου στόχος ήταν να αποκτήσω μια εικόνα για το πώς λειτουργεί το industry. Η πληροφορία κάλυψε πολλά διαφορετικά κομμάτια, προσφέροντάς μου μια καλή πρώτη γεύση.\n\nΤο feedback των δικών σας εμπειριών, μαζί με ρεαλιστικά παραδείγματα, με βοήθησαν να διαχειριστώ το άγχος και να μπουστάρω την αυτοπεποίθησή μου, κάνοντας την πορεία πιο εφικτή.",
-    image: "/assets/students/maria_zavola.jpeg",
-  },
-  {
-    name: "Kostantinos Apostolidis",
-    role: "Computer Science Student (UoM) | Front-End Development, IoT & Cybersecurity Enthusiast",
-    quote: "Ως φοιτητής τρίτου έτους, το boost που πήρα από αυτό το πρόγραμμα ήταν τεράστιο. Με βγάλατε από το comfort zone μου, με προβληματίσατε θετικά και με βοηθήσατε να δω το μέλλον μου ενα τσικ πιο καθαρά. Οι γνώσεις που αποκόμισα είναι πάρα πολλές, και μάλιστα πολλές από αυτές είναι πράγματα που δύσκολα 'μαθαίνονται' στο πανεπιστήμιο. Μου αφήσατε έναν από τους πιο όμορφους 'πρώτους σταθμούς' στο ταξίδι μου στην τεχνολογία, και δεν το θεωρώ δεδομένο.",
-    image: "/assets/students/kostas_apostolidis.jpeg",
-  },
-  {
-    name: "Marios",
-    role: "Software Engineer",
-    quote: "Τα παιδιά ήταν εξαιρετικά και οι τρεις τους, με βοήθησαν να μάθω πώς να οργανώνω τη σκέψη μου και να σπάω ένα πρόβλημα σε μικρότερα διαχειρίσιμα κομμάτια. Είτε σε ενδιαφέρει το backend είτε το frontend, το accelerator καλύπτει και τα δύο. Το feedback τους ήταν πολύ χρήσιμο και τα projects πραγματικά ενδιαφέροντα. Τέλος, το κομμάτι της προετοιμασίας για συνεντεύξεις και τα tips τους ήταν πραγματικά πολύ χρήσιμα και σου δίνουν πραγματική εικόνα για το πώς σκέφτονται οι εταιρείες και με βοήθησαν να προετοιμαστώ καλύτερα. Το συνιστώ ανεπιφύλακτα.",
-    image: "/assets/students/marios.jpeg",
-  },
-];
+// Show the 3 strongest outcome testimonials on the homepage:
+// Giorgos Perdikaris (found first job), Vangelis Agapiou (2 interviews in first week), Christos Grekas (progressed at company)
+const FEATURED_INDICES = [6, 7, 8];
 
 const Testimonials = () => {
   const { t, language } = useLanguage();
-  const testimonials = language === 'gr' ? testimonialsGr : testimonialsEn;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [language]);
-
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, testimonials.length]);
-
-  const goToPrevious = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const goToNext = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const goToSlide = (index) => {
-    setIsAutoPlaying(false);
-    setCurrentIndex(index);
-  };
+  const allTestimonials = language === 'gr' ? testimonialsGr : testimonialsEn;
+  const featured = FEATURED_INDICES.map(i => allTestimonials[i]);
 
   return (
       <section id="testimonials" className="py-20 px-4" aria-label="Student testimonials">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12 animate-fade-in">
-          {/*<span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">*/}
-          {/*  Success Stories*/}
-          {/*</span>*/}
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-10 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
               {t('testimonials.title')}
             </h2>
+            <div className="flex items-center justify-center gap-8 text-base md:text-lg text-muted-foreground">
+              <span className="inline-flex items-center gap-2">
+                <Users className="w-5 h-5 text-primary" />
+                <strong className="text-foreground text-xl md:text-2xl">15+</strong> {t('successStories.stat1Label')}
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Briefcase className="w-5 h-5 text-primary" />
+                <strong className="text-foreground text-xl md:text-2xl">70%</strong> {t('successStories.stat2Label')}
+              </span>
+            </div>
           </div>
 
-          <div className="relative">
-            <div 
-              className="overflow-hidden rounded-2xl bg-card border border-border/50 p-8 md:p-12 shadow-elegant"
-              role="tabpanel"
-              id={`testimonial-${currentIndex}`}
-              aria-label={`Testimonial from ${testimonials[currentIndex].name}`}
-              aria-live="polite"
-              aria-atomic="true"
-            >
-              <Quote className="w-12 h-12 text-primary/20 mb-6" aria-hidden="true" />
-
-              <div className="min-h-[200px] flex flex-col justify-center">
-                <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 animate-fade-in">
-                  {testimonials[currentIndex].quote}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featured.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border/50 rounded-2xl p-8 shadow-elegant flex flex-col animate-fade-in"
+              >
+                <Quote className="w-10 h-10 text-primary/20 mb-5 flex-shrink-0" aria-hidden="true" />
+                <blockquote className="text-foreground text-base md:text-lg leading-relaxed mb-6 flex-1 line-clamp-[8]">
+                  {testimonial.quote}
                 </blockquote>
-
-                <div className="flex items-center gap-4 animate-fade-in">
+                <div className="flex items-center gap-4 pt-5 border-t border-border/30">
                   <img
-                      src={testimonials[currentIndex].image}
-                      alt={testimonials[currentIndex].name}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
-                      width="56"
-                      height="56"
-                      loading="lazy"
-                      decoding="async"
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div>
-                    <h4 className="font-semibold text-lg">{testimonials[currentIndex].name}</h4>
-                    <p className="text-muted-foreground text-sm">{testimonials[currentIndex].role}</p>
+                    <h4 className="font-semibold text-base">{testimonial.name}</h4>
+                    <p className="text-muted-foreground text-sm">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Navigation Arrows */}
-            <Button
-                variant="outline"
-                size="icon"
-                className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-2 md:-translate-x-6 rounded-full shadow-lg bg-background"
-                onClick={goToPrevious}
-                aria-label="Previous testimonial"
-                title="Previous testimonial"
-            >
-              <ChevronLeft className="w-5 h-5" aria-hidden="true" />
-            </Button>
-            <Button
-                variant="outline"
-                size="icon"
-                className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-2 md:translate-x-6 rounded-full shadow-lg bg-background"
-                onClick={goToNext}
-                aria-label="Next testimonial"
-                title="Next testimonial"
-            >
-              <ChevronRight className="w-5 h-5" aria-hidden="true" />
-            </Button>
+            ))}
           </div>
 
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6" role="tablist" aria-label="Testimonial navigation">
-            {testimonials.map((testimonial, index) => (
-                <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    role="tab"
-                    aria-label={`View testimonial from ${testimonial.name}`}
-                    aria-selected={index === currentIndex}
-                    aria-controls={`testimonial-${index}`}
-                    tabIndex={index === currentIndex ? 0 : -1}
-                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                        index === currentIndex
-                            ? "bg-primary w-8"
-                            : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                    }`}
-                />
-            ))}
+          <div className="text-center mt-12">
+            <Link
+              to="/success-stories"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium text-lg transition-colors"
+            >
+              {t('testimonials.seeAll')}
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

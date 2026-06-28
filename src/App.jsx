@@ -40,6 +40,7 @@ const CvReview = lazy(() => import("./pages/CvReview"));
 const CvTemplate = lazy(() => import("./pages/CvTemplate"));
 const BehaviouralQuestions = lazy(() => import("./pages/BehaviouralQuestions"));
 const ReadinessQuiz = lazy(() => import("./pages/readinessQuiz"));
+const SuccessStories = lazy(() => import("./pages/successStories"));
 
 const queryClient = new QueryClient();
 
@@ -85,6 +86,7 @@ const App = () => {
               <Route path="/cv-template" element={<CvTemplate />} />
               <Route path="/behavioural-questions" element={<BehaviouralQuestions />} />
               <Route path="/readiness-quiz" element={<ReadinessQuiz />} />
+              <Route path="/success-stories" element={<SuccessStories />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -74,12 +74,11 @@ const Index = () => {
                 <Header />
                 <main id="main-content">
                     <Hero />
-                    {/* <Vision/> */}
+                    <Testimonials />
                     <Pillars />
                     <Course />
-                    <Team />
-                    <Testimonials />
                     <WhyDifferent />
+                    <Team />
                 </main>
 
                 {/* <ComingSoon /> */}

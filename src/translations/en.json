@@ -20,6 +20,7 @@
     "devpress": "DevPress",
     "testimonials": "Testimonials",
     "whyDifferent": "Why Different",
+    "successStories": "Success Stories",
     "freeCvReview": "Free CV Review",
     "urgencyBanner": "Only {SPOTS} {SPOTS_LABEL} left for the {COHORT_DATE} cohort — Secure yours now!"
   },
@@ -386,7 +387,23 @@
     ]
   },
   "testimonials": {
-    "title": "What Our Students Say"
+    "title": "Success Stories",
+    "seeAll": "See All Success Stories"
+  },
+  "successStories": {
+    "pageTitle": "Success Stories | DevReady",
+    "pageDescription": "Read real testimonials from DevReady students who transformed their careers in tech.",
+    "title": "Success Stories",
+    "subtitle": "Real results from real students. Here's what they have to say about their DevReady experience.",
+    "stat1Label": "Students Trained",
+    "stat2Label": "Landed Interviews or Jobs",
+    "stat3Label": "Would Recommend",
+    "featuredTitle": "Featured Stories",
+    "allTitle": "More From Our Students",
+    "ctaTitle": "Ready to Write Your Own Success Story?",
+    "ctaDescription": "Join our next cohort and get the skills, mentorship, and confidence to land your dream tech role.",
+    "ctaButton": "Book Your Enrollment Call",
+    "midCtaText": "Want results like these?"
   },
   "whyDifferent": {
     "title": "Why We're Different",

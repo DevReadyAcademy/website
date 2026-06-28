@@ -3,7 +3,7 @@
 
 export const earlyBirdConfig = {
   // Early bird availability
-  isActive: false,
+  isActive: true,
 
   // Cohort dates (English and Greek)
   cohortStartMonth: {
@@ -17,7 +17,8 @@ export const earlyBirdConfig = {
   cohortYear: 2026,
 
   // Pricing
-  price: "€449",
+  price: "€399",
+  regularPrice: "€599",
 
   // Remaining spots
   remainingSpots: 1,

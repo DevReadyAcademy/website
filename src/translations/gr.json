@@ -21,6 +21,7 @@
     "devpress": "DevPress",
     "testimonials": "Testimonials",
     "whyDifferent": "Γιατί Διαφέρουμε",
+    "successStories": "Success Stories",
     "freeCvReview": "Δωρεάν Αξιολόγηση CV",
     "urgencyBanner": "Μόνο {SPOTS} {SPOTS_LABEL} {SPOTS_VERB} για το cohort {COHORT_DATE} • Κλείσε τη δική σου τώρα!"
   },
@@ -385,7 +386,23 @@
     ]
   },
   "testimonials": {
-    "title": "Testimonials"
+    "title": "Success Stories",
+    "seeAll": "Δες Όλα τα Success Stories"
+  },
+  "successStories": {
+    "pageTitle": "Success Stories | DevReady",
+    "pageDescription": "Διάβασε πραγματικά testimonials από students του DevReady που μεταμόρφωσαν την καριέρα τους στο tech.",
+    "title": "Success Stories",
+    "subtitle": "Πραγματικά αποτελέσματα από πραγματικούς students. Δες τι λένε για την εμπειρία τους στο DevReady.",
+    "stat1Label": "Students Trained",
+    "stat2Label": "Πήραν Interviews ή Δουλειά",
+    "stat3Label": "Θα το Πρότειναν",
+    "featuredTitle": "Featured Stories",
+    "allTitle": "Περισσότερα Από τους Students Μας",
+    "ctaTitle": "Έτοιμος να Γράψεις το Δικό σου Success Story;",
+    "ctaDescription": "Μπες στο επόμενο cohort και απόκτησε τα skills, το mentorship και την αυτοπεποίθηση για τον dream tech ρόλο σου.",
+    "ctaButton": "Κλείσε το Enrollment Call",
+    "midCtaText": "Θέλεις αποτελέσματα σαν αυτά;"
   },
   "whyDifferent": {
     "title": "Γιατί Διαφέρουμε",
