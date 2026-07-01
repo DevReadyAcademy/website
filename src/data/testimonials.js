@@ -86,6 +86,13 @@ export const testimonialsEn = [
     highlight: "I managed to create two projects for my portfolio, improve my CV, and feel much more confident",
     image: "/assets/students/dimitris_giannopoulos.jpeg",
   },
+  {
+    name: "Giorgos Papadopoulos",
+    role: "Aspiring Backend Engineer",
+    quote: "Before DevReady I was in chaos about where to go and what direction to follow to achieve my goal — landing my first job. Through DevReady a lot of things were resolved and I started setting goals that would help me get there. We managed to build a CV-ready project through which we learned new technologies and ways to handle problems in real time, since the team reviewed it every few days. What helped me the most was the guidance I received to solve small things and gradually reach my goal. I'd definitely recommend it to anyone who wants to land their first job in tech, because you'll get the foundations you need. Proper guidance is what we newcomers are missing — not more tutorials.",
+    highlight: "Proper guidance is what we newcomers are missing — not more tutorials.",
+    image: "/assets/students/giorgos_papadopoulos.png",
+  },
 ];
 
 export const testimonialsGr = [
@@ -175,5 +182,12 @@ export const testimonialsGr = [
     quote: "Μόλις ολοκλήρωσα τις σπουδές μου ως Μηχανικός Πληροφορικής και ήθελα να κάνω τα πρώτα μου βήματα στην αγορά εργασίας, αλλά δεν ήξερα από πού να ξεκινήσω. Μέσα από το DevReady έμαθα πώς δουλεύει ένα πραγματικό project στην πράξη, από την αρχική υλοποίηση μέχρι το deployment και τη διάθεσή του online. Κατάφερα να δημιουργήσω δύο projects για το portfolio μου, να βελτιώσω το βιογραφικό μου και να νιώσω πολύ πιο σίγουρος για τα επόμενα επαγγελματικά μου βήματα. Θα το πρότεινα σε όποιον θέλει να περάσει από τη θεωρία στην πράξη και να καταλάβει καλύτερα πώς λειτουργεί ο χώρος του software development σε επαγγελματικό περιβάλλον.",
     highlight: "Κατάφερα να δημιουργήσω δύο projects για το portfolio μου, να βελτιώσω το βιογραφικό μου και να νιώσω πολύ πιο σίγουρος",
     image: "/assets/students/dimitris_giannopoulos.jpeg",
+  },
+  {
+    name: "Γιώργος Παπαδόπουλος",
+    role: "Aspiring Backend Engineer",
+    quote: "Πριν το DevReady βρισκόμουν σε ένα χάος για το που θα βαδίσω και το τι κατευθύνσεις πρέπει να ακολουθήσω ώστε να πετύχω τον στόχο μου, ο οποίος είναι να κάνω land την πρώτη μου δουλειά. Μέσα από το DevReady λύθηκαν αρκετά πράγματα και άρχισα να βάζω στόχους όπου θα με βοηθήσουν να το επιτύχω. Καταφέραμε να φτιάξουμε ένα project έτοιμο για βιογραφικό μέσω του οποίου μάθαμε καινούργιες τεχνολογίες και τρόπους διαχείρισης των προβλημάτων σε πραγματικό χρόνο αφού τα παιδιά το έκαναν review κάθε λίγες ημέρες. Αυτό που με βοήθησε παραπάνω ήταν η καθοδήγηση που πήρα ώστε να ξέρω να επιλύω μικρά πράγματα και σιγά σιγά να φτάνω στον στόχο μου. Εννοείται πως θα το πρότεινα σε κάποιον που θέλει να κάνει land την πρώτη του δουλειά στον κόσμο της πληροφορικής διότι θα πάρει τα θεμέλια που πρέπει. Η σωστή καθοδήγηση είναι αυτό που λείπει σε εμάς τους νέους του χώρου και όχι τα συνεχόμενα tutorials.",
+    highlight: "Η σωστή καθοδήγηση είναι αυτό που λείπει σε εμάς τους νέους του χώρου και όχι τα συνεχόμενα tutorials.",
+    image: "/assets/students/giorgos_papadopoulos.png",
   },
 ];
