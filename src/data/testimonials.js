@@ -5,6 +5,7 @@ export const testimonialsEn = [
     quote: "I have to say that so many parts of the roadmap I had in mind were unlocked, and countless questions I'd been carrying for a long time were finally answered.\nAlso, I absolutely loved the incredible chemistry you had as a team, it was so inspiring and you passed that same vibe on to us! Im ready to crush all my interviews thanks to you!",
     highlight: "Im ready to crush all my interviews thanks to you!",
     image: "/assets/students/maria_balafouti.jpeg",
+    linkedin: "https://www.linkedin.com/in/maria-balafouti/",
   },
   {
     name: "Kostas Kotsis",
@@ -12,6 +13,7 @@ export const testimonialsEn = [
     quote: "It felt extremely useful for my journey in software engineering, especially in terms of the guidelines I should follow. I will definitely follow the advice and material you provided, particularly around CV branding and interviewing.",
     highlight: "I will definitely follow the advice and material you provided, particularly around CV branding and interviewing.",
     image: "/assets/students/kostas_kotsis.jpeg",
+    linkedin: "https://www.linkedin.com/in/kostas-kotsis/",
   },
   {
     name: "Maria Zavola",
@@ -19,6 +21,7 @@ export const testimonialsEn = [
     quote: "My main goal was to get an understanding of how the industry works. The information covered many different areas, giving me a good first taste.\n\nThe feedback from your own experiences, along with realistic examples, helped me manage my stress and boost my confidence, making the journey feel a bit more achievable.",
     highlight: "helped me manage my stress and boost my confidence, making the journey feel a bit more achievable.",
     image: "/assets/students/maria_zavola.jpeg",
+    linkedin: "https://www.linkedin.com/in/mariazavola97/",
   },
   {
     name: "Kostantinos Apostolidis",
@@ -26,13 +29,15 @@ export const testimonialsEn = [
     quote: "As a third-year student, the boost I got from this program was huge. You pushed me out of my comfort zone, challenged me in a positive way, and helped me see my future a little more clearly. The knowledge I gained is extensive, and much of it consists of things that are hard to 'learn' at university. You gave me one of the most beautiful 'first milestones' on my journey into technology.",
     highlight: "much of it consists of things that are hard to 'learn' at university.",
     image: "/assets/students/kostas_apostolidis.jpeg",
+    linkedin: "https://www.linkedin.com/in/konstantinos-apostolidis-1b44132a7/",
   },
   {
-    name: "Marios",
+    name: "Marios Dosti",
     role: "Software Engineer",
     quote: "All three of them were exceptional, they helped me learn how to organize my thinking and break down a problem into smaller manageable pieces. Whether you're interested in backend or frontend, the accelerator covers both. Their feedback was very helpful and the projects were genuinely interesting. Finally, the interview preparation part and their tips were really useful and give you a real picture of how companies think, helping me prepare better. I wholeheartedly recommend it.",
     highlight: "the interview preparation part and their tips were really useful and give you a real picture of how companies think",
     image: "/assets/students/marios.jpeg",
+    linkedin: "https://www.linkedin.com/in/marios-dosti-215547344/",
   },
   {
     name: "Nikos Papangelis",
@@ -40,6 +45,7 @@ export const testimonialsEn = [
     quote: "Before the accelerator I was in complete chaos about the direction I should take, what I needed to learn for the market, etc. With the accelerator, my mind was literally put in order and now I'm more focused on what I want to learn. The backend development patterns are now very clear to me thanks to the project we built. I now have a clear plan, I'm building my skillset, I started my own project for practice, and with direct feedback from Alex and Vasilis I'm building a more professional CV ready for interviews.",
     highlight: "my mind was literally put in order and now I'm more focused on what I want to learn.",
     image: "/assets/students/nikos_papangelis.png",
+    linkedin: "https://www.linkedin.com/in/nikolaos-papangelis-07167b39b/",
   },
   {
     name: "Giorgos Perdikaris",
@@ -48,6 +54,7 @@ export const testimonialsEn = [
     highlight: "I managed to build the confidence to find my first job in the field.",
     featured: true,
     image: "/assets/students/giorgos_perdikaris.jpeg",
+    linkedin: "https://www.linkedin.com/in/georgeperdikaris/",
   },
   {
     name: "Vangelis Agapiou",
@@ -56,6 +63,7 @@ export const testimonialsEn = [
     highlight: "I got 2 job interviews in the first week after the course.",
     featured: true,
     image: "/assets/students/vangelis_agapiou.jpeg",
+    linkedin: "https://www.linkedin.com/in/vaggelis-agapiou-33472427a/",
   },
   {
     name: "Christos Grekas",
@@ -64,6 +72,7 @@ export const testimonialsEn = [
     highlight: "I applied techniques that directly led to my progression at the company I work for.",
     featured: true,
     image: "/assets/students/christos_grekas.jpeg",
+    linkedin: "https://www.linkedin.com/in/chrisgrekas/",
   },
   {
     name: "Diogenis Sapranidis",
@@ -71,6 +80,7 @@ export const testimonialsEn = [
     quote: "Before the Accelerator I struggled to take the next step in my career and effectively showcase my knowledge, skills, and work. Through DevReady I gained a complete experience based on real workflows and managed to build a complete project that significantly strengthened my portfolio. I also gained new skills and a better understanding of the interview and job search process. What helped me the most was the mentoring and the real-world project experience. I'd wholeheartedly recommend it — it covers the skills and gaps a junior professional might have, helping them start their journey with confidence.",
     highlight: "managed to build a complete project that significantly strengthened my portfolio.",
     image: "/assets/students/diogenis_sapranidis.jpeg",
+    linkedin: "https://www.linkedin.com/in/diogenis-sapranidis-85701022a/",
   },
   {
     name: "Aris Triantafyllidis",
@@ -78,6 +88,7 @@ export const testimonialsEn = [
     quote: "Before DevReady I didn't have a clear plan and I struggled to understand what the job market actually demands from a developer. Through the program I managed to put everything in order, see how the industry works in practice, and gain the confidence I was missing. The people running the program are incredibly experienced, have amazing teaching ability, and genuinely want to help you succeed. Don't think twice — it's the fastest way to get unstuck and learn what truly matters in today's market.",
     highlight: "it's the fastest way to get unstuck and learn what truly matters in today's market.",
     image: "/assets/students/aris_triantafyllidis.jpeg",
+    linkedin: "https://www.linkedin.com/in/aristeidis-triantafyllidis/",
   },
   {
     name: "Dimitris Giannopoulos",
@@ -85,6 +96,7 @@ export const testimonialsEn = [
     quote: "I had just finished my studies as a Computer Science Engineer and wanted to take my first steps in the job market, but I didn't know where to start. Through DevReady I learned how a real project works in practice, from initial implementation to deployment. I managed to create two projects for my portfolio, improve my CV, and feel much more confident about my next career steps. I'd recommend it to anyone who wants to go from theory to practice and better understand how software development works in a professional environment.",
     highlight: "I managed to create two projects for my portfolio, improve my CV, and feel much more confident",
     image: "/assets/students/dimitris_giannopoulos.jpeg",
+    linkedin: "https://www.linkedin.com/in/dimgianno/",
   },
   {
     name: "Giorgos Papadopoulos",
@@ -92,6 +104,7 @@ export const testimonialsEn = [
     quote: "Before DevReady I was in chaos about where to go and what direction to follow to achieve my goal — landing my first job. Through DevReady a lot of things were resolved and I started setting goals that would help me get there. We managed to build a CV-ready project through which we learned new technologies and ways to handle problems in real time, since the team reviewed it every few days. What helped me the most was the guidance I received to solve small things and gradually reach my goal. I'd definitely recommend it to anyone who wants to land their first job in tech, because you'll get the foundations you need. Proper guidance is what we newcomers are missing — not more tutorials.",
     highlight: "Proper guidance is what we newcomers are missing — not more tutorials.",
     image: "/assets/students/giorgos_papadopoulos.png",
+    linkedin: "https://www.linkedin.com/in/papgiorgos/",
   },
 ];
 
@@ -102,6 +115,7 @@ export const testimonialsGr = [
     quote: "Πρέπει να πω ότι ξεκλείδωσαν πάρα πολλά κομμάτια του roadmap που είχα στο μυαλό μου και αναρίθμητες ερωτήσεις που κουβαλούσα εδώ και πολύ καιρό βρήκαν επιτέλους απαντήσεις.\nΕπίσης, λάτρεψα πραγματικά την απίστευτη χημεία που είχατε ως ομάδα — ήταν τόσο εμπνευστική και μεταδώσατε ακριβώς την ίδια ενέργεια και σε εμάς!",
     highlight: "ξεκλείδωσαν πάρα πολλά κομμάτια του roadmap που είχα στο μυαλό μου",
     image: "/assets/students/maria_balafouti.jpeg",
+    linkedin: "https://www.linkedin.com/in/maria-balafouti/",
   },
   {
     name: "Kostas Kotsis",
@@ -109,6 +123,7 @@ export const testimonialsGr = [
     quote: "Μου φάνηκε πάρα πολύ χρήσιμο για την πορεία μου στο software engineering, ως προς τις κατευθυντήριες γραμμές που πρέπει να ακολουθήσω. Δηλαδή σίγουρα θα ακολουθήσω τις συμβουλές και το υλικό που μάς δώσατε, ειδικότερα σε CV branding και interviewing. Νομίζω ήταν οι ενότητες με τη μεγαλύτερη αξία (για μένα).",
     highlight: "σίγουρα θα ακολουθήσω τις συμβουλές και το υλικό που μάς δώσατε, ειδικότερα σε CV branding και interviewing.",
     image: "/assets/students/kostas_kotsis.jpeg",
+    linkedin: "https://www.linkedin.com/in/kostas-kotsis/",
   },
   {
     name: "Maria Zavola",
@@ -116,6 +131,7 @@ export const testimonialsGr = [
     quote: "Βασικός μου στόχος ήταν να αποκτήσω μια εικόνα για το πώς λειτουργεί το industry. Η πληροφορία κάλυψε πολλά διαφορετικά κομμάτια, προσφέροντάς μου μια καλή πρώτη γεύση.\n\nΤο feedback των δικών σας εμπειριών, μαζί με ρεαλιστικά παραδείγματα, με βοήθησαν να διαχειριστώ το άγχος και να μπουστάρω την αυτοπεποίθησή μου, κάνοντας την πορεία πιο εφικτή.",
     highlight: "με βοήθησαν να διαχειριστώ το άγχος και να μπουστάρω την αυτοπεποίθησή μου",
     image: "/assets/students/maria_zavola.jpeg",
+    linkedin: "https://www.linkedin.com/in/mariazavola97/",
   },
   {
     name: "Kostantinos Apostolidis",
@@ -123,13 +139,15 @@ export const testimonialsGr = [
     quote: "Ως φοιτητής τρίτου έτους, το boost που πήρα από αυτό το πρόγραμμα ήταν τεράστιο. Με βγάλατε από το comfort zone μου, με προβληματίσατε θετικά και με βοηθήσατε να δω το μέλλον μου ενα τσικ πιο καθαρά. Οι γνώσεις που αποκόμισα είναι πάρα πολλές, και μάλιστα πολλές από αυτές είναι πράγματα που δύσκολα 'μαθαίνονται' στο πανεπιστήμιο. Μου αφήσατε έναν από τους πιο όμορφους 'πρώτους σταθμούς' στο ταξίδι μου στην τεχνολογία, και δεν το θεωρώ δεδομένο.",
     highlight: "πολλές από αυτές είναι πράγματα που δύσκολα 'μαθαίνονται' στο πανεπιστήμιο.",
     image: "/assets/students/kostas_apostolidis.jpeg",
+    linkedin: "https://www.linkedin.com/in/konstantinos-apostolidis-1b44132a7/",
   },
   {
-    name: "Marios",
+    name: "Marios Dosti",
     role: "Software Engineer",
     quote: "Τα παιδιά ήταν εξαιρετικά και οι τρεις τους, με βοήθησαν να μάθω πώς να οργανώνω τη σκέψη μου και να σπάω ένα πρόβλημα σε μικρότερα διαχειρίσιμα κομμάτια. Είτε σε ενδιαφέρει το backend είτε το frontend, το accelerator καλύπτει και τα δύο. Το feedback τους ήταν πολύ χρήσιμο και τα projects πραγματικά ενδιαφέροντα. Τέλος, το κομμάτι της προετοιμασίας για συνεντεύξεις και τα tips τους ήταν πραγματικά πολύ χρήσιμα και σου δίνουν πραγματική εικόνα για το πώς σκέφτονται οι εταιρείες και με βοήθησαν να προετοιμαστώ καλύτερα. Το συνιστώ ανεπιφύλακτα.",
     highlight: "σου δίνουν πραγματική εικόνα για το πώς σκέφτονται οι εταιρείες",
     image: "/assets/students/marios.jpeg",
+    linkedin: "https://www.linkedin.com/in/marios-dosti-215547344/",
   },
   {
     name: "Νίκος Παπαγγελής",
@@ -137,6 +155,7 @@ export const testimonialsGr = [
     quote: "Πριν τον accelerator ήμουν σε ένα απόλυτο χάος για την κατεύθυνση που πρέπει να πάρω, τι πρέπει να μάθω για την αγορά κλπ. Με τον accelerator, μπήκε κυριολεκτικά το μυαλό μου σε μια σειρά και τώρα είμαι πιο focused και πιο ζεστός βασικά στο τι θέλω να μάθω. Τώρα μου είναι πολύ clear τα patterns του backend development με βάση το project που κάναμε στον accelerator. Προς το παρόν είμαι ICT support engineer, και με ξεκάθαρο πλάνο χτίζω το skillset μου, πήρα ιδέες και ξεκίνησα project δικό μου για προπόνηση και παράλληλα με καθαρό review του Αλέξ και του Βασίλη φτιάχνω πιο επαγγελματικό CV έτοιμο για interviews.",
     highlight: "μπήκε κυριολεκτικά το μυαλό μου σε μια σειρά και τώρα είμαι πιο focused",
     image: "/assets/students/nikos_papangelis.png",
+    linkedin: "https://www.linkedin.com/in/nikolaos-papangelis-07167b39b/",
   },
   {
     name: "Γιώργος Περδικάρης",
@@ -145,6 +164,7 @@ export const testimonialsGr = [
     highlight: "κατάφερα να χτίσω αυτοπεποίθηση για να βρω την πρώτη μου δουλειά στο χώρο.",
     featured: true,
     image: "/assets/students/giorgos_perdikaris.jpeg",
+    linkedin: "https://www.linkedin.com/in/georgeperdikaris/",
   },
   {
     name: "Βαγγέλης Αγαπίου",
@@ -153,6 +173,7 @@ export const testimonialsGr = [
     highlight: "να πάρω 2 job interviews στην πρώτη βδομάδα μετά το course.",
     featured: true,
     image: "/assets/students/vangelis_agapiou.jpeg",
+    linkedin: "https://www.linkedin.com/in/vaggelis-agapiou-33472427a/",
   },
   {
     name: "Χρήστος Γκρέκας",
@@ -161,6 +182,7 @@ export const testimonialsGr = [
     highlight: "εφάρμοσα τεχνικές που οδήγησαν άμεσα στην εξέλιξη μου στην εταιρεία που εργάζομαι.",
     featured: true,
     image: "/assets/students/christos_grekas.jpeg",
+    linkedin: "https://www.linkedin.com/in/chrisgrekas/",
   },
   {
     name: "Διογένης Σαπρανίδης",
@@ -168,6 +190,7 @@ export const testimonialsGr = [
     quote: "Πριν από το Accelerator δυσκολευόμουν να κάνω το επόμενο βήμα στην καριέρα μου, ώστε να μπω πιο δυναμικά στον χώρο της τεχνολογίας και να αναδείξω αποτελεσματικά τις γνώσεις, τις δεξιότητες και τη δουλειά μου. Μέσα από το DevReady απέκτησα μια ολοκληρωμένη εμπειρία βασισμένη σε πραγματικά εργασιακά workflows και κατάφερα να υλοποιήσω ένα ολοκληρωμένο project που ενίσχυσε σημαντικά το portfolio μου. Παράλληλα, απέκτησα νέες δεξιότητες και μια καλύτερη εικόνα για τη διαδικασία των συνεντεύξεων και της αναζήτησης εργασίας, ενώ πλέον νιώθω πολύ μεγαλύτερη αυτοπεποίθηση για τα επόμενα επαγγελματικά μου βήματα. Αυτό που με βοήθησε περισσότερο ήταν το mentoring και η εμπειρία του real-world project, καθώς μου έδωσαν πρακτική γνώση και πολύτιμη καθοδήγηση. Θα το πρότεινα ανεπιφύλακτα.",
     highlight: "κατάφερα να υλοποιήσω ένα ολοκληρωμένο project που ενίσχυσε σημαντικά το portfolio μου.",
     image: "/assets/students/diogenis_sapranidis.jpeg",
+    linkedin: "https://www.linkedin.com/in/diogenis-sapranidis-85701022a/",
   },
   {
     name: "Άρης Τριανταφυλλίδης",
@@ -175,6 +198,7 @@ export const testimonialsGr = [
     quote: "Πριν το DevReady δεν είχα ένα ξεκάθαρο πλάνο και δυσκολευόμουν να καταλάβω τι ζητάει πραγματικά η αγορά εργασίας από έναν προγραμματιστή. Μέσα από το πρόγραμμα κατάφερα να βάλω τα πάντα σε μια σειρά, να δω πώς δουλεύει ο κλάδος στην πράξη και να αποκτήσω τη σιγουριά που μου έλειπε. Τα παιδιά που τρέχουν το πρόγραμμα είναι απίστευτα έμπειροι, έχουν τρομερή μεταδοτικότητα και θέλουν πραγματικά να σε βοηθήσουν να πετύχεις. Μην το σκέφτεσαι! Είναι ο πιο γρήγορος τρόπος να ξεκολλήσεις και να μάθεις τι μετράει πραγματικά στην αγορά σήμερα.",
     highlight: "Είναι ο πιο γρήγορος τρόπος να ξεκολλήσεις και να μάθεις τι μετράει πραγματικά στην αγορά σήμερα.",
     image: "/assets/students/aris_triantafyllidis.jpeg",
+    linkedin: "https://www.linkedin.com/in/aristeidis-triantafyllidis/",
   },
   {
     name: "Δημήτρης Γιαννόπουλος",
@@ -182,6 +206,7 @@ export const testimonialsGr = [
     quote: "Μόλις ολοκλήρωσα τις σπουδές μου ως Μηχανικός Πληροφορικής και ήθελα να κάνω τα πρώτα μου βήματα στην αγορά εργασίας, αλλά δεν ήξερα από πού να ξεκινήσω. Μέσα από το DevReady έμαθα πώς δουλεύει ένα πραγματικό project στην πράξη, από την αρχική υλοποίηση μέχρι το deployment και τη διάθεσή του online. Κατάφερα να δημιουργήσω δύο projects για το portfolio μου, να βελτιώσω το βιογραφικό μου και να νιώσω πολύ πιο σίγουρος για τα επόμενα επαγγελματικά μου βήματα. Θα το πρότεινα σε όποιον θέλει να περάσει από τη θεωρία στην πράξη και να καταλάβει καλύτερα πώς λειτουργεί ο χώρος του software development σε επαγγελματικό περιβάλλον.",
     highlight: "Κατάφερα να δημιουργήσω δύο projects για το portfolio μου, να βελτιώσω το βιογραφικό μου και να νιώσω πολύ πιο σίγουρος",
     image: "/assets/students/dimitris_giannopoulos.jpeg",
+    linkedin: "https://www.linkedin.com/in/dimgianno/",
   },
   {
     name: "Γιώργος Παπαδόπουλος",
@@ -189,5 +214,6 @@ export const testimonialsGr = [
     quote: "Πριν το DevReady βρισκόμουν σε ένα χάος για το που θα βαδίσω και το τι κατευθύνσεις πρέπει να ακολουθήσω ώστε να πετύχω τον στόχο μου, ο οποίος είναι να κάνω land την πρώτη μου δουλειά. Μέσα από το DevReady λύθηκαν αρκετά πράγματα και άρχισα να βάζω στόχους όπου θα με βοηθήσουν να το επιτύχω. Καταφέραμε να φτιάξουμε ένα project έτοιμο για βιογραφικό μέσω του οποίου μάθαμε καινούργιες τεχνολογίες και τρόπους διαχείρισης των προβλημάτων σε πραγματικό χρόνο αφού τα παιδιά το έκαναν review κάθε λίγες ημέρες. Αυτό που με βοήθησε παραπάνω ήταν η καθοδήγηση που πήρα ώστε να ξέρω να επιλύω μικρά πράγματα και σιγά σιγά να φτάνω στον στόχο μου. Εννοείται πως θα το πρότεινα σε κάποιον που θέλει να κάνει land την πρώτη του δουλειά στον κόσμο της πληροφορικής διότι θα πάρει τα θεμέλια που πρέπει. Η σωστή καθοδήγηση είναι αυτό που λείπει σε εμάς τους νέους του χώρου και όχι τα συνεχόμενα tutorials.",
     highlight: "Η σωστή καθοδήγηση είναι αυτό που λείπει σε εμάς τους νέους του χώρου και όχι τα συνεχόμενα tutorials.",
     image: "/assets/students/giorgos_papadopoulos.png",
+    linkedin: "https://www.linkedin.com/in/papgiorgos/",
   },
 ];

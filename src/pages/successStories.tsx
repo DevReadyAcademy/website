@@ -12,7 +12,7 @@ const TestimonialCard = ({ testimonial, language }: { testimonial: any; language
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-elegant flex flex-col">
+    <div className={`bg-card border border-border/50 rounded-2xl p-6 shadow-elegant flex flex-col ${expanded ? '' : 'h-[340px]'}`}>
       {/* Student info at top */}
       <div className="flex items-center gap-3 mb-4">
         <img
@@ -24,9 +24,16 @@ const TestimonialCard = ({ testimonial, language }: { testimonial: any; language
           loading="lazy"
           decoding="async"
         />
-        <div>
-          <h3 className="font-semibold text-foreground text-sm">{testimonial.name}</h3>
-          <p className="text-muted-foreground text-xs">{testimonial.role}</p>
+        <div className="flex-1">
+          <div className="flex items-center gap-1.5">
+            <h3 className="font-semibold text-foreground text-base">{testimonial.name}</h3>
+            {testimonial.linkedin && (
+              <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${testimonial.name} LinkedIn profile`} className="hover:opacity-80 transition-opacity">
+                <img src="/assets/linkedin-icon.svg" alt="LinkedIn" className="w-5 h-5" width="20" height="20" />
+              </a>
+            )}
+          </div>
+          <p className="text-muted-foreground text-sm">{testimonial.role}</p>
         </div>
       </div>
 
@@ -36,13 +43,22 @@ const TestimonialCard = ({ testimonial, language }: { testimonial: any; language
       </p>
 
       {/* Full quote — expandable */}
-      <div className={`text-foreground/70 text-sm leading-relaxed whitespace-pre-line ${expanded ? '' : 'line-clamp-3'}`}>
-        {testimonial.quote}
-      </div>
+      {expanded ? (
+        <div className="text-foreground/70 text-base leading-relaxed whitespace-pre-line">
+          {testimonial.quote}
+        </div>
+      ) : (
+        <div className="flex-1 min-h-0 relative overflow-hidden">
+          <div className="text-foreground/70 text-base leading-relaxed whitespace-pre-line">
+            {testimonial.quote}
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-card to-transparent" />
+        </div>
+      )}
 
       <button
         onClick={() => setExpanded(!expanded)}
-        className="inline-flex items-center gap-1 text-primary text-sm font-medium mt-3 hover:text-primary/80 transition-colors self-start"
+        className="inline-flex items-center gap-1 text-primary text-sm font-medium pt-3 hover:text-primary/80 transition-colors self-start"
       >
         {expanded
           ? (language === 'gr' ? 'Λιγότερα' : 'Show less')
@@ -137,7 +153,14 @@ const SuccessStories = () => {
                           decoding="async"
                         />
                         <div className="md:text-center">
-                          <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
+                          <div className="flex items-center gap-1.5 md:justify-center">
+                            <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
+                            {testimonial.linkedin && (
+                              <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${testimonial.name} LinkedIn profile`} className="hover:opacity-80 transition-opacity">
+                                <img src="/assets/linkedin-icon.svg" alt="LinkedIn" className="w-6 h-6" width="24" height="24" />
+                              </a>
+                            )}
+                          </div>
                           <p className="text-muted-foreground text-sm">{testimonial.role}</p>
                         </div>
                       </div>
@@ -186,7 +209,7 @@ const SuccessStories = () => {
                 {t('successStories.allTitle')}
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
                 {rest.map((testimonial, index) => (
                   <TestimonialCard key={index} testimonial={testimonial} language={language} />
                 ))}

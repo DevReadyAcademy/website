@@ -52,7 +52,14 @@ const Testimonials = () => {
                     decoding="async"
                   />
                   <div>
-                    <h4 className="font-semibold text-base">{testimonial.name}</h4>
+                    <div className="flex items-center gap-1.5">
+                      <h4 className="font-semibold text-base">{testimonial.name}</h4>
+                      {testimonial.linkedin && (
+                        <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${testimonial.name} LinkedIn profile`} className="hover:opacity-80 transition-opacity">
+                          <img src="/assets/linkedin-icon.svg" alt="LinkedIn" className="w-5 h-5" width="20" height="20" />
+                        </a>
+                      )}
+                    </div>
                     <p className="text-muted-foreground text-sm">{testimonial.role}</p>
                   </div>
                 </div>
