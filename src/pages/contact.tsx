@@ -101,9 +101,7 @@ const Contact = () => {
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const phone = formData.get("phone") as string;
-    const situation = formData.get("situation") as string;
     const why = formData.get("why") as string;
-    const availability = formData.get("availability") as string;
 
     // Client-side validation for textarea min length
     if (why.trim().length < 20) {
@@ -117,7 +115,7 @@ const Contact = () => {
       const response = await fetch("/api/submit-interest", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, situation, why, availability }),
+        body: JSON.stringify({ name, email, phone, why }),
       });
 
       if (!response.ok) {
@@ -223,27 +221,6 @@ const Contact = () => {
                         />
                       </div>
 
-                      {/* Current Situation */}
-                      <div>
-                        <label htmlFor="gate-situation" className="block text-sm font-medium mb-1.5">
-                          {t('contact.gateSituationLabel')}
-                        </label>
-                        <select
-                          id="gate-situation"
-                          name="situation"
-                          required
-                          defaultValue=""
-                          className="w-full rounded-lg border border-border/50 bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                        >
-                          <option value="" disabled>{t('contact.gateSituationPlaceholder')}</option>
-                          <option value="student">{t('contact.gateSituationStudent')}</option>
-                          <option value="nonTech">{t('contact.gateSituationNonTech')}</option>
-                          <option value="juniorDev">{t('contact.gateSituationJuniorDev')}</option>
-                          <option value="careerChanger">{t('contact.gateSituationCareerChanger')}</option>
-                          <option value="other">{t('contact.gateSituationOther')}</option>
-                        </select>
-                      </div>
-
                       {/* Why do you want to join */}
                       <div>
                         <label htmlFor="gate-why" className="block text-sm font-medium mb-1.5">
@@ -262,25 +239,6 @@ const Contact = () => {
                         {whyTooShort && (
                           <p className="text-red-500 text-xs mt-1">Please write at least 20 characters.</p>
                         )}
-                      </div>
-
-                      {/* Availability */}
-                      <div>
-                        <label htmlFor="gate-availability" className="block text-sm font-medium mb-1.5">
-                          {t('contact.gateAvailabilityLabel')}
-                        </label>
-                        <select
-                          id="gate-availability"
-                          name="availability"
-                          required
-                          defaultValue=""
-                          className="w-full rounded-lg border border-border/50 bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                        >
-                          <option value="" disabled>{t('contact.gateAvailabilityPlaceholder')}</option>
-                          <option value="asap">{t('contact.gateAvailabilityAsap')}</option>
-                          <option value="oneToTwo">{t('contact.gateAvailabilityOneToTwo')}</option>
-                          <option value="exploring">{t('contact.gateAvailabilityExploring')}</option>
-                        </select>
                       </div>
 
                       {/* Error message */}

@@ -7,10 +7,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, phone, situation, why, availability } = req.body;
+  const { name, email, phone, why } = req.body;
 
   // Validate all required fields are present
-  if (!name || !email || !phone || !situation || !why || !availability) {
+  if (!name || !email || !phone || !why) {
     return res.status(400).json({ error: 'All fields are required' });
   }
 
@@ -43,9 +43,7 @@ export default async function handler(req, res) {
         email,
         firstName: name,
         phone,
-        situation,
         why,
-        availability,
         pipelineStage: 'booking-interest',
       }),
     });
