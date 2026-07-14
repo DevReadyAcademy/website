@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
+import { ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube, Target, HelpCircle, Code, Wifi, Info } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
@@ -117,6 +117,29 @@ const Contact = () => {
                     className="calendly-inline-widget min-w-[280px] h-[500px] sm:h-[630px]"
                     data-url="https://calendly.com/hello-devready/20min?primary_color=363fec"
                   />
+                </div>
+              </section>
+
+              {/* What to Prepare */}
+              <section className="rounded-2xl border border-border/50 shadow-elegant bg-card overflow-hidden" aria-label={t('contact.prepareTitle')}>
+                <div className="px-4 sm:px-6 pt-4 pb-1">
+                  <h2 className="text-lg sm:text-xl font-semibold text-center">{t('contact.prepareTitle')}</h2>
+                </div>
+                <div className="px-4 sm:px-6 pb-5 sm:pb-6 pt-2">
+                  <ul className="space-y-3">
+                    {[Target, HelpCircle, Code, Wifi].map((Icon, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="p-2 rounded-full bg-primary/10 text-primary shrink-0 mt-0.5">
+                          <Icon className="w-4 h-4" aria-hidden="true" />
+                        </div>
+                        <span className="text-sm text-foreground">{(t('contact.prepareItems') as string[])[index]}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-4 flex items-start gap-2 p-3 rounded-xl bg-amber-50 border border-amber-200 dark:bg-amber-950/30 dark:border-amber-800">
+                    <Info className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" aria-hidden="true" />
+                    <p className="text-xs text-amber-800 dark:text-amber-300">{t('contact.rescheduleNote')}</p>
+                  </div>
                 </div>
               </section>
 

@@ -335,7 +335,15 @@
     "email": "Email",
     "location": "Location",
     "locationValue": "Remote",
-    "followUs": "Follow Us"
+    "followUs": "Follow Us",
+    "prepareTitle": "What to Prepare for Your Call",
+    "prepareItems": [
+      "Think about your career goals and where you want to be in 6-12 months",
+      "Have questions ready about the program",
+      "Be ready to discuss your current coding experience",
+      "Make sure you're in a quiet space with good internet"
+    ],
+    "rescheduleNote": "If you need to reschedule, please do so at least 24 hours in advance through the confirmation email you'll receive."
   },
   "pillars": {
     "title": "The 4 Non-Negotiable Pillars",
