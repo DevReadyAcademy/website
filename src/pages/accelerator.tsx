@@ -198,6 +198,7 @@ const Accelerator = () => {
                   <Clock className="w-8 h-8 text-primary mb-3 mx-auto" />
                   <h3 className="font-semibold text-lg mb-2">{t('accelerator.infoCards.timeCommitmentTitle')}</h3>
                   <p className="text-muted-foreground">{t('accelerator.infoCards.timeCommitment')}</p>
+                  <p className="text-muted-foreground mt-1">{t('accelerator.infoCards.timeCommitmentHours')}</p>
                   <p className="text-sm text-muted-foreground mt-1">{t('accelerator.infoCards.timeCommitmentDetail')}</p>
                 </div>
                 <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-6">
@@ -295,8 +296,8 @@ const Accelerator = () => {
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <div>
-                      <h3 className="font-semibold">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+                      <h3 className="font-semibold text-lg">{item.title}</h3>
+                      <p className="text-base text-muted-foreground mt-1">{item.description}</p>
                     </div>
                   </div>
                 ))}

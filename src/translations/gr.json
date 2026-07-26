@@ -35,6 +35,8 @@
     "trust1": "6 Εβδομάδες Remote",
     "trust2": "Industry Mentors",
     "trust3": "Τιμή: {PRICE}",
+    "outcomeStat1": "100+ μαθητές εκπαιδεύτηκαν",
+    "outcomeStat2": "70% πέτυχαν συνεντεύξεις ή βρήκαν δουλειά",
     "countdownTitle": "Οι εγγραφές κλείνουν σε",
     "countdownDays": "Μέρες",
     "countdownHours": "Ώρες",
@@ -48,7 +50,8 @@
     "description": "Ένα εντατικό πρόγραμμα σχεδιασμένο να σε μετατρέψει σε έναν industry-ready tech professional.",
     "timeCommitmentTitle": "Διάρκεια",
     "timeCommitment": "6 εβδομάδες εντατικά",
-    "timeCommitmentDetail": "~2-3 ώρες/εβδομάδα",
+    "timeCommitmentHours": "8 ώρες/εβδομάδα",
+    "timeCommitmentDetail": "2-3 live, ~5 self-study",
     "formatTitle": "Format",
     "format": "100% Remote",
     "formatDetail": "Live + recordings",
@@ -79,7 +82,8 @@
     "infoCards": {
       "timeCommitmentTitle": "Διάρκεια",
       "timeCommitment": "6 εβδομάδες εντατικά",
-      "timeCommitmentDetail": "~2-3 ώρες/εβδομάδα",
+      "timeCommitmentHours": "8 ώρες/εβδομάδα",
+      "timeCommitmentDetail": "2-3 live, ~5 self-study",
       "formatTitle": "Format",
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
@@ -214,8 +218,8 @@
       }
     ],
     "realTeamTitle": "Σε Μαθαίνουμε Πώς Δουλεύουν οι Engineers",
-    "realTeamSubtitle": "Δεν σε μαθαίνουμε απλά να γράφεις κώδικα. Σε μαθαίνουμε πώς δουλεύει ένας engineer. Αυτά είναι τα skills που ξεχωρίζουν τους bootcamp graduates από τους engineers που τα πάνε καλά στη δουλειά.",
-    "realTeamBelief": "Πιστεύουμε ότι αυτά τα skills είναι απαραίτητα για κάθε software engineer, αλλά σπάνια διδάσκονται. Τα διδάσκουμε γιατί είναι απαραίτητα.",
+    "realTeamSubtitle": "Δεν σε μαθαίνουμε απλά να γράφεις κώδικα. Σε μαθαίνουμε πώς δουλεύει ένας engineer. Αυτά είναι τα skills που θα σε ξεχωρίσουν από τους υπόλοιπους entry/junior engineers στην αγορά.",
+    "realTeamBelief": "Αυτά τα skills είναι απαραίτητα για κάθε software engineer. Και γι' αυτό τα διδάσκουμε.",
     "realTeamItems": [
       {
         "title": "Industry-Based Projects",
@@ -267,8 +271,8 @@
     "goodFitItems": [
       "Έχεις βασικές γνώσεις προγραμματισμού και θέλεις να γίνεις industry-ready",
       "Είσαι developer σε οποιονδήποτε ρόλο: frontend, backend, full-stack, mobile, ή άλλο tech stack",
-      "Είσαι διατεθειμένος να αφιερώσεις περίπου 7-8 ώρες την εβδομάδα",
-      "Θέλεις ειλικρινές feedback από engineers που δουλεύουν στην αγορά"
+      "Είσαι διατεθειμένος να αφιερώσεις περίπου 8 ώρες την εβδομάδα (περίπου 2-3 ώρες live sessions και ~5 ώρες self-study)",
+      "Θέλεις πραγματικό feedback από engineers που δουλεύουν στην αγορά"
     ],
     "notGoodFitTitle": "❌ Not a Good Fit Αν:",
     "notGoodFitItems": [
@@ -289,11 +293,11 @@
       },
       {
         "question": "Θα βρω δουλειά μετά το accelerator;",
-        "answer": "Δεν μπορούμε να εγγυηθούμε job placement, αλλά σε εξοπλίζουμε με τα ακριβή skills, portfolio και interview preparation που αυξάνουν dramatically τις πιθανότητές σου. Πολλοί από τους μαθητές μας βρήκαν δουλειά μέσα στον επόμενο μήνα. Η επιτυχία σου εξαρτάται από το effort και το commitment σου."
+        "answer": "Το 70% των μαθητών μας πέτυχαν συνεντεύξεις ή βρήκαν δουλειά, πολλοί μέσα στον πρώτο μήνα. Σε εξοπλίζουμε με τα ακριβή skills, portfolio και interview preparation που ζητάνε οι tech companies. Δεν προσφέρουμε job guarantee γιατί η επιτυχία σου εξαρτάται από το effort και το commitment σου, αλλά σου δίνουμε ό,τι χρειάζεσαι για να τα καταφέρεις."
       },
       {
-        "question": "Ποια είναι η time commitment;",
-        "answer": "Περίμενε ~2-3 ώρες την εβδομάδα για live sessions. Οι υπόλοιπες ~5 ώρες προέρχονται από την προσωπική σου αφοσίωση (project work και independent learning)."
+        "question": "Πόσο χρόνο χρειάζεται να αφιερώσω;",
+        "answer": "Περίμενε ~2-3 ώρες την εβδομάδα για live sessions και ~5 ώρες για προσωπική δουλειά (project work και independent learning). Αυτό είναι το average που πιστεύουμε ότι χρειάζεται για να μπορείς να κάνεις keep up με το πρόγραμμα και να σε βοηθήσουμε στο μέγιστο."
       },
       {
         "question": "Είναι το accelerator remote;",

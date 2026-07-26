@@ -35,6 +35,7 @@ const Course = () => {
               <Clock className="w-8 h-8 text-primary mb-3 mx-auto" />
               <h3 className="font-semibold text-lg mb-2">{t('course.timeCommitmentTitle')}</h3>
               <p className="text-muted-foreground">{t('course.timeCommitment')}</p>
+              <p className="text-muted-foreground mt-1">{t('course.timeCommitmentHours')}</p>
               <p className="text-sm text-muted-foreground mt-1">{t('course.timeCommitmentDetail')}</p>
             </div>
             <div className="bg-card rounded-xl border border-border/50 p-6 text-center">

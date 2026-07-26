@@ -4,6 +4,7 @@ import { ArrowRight, Calendar, Users, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button.tsx";
 import { useLanguage } from '../contexts/LanguageContext';
+import earlyBirdConfig from '../config/earlyBird';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -98,11 +99,28 @@ const Hero = () => {
           </Button>
         </motion.div>
 
+        {/* Outcome Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center text-base text-foreground/80 mb-6"
+        >
+          <div className="flex items-center gap-2">
+            <Users className="w-5 h-5 text-primary" aria-hidden="true" />
+            <span>{t('hero.outcomeStat1')}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-5 h-5 text-primary" aria-hidden="true" />
+            <span>{t('hero.outcomeStat2')}</span>
+          </div>
+        </motion.div>
+
         {/* Social Proof / Key Benefits */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.75 }}
+          transition={{ duration: 0.8, delay: 0.85 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground"
         >
           <div className="flex items-center gap-2">
@@ -115,7 +133,11 @@ const Hero = () => {
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle className="w-5 h-5 text-primary" aria-hidden="true" />
-            <span>{t('hero.trust3')}</span>
+            <span>
+              <span className="line-through text-muted-foreground/60">{earlyBirdConfig.originalPrice}</span>
+              {' '}
+              <span className="font-semibold text-primary">{earlyBirdConfig.earlyBirdPrice}</span>
+            </span>
           </div>
         </motion.div>
 

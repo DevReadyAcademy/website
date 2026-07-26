@@ -34,6 +34,8 @@
     "trust1": "6-Week Remote Program",
     "trust2": "Industry Mentors",
     "trust3": "Price: {PRICE}",
+    "outcomeStat1": "100+ students trained",
+    "outcomeStat2": "70% landed interviews or jobs",
     "countdownTitle": "Registrations close in",
     "countdownDays": "Days",
     "countdownHours": "Hours",
@@ -47,7 +49,8 @@
     "description": "An intensive program designed to transform you into an industry-ready tech professional.",
     "timeCommitmentTitle": "Time Commitment",
     "timeCommitment": "6 weeks intensive",
-    "timeCommitmentDetail": "~2-3 hrs/week",
+    "timeCommitmentHours": "8 hrs/week",
+    "timeCommitmentDetail": "2-3 live, ~5 self-study",
     "formatTitle": "Format",
     "format": "100% Remote",
     "formatDetail": "Live + recordings",
@@ -78,7 +81,8 @@
     "infoCards": {
       "timeCommitmentTitle": "Time Commitment",
       "timeCommitment": "6 weeks intensive",
-      "timeCommitmentDetail": "~2-3 hrs/week",
+      "timeCommitmentHours": "8 hrs/week",
+      "timeCommitmentDetail": "2-3 live, ~5 self-study",
       "formatTitle": "Format",
       "format": "100% Remote",
       "formatDetail": "Live sessions + recordings",
@@ -214,8 +218,8 @@
       }
     ],
     "realTeamTitle": "Work Like a Real Engineering Team",
-    "realTeamSubtitle": "We don't just teach you how to code. We teach you how to work like an engineer. These are the skills that separate bootcamp graduates from engineers who thrive on the job.",
-    "realTeamBelief": "We believe these skills are essential for every software engineer, yet they're rarely taught. We teach them because they are essential.",
+    "realTeamSubtitle": "We don't just teach you how to code. We teach you how to work like an engineer. These are the skills that will set you apart from other entry/junior engineers in the market.",
+    "realTeamBelief": "These skills are essential for every software engineer. And that's why we teach them.",
     "realTeamItems": [
       {
         "title": "Industry-Based Projects",
@@ -267,8 +271,8 @@
     "goodFitItems": [
       "You have basic coding knowledge and want to become industry-ready",
       "You're a developer in any role: frontend, backend, full-stack, mobile, or any tech stack",
-      "You're willing to commit around 8 hours per week",
-      "You want real feedback from working engineers"
+      "You're willing to commit around 8 hours per week (including ~2-3 hours of live sessions and ~5 hours of self-study)",
+      "You want genuine feedback from working engineers"
     ],
     "notGoodFitTitle": "❌ Not a Good Fit If:",
     "notGoodFitItems": [
@@ -290,11 +294,11 @@
       },
       {
         "question": "Will I get a job after the accelerator?",
-        "answer": "We can't guarantee job placement, but we equip you with the exact skills, portfolio, and interview preparation that dramatically increase your chances. Many of our students found jobs within the next month. Your success depends on your effort and commitment."
+        "answer": "70% of our students landed interviews or jobs, many within the first month. We equip you with the exact skills, portfolio, and interview preparation that tech companies actually look for. We don't offer a job guarantee because your success ultimately depends on your effort and commitment, but we give you everything you need to get there."
       },
       {
         "question": "What's the time commitment?",
-        "answer": "Expect ~2-3 hours per week of live sessions. The other ~5 hours are from your personal effort (project work and independent learning)."
+        "answer": "Expect ~2-3 hours per week of live sessions and ~5 hours of personal work (project work and independent learning). This is the average we believe you need to keep up with the program and for us to help you get the most out of it."
       },
       {
         "question": "Is this accelerator remote?",
