@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Calendar, CheckCircle, Users, Clock, Target, Code, Brain, FileText, Compass } from "lucide-react";
+import { ArrowLeft, Calendar, CheckCircle, Users, Clock, Target, Code, Brain, FileText, Compass, GitBranch } from "lucide-react";
 import { Button } from "../components/ui/button.tsx";
 import {
   Accordion,
@@ -39,9 +39,6 @@ const Accelerator = () => {
   const timelineData = t('accelerator.timelineSteps');
   const timeline = Array.isArray(timelineData) ? timelineData : [];
 
-  const whatsIncludedData = t('accelerator.whatsIncludedItems');
-  const whatsIncluded = Array.isArray(whatsIncludedData) ? whatsIncludedData : [];
-
   const faqsData = t('accelerator.faqs');
   const faqs = Array.isArray(faqsData) ? faqsData : [];
 
@@ -50,6 +47,9 @@ const Accelerator = () => {
 
   const notGoodFitData = t('accelerator.notGoodFitItems');
   const notGoodFitItems = Array.isArray(notGoodFitData) ? notGoodFitData : [];
+
+  const realTeamItemsData = t('accelerator.realTeamItems');
+  const realTeamItems = Array.isArray(realTeamItemsData) ? realTeamItemsData : [];
 
   // Combined structured data with Course and FAQPage schemas
   const acceleratorStructuredData = {
@@ -278,6 +278,38 @@ const Accelerator = () => {
             </div>
           </section>
 
+          {/* Work Like a Real Team */}
+          <section className="py-20 px-4">
+            <div className="container mx-auto max-w-4xl">
+              <div className="text-center mb-4">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
+                  {t('accelerator.realTeamTitle')}
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  {t('accelerator.realTeamSubtitle')}
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 my-12 max-w-3xl mx-auto">
+                {realTeamItems.map((item: any, index: number) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-semibold">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <p className="text-base text-muted-foreground max-w-2xl mx-auto italic">
+                  {t('accelerator.realTeamBelief')}
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Your Journey Timeline */}
           <section className="py-20 px-4 bg-gradient-card">
             <div className="container mx-auto max-w-4xl">
@@ -304,29 +336,6 @@ const Accelerator = () => {
                           → {t('common.secureYourSpot')}
                         </Link>
                       )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* What's Included */}
-          <section className="py-20 px-4">
-            <div className="container mx-auto max-w-4xl">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
-                  {t('accelerator.whatsIncludedTitle')}
-                </h2>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                {whatsIncluded.map((item: any, index: number) => (
-                  <div key={index} className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50">
-                    <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.description}</p>
                     </div>
                   </div>
                 ))}

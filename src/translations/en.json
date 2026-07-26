@@ -213,6 +213,55 @@
         "description": "Access all materials forever: recordings, exercises, plan, resources, everything"
       }
     ],
+    "realTeamTitle": "Work Like a Real Engineering Team",
+    "realTeamSubtitle": "We don't just teach you how to code. We teach you how to work like an engineer. These are the skills that separate bootcamp graduates from engineers who thrive on the job.",
+    "realTeamBelief": "We believe these skills are essential for every software engineer, yet they're rarely taught. We teach them because they are essential.",
+    "realTeamItems": [
+      {
+        "title": "Industry-Based Projects",
+        "description": "Work on exercises and projects that mirror real engineering challenges, not pet projects."
+      },
+      {
+        "title": "Feature Branches & Git Flow",
+        "description": "Create feature branches, follow git flow, and manage your code the way every tech company does it right now."
+      },
+      {
+        "title": "Raise PRs & Get Code Reviews",
+        "description": "Submit pull requests, receive detailed code reviews from senior engineers, and iterate on your work based on real feedback."
+      },
+      {
+        "title": "Learn to Unblock Yourself",
+        "description": "Develop the skill every engineer needs. Read docs, debug independently, and communicate with structure."
+      },
+      {
+        "title": "Ask Questions With Context",
+        "description": "Learn how to report issues, ask for help, and communicate effectively. The skill that separates juniors who grow fast from those who don't."
+      },
+      {
+        "title": "Iterate & Ship",
+        "description": "Ship your work, get feedback, improve, and repeat. Just like you would in a real engineering team at a tech company."
+      },
+      {
+        "title": "6 Weeks of Live Sessions",
+        "description": "Interactive workshops, Q&A, and real-time mentorship. All sessions are recorded so you never miss anything."
+      },
+      {
+        "title": "Personal Branding Guidance",
+        "description": "Build your CV, LinkedIn, GitHub profile, and portfolio with expert feedback."
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master behavioral and technical interviews with dos, don'ts, and practice."
+      },
+      {
+        "title": "DevReady Community Access",
+        "description": "Join our Discord, learn with your cohort, and connect with past cohorts for support."
+      },
+      {
+        "title": "Lifetime Materials",
+        "description": "Access all materials forever: recordings, exercises, plan, resources, everything."
+      }
+    ],
     "whoShouldJoinTitle": "Is This For You?",
     "goodFitTitle": "✅ You're a Good Fit If:",
     "goodFitItems": [

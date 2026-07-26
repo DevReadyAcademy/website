@@ -213,6 +213,55 @@
         "description": "Έχεις πρόσβαση σε όλο το υλικό για πάντα: recordings, exercises, plan, resources, τα πάντα"
       }
     ],
+    "realTeamTitle": "Σε Μαθαίνουμε Πώς Δουλεύουν οι Engineers",
+    "realTeamSubtitle": "Δεν σε μαθαίνουμε απλά να γράφεις κώδικα. Σε μαθαίνουμε πώς δουλεύει ένας engineer. Αυτά είναι τα skills που ξεχωρίζουν τους bootcamp graduates από τους engineers που τα πάνε καλά στη δουλειά.",
+    "realTeamBelief": "Πιστεύουμε ότι αυτά τα skills είναι απαραίτητα για κάθε software engineer, αλλά σπάνια διδάσκονται. Τα διδάσκουμε γιατί είναι απαραίτητα.",
+    "realTeamItems": [
+      {
+        "title": "Industry-Based Projects",
+        "description": "Δούλεψε σε exercises και projects που αντικατοπτρίζουν real engineering challenges, όχι pet projects."
+      },
+      {
+        "title": "Feature Branches & Git Flow",
+        "description": "Δημιούργησε feature branches, ακολούθησε git flow και διαχειρίσου τον κώδικά σου όπως κάνει κάθε tech εταιρεία αυτή τη στιγμή."
+      },
+      {
+        "title": "Κάνε PRs & Πάρε Code Reviews",
+        "description": "Κάνε submit pull requests, πάρε detailed code reviews από senior engineers και κάνε iterate στη δουλειά σου βάσει πραγματικού feedback."
+      },
+      {
+        "title": "Μάθε να Ξεμπλοκάρεις Μόνος σου",
+        "description": "Ανάπτυξε το skill που χρειάζεται κάθε engineer. Διάβασε docs, κάνε debug ανεξάρτητα και επικοινώνησε με structure."
+      },
+      {
+        "title": "Κάνε Ερωτήσεις με Context",
+        "description": "Μάθε πώς να κάνεις report issues, να ζητάς βοήθεια και να επικοινωνείς effectively. Το skill που ξεχωρίζει τους juniors που εξελίσσονται γρήγορα από αυτούς που δεν το κάνουν."
+      },
+      {
+        "title": "Iterate & Ship",
+        "description": "Κάνε ship τη δουλειά σου, πάρε feedback, βελτιώσου και επανάλαβε. Ακριβώς όπως θα έκανες σε μια πραγματική engineering ομάδα σε tech εταιρεία."
+      },
+      {
+        "title": "6 Εβδομάδες Live Sessions",
+        "description": "Interactive workshops, Q&A και real-time mentorship. Όλα τα sessions καταγράφονται ώστε να μη χάσεις τίποτα."
+      },
+      {
+        "title": "Personal Branding Guidance",
+        "description": "Φτίαξε το CV, LinkedIn, GitHub profile και portfolio σου με expert feedback."
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master τα behavioral και technical interviews με dos, don'ts και practice."
+      },
+      {
+        "title": "DevReady Community Access",
+        "description": "Μπες στο Discord μας, μάθε με το cohort σου και συνδέσου με past cohorts για support."
+      },
+      {
+        "title": "Lifetime Materials",
+        "description": "Έχεις πρόσβαση σε όλο το υλικό για πάντα: recordings, exercises, plan, resources, τα πάντα."
+      }
+    ],
     "whoShouldJoinTitle": "Είναι Για Εσένα;",
     "goodFitTitle": "✅ Είσαι Good Fit Αν:",
     "goodFitItems": [
