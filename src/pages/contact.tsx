@@ -1,14 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { Button } from "@/components/ui/button";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Contact = () => {
   const { t, language } = useLanguage();
+  const [hasFundamentals, setHasFundamentals] = useState<boolean | null>(null);
+  const [gateAnswered, setGateAnswered] = useState(false);
+  const calendlyRef = useRef<HTMLDivElement>(null);
 
+  // Load Calendly widget and tracking ONLY after user confirms fundamentals
   useEffect(() => {
+    if (!gateAnswered || !hasFundamentals) return;
+
     // Load Calendly widget script
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -69,11 +76,19 @@ const Contact = () => {
     };
 
     window.addEventListener("message", handleMessage);
+
+    // Smooth scroll to Calendly widget
+    setTimeout(() => {
+      calendlyRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 300);
+
     return () => {
       window.removeEventListener("message", handleMessage);
-      document.body.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
-  }, []);
+  }, [gateAnswered, hasFundamentals]);
 
   return (
     <>
@@ -105,19 +120,83 @@ const Contact = () => {
           <div className="container mx-auto max-w-6xl pb-10 sm:pb-16">
 
             <div className="space-y-4 sm:space-y-6 max-w-3xl mx-auto animate-fade-in">
-              {/* Book a Call — Calendly */}
+              {/* Book a Call — Gated by Form */}
               <section className="flex flex-col rounded-2xl overflow-hidden shadow-elegant border border-border/50" aria-label={t('contact.enrollTitle')}>
                 <div className="bg-gradient-primary p-4 sm:p-6 text-center text-primary-foreground">
                   <h2 className="text-xl sm:text-2xl font-bold mb-2">{t('contact.enrollTitle')}</h2>
                   <p className="opacity-90 mb-3 text-sm sm:text-base">{t('contact.enrollDescription')}</p>
                   <ArrowDown className="w-7 h-7 mx-auto animate-bounce" aria-hidden="true" />
                 </div>
-                <div role="region" aria-label="Book a call calendar">
-                  <div
-                    className="calendly-inline-widget min-w-[280px] h-[500px] sm:h-[630px]"
-                    data-url="https://calendly.com/hello-devready/20min?primary_color=363fec"
-                  />
-                </div>
+
+                {!gateAnswered ? (
+                  /* Radio button gate question */
+                  <div className="p-4 sm:p-8 bg-card">
+                    <div className="text-center mb-6">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-2">{t('contact.gateFormTitle')}</h3>
+                      <p className="text-sm text-muted-foreground">{t('contact.gateFormSubtitle')}</p>
+                    </div>
+                    <fieldset className="space-y-4 sm:space-y-5">
+                      <legend className="block text-sm font-medium mb-1.5">
+                        {t('contact.gateQuestion')}
+                      </legend>
+                      <p className="text-xs text-muted-foreground -mt-2 sm:-mt-3">{t('contact.gateQuestionHint')}</p>
+                      <label
+                        className={`flex items-center gap-3 p-3 sm:p-4 rounded-lg border cursor-pointer transition-colors ${hasFundamentals === true ? 'border-primary bg-primary/5' : 'border-border/50 hover:bg-muted/50'}`}
+                      >
+                        <input
+                          type="radio"
+                          name="fundamentals"
+                          value="yes"
+                          checked={hasFundamentals === true}
+                          onChange={() => setHasFundamentals(true)}
+                          className="accent-primary w-4 h-4"
+                        />
+                        <span className="text-sm font-medium">{t('contact.gateOptionYes')}</span>
+                      </label>
+                      <label
+                        className={`flex items-center gap-3 p-3 sm:p-4 rounded-lg border cursor-pointer transition-colors ${hasFundamentals === false ? 'border-primary bg-primary/5' : 'border-border/50 hover:bg-muted/50'}`}
+                      >
+                        <input
+                          type="radio"
+                          name="fundamentals"
+                          value="no"
+                          checked={hasFundamentals === false}
+                          onChange={() => setHasFundamentals(false)}
+                          className="accent-primary w-4 h-4"
+                        />
+                        <span className="text-sm font-medium">{t('contact.gateOptionNo')}</span>
+                      </label>
+                      <Button
+                        size="lg"
+                        disabled={hasFundamentals === null}
+                        onClick={() => setGateAnswered(true)}
+                        className="w-full text-base font-semibold"
+                      >
+                        {t('contact.gateSubmitButton')}
+                      </Button>
+                    </fieldset>
+                  </div>
+                ) : hasFundamentals ? (
+                  /* Calendly Widget — shown when user has fundamentals */
+                  <div ref={calendlyRef}>
+                    <div role="region" aria-label="Book a call calendar">
+                      <div
+                        className="calendly-inline-widget min-w-[280px] h-[500px] sm:h-[630px]"
+                        data-url="https://calendly.com/hello-devready/20min?primary_color=363fec"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  /* Not ready message — shown when user lacks fundamentals */
+                  <div className="p-4 sm:p-8 bg-card text-center">
+                    <div className="max-w-md mx-auto">
+                      <div className="text-4xl mb-4">📚</div>
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                        {t('contact.gateNotReady')}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </section>
 
               {/* Contact Information */}
