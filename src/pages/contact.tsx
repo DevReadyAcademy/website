@@ -8,15 +8,13 @@ import Footer from "../components/Footer";
 
 const Contact = () => {
   const { t, language } = useLanguage();
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formError, setFormError] = useState("");
-  const [whyTooShort, setWhyTooShort] = useState(false);
+  const [hasFundamentals, setHasFundamentals] = useState<boolean | null>(null);
+  const [gateAnswered, setGateAnswered] = useState(false);
   const calendlyRef = useRef<HTMLDivElement>(null);
 
-  // Load Calendly widget and tracking ONLY after form is submitted
+  // Load Calendly widget and tracking ONLY after user confirms fundamentals
   useEffect(() => {
-    if (!formSubmitted) return;
+    if (!gateAnswered || !hasFundamentals) return;
 
     // Load Calendly widget script
     const script = document.createElement("script");
@@ -90,45 +88,7 @@ const Contact = () => {
         document.body.removeChild(script);
       }
     };
-  }, [formSubmitted]);
-
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setFormError("");
-    setWhyTooShort(false);
-
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const phone = formData.get("phone") as string;
-    const why = formData.get("why") as string;
-
-    // Client-side validation for textarea min length
-    if (why.trim().length < 20) {
-      setWhyTooShort(true);
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("/api/submit-interest", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, why }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to submit");
-      }
-
-      setFormSubmitted(true);
-    } catch {
-      setFormError(t("contact.gateFormError"));
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  }, [gateAnswered, hasFundamentals]);
 
   return (
     <>
@@ -168,108 +128,72 @@ const Contact = () => {
                   <ArrowDown className="w-7 h-7 mx-auto animate-bounce" aria-hidden="true" />
                 </div>
 
-                {!formSubmitted ? (
-                  /* Qualification Form */
+                {!gateAnswered ? (
+                  /* Radio button gate question */
                   <div className="p-4 sm:p-8 bg-card">
                     <div className="text-center mb-6">
                       <h3 className="text-lg sm:text-xl font-semibold mb-2">{t('contact.gateFormTitle')}</h3>
                       <p className="text-sm text-muted-foreground">{t('contact.gateFormSubtitle')}</p>
                     </div>
-                    <form onSubmit={handleFormSubmit} className="space-y-4 sm:space-y-5">
-                      {/* Full Name */}
-                      <div>
-                        <label htmlFor="gate-name" className="block text-sm font-medium mb-1.5">
-                          {t('contact.gateNameLabel')}
-                        </label>
+                    <fieldset className="space-y-4 sm:space-y-5">
+                      <legend className="block text-sm font-medium mb-1.5">
+                        {t('contact.gateQuestion')}
+                      </legend>
+                      <p className="text-xs text-muted-foreground -mt-2 sm:-mt-3">{t('contact.gateQuestionHint')}</p>
+                      <label
+                        className={`flex items-center gap-3 p-3 sm:p-4 rounded-lg border cursor-pointer transition-colors ${hasFundamentals === true ? 'border-primary bg-primary/5' : 'border-border/50 hover:bg-muted/50'}`}
+                      >
                         <input
-                          id="gate-name"
-                          name="name"
-                          type="text"
-                          required
-                          placeholder={t('contact.gateNamePlaceholder')}
-                          className="w-full rounded-lg border border-border/50 bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          type="radio"
+                          name="fundamentals"
+                          value="yes"
+                          checked={hasFundamentals === true}
+                          onChange={() => setHasFundamentals(true)}
+                          className="accent-primary w-4 h-4"
                         />
-                      </div>
-
-                      {/* Email */}
-                      <div>
-                        <label htmlFor="gate-email" className="block text-sm font-medium mb-1.5">
-                          {t('contact.gateEmailLabel')}
-                        </label>
+                        <span className="text-sm font-medium">{t('contact.gateOptionYes')}</span>
+                      </label>
+                      <label
+                        className={`flex items-center gap-3 p-3 sm:p-4 rounded-lg border cursor-pointer transition-colors ${hasFundamentals === false ? 'border-primary bg-primary/5' : 'border-border/50 hover:bg-muted/50'}`}
+                      >
                         <input
-                          id="gate-email"
-                          name="email"
-                          type="email"
-                          required
-                          placeholder={t('contact.gateEmailPlaceholder')}
-                          className="w-full rounded-lg border border-border/50 bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          type="radio"
+                          name="fundamentals"
+                          value="no"
+                          checked={hasFundamentals === false}
+                          onChange={() => setHasFundamentals(false)}
+                          className="accent-primary w-4 h-4"
                         />
-                      </div>
-
-                      {/* Phone */}
-                      <div>
-                        <label htmlFor="gate-phone" className="block text-sm font-medium mb-1.5">
-                          {t('contact.gatePhoneLabel')}
-                        </label>
-                        <input
-                          id="gate-phone"
-                          name="phone"
-                          type="tel"
-                          required
-                          placeholder={t('contact.gatePhonePlaceholder')}
-                          className="w-full rounded-lg border border-border/50 bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                        />
-                      </div>
-
-                      {/* Why do you want to join */}
-                      <div>
-                        <label htmlFor="gate-why" className="block text-sm font-medium mb-1.5">
-                          {t('contact.gateWhyLabel')}
-                        </label>
-                        <textarea
-                          id="gate-why"
-                          name="why"
-                          required
-                          minLength={20}
-                          rows={4}
-                          placeholder={t('contact.gateWhyPlaceholder')}
-                          onChange={() => whyTooShort && setWhyTooShort(false)}
-                          className={`w-full rounded-lg border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none ${whyTooShort ? 'border-red-500' : 'border-border/50'}`}
-                        />
-                        {whyTooShort && (
-                          <p className="text-red-500 text-xs mt-1">Please write at least 20 characters.</p>
-                        )}
-                      </div>
-
-                      {/* Error message */}
-                      {formError && (
-                        <p className="text-red-500 text-sm text-center">{formError}</p>
-                      )}
-
-                      {/* Submit Button */}
+                        <span className="text-sm font-medium">{t('contact.gateOptionNo')}</span>
+                      </label>
                       <Button
-                        type="submit"
                         size="lg"
-                        disabled={isSubmitting}
+                        disabled={hasFundamentals === null}
+                        onClick={() => setGateAnswered(true)}
                         className="w-full text-base font-semibold"
                       >
-                        {isSubmitting ? t('contact.gateSubmitting') : t('contact.gateSubmitButton')}
+                        {t('contact.gateSubmitButton')}
                       </Button>
-                    </form>
+                    </fieldset>
                   </div>
-                ) : (
-                  /* Calendly Widget — shown after form submission */
+                ) : hasFundamentals ? (
+                  /* Calendly Widget — shown when user has fundamentals */
                   <div ref={calendlyRef}>
-                    <div className="bg-green-50 dark:bg-green-950/30 p-4 text-center">
-                      <p className="text-green-700 dark:text-green-400 font-medium text-sm sm:text-base">
-                        {t('contact.gateFormSuccess')}
-                      </p>
-                    </div>
                     <div role="region" aria-label="Book a call calendar">
                       <div
                         className="calendly-inline-widget min-w-[280px] h-[500px] sm:h-[630px]"
                         data-url="https://calendly.com/hello-devready/20min?primary_color=363fec"
                       />
+                    </div>
+                  </div>
+                ) : (
+                  /* Not ready message — shown when user lacks fundamentals */
+                  <div className="p-4 sm:p-8 bg-card text-center">
+                    <div className="max-w-md mx-auto">
+                      <div className="text-4xl mb-4">📚</div>
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                        {t('contact.gateNotReady')}
+                      </p>
                     </div>
                   </div>
                 )}
