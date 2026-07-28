@@ -387,7 +387,7 @@
     "gateFormSubtitle": "Αυτό μας βοηθάει να βεβαιωθούμε ότι το πρόγραμμα είναι κατάλληλο για εσένα.",
     "gateQuestion": "Έχεις τα θεμέλια του software engineering;",
     "gateQuestionHint": "π.χ. μπορείς να γράψεις βασικό κώδικα, καταλαβαίνεις μεταβλητές, loops, functions, και έχεις φτιάξει απλά projects.",
-    "gateOptionYes": "Ναι, έχω τα βασικά",
+    "gateOptionYes": "Ναι, ξερω τα βασικά",
     "gateOptionNo": "Όχι, είμαι εντελώς νέος/α στον προγραμματισμό",
     "gateSubmitButton": "Συνέχεια στο Booking",
     "gateNotReady": "Το accelerator μας είναι σχεδιασμένο για άτομα που έχουν ήδη τα βασικά του software engineering. Σου προτείνουμε να χτίσεις πρώτα τα θεμέλιά σου, δες δωρεάν πόρους όπως το freeCodeCamp ή το The Odin Project για να ξεκινήσεις, και έλα πίσω όταν είσαι έτοιμος/η!",
