@@ -8,6 +8,7 @@ import Course from "../components/Course";
 import ComingSoon from "../components/ComingSoon";
 import Vision from "../components/Vision";
 import Testimonials from "../components/Testimonials";
+import CohortLeaders from "../components/CohortLeaders";
 import Subscribe from "../components/Subscribe";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -75,6 +76,7 @@ const Index = () => {
                 <main id="main-content">
                     <Hero />
                     <Testimonials />
+                    <CohortLeaders />
                     <Pillars />
                     <Course />
                     <WhyDifferent />

@@ -6,14 +6,10 @@ export const earlyBirdConfig = {
   spotsLeft: 10,
   isActive: true,
 
-  // Cohort dates (English and Greek)
-  cohortStartMonth: {
-    en: "September",
-    gr: "Σεπτέμβριος"
-  },
-  cohortEndMonth: {
-    en: "October",
-    gr: "Οκτώβριος"
+  // Cohort start window (English and Greek)
+  cohortDateRange: {
+    en: "October–November 2026",
+    gr: "Οκτώβριος-Νομβριο 2026"
   },
   cohortYear: 2026,
 
@@ -22,13 +18,11 @@ export const earlyBirdConfig = {
   earlyBirdPrice: "€399",
 
   // Registration deadline (used for countdown timer)
-  cohortStartDate: '2026-09-01T00:00:00+03:00',
+  cohortStartDate: '2026-10-15T00:00:00+03:00',
 
   // Get cohort date range for specific language
   getCohortDateRange(lang = 'en') {
-    const startMonth = this.cohortStartMonth[lang] || this.cohortStartMonth.en;
-    const endMonth = this.cohortEndMonth[lang] || this.cohortEndMonth.en;
-    return `${startMonth}–${endMonth} ${this.cohortYear}`;
+    return this.cohortDateRange[lang] || this.cohortDateRange.en;
   },
 
   // Get spots left text for specific language

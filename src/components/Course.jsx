@@ -17,10 +17,13 @@ const Course = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
                {t('course.title')}
             </h2>
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-2">
               <Calendar className="inline-block w-4 h-4 mr-2" />
               {t('course.cohortDate')}
             </span>
+            <p className="text-sm text-muted-foreground mb-4">
+              {t('course.cohortDateNote')}
+            </p>
             <p className="text-base md:text-lg text-primary font-semibold mb-3 max-w-2xl mx-auto">
               {t('course.forAllDevelopers')}
             </p>
@@ -85,6 +88,7 @@ const Course = () => {
                   <span className="text-sm sm:text-base text-muted-foreground">{t('course.perProgram')}</span>
                 </div>
                 <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
+                <p className="text-sm text-muted-foreground mt-3 max-w-md">{t('course.paymentPlan')}</p>
               </div>
               <div className="flex flex-col gap-3 w-full sm:w-auto sm:min-w-[240px]">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 w-full" asChild>

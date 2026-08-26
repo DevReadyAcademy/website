@@ -45,6 +45,7 @@
   "course": {
     "title": "6-Week Tech Accelerator",
     "cohortDate": "Next Cohort: {COHORT_DATE}",
+    "cohortDateNote": "The exact start date will be announced soon.",
     "forAllDevelopers": "For All Developers: Frontend · Backend · Full-Stack · Mobile · Any Tech Stack",
     "description": "An intensive program designed to transform you into an industry-ready tech professional.",
     "timeCommitmentTitle": "Time Commitment",
@@ -69,7 +70,8 @@
     "investmentLabel": "Investment in your future",
     "currentPrice": "{PRICE}",
     "perProgram": "/program",
-    "spotsLeft": "Only {SPOTS} {SPOTS_LABEL} left!"
+    "spotsLeft": "Only {SPOTS} {SPOTS_LABEL} left!",
+    "paymentPlan": "Pay in 2 installments: 50% upfront to secure your spot and 50% when classes begin."
   },
   "accelerator": {
     "backToHome": "Back to Home",
@@ -301,6 +303,10 @@
         "answer": "Expect ~2-3 hours per week of live sessions and ~5 hours of personal work (project work and independent learning). This is the average we believe you need to keep up with the program and for us to help you get the most out of it."
       },
       {
+        "question": "When does the next cohort start?",
+        "answer": "The next cohort will start between October and November 2026. The exact start date will be announced soon."
+      },
+      {
         "question": "Is this accelerator remote?",
         "answer": "Yes, 100% remote. All sessions are conducted online, making it accessible from anywhere in Greece."
       },
@@ -317,8 +323,8 @@
         "answer": "We'll discuss your goals, answer any questions, and if it's a good fit, we'll finalize your enrollment."
       },
       {
-        "question": "What are the payment options?",
-        "answer": "Pay the full amount now, or 50% upfront and 50% at the start of the program, if that works for you.\n\nIf neither option works for you, send us a message and we'll try to find a solution together."
+        "question": "How can I pay? Are installments available?",
+        "answer": "Yes, you can pay in 2 installments. To secure your spot, you pay a 50% deposit upfront. The remaining 50% is due when classes begin. If you prefer, you can also pay the full amount upfront.\n\nIf neither option works for you, send us a message and we'll try to find a solution together."
       }
     ],
     "finalCtaTitle": "Ready to Become Industry-Ready?",
@@ -437,6 +443,30 @@
         "name": "Vasilis Samoladas",
         "description": "A Prague-based Frontend Engineer passionate about AI and building products people love. With 200+ user interviews under his belt, he brings strong product thinking and design sensibility to engineering. He combines technical skills with user empathy and a questionable sense of humor."
       }
+    ]
+  },
+  "cohortLeaders": {
+    "eyebrow": "Your Cohort Instructors",
+    "title": "Led by Engineers Who Work in the Industry",
+    "description": "Alex and Vasilis will personally lead the cohort. They are professional software engineers with experience at international tech companies, production systems, and real product teams. You will get practical feedback from people who understand firsthand what the industry expects.",
+    "linkedin": "View LinkedIn",
+    "leaders": [
+      {
+        "name": "Alexis Pavlidis",
+        "role": "Backend Engineer • Monzo & Skyscanner",
+        "description": "7+ years in software engineering at Stoiximan, Monzo, and Skyscanner, 5+ years of technical interviewing experience, and 3+ years mentoring engineers."
+      },
+      {
+        "name": "Vasilis Samoladas",
+        "role": "Frontend Engineer • Kiwi.com",
+        "description": "A frontend engineer on international product teams focused on AI and user-centered product development, with experience from 200+ user interviews."
+      }
+    ],
+    "trustPoints": [
+      "Stoiximan · Monzo · Skyscanner · Kiwi.com",
+      "7+ years in software engineering",
+      "5+ years in technical interviewing",
+      "3+ years mentoring engineers"
     ]
   },
   "testimonials": {
@@ -568,7 +598,7 @@
         "date": "2026",
         "location": "Remote",
         "title": "Next Step: You",
-        "description": "Our next cohort launches in September 2026. We're ready to help the next generation of Greek developers break into tech with the exact blueprint we've refined over years. Will you be part of this journey?",
+        "description": "Our next cohort will start between October and November 2026, with the exact start date to be announced soon. We're ready to help the next generation of Greek developers break into tech with the exact blueprint we've refined over years. Will you be part of this journey?",
         "image": "/assets/timeline/bill.webp"
       }
     ],

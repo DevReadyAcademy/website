@@ -46,6 +46,7 @@
   "course": {
     "title": "6-Week Tech Accelerator",
     "cohortDate": "Επόμενο Cohort: {COHORT_DATE}",
+    "cohortDateNote": "Η ακριβής ημερομηνία έναρξης θα ανακοινωθεί σύντομα.",
     "forAllDevelopers": "Για Όλους τους Developers: Frontend · Backend · Full-Stack · Mobile · Οποιοδήποτε Tech Stack",
     "description": "Ένα εντατικό πρόγραμμα σχεδιασμένο να σε μετατρέψει σε έναν industry-ready tech professional.",
     "timeCommitmentTitle": "Διάρκεια",
@@ -70,7 +71,8 @@
     "investmentLabel": "Επένδυση στο μέλλον σου",
     "currentPrice": "{PRICE}",
     "perProgram": "/πρόγραμμα",
-    "spotsLeft": "Μόνο {SPOTS} {SPOTS_LABEL} {SPOTS_VERB}!"
+    "spotsLeft": "Μόνο {SPOTS} {SPOTS_LABEL} {SPOTS_VERB}!",
+    "paymentPlan": "Πληρωμή σε 2 δόσεις: 50% προκαταβολή για να κατοχυρώσεις τη θέση σου και 50% με την έναρξη των μαθημάτων."
   },
   "accelerator": {
     "backToHome": "Πίσω στην Αρχική",
@@ -300,6 +302,10 @@
         "answer": "Περίμενε ~2-3 ώρες την εβδομάδα για live sessions και ~5 ώρες για προσωπική δουλειά (project work και independent learning). Αυτό είναι το average που πιστεύουμε ότι χρειάζεται για να μπορείς να κάνεις keep up με το πρόγραμμα και να σε βοηθήσουμε στο μέγιστο."
       },
       {
+        "question": "Πότε ξεκινάει το επόμενο cohort;",
+        "answer": "Το επόμενο cohort θα ξεκινήσει μεταξύ Οκτωβρίου και Νοεμβρίου 2026. Η ακριβής ημερομηνία έναρξης θα ανακοινωθεί σύντομα."
+      },
+      {
         "question": "Είναι το accelerator remote;",
         "answer": "Ναι, 100% remote. Όλα τα sessions διεξάγονται online, καθιστώντας το accessible από οπουδήποτε στην Ελλάδα."
       },
@@ -316,8 +322,8 @@
         "answer": "Θα συζητήσουμε τους στόχους σου, θα απαντήσουμε σε τυχόν ερωτήσεις και αν είναι good fit, θα ολοκληρώσουμε την εγγραφή σου."
       },
       {
-        "question": "Ποιες είναι οι επιλογές πληρωμής;",
-        "answer": "Eξόφληση του συνολικού ποσού από τώρα, ή 50% προκαταβολή και 50% με την έναρξη του προγράμματος, αν σε εξυπηρετεί.\n\nΑν καμία από τις παραπάνω επιλογές δεν σε βολεύει, στείλε μας μήνυμα και θα προσπαθήσουμε να βρούμε μαζί μια λύση."
+        "question": "Πώς μπορώ να πληρώσω; Γίνονται δεκτές δόσεις;",
+        "answer": "Ναι, μπορείς να πληρώσεις σε 2 δόσεις. Για να κατοχυρώσεις τη θέση σου, πληρώνεις προκαταβολή 50% του συνολικού ποσού. Το υπόλοιπο 50% εξοφλείται με την έναρξη των μαθημάτων. Αν προτιμάς, μπορείς επίσης να εξοφλήσεις όλο το ποσό από την αρχή.\n\nΑν καμία από τις παραπάνω επιλογές δεν σε εξυπηρετεί, στείλε μας μήνυμα και θα προσπαθήσουμε να βρούμε μαζί μια λύση."
       }
     ],
     "finalCtaTitle": "Έτοιμος να Γίνεις Industry-Ready;",
@@ -436,6 +442,30 @@
         "name": "Vasilis Samoladas",
         "description": "Prague-based Frontend Engineer, passionate για AI και στο να φτιάχνει products που οι άνθρωποι αγαπούν. Με 200+ user interviews, φέρνει strong product thinking και design sensibility στο engineering. Συνδυάζει technical skills με user empathy και ένα questionable χιούμορ."
       }
+    ]
+  },
+  "cohortLeaders": {
+    "eyebrow": "Οι Instructors του Cohort",
+    "title": "Το Cohort Καθοδηγείται από Engineers που Δουλεύουν στην Αγορά",
+    "description": "Ο Alex και ο Βασίλης θα καθοδηγήσουν προσωπικά το cohort. Είναι επαγγελματίες software engineers με εμπειρία σε διεθνείς tech εταιρείες, production systems και πραγματικά product teams. Θα πάρεις πρακτικό feedback από ανθρώπους που γνωρίζουν firsthand τι ζητάει η αγορά.",
+    "linkedin": "Δες το LinkedIn",
+    "leaders": [
+      {
+        "name": "Alexis Pavlidis",
+        "role": "Backend Engineer • Monzo & Skyscanner",
+        "description": "7+ χρόνια software engineering σε Stoiximan, Monzo και Skyscanner, 5+ χρόνια εμπειρίας σε technical interviews και 3+ χρόνια mentoring engineers."
+      },
+      {
+        "name": "Vasilis Samoladas",
+        "role": "Frontend Engineer • Kiwi.com",
+        "description": "Frontend Engineer σε international product teams με έμφαση στο AI, το user-centered product development και εμπειρία από 200+ user interviews."
+      }
+    ],
+    "trustPoints": [
+      "Stoiximan · Monzo · Skyscanner · Kiwi.com",
+      "7+ χρόνια software engineering",
+      "5+ χρόνια technical interviewing",
+      "3+ χρόνια mentoring engineers"
     ]
   },
   "testimonials": {
@@ -567,7 +597,7 @@
         "date": "2026",
         "location": "Remote",
         "title": "Επόμενο Βήμα: Εσύ",
-        "description": "Το επόμενο cohort ξεκινάει τον Σεπτέμβριο 2026. Είμαστε έτοιμοι να βοηθήσουμε την επόμενη γενιά Ελλήνων developers να μπουν στην tech με το ακριβές blueprint που έχουμε κάνει refine για χρόνια. Θα είσαι μέρος αυτού του ταξιδιού;",
+        "description": "Το επόμενο cohort θα ξεκινήσει μεταξύ Οκτωβρίου και Νοεμβρίου 2026, με την ακριβή ημερομηνία έναρξης να ανακοινώνεται σύντομα. Είμαστε έτοιμοι να βοηθήσουμε την επόμενη γενιά Ελλήνων developers να μπουν στην tech με το ακριβές blueprint που έχουμε κάνει refine για χρόνια. Θα είσαι μέρος αυτού του ταξιδιού;",
         "image": "/assets/timeline/bill.webp"
       }
     ],

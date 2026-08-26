@@ -13,6 +13,7 @@ import earlyBirdConfig from "../config/earlyBird";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import CohortLeaders from "../components/CohortLeaders";
 
 
 const iconMap = {
@@ -78,10 +79,18 @@ const Accelerator = () => {
         "hasCourseInstance": {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "instructor": {
-            "@type": "Person",
-            "name": "Alexis Pavlidis"
-          },
+          "instructor": [
+            {
+              "@type": "Person",
+              "name": "Alexis Pavlidis",
+              "sameAs": "https://www.linkedin.com/in/apavlidi/"
+            },
+            {
+              "@type": "Person",
+              "name": "Vasilis Samoladas",
+              "sameAs": "https://www.linkedin.com/in/vasilis-samoladas/"
+            }
+          ],
           "inLanguage": ["en", "el"]
         },
         "offers": {
@@ -162,10 +171,13 @@ const Accelerator = () => {
           {/* Hero Section */}
           <section className="py-16 px-4 bg-gradient-hero">
             <div className="container mx-auto max-w-5xl text-center">
-              <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full text-sm font-semibold mb-6">
+              <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full text-sm font-semibold mb-2">
                 <Calendar className="inline-block w-4 h-4 mr-2" />
                 {t('accelerator.cohortBadge')}
               </div>
+              <p className="text-sm text-muted-foreground mb-6">
+                {t('course.cohortDateNote')}
+              </p>
 
 <h1 className="text-5xl md:text-6xl font-black mb-4 bg-gradient-primary bg-clip-text text-transparent pb-2">
                 {t('accelerator.pageTitle')}
@@ -222,10 +234,13 @@ const Accelerator = () => {
                     <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
                   </div>
                   <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
+                  <p className="text-xs text-muted-foreground mt-3">{t('course.paymentPlan')}</p>
                 </div>
               </div>
             </div>
           </section>
+
+          <CohortLeaders />
 
           {/* Detailed Curriculum */}
           <section className="py-20 px-4 bg-gradient-subtle">
@@ -425,6 +440,9 @@ const Accelerator = () => {
                 <p className="text-base opacity-80 mb-4 max-w-2xl mx-auto">
                   {t('accelerator.finalCtaPricing')}
                 </p>
+                <p className="text-sm opacity-80 mb-4 max-w-2xl mx-auto">
+                  {t('course.paymentPlan')}
+                </p>
 <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 shadow-lg">
                   <Link to="/contact">
                     <Calendar className="w-5 h-5 mr-2" />
@@ -446,4 +464,3 @@ const Accelerator = () => {
 };
 
 export default Accelerator;
-
