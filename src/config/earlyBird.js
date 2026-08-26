@@ -9,7 +9,7 @@ export const earlyBirdConfig = {
   // Cohort start window (English and Greek)
   cohortDateRange: {
     en: "October–November 2026",
-    gr: "Οκτώβριος-Νομβριο 2026"
+    gr: "Οκτώβριο-Νοέμβριο 2026"
   },
   cohortYear: 2026,
 
