@@ -2,7 +2,6 @@ import React from "react";
 import Hero from "../components/Hero";
 import Pillars from "../components/Pillars";
 import WhyDifferent from "../components/WhyDifferent";
-import Team from "../components/Team";
 import Course from "../components/Course";
 
 import ComingSoon from "../components/ComingSoon";
@@ -80,7 +79,6 @@ const Index = () => {
                     <Pillars />
                     <Course />
                     <WhyDifferent />
-                    <Team />
                 </main>
 
                 {/* <ComingSoon /> */}

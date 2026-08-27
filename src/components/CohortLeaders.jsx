@@ -1,4 +1,5 @@
-import { BadgeCheck, Briefcase, ExternalLink } from "lucide-react";
+import { ArrowRight, BadgeCheck, Briefcase, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const leaderMeta = [
@@ -80,6 +81,16 @@ const CohortLeaders = () => {
               <span className="text-sm font-medium text-foreground">{point}</span>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            to="/team"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors"
+          >
+            {t("team.learnMoreAboutTeam")}
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>
