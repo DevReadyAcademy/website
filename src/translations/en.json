@@ -441,14 +441,14 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "description": "A Prague-based Frontend Engineer passionate about AI and building products people love. With 200+ user interviews under his belt, he brings strong product thinking and design sensibility to engineering. He combines technical skills with user empathy and a questionable sense of humor."
+        "description": "A Prague-based Full-stack Engineer at MediaMarktSaturn with 6+ years of experience across MediaMarktSaturn, Kiwi.com, and a research centre. He combines hands-on frontend and backend engineering with product thinking shaped by 200+ user interviews, and mentors developers through DevReady."
       }
     ]
   },
   "cohortLeaders": {
     "eyebrow": "Your Cohort Instructors",
     "title": "Led by Engineers Who Work in the Industry",
-    "description": "Alex and Vasilis will personally lead the cohort. They are professional software engineers with experience at international tech companies, production systems, and real product teams. You will get practical feedback from people who understand firsthand what the industry expects.",
+    "description": "Alex and Vasilis will personally lead the cohort while working abroad in London and Prague. They bring experience from international tech companies, production systems, and real product teams, so you get practical feedback from engineers who understand firsthand what the industry expects.",
     "linkedin": "View LinkedIn",
     "leaders": [
       {
@@ -458,15 +458,15 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "role": "Frontend Engineer • Kiwi.com",
-        "description": "A frontend engineer on international product teams focused on AI and user-centered product development, with experience from 200+ user interviews."
+        "role": "Full-stack Engineer • MediaMarktSaturn",
+        "description": "6+ years across MediaMarktSaturn, Kiwi.com, and a research centre, building international products across frontend and backend, conducting 200+ user interviews, and mentoring developers through DevReady."
       }
     ],
     "trustPoints": [
-      "Stoiximan · Monzo · Skyscanner · Kiwi.com",
-      "7+ years in software engineering",
+      "MediaMarktSaturn · Kiwi.com · Monzo · Skyscanner",
+      "13+ combined years in software engineering",
       "5+ years in technical interviewing",
-      "3+ years mentoring engineers"
+      "Working engineers in London & Prague"
     ]
   },
   "testimonials": {
@@ -513,7 +513,7 @@
   "journey": {
     "pageTitle": "Our Journey",
     "pageSubtitle": "From dozens of job rejections to building a program that helps others break into tech",
-    "pageDescription": "We're not just educators—we're working engineers who've walked the path you're trying to walk.",
+    "pageDescription": "We're not just educators—we're working engineers based abroad in London and Prague who've walked the path you're trying to walk.",
     "teamTitle": "Meet The Team",
     "teamDescription": "Engineers, mentors, and career coaches passionate about transforming tech education in Greece",
     "teamMembers": [
@@ -535,15 +535,15 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "role": "Frontend Engineer at Kiwi",
+        "role": "Full-stack Engineer at MediaMarktSaturn | ex-Kiwi.com",
         "location": "Prague, Czech Republic",
         "image": "/assets/sam.webp",
-        "bio": "A Frontend Engineer passionate about AI and building products people love. With 200+ user interviews conducted, Vasilis brings strong product thinking and design sensibility to engineering. He's proof that DevReady's mentorship model works—we helped him land his first role, and now he's paying it forward by helping others do the same.",
+        "bio": "A Prague-based Full-stack Engineer with 6+ years of experience across MediaMarktSaturn, Kiwi.com, and a research centre. Vasilis builds user-centred products across frontend and backend, pairing hands-on engineering with product thinking shaped by 200+ user interviews. As a DevReady mentor, he helps developers turn technical knowledge into practical product and career progress.",
         "highlights": [
-          "Passionate about AI and building user-centric products",
-          "200+ user interviews, deep understanding of user needs",
-          "Strong product thinking and design sensibility",
-          "Our first mentee before DevReady even existed, now paying it forward"
+          "6+ years in full-stack engineering across MediaMarktSaturn, Kiwi.com, and a research centre",
+          "Working on international product teams from Prague",
+          "200+ user interviews and strong user-centred product thinking",
+          "Hands-on mentoring for DevReady developers"
         ],
         "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/"
       }
