@@ -441,7 +441,7 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "description": "A Prague-based Full-stack Engineer at MediaMarktSaturn with 6+ years of experience across MediaMarktSaturn, Kiwi.com, and a research centre. He combines hands-on frontend and backend engineering with product thinking shaped by 200+ user interviews, and mentors developers through DevReady."
+        "description": "A Prague-based Full-stack Engineer at MediaMarkt with 6+ years of experience across MediaMarkt, Kiwi.com, and CTTC. He combines hands-on frontend and backend engineering with product thinking shaped by 200+ user interviews, and mentors developers through DevReady."
       }
     ]
   },
@@ -458,12 +458,12 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "role": "Full-stack Engineer • MediaMarktSaturn",
-        "description": "6+ years across MediaMarktSaturn, Kiwi.com, and a research centre, building international products across frontend and backend, conducting 200+ user interviews, and mentoring developers through DevReady."
+        "role": "Full-stack Engineer • MediaMarkt",
+        "description": "6+ years across MediaMarkt, Kiwi.com, and CTTC, building international products across frontend and backend, conducting 200+ user interviews, and mentoring developers through DevReady."
       }
     ],
     "trustPoints": [
-      "MediaMarktSaturn · Kiwi.com · Monzo · Skyscanner",
+      "MediaMarkt · Kiwi.com · CTTC · Monzo · Skyscanner",
       "13+ combined years in software engineering",
       "5+ years in technical interviewing",
       "Working engineers in London & Prague"
@@ -535,12 +535,12 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "role": "Full-stack Engineer at MediaMarktSaturn | ex-Kiwi.com",
+        "role": "Full-stack Engineer at MediaMarkt | ex-Kiwi.com",
         "location": "Prague, Czech Republic",
         "image": "/assets/sam.webp",
-        "bio": "A Prague-based Full-stack Engineer with 6+ years of experience across MediaMarktSaturn, Kiwi.com, and a research centre. Vasilis builds user-centred products across frontend and backend, pairing hands-on engineering with product thinking shaped by 200+ user interviews. As a DevReady mentor, he helps developers turn technical knowledge into practical product and career progress.",
+        "bio": "A Prague-based Full-stack Engineer with 6+ years of experience across MediaMarkt, Kiwi.com, and CTTC. Vasilis builds user-centred products across frontend and backend, pairing hands-on engineering with product thinking shaped by 200+ user interviews. As a DevReady mentor, he helps developers turn technical knowledge into practical product and career progress.",
         "highlights": [
-          "6+ years in full-stack engineering across MediaMarktSaturn, Kiwi.com, and a research centre",
+          "6+ years in full-stack engineering across MediaMarkt, Kiwi.com, and CTTC",
           "Working on international product teams from Prague",
           "200+ user interviews and strong user-centred product thinking",
           "Hands-on mentoring for DevReady developers"
