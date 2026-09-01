@@ -440,7 +440,7 @@
       },
       {
         "name": "Vasilis Samoladas",
-        "description": "Prague-based Full-stack Engineer στη MediaMarkt με 6+ χρόνια εμπειρίας σε MediaMarkt, Kiwi.com και CTTC. Συνδυάζει hands-on frontend και backend engineering με πρακτική hiring εμπειρία από 200+ software interviews και κάνει mentoring σε developers μέσω του DevReady."
+        "description": "Prague-based Full-stack Engineer στη MediaMarkt με 6+ χρόνια εμπειρίας σε MediaMarkt, Kiwi.com και CTTC. Έχει πραγματοποιήσει 200+ software interviews και κάνει mentoring σε developers μέσω του DevReady."
       }
     ]
   },
@@ -458,7 +458,7 @@
       {
         "name": "Vasilis Samoladas",
         "role": "Full-stack Engineer • MediaMarkt",
-        "description": "6+ χρόνια σε MediaMarkt, Kiwi.com και CTTC, χτίζοντας international products σε frontend και backend, με 200+ software interviews και hands-on mentoring σε developers μέσω του DevReady."
+        "description": "6+ χρόνια σε MediaMarkt, Kiwi.com και CTTC, χτίζοντας international products σε frontend και backend. Έχει πραγματοποιήσει 200+ software interviews και προσφέρει hands-on mentoring σε developers μέσω του DevReady."
       }
     ],
     "trustPoints": [
@@ -519,7 +519,7 @@
       {
         "name": "Alexis Pavlidis",
         "role": "Backend Engineer at Monzo | Skyscanner, Writer, Speaker, and Mentor",
-        "location": "Λονδίνο, UK",
+        "location": "Λονδίνο, UK · Βαρκελώνη, Ισπανία",
         "image": "/assets/alex.jpg",
         "bio": "Software Engineer με πάνω από 7 χρόνια εμπειρίας στη δημιουργία scalable systems σε top companies όπως η Stoiximan, Monzo και Skyscanner. Κατά τη διάρκεια της καριέρας του, ο Alex έχει αλλάξει πολλούς ρόλους: consultant, frontend engineer, fullstack engineer, και τελικά τον κέρδισε το backend engineering. Με 5+ χρόνια εμπειρίας στο interviewing προγραμματιστών, από entry/junior roles μέχρι staff engineers, και 3+ χρόνια mentoring σε engineers, έχει βοηθήσει δεκάδες νέους engineers να μπουν στο industry και να βρουν roles σε όλη την Ευρώπη.",
         "highlights": [
@@ -535,13 +535,13 @@
       {
         "name": "Vasilis Samoladas",
         "role": "Full-stack Engineer at MediaMarkt | ex-Kiwi.com",
-        "location": "Πράγα, Τσεχία",
+        "location": "Πράγα, Τσεχία · Βαρκελώνη, Ισπανία",
         "image": "/assets/sam.webp",
-        "bio": "Prague-based Full-stack Engineer με 6+ χρόνια εμπειρίας σε MediaMarkt, Kiwi.com και CTTC. Ο Βασίλης χτίζει products σε frontend και backend, συνδυάζοντας hands-on engineering με πρακτική hiring εμπειρία από 200+ software interviews. Ως mentor στο DevReady, βοηθά developers να μετατρέψουν τις τεχνικές τους γνώσεις σε πρακτική product και career εξέλιξη.",
+        "bio": "Prague-based Full-stack Engineer με 6+ χρόνια εμπειρίας σε MediaMarkt, Kiwi.com και CTTC. Ο Βασίλης χτίζει products σε frontend και backend. Έχει πραγματοποιήσει 200+ software interviews και γνωρίζει σε βάθος τι αξιολογούν οι εταιρείες στους developers. Ως mentor στο DevReady, βοηθά developers να μετατρέψουν τις τεχνικές τους γνώσεις σε πρακτική product και career εξέλιξη.",
         "highlights": [
           "6+ χρόνια full-stack engineering σε MediaMarkt, Kiwi.com και CTTC",
           "Εργάζεται σε international product teams από την Πράγα",
-          "200+ software interviews και πρακτική hiring εμπειρία",
+          "200+ software interviews και βαθιά γνώση του hiring process",
           "Hands-on mentoring σε developers του DevReady"
         ],
         "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/"
