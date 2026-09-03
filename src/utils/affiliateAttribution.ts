@@ -127,12 +127,6 @@ export const captureAffiliateAttribution = (): AffiliateAttribution | null => {
 
 export const getAffiliateAttribution = () => readStoredAttribution();
 
-export const applyReferralCode = (code: string): AffiliateAttribution | null => {
-  const affiliate = findAffiliate(code);
-  if (!affiliate) return null;
-  return storeAffiliate(affiliate);
-};
-
 export const buildCalendlyUrl = (
   baseUrl: string,
   attribution: AffiliateAttribution | null,
@@ -145,8 +139,6 @@ export const buildCalendlyUrl = (
   url.searchParams.set("utm_campaign", attribution.utmCampaign);
   url.searchParams.set("utm_content", attribution.utmContent);
   url.searchParams.set("utm_term", attribution.clickId);
-  // Calendly uses a1 for the first custom invitee question.
-  url.searchParams.set("a1", attribution.referralCode);
 
   return url.toString();
 };
