@@ -395,6 +395,11 @@
     "gateQuestionHint": "π.χ. μπορείς να γράψεις βασικό κώδικα, καταλαβαίνεις μεταβλητές, loops, functions, και έχεις φτιάξει απλά projects.",
     "gateOptionYes": "Ναι, ξερω τα βασικά",
     "gateOptionNo": "Όχι, είμαι εντελώς νέος/α στον προγραμματισμό",
+    "referralCodeLabel": "Κωδικός referral (προαιρετικό)",
+    "referralCodePlaceholder": "π.χ. ARTEMIS",
+    "referralCodeHint": "Αν ήρθες μέσω κάποιου συνεργάτη, βάλε εδώ τον κωδικό του.",
+    "referralCodeApplied": "Ο κωδικός {CODE} εφαρμόστηκε — έκπτωση €{DISCOUNT}.",
+    "referralCodeInvalid": "Δεν αναγνωρίσαμε αυτόν τον κωδικό. Έλεγξέ τον και δοκίμασε ξανά.",
     "gateSubmitButton": "Συνέχεια στο Booking",
     "gateNotReady": "Το accelerator μας είναι σχεδιασμένο για άτομα που έχουν ήδη τα βασικά του software engineering. Σου προτείνουμε να χτίσεις πρώτα τα θεμέλιά σου, δες δωρεάν πόρους όπως το freeCodeCamp ή το The Odin Project για να ξεκινήσεις, και έλα πίσω όταν είσαι έτοιμος/η!",
     "connectTitle": "Επικοινώνησε Μαζί Μας",
@@ -544,7 +549,8 @@
           "200+ software interviews και βαθιά γνώση του hiring process",
           "Hands-on mentoring σε developers του DevReady"
         ],
-        "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/"
+        "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/",
+        "website": "https://vasilis-samoladas.vercel.app/"
       }
     ],
     "timelineTitle": "Το Ταξίδι",
@@ -675,7 +681,7 @@
   },
   "privacy": {
     "title": "Πολιτική Απορρήτου & Προστασίας Δεδομένων (GDPR)",
-    "lastUpdated": "Τελευταία Ενημέρωση: 10 Φεβρουαρίου 2026",
+    "lastUpdated": "Τελευταία Ενημέρωση: 3 Σεπτεμβρίου 2026",
     "intro": "Καλώς ήρθατε στο devready.gr. Η προστασία των προσωπικών σας δεδομένων είναι για εμάς θέμα αρχής. Η παρούσα πολιτική εξηγεί πώς συλλέγουμε, επεξεργαζόμαστε και προστατεύουμε τις πληροφορίες σας, διασφαλίζοντας τη συμμόρφωσή μας με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR).",
     "section1": {
       "title": "1. Υπεύθυνος Επεξεργασίας",
@@ -698,7 +704,8 @@
         "list": {
           "item1": "<strong>Google Analytics:</strong> Χρησιμοποιείται για τη μέτρηση της επισκεψιμότητας. Τα δεδομένα είναι ανωνυμοποιημένα (IP Anonymization).",
           "item2": "<strong>Dynatrace (Application Performance Monitoring):</strong> Χρησιμοποιούμε το Dynatrace για την παρακολούθηση της απόδοσης σε πραγματικό χρόνο, τη διάγνωση σφαλμάτων και τη βελτιστοποίηση της εμπειρίας χρήστη.",
-          "item3": "<strong>Logs Διακομιστή:</strong> Η διεύθυνση IP σας καταγράφεται προσωρινά για λόγους ασφαλείας και προστασίας από κακόβουλες επιθέσεις."
+          "item3": "<strong>Logs Διακομιστή:</strong> Η διεύθυνση IP σας καταγράφεται προσωρινά για λόγους ασφαλείας και προστασίας από κακόβουλες επιθέσεις.",
+          "item4": "<strong>Affiliate attribution:</strong> Όταν έρχεστε μέσω partner link ή χρησιμοποιείτε referral code, αποθηκεύουμε την πηγή, τον κωδικό και ένα ανώνυμο click identifier για έως 60 ημέρες. Αν κλείσετε call, αυτές οι τιμές μεταφέρονται στο Calendly ώστε να γίνει το attribution της κράτησης."
         }
       }
     },
@@ -707,7 +714,8 @@
       "content": "Χρησιμοποιούμε cookies για τη σωστή λειτουργία του ιστότοπου. Τα cookies χωρίζονται σε:",
       "list": {
         "item1": "<strong>Απαραίτητα:</strong> Για τη βασική λειτουργία και ασφάλεια.",
-        "item2": "<strong>Στατιστικά/Επιδόσεων:</strong> Μέσω Google Analytics και Dynatrace για τη βελτίωση του site."
+        "item2": "<strong>Στατιστικά/Επιδόσεων:</strong> Μέσω Google Analytics και Dynatrace για τη βελτίωση του site.",
+        "item3": "<strong>Affiliate attribution:</strong> First-party browser storage θυμάται το partner referral για έως 60 ημέρες."
       }
     },
     "section4": {

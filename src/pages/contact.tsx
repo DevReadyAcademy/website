@@ -1,16 +1,68 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import {
+  applyReferralCode,
+  buildCalendlyUrl,
+  captureAffiliateAttribution,
+  type AffiliateAttribution,
+} from "../utils/affiliateAttribution";
+
+const DEFAULT_CALENDLY_URL = "https://calendly.com/hello-devready/20min?primary_color=363fec";
+const ARTEMIS_CALENDLY_URL = "https://calendly.com/hello-devready/20-minute-artemis?primary_color=363fec";
 
 const Contact = () => {
   const { t, language } = useLanguage();
   const [hasFundamentals, setHasFundamentals] = useState<boolean | null>(null);
   const [gateAnswered, setGateAnswered] = useState(false);
+  const [affiliateAttribution, setAffiliateAttribution] = useState<AffiliateAttribution | null>(null);
+  const [referralCode, setReferralCode] = useState("");
+  const [referralError, setReferralError] = useState(false);
   const calendlyRef = useRef<HTMLDivElement>(null);
+  const calendlyUrl = useMemo(
+    () => buildCalendlyUrl(
+      affiliateAttribution?.affiliateId === "artemis"
+        ? ARTEMIS_CALENDLY_URL
+        : DEFAULT_CALENDLY_URL,
+      affiliateAttribution,
+    ),
+    [affiliateAttribution],
+  );
+
+  useEffect(() => {
+    const attribution = captureAffiliateAttribution();
+    if (!attribution) return;
+
+    setAffiliateAttribution(attribution);
+    setReferralCode(attribution.referralCode);
+  }, []);
+
+  const confirmReferralCode = () => {
+    if (!referralCode.trim()) {
+      setReferralError(false);
+      return true;
+    }
+
+    const attribution = applyReferralCode(referralCode);
+    if (!attribution) {
+      setReferralError(true);
+      return false;
+    }
+
+    setAffiliateAttribution(attribution);
+    setReferralCode(attribution.referralCode);
+    setReferralError(false);
+    return true;
+  };
+
+  const continueToBooking = () => {
+    if (!confirmReferralCode()) return;
+    setGateAnswered(true);
+  };
 
   // Load Calendly widget and tracking ONLY after user confirms fundamentals
   useEffect(() => {
@@ -34,6 +86,9 @@ const Contact = () => {
           gtag("event", "booked_a_call", {
             event_category: "engagement",
             event_label: "calendly",
+            affiliate_id: affiliateAttribution?.affiliateId,
+            referral_code: affiliateAttribution?.referralCode,
+            affiliate_click_id: affiliateAttribution?.clickId,
           });
         }
         // Meta Pixel (client-side — may be blocked by ad blockers)
@@ -59,6 +114,16 @@ const Contact = () => {
           fbp: getCookie("_fbp"),
           fbc: fbcValue,
           sourceUrl: window.location.href,
+          calendlyInviteeUri: e.data?.payload?.invitee?.uri,
+          affiliate: affiliateAttribution
+            ? {
+                affiliateId: affiliateAttribution.affiliateId,
+                referralCode: affiliateAttribution.referralCode,
+                clickId: affiliateAttribution.clickId,
+                firstTouchAt: affiliateAttribution.firstTouchAt,
+                lastTouchAt: affiliateAttribution.lastTouchAt,
+              }
+            : null,
         });
         if (navigator.sendBeacon) {
           navigator.sendBeacon("/api/track-booking", new Blob([trackingPayload], { type: "application/json" }));
@@ -88,7 +153,7 @@ const Contact = () => {
         document.body.removeChild(script);
       }
     };
-  }, [gateAnswered, hasFundamentals]);
+  }, [affiliateAttribution, gateAnswered, hasFundamentals]);
 
   return (
     <>
@@ -166,10 +231,42 @@ const Contact = () => {
                         />
                         <span className="text-sm font-medium">{t('contact.gateOptionNo')}</span>
                       </label>
+                      <div className="space-y-1.5">
+                        <label htmlFor="referral-code" className="block text-sm font-medium">
+                          {t('contact.referralCodeLabel')}
+                        </label>
+                        <input
+                          id="referral-code"
+                          type="text"
+                          value={referralCode}
+                          onChange={(event) => {
+                            setReferralCode(event.target.value.toUpperCase());
+                            setReferralError(false);
+                          }}
+                          onBlur={confirmReferralCode}
+                          placeholder={t('contact.referralCodePlaceholder')}
+                          autoComplete="off"
+                          className={`w-full rounded-lg border bg-background px-3 py-2.5 text-sm uppercase outline-none focus:ring-2 focus:ring-primary/30 ${referralError ? 'border-destructive' : 'border-border'}`}
+                          aria-invalid={referralError}
+                          aria-describedby="referral-code-status"
+                        />
+                        <p
+                          id="referral-code-status"
+                          className={`text-xs ${referralError ? 'text-destructive' : affiliateAttribution ? 'text-primary font-medium' : 'text-muted-foreground'}`}
+                        >
+                          {referralError
+                            ? t('contact.referralCodeInvalid')
+                            : affiliateAttribution
+                              ? t('contact.referralCodeApplied')
+                                  .replace('{CODE}', affiliateAttribution.referralCode)
+                                  .replace('{DISCOUNT}', String(affiliateAttribution.discountAmount))
+                              : t('contact.referralCodeHint')}
+                        </p>
+                      </div>
                       <Button
                         size="lg"
                         disabled={hasFundamentals === null}
-                        onClick={() => setGateAnswered(true)}
+                        onClick={continueToBooking}
                         className="w-full text-base font-semibold"
                       >
                         {t('contact.gateSubmitButton')}
@@ -182,7 +279,7 @@ const Contact = () => {
                     <div role="region" aria-label="Book a call calendar">
                       <div
                         className="calendly-inline-widget min-w-[280px] h-[500px] sm:h-[630px]"
-                        data-url="https://calendly.com/hello-devready/20min?primary_color=363fec"
+                        data-url={calendlyUrl}
                       />
                     </div>
                   </div>

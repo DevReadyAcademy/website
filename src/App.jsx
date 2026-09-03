@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { FeatureFlagProvider } from "./contexts/FeatureFlagContext";
 import FeatureGuard from "./components/FeatureGuard";
+import { captureAffiliateAttribution } from "./utils/affiliateAttribution";
 
 /**
  * Captures fbclid from Meta ad click URLs and persists it to localStorage.
@@ -19,6 +20,21 @@ function useFbclidCapture() {
     if (fbclid) {
       const fbcValue = `fb.1.${Date.now()}.${fbclid}`;
       try { localStorage.setItem("_fbc_backup", fbcValue); } catch {}
+    }
+  }, []);
+}
+
+function useAffiliateAttributionCapture() {
+  useEffect(() => {
+    const attribution = captureAffiliateAttribution();
+    if (!attribution) return;
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "affiliate_visit", {
+        affiliate_id: attribution.affiliateId,
+        referral_code: attribution.referralCode,
+        affiliate_click_id: attribution.clickId,
+      });
     }
   }, []);
 }
@@ -46,6 +62,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useFbclidCapture();
+  useAffiliateAttributionCapture();
 
   return (
   <QueryClientProvider client={queryClient}>

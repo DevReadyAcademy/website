@@ -396,6 +396,11 @@
     "gateQuestionHint": "e.g. you can write basic code, understand variables, loops, functions, and have built simple projects.",
     "gateOptionYes": "Yes, I have the fundamentals",
     "gateOptionNo": "No, I'm completely new to programming",
+    "referralCodeLabel": "Referral code (optional)",
+    "referralCodePlaceholder": "e.g. ARTEMIS",
+    "referralCodeHint": "If someone referred you, enter their code here.",
+    "referralCodeApplied": "Code {CODE} applied — €{DISCOUNT} discount.",
+    "referralCodeInvalid": "We couldn't recognize this referral code. Check it and try again.",
     "gateSubmitButton": "Continue to Booking",
     "gateNotReady": "Our accelerator is designed for people who already have the basics of software engineering. We recommend building your fundamentals first, check out free resources like freeCodeCamp or The Odin Project to get started, and come back when you're ready!",
     "connectTitle": "Connect With Us",
@@ -545,7 +550,8 @@
           "200+ software interviews and practical hiring insight",
           "Hands-on mentoring for DevReady developers"
         ],
-        "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/"
+        "linkedin": "https://www.linkedin.com/in/vasilis-samoladas/",
+        "website": "https://vasilis-samoladas.vercel.app/"
       }
     ],
     "timelineTitle": "The Journey",
@@ -676,7 +682,7 @@
   },
   "privacy": {
     "title": "Privacy Policy & Data Protection (GDPR)",
-    "lastUpdated": "Last Updated: February 10, 2026",
+    "lastUpdated": "Last Updated: September 3, 2026",
     "intro": "Welcome to devready.gr. Protecting your personal data is a matter of principle for us. This policy explains how we collect, process, and protect your information, ensuring our compliance with the General Data Protection Regulation (GDPR).",
     "section1": {
       "title": "1. Data Controller",
@@ -699,7 +705,8 @@
         "list": {
           "item1": "<strong>Google Analytics:</strong> Used for measuring traffic. Data is anonymized (IP Anonymization).",
           "item2": "<strong>Dynatrace (Application Performance Monitoring):</strong> We use Dynatrace for real-time performance monitoring, error diagnosis, and user experience optimization.",
-          "item3": "<strong>Server Logs:</strong> Your IP address is temporarily recorded for security reasons and protection against malicious attacks."
+          "item3": "<strong>Server Logs:</strong> Your IP address is temporarily recorded for security reasons and protection against malicious attacks.",
+          "item4": "<strong>Affiliate attribution:</strong> When you arrive through a partner link or enter a referral code, we store the partner source, code, and an anonymous click identifier for up to 60 days. If you book a call, these values are passed to Calendly so we can attribute the booking."
         }
       }
     },
@@ -708,7 +715,8 @@
       "content": "We use cookies for the proper functioning of the website. Cookies are divided into:",
       "list": {
         "item1": "<strong>Necessary:</strong> For basic operation and security.",
-        "item2": "<strong>Statistics/Performance:</strong> Via Google Analytics and Dynatrace for site improvement."
+        "item2": "<strong>Statistics/Performance:</strong> Via Google Analytics and Dynatrace for site improvement.",
+        "item3": "<strong>Affiliate attribution:</strong> First-party browser storage remembers a partner referral for up to 60 days."
       }
     },
     "section4": {

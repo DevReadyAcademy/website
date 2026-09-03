@@ -10,17 +10,34 @@ function sha256Hash(value) {
 }
 
 /**
- * Fetch the invitee email from the most recent Calendly booking.
- * Since this runs immediately after a booking, the latest event is the one we need.
- * Requires CALENDLY_API_TOKEN env var. Returns null if unavailable.
+ * Fetch the exact Calendly invitee created by the browser event. Older clients
+ * fall back to the most recent booking. Requires CALENDLY_API_TOKEN.
  */
-async function fetchLatestCalendlyInviteeEmail() {
+async function fetchCalendlyInvitee(calendlyInviteeUri) {
   const calendlyToken = process.env.CALENDLY_API_TOKEN;
   if (!calendlyToken) return null;
 
   const headers = { Authorization: `Bearer ${calendlyToken}` };
 
   try {
+    if (calendlyInviteeUri) {
+      const inviteeUrl = new URL(calendlyInviteeUri);
+      const isCalendlyApiUrl =
+        inviteeUrl.protocol === "https:" &&
+        inviteeUrl.hostname === "api.calendly.com" &&
+        /^\/scheduled_events\/[^/]+\/invitees\/[^/]+$/.test(inviteeUrl.pathname);
+
+      if (isCalendlyApiUrl) {
+        const inviteeRes = await fetch(inviteeUrl.toString(), { headers });
+        if (inviteeRes.ok) {
+          const inviteeData = await inviteeRes.json();
+          return inviteeData?.resource || null;
+        }
+      }
+    }
+
+    // Backward-compatible fallback for bookings created before the client sent
+    // the exact invitee URI.
     // 1. Get the authenticated Calendly user URI
     const meRes = await fetch("https://api.calendly.com/users/me", { headers });
     if (!meRes.ok) return null;
@@ -42,7 +59,7 @@ async function fetchLatestCalendlyInviteeEmail() {
     const inviteesRes = await fetch(`${eventUri}/invitees`, { headers });
     if (!inviteesRes.ok) return null;
     const inviteesData = await inviteesRes.json();
-    return inviteesData?.collection?.[0]?.email || null;
+    return inviteesData?.collection?.[0] || null;
   } catch {
     return null;
   }
@@ -64,7 +81,7 @@ export default async function handler(req, res) {
 
   try {
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-    const { eventID, fbp, fbc, sourceUrl } = body;
+    const { eventID, fbp, fbc, sourceUrl, calendlyInviteeUri, affiliate } = body;
 
     if (!eventID) {
       return res.status(400).json({ error: "Missing eventID" });
@@ -95,7 +112,8 @@ export default async function handler(req, res) {
 
     // Fetch invitee email from the latest Calendly booking and send hashed to Meta
     // This significantly improves event match quality score
-    const inviteeEmail = await fetchLatestCalendlyInviteeEmail();
+    const calendlyInvitee = await fetchCalendlyInvitee(calendlyInviteeUri);
+    const inviteeEmail = calendlyInvitee?.email || null;
     if (inviteeEmail) {
       userData.em = [sha256Hash(inviteeEmail)];
     }
@@ -108,6 +126,14 @@ export default async function handler(req, res) {
       event_source_url: sourceUrl || "https://www.devready.gr/contact",
       user_data: userData,
     };
+
+    if (affiliate?.affiliateId || affiliate?.referralCode) {
+      eventData.custom_data = {
+        affiliate_id: String(affiliate.affiliateId || "").slice(0, 80),
+        referral_code: String(affiliate.referralCode || "").slice(0, 80),
+        affiliate_click_id: String(affiliate.clickId || "").slice(0, 120),
+      };
+    }
 
     const requestBody = {
       data: [eventData],
@@ -141,9 +167,18 @@ export default async function handler(req, res) {
       hasIp: !!clientIp,
       hasUserAgent: !!userAgent,
       sourceUrl: sourceUrl || "default",
+      affiliateId: affiliate?.affiliateId || calendlyInvitee?.tracking?.utm_source || "NONE",
+      referralCode: affiliate?.referralCode || calendlyInvitee?.tracking?.utm_content || "NONE",
+      affiliateClickId: affiliate?.clickId || calendlyInvitee?.tracking?.utm_term || "NONE",
       result,
     });
-    return res.status(200).json({ ok: true, eventID });
+    return res.status(200).json({
+      ok: true,
+      eventID,
+      affiliateTracked: Boolean(
+        affiliate?.affiliateId || calendlyInvitee?.tracking?.utm_source,
+      ),
+    });
   } catch (error) {
     console.error("Track booking error:", error);
     return res.status(500).json({ error: "Internal server error" });

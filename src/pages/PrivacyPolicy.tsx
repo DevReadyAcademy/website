@@ -65,6 +65,7 @@ const PrivacyPolicy: React.FC = () => {
                         <li dangerouslySetInnerHTML={{ __html: t('privacy.section2.subsectionB.list.item1') }} />
                         <li dangerouslySetInnerHTML={{ __html: t('privacy.section2.subsectionB.list.item2') }} />
                         <li dangerouslySetInnerHTML={{ __html: t('privacy.section2.subsectionB.list.item3') }} />
+                        <li dangerouslySetInnerHTML={{ __html: t('privacy.section2.subsectionB.list.item4') }} />
                     </ul>
 
                     <h2 className="text-2xl font-semibold mb-4">{t('privacy.section3.title')}</h2>
@@ -72,6 +73,7 @@ const PrivacyPolicy: React.FC = () => {
                     <ul className="list-disc pl-6 mb-8 space-y-2">
                         <li dangerouslySetInnerHTML={{ __html: t('privacy.section3.list.item1') }} />
                         <li dangerouslySetInnerHTML={{ __html: t('privacy.section3.list.item2') }} />
+                        <li dangerouslySetInnerHTML={{ __html: t('privacy.section3.list.item3') }} />
                     </ul>
 
                     <h2 className="text-2xl font-semibold mb-4">{t('privacy.section4.title')}</h2>
