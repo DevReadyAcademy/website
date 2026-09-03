@@ -12,7 +12,7 @@ import {
 } from "../utils/affiliateAttribution";
 
 const DEFAULT_CALENDLY_URL = "https://calendly.com/hello-devready/20min?primary_color=363fec";
-const ARTEMIS_CALENDLY_URL = "https://calendly.com/hello-devready/20-minute-artemis?primary_color=363fec";
+const REFERRAL_CALENDLY_URL = "https://calendly.com/hello-devready/20-minute-ref?primary_color=363fec";
 
 const Contact = () => {
   const { t, language } = useLanguage();
@@ -22,8 +22,8 @@ const Contact = () => {
   const calendlyRef = useRef<HTMLDivElement>(null);
   const calendlyUrl = useMemo(
     () => buildCalendlyUrl(
-      affiliateAttribution?.affiliateId === "artemis"
-        ? ARTEMIS_CALENDLY_URL
+      affiliateAttribution
+        ? REFERRAL_CALENDLY_URL
         : DEFAULT_CALENDLY_URL,
       affiliateAttribution,
     ),
