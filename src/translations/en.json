@@ -22,7 +22,7 @@
     "whyDifferent": "Why Different",
     "successStories": "Success Stories",
     "freeCvReview": "Free CV Review",
-    "urgencyBanner": "Only {SPOTS} {SPOTS_LABEL} left for the {COHORT_DATE} cohort — Secure yours now!"
+    "urgencyBanner": "Only {SPOTS} Early Bird {SPOTS_LABEL} left • Secure the {EARLY_BIRD_PRICE} price before the offer ends!"
   },
   "hero": {
     "urgencyBadge": "Next Cohort: {COHORT_DATE}",
@@ -36,7 +36,7 @@
     "trust3": "Price: {PRICE}",
     "outcomeStat1": "100+ students trained",
     "outcomeStat2": "70% landed interviews or jobs",
-    "countdownTitle": "Registrations close in",
+    "countdownTitle": "Early Bird offer ends in",
     "countdownDays": "Days",
     "countdownHours": "Hours",
     "countdownMinutes": "Min",

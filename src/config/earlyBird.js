@@ -17,8 +17,8 @@ export const earlyBirdConfig = {
   originalPrice: "€599",
   earlyBirdPrice: "€399",
 
-  // Registration deadline (used for countdown timer)
-  cohortStartDate: '2026-10-15T00:00:00+03:00',
+  // Early Bird deadline (used for countdown timer)
+  earlyBirdDeadline: '2026-09-19T23:59:59+03:00',
 
   // Get cohort date range for specific language
   getCohortDateRange(lang = 'en') {

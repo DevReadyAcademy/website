@@ -23,7 +23,7 @@
     "whyDifferent": "Γιατί Διαφέρουμε",
     "successStories": "Success Stories",
     "freeCvReview": "Δωρεάν Αξιολόγηση CV",
-    "urgencyBanner": "Μόνο {SPOTS} {SPOTS_LABEL} {SPOTS_VERB} για το cohort {COHORT_DATE} • Κλείσε τη δική σου τώρα!"
+    "urgencyBanner": "Μόνο {SPOTS} Early Bird {SPOTS_LABEL} {SPOTS_VERB} • Κλείσε την τιμή των {EARLY_BIRD_PRICE} πριν λήξει η προσφορά!"
   },
   "hero": {
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}",
@@ -37,7 +37,7 @@
     "trust3": "Τιμή: {PRICE}",
     "outcomeStat1": "100+ μαθητές εκπαιδεύτηκαν",
     "outcomeStat2": "70% πέτυχαν συνεντεύξεις ή βρήκαν δουλειά",
-    "countdownTitle": "Οι εγγραφές κλείνουν σε",
+    "countdownTitle": "Η Early Bird προσφορά λήγει σε",
     "countdownDays": "Μέρες",
     "countdownHours": "Ώρες",
     "countdownMinutes": "Λεπ",

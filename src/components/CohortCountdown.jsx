@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import earlyBirdConfig from '../config/earlyBird';
 
 const getTimeLeft = () => {
-  const diff = new Date(earlyBirdConfig.cohortStartDate) - new Date();
+  const diff = new Date(earlyBirdConfig.earlyBirdDeadline) - new Date();
   if (diff <= 0) return null;
   return {
     days: Math.floor(diff / (1000 * 60 * 60 * 24)),

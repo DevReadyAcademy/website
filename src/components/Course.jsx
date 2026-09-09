@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button.tsx";
 import { Link } from "react-router-dom";
 import { useLanguage } from '../contexts/LanguageContext';
 import earlyBirdConfig from '../config/earlyBird';
+import CohortCountdown from './CohortCountdown';
 
 const Course = () => {
   const { t } = useLanguage();
@@ -88,6 +89,7 @@ const Course = () => {
                   <span className="text-sm sm:text-base text-muted-foreground">{t('course.perProgram')}</span>
                 </div>
                 <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
+                <CohortCountdown variant="compact" />
                 <p className="text-sm text-muted-foreground mt-3 max-w-md">{t('course.paymentPlan')}</p>
               </div>
               <div className="flex flex-col gap-3 w-full sm:w-auto sm:min-w-[240px]">
