@@ -16,9 +16,12 @@ const REFERRAL_CALENDLY_URL = "https://calendly.com/hello-devready/20-minute-ref
 
 const Contact = () => {
   const { t, language } = useLanguage();
+  const [hasExperience, setHasExperience] = useState<boolean | null>(null);
   const [hasFundamentals, setHasFundamentals] = useState<boolean | null>(null);
   const [gateAnswered, setGateAnswered] = useState(false);
   const [affiliateAttribution, setAffiliateAttribution] = useState<AffiliateAttribution | null>(null);
+  const [bookingCompleted, setBookingCompleted] = useState(false);
+  const qualifiesForBooking = hasExperience === true && hasFundamentals === true;
   const calendlyRef = useRef<HTMLDivElement>(null);
   const calendlyUrl = useMemo(
     () => buildCalendlyUrl(
@@ -39,7 +42,7 @@ const Contact = () => {
 
   // Load Calendly widget and tracking ONLY after user confirms fundamentals
   useEffect(() => {
-    if (!gateAnswered || !hasFundamentals) return;
+    if (!gateAnswered || !qualifiesForBooking || bookingCompleted) return;
 
     // Load Calendly widget script
     const script = document.createElement("script");
@@ -49,7 +52,8 @@ const Contact = () => {
 
     // Listen for Calendly event scheduled
     const handleMessage = (e: MessageEvent) => {
-      if (e.data?.event === "calendly.event_scheduled") {
+      if (e.origin === "https://calendly.com" && e.data?.event === "calendly.event_scheduled") {
+        setBookingCompleted(true);
         // Generate a unique eventID for Meta deduplication (client + server)
         const eventID = `cal_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
 
@@ -116,17 +120,18 @@ const Contact = () => {
     window.addEventListener("message", handleMessage);
 
     // Smooth scroll to Calendly widget
-    setTimeout(() => {
+    const scrollTimeout = setTimeout(() => {
       calendlyRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 300);
 
     return () => {
+      clearTimeout(scrollTimeout);
       window.removeEventListener("message", handleMessage);
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
     };
-  }, [affiliateAttribution, gateAnswered, hasFundamentals]);
+  }, [affiliateAttribution, gateAnswered, qualifiesForBooking, bookingCompleted]);
 
   return (
     <>
@@ -173,48 +178,52 @@ const Contact = () => {
                       <h3 className="text-lg sm:text-xl font-semibold mb-2">{t('contact.gateFormTitle')}</h3>
                       <p className="text-sm text-muted-foreground">{t('contact.gateFormSubtitle')}</p>
                     </div>
-                    <fieldset className="space-y-4 sm:space-y-5">
-                      <legend className="block text-sm font-medium mb-1.5">
-                        {t('contact.gateQuestion')}
-                      </legend>
-                      <p className="text-xs text-muted-foreground -mt-2 sm:-mt-3">{t('contact.gateQuestionHint')}</p>
-                      <label
-                        className={`flex items-center gap-3 p-3 sm:p-4 rounded-lg border cursor-pointer transition-colors ${hasFundamentals === true ? 'border-primary bg-primary/5' : 'border-border/50 hover:bg-muted/50'}`}
-                      >
-                        <input
-                          type="radio"
-                          name="fundamentals"
-                          value="yes"
-                          checked={hasFundamentals === true}
-                          onChange={() => setHasFundamentals(true)}
-                          className="accent-primary w-4 h-4"
-                        />
-                        <span className="text-sm font-medium">{t('contact.gateOptionYes')}</span>
-                      </label>
-                      <label
-                        className={`flex items-center gap-3 p-3 sm:p-4 rounded-lg border cursor-pointer transition-colors ${hasFundamentals === false ? 'border-primary bg-primary/5' : 'border-border/50 hover:bg-muted/50'}`}
-                      >
-                        <input
-                          type="radio"
-                          name="fundamentals"
-                          value="no"
-                          checked={hasFundamentals === false}
-                          onChange={() => setHasFundamentals(false)}
-                          className="accent-primary w-4 h-4"
-                        />
-                        <span className="text-sm font-medium">{t('contact.gateOptionNo')}</span>
-                      </label>
+                    <div className="space-y-6">
+                      {[
+                        { name: 'experience', question: 'contact.gateQuestion', answer: hasExperience, setAnswer: setHasExperience },
+                        { name: 'fundamentals', question: 'contact.gateFundamentalsQuestion', answer: hasFundamentals, setAnswer: setHasFundamentals },
+                      ].map(({ name, question, answer, setAnswer }) => (
+                        <fieldset key={name} className="space-y-3">
+                          <legend className="block text-sm font-medium mb-1.5">{t(question)}</legend>
+                          {[true, false].map((value) => (
+                            <label
+                              key={String(value)}
+                              className={`flex items-center gap-3 p-3 sm:p-4 rounded-lg border cursor-pointer transition-colors ${answer === value ? 'border-primary bg-primary/5' : 'border-border/50 hover:bg-muted/50'}`}
+                            >
+                              <input
+                                type="radio"
+                                name={name}
+                                value={value ? 'yes' : 'no'}
+                                checked={answer === value}
+                                onChange={() => setAnswer(value)}
+                                className="accent-primary w-4 h-4"
+                              />
+                              <span className="text-sm font-medium">{t(value ? 'contact.gateOptionYes' : 'contact.gateOptionNo')}</span>
+                            </label>
+                          ))}
+                        </fieldset>
+                      ))}
                       <Button
                         size="lg"
-                        disabled={hasFundamentals === null}
+                        disabled={hasExperience === null || hasFundamentals === null}
                         onClick={() => setGateAnswered(true)}
                         className="w-full text-base font-semibold"
                       >
                         {t('contact.gateSubmitButton')}
                       </Button>
-                    </fieldset>
+                    </div>
                   </div>
-                ) : hasFundamentals ? (
+                ) : bookingCompleted ? (
+                  <div className="p-4 sm:p-8 bg-card text-center" role="status">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4">{t('contact.bookingCompletedTitle')}</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6">
+                      {t('contact.bookingCompletedBody')}
+                    </p>
+                    <Button asChild size="lg" className="text-base font-semibold">
+                      <a href="https://www.devready.gr/accelerator">{t('contact.bookingCompletedCta')}</a>
+                    </Button>
+                  </div>
+                ) : qualifiesForBooking ? (
                   /* Calendly Widget — shown when user has fundamentals */
                   <div ref={calendlyRef}>
                     <div role="region" aria-label="Book a call calendar">
