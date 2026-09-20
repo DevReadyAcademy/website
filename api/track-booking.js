@@ -1,3 +1,4 @@
+import { fetchCalendlyInvitee } from "../server/lib/calendlyBooking.js";
 import crypto from "crypto";
 
 const META_API_VERSION = "v21.0";
@@ -7,62 +8,6 @@ function sha256Hash(value) {
     .createHash("sha256")
     .update(value.trim().toLowerCase())
     .digest("hex");
-}
-
-/**
- * Fetch the exact Calendly invitee created by the browser event. Older clients
- * fall back to the most recent booking. Requires CALENDLY_API_TOKEN.
- */
-async function fetchCalendlyInvitee(calendlyInviteeUri) {
-  const calendlyToken = process.env.CALENDLY_API_TOKEN;
-  if (!calendlyToken) return null;
-
-  const headers = { Authorization: `Bearer ${calendlyToken}` };
-
-  try {
-    if (calendlyInviteeUri) {
-      const inviteeUrl = new URL(calendlyInviteeUri);
-      const isCalendlyApiUrl =
-        inviteeUrl.protocol === "https:" &&
-        inviteeUrl.hostname === "api.calendly.com" &&
-        /^\/scheduled_events\/[^/]+\/invitees\/[^/]+$/.test(inviteeUrl.pathname);
-
-      if (isCalendlyApiUrl) {
-        const inviteeRes = await fetch(inviteeUrl.toString(), { headers });
-        if (inviteeRes.ok) {
-          const inviteeData = await inviteeRes.json();
-          return inviteeData?.resource || null;
-        }
-      }
-    }
-
-    // Backward-compatible fallback for bookings created before the client sent
-    // the exact invitee URI.
-    // 1. Get the authenticated Calendly user URI
-    const meRes = await fetch("https://api.calendly.com/users/me", { headers });
-    if (!meRes.ok) return null;
-    const meData = await meRes.json();
-    const userUri = meData?.resource?.uri;
-    if (!userUri) return null;
-
-    // 2. Get the most recent scheduled event
-    const eventsRes = await fetch(
-      `https://api.calendly.com/scheduled_events?user=${encodeURIComponent(userUri)}&count=1&sort=start_time:desc&status=active`,
-      { headers },
-    );
-    if (!eventsRes.ok) return null;
-    const eventsData = await eventsRes.json();
-    const eventUri = eventsData?.collection?.[0]?.uri;
-    if (!eventUri) return null;
-
-    // 3. Get the invitee email from that event
-    const inviteesRes = await fetch(`${eventUri}/invitees`, { headers });
-    if (!inviteesRes.ok) return null;
-    const inviteesData = await inviteesRes.json();
-    return inviteesData?.collection?.[0] || null;
-  } catch {
-    return null;
-  }
 }
 
 export default async function handler(req, res) {
@@ -81,11 +26,19 @@ export default async function handler(req, res) {
 
   try {
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-    const { eventID, fbp, fbc, sourceUrl, calendlyInviteeUri, affiliate } = body;
+    const { eventID, fbp, fbc, sourceUrl, calendlyInviteeUri, affiliate, redirectBooking } = body;
 
     if (!eventID) {
       return res.status(400).json({ error: "Missing eventID" });
     }
+
+    // Redirects must resolve to an actual booking in our Calendly account.
+    const calendlyInvitee = await fetchCalendlyInvitee(calendlyInviteeUri, redirectBooking);
+    if (redirectBooking && !calendlyInvitee) {
+      return res.status(422).json({ error: "Unable to verify Calendly booking" });
+    }
+    const bookingId = calendlyInvitee?.uri?.split('/').pop();
+    const canonicalEventID = bookingId ? `cal_${bookingId}` : eventID;
 
     // Build user_data from request headers and cookies for Meta matching
     const userData = {};
@@ -108,11 +61,9 @@ export default async function handler(req, res) {
     if (fbc) userData.fbc = fbc;
 
     // External ID — helps Meta deduplicate and match across devices
-    if (eventID) userData.external_id = [sha256Hash(eventID)];
+    if (eventID) userData.external_id = [sha256Hash(canonicalEventID)];
 
-    // Fetch invitee email from the latest Calendly booking and send hashed to Meta
-    // This significantly improves event match quality score
-    const calendlyInvitee = await fetchCalendlyInvitee(calendlyInviteeUri);
+    // Match only the exact booking; never use an unrelated latest invitee.
     const inviteeEmail = calendlyInvitee?.email || null;
     if (inviteeEmail) {
       userData.em = [sha256Hash(inviteeEmail)];
@@ -121,7 +72,7 @@ export default async function handler(req, res) {
     const eventData = {
       event_name: "Schedule",
       event_time: Math.floor(Date.now() / 1000),
-      event_id: eventID,
+      event_id: canonicalEventID,
       action_source: "website",
       event_source_url: sourceUrl || "https://www.devready.gr/contact",
       user_data: userData,
@@ -174,7 +125,7 @@ export default async function handler(req, res) {
     });
     return res.status(200).json({
       ok: true,
-      eventID,
+      eventID: canonicalEventID,
       affiliateTracked: Boolean(
         affiliate?.affiliateId || calendlyInvitee?.tracking?.utm_source,
       ),

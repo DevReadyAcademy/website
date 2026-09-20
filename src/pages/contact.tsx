@@ -1,3 +1,4 @@
+import { trackBooking } from "../utils/bookingTracking";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowDown, Mail, MapPin, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -52,66 +53,10 @@ const Contact = () => {
     // Listen for Calendly event scheduled
     const handleMessage = (e: MessageEvent) => {
       if (e.origin === "https://calendly.com" && e.data?.event === "calendly.event_scheduled") {
-        // Generate a unique eventID for Meta deduplication (client + server)
-        const eventID = `cal_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
-
-        // Google Analytics
-        if (typeof window !== "undefined" && "gtag" in window) {
-          const gtag = (window as typeof window & { gtag: (...args: unknown[]) => void }).gtag;
-          gtag("event", "booked_a_call", {
-            event_category: "engagement",
-            event_label: "calendly",
-            affiliate_id: affiliateAttribution?.affiliateId,
-            referral_code: affiliateAttribution?.referralCode,
-            affiliate_click_id: affiliateAttribution?.clickId,
-          });
-        }
-        // Meta Pixel (client-side — may be blocked by ad blockers)
-        if (typeof window !== "undefined" && "fbq" in window) {
-          const fbq = (window as typeof window & { fbq: (...args: unknown[]) => void }).fbq;
-          fbq("track", "Schedule", {
-            content_name: "Book a Call",
-            content_category: "calendly",
-          }, { eventID });
-        }
-        // Server-side Meta CAPI (first-party request — NOT blocked by ad blockers)
-        const getCookie = (name: string) =>
-          document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`))?.[1] || "";
-
-        // Get fbc: prefer cookie, fallback to localStorage backup from fbclid capture
-        let fbcValue = getCookie("_fbc");
-        if (!fbcValue) {
-          try { fbcValue = localStorage.getItem("_fbc_backup") || ""; } catch {}
-        }
-
-        const trackingPayload = JSON.stringify({
-          eventID,
-          fbp: getCookie("_fbp"),
-          fbc: fbcValue,
-          sourceUrl: window.location.href,
+        void trackBooking({
           calendlyInviteeUri: e.data?.payload?.invitee?.uri,
-          affiliate: affiliateAttribution
-            ? {
-                affiliateId: affiliateAttribution.affiliateId,
-                referralCode: affiliateAttribution.referralCode,
-                clickId: affiliateAttribution.clickId,
-                firstTouchAt: affiliateAttribution.firstTouchAt,
-                lastTouchAt: affiliateAttribution.lastTouchAt,
-              }
-            : null,
+          affiliate: affiliateAttribution,
         });
-        if (navigator.sendBeacon) {
-          navigator.sendBeacon("/api/track-booking", new Blob([trackingPayload], { type: "application/json" }));
-        } else {
-          fetch("/api/track-booking", { method: "POST", body: trackingPayload, headers: { "Content-Type": "application/json" }, keepalive: true }).catch(() => {});
-        }
-        // TikTok Pixel
-        if (typeof window !== "undefined" && "ttq" in window) {
-          const ttq = (window as typeof window & { ttq: { track: (...args: unknown[]) => void } }).ttq;
-          ttq.track("SubmitForm", {
-            content_name: "Book a Call",
-          });
-        }
       }
     };
 

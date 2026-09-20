@@ -5,6 +5,26 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	<!-- Capture Calendly details before analytics loads, then remove personal data from the URL. -->
+	<script>
+		if (window.location.pathname.replace(/\/$/, '') === '/booking-confirmed') {
+			var bookingParams = new URLSearchParams(window.location.search);
+			if (bookingParams.has('invitee_uuid')) {
+				window.__calendlyRedirect = {
+					inviteeUuid: bookingParams.get('invitee_uuid'),
+					email: bookingParams.get('invitee_email'),
+					startTime: bookingParams.get('event_start_time')
+				};
+			}
+			var cleanParams = new URLSearchParams();
+			bookingParams.forEach(function (value, key) {
+				if (/^(utm_(source|medium|campaign|content|term)|fbclid|ref)$/.test(key)) cleanParams.set(key, value);
+			});
+			var cleanQuery = cleanParams.toString();
+			window.history.replaceState(window.history.state, '', window.location.pathname + (cleanQuery ? '?' + cleanQuery : ''));
+		}
+	</script>
+
 	<!-- Preconnect to external domains for faster loading -->
 	<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 	<link rel="preconnect" href="https://js-cdn.dynatracelabs.com" crossorigin>
