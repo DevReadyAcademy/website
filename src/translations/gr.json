@@ -398,6 +398,7 @@
     "gateSubmitButton": "Συνέχεια",
     "gateNotReady": "Το accelerator μας είναι σχεδιασμένο για άτομα που έχουν ήδη τα βασικά του software engineering. Σου προτείνουμε να χτίσεις πρώτα τα θεμέλιά σου, δες δωρεάν πόρους όπως το freeCodeCamp ή το The Odin Project για να ξεκινήσεις, και έλα πίσω όταν είσαι έτοιμος/η!",
     "gateFundamentalsQuestion": "Γνωρίζεις μεταβλητές, conditions/loops, functions και arrays/objects;",
+    "bookingCompletedSuccess": "Έκλεισες το call σου επιτυχώς!",
     "bookingCompletedTitle": "Δες πώς το DevReady σε βοηθά να γίνεις job-ready",
     "bookingCompletedBody": "Ανακάλυψε το DevReady Accelerator: ένα 6-week πρόγραμμα για software engineers με projects, mentoring και career preparation, σχεδιασμένο για να σε βοηθήσει να γίνεις job-ready και να βρεις δουλειά ως προγραμματιστής.",
     "bookingCompletedCta": "Ανακάλυψε το DevReady Accelerator",
