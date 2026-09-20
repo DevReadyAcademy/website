@@ -48,6 +48,7 @@ const Team = lazy(() => import("./pages/team"));
 const DevPress = lazy(() => import("./pages/devpress"));
 const BlogPost = lazy(() => import("./pages/blogPost"));
 const Contact = lazy(() => import("./pages/contact"));
+const BookingConfirmed = lazy(() => import("./pages/bookingConfirmed"));
 const NotFound = lazy(() => import("./pages/notFound"));
 const CvReviewResults = lazy(() => import("./pages/cvReviewResults"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
@@ -78,6 +79,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/booking-confirmed" element={<BookingConfirmed />} />
               <Route path="/accelerator" element={<Accelerator />} />
               <Route path="/team" element={<Team />} />
               <Route path="/devpress" element={<DevPress />} />

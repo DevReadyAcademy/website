@@ -20,7 +20,6 @@ const Contact = () => {
   const [hasFundamentals, setHasFundamentals] = useState<boolean | null>(null);
   const [gateAnswered, setGateAnswered] = useState(false);
   const [affiliateAttribution, setAffiliateAttribution] = useState<AffiliateAttribution | null>(null);
-  const [bookingCompleted, setBookingCompleted] = useState(false);
   const qualifiesForBooking = hasExperience === true && hasFundamentals === true;
   const calendlyRef = useRef<HTMLDivElement>(null);
   const calendlyUrl = useMemo(
@@ -42,7 +41,7 @@ const Contact = () => {
 
   // Load Calendly widget and tracking ONLY after user confirms fundamentals
   useEffect(() => {
-    if (!gateAnswered || !qualifiesForBooking || bookingCompleted) return;
+    if (!gateAnswered || !qualifiesForBooking) return;
 
     // Load Calendly widget script
     const script = document.createElement("script");
@@ -53,7 +52,6 @@ const Contact = () => {
     // Listen for Calendly event scheduled
     const handleMessage = (e: MessageEvent) => {
       if (e.origin === "https://calendly.com" && e.data?.event === "calendly.event_scheduled") {
-        setBookingCompleted(true);
         // Generate a unique eventID for Meta deduplication (client + server)
         const eventID = `cal_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
 
@@ -131,7 +129,7 @@ const Contact = () => {
         document.body.removeChild(script);
       }
     };
-  }, [affiliateAttribution, gateAnswered, qualifiesForBooking, bookingCompleted]);
+  }, [affiliateAttribution, gateAnswered, qualifiesForBooking]);
 
   return (
     <>
@@ -212,16 +210,6 @@ const Contact = () => {
                         {t('contact.gateSubmitButton')}
                       </Button>
                     </div>
-                  </div>
-                ) : bookingCompleted ? (
-                  <div className="p-4 sm:p-8 bg-card text-center" role="status">
-                    <h3 className="text-lg sm:text-xl font-semibold mb-4">{t('contact.bookingCompletedTitle')}</h3>
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6">
-                      {t('contact.bookingCompletedBody')}
-                    </p>
-                    <Button asChild size="lg" className="text-base font-semibold">
-                      <a href="https://www.devready.gr/accelerator">{t('contact.bookingCompletedCta')}</a>
-                    </Button>
                   </div>
                 ) : qualifiesForBooking ? (
                   /* Calendly Widget — shown when user has fundamentals */
