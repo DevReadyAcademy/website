@@ -96,7 +96,7 @@ const Accelerator = () => {
         },
         "offers": {
           "@type": "Offer",
-          "price": "399",
+          "price": earlyBirdConfig.earlyBirdPrice.replace(/[^0-9.]/g, ""),
           "priceCurrency": "EUR",
           "availability": "https://schema.org/InStock",
           "validFrom": "2026-01-01",
@@ -229,7 +229,7 @@ const Accelerator = () => {
                   <h3 className="font-semibold text-lg mb-2">{t('accelerator.infoCards.investmentTitle')}</h3>
                   {earlyBirdConfig.isActive && (
                     <span className="inline-block px-2 py-0.5 bg-primary/10 text-primary rounded-full text-xs font-semibold mb-2">
-                      Early Bird
+                      {t('course.earlyBirdLabel')}
                     </span>
                   )}
                   <div>

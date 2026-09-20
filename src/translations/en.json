@@ -22,7 +22,7 @@
     "whyDifferent": "Why Different",
     "successStories": "Success Stories",
     "freeCvReview": "Free CV Review",
-    "urgencyBanner": "Only {SPOTS} Early Bird {SPOTS_LABEL} left • Secure the {EARLY_BIRD_PRICE} price before the offer ends!"
+    "urgencyBanner": "Early Bird Phase {EARLY_BIRD_PHASE} is live • Only {SPOTS} {SPOTS_LABEL} at {EARLY_BIRD_PRICE} before the next price increase!"
   },
   "hero": {
     "urgencyBadge": "Next Cohort: {COHORT_DATE}",
@@ -36,7 +36,7 @@
     "trust3": "Price: {PRICE}",
     "outcomeStat1": "100+ students trained",
     "outcomeStat2": "70% landed interviews or jobs",
-    "countdownTitle": "Early Bird offer ends in",
+    "countdownTitle": "Early Bird Phase {EARLY_BIRD_PHASE} ends in",
     "countdownDays": "Days",
     "countdownHours": "Hours",
     "countdownMinutes": "Min",
@@ -68,6 +68,7 @@
       "Ace interviews with proven strategies, dos & don'ts, and communication techniques"
     ],
     "investmentLabel": "Investment in your future",
+    "earlyBirdLabel": "Early Bird — Phase {EARLY_BIRD_PHASE}",
     "currentPrice": "{PRICE}",
     "perProgram": "/program",
     "spotsLeft": "Only {SPOTS} {SPOTS_LABEL} left!",

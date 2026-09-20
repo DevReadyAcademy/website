@@ -76,7 +76,7 @@ const Course = () => {
                 <p className="text-sm sm:text-base text-muted-foreground mb-2">{t('course.investmentLabel')}</p>
                 {earlyBirdConfig.isActive && (
                   <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-2">
-                    Early Bird
+                    {t('course.earlyBirdLabel')}
                   </span>
                 )}
                 <div className="flex flex-col sm:flex-row items-center sm:items-baseline gap-1 sm:gap-2 justify-center md:justify-start">

@@ -5,6 +5,7 @@ export const earlyBirdConfig = {
   // Early bird availability
   spotsLeft: 6,
   isActive: true,
+  earlyBirdPhase: 2,
 
   // Cohort start window (English and Greek)
   cohortDateRange: {
@@ -15,10 +16,10 @@ export const earlyBirdConfig = {
 
   // Pricing
   originalPrice: "€599",
-  earlyBirdPrice: "€399",
+  earlyBirdPrice: "€419",
 
   // Early Bird deadline (used for countdown timer)
-  earlyBirdDeadline: '2026-09-19T23:59:59+03:00',
+  earlyBirdDeadline: '2026-09-30T23:59:59+03:00',
 
   // Get cohort date range for specific language
   getCohortDateRange(lang = 'en') {
@@ -28,9 +29,9 @@ export const earlyBirdConfig = {
   // Get spots left text for specific language
   getSpotsLeftText(lang = 'en') {
     if (lang === 'gr') {
-      return `Μόνο ${this.spotsLeft} Early Bird Θέσεις`;
+      return `Μόνο ${this.spotsLeft} Early Bird Phase ${this.earlyBirdPhase} Θέσεις`;
     }
-    return `Only ${this.spotsLeft} Early Bird Spots Left`;
+    return `Only ${this.spotsLeft} Early Bird Phase ${this.earlyBirdPhase} Spots Left`;
   },
 };
 

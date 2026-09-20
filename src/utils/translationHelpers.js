@@ -20,6 +20,7 @@ export const injectEarlyBirdValues = (translations, lang = 'en') => {
     '{PRICE}': price,
     '{REGULAR_PRICE}': earlyBirdConfig.originalPrice,
     '{EARLY_BIRD_PRICE}': earlyBirdConfig.earlyBirdPrice,
+    '{EARLY_BIRD_PHASE}': earlyBirdConfig.earlyBirdPhase.toString(),
     '{COHORT_YEAR}': earlyBirdConfig.cohortYear.toString(),
     '{SPOTS}': spots.toString(),
     '{SPOTS_LABEL}': spotsLabel,
