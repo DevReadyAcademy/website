@@ -76,10 +76,12 @@ const Accelerator = () => {
           "Interview Preparation",
           "Career Development"
         ],
-        "numberOfCredits": "12 weeks",
+        "numberOfCredits": "6 weeks",
         "hasCourseInstance": {
           "@type": "CourseInstance",
           "courseMode": "Online",
+          "startDate": earlyBirdConfig.cohortStartDate,
+          "endDate": earlyBirdConfig.cohortEndDate,
           "instructor": [
             {
               "@type": "Person",

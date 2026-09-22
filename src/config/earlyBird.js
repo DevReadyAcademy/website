@@ -7,11 +7,13 @@ export const earlyBirdConfig = {
   isActive: true,
   earlyBirdPhase: 2,
 
-  // Cohort start window (English and Greek)
+  // Cohort dates (English and Greek)
   cohortDateRange: {
-    en: "October–November 2026",
-    gr: "Οκτώβριο-Νοέμβριο 2026"
+    en: "October 19–November 29, 2026",
+    gr: "19 Οκτωβρίου–29 Νοεμβρίου 2026"
   },
+  cohortStartDate: "2026-10-19",
+  cohortEndDate: "2026-11-29",
   cohortYear: 2026,
 
   // Pricing

@@ -12,22 +12,21 @@ const ComingSoon = () => {
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 animate-fade-in">
           <Rocket className="h-4 w-4 text-primary" />
-          <span className="text-sm font-medium text-primary">Coming October–November 2026</span>
+          <span className="text-sm font-medium text-primary">October 19–November 29, 2026</span>
         </div>
 
         <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in bg-gradient-primary bg-clip-text text-transparent">
-          Your Tech Career Starts in October–November
+          Your Tech Career Starts October 19
         </h2>
 
         <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto animate-fade-in leading-relaxed">
-          Our next cohort will start between October and November 2026. The exact start date will be announced soon. Join the waitlist now to secure your spot
-          and get early access to exclusive resources.
+          Our next cohort runs for 6 weeks, from October 19 through November 29, 2026. Secure your spot and get ready to become industry-ready.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in">
           <div className="flex items-center gap-3 text-muted-foreground">
             <Calendar className="h-5 w-5 text-primary" />
-            <span className="text-lg">4-Week Intensive Program</span>
+            <span className="text-lg">6-Week Intensive Program</span>
           </div>
           <div className="hidden sm:block w-1 h-6 bg-border/50 rounded-full"></div>
           <div className="flex items-center gap-3 text-muted-foreground">
