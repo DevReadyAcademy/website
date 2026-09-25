@@ -23,7 +23,7 @@
     "whyDifferent": "Γιατί Διαφέρουμε",
     "successStories": "Success Stories",
     "freeCvReview": "Δωρεάν Αξιολόγηση CV",
-    "urgencyBanner": "Early Bird Phase {EARLY_BIRD_PHASE} • Μόνο {SPOTS} {SPOTS_LABEL} στα {EARLY_BIRD_PRICE} πριν την επόμενη αύξηση!"
+    "urgencyBanner": "Early Bird Phase {EARLY_BIRD_PHASE} • Μόνο {SPOTS} {SPOTS_LABEL} στα {EARLY_BIRD_PRICE}"
   },
   "hero": {
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}",
