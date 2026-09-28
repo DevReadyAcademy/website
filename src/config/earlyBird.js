@@ -3,7 +3,7 @@
 
 export const earlyBirdConfig = {
   // Early bird availability
-  spotsLeft: 4,
+  spotsLeft: 2,
   isActive: true,
   earlyBirdPhase: 2,
 
