@@ -22,7 +22,7 @@
     "whyDifferent": "Why Different",
     "successStories": "Success Stories",
     "freeCvReview": "Free CV Review",
-    "urgencyBanner": "Early Bird Phase {EARLY_BIRD_PHASE} is live • Only {SPOTS} {SPOTS_LABEL} at {EARLY_BIRD_PRICE} before the next price increase!"
+    "urgencyBanner": "Early Bird is live • {EARLY_BIRD_PRICE} — Registration closes Friday midnight!"
   },
   "hero": {
     "urgencyBadge": "Next Cohort: {COHORT_DATE}",
@@ -36,7 +36,7 @@
     "trust3": "Price: {PRICE}",
     "outcomeStat1": "100+ students trained",
     "outcomeStat2": "70% landed interviews or jobs",
-    "countdownTitle": "Early Bird Phase {EARLY_BIRD_PHASE} ends in",
+    "countdownTitle": "Registration closes in",
     "countdownDays": "Days",
     "countdownHours": "Hours",
     "countdownMinutes": "Min",
@@ -68,10 +68,10 @@
       "Ace interviews with proven strategies, dos & don'ts, and communication techniques"
     ],
     "investmentLabel": "Investment in your future",
-    "earlyBirdLabel": "Early Bird — Phase {EARLY_BIRD_PHASE}",
+    "earlyBirdLabel": "Early Bird",
     "currentPrice": "{PRICE}",
     "perProgram": "/program",
-    "spotsLeft": "Only {SPOTS} {SPOTS_LABEL} left!",
+    "spotsLeft": "Register before Friday midnight!",
     "paymentPlan": "Pay in 2 installments: 50% upfront to secure your spot and 50% when classes begin."
   },
   "accelerator": {
@@ -330,7 +330,7 @@
     ],
     "finalCtaTitle": "Ready to Become Industry-Ready?",
     "finalCtaDescription": "Book a call with our team to secure your spot.",
-    "finalCtaPricing": "Price: {PRICE} • Only {SPOTS} {SPOTS_LABEL} Left!",
+    "finalCtaPricing": "Price: {PRICE}",
     "finalCtaNote": "During the call, we'll answer your questions and finalize your enrollment.",
     "urgencyBadge": "Next Cohort: {COHORT_DATE}"
   },

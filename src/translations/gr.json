@@ -23,7 +23,7 @@
     "whyDifferent": "Γιατί Διαφέρουμε",
     "successStories": "Success Stories",
     "freeCvReview": "Δωρεάν Αξιολόγηση CV",
-    "urgencyBanner": "Early Bird Phase {EARLY_BIRD_PHASE} • Μόνο {SPOTS} {SPOTS_LABEL} στα {EARLY_BIRD_PRICE}"
+    "urgencyBanner": "Early Bird • {EARLY_BIRD_PRICE} — Εγγραφές έως Παρασκευή!"
   },
   "hero": {
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}",
@@ -37,7 +37,7 @@
     "trust3": "Τιμή: {PRICE}",
     "outcomeStat1": "100+ μαθητές εκπαιδεύτηκαν",
     "outcomeStat2": "70% πέτυχαν συνεντεύξεις ή βρήκαν δουλειά",
-    "countdownTitle": "Το Early Bird Phase {EARLY_BIRD_PHASE} λήγει σε",
+    "countdownTitle": "Οι εγγραφές κλείνουν σε",
     "countdownDays": "Μέρες",
     "countdownHours": "Ώρες",
     "countdownMinutes": "Λεπ",
@@ -69,10 +69,10 @@
       "Πέτυχε σε interviews με proven strategies, dos & don'ts και communication techniques"
     ],
     "investmentLabel": "Επένδυση στο μέλλον σου",
-    "earlyBirdLabel": "Early Bird — Phase {EARLY_BIRD_PHASE}",
+    "earlyBirdLabel": "Early Bird",
     "currentPrice": "{PRICE}",
     "perProgram": "/πρόγραμμα",
-    "spotsLeft": "Μόνο {SPOTS} {SPOTS_LABEL} {SPOTS_VERB}!",
+    "spotsLeft": "Εγγραφές έως Παρασκευή!",
     "paymentPlan": "Πληρωμή σε 2 δόσεις: 50% προκαταβολή για να κατοχυρώσεις τη θέση σου και 50% με την έναρξη των μαθημάτων."
   },
   "accelerator": {
@@ -329,7 +329,7 @@
     ],
     "finalCtaTitle": "Έτοιμος να Γίνεις Industry-Ready;",
     "finalCtaDescription": "Κλείσε call με την ομάδα μας για να κλείσεις τη θέση σου.",
-    "finalCtaPricing": "Τιμή: {PRICE} • Μόνο {SPOTS} {SPOTS_LABEL}!",
+    "finalCtaPricing": "Τιμή: {PRICE}",
     "finalCtaNote": "Στο call θα απαντήσουμε τις ερωτήσεις σου και θα ολοκληρώσουμε την εγγραφή σου.",
     "urgencyBadge": "Επόμενο Cohort: {COHORT_DATE}"
   },
