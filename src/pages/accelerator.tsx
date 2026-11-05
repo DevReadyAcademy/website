@@ -240,7 +240,6 @@ const Accelerator = () => {
                     )}
                     <span className="text-2xl font-bold text-primary">{t('accelerator.infoCards.investmentCurrent')}</span>
                   </div>
-                  <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
                   <p className="text-xs text-muted-foreground mt-3">{t('course.paymentPlan')}</p>
                 </div>
               </div>

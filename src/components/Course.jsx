@@ -88,7 +88,6 @@ const Course = () => {
                   </span>
                   <span className="text-sm sm:text-base text-muted-foreground">{t('course.perProgram')}</span>
                 </div>
-                <p className="text-sm font-semibold text-primary mt-2">{t('course.spotsLeft')}</p>
                 <CohortCountdown variant="compact" />
                 <p className="text-sm text-muted-foreground mt-3 max-w-md">{t('course.paymentPlan')}</p>
               </div>
