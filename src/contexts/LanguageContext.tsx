@@ -19,12 +19,40 @@ const rawTranslations: Record<Language, any> = {
   gr: grRaw,
 };
 
+// Only an explicit choice from the language switcher is persisted. The old
+// 'language' key was written automatically on every visit (always 'gr'), so it
+// is ignored and cleaned up.
+const CHOICE_STORAGE_KEY = 'languageChoice';
+const LEGACY_STORAGE_KEY = 'language';
+const GREEK_TIMEZONES = ['Europe/Athens', 'Asia/Nicosia', 'Asia/Famagusta'];
+
+const readStoredChoice = (): Language | null => {
+  try {
+    const saved = localStorage.getItem(CHOICE_STORAGE_KEY);
+    return saved === 'en' || saved === 'gr' ? saved : null;
+  } catch {
+    return null;
+  }
+};
+
+// Greek if the browser prefers Greek, or if the visitor is in Greece/Cyprus
+// (many Greeks run their browser in English). Everyone else gets English.
+const detectLanguage = (): Language => {
+  try {
+    const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
+    if (langs.some((l) => l?.toLowerCase().startsWith('el'))) return 'gr';
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (tz && GREEK_TIMEZONES.includes(tz)) return 'gr';
+  } catch {
+    // fall through
+  }
+  return 'en';
+};
+
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>(() => {
-    // Get language from localStorage or default to 'gr'
-    const saved = localStorage.getItem('language');
-    return (saved === 'en' || saved === 'gr') ? saved : 'gr';
-  });
+  const [language, setLanguageState] = useState<Language>(
+    () => readStoredChoice() ?? detectLanguage()
+  );
 
   // Process translations with early bird values injected
   const translations = useMemo(() => {
@@ -35,12 +63,24 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, []); // Empty dependency array since early bird config is static
 
   useEffect(() => {
-    // Save language preference to localStorage
-    localStorage.setItem('language', language);
+    document.documentElement.lang = language === 'gr' ? 'el' : 'en';
   }, [language]);
+
+  useEffect(() => {
+    try {
+      localStorage.removeItem(LEGACY_STORAGE_KEY);
+    } catch {
+      // ignore
+    }
+  }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
+    try {
+      localStorage.setItem(CHOICE_STORAGE_KEY, lang);
+    } catch {
+      // ignore (private mode, blocked storage)
+    }
   };
 
   const t = (key: string): any => {

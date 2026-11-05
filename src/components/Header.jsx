@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button.tsx";
 import { useLanguage } from '../contexts/LanguageContext';
 import earlyBirdConfig from '../config/earlyBird';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const { t } = useLanguage();
@@ -171,7 +172,7 @@ const Header = () => {
                 </button>
               )
             ))}
-            {/* <LanguageSwitcher /> */}
+            <LanguageSwitcher />
             <Button
               asChild
               className="bg-primary hover:bg-primary/90 shadow-lg"
@@ -182,9 +183,11 @@ const Header = () => {
             </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile: language picker + menu button */}
+          <div className="lg:hidden flex items-center gap-2 flex-shrink-0">
+          <LanguageSwitcher />
           <button
-            className="lg:hidden p-2 -mr-2 flex-shrink-0"
+            className="p-2 -mr-2 flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
@@ -207,6 +210,7 @@ const Header = () => {
               )}
             </svg>
           </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
