@@ -35,12 +35,14 @@ const readStoredChoice = (): Language | null => {
   }
 };
 
-// Greek if the browser prefers Greek, or if the visitor is in Greece/Cyprus
-// (many Greeks run their browser in English). Everyone else gets English.
+// Greek if the browser's primary language is Greek, or if the visitor is in
+// Greece/Cyprus (many Greeks run their browser in English). Everyone else gets
+// English. Only the primary language counts: a secondary Greek entry (e.g.
+// ["en-GB", "el-GB"]) means the visitor prefers English.
 const detectLanguage = (): Language => {
   try {
-    const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
-    if (langs.some((l) => l?.toLowerCase().startsWith('el'))) return 'gr';
+    const primary = (navigator.languages?.[0] || navigator.language || '').toLowerCase();
+    if (primary.startsWith('el')) return 'gr';
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
     if (tz && GREEK_TIMEZONES.includes(tz)) return 'gr';
   } catch {
